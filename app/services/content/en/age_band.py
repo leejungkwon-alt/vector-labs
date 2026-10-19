@@ -1,0 +1,81 @@
+# app/services/content/en/age_band.py
+"""
+EN age band pack — 생애 단계별 서사.
+
+IMF/세대 코호트 대신 age band만 사용 (글로벌 보편성).
+"""
+
+AGE_BAND_CONTENT = {
+    "EARLY": {
+        "label": "Early",
+        "headline": "You are in the exploration phase.",
+        "body": (
+            "The goal right now isn't to have the right answer. It's to gather data — "
+            "about what energizes you, what drains you, and what you're willing to do "
+            "when no one is watching. Commitments made now are experiments, not contracts."
+        ),
+        "advice": [
+            "Try one thing this quarter that scares you a little.",
+            "Track what actually energizes you, not what looks good on paper.",
+            "Say yes to breadth. Depth comes later.",
+        ],
+    },
+    "MID": {
+        "label": "Building",
+        "headline": "You are in the compounding phase.",
+        "body": (
+            "What you plant now has time to grow roots. The returns feel slow because "
+            "they are slow — and that's exactly why they compound. This is the season "
+            "to pick the few things worth going deep on and to stop apologizing for "
+            "the things you leave behind."
+        ),
+        "advice": [
+            "Pick one skill, one relationship, one asset. Go deeper, not wider.",
+            "Say no to three things that don't serve the long game.",
+            "Start something that won't pay off for five years.",
+        ],
+    },
+    "PEAK": {
+        "label": "Peak Output",
+        "headline": "You are in the output phase.",
+        "body": (
+            "The world wants what you can produce. The risk isn't laziness — it's "
+            "overextension. Everyone wants a piece of you. What you do now defines "
+            "your reputation for the next decade. Protect the margins that make the "
+            "output sustainable."
+        ),
+        "advice": [
+            "Design your week around what only you can do.",
+            "Delegate or drop everything else.",
+            "Guard one day a week that is completely yours.",
+        ],
+    },
+    "SENIOR": {
+        "label": "Harvest",
+        "headline": "You are in the harvest phase.",
+        "body": (
+            "Shift from doing to directing. From output to wisdom. The value you bring "
+            "now isn't in the hours you log — it's in the judgment you've earned. "
+            "The people around you need your perspective more than your labor."
+        ),
+        "advice": [
+            "Trade one task for one mentee.",
+            "Say the long answer — people are listening now.",
+            "Let one thing go that you've been carrying for years.",
+        ],
+    },
+    "ELDER": {
+        "label": "Legacy",
+        "headline": "You are in the legacy phase.",
+        "body": (
+            "Presence matters more than productivity. What you leave behind has already "
+            "been planted. The work now is in how you show up — for the people who come "
+            "after, and for the parts of yourself that are still growing."
+        ),
+        "advice": [
+            "Write down one thing only you know.",
+            "Spend time with someone younger — as a peer, not a teacher.",
+            "Choose a small ritual to anchor your day.",
+        ],
+    },
+}

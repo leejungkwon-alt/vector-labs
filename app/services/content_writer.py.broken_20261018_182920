@@ -1,0 +1,83 @@
+# app/services/content_writer.py (Updated for Phase C)
+from app.services.content.loader import load_pack
+from app.services.personalizer import generate_personalized_notes
+from app.compliance.crisis_resources import get_crisis_resources
+from app.services.variation import pick_variant, make_seed
+
+# ... (write_core_section, write_energy_section 등 기존 코드 유지)
+
+def _select_content(entry, *, user_id, birth_date, scope, discriminator):
+    if isinstance(entry, dict):
+        return entry
+    if isinstance(entry, list) and entry:
+        seed = make_seed(user_id=user_id, birth_date=birth_date, scope=scope, discriminator=discriminator)
+        return pick_variant(entry, seed_parts=seed)
+    return {}
+
+# ============================================================
+# YEAR
+# ============================================================
+def write_year_section(profile: dict, lang: str = "en", user_id: str | None = None) -> dict | None:
+    year_theme = profile.get("year_theme")
+    if not year_theme:
+        return None
+
+    pack = load_pack(lang, "year")
+    theme_map = pack.get("YEAR_THEME_CONTENT", {})
+    default_theme = pack.get("DEFAULT_YEAR_THEME", {})
+
+    ten_god = year_theme.get("ten_god", "")
+    raw = theme_map.get(ten_god, default_theme)
+    
+    # 변형 엔진 적용
+    theme = _select_content(
+        raw, user_id=user_id, birth_date=profile.get("birth_date"),
+        scope="year", discriminator=str(year_theme.get("target_year"))
+    )
+
+    # ... (이하 기존과 동일)
+
+# ============================================================
+# MONTHLY
+# ============================================================
+def write_monthly_section(profile: dict, lang: str = "en", user_id: str | None = None) -> dict | None:
+    monthly = profile.get("monthly_calendar", [])
+    if not monthly:
+        return None
+
+    try:
+        pack = load_pack(lang, "monthly")
+        content_map = pack.get("MONTHLY_THEME_CONTENT", {})
+        default_theme = pack.get("DEFAULT_MONTHLY_THEME", {})
+        # ...
+    except KeyError:
+        pass
+
+    year_theme = profile.get("year_theme") or {}
+    target_year = year_theme.get("target_year") or ""
+
+    items = []
+    for m in monthly:
+        tg = m.get("ten_god", "")
+        raw = content_map.get(tg, default_theme)
+        
+        # 변형 엔진 적용
+        content = _select_content(
+            raw, user_id=user_id, birth_date=profile.get("birth_date"),
+            scope="monthly", discriminator=f"{target_year}-{m['month_index']}"
+        )
+
+        items.append({
+            # ... (기존 필드 유지)
+            "name": content.get("name", ""),
+            "headline": content.get("headline", ""),
+            # ...
+        })
+    # ...
+
+# ... (generate_full_report 등 나머지 함수에서 user_id 파라미터 전달하도록 수정)
+def generate_full_report(profile: dict, lang: str = "en", user_id: str | None = None) -> dict:
+    # ...
+    year = write_year_section(profile, lang, user_id=user_id)
+    monthly = write_monthly_section(profile, lang, user_id=user_id)
+    # ...

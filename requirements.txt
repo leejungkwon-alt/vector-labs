@@ -1,0 +1,24 @@
+# ---- Core ----
+fastapi>=0.115.0,<1.0.0
+uvicorn[standard]>=0.30.0,<1.0.0
+pydantic>=2.9.0,<3.0.0
+python-multipart>=0.0.9
+pyjwt>=2.8.0
+
+# ---- Astronomy (사주 절기 계산) ----
+# PyPI: astronomy-engine / import: astronomy
+astronomy-engine>=2.1.19
+
+# ---- HTTP client (테스트) ----
+httpx>=0.27.0
+
+# ---- Testing ----
+pytest>=8.0.0
+pytest-xdist>=3.5.0
+
+# ---- Timezone data ----
+# 컨테이너/Windows에서 Asia/Seoul 로드에 필요
+tzdata>=2024.1
+
+jinja2>=3.1.4
+playwright>=1.47.0

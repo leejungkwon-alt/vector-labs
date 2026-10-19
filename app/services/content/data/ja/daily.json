@@ -1,0 +1,89 @@
+{
+  "DAILY_THEME_CONTENT": {
+    "TEN_GOD_FRIEND": {
+      "name": "Focus on Yourself",
+      "headline": "Your energy is stronger than usual today.",
+      "body": "You'll feel a surge of confidence and a strong sense that your way is the right way. But this high energy can also lead to friction with others.\n\nInstead of trying to convince people today, pour that energy into your own work. It's a great time to tackle a solo project or start something that has your name on it.",
+      "watch_for": "Don't dig into your position without listening.",
+      "lean_into": "Independent work, personal projects, routines."
+    },
+    "TEN_GOD_ROB_WEALTH": {
+      "name": "The Momentum Builder",
+      "headline": "Your drive is explosive, but so is your impatience.",
+      "body": "You'll want to move fast, win the race, and clear your backlog in one go. The urge to compete or achieve is strong today.\n\nHowever, running at full speed will drain your battery quickly. Pick just one big goal for today and focus your energy there. Let everything else go.",
+      "watch_for": "Don't compete with people who aren't your rivals.",
+      "lean_into": "Setting one clear goal, intense focus."
+    },
+    "TEN_GOD_EATING_GOD": {
+      "name": "The Creative Spark",
+      "headline": "A great day to bring your ideas to life.",
+      "body": "Your mood is soft and you'll feel a desire to create or express yourself. Rather than forcing yourself through boring tasks, focus on things you can actually enjoy.\n\nWriting, drawing, cooking, or brainstorming new plans are all favored today. Enjoy the process rather than worrying about the outcome.",
+      "watch_for": "Don't over-schedule yourself today.",
+      "lean_into": "Hobbies, creative projects, jotting down ideas."
+    },
+    "TEN_GOD_HURTING_OFFICER": {
+      "name": "The Truth Teller",
+      "headline": "You see the flaws in the system more clearly today.",
+      "body": "You might feel frustrated by inefficiency or annoyed by things that seem 'off.' This sharp vision can be a powerful tool if used correctly.\n\nInstead of just complaining, try to offer a solution. It's a great day for giving constructive feedback to colleagues or proposing improvements.",
+      "watch_for": "Watch your timing so your sharp words don't hurt.",
+      "lean_into": "Problem-solving, offering solutions, fixing systems."
+    },
+    "TEN_GOD_INDIRECT_WEALTH": {
+      "name": "The Opportunity Hunter",
+      "headline": "Doors open and close quickly today. Stay sharp.",
+      "body": "New opportunities or connections might appear out of nowhere. Your intuition is sharp, so if you feel 'this is it,' take the leap.\n\nBut don't try to catch every single opportunity. Filter through the noise and dive deep into one or two things that truly align with you.",
+      "watch_for": "Don't let FOMO drive your decisions.",
+      "lean_into": "Trying something new, networking, trusting your gut."
+    },
+    "TEN_GOD_DIRECT_WEALTH": {
+      "name": "The Slow and Steady",
+      "headline": "Not the flashiest day, but the most solid one.",
+      "body": "Today is better for grinding through necessary tasks than chasing grand results. It may feel boring, but what you build today will compound in the future.\n\nIt's a good day for checking your budget, saving, or organizing your space. Focus on stability and routine rather than ambition.",
+      "watch_for": "The urge to rush the process.",
+      "lean_into": "Financial check-ups, cleaning, repeatable tasks."
+    },
+    "TEN_GOD_SEVEN_KILLINGS": {
+      "name": "The Pressure Test",
+      "headline": "It feels heavy, but you'll come out stronger.",
+      "body": "You might face unexpected responsibilities or pressure. It might feel suffocating, but facing the challenge head-on will lead to huge growth.\n\nToday, you need to practice saying 'no.' Protecting your mental and physical boundaries is the top priority. Once work is done, disconnect completely and rest.",
+      "watch_for": "Don't take on responsibilities that aren't yours.",
+      "lean_into": "Setting boundaries, deep sleep, mental protection."
+    },
+    "TEN_GOD_DIRECT_OFFICER": {
+      "name": "The Spotlight",
+      "headline": "A great day to reap the rewards and get recognized.",
+      "body": "Rules and structures align well for you today, making work flow smoothly. It's highly favorable for reporting to bosses, signing contracts, or taking exams.\n\nDon't hide in the background; step up and show your work. Today, putting yourself out there is an advantage.",
+      "watch_for": "Don't shrink away due to self-doubt.",
+      "lean_into": "Official commitments, presentations, interviews."
+    },
+    "TEN_GOD_INDIRECT_RESOURCE": {
+      "name": "The Deep Thinker",
+      "headline": "A day to focus inward rather than outward.",
+      "body": "You'll likely prefer to be alone in a quiet space rather than socializing. It's a good day to focus on your inner voice without external distractions.\n\nRead, study, or sort out those lingering worries. Once you clear your mind, the clear answer for your next step will reveal itself.",
+      "watch_for": "Take a light walk to avoid feeling blue.",
+      "lean_into": "Solo time, learning, meditation, research."
+    },
+    "TEN_GOD_DIRECT_RESOURCE": {
+      "name": "The Recharge",
+      "headline": "You need some warm comfort and rest today.",
+      "body": "Your mind and body might be sensitive, making you feel tired easily. Instead of forcing productivity, spend time caring for yourself.\n\nEat good food, drink warm tea, or have a comfortable chat with someone you like. Move at your own pace today, not the world's pace.",
+      "watch_for": "Don't mistake rest for laziness.",
+      "lean_into": "Self-care, nourishing meals, talking with mentors."
+    }
+  },
+  "DEFAULT_DAILY_THEME": {
+    "name": "The Flowing Day",
+    "headline": "A peaceful day without any major spikes.",
+    "body": "Today will pass smoothly without any extreme energies. Instead of trying to force changes, accept the flow as it is.",
+    "watch_for": "Watch out for lethargy.",
+    "lean_into": "Finding small joys, organizing."
+  },
+  "DAILY_HERO_TEMPLATE": "{date}の運勢",
+  "GRADE_LABEL": {
+    "PEAK": "Peak",
+    "FAVORABLE": "Favorable",
+    "NEUTRAL": "Neutral",
+    "CAUTION": "Caution",
+    "CHALLENGING": "Challenging"
+  }
+}

@@ -1,0 +1,30 @@
+참고 — 운영 배포 시 필수
+.env 또는 배포 환경에 반드시 아래를 명시하세요:
+
+bash
+SAJU_JWT_SECRET=<openssl rand -hex 32 로 생성한 64자 hex 문자열>
+예: SAJU_JWT_SECRET=python -c "import secrets;print(secrets.token_hex(32))"로 생성.
+
+이 시크릿이 유출되면 누구나 임의의 user_id로 토큰을 위조할 수 있으니, .env는 .gitignore에 넣어두시고요. data/auth.db도 마찬가지입니다.
+
+
+------------------------
+
+
+bash
+SAJU_JWT_SECRET=<openssl rand -hex 32>
+SAJU_REQUIRE_AUTH_FOR_REPORT=false   # 개발 중 false, 앱 런치 시 true
+
+---------------------------
+지금처럼 한글로만 되어 있으면 외국인은 사용할 수 없습니다. 설정(Settings) 탭에서 한국어 / English를 선택할 수 있게 만들고, 선택한 언어에 따라 앱의 UI 텍스트와 백엔드에서 받아오는 리포트(lang)까지 모두 자동으로 바뀌게 만들어 보겠습니다.
+
+적용하시겠습니까? 원하신다면 아래 스크립트로 다국어(i18n) 시스템을 바로 구축해 드리겠습니다.
+
+powershell
+# (적용을 원하실 때만 실행하세요)
+# 1. 언어 상태 관리 Store 생성 (Zustand + AsyncStorage)
+# 2. 다국어 번역 사전(Dictionary) 생성
+# 3. _layout.tsx, birth-input.tsx, 각 탭 화면에 번역 적용
+# 4. 설정(Settings) 탭에 KO/EN 토글 스위치 추가
+# 5. API 호출 시 lang 파라미터 동적 전달
+"응, 다국어 시스템 넣어줘" 라고 말씀해 주시면, 위 5단계를 한 번에 적용하는 대형 스크립트를 준비해 드리겠습니다. 🚀

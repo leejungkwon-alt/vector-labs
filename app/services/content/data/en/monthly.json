@@ -1,0 +1,256 @@
+{
+  "MONTHLY_THEME_CONTENT": {
+    "TEN_GOD_FRIEND": [
+      {
+        "name": "Community Building",
+        "headline": "Expand your core network over the next 30 days.",
+        "body": "This month opens up a sustained monthly theme centered on building strategic alliances and horizontal peer relationships. Over the next four weeks, surrounding yourself with allies who share your vision will accelerate long-term goals that were difficult to carry alone. Focus on initiating ongoing group initiatives or recurring mastermind sessions rather than solo sprints.",
+        "watch_for": "Over-identifying with peer opinions at the expense of your own boundaries.",
+        "lean_into": "Establishing a recurring monthly sync with trusted industry peers."
+      },
+      {
+        "name": "Collaborative Momentum",
+        "headline": "Leverage shared resources to scale your projects this month.",
+        "body": "A monthly wave of collaborative synergy creates the ideal backdrop for joint ventures and co-created initiatives. Throughout these 30 days, your growth is tied directly to how effectively you share responsibilities and pool talents with equals. Seek out partnerships where both sides contribute distinct strengths toward a unified monthly objective.",
+        "watch_for": "Unclear division of roles in collaborative agreements.",
+        "lean_into": "Co-designing a month-long strategic roadmap with a partner."
+      },
+      {
+        "name": "Peer Network Expansion",
+        "headline": "Strengthen your professional standing within your circle.",
+        "body": "This four-week window highlights opportunities to step forward as a respected equal within your community or industry network. Engaging consistently in group dialogues and collaborative forums will establish your presence and build lasting goodwill. Treat this entire month as a strategic campaign for deepening mutual trust.",
+        "watch_for": "Getting drawn into group rivalries or passive consensus.",
+        "lean_into": "Hosting or organizing a regular community roundtable this month."
+      }
+    ],
+    "TEN_GOD_ROB_WEALTH": [
+      {
+        "name": "Competitive Distinction",
+        "headline": "Transform external rivalries into a powerful monthly drive.",
+        "body": "A high-octane monthly cycle activates your competitive instincts, pushing you to redefine your market edge over the next 30 days. This four-week period demands disciplined focus on self-mastery to avoid losing momentum in useless power struggles. Channel this heightened drive into auditing your systems, sharpening your offer, and setting new benchmark standards.",
+        "watch_for": "Impulsive resource reallocation triggered by envy or fear of falling behind.",
+        "lean_into": "Auditing your core competencies to establish a distinct market advantage."
+      },
+      {
+        "name": "Resource Safeguarding",
+        "headline": "Fortify your strategic assets and personal boundaries this month.",
+        "body": "Throughout this four-week theme, heightened external demands may test your capacity and resource management. Treating this month as an opportunity to audit time leaks and operational overhead will secure your long-term stability. Stand firm in protecting your strategic priority list from outside encroachments.",
+        "watch_for": "Unplanned expenditures or giving away valuable intellectual property freely.",
+        "lean_into": "Implementing strict resource allocation filters for all incoming requests."
+      },
+      {
+        "name": "Strategic Refinement",
+        "headline": "Outperform previous benchmarks through tactical agility.",
+        "body": "This monthly window presents a tactical opportunity to pivot quickly and outmaneuver persistent bottlenecks. Over the coming 30 days, viewing competition as a diagnostic tool will help you pinpoint exactly where your workflow needs upgrading. Focus on executing bold, calculated upgrades to your core strategy.",
+        "watch_for": "Burnout caused by treating every week as an emergency sprint.",
+        "lean_into": "Upgrading a key operational bottleneck to surpass past performance."
+      }
+    ],
+    "TEN_GOD_EATING_GOD": [
+      {
+        "name": "Creative Expansion",
+        "headline": "Cultivate long-term project flow through joyful exploration.",
+        "body": "A fertile monthly cycle opens broad horizons for creative development and long-term project design over the next 30 days. This four-week energy favors deep ideation, brand building, and establishing sustainable routines that nourish your passion. Allow yourself space to experiment with new formats without demanding instant commercial yields.",
+        "watch_for": "Losing tactical discipline due to endless open-ended brainstorming.",
+        "lean_into": "Structuring a 30-day creative laboratory phase for a new concept."
+      },
+      {
+        "name": "Sustainable Output",
+        "headline": "Establish effortless productivity rhythms across the month.",
+        "body": "Throughout these coming four weeks, focusing on well-being and natural workflow will significantly enhance your total output. This month invites you to optimize your environment so that output feels intuitive rather than forced. Design a monthly schedule that balances deep creative work with restorative downtime.",
+        "watch_for": "Drifting into complacency when structure is reduced.",
+        "lean_into": "Designing a balanced monthly schedule centered on sustainable production."
+      },
+      {
+        "name": "Nurturing Ecosystems",
+        "headline": "Invest in the long-term health of your creative assets.",
+        "body": "This monthly theme emphasizes cultivating content, products, or relationships that naturally yield value over time. Spending the next 30 days nurturing foundational ideas will yield a rich harvest in the months ahead. Share your unique perspective generously through long-form channels or educational sharing.",
+        "watch_for": "Neglecting essential administrative deadlines while focusing solely on creation.",
+        "lean_into": "Publishing a comprehensive monthly content piece or master plan."
+      }
+    ],
+    "TEN_GOD_HURTING_OFFICER": [
+      {
+        "name": "Disruptive Innovation",
+        "headline": "Reinvent outdated paradigms throughout this 30-day cycle.",
+        "body": "This month brings a powerful strategic opening for breaking conventional molds and introducing pioneering ideas to your field. Over the next four weeks, your ability to spot systemic flaws and communicate bold alternatives will be unmatched. Channel this expressive energy into high-visibility presentations, brand pivots, or campaign launches.",
+        "watch_for": "Alienating key stakeholders through overly provocative delivery.",
+        "lean_into": "Pitching a game-changing solution to a long-standing structural problem."
+      },
+      {
+        "name": "Strategic Audacity",
+        "headline": "Command attention by voicing bold, original perspectives.",
+        "body": "The coming four-week theme puts your unique voice and persuasive charisma center stage. Use this monthly window to challenge status-quo assumptions and articulate a compelling new direction for your team or audience. Ensure your critique is paired with actionable blueprints to maximize long-term buy-in.",
+        "watch_for": "Rejecting established protocols simply for the sake of rebellion.",
+        "lean_into": "Launching a high-impact campaign or public demonstration of your expertise."
+      },
+      {
+        "name": "System Reform",
+        "headline": "Streamline inefficient structures with sharp diagnostic insight.",
+        "body": "Throughout this month, you possess the critical clarity necessary to overhaul stagnant workflows and inefficient systems. The next 30 days offer the ideal timing for restructuring operations and replacing outdated methods with modern frameworks. Drive constructive reform while keeping key collaborators aligned with your vision.",
+        "watch_for": "Unnecessary friction with authority figures during review processes.",
+        "lean_into": "Executing a systematic overhaul of an inefficient monthly workflow."
+      }
+    ],
+    "TEN_GOD_INDIRECT_WEALTH": [
+      {
+        "name": "Market Opportunity",
+        "headline": "Capitalize on emerging trends and dynamic market shifts.",
+        "body": "A dynamic 30-day window unfolds, filled with tactical opportunities to spot undervalued assets and high-yield possibilities. Throughout this month, staying adaptable will allow you to capture gains from shifting circumstances faster than rigid competitors. Approach incoming trends with sharp commercial instinct and pragmatic flexibility.",
+        "watch_for": "Over-leveraging resources on unverified speculative ventures.",
+        "lean_into": "Diversifying your tactical portfolio or launching a flexible trial project."
+      },
+      {
+        "name": "Agile Monetization",
+        "headline": "Turn flexible thinking into tangible monthly growth.",
+        "body": "This four-week theme highlights agility, resourcefulness, and the rapid deployment of ideas into real-world value. Focus on identifying bottlenecks in your current ecosystem that can be converted into new revenue or efficiency streams. Act decisively when favorable market conditions align over the coming weeks.",
+        "watch_for": "Lack of follow-through on opportunities once initial novelty fades.",
+        "lean_into": "Testing a new revenue channel or service offering this month."
+      },
+      {
+        "name": "Strategic Expansion",
+        "headline": "Broaden your scope to capture wider market interest.",
+        "body": "Over the next 30 days, stepping outside your customary operational zone will reveal lucrative new avenues for growth. This monthly cycle rewards taking calculated initiative and exploring cross-industry connections. Keep your strategy fluid and respond swiftly to real-time feedback.",
+        "watch_for": "Neglecting core operations while pursuing shiny new projects.",
+        "lean_into": "Exploring cross-industry partnerships to open new growth channels."
+      }
+    ],
+    "TEN_GOD_DIRECT_WEALTH": [
+      {
+        "name": "Systematic Accumulation",
+        "headline": "Build long-term equity through rigorous monthly discipline.",
+        "body": "This month establishes a highly grounded theme focused on operational rigor, asset consolidation, and steady compounding. Over the next four weeks, success comes from methodical execution and refining your core business architecture. Dedicate this period to solidifying contractual foundations, auditing processes, and securing reliable returns.",
+        "watch_for": "Excessive conservatism that blocks necessary innovation.",
+        "lean_into": "Standardizing core operational processes for consistent output."
+      },
+      {
+        "name": "Operational Mastery",
+        "headline": "Maximize efficiency by perfecting your core infrastructure.",
+        "body": "Throughout this 30-day window, meticulous attention to structural details will generate significant structural strength. Use this monthly opportunity to streamline budget tracking, enforce Quality Assurance standards, and optimize daily operations. Reliable consistency over these four weeks will cement your reputation for excellence.",
+        "watch_for": "Micromanaging minor details at the cost of strategic vision.",
+        "lean_into": "Completing a thorough audit of monthly operational expenses and workflows."
+      },
+      {
+        "name": "Foundation Fortification",
+        "headline": "Secure long-term stability through structured milestones.",
+        "body": "A four-week cycle of predictable progress invites you to solidify your base and protect ongoing revenues. Focus on fulfilling existing commitments with flawless execution rather than chasing unproven expansions. Building bulletproof systems now creates the engine for future scaling.",
+        "watch_for": "Resisting necessary structural updates due to comfort with old routines.",
+        "lean_into": "Establishing clear, measurable monthly KPI benchmarks for your team."
+      }
+    ],
+    "TEN_GOD_SEVEN_KILLINGS": [
+      {
+        "name": "Strategic Breakthrough",
+        "headline": "Confront high-stakes challenges to achieve major transformation.",
+        "body": "A intense 30-day monthly cycle equips you with the grit required to tackle formidably complex objectives. Over the next four weeks, decisive leadership and high resilience will allow you to break through long-standing structural bottlenecks. Embrace high-accountability targets and lead from the front with unshakeable resolve.",
+        "watch_for": "Imposing unrealistic pressure on yourself or your team, leading to strain.",
+        "lean_into": "Spearheading a high-stakes crisis resolution or turnaround project."
+      },
+      {
+        "name": "Decisive Restructuring",
+        "headline": "Eliminate systemic inefficiencies with uncompromising focus.",
+        "body": "This four-week period provides the tactical resolve necessary to make tough, necessary operational cuts and structural shifts. Use this monthly theme to purge unproductive commitments and refocus all energy on critical priorities. Bold, decisive action taken now will clear the path for powerful long-term acceleration.",
+        "watch_for": "Authoritarian execution that erodes team trust.",
+        "lean_into": "Executing a decisive restructuring of underperforming projects."
+      },
+      {
+        "name": "Resilient Leadership",
+        "headline": "Turn high-pressure demands into landmark achievements.",
+        "body": "Throughout the coming month, external challenges serve as the ultimate crucible for sharpening your leadership capability. Approaching intense deadlines as opportunities for strategic mastery will elevate your standing. Maintain absolute clarity of purpose as you guide your initiatives through complex terrain.",
+        "watch_for": "Neglecting rest and physical recovery during intense workloads.",
+        "lean_into": "Setting non-negotiable boundaries while executing critical objectives."
+      }
+    ],
+    "TEN_GOD_DIRECT_OFFICER": [
+      {
+        "name": "Institutional Trust",
+        "headline": "Elevate your authority through flawless compliance and governance.",
+        "body": "This month highlights a theme of organizational alignment, reputation enhancement, and institutional growth over the next 30 days. Operating with absolute transparency, respecting protocol, and fulfilling governance standards will earn key endorsements. Use these four weeks to secure formal approvals, launch official compliance standards, or consolidate executive trust.",
+        "watch_for": "Rigid adherence to bureaucracy that slows essential decision-making.",
+        "lean_into": "Formalizing governance protocols or seeking official certifications."
+      },
+      {
+        "name": "Reputational Growth",
+        "headline": "Consolidate your standing as a reliable industry figure.",
+        "body": "Over the coming four weeks, adhering to high ethical standards and structured execution will significantly raise your profile. This monthly window is ideal for finalizing major contracts, establishing clear policy frameworks, and standardizing team governance. Your commitment to duty creates deep organizational confidence.",
+        "watch_for": "Anxiety driven by fear of public scrutiny or evaluation.",
+        "lean_into": "Standardizing corporate policy or project compliance frameworks."
+      },
+      {
+        "name": "Strategic Alignment",
+        "headline": "Harmonize team structures to achieve long-term order.",
+        "body": "Throughout this 30-day period, creating order out of operational ambiguity will be your ultimate strategic advantage. Focus on clarifying reporting lines, establishing clear project scopes, and setting expectations with leadership. A well-ordered system built this month will operate smoothly for quarters to come.",
+        "watch_for": "Over-committing to organizational demands at personal expense.",
+        "lean_into": "Publishing clear organizational guidelines or service-level agreements."
+      }
+    ],
+    "TEN_GOD_INDIRECT_RESOURCE": [
+      {
+        "name": "Strategic Visioning",
+        "headline": "Uncover hidden insights to architect your next major leap.",
+        "body": "A reflective and deeply insightful 30-day theme encourages long-term strategy, research, and non-linear problem solving. Over the next four weeks, taking time away from immediate execution will help you synthesize complex data into groundbreaking vision. Invest this period in market research, intellectual property strategy, or quiet planning.",
+        "watch_for": "Paralysis by analysis that delays concrete execution.",
+        "lean_into": "Conducting deep-dive research or drafting a strategic white paper."
+      },
+      {
+        "name": "Unconventional Wisdom",
+        "headline": "Synthesize abstract concepts into pioneering solutions.",
+        "body": "This monthly cycle opens a rich portal for tapping into intuitive intelligence and specialized knowledge synthesis. Look beyond traditional industry frameworks over the coming four weeks to discover innovative business models or product concepts. Your ability to connect disparate signals will create a distinct strategic edge.",
+        "watch_for": "Detaching from practical operational realities for too long.",
+        "lean_into": "Mapping out an innovative long-term strategy based on emerging data."
+      },
+      {
+        "name": "Intellectual Synthesis",
+        "headline": "Master specialized skills that elevate your long-term value.",
+        "body": "Throughout this month, dedicating significant hours to deep learning and conceptual mastery will yield immense future leverage. Focus on mastering niche tools, studying complex market dynamics, or refining specialized methodologies. The mental clarity gained this month will guide your decisions for the entire year.",
+        "watch_for": "Skepticism or over-thinking simple operational steps.",
+        "lean_into": "Enrolling in an advanced skill certification or deep study program."
+      }
+    ],
+    "TEN_GOD_DIRECT_RESOURCE": [
+      {
+        "name": "Foundation Nourishment",
+        "headline": "Replenish intellectual and structural capital for future growth.",
+        "body": "This four-week theme centers on foundational renewal, mentorship, and building deep reserve capacity across your ecosystem. Over the next 30 days, prioritizing learning, mental well-being, and advisory support will rebuild your strategic endurance. Dedicate time to fortifying your core infrastructure and absorbing wisdom from seasoned experts.",
+        "watch_for": "Over-reliance on support systems leading to passive execution.",
+        "lean_into": "Engaging a senior mentor or launching an internal training initiative."
+      },
+      {
+        "name": "Capacity Building",
+        "headline": "Invest in training and organizational health this month.",
+        "body": "Throughout the coming four weeks, focusing on internal wellness and skill acquisition will create a robust foundation for next quarter's push. Use this monthly window to upgrade team competencies, refine knowledge bases, and restore personal energy reserves. Sustainable growth requires a deeply nourished foundation.",
+        "watch_for": "Sinking into comfortable stagnation instead of active preparation.",
+        "lean_into": "Upgrading team training modules and personal health routines."
+      },
+      {
+        "name": "Restorative Strategy",
+        "headline": "Consolidate wisdom to prepare for your next major expansion.",
+        "body": "A supportive monthly energy invites you to absorb knowledge, secure advisory backing, and refine your long-term philosophy. Take time over these 30 days to review lessons learned from past quarters and integrate them into your standard operating procedures. A well-rested, highly informed strategy ensures future success.",
+        "watch_for": "Hesitating to launch initiatives due to a desire for endless preparation.",
+        "lean_into": "Consolidating organizational knowledge into a permanent playbook."
+      }
+    ]
+  },
+  "DEFAULT_MONTHLY_THEME": {
+    "name": "The Unfolding Month",
+    "headline": "A month still taking shape.",
+    "body": "This month's energy is hard to pin to a single pattern. Pay attention — the theme will reveal itself.",
+    "watch_for": "Assuming you already know what this month is about.",
+    "lean_into": "Staying curious about what's actually happening."
+  },
+  "MONTHLY_HERO_TEMPLATE": "Your {year}, twelve doors.",
+  "GRADE_LABEL": {
+    "PEAK": "Peak",
+    "FAVORABLE": "Favorable",
+    "NEUTRAL": "Neutral",
+    "CAUTION": "Caution",
+    "CHALLENGING": "Challenging"
+  },
+  "MONTHLY_GRADE_CONTEXT": {
+    "PEAK": "Root energy (地支) is favorable this month — separate from the theme.",
+    "FAVORABLE": "Gentle tailwinds from the root energy.",
+    "NEUTRAL": "Mixed root energy — the theme carries the month.",
+    "CAUTION": "Root energy is cautious — keep the pace slow.",
+    "CHALLENGING": "Heavy root energy — protect your margins."
+  }
+}

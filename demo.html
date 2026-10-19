@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAJU 3D 에너지 배경 데모</title>
+<style>
+  :root {
+    /* 기본: 목(Wood) 에너지 */
+    --primary: #2ecc71;
+    --primary-light: #27ae60;
+    --primary-dark: #145a32;
+    --bg: #0b1c0e;
+    --orb1: #2ecc71;
+    --orb2: #27ae60;
+  }
+
+  /* 화(Fire) 테마 */
+  [data-theme="fire"] {
+    --primary: #e74c3c;
+    --primary-light: #ff7675;
+    --primary-dark: #6e2c00;
+    --bg: #1a0a0a;
+    --orb1: #e74c3c;
+    --orb2: #f39c12;
+  }
+
+  /* 토(Earth) 테마 */
+  [data-theme="earth"] {
+    --primary: #d35400;
+    --primary-light: #e67e22;
+    --primary-dark: #5c2600;
+    --bg: #1c140b;
+    --orb1: #d35400;
+    --orb2: #f1c40f;
+  }
+
+  /* 금(Metal) 테마 */
+  [data-theme="metal"] {
+    --primary: #bdc3c7;
+    --primary-light: #ecf0f1;
+    --primary-dark: #34495e;
+    --bg: #11151c;
+    --orb1: #bdc3c7;
+    --orb2: #95a5a6;
+  }
+
+  /* 수(Water) 테마 */
+  [data-theme="water"] {
+    --primary: #3498db;
+    --primary-light: #74b9ff;
+    --primary-dark: #154360;
+    --bg: #081421;
+    --orb1: #3498db;
+    --orb2: #2980b9;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    overflow: hidden;
+    transition: background-color 1.5s ease;
+  }
+
+  /* 3D 공간 컨테이너 */
+  .scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1.5s ease;
+  }
+
+  /* 3D 발광 오브젝트 */
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, var(--primary-light), var(--primary-dark));
+    box-shadow: 
+      inset -20px -20px 40px rgba(0,0,0,0.6),
+      0 0 80px var(--primary);
+    filter: blur(0.5px);
+    opacity: 0.85;
+    transition: all 1.5s ease;
+  }
+
+  /* 구체 1 (메인) */
+  .orb-1 {
+    width: 220px;
+    height: 220px;
+    animation: float1 8s ease-in-out infinite;
+  }
+
+  /* 구체 2 (보조) */
+  .orb-2 {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle at 30% 30%, var(--orb2), transparent);
+    box-shadow: inset -10px -10px 20px rgba(0,0,0,0.5), 0 0 40px var(--orb2);
+    animation: float2 6s ease-in-out infinite;
+    top: 30%;
+    left: 60%;
+  }
+
+  /* 구체 3 (작은 파티클) */
+  .orb-3 {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle at 30% 30%, var(--primary-light), transparent);
+    box-shadow: 0 0 20px var(--primary-light);
+    animation: float3 10s ease-in-out infinite;
+    bottom: 25%;
+    right: 55%;
+  }
+
+  /* 애니메이션 (부드러운 움직임) */
+  @keyframes float1 {
+    0% { transform: translateY(0) translateX(0) rotate(0deg); }
+    50% { transform: translateY(-30px) translateX(20px) rotate(10deg); }
+    100% { transform: translateY(0) translateX(0) rotate(0deg); }
+  }
+
+  @keyframes float2 {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(40px) scale(1.1); }
+    100% { transform: translateY(0) scale(1); }
+  }
+
+  @keyframes float3 {
+    0% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(20px) translateX(-30px); }
+    100% { transform: translateY(0) translateX(0); }
+  }
+
+  /* 컨트롤 패널 */
+  .controls {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.05);
+  }
+
+  /* 텍스트 오버레이 (앱 UI 시뮬레이션) */
+  .ui-overlay {
+    position: absolute;
+    top: 40px;
+    text-align: center;
+    color: white;
+    z-index: 10;
+    pointer-events: none;
+  }
+  .ui-overlay h1 {
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  }
+  .ui-overlay p {
+    margin: 8px 0 0;
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+  }
+</style>
+</head>
+<body data-theme="wood">
+
+  <!-- 앱 UI 시뮬레이션 -->
+  <div class="ui-overlay">
+    <h1 id="theme-title">WOOD ENERGY</h1>
+    <p>Growth, Expansion, Vitality</p>
+  </div>
+
+  <!-- 3D 오브젝트 공간 -->
+  <div class="scene">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- 오행 테마 변경 버튼 -->
+  <div class="controls">
+    <button onclick="setTheme('wood', 'WOOD ENERGY', 'Growth, Expansion, Vitality')">🌱 목</button>
+    <button onclick="setTheme('fire', 'FIRE ENERGY', 'Passion, Radiance, Action')">🔥 화</button>
+    <button onclick="setTheme('earth', 'EARTH ENERGY', 'Stability, Center, Trust')">⛰️ 토</button>
+    <button onclick="setTheme('metal', 'METAL ENERGY', 'Clarity, Edge, Precision')">⚔️ 금</button>
+    <button onclick="setTheme('water', 'WATER ENERGY', 'Wisdom, Flow, Depth')">💧 수</button>
+  </div>
+
+  <script>
+    function setTheme(theme, title, subtitle) {
+      // 배경 및 오브젝트 색상 변경
+      document.body.setAttribute('data-theme', theme);
+      
+      // 텍스트 변경
+      document.getElementById('theme-title').innerText = title;
+      document.querySelector('.ui-overlay p').innerText = subtitle;
+    }
+  </script>
+</body>
+</html>

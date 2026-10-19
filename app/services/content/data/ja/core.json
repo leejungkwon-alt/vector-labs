@@ -1,0 +1,913 @@
+{
+  "ARCHETYPE_CONTENT": {
+    "THE_PIONEER": {
+      "name": "パイオニア",
+      "tagline": "You grow upward, whether the ground is ready or not.",
+      "symbol": "↟",
+      "color": "#2F7A3F",
+      "element": "Wood",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "You're built to go first. And to keep going when no one follows.",
+          "narrative": [
+            "You have a clear inner compass. Once you decide something, it becomes obvious to you long before it's obvious to anyone else.",
+            "You don't wait for consensus. You don't wait for the map to be drawn. You just know where north is, and you move.",
+            "This makes you a founder, a builder, an originator. But it also means you spend a lot of time alone with your vision before anyone understands it.",
+            "Your independence is your greatest asset, but it can also be isolating. When you're the only one who sees the path, it's easy to forget to look back and check if anyone is still with you.",
+            "True leadership isn't just about forging ahead; it's about knowing when to slow down so others can catch up. Your vision is the seed, but collaboration is the water."
+          ],
+          "shadows": [
+            "Your pace feels so clearly right to you that you can accidentally bulldoze over other people's pace.",
+            "You mistake stillness for stagnation. Rest feels like a betrayal of your own ambition.",
+            "You can become rigid in your beliefs, ignoring valuable input because it doesn't align with your original plan."
+          ],
+          "advice": [
+            "Once this week, ask someone you trust how your momentum looks from the outside.",
+            "Pick one goal you've been pushing on for months. Ask: 'Would I still care about this if no one ever knew?'",
+            "Pause for 10 seconds before you say 'I've got it.' Sometimes, you don't.",
+            "Schedule a 'pause day' once a month where you do absolutely nothing related to your goals. Just to breathe."
+          ],
+          "keywords": [
+            "visionary",
+            "vertical",
+            "independent",
+            "founder"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "You lead without needing the spotlight to do it.",
+          "narrative": [
+            "You have the pioneer's instinct without the pioneer's impatience. You'll go first if you need to, but you'd rather the whole thing move forward than your name be on it.",
+            "People follow you because you're steady. You don't perform ambition — you just keep growing, quietly, in a direction that makes sense to you.",
+            "This is a rare, durable kind of leadership. It's also easy to overlook in yourself.",
+            "You are the steady hand on the rudder. You don't need to shout to be heard, and you don't need to sprint to win the race.",
+            "Your strength lies in your consistency. While others burn out chasing the next shiny thing, you are building something that will outlast the hype."
+          ],
+          "shadows": [
+            "You can end up carrying more than your share because you don't want to make it 'a thing.'",
+            "Your steadiness can look like passivity to people who mistake noise for action.",
+            "You might suppress your own needs to maintain the peace, leading to quiet resentment."
+          ],
+          "advice": [
+            "Name one thing you want and say it out loud this week — no qualifiers.",
+            "Notice who actually follows you. Not who agrees with you — who moves with you.",
+            "Let someone else lead one thing you'd normally take.",
+            "Check in with your own energy levels. Are you being steady, or are you just avoiding conflict?"
+          ],
+          "keywords": [
+            "quiet leadership",
+            "growth",
+            "consistency",
+            "grounded"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "You're a tree — beautiful, but particular about your soil.",
+          "narrative": [
+            "You have a strong inner direction, but it doesn't always translate into outer action. You need the right conditions before you can really start.",
+            "This isn't laziness. It's accuracy. You feel very clearly when a place, project, or person can hold what you're building.",
+            "Your growth is real, but it's not fast. It's the kind that lasts decades.",
+            "You are deeply intuitive about your environment. You know when the soil is toxic, even if everyone else says it's fine.",
+            "Stop apologizing for needing the right conditions. A seed doesn't grow in concrete. Wait for your spring, and when it comes, you'll shoot up fast."
+          ],
+          "shadows": [
+            "You wait for 'ready' longer than you should.",
+            "You stay loyal to the wrong environment past the point of no return.",
+            "You can use the 'waiting for the right conditions' as an excuse to avoid taking action."
+          ],
+          "advice": [
+            "Write down the conditions you actually need. Are you in them? If not, what's one thing you can change?",
+            "Start the thing small — today, in whatever state it's in.",
+            "You're allowed to outgrow a room. Notice which one.",
+            "If a space feels draining, set a boundary. It's okay to leave early."
+          ],
+          "keywords": [
+            "patience",
+            "rooted",
+            "loyal",
+            "conditions"
+          ]
+        }
+      }
+    },
+    "THE_ADAPTER": {
+      "name": "アダプター",
+      "tagline": "You bend, so you don't break.",
+      "symbol": "⟡",
+      "color": "#5FAF7A",
+      "element": "Wood",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "You survive by reading the room and moving with it.",
+          "narrative": [
+            "You don't fight systems head-on — you find the crack in them. You've probably been underestimated more than once by people who mistake softness for weakness.",
+            "Your flexibility is a form of intelligence. You see what others are about to do, and you're already halfway there before they realize it.",
+            "This makes you a natural collaborator, negotiator, translator. It also means people don't always see how much work you're doing.",
+            "You are a master of social tai chi. You redirect energy rather than block it. This makes you incredibly effective in chaotic environments.",
+            "But constantly bending means you might eventually forget what your natural shape feels like. You have the right to be rigid when it matters."
+          ],
+          "shadows": [
+            "You can bend so far you lose track of your own shape.",
+            "You adapt to please, then resent the person you adapted for.",
+            "You might avoid necessary conflict, letting things fester until they break."
+          ],
+          "advice": [
+            "Once this week, say 'no' to something small. Notice what happens.",
+            "Write down three things you actually want — not what fits the situation.",
+            "Pick one person who's never seen you be stubborn. Let them.",
+            "When you feel resentful, ask yourself: 'Did I say yes when I meant no?'"
+          ],
+          "keywords": [
+            "adaptive",
+            "graceful",
+            "intuitive",
+            "underestimated"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "You move with the current without losing the shore.",
+          "narrative": [
+            "You can be firm or yielding as the moment calls for — and you don't make a big deal about switching between them.",
+            "This is what real social intelligence looks like. Not performance — calibration.",
+            "People trust you because you seem to know what's needed. They also sometimes take that for granted.",
+            "You know when to push and when to yield. This is a rare form of grace that most people spend their whole lives trying to learn.",
+            "You are the glue that holds groups together. You don't demand the spotlight, but you are the reason the light stays on."
+          ],
+          "shadows": [
+            "You over-accommodate, then quietly withdraw.",
+            "You mistake your own flexibility for not having preferences.",
+            "You might let others make decisions that affect you deeply, just to keep the peace."
+          ],
+          "advice": [
+            "Once this week, voice a preference before someone else does.",
+            "Notice where you soften your language unnecessarily.",
+            "You're allowed to want things. Practice wanting them out loud.",
+            "Be honest with yourself about your own boundaries. Are you bending, or are you breaking?"
+          ],
+          "keywords": [
+            "calibrated",
+            "graceful",
+            "empathic",
+            "social"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "You bloom in the right light. Not every light.",
+          "narrative": [
+            "You feel other people's moods before they name them. That's a gift, but it makes you susceptible to rooms that drain you.",
+            "When you're in the right place, you're lush and creative. When you're not, you go small.",
+            "You've probably learned to distrust your own sensitivity. Don't. It's the most accurate instrument you have.",
+            "You are a psychic sponge. You need to learn how to wring yourself out at the end of the day, or you'll carry everyone else's weight.",
+            "The right room won't just tolerate you; it will nourish you. Find it, and stay there as long as you can."
+          ],
+          "shadows": [
+            "You absorb other people's stress as if it were your own.",
+            "You mistake peacekeeping for peace.",
+            "You might isolate yourself completely after socializing, needing days to recover."
+          ],
+          "advice": [
+            "Write down one place and one person where you feel lightest. Spend more time there.",
+            "When you feel 'off' around someone, trust it once before explaining it away.",
+            "You don't need to fix anyone's mood. Not even to protect your own.",
+            "Create a 'detox ritual' after being in crowded spaces. Shower, walk, or just breathe."
+          ],
+          "keywords": [
+            "sensitive",
+            "empathic",
+            "growth",
+            "bloom"
+          ]
+        }
+      }
+    },
+    "THE_RADIATOR": {
+      "name": "太陽",
+      "tagline": "You warm rooms by existing in them.",
+      "symbol": "☀",
+      "color": "#E85D2F",
+      "element": "Fire",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "You run hot. Your own momentum is your fuel — and your risk.",
+          "narrative": [
+            "You generate your own energy. You don't wait for permission, and you rarely need the room to agree before you move.",
+            "People feel you before they understand you. That first impression — warm, direct, bright — opens doors. But it also sets an expectation: that you're always on.",
+            "You've probably been told you're 'a lot.' That's not a flaw. It's a signal about who's in the room with you.",
+            "Your energy sets the temperature of every room you walk into. When you dim, everyone feels the drop. That's why you often push yourself past your limits just to keep the lights on.",
+            "But remember: you don't owe anyone your shine 24/7. The darkness isn't a failure. It's where you recharge."
+          ],
+          "shadows": [
+            "You can mistake motion for progress. Slowing down feels like failure, so you don't — until you crash.",
+            "You attract people who want to be lit up, then resent the warmth when it fades. Not your fault, but worth noticing.",
+            "You can become overly dependent on external validation, losing touch with what you actually want."
+          ],
+          "advice": [
+            "Schedule one hour a week with nothing to output. Not rest — space.",
+            "Let one small thing go wrong this week without fixing it.",
+            "When you feel unappreciated, ask: 'Did I ask for what I need, or did I assume they'd know?'",
+            "Build your own 'charging station'. Solitude in a room with no one else is essential for you."
+          ],
+          "keywords": [
+            "warmth",
+            "momentum",
+            "presence",
+            "self-fuel"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "You carry warmth that reads the room before it fills it.",
+          "narrative": [
+            "Your fire is steady rather than explosive. You know when to lead and when to listen — a rarer gift than most people realize.",
+            "You radiate without demanding attention. People trust you because you seem to know the temperature of a situation without anyone telling you.",
+            "This balance is your superpower. But balanced people often feel invisible next to louder ones.",
+            "You are the campfire that everyone gathers around. You don't need to be the loudest; you just need to be the most consistent.",
+            "Don't let your calm demeanor hide your own needs. You are allowed to flicker, and you are allowed to be seen."
+          ],
+          "shadows": [
+            "You may shrink your own light to keep things harmonious.",
+            "Your calm can read as distance to people who need more heat than you offer.",
+            "You might neglect your own desires to play the role of the stable one."
+          ],
+          "advice": [
+            "Once a week, claim the space you'd normally give away.",
+            "When something lights you up, say it out loud — don't just feel it.",
+            "Notice who you dim around. That's information.",
+            "Ask someone for help. You don't always have to be the strong one."
+          ],
+          "keywords": [
+            "calibrated",
+            "warmth",
+            "adaptability",
+            "trust"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "Your fire is real — but it needs the right room to burn.",
+          "narrative": [
+            "You have warmth inside you, but it doesn't always come out easily. The wrong environment can make you feel dim.",
+            "You're at your best when you're around people who see you clearly. When you're not, you don't fake it — you just go quiet.",
+            "This sensitivity isn't weakness. It's a filter. It tells you very fast who's good for you.",
+            "You need a space where your warmth is reflected back to you. If you give heat to an icebox, the icebox doesn't warm up — you just freeze.",
+            "Your sensitivity is a compass. It points you toward the people who will actually appreciate your light."
+          ],
+          "shadows": [
+            "You wait too long for the 'perfect' moment or the 'perfect' person before you let yourself shine.",
+            "You may have internalized someone else's dim view of you.",
+            "You might dim your own light to match the energy of the room, feeling exhausted later."
+          ],
+          "advice": [
+            "Write down three people or places where you feel most yourself. Spend more time there.",
+            "One small thing you've been putting off: start it today, ugly.",
+            "You don't need permission. You need a witness. Find one.",
+            "Give yourself permission to leave a room that doesn't feed your fire."
+          ],
+          "keywords": [
+            "sensitivity",
+            "loyalty",
+            "quiet fire",
+            "environment"
+          ]
+        }
+      }
+    },
+    "THE_KEEPER": {
+      "name": "灯台守",
+      "tagline": "You're not a bonfire. You're a lantern.",
+      "symbol": "✦",
+      "color": "#C2461F",
+      "element": "Fire",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "You burn steady, and you burn alone — and that's not loneliness, that's craft.",
+          "narrative": [
+            "Your fire is focused, not loud. You don't need an audience to keep going, and you don't need applause to know you're on track.",
+            "You notice things other people miss — a shift in tone, a detail in a room, a pattern in someone's behavior.",
+            "This makes you excellent at things that require precision and patience. It also means you carry a lot inside.",
+            "You are the watchman in the tower. You see the storm coming before anyone else does, but sometimes you forget to warn the people below.",
+            "Your quiet intensity is a gift, but you don't have to hold the whole world in your chest. Let someone else take the watch for a while."
+          ],
+          "shadows": [
+            "You hold stress quietly until it becomes physical.",
+            "You can confuse your own intensity with other people's expectations of you.",
+            "You might bottle up your emotions until they explode in private."
+          ],
+          "advice": [
+            "Name one worry you've been carrying alone. Say it out loud to someone.",
+            "Move your body once this week in a way that isn't for fitness. Just for feeling.",
+            "You're allowed to be a specialist without being a workaholic.",
+            "Find a safe person to share your inner world with. You don't have to be a fortress."
+          ],
+          "keywords": [
+            "focused",
+            "precise",
+            "perceptive",
+            "self-contained"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "You light what's near you — not everything.",
+          "narrative": [
+            "You have real warmth, and you're not shy with it. But you also know the difference between lighting a room and burning yourself out for it.",
+            "People come to you with their real problems, not their small talk. That's not because you demand it — it's because you invite it without trying.",
+            "You're the kind of person others feel safe around. That's a very specific kind of power.",
+            "You are the trusted confidant. You know how to hold space for someone else's pain without getting swallowed by it.",
+            "Remember that you also need a listener. It's okay to ask for the same kind of space you so freely give."
+          ],
+          "shadows": [
+            "You let certain people take more than they give.",
+            "You deprioritize your own heat to keep other fires going.",
+            "You might enable others by always being the one who fixes things."
+          ],
+          "advice": [
+            "Notice who you give your best energy to. Is it mutual?",
+            "Ask for one thing this week without explaining why you need it.",
+            "Let one person take care of you without managing the process.",
+            "Set a boundary with someone who only takes. It's not selfish; it's survival."
+          ],
+          "keywords": [
+            "warmth",
+            "trust",
+            "selective",
+            "listener"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "You glow in the right company and disappear in the wrong one.",
+          "narrative": [
+            "Your light isn't loud — it's tender. It shows up strongest when you trust the people around you.",
+            "In the wrong environment, you don't dim on purpose; you just fade. And you often don't notice until someone says 'you've been quiet.'",
+            "Your sensitivity isn't fragility. It's the reason people trust you with their own tenderness.",
+            "You need a small, trusted circle. You are not meant for the loud, crowded room; you are meant for the deep, quiet conversation.",
+            "The right people will protect your softness, not exploit it. Find them, and give them your whole heart."
+          ],
+          "shadows": [
+            "You carry other people's emotions as if they were yours.",
+            "You mistake self-protection for self-erasure.",
+            "You might isolate yourself completely to avoid getting hurt."
+          ],
+          "advice": [
+            "Keep a running list of who makes you feel more like yourself, not less.",
+            "Once this week, leave the room early if it doesn't feel right.",
+            "You don't owe anyone a performance of wellness.",
+            "Give yourself permission to be a 'homebody'. Your energy needs a safe harbor."
+          ],
+          "keywords": [
+            "tender",
+            "intuitive",
+            "protective",
+            "quiet strength"
+          ]
+        }
+      }
+    },
+    "THE_ANCHOR": {
+      "name": "錨",
+      "tagline": "You're the ground other people stand on.",
+      "symbol": "▣",
+      "color": "#8B6F3F",
+      "element": "Earth",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "You don't move fast — you move last, and you're right.",
+          "narrative": [
+            "You have a deep reserve of patience that most people can't fake. When everything around you is shifting, you stay where you are and watch. Eventually, everyone comes back to your position.",
+            "You don't need to be the loudest voice. You need to be the one people trust when the noise dies down.",
+            "This makes you a natural long-term player. You win things slowly, on purpose, and you keep them.",
+            "You are the immovable mountain. You don't chase trends; you build foundations. People come to you because you are the only stable thing in a chaotic world.",
+            "But even mountains weather. Don't mistake your rigidity for strength. Sometimes, bending is the only way to survive the earthquake."
+          ],
+          "shadows": [
+            "You can mistake staying put for staying safe.",
+            "Your stability becomes the reason others stop growing around you.",
+            "You can resist necessary change until it's forced upon you, causing unnecessary stress."
+          ],
+          "advice": [
+            "Once this month, do something with no clear payoff. Just to see.",
+            "Notice where you're the last person holding a position that no longer serves you.",
+            "Say yes to one thing that scares you. Anchor the new thing too.",
+            "Ask a younger person for their perspective. They might see what you're missing."
+          ],
+          "keywords": [
+            "steady",
+            "reliable",
+            "long-game",
+            "unshakable"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "You hold steady without holding others back.",
+          "narrative": [
+            "You have the anchor's strength without its rigidity. You know when to stand firm and when to bend, and you don't agonize over the choice.",
+            "People lean on you because you don't ask them to. You just happen to be there, and that turns out to matter more than most people realize.",
+            "This is quiet power. It doesn't photograph well, but it lasts.",
+            "You are the pillar of the community. You don't need to be in charge, but you are the one everyone relies on when things get hard.",
+            "Make sure your foundation is solid for yourself first. You can't support others if you're crumbling from within."
+          ],
+          "shadows": [
+            "You take on more weight than you admit because you don't want to make it a thing.",
+            "You confuse consistency with staying in a role you've outgrown.",
+            "You might let others become overly dependent on you, stunting their growth."
+          ],
+          "advice": [
+            "Ask for one thing this week that you'd normally just handle yourself.",
+            "Check: are you the ground, or are you the ceiling?",
+            "Give away one responsibility you've been carrying silently.",
+            "Let someone else step up. They might surprise you."
+          ],
+          "keywords": [
+            "grounded",
+            "trustworthy",
+            "quiet strength",
+            "balance"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "Your stability is real — but it depends on solid ground under you.",
+          "narrative": [
+            "You have the anchor's loyalty, but it needs a place to anchor to. When you find it, you're immovable. When you don't, you drift.",
+            "You feel other people's chaos more than you show. You absorb it, sit with it, and eventually it becomes yours.",
+            "Your power isn't in holding everything — it's in choosing what to hold.",
+            "You are a sponge for the energy of your environment. When the ground is shaky, you feel it in your bones.",
+            "Your first priority must be creating a stable home base. You cannot be a safe harbor for others if you are lost at sea."
+          ],
+          "shadows": [
+            "You stay loyal to places and people that no longer hold you.",
+            "You carry other people's weight until you forget what yours feels like.",
+            "You might resist moving on because the familiar, even if painful, feels safer."
+          ],
+          "advice": [
+            "Name one thing you're holding that isn't yours. Put it down this week.",
+            "Find the place where you feel most solid. Go there more.",
+            "You can be steady without being a shelter for everyone.",
+            "If a place or person makes you feel unstable, it's okay to walk away."
+          ],
+          "keywords": [
+            "loyal",
+            "steady",
+            "grounded",
+            "protective"
+          ]
+        }
+      }
+    },
+    "THE_CULTIVATOR": {
+      "name": "耕作者",
+      "tagline": "You grow things. Quietly, patiently, for real.",
+      "symbol": "❉",
+      "color": "#A89060",
+      "element": "Earth",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "You build things that last, by hand, without shortcuts.",
+          "narrative": [
+            "You don't need grand gestures. You need steady work, close attention, and time. You're the person who actually finishes what others only started.",
+            "People underestimate you because your power doesn't announce itself. Then years pass and you're the one still standing with something real.",
+            "This is a rare gift. Most people can start things. Very few can grow them.",
+            "You are the master gardener of life. You plant seeds and nurture them with tireless patience, even when no one else can see the growth.",
+            "But don't forget to leave some water in the can for yourself. Your own garden needs tending too."
+          ],
+          "shadows": [
+            "You take on responsibility for everyone else's success.",
+            "You keep giving past the point where it's working.",
+            "You might feel unappreciated because your work is often invisible until it blooms."
+          ],
+          "advice": [
+            "Pick one thing you've been tending out of loyalty, not love. Let it go.",
+            "Ask yourself what you'd grow if no one needed anything from you.",
+            "You're allowed to build something just for you.",
+            "Celebrate a small win today. You worked hard for it."
+          ],
+          "keywords": [
+            "patient",
+            "practical",
+            "nurturing",
+            "builder"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "You make things grow — including people.",
+          "narrative": [
+            "You have a rare instinct for what a person, project, or place needs to thrive. You don't impose it — you just quietly supply what's missing.",
+            "This makes you invaluable in collaborative work. You're the reason things actually happen, even when your name isn't on them.",
+            "You also know when to step back. That's the mark of a real cultivator.",
+            "You are the soil that others grow in. You provide the nutrients, the stability, and the support so others can shine.",
+            "Remember that you also deserve to bloom. You don't have to stay in the background forever."
+          ],
+          "shadows": [
+            "You over-support until the other person stops trying.",
+            "You downplay your role because the growing isn't dramatic.",
+            "You might feel resentful when others take credit for your quiet work."
+          ],
+          "advice": [
+            "Once this week, name what you actually contributed to a success.",
+            "Notice where your support is being taken for granted. Adjust.",
+            "Let one person fail without stepping in. Watch what they do.",
+            "Speak up about your contribution. It's not bragging; it's the truth."
+          ],
+          "keywords": [
+            "nurturing",
+            "practical",
+            "steady",
+            "supportive"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "You bloom when someone tends to you back.",
+          "narrative": [
+            "You give naturally, but you're not great at receiving. People assume you're fine because you seem fine. You usually are. Usually.",
+            "Your best work happens when someone believes in you a little more than the situation warrants.",
+            "You don't need to become harder. You need to choose softer soil.",
+            "You are a mirror. When someone gives you love and attention, you reflect it back tenfold. But you need someone to give it first.",
+            "Don't wait for permission to take care of yourself. You deserve the same care you freely give to everyone else."
+          ],
+          "shadows": [
+            "You give more than you have and call it generosity.",
+            "You mistake over-responsibility for love.",
+            "You might burn out trying to be everything to everyone."
+          ],
+          "advice": [
+            "Once this week, let someone take care of something for you.",
+            "Write down what you need. Not what others need from you.",
+            "You can put down a burden without putting down the person.",
+            "Surround yourself with people who nurture your growth, not just those who need your nurturing."
+          ],
+          "keywords": [
+            "nurturing",
+            "sensitive",
+            "giving",
+            "patient"
+          ]
+        }
+      }
+    },
+    "THE_BLADE": {
+      "name": "刃",
+      "tagline": "You cut through what everyone else is avoiding.",
+      "symbol": "⚔",
+      "color": "#5A6B7A",
+      "element": "Metal",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "You call it what it is — and you'd rather be right than liked.",
+          "narrative": [
+            "You have a moral clarity that most people spend their lives trying to develop. You see what's true about a situation fast, and you don't need to soften it to make it true.",
+            "This makes you reliable in a crisis and intimidating in a meeting. Both are useful.",
+            "You're not cold. You're direct. The difference matters, and you don't always explain it.",
+            "You are the scalpel in a world of butter knives. You cut to the heart of the matter, slicing through the noise and confusion with surgical precision.",
+            "But a blade that's always drawn will eventually dull. Know when to put yourself away, to rest, and to just observe."
+          ],
+          "shadows": [
+            "You cut too fast. Sometimes people need a second to catch up.",
+            "You can win the argument and lose the room.",
+            "You might use your directness as a shield to avoid dealing with your own emotions."
+          ],
+          "advice": [
+            "Once this week, ask a question before giving the answer.",
+            "Notice where your honesty is a weapon instead of a gift.",
+            "Being right isn't always the win. Sometimes being heard is.",
+            "Ask yourself: 'Am I speaking to be understood, or to be right?'"
+          ],
+          "keywords": [
+            "direct",
+            "principled",
+            "sharp",
+            "decisive"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "You know when to cut and when to hold.",
+          "narrative": [
+            "You have the blade's clarity without its edge-for-edge's-sake. You can tell the truth without making it into a fight.",
+            "People trust you because you don't lie. They also come to you with hard things because you don't flinch.",
+            "This is an unusual kind of strength — one that doesn't need to prove itself.",
+            "You are the fair judge. You listen to all sides, weigh the evidence, and deliver a verdict that is both just and compassionate.",
+            "Your integrity is your most valuable asset. Guard it fiercely, but allow yourself some grace."
+          ],
+          "shadows": [
+            "You can slip into being the fixer for everyone else's mess.",
+            "You confuse being needed with being wanted.",
+            "You might become overly critical of yourself when you fall short of your own high standards."
+          ],
+          "advice": [
+            "Once this week, let someone else be the one who knows.",
+            "Say what you feel, not just what you see.",
+            "Notice who you soften around. Learn from that.",
+            "Forgive yourself for a mistake you made. You're human, not a machine."
+          ],
+          "keywords": [
+            "principled",
+            "clear",
+            "decisive",
+            "trusted"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "Your edge is real — it just needs to be respected, not dulled.",
+          "narrative": [
+            "You have strong convictions, but you've probably been told to soften them. You've learned to hide your edge. That was survival, not growth.",
+            "In the right environment, your precision becomes an asset. In the wrong one, it's a liability.",
+            "You don't need to become less. You need to find people who can hold sharpness.",
+            "You are the diamond in the rough. Under pressure, you shine. But you need an environment that appreciates your hardness, not one that tries to crush it.",
+            "Don't dim your light or dull your edge for anyone. Find your people, and let your sharpness be a gift."
+          ],
+          "shadows": [
+            "You've internalized other people's discomfort with your honesty.",
+            "You second-guess instincts that are usually right.",
+            "You might isolate yourself because you feel you don't fit in."
+          ],
+          "advice": [
+            "Once this week, say the thing you've been softening. Notice what happens.",
+            "Find one person who can take your real opinion. Keep them.",
+            "You're not too much. You're in the wrong room.",
+            "Trust your instincts. They are usually right. If someone can't handle your truth, they are not your people."
+          ],
+          "keywords": [
+            "principled",
+            "sharp",
+            "loyal",
+            "misunderstood"
+          ]
+        }
+      }
+    },
+    "THE_GEM": {
+      "name": "宝石",
+      "tagline": "You shine because you were cut with intent.",
+      "symbol": "◈",
+      "color": "#9AACB8",
+      "element": "Metal",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "You've spent years refining your taste — and it shows.",
+          "narrative": [
+            "You notice quality that other people walk past. A phrase, a finish, a detail in a room — you see the difference, and you care about it.",
+            "You hold yourself to a standard that doesn't come from outside. You're not chasing approval, you're chasing the version of the thing that would make you proud to have made it.",
+            "This makes you exceptional at a certain kind of work. It also makes you difficult to satisfy — including with yourself.",
+            "You are a piece of fine art, meticulously crafted. Your eye for detail is a superpower, but it can also be a curse if you don't learn to let things go.",
+            "Remember that perfection is a horizon you can never reach. The beauty is in the pursuit, not in the arrival."
+          ],
+          "shadows": [
+            "You can burn a lot of energy on details no one else will notice.",
+            "You're harder on yourself than you'd ever be on someone else.",
+            "You might become paralyzed by perfectionism, unable to finish anything."
+          ],
+          "advice": [
+            "Once this week, ship something at 80%. Notice that no one died.",
+            "Say one kind thing to yourself out loud. Yes, out loud.",
+            "Ask: 'Is this the best I can do, or the best that's needed?'",
+            "Give yourself a break. Take a day off from being perfect."
+          ],
+          "keywords": [
+            "refined",
+            "precise",
+            "perfectionist",
+            "taste"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "You have taste without letting it run your life.",
+          "narrative": [
+            "You know the difference between good and great, but you don't let it stop you from moving. You refine as you go, not before you start.",
+            "This is a rare balance — one that lets you actually finish things while still caring about how they're made.",
+            "People notice the quality of what you touch, even if they can't name why.",
+            "You are a polished gem, radiating elegance and refinement. You don't have to shout to be noticed; your presence speaks for itself.",
+            "But make sure your pursuit of excellence doesn't isolate you from the messy, imperfect beauty of the world."
+          ],
+          "shadows": [
+            "You can slip into editing other people's choices without being asked.",
+            "You downplay your own standards to fit into rooms that don't share them.",
+            "You might use your taste as a way to feel superior to others."
+          ],
+          "advice": [
+            "Once this week, notice where your standards are a gift, and where they're a gate.",
+            "Pick one thing to do badly on purpose. See what happens.",
+            "Let someone else's version of 'good' be good enough.",
+            "Appreciate the beauty in the imperfect. Wabi-sabi is a thing."
+          ],
+          "keywords": [
+            "refined",
+            "balanced",
+            "tasteful",
+            "precise"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "Your shine depends on the light you're standing in.",
+          "narrative": [
+            "You have a refined inner world, but it only comes out when the conditions are right. In the wrong place, you go quiet and small.",
+            "You've probably been told you're 'too picky' at some point. You're not. You just notice things.",
+            "The right rooms don't dim you — they reveal you.",
+            "You are a delicate crystal. You need the right lighting, the right angle, and the right company to truly sparkle.",
+            "Don't waste your light in places that can't see your value. Find the space where you are appreciated, and let yourself shine."
+          ],
+          "shadows": [
+            "You don't speak up because you assume other people won't get it.",
+            "You over-edit yourself before anyone else even sees the work.",
+            "You might feel like an outsider, even when you're in a group."
+          ],
+          "advice": [
+            "Find one person who gets your taste. Show them the real version.",
+            "Say the specific thing you noticed this week, even if no one asked.",
+            "You don't need everyone to see the detail. You need one person who does.",
+            "Speak up about your preferences. You are allowed to have high standards."
+          ],
+          "keywords": [
+            "refined",
+            "sensitive",
+            "perceptive",
+            "quiet"
+          ]
+        }
+      }
+    },
+    "THE_DEEP": {
+      "name": "深海",
+      "tagline": "You move like an ocean — slow on the surface, vast underneath.",
+      "symbol": "≈",
+      "color": "#1B3A5C",
+      "element": "Water",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "You think in systems, not moments.",
+          "narrative": [
+            "You have an unusual capacity to hold a lot of context at once. Where other people see a situation, you see the machinery under it.",
+            "You don't rush to conclusions. You let things settle, and your conclusions are usually right because of it.",
+            "This makes you a strategist, an advisor, someone others consult when the easy answers have failed.",
+            "You are the deep ocean. You hold mysteries and wisdom that others can only guess at. Your depth is your greatest strength.",
+            "But don't drown in your own thoughts. Sometimes, it's okay to surface and just experience the present moment."
+          ],
+          "shadows": [
+            "You think so long that you miss the window to act.",
+            "You stay above your own emotions because you can see them from far away.",
+            "You might use your intellect to analyze your feelings, instead of actually feeling them."
+          ],
+          "advice": [
+            "Once this week, act on a decision before you feel 'ready.'",
+            "Say what you actually feel — not what you've analyzed about what you feel.",
+            "Notice when your depth is a gift and when it's a hiding place.",
+            "Take a break from thinking. Go for a walk, listen to music, or just breathe."
+          ],
+          "keywords": [
+            "strategic",
+            "philosophical",
+            "deep",
+            "adaptive"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "You adapt without losing your direction.",
+          "narrative": [
+            "You can shift with circumstances and still arrive where you meant to go. That's not luck — that's a skill most people never develop.",
+            "You read situations well, and you read people better. You rarely say the wrong thing because you usually know what the right thing is.",
+            "This makes you trusted in rooms where trust is scarce.",
+            "You are the wise counselor. People come to you for your insight, knowing you will offer a perspective they haven't considered.",
+            "Trust that your intuition is a valid source of knowledge. It's not just a feeling; it's a deep knowing."
+          ],
+          "shadows": [
+            "You can flow around conflict instead of resolving it.",
+            "You keep your real opinions in reserve so long that they stop mattering.",
+            "You might use your wisdom as an excuse to stay detached from the world."
+          ],
+          "advice": [
+            "Once this week, take a position instead of reflecting on the positions available.",
+            "Say the true thing, not the safe thing.",
+            "Notice where you're adapting to avoid, not to build.",
+            "Speak up about your beliefs. You have valuable things to say."
+          ],
+          "keywords": [
+            "adaptive",
+            "wise",
+            "fluid",
+            "trusted"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "You need a container big enough to hold you.",
+          "narrative": [
+            "You have a lot going on inside — ideas, questions, feelings — and it doesn't all fit into small spaces.",
+            "In the right environment, your depth becomes presence. In the wrong one, you go silent and start drifting.",
+            "You're not hard to know. You're hard to hold. That's different.",
+            "You are a vast, unexplored ocean. You need a space where you can be your full, complex self without feeling judged.",
+            "Don't shrink yourself to fit into small minds. Find the people who can hold your depth."
+          ],
+          "shadows": [
+            "You retreat into your own world instead of asking for what you need.",
+            "You confuse being unknown with being unknowable.",
+            "You might feel lonely even in a crowded room."
+          ],
+          "advice": [
+            "Find the one person you can say the whole thing to. Not the summary.",
+            "Give your inner world one place to live this week — a page, a song, a room.",
+            "You're not too much. You're just not in the right size container.",
+            "Reach out. You might be surprised who is willing to dive deep with you."
+          ],
+          "keywords": [
+            "deep",
+            "sensitive",
+            "philosophical",
+            "adaptive"
+          ]
+        }
+      }
+    },
+    "THE_SPRING": {
+      "name": "泉",
+      "tagline": "You arrive quietly, and everything grows around you.",
+      "symbol": "◌",
+      "color": "#4A6FA5",
+      "element": "Water",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "You know things before you can explain how.",
+          "narrative": [
+            "Your intuition is unusually accurate. You get a read on a person or a situation fast, and it's usually right — even when you can't articulate why.",
+            "You don't perform certainty. You just move as if you already know, because you do.",
+            "This makes you a natural in work that requires subtle judgment. It also makes you hard to argue with when you've made up your mind.",
+            "You are a clear mountain spring. Your intuition is pure and refreshing. It flows from a deep well of inner knowing.",
+            "Trust your gut. It is your most reliable guide, even when logic points in the other direction."
+          ],
+          "shadows": [
+            "You rely on your own read so much that you stop asking for input.",
+            "You keep your deepest insights private, which means people don't get to benefit from them.",
+            "You might become overly mysterious, keeping everyone at arm's length."
+          ],
+          "advice": [
+            "Once this week, say the thing you intuited — even without proof.",
+            "Let someone in on the reasoning, not just the conclusion.",
+            "You don't need to be sure to be right.",
+            "Share your wisdom. It's a gift that shouldn't be kept hidden."
+          ],
+          "keywords": [
+            "intuitive",
+            "subtle",
+            "strategic",
+            "quiet"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "You listen more than you talk — and you hear more than most.",
+          "narrative": [
+            "You have a still, perceptive quality that makes people want to tell you things. You don't push. You just make space.",
+            "Your instincts are quiet, but they're usually on time. You know when to act and when to wait, and the difference is rarely explained to you — you just feel it.",
+            "This is a rare and durable kind of intelligence.",
+            "You are a still lake. Your surface is calm, but your depths are filled with wisdom and insight.",
+            "Remember that you also need a place to share your thoughts. You don't have to hold everything inside."
+          ],
+          "shadows": [
+            "You absorb other people's emotions without noticing until later.",
+            "You keep your own counsel so well that people assume you don't need anything.",
+            "You might use silence as a way to avoid confrontation."
+          ],
+          "advice": [
+            "Once this week, tell someone what you actually need.",
+            "Notice where your stillness is a gift and where it's a wall.",
+            "You're allowed to be a source without being everyone's well.",
+            "Find a creative outlet. Painting, writing, or music can help you express what you can't say in words."
+          ],
+          "keywords": [
+            "intuitive",
+            "gentle",
+            "perceptive",
+            "steady"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "You're a well — deep, clear, and quietly essential.",
+          "narrative": [
+            "You have real inner depth, but it doesn't always surface in public. You need the right person or the right moment for it to come out.",
+            "People often underestimate you, and you usually let them. You've learned that being seen isn't the same as being understood.",
+            "When you find someone who gets it, you open up in a way that surprises even you.",
+            "You are a hidden gem. You are not for everyone, but for those who take the time to dig, you are a treasure trove.",
+            "Be patient. The right people will know how to appreciate your quiet, subtle brilliance."
+          ],
+          "shadows": [
+            "You hide your depth because you've been misread before.",
+            "You wait for the perfect invitation to be yourself.",
+            "You might become so good at hiding that you lose touch with your true self."
+          ],
+          "advice": [
+            "Stop waiting for the perfect person. Start sharing with the good ones.",
+            "Once this week, say the thing you've been holding back.",
+            "Being understood is worth the risk of being misread.",
+            "Express yourself in a way that feels safe to you. You don't have to perform to be seen."
+          ],
+          "keywords": [
+            "deep",
+            "sensitive",
+            "intuitive",
+            "quiet power"
+          ]
+        }
+      }
+    }
+  },
+  "DEFAULT_INTENSITY": {
+    "hero": "You are still becoming.",
+    "narrative": [
+      "This chart is being read in a way we don't have words for yet."
+    ],
+    "shadows": [],
+    "advice": [],
+    "keywords": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "time_correction_cases": [
+    {
+      "description": "Standard Seoul birth with LMT correction",
+      "birth_date": "1990-05-05",
+      "birth_time": "14:30:00",
+      "timezone": "Asia/Seoul",
+      "longitude": 126.9780,
+      "correction_mode": "LMT",
+      "expected_standard_meridian": 135.0
+    },
+    {
+      "description": "New York birth with standard meridian -75",
+      "birth_date": "1990-05-05",
+      "birth_time": "14:30:00",
+      "timezone": "America/New_York",
+      "longitude": -74.0060,
+      "correction_mode": "LMT",
+      "expected_standard_meridian": -75.0
+    }
+  ]
+}
