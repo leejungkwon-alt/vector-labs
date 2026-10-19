@@ -1,12 +1,6 @@
 # app/main.py
 """
 FastAPI 진입점 — 운영 계층 포함.
-
-- 구조적 로깅
-- 요청 컨텍스트 (request_id)
-- IP 기반 rate limit
-- CORS
-- /health, /ready
 """
 import os
 import logging
@@ -25,21 +19,16 @@ configure_logging()
 app = FastAPI(
     title="Saju Engine API",
     version="1.0.0",
-    description=(
-        "Deterministic Four Pillars (Saju) engine. "
-        "Uses a simplified weighted-sum strength model with seasonal (조후) "
-        "adjustment — school-dependent. Results vary by lineage."
-    ),
+    description="Deterministic Four Pillars (Saju) engine.",
 )
 
-# Starlette: 마지막에 추가된 미들웨어가 outermost → 실행 순서
-#   RequestContext → CORS → RateLimit → route
+# Starlette: 마지막에 추가된 미들웨어가 outermost
 app.add_middleware(
     RateLimitMiddleware,
     max_requests=int(os.getenv("SAJU_RATE_LIMIT_MAX", "120")),
     window_seconds=int(os.getenv("SAJU_RATE_LIMIT_WINDOW", "60")),
 )
-# Step 4-B: 프로덕션에서 CORS=* 경고
+
 _cors_origins = [
     o.strip()
     for o in os.getenv("SAJU_CORS_ORIGINS", "*").split(",")
@@ -59,13 +48,15 @@ app.add_middleware(
     allow_headers=["*"],
     expose_headers=["X-Request-ID", "X-RateLimit-Limit", "X-RateLimit-Remaining"],
 )
+
 app.add_middleware(RequestContextMiddleware)
 
 app.include_router(saju.router, prefix="/api/v1/saju", tags=["Saju"])
 app.include_router(report.router, prefix="/api/v1/saju", tags=["Report"])
 app.include_router(compatibility.router, prefix="/api/v1/saju", tags=["Compatibility"])
 app.include_router(daily.router, prefix="/api/v1/saju", tags=["Daily"])
-app.include_router(auth_router, prefix="/api/v1/auth", tags=["Auth"])\napp.include_router(telegram.router, prefix="/api/v1/telegram", tags=["Telegram"])
+app.include_router(auth_router, prefix="/api/v1/auth", tags=["Auth"])
+app.include_router(telegram.router, prefix="/api/v1/telegram", tags=["Telegram"])
 
 
 @app.get("/")
