@@ -14,7 +14,7 @@ import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.v1.endpoints import saju, report, compatibility, daily
+from app.api.v1.endpoints import saju, report, compatibility, daily, telegram
 from app.auth.router import router as auth_router
 from app.ops.logging_config import configure_logging
 from app.ops.middleware import RequestContextMiddleware
@@ -65,7 +65,7 @@ app.include_router(saju.router, prefix="/api/v1/saju", tags=["Saju"])
 app.include_router(report.router, prefix="/api/v1/saju", tags=["Report"])
 app.include_router(compatibility.router, prefix="/api/v1/saju", tags=["Compatibility"])
 app.include_router(daily.router, prefix="/api/v1/saju", tags=["Daily"])
-app.include_router(auth_router, prefix="/api/v1/auth", tags=["Auth"])
+app.include_router(auth_router, prefix="/api/v1/auth", tags=["Auth"])\napp.include_router(telegram.router, prefix="/api/v1/telegram", tags=["Telegram"])
 
 
 @app.get("/")
