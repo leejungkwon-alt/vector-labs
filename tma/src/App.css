@@ -109,3 +109,136 @@ body {
   0%, 100% { opacity: 0.4; }
   50% { opacity: 1; }
 }
+
+/* --- 레이아웃 --- */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #050508;
+}
+.content-area {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+.tab-page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --- 홈 탭 (배경화면) --- */
+.home-page {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* --- 스크롤 탭 (리포트, 일운) --- */
+.scroll-page {
+  overflow-y: auto;
+  padding: 24px 16px 100px;
+  background-color: #0d0d12;
+}
+.page-title {
+  color: white;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  color: white;
+}
+.card h3 {
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+.subtitle {
+  color: #74b9ff;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.body-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 12px;
+}
+.block-item {
+  margin-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+}
+
+/* --- 일운 탭 --- */
+.daily-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.badge {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.date {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+.tip-box {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 16px;
+  border-radius: 12px;
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* --- 하단 탭 바 --- */
+.bottom-tabs {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(15, 15, 20, 0.95);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 0 20px;
+}
+.bottom-tabs button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  transition: color 0.2s;
+}
+.bottom-tabs button span {
+  font-size: 20px;
+}
+.bottom-tabs button.active {
+  color: #fff;
+}
+.bottom-tabs button.active span {
+  transform: scale(1.1);
+}
