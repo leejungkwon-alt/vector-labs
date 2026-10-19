@@ -20,7 +20,7 @@ export default function App() {
 
     const fetchReport = async () => {
       try {
-        const res = await fetch('/api/v1/saju/report', {
+        const res = await fetch('https://vector-labs-api-787049663118.asia-northeast3.run.app/api/v1/saju/report', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
