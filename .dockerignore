@@ -1,0 +1,29 @@
+# 바이너리/캐시
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+data/auth.db
+
+# 테스트/문서/스크립트 (이미지 크기 절감)
+tests/
+docs/
+scripts/
+*.bak_*
+
+# 프롬프트/임시 파일
+prompts/
+*.apk
+*.zip
+
+# 프론트엔드 (백엔드 이미지에 불필요)
+frontend/
+tma/
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# 중요: requirements.txt는 반드시 포함!
+!requirements.txt

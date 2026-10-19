@@ -41,3 +41,5 @@ saju_complete_code.txt
 
 # Large files
 *.apk
+
+# Cloud Run 배포는 Dockerfile 사용 (render.yaml 불필요)
