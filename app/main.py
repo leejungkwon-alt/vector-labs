@@ -53,6 +53,7 @@ if "*" in _cors_origins and os.getenv("SAJU_ENV", "").lower() == "production":
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_cors_origins,
+    allow_origin_regex=r"https://.*\.vercel\.app", # Vercel 도메인 허용
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
