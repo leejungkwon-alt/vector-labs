@@ -345,7 +345,15 @@ def _write_mode_section(profile: dict, lang: str, section_id: str,
         "mode": mode_key,
         "headline": content.get("headline", ""),
         "body": content.get("body", ""),
-        "action": content.get("action", ""),
+        "patterns": content.get("patterns", []),
+        "compatibility": {
+            "best_match": content.get("best_match", []),
+            "best_reason": content.get("best_reason", ""),
+            "challenging_match": content.get("challenging_match", []),
+            "challenging_reason": content.get("challenging_reason", ""),
+        },
+        "actions": content.get("actions", []),
+        "red_flags": content.get("red_flags", []),
     }
 
 

@@ -113,7 +113,7 @@ def test_iap_mock_receipt_works_in_dev(monkeypatch, tmp_path):
     a = client.post("/api/v1/auth/anonymous").json()
     from app.services.iap import verify_and_grant
     result = verify_and_grant(
-        a["user"]["id"], "ios", "mock_valid_receipt", "premium_monthly"
+        a["user"]["id"], "ios", "mock_valid_receipt", "sub_monthly_299"
     )
     assert result["status"] == "success"
 
@@ -133,5 +133,5 @@ def test_iap_mock_receipt_rejected_in_production(monkeypatch, tmp_path):
     from app.services.iap import verify_and_grant, IAPVerificationError
     with pytest.raises(IAPVerificationError, match="not allowed in production"):
         verify_and_grant(
-            a["user"]["id"], "ios", "mock_valid_receipt", "premium_monthly"
+            a["user"]["id"], "ios", "mock_valid_receipt", "sub_monthly_299"
         )

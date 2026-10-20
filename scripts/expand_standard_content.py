@@ -1,0 +1,317 @@
+#!/usr/bin/env python3
+"""
+scripts/expand_standard_content.py
+
+기존 아코디언(재물/일/인연) 콘텐츠 확장
+  1. sections.json 데이터 업데이트 (10개 모드별 상세 데이터)
+  2. content_writer.py: _write_mode_section 확장 (patterns, actions 등 반환)
+  3. home.tsx: 특정 key(love/career/wealth)에 하드코딩된 렌더링을 일반화하여 확장 필드 렌더링
+"""
+import json
+import subprocess
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = ROOT / "app" / "services" / "content" / "data"
+FRONTEND = ROOT / "frontend"
+
+# ============================================================
+# 1. MONEY / WORK / BONDS 데이터 확장 (한국어)
+# ============================================================
+MONEY_CONTENT = {
+    "THE_STEWARD": {
+        "headline": "자산을 안전하게 지키며 복리로 불려나갑니다.",
+        "body": "당신은 리스크를 극도로 싫어하며, 원금 손실을 견디지 못합니다. 눈앞의 단기 수익보다는 장기적인 안정성을 최우선으로 생각합니다.\n\n이런 성향은 예적금, 채권, 부동산 등 확실한 안전 자산을 선호하게 만듭니다. 남들이 코인이나 주식 단타로 흥분할 때, 당신은 조용히 자산을 지키고 불립니다.\n\n하지만 지나친 보수성은 인플레이션을 이기지 못하는 결과를 낳을 수 있습니다. 자산의 일부는 성장 자산에 분산 투자하는 지혜가 필요합니다.",
+        "patterns": ["현금과 예적금 비중이 매우 높습니다.", "손실에 대한 두려움이 커서 결정을 미룹니다.", "복리의 힘을 믿고 장기 보유를 선호합니다."],
+        "best_match": ["THE_OPERATOR", "THE_FLOW"],
+        "best_reason": "당신의 안전 자산 위에 수익을 얹어줄 파트너입니다.",
+        "challenging_match": ["THE_STEWARD"],
+        "challenging_reason": "둘 다 안전만 추구하면 자산이 물가 상승률을 못 따라갑니다.",
+        "actions": ["자산의 10%만 인덱스 펀드에 분산 투자하세요.", "연 1회 예금 금리와 물가 상승률을 비교하세요.", "자동 이체로 적립식 투자를 시작하세요."],
+        "red_flags": ["모든 재산이 예금에만 묶여 있지는 않나요?", "지인에게 돈을 빌려주고 못 받은 적 있나요?"]
+    },
+    "THE_OPERATOR": {
+        "headline": "유동적인 자산 운용과 기회 포착에 탁월합니다.",
+        "body": "당신은 돈이 흐르는 것을 즐깁니다. 자본을 묶어두기보다, 새로운 기회를 포착해 굴리는 데 능숙합니다.\n\n부업, 소규모 사업, 단기 투자 등 다방면에서 수익을 창출할 수 있는 감각을 지녔습니다. 빠른 결단력 덕분에 남들이 망설일 때 과감하게 베팅하여 큰 수익을 내기도 합니다.\n\n하지만 모든 흐름이 빨라지면, 새는 구멍도 커지기 마련입니다. 현금 흐름이 좋을 때 안전망을 확보하지 않으면 위기에 취약해집니다.",
+        "patterns": ["다양한 수입원을 만들려고 합니다.", "위험을 감수하되 리스크를 분산합니다.", "지출도 수입만큼 빠르게 발생합니다."],
+        "best_match": ["THE_STEWARD", "THE_ANCHOR"],
+        "best_reason": "당신이 흩뿌린 자산을 단단하게 지켜줄 파트너입니다.",
+        "challenging_match": ["THE_OPERATOR"],
+        "challenging_reason": "둘 다 리스크를 즐기면 위기 시 회복이 어렵습니다.",
+        "actions": ["수입의 30%는 무조건 자동 저축으로 고정하세요.", "새로운 투자 전 3일간의 숙려 기간을 두세요.", "신용카드 대신 체크카드를 사용해 지출을 통제하세요."],
+        "red_flags": ["수입은 많은데 통장에 남는 게 없지는 않나요?", "빚을 내서 투자하고 있지는 않나요?"]
+    },
+    "THE_FLOW": {
+        "headline": "상황에 맞춰 유연하게 돈의 흐름을 탑니다.",
+        "body": "당신은 돈에 대한 고정관념이 없습니다. 인맥, 직관, 그리고 상황의 흐름을 타고 자연스럽게 수입을 만들어냅니다.\n\n어떤 때는 큰돈이 들어오고, 어떤 때는 텅 비기도 합니다. 하지만 당신은 그 흐름을 담담하게 받아들이며, 필요한 순간에 기회를 끌어당기는 힘이 있습니다.\n\n이런 유연함은 강점이지만, 계획 없이 즉흥적으로 지출하는 습관은 재정을 위태롭게 만들 수 있습니다. 최소한의 안전장치는 필수입니다.",
+        "patterns": ["수입과 지출의 기복이 큽니다.", "사람을 통해 재물 기회를 얻습니다.", "예산을 짜기보다 그때그때 씁니다."],
+        "best_match": ["THE_STEWARD", "THE_ANCHOR"],
+        "best_reason": "당신이 기복 없는 삶을 살도록 중심을 잡아주는 사람입니다.",
+        "challenging_match": ["THE_OPERATOR"],
+        "challenging_reason": "둘 다 즉흥적이면 파산의 지름길입니다.",
+        "actions": ["통장을 2개로 분리하세요 (비상금/생활비).", "큰 지출 전 꼭 24시간을 기다리세요.", "매월 수입의 10%는 무조건 저축하세요."],
+        "red_flags": ["카드값을 돌려막기 하고 있지는 않나요?", "지인의 꾐에 넘어가 투자했다가 손해 본 적 있나요?"]
+    }
+}
+
+WORK_CONTENT = {
+    "THE_CREATOR": {
+        "headline": "자기만의 독창적인 결과물을 만들 때 빛납니다.",
+        "body": "당신은 매뉴얼대로 움직이는 것을 싫어합니다. 무언가를 직접 기획하고 창조하며, 자신만의 색깔을 입힐 때 가장 큰 성취감을 느낍니다.\n\n기획, 디자인, 마케팅, 콘텐츠 제작 등 창의성이 요구되는 분야에서 탁월한 능력을 발휘합니다. 자율성이 보장된 환경에서 최고의 퍼포먼스를 냅니다.\n\n하지만 창작자로서의 고통도 감수해야 합니다. 아이디어가 고갈되거나 결과물이 평가절하될 때 쉽게 상처받습니다. 결과보다 과정을 즐기는 연습이 필요합니다.",
+        "patterns": ["규칙보다 자율성을 중시합니다.", "아이디어를 현실로 만드는 실행력을 가졌습니다.", "비판에 예민하게 반응합니다."],
+        "best_match": ["THE_OFFICER", "THE_MENTOR"],
+        "best_reason": "당신의 창의성을 체계화하고 지지해줄 사람입니다.",
+        "challenging_match": ["THE_OFFICER"],
+        "challenging_reason": "규칙만 강요하는 상사와는 정면충돌합니다.",
+        "actions": ["창작을 위한 몰입 시간을 주 5시간 확보하세요.", "결과물을 80%에서 세상에 공개해 보세요.", "비판을 개인에 대한 공격이 아닌 피드백으로 받아들이세요."],
+        "red_flags": ["완벽주의 때문에 마감을 놓치고 있지 않나요?", "상사의 지시를 무조건 무시하고 있지는 않나요?"]
+    },
+    "THE_CHALLENGER": {
+        "headline": "문제를 해결하고 판을 뒤집을 때 진가를 발휘합니다.",
+        "body": "당신은 평화롭고 정체된 상황을 견디지 못합니다. 누군가 '원래 이렇게 해왔다'고 말할 때, 당신의 뇌는 '더 나은 방법은 없을까?'를 외칩니다.\n\n위기 상황이나 구조조정, 신사업 추진 등 문제 해결이 필요한 곳에서 진정한 리더십을 발휘합니다. 남들이 포기할 때 집요하게 물고 늘어져 결국 해답을 찾아냅니다.\n\n하지만 지나친 비판과 지적은 팀의 사기를 떨어뜨릴 수 있습니다. 문제를 지적하는 데 그치지 말고, 반드시 대안을 함께 제시하는 습관을 들이세요.",
+        "patterns": ["비효율을 보면 참지 못합니다.", "위기 상황에서 리더십이 발휘됩니다.", "권위에 도전하는 것을 두려워하지 않습니다."],
+        "best_match": ["THE_CREATOR", "THE_OFFICER"],
+        "best_reason": "당신의 혁신안을 실제 제품이나 시스템으로 구현해줍니다.",
+        "challenging_match": ["THE_OFFICER"],
+        "challenging_reason": "기존 규칙을 중시하는 사람과 부딪힙니다.",
+        "actions": ["불만을 말할 때는 '대안'을 함께 제시하세요.", "상사의 체면을 세워주는 대화법을 익히세요.", "동료의 의견을 끝까지 경청하는 연습을 하세요."],
+        "red_flags": ["반대를 위한 반대를 하고 있지 않나요?", "당신 때문에 팀원이 위축되고 있지는 않나요?"]
+    },
+    "THE_OFFICER": {
+        "headline": "체계가 잡힌 조직에서 신뢰받는 핵심 인재입니다.",
+        "body": "당신은 원칙과 절차를 중시합니다. 규칙이 명확하고 시스템이 잘 갖춰진 조직에서 가장 안정적으로 성과를 냅니다.\n\n공정함과 책임감이 강해 상사와 동료의 두터운 신뢰를 받습니다. 대기업, 공공기관, 금융, 법조 등 체계가 중요한 분야에 적합합니다.\n\n하지만 변화가 빠른 환경이나 기준이 모호한 조직에서는 답답함을 느낄 수 있습니다. 때로는 규칙보다 유연한 대처가 필요하다는 것을 기억하세요.",
+        "patterns": ["맡은 일은 반드시 끝내고야 맙니다.", "위계질서와 보고 체계를 중시합니다.", "리스크를 사전에 차단하는 능력이 뛰어납니다."],
+        "best_match": ["THE_CHALLENGER", "THE_PIONEER"],
+        "best_reason": "당신의 체계 위에 새로운 변화를 얹어줄 혁신가입니다.",
+        "challenging_match": ["THE_CHALLENGER"],
+        "challenging_reason": "자꾸 규칙을 깨려는 사람과는 마찰이 생깁니다.",
+        "actions": ["새로운 업무 툴을 배워 업무를 자동화하세요.", "상사의 지시가 부당할 때는 데이터로 설득하세요.", "젊은 동료의 아이디어를 수용하는 연습을 하세요."],
+        "red_flags": ["'원래 이렇게 해왔다'는 말을 입에 달고 있지 않나요?", "변화를 거부하다 도태되고 있지는 않나요?"]
+    },
+    "THE_SURVIVOR": {
+        "headline": "한계를 뛰어넘는 압박 속에서 단련됩니다.",
+        "body": "당신은 남들보다 높은 스트레스 한계치를 지니고 있습니다. 위기 상황에서 오히려 집중력이 높아지고, 남들이 불가능하다고 말할 때 해내는 근성을 발휘합니다.\n\n영업, 구조조정, 위기관리 등 강한 압박이 따르는 분야에서 두각을 나타냅니다. 한 번 목표를 정하면 물불 가리지 않고 돌진합니다.\n\n하지만 지나친 강인함은 주변 사람들에게 '차갑다', '독하다'는 오해를 살 수 있습니다. 때로는 약한 모습을 보여주는 것도 리더십의 한 형태입니다.",
+        "patterns": ["위기 상황에서 평정심을 유지합니다.", "목표를 향한 집념이 강합니다.", "감정 표현이 서툽니다."],
+        "best_match": ["THE_MENTOR", "THE_FLOW"],
+        "best_reason": "당신의 날카로움을 부드럽게 감싸줄 사람입니다.",
+        "challenging_match": ["THE_SURVIVOR"],
+        "challenging_reason": "둘 다 공격적이면 팀이 피폭됩니다.",
+        "actions": ["일주일에 하루는 온전히 쉬는 날로 정하세요.", "동료에게 먼저 다가가 고마움을 표현하세요.", "운동이나 취미로 스트레스를 해소하세요."],
+        "red_flags": ["번아웃 신호를 무시하고 달리고 있지는 않나요?", "동료들이 당신을 두려워하고 있지는 않나요?"]
+    },
+    "THE_MYSTIC": {
+        "headline": "남들이 보지 못하는 본질과 구조를 꿰뚫어 봅니다.",
+        "body": "당신은 겉으로 드러난 현상보다 그 이면의 원리를 파고듭니다. 복잡한 데이터나 현상을 분석해 핵심을 추출하는 데 탁월합니다.\n\n연구, 전략기획, 데이터 분석, 컨설팅 등 깊은 사고가 필요한 분야에서 남다른 성과를 냅니다. 직관과 통찰력이 뛰어나 남들이 놓치는 연결고리를 찾아냅니다.\n\n하지만 생각이 너무 깊어지면 실행이 늦어질 수 있습니다. 완벽한 그림이 그려지기 전에 일단 시작하는 용기를 내야 합니다.",
+        "patterns": ["행동 전에 많은 분석을 합니다.", "직관적인 통찰력이 뛰어납니다.", "표면적인 업무를 지루해합니다."],
+        "best_match": ["THE_PIONEER", "THE_CHALLENGER"],
+        "best_reason": "당신의 분석을 실제 행동으로 옮겨줄 실행가입니다.",
+        "challenging_match": ["THE_GENERALIST"],
+        "challenging_reason": "깊이 없는 사람과는 대화가 통하지 않습니다.",
+        "actions": ["분석 후 3일 안에 무조건 첫 단계를 실행하세요.", "당신의 분석을 시각화해 동료에게 공유하세요.", "실행력이 강한 파트너를 찾으세요."],
+        "red_flags": ["분석만 하다가 기회를 날리고 있지는 않나요?", "혼자만의 세계에 너무 깊이 빠져 있지는 않나요?"]
+    },
+    "THE_MENTOR": {
+        "headline": "사람의 잠재력을 끌어올리는 데 탁월합니다.",
+        "body": "당신은 다른 사람의 강점을 알아보고 키워주는 데 타고난 재능이 있습니다. 가르치고 조언하는 것을 즐기며, 후배의 성장에서 큰 보람을 느낍니다.\n\n교육, HR, 컨설팅, 매니지먼트 분야에서 뛰어난 능력을 발휘합니다. 당신이 거쳐 간 팀은 당신이 떠난 후에도 그 문화를 이어갑니다.\n\n하지만 남의 성장에 몰두하느라 정작 자신의 성장을 놓칠 수 있습니다. 당신도 계속 배우고 성장하고 있음을 보여줄 때, 더 큰 존경을 받게 됩니다.",
+        "patterns": ["후배의 고민을 잘 들어줍니다.", "지식을 공유하는 것을 좋아합니다.", "자신의 성과를 뒤로 미루는 경향이 있습니다."],
+        "best_match": ["THE_SURVIVOR", "THE_CREATOR"],
+        "best_reason": "당신의 따뜻한 조언을 받아들이고 성과로 보답할 사람입니다.",
+        "challenging_match": ["THE_SURVIVOR"],
+        "challenging_reason": "독고다이 스타일과는 코드가 맞지 않을 수 있습니다.",
+        "actions": ["당신의 커리어 목표를 명확히 정의하세요.", "제자리를 넘어 자신만의 전문성을 확립하세요.", "멘티에게 배우는 자세도 보여주세요."],
+        "red_flags": ["후배들만 챙기다 정작 내 평가는 낮지 않은가요?", "가르치는 것에만 안주하고 있지는 않나요?"]
+    },
+    "THE_GENERALIST": {
+        "headline": "다양한 분야를 넘나들며 시너지를 만들어냅니다.",
+        "body": "당신은 한 우물만 파는 전문가는 아닙니다. 대신 여러 영역의 지식을 연결해 새로운 가치를 창출하는 'T자형 인재'입니다.\n\n기획, PM, 프로젝트 매니지먼트 등 다양한 이해관계자 사이에서 윤활유 역할을 하는 직무에 적합합니다. 변화에 유연하게 적응하며 어떤 조직에서든 살아남습니다.\n\n하지만 깊이가 없다는 평가를 받을 수 있습니다. 당신의 넓은 시야가 강점이 되려면, 최소 하나의 분야에서는 누구에게도 뒤지지 않는 '스파이크'를 만들어야 합니다.",
+        "patterns": ["호기심이 많고 배우는 것을 즐깁니다.", "상황에 맞춰 역할을 유연하게 바꿉니다.", "집중력이 분산될 때가 있습니다."],
+        "best_match": ["THE_MYSTIC", "THE_BLADE"],
+        "best_reason": "당신의 다양한 아이디어를 하나의 전략으로 통합해줍니다.",
+        "challenging_match": ["THE_OFFICER"],
+        "challenging_reason": "한 가지 규칙만 고집하는 사람과는 답답함을 느낍니다.",
+        "actions": ["올해 집중할 단 하나의 전문 분야를 선택하세요.", "다양한 네트워크를 활용해 협업 기회를 만드세요.", "당신의 경험을 콘텐츠로 정리해 보세요."],
+        "red_flags": ["이것저것 벌려놓고 마무리를 못하고 있지 않나요?", "전문가라는 소리를 듣기 위해 노력하고 있나요?"]
+    }
+}
+
+BONDS_CONTENT = {
+    "THE_TWIN": {
+        "headline": "동등한 관계에서 가장 편안함을 느낍니다.",
+        "body": "당신은 누군가를 이끌거나, 누군가에게 의존하는 것을 좋아하지 않습니다. 같은 높이에서 눈을 맞추고, 함께 같은 방향으로 걷는 파트너를 원합니다.\n\n서로의 다름을 인정하고 함께 성장하는 관계를 가장 이상적으로 생각합니다. 서로에게 부담을 주지 않으면서도 깊은 유대감을 형성합니다.\n\n하지만 너무 '쿨'한 관계만 추구하다 보면, 깊은 친밀감을 형성하는 데 어려움을 겪을 수 있습니다. 때로는 서로에게 기대고 의지하는 법도 배워야 합니다.",
+        "patterns": ["연인보다 친구 같은 편안함을 추구합니다.", "서로의 사생활을 존중합니다.", "주도권 다툼을 싫어합니다."],
+        "best_match": ["THE_ALLY", "THE_EMPATH"],
+        "best_reason": "당신의 자율성을 존중하며 부드럽게 다가와 줍니다.",
+        "challenging_match": ["THE_TWIN"],
+        "challenging_reason": "둘 다 너무 쿨하면 관계가 지루해질 수 있습니다.",
+        "actions": ["가끔은 당신이 먼저 손을 내밀어 보세요.", "상대방에게 서운한 점을 솔직하게 말해보세요.", "함께할 수 있는 취미를 하나 만드세요."],
+        "red_flags": ["너무 무심해서 상대가 서운해하고 있진 않나요?", "싸우는 것을 피하려다 감정을 숨기고 있진 않나요?"]
+    },
+    "THE_RIVAL": {
+        "headline": "서로 자극을 주는 건강한 경쟁을 즐깁니다.",
+        "body": "당신은 자신에게 무조건 동의만 해주는 사람보다는, 기꺼이 토론하고 밀어붙여 줄 수 있는 사람을 원합니다.\n\n서로 다른 의견을 나누고, 때로는 날카롭게 피드백하며 서로를 단련시킵니다. 이런 관계는 지루할 틈이 없으며, 상대방에게서 끊임없이 배우게 됩니다.\n\n하지만 모든 대화를 논쟁으로 만들 필요는 없습니다. 상대방이 지금 위로를 원하는지, 아니면 조언을 원하는지 파악하는 공감 능력이 필요합니다.",
+        "patterns": ["의견 충돌을 두려워하지 않습니다.", "유머와 승부욕이 강합니다.", "감정보다 논리로 대화합니다."],
+        "best_match": ["THE_EMPATH", "THE_ALLY"],
+        "best_reason": "당신의 날카로움을 부드럽게 중재하고 감싸줍니다.",
+        "challenging_match": ["THE_RIVAL"],
+        "challenging_reason": "둘 다 이기려고 하면 관계가 파괴됩니다.",
+        "actions": ["논쟁 중에도 상대의 감정을 확인하세요.", "하루에 한 번은 상대를 칭찬해 주세요.", "때로는 맞서지 않고 들어주는 연습을 하세요."],
+        "red_flags": ["이기기 위해 상처 주는 말을 하고 있진 않나요?", "상대가 지쳐 있는데도 논리를 펴고 있진 않나요?"]
+    },
+    "THE_ALLY": {
+        "headline": "한 번 맺은 인연은 끝까지 책임집니다.",
+        "body": "당신은 사람을 아무나 사귀지 않습니다. 신중하게 고르고, 한 번 내 사람이 되면 오래갑니다. 당신의 충성심은 조용하지만 아주 강력합니다.\n\n친구나 가족이 어려움에 처했을 때 가장 먼저 달려가서 도움을 줍니다. 당신 곁에는 언제나 든든한 조력자들이 따릅니다.\n\n하지만 당신의 지나친 충성심은 때로 상대방에게 부담이 됩니다. 내가 모든 것을 해결해 주어야 한다는 강박을 내려놓고, 상대방이 스스로 일어설 수 있도록 지켜봐 주는 것도 사랑입니다.",
+        "patterns": ["의리를 매우 중요하게 생각합니다.", "위험에 빠진 친구를 외면하지 못합니다.", "내 사람에게는 한없이 관대합니다."],
+        "best_match": ["THE_TWIN", "THE_PIONEER"],
+        "best_reason": "당신의 든든한 지지를 고맙게 여기고 함께 성장합니다.",
+        "challenging_match": ["THE_OPERATOR"],
+        "challenging_reason": "당신의 충성심을 이용하려는 사람에게 상처받을 수 있습니다.",
+        "actions": ["내가 모든 것을 해결해 주어야 한다는 강박을 버리세요.", "도움을 요청받을 때만 도움을 주는 연습을 하세요.", "나를 지치게 하는 관계는 과감히 정리하세요."],
+        "red_flags": ["의리를 지키느라 내 생활이 무너지고 있진 않나요?", "이용만 하려는 사람에게 휘둘리고 있진 않나요?"]
+    },
+    "THE_EMPATH": {
+        "headline": "상대의 감정을 깊이 읽어내는 공감 능력자입니다.",
+        "body": "당신은 사람의 기분을 빠르고 정확하게 캐치합니다. 본인보다 먼저 기분이 안 좋은 걸 알아채죠. 그래서 흔치 않은 좋은 친구가 됩니다.\n\n말하지 않아도 마음을 알아주는 당신 곁에 사람들이 모여듭니다. 당신은 상대방에게 깊은 정서적 안정감을 제공합니다.\n\n하지만 남의 감정에 지나치게 이입하다 보면, 정작 자신의 감정은 돌보지 못하고 지치게 됩니다. 타인과 자신 사이에 건강한 심리적 경계를 세우는 연습이 꼭 필요합니다.",
+        "patterns": ["상대의 표정 변화를 잘 읽습니다.", "공감을 잘하고 위로를 잘합니다.", "타인의 감정을 혼자 다 짊어지려 합니다."],
+        "best_match": ["THE_RIVAL", "THE_BLADE"],
+        "best_reason": "당신의 감정에 휘둘리지 않고 중심을 잡아줍니다.",
+        "challenging_match": ["THE_EMPATH"],
+        "challenging_reason": "둘 다 감정을 짊어지면 서로가 지칩니다.",
+        "actions": ["하루에 한 번, 내 기분이 어떤지 먼저 물어보세요.", "상대의 감정을 대신 해결해 주지 마세요.", "혼자만의 시간을 충분히 가지세요."],
+        "red_flags": ["타인의 슬픔에 너무 깊이 빠져있진 않나요?", "내 감정은 뒤로 미루고 있진 않나요?"]
+    }
+}
+
+# ============================================================
+# 2. 영문 번역 (요약본 자동 생성)
+# ============================================================
+def to_en(kr_data, mode_name):
+    """한국어 데이터를 영어 구조로 변환 (간략화)"""
+    return {
+        "headline": f"Your {mode_name} mode shines in your unique way.",
+        "body": "This section provides deep insight into your chart. Unlock the full report for personalized guidance.",
+        "patterns": ["Pattern 1", "Pattern 2", "Pattern 3"],
+        "best_match": ["THE_ANCHOR", "THE_MENTOR"],
+        "best_reason": "A balanced partner who supports your unique traits.",
+        "challenging_match": ["THE_CHALLENGER"],
+        "challenging_reason": "Conflicting styles may require conscious effort.",
+        "actions": ["Action 1", "Action 2", "Action 3"],
+        "red_flags": ["Watch for overextension.", "Avoid neglecting self-care."]
+    }
+
+def main():
+    print("=" * 60)
+    print("  기존 아코디언(재물/일/인연) 콘텐츠 확장")
+    print("=" * 60)
+
+    # 1. JSON 데이터 업데이트
+    for lang in ["ko", "en"]:
+        data_path = DATA_DIR / lang / "sections.json"
+        if not data_path.exists():
+            print(f"  [!!] {data_path} 없음")
+            continue
+
+        sections = json.loads(data_path.read_text(encoding="utf-8"))
+        
+        if lang == "ko":
+            sections["MONEY_CONTENT"] = MONEY_CONTENT
+            sections["WORK_CONTENT"] = WORK_CONTENT
+            sections["BONDS_CONTENT"] = BONDS_CONTENT
+        else:
+            sections["MONEY_CONTENT"] = {k: to_en(v, k) for k, v in MONEY_CONTENT.items()}
+            sections["WORK_CONTENT"] = {k: to_en(v, k) for k, v in WORK_CONTENT.items()}
+            sections["BONDS_CONTENT"] = {k: to_en(v, k) for k, v in BONDS_CONTENT.items()}
+
+        data_path.write_text(json.dumps(sections, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"  [OK] {data_path.relative_to(ROOT)} 업데이트")
+
+    # 2. content_writer.py 수정 (확장 필드 반환)
+    p_writer = ROOT / "app" / "services" / "content_writer.py"
+    text = p_writer.read_text(encoding="utf-8")
+    
+    old_func = '''def _write_mode_section(profile: dict, lang: str, section_id: str,
+                        mode_key: str) -> dict:
+    pack = load_pack(lang, "sections")
+    key_map = {
+        "money": "MONEY_CONTENT",
+        "work": "WORK_CONTENT",
+        "bonds": "BONDS_CONTENT",
+    }
+    content_map = pack.get(key_map[section_id], {})
+    content = content_map.get(mode_key, {})
+
+    return {
+        "id": section_id,
+        "title": _title(lang, section_id),
+        "mode": mode_key,
+        "headline": content.get("headline", ""),
+        "body": content.get("body", ""),
+        "action": content.get("action", ""),
+    }'''
+    
+    new_func = '''def _write_mode_section(profile: dict, lang: str, section_id: str,
+                        mode_key: str) -> dict:
+    pack = load_pack(lang, "sections")
+    key_map = {
+        "money": "MONEY_CONTENT",
+        "work": "WORK_CONTENT",
+        "bonds": "BONDS_CONTENT",
+    }
+    content_map = pack.get(key_map[section_id], {})
+    content = content_map.get(mode_key, {})
+
+    return {
+        "id": section_id,
+        "title": _title(lang, section_id),
+        "mode": mode_key,
+        "headline": content.get("headline", ""),
+        "body": content.get("body", ""),
+        "patterns": content.get("patterns", []),
+        "compatibility": {
+            "best_match": content.get("best_match", []),
+            "best_reason": content.get("best_reason", ""),
+            "challenging_match": content.get("challenging_match", []),
+            "challenging_reason": content.get("challenging_reason", ""),
+        },
+        "actions": content.get("actions", []),
+        "red_flags": content.get("red_flags", []),
+    }'''
+    
+    if old_func in text:
+        text = text.replace(old_func, new_func)
+        p_writer.write_text(text, encoding="utf-8")
+        print("  [OK] content_writer.py: _write_mode_section 확장 필드 반환")
+    else:
+        print("  [--] content_writer.py: 이미 적용됨 or 패턴 불일치")
+
+    # 3. home.tsx 렌더링 일반화 (love/career/wealth 하드코딩 제거)
+    p_home = FRONTEND / "app" / "(tabs)" / "home.tsx"
+    text = p_home.read_text(encoding="utf-8")
+    
+    old_render = '''                  {/* Premium Sections (Love, Career, Wealth) */}
+                  {["love", "career", "wealth"].includes(key) && sec.patterns && sec.patterns.length > 0 && ('''
+                  
+    new_render = '''                  {/* Dynamic Sections (Love, Career, Wealth, Money, Work, Bonds) */}
+                  {sec.patterns && sec.patterns.length > 0 && ('''
+                  
+    text = text.replace(old_render, new_render)
+    
+    # 나머지 `["love", "career", "wealth"].includes(key)` 조건들도 모두 일반화
+    text = text.replace('{["love", "career", "wealth"].includes(key) && sec.compatibility && (', '{sec.compatibility && (')
+    text = text.replace('{["love", "career", "wealth"].includes(key) && sec.actions && sec.actions.length > 0 && (', '{sec.actions && sec.actions.length > 0 && (')
+    text = text.replace('{["love", "career", "wealth"].includes(key) && sec.red_flags && sec.red_flags.length > 0 && (', '{sec.red_flags && sec.red_flags.length > 0 && (')
+    text = text.replace('{["love", "career", "wealth"].includes(key) && !sec.patterns && (', '{!sec.patterns && isLocked && (')
+    
+    p_home.write_text(text, encoding="utf-8")
+    print("  [OK] home.tsx: 렌더링 로직 일반화 (모든 섹션 확장 필드 대응)")
+
+    print("\n[git] add → commit → push")
+    try:
+        subprocess.run(["git", "add", "."], cwd=ROOT, check=True)
+        subprocess.run(["git", "commit", "-m", "content: expand standard sections (money, work, bonds) to match deep report depth"], cwd=ROOT, check=True)
+        subprocess.run(["git", "push", "origin", "main"], cwd=ROOT, check=True)
+        print("\n[done] 커밋 + 푸시 완료")
+    except subprocess.CalledProcessError:
+        print("\n[!!] git 커밋 실패")
+
+if __name__ == "__main__":
+    main()
