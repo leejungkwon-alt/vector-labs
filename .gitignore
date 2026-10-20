@@ -10,7 +10,18 @@ _*.py
 .env
 .env.*
 !.env.example
+.env.yaml
 *.log
+*.token
+*.secret
+*_credentials.json
+*_service_account.json
+botfather_api
+*.pem
+*.key
+*.p12
+*.jks
+*.mobileprovision
 data/auth.db
 data/auth.db-journal
 data/auth.db-wal
@@ -28,6 +39,9 @@ tma/node_modules/
 tma/dist/
 dist/
 .expo/
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
 
 # --- Backups & Temporary Files ---
 *.bak
@@ -39,7 +53,5 @@ preview.txt
 HANDOFF_*.txt
 saju_complete_code.txt
 
-# Large files
+# --- Large files ---
 *.apk
-
-# Cloud Run 배포는 Dockerfile 사용 (render.yaml 불필요)
