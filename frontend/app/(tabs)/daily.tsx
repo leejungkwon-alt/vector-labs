@@ -1,6 +1,8 @@
 ﻿import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { View, Text, ScrollView, ActivityIndicator, StyleSheet } from "react-native";
+import { View, Text, ScrollView, ActivityIndicator, StyleSheet, TouchableOpacity } from "react-native";
+import { router } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { api, ApiError } from "@/api/client";
 import { colors, spacing, radius } from "@/theme";
@@ -59,16 +61,26 @@ export default function DailyScreen() {
 
   if (error) {
     const isForbidden = error instanceof ApiError && error.status === 403;
+    if (isForbidden) {
+      return (
+        <View style={styles.center}>
+          <View style={{ backgroundColor: colors.surface, padding: 24, borderRadius: radius.lg, alignItems: "center", borderWidth: 1, borderColor: colors.border }}>
+            <Ionicons name="lock-closed" size={48} color={colors.primary} style={{ marginBottom: 16 }} />
+            <Text style={{ fontSize: 20, fontWeight: "700", color: colors.text, marginBottom: 8 }}>구독자 전용 기능입니다</Text>
+            <Text style={{ fontSize: 15, color: colors.textMuted, textAlign: "center", lineHeight: 22, marginBottom: 24 }}>
+              매일 아침 당신의 기운을 읽어주는\n데일리 에너지 서비스입니다.\n프리미엄으로 업그레이드하고\n7일치 흐름을 미리 확인하세요.
+            </Text>
+            <TouchableOpacity style={{ backgroundColor: colors.primary, paddingHorizontal: 24, paddingVertical: 14, borderRadius: radius.md, width: "100%", alignItems: "center" }} onPress={() => router.push("/(tabs)/settings")}>
+              <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>프리미엄 업그레이드</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      );
+    }
     return (
       <View style={styles.center}>
-        <Text style={styles.errorText}>
-          {isForbidden ? "구독자 전용 기능입니다" : "오류가 발생했습니다"}
-        </Text>
-        <Text style={styles.errorDetail}>
-          {isForbidden 
-            ? `데일리 에너지 서비스는 구독권 또는 프리미엄 회원만 이용하실 수 있습니다.\n\n(현재 내 등급: ${user?.tier?.toUpperCase()})`
-            : (error instanceof ApiError ? (error as ApiError).detail : (error as Error).message)}
-        </Text>
+        <Text style={styles.errorText}>오류가 발생했습니다</Text>
+        <Text style={styles.errorDetail}>{(error as Error).message}</Text>
       </View>
     );
   }

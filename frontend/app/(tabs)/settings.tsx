@@ -53,6 +53,18 @@ export default function SettingsScreen() {
         </View>
       </View>
 
+      {user?.tier === "free" && (
+        <View style={[styles.profileBox, { backgroundColor: colors.primary + "10", borderColor: colors.primary }]}>
+          <Text style={[styles.sectionTitle, { color: colors.primary }]}>✨ 프리미엄 업그레이드</Text>
+          <Text style={{ fontSize: 14, color: colors.text, marginBottom: 12, lineHeight: 20 }}>
+            구독하면 7일치 데일리 에너지와 궁합 분석을 모두 이용할 수 있습니다.
+          </Text>
+          <TouchableOpacity style={{ backgroundColor: colors.primary, padding: 14, borderRadius: radius.md, alignItems: "center" }} onPress={() => alert("결제(IAP) 연동 준비 중입니다.")}>
+            <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>프리미엄 구독하기</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+
       <View style={styles.list}>
         <TouchableOpacity style={styles.btn} onPress={handleReset}>
           <Text style={styles.btnText}>출생 정보 수정하기</Text>
