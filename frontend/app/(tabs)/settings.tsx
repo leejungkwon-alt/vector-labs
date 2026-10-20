@@ -1,14 +1,20 @@
-﻿import { View, Text, TouchableOpacity, StyleSheet, Alert, Platform } from "react-native";
+import { useState } from "react";
+import { View, Text, TouchableOpacity, StyleSheet, Alert, Platform } from "react-native";
 import { router } from "expo-router";
 import { colors, spacing, radius } from "@/theme";
 import { useAuthStore } from "@/store/authStore";
 import { useProfileStore } from "@/store/profileStore";
-import { api } from "@/api/client";\nimport { SocialLoginModal } from "@/components/SocialLoginModal";\nimport { PaymentModal } from "@/components/PaymentModal";
+import { api } from "@/api/client";
+import { SocialLoginModal } from "@/components/SocialLoginModal";
+import { PaymentModal } from "@/components/PaymentModal";
 
 export default function SettingsScreen() {
-  const user = useAuthStore((s) => s.user);\n  const [showLogin, setShowLogin] = useState(false);\n  const [showPayment, setShowPayment] = useState(false);
+  const user = useAuthStore((s) => s.user);
   const signOut = useAuthStore((s) => s.signOut);
   const clearProfile = useProfileStore((s) => s.clearProfile);
+
+  const [showLogin, setShowLogin] = useState(false);
+  const [showPayment, setShowPayment] = useState(false);
 
   const handleUpgrade = () => {
     if (!user) return;
@@ -83,6 +89,19 @@ export default function SettingsScreen() {
           <Text style={styles.dangerText}>계정 영구 삭제</Text>
         </TouchableOpacity>
       </View>
+
+      <SocialLoginModal
+        visible={showLogin}
+        onClose={() => setShowLogin(false)}
+        onSuccess={() => {
+          setShowLogin(false);
+          setShowPayment(true);
+        }}
+      />
+      <PaymentModal
+        visible={showPayment}
+        onClose={() => setShowPayment(false)}
+      />
     </View>
   );
 }

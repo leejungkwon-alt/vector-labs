@@ -18,14 +18,14 @@ export default function TabsLayout() {
         name="home"
         options={{
           title: "홈",
-          tabBarIcon: ({ color }) => <Ionicons name="sunny-outline" size={24} color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons name="sunny-outline" size={24} color={color || "#7A6A5C"} />,
         }}
       />
       <Tabs.Screen
         name="daily"
         options={{
           title: "데일리",
-          tabBarIcon: ({ color }) => <Ionicons name="calendar-outline" size={24} color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons name="calendar-outline" size={24} color={color || "#7A6A5C"} />,
         }}
       />
       {/* 👇 궁합 탭 추가 */}
@@ -33,14 +33,14 @@ export default function TabsLayout() {
         name="compatibility"
         options={{
           title: "케미",
-          tabBarIcon: ({ color }) => <Ionicons name="heart-outline" size={24} color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons name="heart-outline" size={24} color={color || "#7A6A5C"} />,
         }}
       />
       <Tabs.Screen
         name="settings"
         options={{
           title: "설정",
-          tabBarIcon: ({ color }) => <Ionicons name="settings-outline" size={24} color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons name="settings-outline" size={24} color={color || "#7A6A5C"} />,
         }}
       />
     </Tabs>

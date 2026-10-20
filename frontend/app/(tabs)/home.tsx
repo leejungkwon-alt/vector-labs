@@ -188,6 +188,14 @@ export default function HomeScreen() {
                     </View>
                   ))}
 
+                  {/* Premium Sections (Love, Career, Wealth) */}
+                  {["love", "career", "wealth"].includes(key) && sec.headline && (
+                    <View style={{ marginTop: 12 }}>
+                      <Text style={styles.blockTitle}>{sec.headline}</Text>
+                      <Text style={styles.paragraph}>{sec.body || "프리미엄 결제 후 내용을 확인하실 수 있습니다."}</Text>
+                    </View>
+                  )}
+
                   {/* 공통 잠금 힌트 */}
                   {isLocked && <LockedHint onPress={goToUpgrade} />}
 

@@ -10,6 +10,7 @@ interface AuthState {
   user: User | null;
   ready: boolean;
   bootstrap: () => Promise<void>;
+  linkAccount: (provider: "apple" | "google" | "kakao") => Promise<void>;
   signInAnonymous: () => Promise<void>;
   signOut: () => Promise<void>;
 }

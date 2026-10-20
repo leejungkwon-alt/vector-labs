@@ -156,6 +156,7 @@ export interface CompatibilityResponse {
       body: string;
     };
     disclaimer: string;
+    relationship_advice?: string;
     pair: {
       a: { archetype: string; element: string; intensity: string };
       b: { archetype: string; element: string; intensity: string };

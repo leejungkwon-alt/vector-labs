@@ -771,6 +771,38 @@ def _timeline_hero(lang: str, best: dict | None, worst: dict | None) -> str:
     )
 
 
+
+# ============================================================
+# PREMIUM SECTIONS (Love / Career / Wealth)
+# ============================================================
+def write_premium_section(profile: dict, lang: str, section_name: str) -> dict | None:
+    try:
+        pack = load_pack(lang, section_name)
+    except KeyError:
+        return None
+        
+    arch = profile["archetype"]["key"]
+    content_map = pack.get("CONTENT", {})
+    content = content_map.get(arch, {"headline": "Premium feature", "body": "Analyze your chart deeply."})
+    
+    return {
+        "id": section_name,
+        "title": pack.get("SECTION_TITLE", section_name.title()),
+        "mode": arch,
+        "headline": content.get("headline", ""),
+        "body": content.get("body", ""),
+        "action": "꾸준한 기록과 실행이 필요합니다." if lang == "ko" else "Consistent action is required.",
+    }
+
+def write_love_section(profile: dict, lang: str = "ko") -> dict:
+    return write_premium_section(profile, lang, "love")
+
+def write_career_section(profile: dict, lang: str = "ko") -> dict:
+    return write_premium_section(profile, lang, "career")
+
+def write_wealth_section(profile: dict, lang: str = "ko") -> dict:
+    return write_premium_section(profile, lang, "wealth")
+
 # ============================================================
 # COVER & SUMMARY
 # ============================================================
@@ -864,6 +896,9 @@ def generate_full_report(profile: dict, lang: str = "en", user_id: str | None = 
         "money": write_money_section(profile, lang),
         "work": write_work_section(profile, lang),
         "bonds": write_bonds_section(profile, lang),
+        "love": write_love_section(profile, lang),
+        "career": write_career_section(profile, lang),
+        "wealth": write_wealth_section(profile, lang),
         "timeline": write_timeline_section(profile, lang),
     }
 

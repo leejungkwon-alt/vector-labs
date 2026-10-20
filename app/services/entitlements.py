@@ -86,6 +86,18 @@ FREE_SECTION_RULES = {
         "locked_hint": ["body", "action"],
     },
 
+    "love": {
+        "keep": {"id", "title", "mode", "headline"},
+        "locked_hint": ["body", "action"],
+    },
+    "career": {
+        "keep": {"id", "title", "mode", "headline"},
+        "locked_hint": ["body", "action"],
+    },
+    "wealth": {
+        "keep": {"id", "title", "mode", "headline"},
+        "locked_hint": ["body", "action"],
+    },
     # ---- Timeline: 첫 3개 대운 ----
     "timeline": {
         "keep": {"id", "title", "hero"},

@@ -82,7 +82,7 @@ export default function CompatibilityScreen() {
           birth_location: isCustomCity ? null : city,
           timezone_str: isCustomCity ? customTimezone : "Asia/Seoul",
           longitude: isCustomCity ? fallbackLongitude : 126.978,
-          gender: gender,
+          gender: gender as "M" | "F",
         },
         relationship_type: relationshipType,
         lang: "ko",
