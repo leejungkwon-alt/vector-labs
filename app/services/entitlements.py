@@ -175,13 +175,14 @@ def _gate_summary_cards(cards, tier):
 # Public API
 # ============================================================
 
-def apply_entitlement_gate(report: dict, tier: str) -> dict:
+def apply_entitlement_gate(report: dict, tier: str, addons: list[str] = None) -> dict:
     """
     report 를 제자리에서 게이팅하고 반환.
 
     - preview/subscription/premium: 그대로. meta.tier 만 갱신.
     - free (그 외 tier 포함): 각 섹션을 티저로 잘라내고 locked_fields 세팅.
     """
+    addons = addons or []
     meta = report.setdefault("meta", {})
     meta["tier"] = tier
 
@@ -198,6 +199,11 @@ def apply_entitlement_gate(report: dict, tier: str) -> dict:
     locked_section_ids = []
 
     for sid, section in sections.items():
+        # [신규] 심화 리포트 애드온이 있으면 love, career, wealth는 잠금 해제
+        if sid in ("love", "career", "wealth") and "deep_report" in addons:
+            gated_sections[sid] = section
+            continue
+
         rule = FREE_SECTION_RULES.get(sid)
 
         if rule is None:

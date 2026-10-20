@@ -83,5 +83,8 @@ def api_generate_report(
         )
 
     tier = "free" if current_user is None else (current_user.get("tier") or "free")
-    report = apply_entitlement_gate(report, tier)
+    uid = current_user.get("id") if current_user else None
+    from app.auth.repository import get_repository
+    addons = get_repository().list_addons(uid) if uid else []
+    report = apply_entitlement_gate(report, tier, addons)
     return {"report": report}

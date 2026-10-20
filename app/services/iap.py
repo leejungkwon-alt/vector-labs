@@ -20,12 +20,15 @@ def verify_and_grant(user_id: str, platform: str, receipt: str, product_id: str)
         )
     if receipt == "mock_valid_receipt":
         repo = get_repository()
-        if product_id == "premium_monthly":
-            repo.set_tier(user_id, "premium")
-            return {"status": "success", "tier": "premium"}
-        elif product_id == "addon_compatibility":
+        if product_id == "sub_monthly_3900":
+            repo.set_tier(user_id, "subscription")
+            return {"status": "success", "tier": "subscription"}
+        elif product_id == "addon_compat_1900":
             repo.grant_addon(user_id, "compatibility")
             return {"status": "success", "addon": "compatibility"}
+        elif product_id == "addon_deep_990":
+            repo.grant_addon(user_id, "deep_report")
+            return {"status": "success", "addon": "deep_report"}
         else:
             raise IAPVerificationError(f"Unknown product_id: {product_id}")
 
