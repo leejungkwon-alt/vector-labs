@@ -1,12 +1,14 @@
 {
   "expo": {
-    "name": "frontend",
-    "slug": "frontend",
+    "name": "Gyeol",
+    "slug": "gyeol",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "ios": { "supportsTablet": true },
+    "ios": {
+      "supportsTablet": true
+    },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
@@ -26,6 +28,6 @@
       "@react-native-community/datetimepicker",
       "expo-font"
     ],
-    "scheme": "saju"
+    "scheme": "gyeol"
   }
 }

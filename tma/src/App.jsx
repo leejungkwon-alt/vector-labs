@@ -35,8 +35,8 @@ function Onboarding({ onSubmit }) {
   return (
     <div className="onboarding">
       <div className="onboarding-card">
-        <h1>Vector Labs</h1>
-        <p>당신의 라이프 블루프린트를 찾기 위해<br/>출생 정보를 입력해 주세요.</p>
+        <h1>Gyeol</h1>
+        <p>당신의 결을 읽어냅니다.<br/>출생 정보를 입력해 주세요.</p>
         <form onSubmit={(e) => { e.preventDefault(); onSubmit({ birth_date: bd, birth_time: bt + ':00', birth_location: loc, gender, lang: 'ko' }); }}>
           <label>생년월일 <input type="date" value={bd} onChange={e => setBd(e.target.value)} required /></label>
           <label>출생 시간 <input type="time" value={bt} onChange={e => setBt(e.target.value)} required /></label>
@@ -51,7 +51,7 @@ function Onboarding({ onSubmit }) {
               <option value="new_york">뉴욕</option><option value="tokyo">도쿄</option>
             </select>
           </label>
-          <button type="submit" className="primary-btn">블루프린트 생성</button>
+          <button type="submit" className="primary-btn">결 확인하기</button>
         </form>
       </div>
     </div>

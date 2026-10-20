@@ -17,9 +17,9 @@ from app.ops.rate_limit import RateLimitMiddleware
 configure_logging()
 
 app = FastAPI(
-    title="Saju Engine API",
+    title="Gyeol API",
     version="1.0.0",
-    description="Deterministic Four Pillars (Saju) engine.",
+    description="Deterministic Four Pillars engine for Gyeol (Read the grain of your life).",
 )
 
 # Starlette: 마지막에 추가된 미들웨어가 outermost

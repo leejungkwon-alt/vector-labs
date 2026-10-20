@@ -16,9 +16,9 @@ export default function Index() {
 
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#FDF6EE" }}>
-      <Text style={{ fontSize: 32, fontWeight: "700", color: "#E85D2F", marginBottom: 16 }}>SAJU</Text>
+      <Text style={{ fontSize: 36, fontWeight: "800", color: "#E85D2F", marginBottom: 8, letterSpacing: 1 }}>Gyeol</Text>
       <ActivityIndicator color="#E85D2F" />
-      <Text style={{ marginTop: 12, color: "#7A6A5C" }}>Preparing your session...</Text>
+      <Text style={{ marginTop: 12, color: "#7A6A5C", fontSize: 14 }}>Reading the grain of your life...</Text>
     </View>
   );
 }
