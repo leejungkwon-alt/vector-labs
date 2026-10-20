@@ -10,7 +10,8 @@
   PushTokenRequest,
 } from "../../types";
 
-const BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL ?? "http://localhost:8000/api/v1";
+// Cloud Run 백엔드 주소로 변경
+const BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL ?? "https://vector-labs-api-787049663118.asia-northeast3.run.app/api/v1";
 
 export class ApiError extends Error {
   constructor(public status: number, public detail: string) {
@@ -31,18 +32,35 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
   };
   if (_token) headers["Authorization"] = `Bearer ${_token}`;
 
-  const res = await fetch(`${BASE_URL}${path}`, { ...init, headers });
+  // 10초 타임아웃 설정
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 30000);
 
-  if (res.status === 204) return undefined as T;
+  try {
+    const res = await fetch(`${BASE_URL}${path}`, {
+      ...init,
+      headers,
+      signal: controller.signal,
+    });
+    clearTimeout(timeoutId);
 
-  const text = await res.text();
-  const body = text ? JSON.parse(text) : null;
+    if (res.status === 204) return undefined as T;
 
-  if (!res.ok) {
-    const detail = (body && (body.detail ?? body.message)) ?? `HTTP ${res.status}`;
-    throw new ApiError(res.status, String(detail));
+    const text = await res.text();
+    const body = text ? JSON.parse(text) : null;
+
+    if (!res.ok) {
+      const detail = (body && (body.detail ?? body.message)) ?? `HTTP ${res.status}`;
+      throw new ApiError(res.status, String(detail));
+    }
+    return body as T;
+  } catch (err: any) {
+    clearTimeout(timeoutId);
+    if (err.name === "AbortError") {
+      throw new ApiError(408, "서버 응답 시간이 초과되었습니다. 네트워크 상태를 확인해주세요.");
+    }
+    throw err;
   }
-  return body as T;
 }
 
 export const api = {

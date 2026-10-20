@@ -1,10 +1,10 @@
-﻿import { create } from "zustand";
-import * as SecureStore from "expo-secure-store";
-import type { AuthResponse } from "../../types";
-import { api, setAuthToken } from "../api/client";
+﻿import { create } from 'zustand';
+import type { AuthResponse } from '../../types';
+import { api, setAuthToken } from '../api/client';
+import { storage } from './secureStore'; // 👈 새로 만든 래퍼 사용
 
-const TOKEN_KEY = "saju.access_token";
-type User = AuthResponse["user"];
+const TOKEN_KEY = 'saju.access_token';
+type User = AuthResponse['user'];
 
 interface AuthState {
   user: User | null;
@@ -18,13 +18,13 @@ export const useAuthStore = create<AuthState>((set) => ({
   user: null,
   ready: false,
   bootstrap: async () => {
-    let t = await SecureStore.getItemAsync(TOKEN_KEY);
-    
-    // 1. 토큰이 아예 없는 경우 -> 새 계정 생성
+    let t = await storage.getItem(TOKEN_KEY);
+
+    // 1. 토큰이 없는 경우 -> 새 계정 생성
     if (!t) {
       try {
         const res = await api.anonymous();
-        await SecureStore.setItemAsync(TOKEN_KEY, res.access_token);
+        await storage.setItem(TOKEN_KEY, res.access_token);
         setAuthToken(res.access_token);
         set({ user: res.user, ready: true });
       } catch (e) {
@@ -42,7 +42,7 @@ export const useAuthStore = create<AuthState>((set) => ({
       // 토큰이 만료되었으면 새로 생성
       try {
         const res = await api.anonymous();
-        await SecureStore.setItemAsync(TOKEN_KEY, res.access_token);
+        await storage.setItem(TOKEN_KEY, res.access_token);
         setAuthToken(res.access_token);
         set({ user: res.user, ready: true });
       } catch (e) {
@@ -52,12 +52,12 @@ export const useAuthStore = create<AuthState>((set) => ({
   },
   signInAnonymous: async () => {
     const res = await api.anonymous();
-    await SecureStore.setItemAsync(TOKEN_KEY, res.access_token);
+    await storage.setItem(TOKEN_KEY, res.access_token);
     setAuthToken(res.access_token);
     set({ user: res.user });
   },
   signOut: async () => {
-    await SecureStore.deleteItemAsync(TOKEN_KEY);
+    await storage.deleteItem(TOKEN_KEY);
     setAuthToken(null);
     set({ user: null });
   },
