@@ -39,7 +39,7 @@ export default function HomeScreen() {
 
   const { data, isLoading, error } = useQuery({
     queryKey: ["report", profile],
-    queryFn: () => api.report({ ...profile, target_year: 2026, lang: "ko" }),
+    queryFn: () => api.report({ ...profile, target_year: new Date().getFullYear(), lang: "ko" }),
     enabled: !!profile,
     retry: false,
   });

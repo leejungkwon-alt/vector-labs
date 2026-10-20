@@ -92,6 +92,7 @@ export default function CompatibilityScreen() {
   });
 
   const handleCalculate = async () => {
+    if (!myProfile) return;
     setIsCalculated(true);
     await refetch();
   };
@@ -235,7 +236,11 @@ export default function CompatibilityScreen() {
         </TouchableOpacity>
       </View>
 
-      <TouchableOpacity style={styles.nextBtn} onPress={handleCalculate}>
+      <TouchableOpacity
+        style={[styles.nextBtn, !myProfile && { opacity: 0.4 }]}
+        onPress={handleCalculate}
+        disabled={!myProfile}
+      >
         <Text style={styles.nextBtnText}>케미 보기</Text>
       </TouchableOpacity>
 
