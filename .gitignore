@@ -6,7 +6,7 @@ __pycache__/
 venv/
 _*.py
 
-# --- 보안/로컬 자산 ---
+# --- ë³´ì/ë¡ì»¬ ìì° ---
 .env
 .env.*
 !.env.example
@@ -48,14 +48,14 @@ frontend/.env.*
 *.bak_*
 prompts/
 
-# --- 로컬 전용 텍스트 (requirements.txt는 반드시 포함되도록 제외) ---
+# --- ë¡ì»¬ ì ì© íì¤í¸ (requirements.txtë ë°ëì í¬í¨ëëë¡ ì ì¸) ---
 preview.txt
 HANDOFF_*.txt
 saju_complete_code.txt
 
 # --- Large files ---
 *.apk
-# ���� ����
+# ´ýÇÁ ÆÄÀÏ
 saju_full.txt
 saju_dump.txt
 *.dump.txt
