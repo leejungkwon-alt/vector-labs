@@ -20,13 +20,13 @@ def verify_and_grant(user_id: str, platform: str, receipt: str, product_id: str)
         )
     if receipt == "mock_valid_receipt":
         repo = get_repository()
-        if product_id == "sub_monthly_3900":
+        if product_id == "sub_monthly_299":
             repo.set_tier(user_id, "subscription")
             return {"status": "success", "tier": "subscription"}
-        elif product_id == "addon_compat_1900":
+        elif product_id == "addon_compat_199":
             repo.grant_addon(user_id, "compatibility")
             return {"status": "success", "addon": "compatibility"}
-        elif product_id == "addon_deep_990":
+        elif product_id == "addon_deep_099":
             repo.grant_addon(user_id, "deep_report")
             return {"status": "success", "addon": "deep_report"}
         else:
