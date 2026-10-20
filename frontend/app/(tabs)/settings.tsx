@@ -3,12 +3,21 @@ import { router } from "expo-router";
 import { colors, spacing, radius } from "@/theme";
 import { useAuthStore } from "@/store/authStore";
 import { useProfileStore } from "@/store/profileStore";
-import { api } from "@/api/client";
+import { api } from "@/api/client";\nimport { SocialLoginModal } from "@/components/SocialLoginModal";\nimport { PaymentModal } from "@/components/PaymentModal";
 
 export default function SettingsScreen() {
-  const user = useAuthStore((s) => s.user);
+  const user = useAuthStore((s) => s.user);\n  const [showLogin, setShowLogin] = useState(false);\n  const [showPayment, setShowPayment] = useState(false);
   const signOut = useAuthStore((s) => s.signOut);
   const clearProfile = useProfileStore((s) => s.clearProfile);
+
+  const handleUpgrade = () => {
+    if (!user) return;
+    if (user.is_anonymous) {
+      setShowLogin(true);
+    } else {
+      setShowPayment(true);
+    }
+  };
 
   const handleReset = async () => {
     await clearProfile();
@@ -59,7 +68,7 @@ export default function SettingsScreen() {
           <Text style={{ fontSize: 14, color: colors.text, marginBottom: 12, lineHeight: 20 }}>
             구독하면 7일치 데일리 에너지와 궁합 분석을 모두 이용할 수 있습니다.
           </Text>
-          <TouchableOpacity style={{ backgroundColor: colors.primary, padding: 14, borderRadius: radius.md, alignItems: "center" }} onPress={() => alert("결제(IAP) 연동 준비 중입니다.")}>
+          <TouchableOpacity style={{ backgroundColor: colors.primary, padding: 14, borderRadius: radius.md, alignItems: "center" }} onPress={handleUpgrade}>
             <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>프리미엄 구독하기</Text>
           </TouchableOpacity>
         </View>

@@ -50,6 +50,14 @@ export const useAuthStore = create<AuthState>((set) => ({
       }
     }
   },
+  linkAccount: async (provider: "apple" | "google" | "kakao") => {
+    // [시뮬레이션] 실제 앱에서는 Apple/Google SDK에서 받은 진짜 토큰을 넣습니다.
+    const mockToken = `mock:${provider}_${Math.random().toString(36).substring(2, 10)}`;
+    const res = await api.linkProvider(provider, mockToken);
+    await storage.setItem(TOKEN_KEY, res.access_token);
+    setAuthToken(res.access_token);
+    set({ user: res.user });
+  },
   signInAnonymous: async () => {
     const res = await api.anonymous();
     await storage.setItem(TOKEN_KEY, res.access_token);

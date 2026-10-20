@@ -66,7 +66,7 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
 export const api = {
   anonymous: () => request<AuthResponse>("/auth/anonymous", { method: "POST" }),
   me: () => request<{ user: AuthResponse["user"] }>("/auth/me"),
-  updateProfile: (payload: any) => request<any>("/auth/me/profile", { method: "PUT", body: JSON.stringify(payload) }),
+  updateProfile: (payload: any) => request<any>("/auth/me/profile", { method: "PUT", body: JSON.stringify(payload) }),\n  linkProvider: (provider: string, token: string) => request<AuthResponse>(`/auth/link/${provider}`, { method: "POST", body: JSON.stringify({ provider_token: token }) }),
   deleteAccount: () => request<void>("/auth/me", { method: "DELETE" }),
   calculate: (payload: SajuRequest) =>
     request<SajuResponse>("/saju/calculate", { method: "POST", body: JSON.stringify(payload) }),
