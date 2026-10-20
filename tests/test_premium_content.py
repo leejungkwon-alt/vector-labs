@@ -51,7 +51,9 @@ def test_premium_sections_in_full_report():
         assert sec["mode"] == "THE_RADIATOR"  # 1974년생은 태양(丙) 일간
         assert sec["headline"]
         assert sec["body"]
-        assert sec["action"]
+        assert len(sec["actions"]) > 0
+        assert len(sec["patterns"]) > 0
+        assert sec["compatibility"]["best_match"]
 
 
 def test_premium_section_ko_content():
@@ -75,7 +77,7 @@ def test_premium_section_en_content():
 # ============================================================
 
 def test_free_tier_locks_premium_sections():
-    """무료(free) 티어는 심화 섹션의 본문(body)과 액션(action)이 잠겨야 함."""
+    """무료(free) 티어는 심화 섹션의 본문(body)과 세부 내용이 잠겨야 함."""
     profile = _profile()
     report = generate_full_report(profile, lang="ko")
     
@@ -92,11 +94,14 @@ def test_free_tier_locks_premium_sections():
         
         # 잠금 필드는 제거
         assert "body" not in sec
-        assert "action" not in sec
+        assert "actions" not in sec
+        assert "patterns" not in sec
+        assert "compatibility" not in sec
+        assert "red_flags" not in sec
         
         # locked_fields 명시 확인
         assert "body" in sec.get("locked_fields", [])
-        assert "action" in sec.get("locked_fields", [])
+        assert "actions" in sec.get("locked_fields", [])
 
 
 def test_premium_tier_unlocks_premium_sections():
@@ -115,7 +120,8 @@ def test_premium_tier_unlocks_premium_sections():
         assert "title" in sec
         assert "headline" in sec
         assert "body" in sec
-        assert "action" in sec
+        assert "actions" in sec
+        assert "patterns" in sec
         
         # locked_fields 자체가 없어야 함
         assert "locked_fields" not in sec
