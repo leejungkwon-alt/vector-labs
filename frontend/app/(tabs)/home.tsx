@@ -188,11 +188,45 @@ export default function HomeScreen() {
                     </View>
                   ))}
 
-                  {/* Premium Sections (Love, Career, Wealth) */}
-                  {["love", "career", "wealth"].includes(key) && sec.headline && (
+                                    {/* Premium Sections (Love, Career, Wealth) */}
+                  {["love", "career", "wealth"].includes(key) && sec.patterns && sec.patterns.length > 0 && (
                     <View style={{ marginTop: 12 }}>
-                      <Text style={styles.blockTitle}>{sec.headline}</Text>
-                      <Text style={styles.paragraph}>{sec.body || "프리미엄 결제 후 내용을 확인하실 수 있습니다."}</Text>
+                      <Text style={styles.blockTitle}>관계 패턴</Text>
+                      {sec.patterns.map((p: string, i: number) => (
+                        <Text key={i} style={styles.paragraph}>• {p}</Text>
+                      ))}
+                    </View>
+                  )}
+                  {["love", "career", "wealth"].includes(key) && sec.compatibility && (
+                    <View style={{ marginTop: 12, padding: 12, backgroundColor: colors.surface, borderRadius: radius.md }}>
+                      <Text style={styles.blockTitle}>궁합</Text>
+                      <Text style={styles.paragraph}>최고의 궁합: {(sec.compatibility.best_match || []).join(", ")}</Text>
+                      <Text style={{ fontSize: 14, color: colors.textMuted, marginBottom: 8 }}>{sec.compatibility.best_reason}</Text>
+                      <Text style={styles.paragraph}>주의할 궁합: {(sec.compatibility.challenging_match || []).join(", ")}</Text>
+                      <Text style={{ fontSize: 14, color: colors.textMuted }}>{sec.compatibility.challenging_reason}</Text>
+                    </View>
+                  )}
+                  {["love", "career", "wealth"].includes(key) && sec.actions && sec.actions.length > 0 && (
+                    <View style={{ marginTop: 12 }}>
+                      <Text style={styles.blockTitle}>실천 가이드</Text>
+                      {sec.actions.map((a: string, i: number) => (
+                        <Text key={i} style={styles.paragraph}>→ {a}</Text>
+                      ))}
+                    </View>
+                  )}
+                  {["love", "career", "wealth"].includes(key) && sec.red_flags && sec.red_flags.length > 0 && (
+                    <View style={{ marginTop: 12, padding: 12, backgroundColor: "#FFF5F0", borderRadius: radius.md }}>
+                      <Text style={[styles.blockTitle, { color: "#C2461F" }]}>주의할 점</Text>
+                      {sec.red_flags.map((r: string, i: number) => (
+                        <Text key={i} style={styles.paragraph}>⚠ {r}</Text>
+                      ))}
+                    </View>
+                  )}
+                  {["love", "career", "wealth"].includes(key) && !sec.patterns && (
+                    <View style={{ marginTop: 12, padding: 16, backgroundColor: colors.bg, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border }}>
+                      <Text style={{ fontSize: 15, color: colors.textMuted, textAlign: "center", lineHeight: 22 }}>
+                        프리미엄 결제 후 상세 분석을 확인하실 수 있습니다.
+                      </Text>
                     </View>
                   )}
 

@@ -88,15 +88,15 @@ FREE_SECTION_RULES = {
 
     "love": {
         "keep": {"id", "title", "mode", "headline"},
-        "locked_hint": ["body", "action"],
+        "locked_hint": ["body", "patterns", "compatibility", "actions", "red_flags"],
     },
     "career": {
         "keep": {"id", "title", "mode", "headline"},
-        "locked_hint": ["body", "action"],
+        "locked_hint": ["body", "patterns", "compatibility", "actions", "red_flags"],
     },
     "wealth": {
         "keep": {"id", "title", "mode", "headline"},
-        "locked_hint": ["body", "action"],
+        "locked_hint": ["body", "patterns", "compatibility", "actions", "red_flags"],
     },
     # ---- Timeline: 첫 3개 대운 ----
     "timeline": {

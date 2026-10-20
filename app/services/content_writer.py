@@ -791,7 +791,15 @@ def write_premium_section(profile: dict, lang: str, section_name: str) -> dict |
         "mode": arch,
         "headline": content.get("headline", ""),
         "body": content.get("body", ""),
-        "action": "꾸준한 기록과 실행이 필요합니다." if lang == "ko" else "Consistent action is required.",
+        "patterns": content.get("patterns", []),
+        "compatibility": {
+            "best_match": content.get("best_match", []),
+            "best_reason": content.get("best_reason", ""),
+            "challenging_match": content.get("challenging_match", []),
+            "challenging_reason": content.get("challenging_reason", ""),
+        },
+        "actions": content.get("actions", []),
+        "red_flags": content.get("red_flags", []),
     }
 
 def write_love_section(profile: dict, lang: str = "ko") -> dict:
