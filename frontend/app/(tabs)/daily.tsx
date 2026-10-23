@@ -1,3 +1,4 @@
+import { useLanguageStore } from "@/store/languageStore"; // SAJU-PATCH:api-lang
 ﻿import { useQuery } from "@tanstack/react-query";
 import { View, Text, ScrollView, ActivityIndicator, StyleSheet, TouchableOpacity } from "react-native";
 import { router } from "expo-router";
@@ -9,6 +10,7 @@ import { useProfileStore } from "@/store/profileStore";
 import type { DailyResponse } from "../../types";
 
 export default function DailyScreen() {
+  const lang = useLanguageStore((s) => s.lang); // SAJU-PATCH:lang-decl
   const profile = useProfileStore((s) => s.profile);
   const profileReady = useProfileStore((s) => s.ready);
 
@@ -17,9 +19,9 @@ export default function DailyScreen() {
   const ready = useAuthStore((s) => s.ready);
 
 const { data, isLoading, error } = useQuery({
-    queryKey: ["daily", profile, user?.id], // 👈 user.id를 키에 추가하여 로그인 상태 변경 시 재호출
+    queryKey: ["daily", profile, user?.id, lang], // 👈 user.id를 키에 추가하여 로그인 상태 변경 시 재호출
     // user와 ready 상태가 확실할 때만 API 호출
-    queryFn: () => api.daily({ ...profile, days: 7, lang: "ko" }),
+    queryFn: () => api.daily({ ...profile, days: 7, lang }),
     enabled: !!profile && profileReady && !!user && ready, 
     retry: false,
   });

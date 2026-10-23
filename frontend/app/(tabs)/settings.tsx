@@ -1,3 +1,4 @@
+import { useLanguageStore, SupportedLang } from "@/store/languageStore"; // SAJU-PATCH:lang-ui
 import { useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Alert, Platform } from "react-native";
 import { router } from "expo-router";
@@ -54,6 +55,11 @@ export default function SettingsScreen() {
     }
   };
 
+  const lang = useLanguageStore((s) => s.lang);
+
+  const setLang = useLanguageStore((s) => s.setLang);
+
+
   return (
     <View style={styles.container}>
       <View style={styles.profileBox}>
@@ -102,6 +108,28 @@ export default function SettingsScreen() {
         visible={showPayment}
         onClose={() => setShowPayment(false)}
       />
+    {/* SAJU-PATCH:lang-ui */}
+    <View style={{ marginTop: 24, padding: 16, borderRadius: 12, borderWidth: 1, borderColor: "#ddd" }}>
+      <Text style={{ fontSize: 16, fontWeight: "600", marginBottom: 12 }}>언어 설정 (Language)</Text>
+      <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 10 }}>
+        {([
+          { key: "ko", label: "한국어" },
+          { key: "en", label: "English" },
+          { key: "ja", label: "日本語" },
+          { key: "zh_cn", label: "简体中文" },
+          { key: "zh_tw", label: "繁體中文" },
+        ] as { key: SupportedLang; label: string }[]).map((item) => (
+          <TouchableOpacity
+            key={item.key}
+            onPress={() => setLang(item.key)}
+            style={{ paddingVertical: 8, paddingHorizontal: 12, borderRadius: 8, borderWidth: 1,
+              borderColor: lang === item.key ? "#4f46e5" : "#ddd" }}
+          >
+            <Text style={{ color: lang === item.key ? "#4f46e5" : "#333" }}>{item.label}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+    </View>
     </View>
   );
 }

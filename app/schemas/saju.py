@@ -3,6 +3,9 @@ from datetime import datetime
 from typing import Any, Dict, Optional
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
+# SAJU-PATCH:lang-schema
+SUPPORTED_LANGS = ("en", "ko", "ja", "zh_cn", "zh_tw")
+
 
 class SajuRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")

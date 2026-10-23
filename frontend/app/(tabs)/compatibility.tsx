@@ -1,3 +1,4 @@
+import { useLanguageStore } from "@/store/languageStore"; // SAJU-PATCH:api-lang
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet, ActivityIndicator, Switch } from "react-native";
@@ -12,6 +13,7 @@ import { CITY_LIST } from "@/constants/cities";
 import { TIMEZONE_LIST } from "@/constants/timezones";
 
 export default function CompatibilityScreen() {
+  const lang = useLanguageStore((s) => s.lang); // SAJU-PATCH:lang-decl
   const insets = useSafeAreaInsets();
   const myProfile = useProfileStore((s) => s.profile);
 
@@ -55,7 +57,7 @@ export default function CompatibilityScreen() {
   };
 
   const { data, isLoading, error, refetch } = useQuery({
-    queryKey: ["compatibility", relationshipType],
+    queryKey: ["compatibility", relationshipType, lang],
     queryFn: async () => {
       if (!myProfile) throw new Error("내 사주 정보가 없습니다. 홈에서 먼저 입력해주세요.");
 
@@ -85,7 +87,7 @@ export default function CompatibilityScreen() {
           gender: gender as "M" | "F",
         },
         relationship_type: relationshipType,
-        lang: "ko",
+        lang,
       });
     },
     enabled: false,

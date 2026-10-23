@@ -5,6 +5,9 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from app.schemas.saju import SajuRequest
 
+# SAJU-PATCH:lang-schema
+SUPPORTED_LANGS = ("en", "ko", "ja", "zh_cn", "zh_tw")
+
 
 class CompatibilityRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
@@ -16,7 +19,7 @@ class CompatibilityRequest(BaseModel):
     @field_validator("lang")
     @classmethod
     def v_lang(cls, v: str) -> str:
-        if v not in ("en", "ko"):
+        if v not in SUPPORTED_LANGS:
             raise ValueError("lang must be 'en' or 'ko'.")
         return v
 

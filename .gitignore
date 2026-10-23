@@ -63,3 +63,22 @@ saju_dump.txt
 # auto-fix backups
 *.bak.*
 *.broken.*
+
+# --- 비밀/임시 산출물 (P0 보안 패치) ---
+token.txt
+*.jwt
+*.bak
+*.bak_*
+*.bak.*
+report_*.json
+review.txt
+saju_complete_code*.txt
+all_code.txt
+saju_p0_patch.diff
+frontend/*.apk
+
+# SAJU patch backups & temp
+*.bak.*
+*.bak_*
+__pycache__/
+scripts/__pycache__/

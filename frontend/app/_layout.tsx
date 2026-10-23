@@ -1,3 +1,4 @@
+import { useLanguageStore } from "@/store/languageStore"; // SAJU-PATCH:loadLang
 ﻿import { useEffect } from "react";
 import { Stack } from "expo-router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -14,10 +15,14 @@ export default function RootLayout() {
   const bootstrap = useAuthStore((s) => s.bootstrap);
   const loadProfile = useProfileStore((s) => s.loadProfile);
 
+  const loadLang = useLanguageStore((s) => s.loadLang); // SAJU-PATCH:loadLang
+
+
   useEffect(() => {
     bootstrap();
+    loadLang(); // // SAJU-PATCH:loadLang
     loadProfile();
-  }, [bootstrap, loadProfile]);
+  }, [bootstrap, loadProfile, loadLang]);
 
   return (
     <SafeAreaProvider>

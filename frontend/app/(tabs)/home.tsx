@@ -1,3 +1,4 @@
+import { useLanguageStore } from "@/store/languageStore"; // SAJU-PATCH:api-lang
 // frontend/app/(tabs)/home.tsx
 import { useQuery } from "@tanstack/react-query";
 import {
@@ -55,6 +56,7 @@ function renderSection(key: string, sec: any) {
 }
 
 export default function HomeScreen() {
+  const lang = useLanguageStore((s) => s.lang); // SAJU-PATCH:lang-decl
   const profile = useProfileStore((s) => s.profile);
   const profileReady = useProfileStore((s) => s.ready);
   const [expanded, setExpanded] = useState<Record<string, boolean>>({ core: true });
@@ -66,9 +68,9 @@ export default function HomeScreen() {
   }, [profileReady, profile]);
 
   const { data, isLoading, error } = useQuery({
-    queryKey: ["report", profile],
+    queryKey: ["report", profile, lang],
     queryFn: () =>
-      api.report({ ...profile, target_year: new Date().getFullYear(), lang: "ko" }),
+      api.report({ ...profile, target_year: new Date().getFullYear(), lang }),
     enabled: !!profile,
     retry: false,
   });
