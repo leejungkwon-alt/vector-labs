@@ -20,22 +20,11 @@ export function PaymentModal({ visible, onClose }: Props) {
     setLoading(productId);
     try {
       await api.purchase(productId);
-      await bootstrap(); // 유저 정보(티어/애드온) 갱신
+      try { await queryClient.invalidateQueries(); }
+      catch (e) { console.warn('[FIX-21] cache invalidate failed', e); }
+      await bootstrap();   // 한 번만
       Alert.alert("Payment Successful", "The locked content has been unlocked.");
       onClose();
-      if (typeof window !== "undefined") {
-        /* FIX-21: hard reload removed -> cache invalidate + bootstrap */
-        try {
-          if (typeof queryClient !== 'undefined' && queryClient) {
-            await queryClient.invalidateQueries();
-          }
-          if (typeof bootstrap === 'function') {
-            await bootstrap();
-          }
-        } catch (e) {
-          console.warn('[FIX-21] post-payment refresh failed', e);
-        }
-      }
     } catch (e: any) {
       Alert.alert("Payment Failed", e.message || "Please try again.");
     } finally {

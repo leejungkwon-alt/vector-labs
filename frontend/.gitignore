@@ -40,3 +40,7 @@ yarn-error.*
 /ios
 /android
 .env
+
+# Expo env files (keep example)
+.env.*
+!.env.example
