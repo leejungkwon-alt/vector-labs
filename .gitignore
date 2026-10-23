@@ -59,3 +59,7 @@ saju_complete_code.txt
 saju_full.txt
 saju_dump.txt
 *.dump.txt
+
+# auto-fix backups
+*.bak.*
+*.broken.*
