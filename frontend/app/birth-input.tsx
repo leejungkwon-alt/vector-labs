@@ -64,7 +64,7 @@ export default function BirthInput() {
       }
       
       const offsetHours = new Date().getTimezoneOffset() / -60; 
-      const fallbackLongitude = offsetHours * 15;
+      const fallbackLongitude = 0 /* FIX-22: backend handles timezone */;
 
       const profile = {
         birth_date: `${yyyy}-${mm}-${dd}`,

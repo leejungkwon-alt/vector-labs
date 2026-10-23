@@ -71,7 +71,7 @@ export default function CompatibilityScreen() {
       }
 
       const offsetHours = new Date().getTimezoneOffset() / -60; 
-      const fallbackLongitude = offsetHours * 15;
+      const fallbackLongitude = 0 /* FIX-22: backend handles timezone */;
 
       return api.compatibility({
         person_a: myProfile,

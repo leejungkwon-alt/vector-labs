@@ -1,3 +1,4 @@
+import { useQueryClient } from '@tanstack/react-query';
 import React, { useState } from "react";
 import { Modal, View, Text, TouchableOpacity, StyleSheet, ActivityIndicator, Alert } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
@@ -11,6 +12,7 @@ interface Props {
 }
 
 export function PaymentModal({ visible, onClose }: Props) {
+  const queryClient = useQueryClient();
   const [loading, setLoading] = useState<string | null>(null);
   const bootstrap = useAuthStore((s) => s.bootstrap);
 
@@ -22,7 +24,17 @@ export function PaymentModal({ visible, onClose }: Props) {
       Alert.alert("Payment Successful", "The locked content has been unlocked.");
       onClose();
       if (typeof window !== "undefined") {
-        window.location.reload();
+        /* FIX-21: hard reload removed -> cache invalidate + bootstrap */
+        try {
+          if (typeof queryClient !== 'undefined' && queryClient) {
+            await queryClient.invalidateQueries();
+          }
+          if (typeof bootstrap === 'function') {
+            await bootstrap();
+          }
+        } catch (e) {
+          console.warn('[FIX-21] post-payment refresh failed', e);
+        }
       }
     } catch (e: any) {
       Alert.alert("Payment Failed", e.message || "Please try again.");

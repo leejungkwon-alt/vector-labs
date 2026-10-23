@@ -10,8 +10,14 @@
   PushTokenRequest,
 } from "../../types";
 
-// Cloud Run 백엔드 주소로 변경
-const BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL ?? "https://vector-labs-api-787049663118.asia-northeast3.run.app/api/v1";
+// FIX-23: env-based (dev: localhost, prod: EXPO_PUBLIC_API_BASE_URL)
+const BASE_URL: string = (() => {
+  const fromEnv = process.env.EXPO_PUBLIC_API_BASE_URL;
+  if (fromEnv) return fromEnv;
+  if (typeof __DEV__ !== "undefined" && __DEV__) return "http://localhost:8000/api/v1";
+  if (typeof console !== "undefined") console.warn("[client] EXPO_PUBLIC_API_BASE_URL not set");
+  return "";
+})();
 
 export class ApiError extends Error {
   constructor(public status: number, public detail: string) {

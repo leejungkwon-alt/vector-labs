@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Modal, View, Text, TouchableOpacity, StyleSheet, ActivityIndicator } from "react-native";
+import { ActivityIndicator, Alert, Modal, Platform, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { colors, radius, spacing } from "@/theme";
 import { useAuthStore } from "@/store/authStore";
@@ -20,7 +20,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
       await linkAccount(provider);
       onSuccess();
     } catch (e: any) {
-      alert(e.message || "로그인에 실패했습니다.");
+      if (typeof Platform !== 'undefined' && Platform.OS === 'web') { window.alert(e.message || "로그인에 실패했습니다."); } else { Alert.alert('알림', e.message || "로그인에 실패했습니다."); }
     } finally {
       setLoading(null);
     }
