@@ -8,7 +8,7 @@ import { CityPickerModal, CUSTOM_CITY_KEY } from "@/components/CityPickerModal";
 import { TimezonePickerModal } from "@/components/TimezonePickerModal"; // 👈 추가
 import { CITY_LIST } from "@/constants/cities";
 import { TIMEZONE_LIST } from "@/constants/timezones";
-import { colors } from "@/theme";
+import { colors, spacing, radius } from "@/theme";
 
 export default function BirthInput() {
   const insets = useSafeAreaInsets();
@@ -96,8 +96,8 @@ export default function BirthInput() {
       <View style={styles.rowBetween}>
         <Text style={styles.label}>출생 시간</Text>
         <View style={styles.switchWrap}>
-          <Text style={{ fontSize: 13, color: "#7A6A5C", marginRight: 6 }}>시간을 몰라요</Text>
-          <Switch value={unknownTime} onValueChange={setUnknownTime} trackColor={{ false: "#EADFCF", true: "#E85D2F" }} />
+          <Text style={{ fontSize: 13, color: colors.textMuted, marginRight: 6 }}>시간을 몰라요</Text>
+          <Switch value={unknownTime} onValueChange={setUnknownTime} trackColor={{ false: colors.border, true: colors.primary }} />
         </View>
       </View>
 
@@ -147,19 +147,19 @@ export default function BirthInput() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#FDF6EE", padding: 20 },
-  title: { fontSize: 22, fontWeight: "700", color: "#2B1B12", marginBottom: 20, marginTop: 10 },
-  label: { fontSize: 15, fontWeight: "600", color: "#7A6A5C", marginBottom: 6 },
+  container: { flex: 1, backgroundColor: colors.bg, padding: spacing.lg },
+  title: { fontSize: 22, fontWeight: "700", color: colors.text, marginBottom: spacing.lg, marginTop: 10 },
+  label: { fontSize: 15, fontWeight: "600", color: colors.textMuted, marginBottom: 6 },
   rowBetween: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 6 },
   switchWrap: { flexDirection: "row", alignItems: "center" },
-  inputBtn: { backgroundColor: "#FFF", padding: 14, borderRadius: 12, borderWidth: 1, borderColor: "#EADFCF", marginBottom: 16 },
-  inputText: { fontSize: 15, color: "#2B1B12" },
-  customBox: { backgroundColor: "#FFF", padding: 14, borderRadius: 12, borderWidth: 1, borderColor: "#EADFCF", marginBottom: 16, marginTop: -8 },
-  textInput: { backgroundColor: "#FDF6EE", padding: 10, borderRadius: 8, borderWidth: 1, borderColor: "#EADFCF", justifyContent: "center", minHeight: 40 },
-  genderBtn: { flex: 1, padding: 14, borderRadius: 12, backgroundColor: "#FFF", borderWidth: 1, borderColor: "#EADFCF", alignItems: "center" },
-  genderBtnActive: { backgroundColor: "#E85D2F", borderColor: "#E85D2F" },
-  genderText: { fontSize: 15, color: "#7A6A5C" },
-  genderTextActive: { color: "#FFF", fontWeight: "600" },
-  nextBtn: { backgroundColor: "#E85D2F", padding: 16, borderRadius: 12, alignItems: "center", marginTop: 10 },
-  nextBtnText: { fontSize: 17, fontWeight: "700", color: "#FFF" },
+  inputBtn: { backgroundColor: colors.surface, padding: 14, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, marginBottom: spacing.md },
+  inputText: { fontSize: 15, color: colors.text },
+  customBox: { backgroundColor: colors.surface, padding: 14, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, marginBottom: spacing.md, marginTop: -8 },
+  textInput: { backgroundColor: colors.bg, padding: 10, borderRadius: radius.sm, borderWidth: 1, borderColor: colors.border, justifyContent: "center", minHeight: 40 },
+  genderBtn: { flex: 1, padding: 14, borderRadius: radius.md, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border, alignItems: "center" },
+  genderBtnActive: { backgroundColor: colors.primary, borderColor: colors.primary },
+  genderText: { fontSize: 15, color: colors.textMuted },
+  genderTextActive: { color: colors.onPrimary, fontWeight: "600" },
+  nextBtn: { backgroundColor: colors.primary, padding: 16, borderRadius: radius.md, alignItems: "center", marginTop: spacing.sm },
+  nextBtnText: { fontSize: 17, fontWeight: "700", color: colors.onPrimary },
 });

@@ -2,7 +2,7 @@
 """
 12운성 (十二運星).
 
-일간이 특정 지지에서 어떤 생애 주기 상태에 있는가.
+일간이 특정 땅의 기운에서 어떤 생애 주기 상태에 있는가.
 
 장생 → 목욕 → 관대 → 건록 → 제왕 → 쇠 → 병 → 사 → 묘 → 절 → 태 → 양
 
@@ -17,7 +17,7 @@ TWELVE_STAGES = [
     "병", "사", "묘", "절", "태", "양",
 ]
 
-# 각 일간이 장생하는 지지
+# 각 일간이 장생하는 땅의 기운
 CHANGSHENG_START = {
     "甲": "亥", "乙": "午",
     "丙": "寅", "丁": "酉",
@@ -31,7 +31,7 @@ _YANG_STEMS = {"甲", "丙", "戊", "庚", "壬"}
 
 def twelve_stage(day_stem: str, branch: str) -> str:
     """
-    일간이 지지에서 어떤 12운성 단계인지 반환.
+    일간이 땅의 기운에서 어떤 12운성 단계인지 반환.
     잘못된 입력이면 빈 문자열.
     """
     if day_stem not in CHANGSHENG_START or branch not in EARTHLY_BRANCHES:
@@ -51,7 +51,7 @@ def twelve_stage(day_stem: str, branch: str) -> str:
 
 def twelve_stages_for_pillars(pillars: dict) -> dict:
     """
-    4기둥 각 지지의 12운성을 반환.
+    4기둥 각 땅의 기운의 12운성을 반환.
 
     반환:
       {"year_pillar": "장생", "month_pillar": "...", ...}

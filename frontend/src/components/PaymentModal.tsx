@@ -48,7 +48,7 @@ export function PaymentModal({ visible, onClose }: Props) {
             <View style={{ flex: 1 }}>
               <View style={{ flexDirection: "row", alignItems: "center", gap: 6, marginBottom: 4 }}>
                 <Text style={styles.planName}>Monthly Subscription</Text>
-                <View style={{ backgroundColor: colors.primary, paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}><Text style={{ color: "#FFF", fontSize: 10, fontWeight: "700" }}>BEST</Text></View>
+                <View style={{ backgroundColor: colors.primary, paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}><Text style={{ color: colors.onPrimary, fontSize: 10, fontWeight: "700" }}>BEST</Text></View>
               </View>
               <Text style={styles.planDetail}>Daily, Monthly & All Deep Reports</Text>
               <Text style={styles.planPrice}>$2.99 / month</Text>

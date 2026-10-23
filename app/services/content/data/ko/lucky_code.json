@@ -1,7 +1,7 @@
 {
   "LUCKY_CODE_CONTENT": {
     "GROWTH": {
-      "element": "목(木)",
+      "element": "성장(Wood)",
       "keywords": [
         "확장",
         "방향",
@@ -39,7 +39,7 @@
       ]
     },
     "SPARK": {
-      "element": "화(火)",
+      "element": "불꽃(Spark)",
       "keywords": [
         "표현",
         "온기",
@@ -75,7 +75,7 @@
       ]
     },
     "GROUND": {
-      "element": "토(土)",
+      "element": "대지(Earth)",
       "keywords": [
         "안정",
         "신뢰",
@@ -115,7 +115,7 @@
       ]
     },
     "EDGE": {
-      "element": "금(金)",
+      "element": "예리함(Metal)",
       "keywords": [
         "명료",
         "구조",
@@ -152,7 +152,7 @@
       ]
     },
     "FLOW": {
-      "element": "수(水)",
+      "element": "흐름(Water)",
       "keywords": [
         "적응",
         "지혜",

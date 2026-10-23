@@ -1,16 +1,16 @@
 # app/engine/relations.py
 """
-지지·천간 관계 검출.
+땅의 기운·하늘의 기운 관계 검출.
 
-지지:
+땅의 기운:
 - 육합/삼합/반합/방합 (결속·응집) — potential_element로 化 가능 오행 참고만 표시
 - 육충 (충돌)
 - 삼형/쌍형/자형 (마찰)
 - 육해/파
 
-천간:
-- 천간합 (甲己 등 5쌍)
-- 천간충 (甲庚 등 4쌍)
+하늘의 기운:
+- 하늘의 기운합 (甲己 등 5쌍)
+- 하늘의 기운충 (甲庚 등 4쌍)
 
 **합화(化) 주의**: 본 모듈은 "합이 성립한다"까지만 판정한다.
 실제 오행 변화(化)는 월령·통근·투출 등 추가 조건이 필요하므로,
@@ -65,7 +65,7 @@ SAN_HYEONG = [
     (frozenset(["丑", "戌", "未"]), "지세지형", "권력 다툼·고집"),
     (frozenset(["子", "卯"]), "무례지형", "예의 결여·성급함"),
 ]
-# 자형: 같은 지지가 2개 이상 있을 때 성립
+# 자형: 같은 땅의 기운가 2개 이상 있을 때 성립
 ZIHYEONG_BRANCHES = {"辰", "午", "酉", "亥"}
 
 # ---- 육해 ----
@@ -82,7 +82,7 @@ LIU_PA = {
     frozenset(["巳", "申"]), frozenset(["未", "戌"]),
 }
 
-# ---- 천간합 ----
+# ---- 하늘의 기운합 ----
 TIAN_GAN_HE = {
     frozenset(["甲", "己"]): "土",
     frozenset(["乙", "庚"]): "金",
@@ -91,7 +91,7 @@ TIAN_GAN_HE = {
     frozenset(["戊", "癸"]): "火",
 }
 
-# ---- 천간충 (7충 아님, 4충) ----
+# ---- 하늘의 기운충 (7충 아님, 4충) ----
 TIAN_GAN_CHONG = {
     frozenset(["甲", "庚"]),
     frozenset(["乙", "辛"]),
@@ -111,11 +111,11 @@ POSITION_LABEL = {
 
 def detect_relations(pillars: dict) -> dict:
     """
-    4기둥의 지지·천간 관계를 검출.
+    4기둥의 땅의 기운·하늘의 기운 관계를 검출.
 
     반환:
-      he, chong, hyeong, hai, pa: 지지 관계
-      gan_he, gan_chong: 천간 관계
+      he, chong, hyeong, hai, pa: 땅의 기운 관계
+      gan_he, gan_chong: 하늘의 기운 관계
     """
     branches_by_pos = {}
     stems_by_pos = {}
@@ -132,7 +132,7 @@ def detect_relations(pillars: dict) -> dict:
         "hai":       _detect_pair_relation(branches_by_pos, LIU_HAI, "육해"),
         "pa":        _detect_pair_relation(branches_by_pos, LIU_PA, "파"),
         "gan_he":    _detect_gan_he(stems_by_pos),
-        "gan_chong": _detect_pair_relation(stems_by_pos, TIAN_GAN_CHONG, "천간충"),
+        "gan_chong": _detect_pair_relation(stems_by_pos, TIAN_GAN_CHONG, "하늘의 기운충"),
     }
 
 
@@ -237,7 +237,7 @@ def _detect_hyeong(branches_by_pos: dict) -> list:
                 "branches": [branches_by_pos[p] for p in positions_with],
             })
 
-    # 자형: 같은 지지가 2개 이상
+    # 자형: 같은 땅의 기운가 2개 이상
     counts = Counter(branches_by_pos.values())
     for branch, cnt in counts.items():
         if branch in ZIHYEONG_BRANCHES and cnt >= 2:
@@ -262,12 +262,12 @@ def _detect_gan_he(stems_by_pos: dict) -> list:
         key = frozenset([s1, s2])
         if key in TIAN_GAN_HE:
             results.append({
-                "type": "천간합",
+                "type": "하늘의 기운합",
                 "positions": [p1, p2],
                 "position_labels": [POSITION_LABEL[p1], POSITION_LABEL[p2]],
                 "stems": [s1, s2],
                 "potential_element": TIAN_GAN_HE[key],
-                "note": "천간합 성립. 化 오행은 월령 조건에 따라 달라짐.",
+                "note": "하늘의 기운합 성립. 化 오행은 월령 조건에 따라 달라짐.",
             })
     return results
 

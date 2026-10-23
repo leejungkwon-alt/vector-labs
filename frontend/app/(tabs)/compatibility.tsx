@@ -4,7 +4,7 @@ import { View, Text, ScrollView, TouchableOpacity, StyleSheet, ActivityIndicator
 import DateTimePicker, { DateTimePickerEvent } from "@react-native-community/datetimepicker";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { api, ApiError } from "@/api/client";
-import { colors, spacing, radius } from "@/theme";
+import { colors, spacing, radius, gradeColors } from "@/theme";
 import { useProfileStore } from "@/store/profileStore";
 import { CityPickerModal, CUSTOM_CITY_KEY } from "@/components/CityPickerModal";
 import { TimezonePickerModal } from "@/components/TimezonePickerModal";
@@ -110,7 +110,6 @@ export default function CompatibilityScreen() {
     const rawScore = compat.overall.score;
     const displayScore = Math.round((rawScore + 1) * 50);
     
-    const gradeColors: Record<string, string> = { PEAK: "#2F7A3F", FAVORABLE: "#5FAF7A", NEUTRAL: "#7A6A5C", CAUTION: "#D4A017", CHALLENGING: "#C2461F" };
     const color = gradeColors[compat.overall.grade] || colors.text;
 
     return (
@@ -201,11 +200,11 @@ export default function CompatibilityScreen() {
         <Text style={styles.label}>상대방 출생 시간</Text>
         <View style={styles.switchWrap}>
           <Text style={{ fontSize: 13, color: colors.textMuted, marginRight: 6 }}>시간을 몰라요</Text>
-          <Switch value={unknownTime} onValueChange={setUnknownTime} trackColor={{ false: "#EADFCF", true: colors.primary }} />
+          <Switch value={unknownTime} onValueChange={setUnknownTime} trackColor={{ false: colors.border, true: colors.primary }} />
         </View>
       </View>
 
-      <TouchableOpacity style={[styles.inputBtn, unknownTime && { opacity: 0.4, backgroundColor: "#F0EAE1" }]} onPress={() => { if(!unknownTime) setShowTimePicker(true); }} disabled={unknownTime}>
+      <TouchableOpacity style={[styles.inputBtn, unknownTime && { opacity: 0.4, backgroundColor: colors.bgMuted }]} onPress={() => { if(!unknownTime) setShowTimePicker(true); }} disabled={unknownTime}>
         <Text style={styles.inputText}>
           {unknownTime ? "시간 모름 (정오 기준)" : `${String(partnerTime.getHours()).padStart(2, "0")}시 ${String(partnerTime.getMinutes()).padStart(2, "0")}분`}
         </Text>
@@ -260,7 +259,7 @@ const styles = StyleSheet.create({
   segmentBtn: { flex: 1, paddingVertical: 12, alignItems: "center", borderRadius: radius.pill },
   segmentBtnActive: { backgroundColor: colors.primary },
   segmentText: { fontSize: 15, fontWeight: "600", color: colors.textMuted },
-  segmentTextActive: { color: "#FFF", fontWeight: "700" },
+  segmentTextActive: { color: colors.onPrimary, fontWeight: "700" },
 
   label: { fontSize: 15, fontWeight: "600", color: colors.textMuted, marginBottom: 6 },
   rowBetween: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 6 },
@@ -272,16 +271,16 @@ const styles = StyleSheet.create({
   genderBtn: { flex: 1, padding: 14, borderRadius: radius.md, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border, alignItems: "center" },
   genderBtnActive: { backgroundColor: colors.primary, borderColor: colors.primary },
   genderText: { fontSize: 15, color: colors.textMuted },
-  genderTextActive: { color: "#FFF", fontWeight: "600" },
+  genderTextActive: { color: colors.onPrimary, fontWeight: "600" },
   nextBtn: { backgroundColor: colors.primary, padding: 16, borderRadius: radius.md, alignItems: "center" },
-  nextBtnText: { fontSize: 17, fontWeight: "700", color: "#FFF" },
+  nextBtnText: { fontSize: 17, fontWeight: "700", color: colors.onPrimary },
   
   resultCard: { backgroundColor: colors.surface, padding: spacing.xl, borderRadius: radius.lg, borderWidth: 1, borderColor: colors.border, alignItems: "center" },
   resultLabel: { fontSize: 14, fontWeight: "700", color: colors.textMuted, marginBottom: 8 },
   
   // 👇 100점 만점 스타일
   overallScore: { fontSize: 56, fontWeight: "800" },
-  gaugeBg: { width: "100%", height: 8, backgroundColor: "#F0EAE1", borderRadius: 4, marginBottom: 16, overflow: "hidden" },
+  gaugeBg: { width: "100%", height: 8, backgroundColor: colors.bgMuted, borderRadius: 4, marginBottom: 16, overflow: "hidden" },
   gaugeFill: { height: "100%", borderRadius: 4 },
   
   overallGrade: { fontSize: 20, fontWeight: "700", marginBottom: 16 },

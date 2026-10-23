@@ -1,0 +1,173 @@
+{
+  "MODE_LABELS": {
+    "THE_TWIN": "동반자",
+    "THE_RIVAL": "자극하는 상대",
+    "THE_ALLY": "한 번 믿으면 끝까지",
+    "THE_EMPATH": "공감자",
+    "THE_CREATOR": "창작자",
+    "THE_CHALLENGER": "도전자",
+    "THE_OFFICER": "원칙주의자",
+    "THE_SURVIVOR": "생존자",
+    "THE_MYSTIC": "탐구자",
+    "THE_MENTOR": "멘토",
+    "THE_GENERALIST": "올라운더",
+    "THE_STEWARD": "관리자",
+    "THE_OPERATOR": "운영자",
+    "THE_FLOW": "흐름"
+  },
+  "AXES": {
+    "FREEDOM_BOND": {
+      "pos": "함께하는 시간",
+      "neg": "혼자만의 공간"
+    },
+    "RISK_SAFETY": {
+      "pos": "새로운 도전",
+      "neg": "안정된 기반"
+    },
+    "DEPTH_BREADTH": {
+      "pos": "깊이 파고들기",
+      "neg": "넓게 경험하기"
+    },
+    "STRUCTURE_FLOW": {
+      "pos": "정해진 규칙",
+      "neg": "즉흥적 흐름"
+    },
+    "EXPRESSION_RESTRAINT": {
+      "pos": "표현하기",
+      "neg": "절제하기"
+    },
+    "COMPETITION_COLLABORATION": {
+      "pos": "경쟁하며 앞서기",
+      "neg": "협력하며 함께 가기"
+    },
+    "SPEED_PATIENCE": {
+      "pos": "빠르게 움직이기",
+      "neg": "천천히 익히기"
+    },
+    "SELF_OTHERS": {
+      "pos": "나를 먼저 챙기기",
+      "neg": "타인을 먼저 챙기기"
+    }
+  },
+  "MODE_AXES": {
+    "THE_TWIN": {
+      "FREEDOM_BOND": 1.0,
+      "COMPETITION_COLLABORATION": -0.6
+    },
+    "THE_RIVAL": {
+      "COMPETITION_COLLABORATION": 1.0,
+      "EXPRESSION_RESTRAINT": 0.5
+    },
+    "THE_ALLY": {
+      "FREEDOM_BOND": 0.8,
+      "SELF_OTHERS": -0.8
+    },
+    "THE_EMPATH": {
+      "SELF_OTHERS": -1.0,
+      "FREEDOM_BOND": 0.5
+    },
+    "THE_CREATOR": {
+      "FREEDOM_BOND": -1.0,
+      "EXPRESSION_RESTRAINT": 0.8
+    },
+    "THE_CHALLENGER": {
+      "RISK_SAFETY": 0.9,
+      "COMPETITION_COLLABORATION": 0.5
+    },
+    "THE_OFFICER": {
+      "STRUCTURE_FLOW": 1.2,
+      "RISK_SAFETY": -0.6
+    },
+    "THE_SURVIVOR": {
+      "RISK_SAFETY": 0.8,
+      "COMPETITION_COLLABORATION": 0.6
+    },
+    "THE_MYSTIC": {
+      "DEPTH_BREADTH": 1.2,
+      "FREEDOM_BOND": -0.5
+    },
+    "THE_MENTOR": {
+      "SELF_OTHERS": -0.9,
+      "SPEED_PATIENCE": -0.5
+    },
+    "THE_GENERALIST": {
+      "DEPTH_BREADTH": -1.2,
+      "STRUCTURE_FLOW": -0.5
+    },
+    "THE_STEWARD": {
+      "RISK_SAFETY": -1.2,
+      "SPEED_PATIENCE": -0.8
+    },
+    "THE_OPERATOR": {
+      "RISK_SAFETY": 0.8,
+      "SPEED_PATIENCE": 0.8
+    },
+    "THE_FLOW": {
+      "STRUCTURE_FLOW": -1.2,
+      "FREEDOM_BOND": -0.4
+    }
+  },
+  "INTRO_TEMPLATE": "당신은 관계에서는 서로 의지하는 '{bond_label}'로, 일할 때는 목표를 향해 나아가는 '{work_label}'로 살아갑니다. 돈에 대해서는 집착하기보다는 자연스럽게 흘러가는 대로 받아들이는 편이에요.",
+  "ANGLES": {
+    "FREEDOM_BOND": {
+      "love": "그래서 당신에게는 '가까이 있되 각자의 방이 있는' 관계가 잘 맞아요. 반대로, 이게 한꺼번에 요구되는 순간(예: 동업 연애)에는 경계를 먼저 말하는 게 오래 가는 비결이에요.",
+      "career": "그래서 당신에게는 '온전히 혼자 집중하는 시간'과 '다른 사람들과 호흡을 맞추는 시간'이 둘 다 꼭 필요합니다. 이 둘 중 하나라도 부족하면 쉽게 지치거나 무기력해질 수 있어요.",
+      "wealth": "그래서 재물에서도 '내 결정'과 '함께하는 결정'을 섞는 게 좋아요. 큰 결정은 혼자 정리하고, 실행은 신뢰하는 사람과 나눠 보세요."
+    },
+    "RISK_SAFETY": {
+      "love": "그래서 당신은 안정된 사람에게 끌리지만, 너무 안정되면 답답해져요. 관계 안에서 작은 새로움(여행, 새 취미)을 계속 만들어 두면 오래가요.",
+      "career": "그래서 당신은 도전과 안정 사이에서 흔들려요. 큰 결정 전에 '내가 지금 안전망을 갖고 있나?'를 먼저 확인해 보세요. 안전망이 있으면 도전이 훨씬 가벼워져요.",
+      "wealth": "그래서 재물에서는 '한 번의 큰 베팅'보다 '작은 실험을 자주' 하는 편이 잘 맞아요. 손실을 감당할 수 있는 범위에서만 움직이세요."
+    },
+    "DEPTH_BREADTH": {
+      "love": "그래서 당신은 '깊게 아는 사람 하나'와 '가볍게 만나는 여럿' 사이에서 흔들려요. 어느 쪽이든, 지금 당신이 어디에 에너지를 쓰고 있는지 한 번씩 점검해 보세요.",
+      "career": "그래서 당신은 한 우물을 파야 할 때와 여러 분야를 넘나들어야 할 때를 구분해야 해요. 지금은 어느 쪽이 맞는지 스스로에게 물어봐 주세요.",
+      "wealth": "그래서 재물에서는 '집중 투자'와 '분산 투자' 사이의 균형이 중요해요. 어느 쪽이든 한쪽으로 100% 쏠리면 위험해요."
+    },
+    "STRUCTURE_FLOW": {
+      "love": "그래서 당신은 관계의 규칙을 정해두면 편하지만, 너무 빡빡하면 답답해져요. '지켜야 할 것 하나, 자유롭게 둘 것 하나'를 정해 두면 좋아요.",
+      "career": "그래서 당신은 체계가 잡힌 환경에서 강하지만, 유연성이 사라지면 지쳐요. 루틴 안에 '즉흥성'을 일부러 남겨 두세요.",
+      "wealth": "그래서 재물에서는 자동 저축 같은 '구조'가 당신을 살려요. 즉흥 지출이 많다면, 구조를 먼저 만드는 게 순서예요."
+    },
+    "EXPRESSION_RESTRAINT": {
+      "love": "그래서 당신은 마음을 표현하고 싶지만, 타이밍을 놓치면 오해가 쌓여요. '지금 내가 어떤 감정인지' 하루 한 번 말로 꺼내 보세요.",
+      "career": "그래서 당신은 하고 싶은 말이 많아요. 다만 표현이 세면 관계가 상해요. '내용은 분명하게, 톤은 부드럽게'를 기억하세요.",
+      "wealth": "그래서 재물에서는 '지르고 싶은 마음'과 '참아야 한다는 마음'이 부딪혀요. 큰 지출 전에 하루만 기다리는 규칙이 효과적이에요."
+    },
+    "COMPETITION_COLLABORATION": {
+      "love": "그래서 당신은 서로 자극하는 관계를 좋아하지만, 그게 지나치면 소모전이 돼요. '이기는 대화'와 '함께 푸는 대화'를 구분해 보세요.",
+      "career": "그래서 당신은 경쟁과 협력 사이의 균형이 핵심이에요. 누구와 경쟁하고, 누구와 협력할지 명확히 정해 두면 에너지가 아껴져요.",
+      "wealth": "그래서 재물에서는 '남보다 앞서기'보다 '내 페이스 지키기'가 오래 가요. 비교는 판단을 흐려요."
+    },
+    "SPEED_PATIENCE": {
+      "love": "그래서 당신은 관계가 빨리 깊어지길 바라지만, 사람마다 속도가 달라요. 상대의 속도를 물어봐 주는 게 신뢰를 만들어요.",
+      "career": "그래서 당신은 빨리 결과를 내고 싶지만, 지금 하는 일이 '익어야 할 일'인지 '지금 내놔야 할 일'인지 구분해 보세요.",
+      "wealth": "그래서 재물에서는 '빠른 수익'과 '천천히 불리기'가 부딪혀요. 두 개를 섞어서 굴리는 게 안전해요."
+    },
+    "SELF_OTHERS": {
+      "love": "그래서 당신은 상대를 챙기다 정작 내 감정을 놓쳐요. '나 지금 어떤지'를 먼저 말하는 게 오히려 관계를 오래 가게 해요.",
+      "career": "그래서 당신은 남을 돕다 정작 내 평가를 놓쳐요. 내 성과를 기록하고 어필하는 연습이 필요해요.",
+      "wealth": "그래서 재물에서는 '베푸는 지출'과 '나를 위한 저축'을 분리해 보세요. 둘 다 있어야 오래 가요."
+    }
+  },
+  "BALANCED": {
+    "intro": "관계에서는 '{bond_label}', 일에서는 '{work_label}', 돈은 '{money_label}'처럼 다뤄요.",
+    "body": "이 셋은 큰 충돌 없이 균형을 이루고 있어요. 강하게 튀는 축이 없다는 건, 반대로 말하면 '스스로 선택해야 할 여지가 크다'는 뜻이에요. 지금 어떤 축에 힘을 더 실을지 스스로 정해 보세요.",
+    "angle": {
+      "love": "관계에서는 상대의 리듬을 한 번씩 물어보는 것만으로도 균형이 더 단단해져요.",
+      "career": "일에서는 '내가 하고 싶은 일'과 '지금 필요한 일'을 구분해 보세요.",
+      "wealth": "재물에서는 저축과 지출의 비율을 한 번 정리해 두면 마음이 편해져요."
+    }
+  },
+  "CLOSING_TEMPLATE": "이 셋이 한꺼번에 요구되는 순간(예: 동업 연애, 가족 사업)에는 '내가 지금 어느 축에 서 있는지' 먼저 말하는 게 오래 가는 비결이에요.",
+  "DISCLAIMER": "안내: 이 조합 해석은 결정론적 예측이 아니라, 세 영역의 성향이 만나는 지점을 코칭 관점에서 읽은 것이에요. 삶의 선택은 언제나 당신의 몫이에요.",
+  "MODE_SECTION_LABEL": {
+    "bond": "관계",
+    "work": "일",
+    "money": "돈"
+  },
+  "COLLISION_SENTENCE": "이 셋은 {a_mode_label}의 '{a_label}'{wa_gwa} {b_mode_label}의 '{b_label}' 사이에서 흔들리고 있어요.",
+  "COLLISION_2_SENTENCE": "여기에 {a_mode_label}의 '{a_label}'{wa_gwa} {b_mode_label}의 '{b_label}' 사이의 흔들림도 더해져요.",
+  "PULL_SENTENCE": "여기에 {mode_label}의 '{label}' 쪽으로 마음이 기울어요.",
+  "PULL_2_SENTENCE": "그리고 {mode_label}의 '{label}' 쪽으로도 마음이 기울어요."
+}

@@ -11,7 +11,7 @@ STEM_ATTRIBUTES = {
     "壬": (4, True),  "癸": (4, False),
 }
 
-# 지지의 본기(Main Hidden Stem) 매핑
+# 땅의 기운의 본기(Main Hidden Stem) 매핑
 BRANCH_MAIN_STEM = {
     "子": "癸", "丑": "己", "寅": "甲", "卯": "乙",
     "辰": "戊", "巳": "丙", "午": "丁", "未": "己",
@@ -34,7 +34,7 @@ TEN_GOD_CODES = {
 
 
 def get_ten_god(day_stem: str, target_stem: str) -> str:
-    """일간(day_stem)을 기준으로 대상 천간(target_stem)의 십성을 판정합니다."""
+    """일간(day_stem)을 기준으로 대상 하늘의 기운(target_stem)의 십성을 판정합니다."""
     if day_stem not in STEM_ATTRIBUTES or target_stem not in STEM_ATTRIBUTES:
         return ""
 
@@ -57,7 +57,7 @@ def get_ten_god(day_stem: str, target_stem: str) -> str:
 
 
 def get_pillar_ten_gods(day_stem: str, pillar: str) -> dict:
-    """주(Pillar, 예: '庚午')에 대해 천간과 지지의 십성 시스템 코드를 반환합니다."""
+    """주(Pillar, 예: '庚午')에 대해 하늘의 기운과 땅의 기운의 십성 시스템 코드를 반환합니다."""
     if len(pillar) != 2:
         return {"stem": "", "branch": ""}
 
@@ -112,7 +112,7 @@ _HIDDEN_WEIGHTS = [1.0, 0.3, 0.2]
 
 def analyze_element_distribution(pillars: dict) -> dict:
     """
-    4기둥(천간 4 + 지지 4) 오행 분포 분석.
+    4기둥(하늘의 기운 4 + 땅의 기운 4) 오행 분포 분석.
 
     pillars: {"year_pillar": "甲寅", "month_pillar": "丙寅",
               "day_pillar": "丙申", "hour_pillar": "庚寅"}
@@ -134,11 +134,11 @@ def analyze_element_distribution(pillars: dict) -> dict:
 
         stem_char, branch_char = pillar[0], pillar[1]
 
-        # 천간 가중치 1.0
+        # 하늘의 기운 가중치 1.0
         if stem_char in STEM_TO_ELEMENT:
             counts[STEM_TO_ELEMENT[stem_char]] += 1.0
 
-        # 지지: 지장간에 가중치 부여
+        # 땅의 기운: 지장간에 가중치 부여
         hidden = BRANCH_HIDDEN_STEMS.get(branch_char, [])
         for i, h in enumerate(hidden):
             if h in STEM_TO_ELEMENT and i < len(_HIDDEN_WEIGHTS):

@@ -41,7 +41,7 @@ def get_daily_wallpaper_url(profile: dict) -> str:
 
     # 2. 주 행동 모드 추출 (없으면 THE_GENERALIST 기본값)
     work_mode = profile.get("work_mode", "THE_GENERALIST")
-    mode_str = "generalist"  # 임시: 5장 테스트를 위해 고정
+    mode_str = MODE_MAP.get(work_mode, "generalist")
 
     # 3. 파일명 조합 (예: bg_wood_creator.webp)
     filename = f"bg_{elem_str}_{mode_str}.webp"

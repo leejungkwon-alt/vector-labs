@@ -3,8 +3,8 @@
 엔진(사주 계산) → Semantic Tags.
 
 계산 기준: 억부(抑扶) 간이판.
-- 신강/신약: 지지 정기 + 천간의 가중합 (ratio 0.6/0.4 경계)
-- 용신: 억부 + 조후 보정
+- 신강/신약: 땅의 기운 정기 + 하늘의 기운의 가중합 (ratio 0.6/0.4 경계)
+- 나에게 힘이 되는 기운: 억부 + 조후 보정
 - 학파에 따라 결과가 달라질 수 있음
 
 calculate_saju()의 결과 dict를 받아서 언어 중립 태그를 뽑는다.
@@ -110,7 +110,7 @@ def build_semantic_profile(saju_result: dict) -> dict:
     deficient_sigs = [ELEMENT_SIGNATURES[e] for e in dist["deficient"]]
     missing_sigs = [ELEMENT_SIGNATURES[e] for e in dist["missing"]]
 
-    # 3. 용신/희신/기신
+    # 3. 나에게 힘이 되는 기운/나를 도와주는 기운/조심해야 할 기운
     yongsin = derive_useful_god(pillars)
 
     # 4. 십성 → mode
@@ -157,7 +157,7 @@ def build_semantic_profile(saju_result: dict) -> dict:
             if tag:
                 special_traits.append(tag)
 
-    # 9. 대운 점수화
+    # 9. 인생의 큰 흐름 점수화
     daewoon_info = saju_result.get("daewoon_info") or {}
     raw_daewoon = daewoon_info.get("daewoon_pillars", [])
     scored_daewoon = score_daewoon(raw_daewoon, yongsin)
@@ -173,7 +173,7 @@ def build_semantic_profile(saju_result: dict) -> dict:
     ]
     daewoon_summary = summarize_daewoon_timeline(scored_daewoon)
 
-    # 10. 세운
+    # 10. 올해의 흐름
     luck_info = saju_result.get("luck_info")
     year_theme = None
     if isinstance(luck_info, dict):
@@ -250,6 +250,7 @@ def build_semantic_profile(saju_result: dict) -> dict:
         "age_band": age_band,              # ---- Step 9-A ----
         "monthly_calendar": monthly_calendar,  # ---- Step 10 ----
         "pillars": pillars,                # ---- C+ ----
+        "birth_date": saju_result.get("birth_date"),
         "birth_time_mode": saju_result.get("birth_time_mode", "exact"),
         "hour_pillar_confidence": saju_result.get("hour_pillar_confidence", "exact"),
     }

@@ -957,7 +957,7 @@ def _build_summary_cards(profile: dict, lang: str, user_id: str | None = None) -
 # ============================================================
 # FULL REPORT
 # ============================================================
-def generate_full_report(profile: dict, lang: str = "en", user_id: str | None = None) -> dict:
+def generate_full_report(profile: dict, lang: str = "en", user_id: str | None = None, today=None) -> dict:
     """모든 섹션을 조립한 완성 리포트."""
     sections = {
         "chart": write_chart_section(profile, lang),

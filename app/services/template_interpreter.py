@@ -2,7 +2,7 @@
 
 from app.services.template_data import TEMPLATE_DATABASE
 
-# 천간/지지 한자를 한글 독음으로 변환하는 매핑 딕셔너리
+# 하늘의 기운/땅의 기운 한자를 한글 독음으로 변환하는 매핑 딕셔너리
 HANJA_TO_HANGUL = {
     "甲": "갑", "乙": "을", "丙": "병", "丁": "정", "戊": "무",
     "己": "기", "庚": "경", "辛": "신", "壬": "임", "癸": "계",
@@ -113,7 +113,7 @@ def generate_template_interpretation(saju_data: dict, lang: str = "en") -> dict:
             break
     wellness_text = wellness_advice_dict.get(wellness_code, wellness_advice_dict["DEFAULT"])
 
-    # 6. 세운 및 성장 타이밍 조언 매핑
+    # 6. 올해의 흐름 및 성장 타이밍 조언 매핑
     luck_analysis_text = None
     target_year_for_title = None
     if isinstance(luck_info, dict):

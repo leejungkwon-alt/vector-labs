@@ -7,7 +7,7 @@ Semantic Layer의 태그 상수 정의.
 """
 
 # ---- 일간 → Archetype ----
-# 10천간 → 서양 컨셉 아키타입
+# 10하늘의 기운 → 서양 컨셉 아키타입
 ARCHETYPES = {
     "甲": "THE_PIONEER",     # Yang Wood
     "乙": "THE_ADAPTER",     # Yin Wood
@@ -89,7 +89,7 @@ GYEOKGUK_TAGS = {
     "기타":   "UNCLASSIFIED",
 }
 
-# ---- 대운 등급 ----
+# ---- 인생의 큰 흐름 등급 ----
 DAEWOON_GRADES = {
     "대길": "PEAK",
     "길":   "FAVORABLE",
@@ -100,7 +100,7 @@ DAEWOON_GRADES = {
 
 # ---- 관계 유형 (관계 태그) ----
 RELATION_TAGS = {
-    # 지지
+    # 땅의 기운
     "육합":   "UNION",
     "삼합":   "TRIAD_UNION",
     "반합":   "HALF_UNION",
@@ -111,7 +111,7 @@ RELATION_TAGS = {
     "자형":   "SELF_TENSION",
     "육해":   "FRICTION",
     "파":     "RUPTURE",
-    # 천간
-    "천간합": "STEM_UNION",
-    "천간충": "STEM_CLASH",
+    # 하늘의 기운
+    "하늘의 기운합": "STEM_UNION",
+    "하늘의 기운충": "STEM_CLASH",
 }

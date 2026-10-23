@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "locked_hint_extra": {
+    "love": [
+      "cross_insight",
+      "timing"
+    ],
+    "career": [
+      "cross_insight",
+      "timing"
+    ],
+    "wealth": [
+      "cross_insight",
+      "timing"
+    ]
+  },
+  "labels": {
+    "cross_insight": "크로스 인사이트",
+    "timing": "지금 이 시기",
+    "body": "본문",
+    "patterns": "패턴",
+    "compatibility": "궁합",
+    "actions": "실천 가이드",
+    "action": "실천 가이드",
+    "red_flags": "주의 신호"
+  }
+}

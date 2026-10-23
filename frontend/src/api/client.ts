@@ -32,7 +32,7 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
   };
   if (_token) headers["Authorization"] = `Bearer ${_token}`;
 
-  // 10초 타임아웃 설정
+  // 30초 타임아웃 설정
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 30000);
 

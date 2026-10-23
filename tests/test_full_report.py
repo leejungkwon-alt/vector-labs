@@ -116,7 +116,7 @@ def test_money_section_shape():
     assert money["mode"] == "THE_OPERATOR"
     assert money["headline"]
     assert money["body"]
-    assert money["action"]
+    assert money["actions"] and all(money["actions"])
 
 
 def test_work_section_shape():

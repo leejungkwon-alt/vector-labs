@@ -36,9 +36,9 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
           </Text>
 
           <TouchableOpacity style={[styles.btn, styles.appleBtn]} onPress={() => handleLogin("apple")} disabled={!!loading}>
-            {loading === "apple" ? <ActivityIndicator color="#FFF" /> : (
+            {loading === "apple" ? <ActivityIndicator color={colors.onPrimary} /> : (
               <>
-                <Ionicons name="logo-apple" size={20} color="#FFF" />
+                <Ionicons name="logo-apple" size={20} color={colors.onPrimary} />
                 <Text style={styles.btnTextWhite}>Apple로 계속하기</Text>
               </>
             )}
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   appleBtn: { backgroundColor: "#000" },
   googleBtn: { backgroundColor: "#FFF", borderWidth: 1, borderColor: "#CCC" },
   kakaoBtn: { backgroundColor: "#FEE500" },
-  btnTextWhite: { color: "#FFF", fontSize: 16, fontWeight: "600" },
+  btnTextWhite: { color: colors.onPrimary, fontSize: 16, fontWeight: "600" },
   btnTextBlack: { color: "#000", fontSize: 16, fontWeight: "600" },
   closeBtn: { marginTop: 12, padding: 8 },
   closeText: { color: colors.textMuted, fontSize: 14 },

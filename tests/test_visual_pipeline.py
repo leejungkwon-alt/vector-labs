@@ -18,12 +18,12 @@ def test_wallpaper_url_mapping():
     # 1974 케이스: 목(GROWTH) + 탐구자(THE_MYSTIC)
     profile = _profile()
     url = get_daily_wallpaper_url(profile)
-    assert "bg_wood_generalist.webp" in url
+    assert "bg_wood_mystic.webp" in url
     
     # 1990 케이스: 금(EDGE) + (work_mode에 따라 다름)
     profile_1990 = _profile("1990-05-05", "14:30:00")
     url_1990 = get_daily_wallpaper_url(profile_1990)
-    assert "bg_metal_generalist.webp" in url_1990
+    assert "bg_metal_challenger.webp" in url_1990
 
 
 def test_report_contains_wallpaper_url():

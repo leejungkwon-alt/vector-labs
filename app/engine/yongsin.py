@@ -1,10 +1,10 @@
 # app/engine/yongsin.py
 """
-용신(用神)·희신(喜神)·기신(忌神) 도출.
+나에게 힘이 되는 기운(用神)·나를 도와주는 기운(喜神)·조심해야 할 기운(忌神) 도출.
 
-억부용신 (抑扶用神) 기본:
-  신강 → 일간을 洩(식상)·耗(재성)·剋(관성)하는 오행이 용신
-  신약 → 일간을 生(인성)·助(비겁)하는 오행이 용신
+억부나에게 힘이 되는 기운 (抑扶用神) 기본:
+  신강 → 일간을 洩(식상)·耗(재성)·剋(관성)하는 오행이 나에게 힘이 되는 기운
+  신약 → 일간을 生(인성)·助(비겁)하는 오행이 나에게 힘이 되는 기운
   중화 → 조후(調候)로 보정
 
 조후법 (調候法) — 계절 기후 균형:
@@ -43,15 +43,15 @@ def _role_elements(day_elem: str) -> dict:
 
 def derive_useful_god(pillars: dict) -> dict:
     """
-    억부 + 조후 결합 용신 도출.
+    억부 + 조후 결합 나에게 힘이 되는 기운 도출.
 
     반환:
-      yongsin:        주 용신 오행
-      yongsin_role:   용신의 십성 역할 (인성/비겁/식상/재성/관성/조후)
-      huisin:         희신 오행
-      huisin_role:    희신의 십성 역할
-      gisin:          기신 오행 리스트
-      gisin_roles:    기신 십성 역할 리스트
+      yongsin:        주 나에게 힘이 되는 기운 오행
+      yongsin_role:   나에게 힘이 되는 기운의 십성 역할 (인성/비겁/식상/재성/관성/조후)
+      huisin:         나를 도와주는 기운 오행
+      huisin_role:    나를 도와주는 기운의 십성 역할
+      gisin:          조심해야 할 기운 오행 리스트
+      gisin_roles:    조심해야 할 기운 십성 역할 리스트
       reason:         판정 근거 (디버깅·콘텐츠 노출용)
       strength:       원본 신강/신약 판정 결과
       role_map:       역할→오행 매핑 (콘텐츠/디버깅 활용)
@@ -67,6 +67,7 @@ def derive_useful_god(pillars: dict) -> dict:
     month_branch = pillars["month_pillar"][1]
 
     # 오행을 직접 지정하는 조후 케이스와, 역할 이름으로 지정하는 억부 케이스 분리
+    yongsin_source = "억부"
     if verdict == "신강":
         if ratio >= 0.75:
             yongsin_role = "관성"
@@ -94,6 +95,7 @@ def derive_useful_god(pillars: dict) -> dict:
         gisin = [roles[r] for r in gisin_roles]
 
     else:  # 중화
+        yongsin_source = "조후"
         if month_branch in _SUMMER_MONTHS:
             yongsin = "水"
             huisin = "金"
@@ -120,8 +122,8 @@ def derive_useful_god(pillars: dict) -> dict:
             gisin = [roles[r] for r in gisin_roles]
             reason = f"중화 (ratio={ratio}), 계절 중간 → {yongsin_role} 위주"
 
-    # 역할 라벨 최종 확정 (조후 케이스에서 오행 → 역할 역매핑)
-    yongsin_role = role_to_elem.get(yongsin, "조후")
+    # 역할 라벨 최종 확정
+    yongsin_role = role_to_elem.get(yongsin, "조후") if yongsin_source == "억부" else "조후"
     huisin_role = role_to_elem.get(huisin, "조후")
     gisin_roles = [role_to_elem.get(e, "조후") for e in gisin]
 
@@ -133,6 +135,7 @@ def derive_useful_god(pillars: dict) -> dict:
         "gisin": gisin,
         "gisin_roles": gisin_roles,
         "reason": reason,
+        "yongsin_source": yongsin_source,
         "strength": strength,
         "role_map": roles,
     }

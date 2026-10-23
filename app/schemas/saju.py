@@ -34,7 +34,7 @@ class SajuRequest(BaseModel):
     )
     gender: str = Field(default="M", examples=["M"], description="성별 (M 또는 F)")
     target_year: Optional[int] = Field(
-        default=None, examples=[2026], description="운세 조회 대상 연도 (세운/월운)"
+        default=None, examples=[2026], description="운세 조회 대상 연도 (올해의 흐름/이번 달의 흐름)"
     )
     birth_location: Optional[str] = Field(
         default=None,
@@ -177,12 +177,12 @@ class SajuDataSchema(BaseModel):
     daewoon_info: Optional[Dict[str, Any]] = Field(
         default=None,
         description=(
-            "대운 정보. age_basis='international'이면 start_age/end_age는 만 나이. "
+            "인생의 큰 흐름 정보. age_basis='international'이면 start_age/end_age는 만 나이. "
             "daewoon_number는 소수 년수(참고), daewoon_display는 '3년 4개월' 형태."
         ),
     )
     luck_info: Optional[Dict[str, Any]] = Field(
-        None, description="세운/월운 정보 (calculate 응답의 luck_info)"
+        None, description="올해의 흐름/이번 달의 흐름 정보 (calculate 응답의 luck_info)"
     )
 
 

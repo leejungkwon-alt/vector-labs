@@ -50,6 +50,310 @@ export interface SajuResponse {
 }
 
 // ==========================================
+// 1.5. 리포트 섹션 타입 (Report Sections)
+// ==========================================
+export interface ReportSectionBase {
+  id: string;
+  title: string;
+  locked_fields?: string[];
+}
+
+export interface ChartLayer {
+  position: string;
+  label: string;
+  role: string;
+  archetype: string;
+  archetype_key: string;
+  element: string;
+  element_signature: string;
+  narrative: string;
+  is_self: boolean;
+}
+
+export interface ChartSection extends ReportSectionBase {
+  id: "chart";
+  hero?: string;
+  layers: ChartLayer[];
+  notes: string[];
+}
+
+export interface CoreSection extends ReportSectionBase {
+  id: "core";
+  archetype: {
+    key: string;
+    name: string;
+    tagline: string;
+    symbol: string;
+    color: string;
+    element: string;
+  };
+  intensity_label: string;
+  hero: string;
+  narrative: string[];
+  shadows: string[];
+  advice: string[];
+  keywords: string[];
+  personalized_insights: string[];
+}
+
+export interface EnergyBlock {
+  role: "dominant" | "deficient" | "missing";
+  signature: string;
+  name: string;
+  keywords: string[];
+  body: string;
+  organs?: {
+    zang: string;
+    fu: string;
+    openings: string[];
+    emotion: string;
+  };
+}
+
+export interface EnergySection extends ReportSectionBase {
+  id: "energy";
+  hero: string;
+  percentages: Record<string, number>;
+  raw_dominant: string[];
+  raw_missing: string[];
+  blocks: EnergyBlock[];
+}
+
+export interface LuckyCodePower {
+  signature: string;
+  element: string;
+  keywords: string[];
+  colors?: string[];
+  numbers?: number[];
+  directions?: string[];
+  activities?: string[];
+  foods?: string[];
+  practices?: string[];
+  domains?: Record<string, any>;
+}
+
+export interface LuckyCodeSection extends ReportSectionBase {
+  id: "lucky_code";
+  hero: string;
+  power: LuckyCodePower;
+  support?: {
+    signature: string;
+    element: string;
+    keywords: string[];
+    colors?: string[];
+    numbers?: number[];
+    directions?: string[];
+  };
+  watch_out?: Array<{ signature: string; name: string }>;
+}
+
+export interface HealthSection extends ReportSectionBase {
+  id: "health";
+  hero: string;
+  blocks: EnergyBlock[];
+  practices: string[];
+  disclaimer?: string;
+  framework_note?: string;
+}
+
+export interface CompatibilityAdvice {
+  best_match: string[];
+  best_reason: string;
+  challenging_match: string[];
+  challenging_reason: string;
+}
+
+export interface ModeSection extends ReportSectionBase {
+  id: "money" | "work" | "bonds";
+  mode: string;
+  headline: string;
+  body: string;
+  action?: string;
+  patterns?: string[];
+  compatibility?: CompatibilityAdvice;
+  actions?: string[];
+  red_flags?: string[];
+}
+
+// ---- P0-1: Timing block ("지금 이 시기") ----
+export interface TimingDaewoon {
+  pillar: string | null;
+  ages: [number, number] | null;
+  grade: string | null;
+  grade_label: string | null;
+  narrative: string;
+}
+
+export interface TimingYear {
+  target_year: number;
+  pillar: string | null;
+  ten_god: string;
+  ten_god_label: string;
+  narrative: string;
+}
+
+export interface TimingMonth {
+  approx_solar_month: string;
+  month: number;
+  pillar: string;
+  grade: string;
+  grade_label: string;
+  narrative: string;
+}
+
+export interface TimingBlock {
+  daewoon: TimingDaewoon;
+  year: TimingYear | null;
+  opportunity_month: TimingMonth | null;
+  caution_month: TimingMonth | null;
+  disclaimer: string;
+}
+
+// ---- P0-2: Cross-insight block ("당신의 숨겨진 세 가지 얼굴") ----
+export interface CrossInsightBlock {
+  kind: "tension" | "balanced";
+  intro: string;
+  tension_phrases: string[];
+  tension_text: string;
+  angle: string;
+  closing: string;
+  disclaimer: string;
+}
+
+export interface PremiumSection extends ReportSectionBase {
+  id: "love" | "career" | "wealth";
+  mode: string;
+  headline: string;
+  body: string;
+  patterns?: string[];
+  compatibility?: CompatibilityAdvice;
+  actions?: string[];
+  red_flags?: string[];
+  cross_insight?: CrossInsightBlock;
+  timing?: TimingBlock;
+}
+
+export interface TimelineItem {
+  index: number;
+  ages: [number, number];
+  pillar: string;
+  score: number;
+  grade: string;
+  blurb?: string;
+  is_current?: boolean;
+}
+
+export interface TimelineSection extends ReportSectionBase {
+  id: "timeline";
+  hero: string;
+  items: TimelineItem[];
+}
+
+export interface MonthlyItem {
+  month_index: number;
+  pillar: string;
+  branch: string;
+  approx_solar_month: string;
+  ten_god: string;
+  score: number;
+  grade: string;
+  grade_label?: string;
+  grade_context?: string;
+  name: string;
+  headline: string;
+  body?: string;
+  watch_for?: string;
+  lean_into?: string;
+}
+
+export interface MonthlySection extends ReportSectionBase {
+  id: "monthly";
+  hero: string;
+  target_year: number | string;
+  items: MonthlyItem[];
+}
+
+export interface SinsalItem {
+  key: string;
+  name: string;
+  name_traditional: string;
+  headline: string;
+  body: string;
+  advice: string;
+  position: string;
+  position_label: string;
+  position_role?: string;
+  position_note?: string;
+}
+
+export interface SinsalSection extends ReportSectionBase {
+  id: "sinsal";
+  hero: string;
+  items: SinsalItem[];
+}
+
+export interface AgeBandSection extends ReportSectionBase {
+  id: "age_band";
+  key: string;
+  age: number;
+  target_year: number;
+  label: string;
+  headline: string;
+  body: string;
+  advice: string[];
+}
+
+export interface YearSection extends ReportSectionBase {
+  id: "year";
+  target_year: number;
+  pillar: string;
+  ten_god: string;
+  name: string;
+  headline: string;
+  body?: string;
+  watch_for?: string;
+  lean_into?: string;
+  life_stage_context?: {
+    key: string;
+    label: string;
+    headline: string;
+  } | null;
+}
+
+export type ReportSection =
+  | ChartSection
+  | CoreSection
+  | EnergySection
+  | LuckyCodeSection
+  | HealthSection
+  | ModeSection
+  | PremiumSection
+  | TimelineSection
+  | MonthlySection
+  | SinsalSection
+  | AgeBandSection
+  | YearSection;
+
+export type ReportSections = Partial<{
+  chart: ChartSection;
+  core: CoreSection;
+  energy: EnergySection;
+  lucky_code: LuckyCodeSection;
+  health: HealthSection;
+  money: ModeSection;
+  work: ModeSection;
+  bonds: ModeSection;
+  love: PremiumSection;
+  career: PremiumSection;
+  wealth: PremiumSection;
+  timeline: TimelineSection;
+  monthly: MonthlySection;
+  sinsal: SinsalSection;
+  age_band: AgeBandSection;
+  year: YearSection;
+}>;
+
+// ==========================================
 // 2. 리포트 (Report)
 // ==========================================
 export interface ReportRequest extends SajuRequest {
@@ -85,7 +389,7 @@ export interface ReportResponse {
       headline: string;
       body: string;
     }>;
-    sections: Record<string, any>; // 섹션별 상세 구조 (유연성 확보)
+    sections: ReportSections; // 섹션별 상세 구조 (유연성 확보)
     disclaimer: string;
     crisis_resources: {
       hotline: string;
@@ -127,10 +431,17 @@ export interface DailyResponse {
 // ==========================================
 // 4. 궁합 (Compatibility)
 // ==========================================
+export type CompatibilityRelationshipType =
+  | "romance"
+  | "business"
+  | "friend"
+  | "family";
+
 export interface CompatibilityRequest {
   person_a: SajuRequest;
   person_b: SajuRequest;
   lang?: LanguageCode;
+  relationship_type?: CompatibilityRelationshipType;
 }
 
 export interface CompatibilityResponse {

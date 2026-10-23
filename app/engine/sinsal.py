@@ -33,7 +33,7 @@ SAMHAP_GROUPS = {
 
 
 def _samhap_group(branch: str) -> str:
-    """지지가 속한 삼합국 문자열 반환. 없으면 빈 문자열."""
+    """땅의 기운가 속한 삼합국 문자열 반환. 없으면 빈 문자열."""
     if not branch:                     # ← 빈 문자열 / None 방어
         return ""
     for group in SAMHAP_GROUPS:
@@ -42,7 +42,7 @@ def _samhap_group(branch: str) -> str:
     return ""
 
 
-# ---- 삼합국별 신살 대상 지지 ----
+# ---- 삼합국별 신살 대상 땅의 기운 ----
 DOHWA = {"寅午戌": "卯", "申子辰": "酉", "巳酉丑": "午", "亥卯未": "子"}
 YEOKMA = {"寅午戌": "申", "申子辰": "寅", "巳酉丑": "亥", "亥卯未": "巳"}
 HWAGAE = {"寅午戌": "戌", "申子辰": "辰", "巳酉丑": "丑", "亥卯未": "未"}

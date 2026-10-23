@@ -75,7 +75,7 @@ export default function SettingsScreen() {
             구독하면 7일치 데일리 에너지와 궁합 분석을 모두 이용할 수 있습니다.
           </Text>
           <TouchableOpacity style={{ backgroundColor: colors.primary, padding: 14, borderRadius: radius.md, alignItems: "center" }} onPress={handleUpgrade}>
-            <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>프리미엄 구독하기</Text>
+            <Text style={{ color: colors.onPrimary, fontSize: 16, fontWeight: "700" }}>프리미엄 구독하기</Text>
           </TouchableOpacity>
         </View>
       )}

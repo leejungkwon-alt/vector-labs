@@ -150,7 +150,7 @@ def test_ko_bonds_content_is_korean():
     report = _ko_report_1974()
     bonds = report["sections"]["bonds"]
     assert bonds["title"] == "인연과 관계"
-    assert any("\uac00" <= ch <= "\ud7a3" for ch in bonds["action"])
+    assert any("\uac00" <= ch <= "\ud7a3" for ch in " ".join(bonds["actions"]))
 
 
 def test_ko_timeline_blurb_is_korean():
@@ -176,7 +176,7 @@ def test_ko_lucky_code_is_korean():
     assert lc["title"] == "당신에게 필요한 기운"
     # 1974 용신 土 → GROUND
     assert lc["power"]["signature"] == "GROUND"
-    assert "토" in lc["power"]["element"]
+    assert "대지" in lc["power"]["element"] or "토" in lc["power"]["element"]
     assert any("\uac00" <= ch <= "\ud7a3" for ch in lc["power"]["practices"][0])
 
 

@@ -1,15 +1,15 @@
 # app/engine/daewoon_score.py
 """
-대운 점수화.
+인생의 큰 흐름 점수화.
 
-각 대운의 천간과 지지(본기) 오행이
-용신/희신이면 +, 기신이면 - 로 점수를 매긴다.
+각 인생의 큰 흐름의 하늘의 기운과 땅의 기운(본기) 오행이
+나에게 힘이 되는 기운/나를 도와주는 기운이면 +, 조심해야 할 기운이면 - 로 점수를 매긴다.
 
 가중치:
-  천간: 1.0
-  지지: 2.0 (지지가 대운에서 더 강한 영향)
+  하늘의 기운: 1.0
+  땅의 기운: 2.0 (땅의 기운가 인생의 큰 흐름에서 더 강한 영향)
 
-점수 범위: -3.0 (전부 기신) ~ +3.0 (전부 용신)
+점수 범위: -3.0 (전부 조심해야 할 기운) ~ +3.0 (전부 나에게 힘이 되는 기운)
 """
 from app.engine.elements import (
     STEM_TO_ELEMENT,
@@ -43,7 +43,7 @@ def _grade(score: float) -> dict:
 
 def score_daewoon(daewoon_pillars: list, yongsin_info: dict) -> list:
     """
-    대운 리스트에 점수와 등급을 부여.
+    인생의 큰 흐름 리스트에 점수와 등급을 부여.
 
     Args:
         daewoon_pillars: calculate_daewoon()의 결과에서 온 리스트.
@@ -54,9 +54,9 @@ def score_daewoon(daewoon_pillars: list, yongsin_info: dict) -> list:
         각 항목에 아래 필드가 추가된 리스트:
           score:      -3.0 ~ +3.0 (float)
           grade:      {"ko": ..., "en": ...}
-          stem_elem:  천간 오행
-          branch_elem: 지지 본기 오행
-          favorable:  이 대운이 우호적인가
+          stem_elem:  하늘의 기운 오행
+          branch_elem: 땅의 기운 본기 오행
+          favorable:  이 인생의 큰 흐름이 우호적인가
     """
     scored = []
 
@@ -86,7 +86,7 @@ def score_daewoon(daewoon_pillars: list, yongsin_info: dict) -> list:
 
 
 def summarize_daewoon_timeline(scored: list) -> dict:
-    """대운 점수 리스트를 요약. 최고/최저 대운, 전체 흐름."""
+    """인생의 큰 흐름 점수 리스트를 요약. 최고/최저 인생의 큰 흐름, 전체 흐름."""
     if not scored:
         return {
             "best": None,

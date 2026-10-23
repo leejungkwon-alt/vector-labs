@@ -1,6 +1,6 @@
 # app/services/content/en/lucky_code.py
 """
-EN Lucky Code pack — 용신 처방 + 삶의 영역 확장.
+EN Lucky Code pack — 나에게 힘이 되는 기운 처방 + 삶의 영역 확장.
 """
 
 LUCKY_CODE_CONTENT = {

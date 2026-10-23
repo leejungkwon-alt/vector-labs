@@ -1,6 +1,6 @@
 # app/services/content/en/year.py
 """
-세운(年運) 테마.
+올해의 흐름(年運) 테마.
 
 10 십성 × 1 테마.
 """

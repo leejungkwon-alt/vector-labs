@@ -8,12 +8,12 @@
 - 중화: 균형 → 조후(계절 기후)로 보정
 
 판정 방식:
-  지지의 정기(正氣)만 사용한 단순 버전. 위치별 가중치:
+  땅의 기운의 정기(正氣)만 사용한 단순 버전. 위치별 가중치:
     월지 3.0 (계절 = 가장 강한 영향)
     일지 2.0 (배우자궁, 일간과 가장 가까움)
     시지 1.5
     년지 1.0
-  천간(년·월·시)은 각 1.0
+  하늘의 기운(년·월·시)은 각 1.0
   일간 자신은 계산에서 제외
 """
 from app.engine.elements import STEM_TO_ELEMENT, BRANCH_HIDDEN_STEMS, ELEMENT_NAMES
@@ -59,7 +59,7 @@ def assess_day_master_strength(pillars: dict) -> dict:
     support = 0.0
     oppose = 0.0
 
-    # 지지의 정기(첫 번째 지장간)로 판정
+    # 땅의 기운의 정기(첫 번째 지장간)로 판정
     for pos, weight in _BRANCH_WEIGHTS.items():
         pillar = pillars.get(pos, "")
         if not isinstance(pillar, str) or len(pillar) != 2:
@@ -75,7 +75,7 @@ def assess_day_master_strength(pillars: dict) -> dict:
         else:
             oppose += weight
 
-    # 천간 (일간 제외) 각 1.0
+    # 하늘의 기운 (일간 제외) 각 1.0
     for pos in ("year_pillar", "month_pillar", "hour_pillar"):
         pillar = pillars.get(pos, "")
         if not isinstance(pillar, str) or len(pillar) != 2:

@@ -1,4 +1,4 @@
-"""
+﻿"""
 티어별 섹션 게이팅 — Teaser 방식 (Step 2).
 
 설계 원칙:
@@ -10,7 +10,7 @@
 content_writer.py 는 손대지 않는다.
 
 티어
-  preview      : 게이팅 없음 (CLI, 하위호환, 인증 없음)
+  preview      : Step 4-A 이전 ungated. 현재는 free와 동일하게 게이팅 대상.
   free         : 모든 섹션 티저만 공개 + locked_fields 세팅
   subscription : 전체
   premium      : 전체 (AI Q&A 는 별도 크레딧)
@@ -98,7 +98,7 @@ FREE_SECTION_RULES = {
         "keep": {"id", "title", "mode", "headline"},
         "locked_hint": ["body", "patterns", "compatibility", "actions", "red_flags"],
     },
-    # ---- Timeline: 첫 3개 대운 ----
+    # ---- Timeline: 첫 3개 인생의 큰 흐름 ----
     "timeline": {
         "keep": {"id", "title", "hero"},
         "truncate": {"items": 3},
@@ -136,6 +136,21 @@ FREE_SECTION_RULES = {
         "locked_hint": ["items"],
     },
 }
+
+# P0-3: extend free locked_hint with premium blocks (upsell)
+_P0_3_LOCKED_EXTRA = {
+    "love":   ("cross_insight", "timing"),
+    "career": ("cross_insight", "timing"),
+    "wealth": ("cross_insight", "timing"),
+}
+for _sid, _extras in _P0_3_LOCKED_EXTRA.items():
+    _rule = FREE_SECTION_RULES.get(_sid)
+    if not _rule:
+        continue
+    _hint = _rule.setdefault("locked_hint", [])
+    for _f in _extras:
+        if _f not in _hint:
+            _hint.append(_f)
 
 UNGATED_TIERS = {"subscription", "premium", "unlimited"}
 

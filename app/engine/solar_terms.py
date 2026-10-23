@@ -47,7 +47,7 @@ def determine_solar_year_and_month(utc_dt: datetime):
 
 
 def get_adjacent_terms(utc_dt: datetime):
-    """임의의 UTC 시각을 기준으로 직전·직후 절기를 반환. 대운수 계산에 사용."""
+    """임의의 UTC 시각을 기준으로 직전·직후 절기를 반환. 인생의 큰 흐름수 계산에 사용."""
     if utc_dt.tzinfo is None:
         raise ValueError("utc_dt must be timezone-aware (UTC).")
     utc_dt = utc_dt.astimezone(timezone.utc)

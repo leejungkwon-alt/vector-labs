@@ -1,38 +1,30 @@
-﻿import { useEffect, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+﻿import { useQuery } from "@tanstack/react-query";
 import { View, Text, ScrollView, ActivityIndicator, StyleSheet, TouchableOpacity } from "react-native";
 import { router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { api, ApiError } from "@/api/client";
-import { colors, spacing, radius } from "@/theme";
+import { colors, spacing, radius, gradeColors } from "@/theme";
 import { useAuthStore } from "@/store/authStore";
+import { useProfileStore } from "@/store/profileStore";
 import type { DailyResponse } from "../../types";
 
 export default function DailyScreen() {
-  const [profile, setProfile] = useState<any>(null);
-  const [profileLoaded, setProfileLoaded] = useState(false);
-  
+  const profile = useProfileStore((s) => s.profile);
+  const profileReady = useProfileStore((s) => s.ready);
+
   // 👇 유저 정보(토큰 상태)를 가져옵니다.
   const user = useAuthStore((s) => s.user);
   const ready = useAuthStore((s) => s.ready);
 
-  useEffect(() => {
-    AsyncStorage.getItem("saju_profile").then((data) => {
-      if (data) setProfile(JSON.parse(data));
-      setProfileLoaded(true);
-    });
-  }, []);
-
-  const { data, isLoading, error } = useQuery({
+const { data, isLoading, error } = useQuery({
     queryKey: ["daily", profile, user?.id], // 👈 user.id를 키에 추가하여 로그인 상태 변경 시 재호출
     // user와 ready 상태가 확실할 때만 API 호출
     queryFn: () => api.daily({ ...profile, days: 7, lang: "ko" }),
-    enabled: !!profile && profileLoaded && !!user && ready, 
+    enabled: !!profile && profileReady && !!user && ready, 
     retry: false,
   });
 
-  if (!profileLoaded || !ready) {
+  if (!profileReady || !ready) {
     return (
       <View style={styles.center}>
         <ActivityIndicator size="large" color={colors.primary} />
@@ -88,15 +80,7 @@ export default function DailyScreen() {
   const dailyData = data?.daily as DailyResponse["daily"];
   if (!dailyData || !dailyData.items) return null;
 
-  const gradeColors: Record<string, string> = {
-    PEAK: "#2F7A3F",
-    FAVORABLE: "#5FAF7A",
-    NEUTRAL: "#7A6A5C",
-    CAUTION: "#D4A017",
-    CHALLENGING: "#C2461F",
-  };
-
-  return (
+return (
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 100 }}>
       <View style={styles.heroBox}>
         <Text style={styles.heroTitle}>{dailyData.hero}</Text>
@@ -154,6 +138,6 @@ const styles = StyleSheet.create({
   headline: { fontSize: 18, fontWeight: "700", color: colors.text, marginBottom: 8 },
   body: { fontSize: 15, color: colors.text, lineHeight: 22, marginBottom: spacing.md },
   
-  tipBox: { backgroundColor: "#FDF6EE", padding: spacing.sm, borderRadius: radius.sm, gap: 4 },
+  tipBox: { backgroundColor: colors.bg, padding: spacing.sm, borderRadius: radius.sm, gap: 4 },
   tipText: { fontSize: 13, color: colors.textMuted },
 });
