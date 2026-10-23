@@ -27,3 +27,18 @@ node_modules/
 
 # 중요: requirements.txt는 반드시 포함!
 !requirements.txt
+
+# 비밀/덤프/스냅샷 (이미지에 절대 포함되면 안 됨)
+token.txt
+*.jwt
+*.bak
+*.bak.*
+*.bak_*
+report_*.json
+review.txt
+saju_complete_code*.txt
+saju_p0_patch.diff
+all_code.txt
+HANDOFF_*.txt
+diag*.txt
+p0/

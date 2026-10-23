@@ -1,5 +1,6 @@
 version: '3.8'
 
+# 로컬 개발용. 운영(Cloud Run)은 SAJU_ENV=production + SAJU_DATABASE_URL 등을 서비스 환경변수/Secret Manager 로 주입.
 services:
   saju-api:
     build: .
@@ -7,10 +8,22 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - SAJU_ENV=${SAJU_ENV:-development}
+      - SAJU_JWT_SECRET=${SAJU_JWT_SECRET:-}
+      - SAJU_DATABASE_URL=${SAJU_DATABASE_URL:-}
+      - SAJU_AUTH_DB_PATH=${SAJU_AUTH_DB_PATH:-/app/data/auth.db}
+      - SAJU_CORS_ORIGINS=${SAJU_CORS_ORIGINS:-*}
+      - SAJU_CRON_SECRET=${SAJU_CRON_SECRET:-}
+      - SAJU_TELEGRAM_BOT_TOKEN=${SAJU_TELEGRAM_BOT_TOKEN:-}
+      - SAJU_ASSET_BASE_URL=${SAJU_ASSET_BASE_URL:-}
+    volumes:
+      - saju-data:/app/data
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/')"]
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
       interval: 30s
       timeout: 10s
       retries: 3
+
+volumes:
+  saju-data:

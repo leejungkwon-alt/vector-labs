@@ -73,6 +73,11 @@ STD_EXCLUDED_FILE_NAMES = {
     "tsconfig.tsbuildinfo",
     "Thumbs.db",
     ".DS_Store",
+    # secrets / generated snapshots
+    "token.txt",
+    "review.txt",
+    "all_code.txt",
+    "saju_p0_patch.diff",
     # avoid dumping our own previous output recursively
     DEFAULT_OUTPUT_FILENAME,
 }
@@ -126,8 +131,22 @@ def _dir_should_prune(dir_path: Path, root: Path) -> bool:
     return False
 
 
+def _is_backup_or_secret_name(name: str) -> bool:
+    """*.bak, *.bak_xxx, *.bak.xxx, *.jwt, report_*.json, saju_complete_code*.txt"""
+    low = name.lower()
+    if ".bak" in low or low.endswith(".jwt"):
+        return True
+    if low.startswith("report_") and low.endswith(".json"):
+        return True
+    if low.startswith("saju_complete_code") and low.endswith(".txt"):
+        return True
+    return False
+
+
 def _file_should_skip(path: Path) -> bool:
     name = path.name
+    if _is_backup_or_secret_name(name):
+        return True
     if name in STD_EXCLUDED_FILE_NAMES:
         return True
     if _is_env_secret(name):

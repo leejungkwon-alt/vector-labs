@@ -20,5 +20,7 @@ pytest-xdist>=3.5.0
 # needed for Asia/Seoul on containers/Windows
 tzdata>=2024.1
 
-jinja2>=3.1.4
-playwright>=1.47.0
+
+# ---- Database (PostgreSQL backend, used when SAJU_DATABASE_URL is set) ----
+psycopg[binary]>=3.2.0,<4.0.0
+psycopg_pool>=3.2.0,<4.0.0
