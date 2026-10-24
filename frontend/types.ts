@@ -94,6 +94,9 @@ export interface CoreSection extends ReportSectionBase {
   advice: string[];
   keywords: string[];
   personalized_insights: string[];
+  pillar?: string | null;
+  pillar_name?: string;
+  pillar_name_traditional?: string;
 }
 
 export interface EnergyBlock {
@@ -237,6 +240,8 @@ export interface TimelineItem {
   index: number;
   ages: [number, number];
   pillar: string;
+  pillar_name?: string;
+  pillar_name_traditional?: string;
   score: number;
   grade: string;
   blurb?: string;
@@ -252,6 +257,8 @@ export interface TimelineSection extends ReportSectionBase {
 export interface MonthlyItem {
   month_index: number;
   pillar: string;
+  pillar_name?: string;
+  pillar_name_traditional?: string;
   branch: string;
   approx_solar_month: string;
   ten_god: string;
@@ -307,6 +314,8 @@ export interface YearSection extends ReportSectionBase {
   id: "year";
   target_year: number;
   pillar: string;
+  pillar_name?: string;
+  pillar_name_traditional?: string;
   ten_god: string;
   name: string;
   headline: string;

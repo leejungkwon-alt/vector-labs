@@ -29,7 +29,7 @@ def test_ko_cover():
     report = _ko_report_1974()
     cover = report["cover"]
     assert cover["archetype"]["key"] == "THE_RADIATOR"
-    assert cover["archetype"]["name"] == "태양"
+    assert cover["archetype"]["name"] == "바위 위의 태양"  # 丙申
     assert cover["intensity_label"] == "자기충전형"
 
 
@@ -38,7 +38,7 @@ def test_ko_core():
     core = report["sections"]["core"]
 
     assert core["title"] == "당신의 본질"
-    assert core["archetype"]["name"] == "태양"
+    assert core["archetype"]["name"] == "바위 위의 태양"  # 丙申
     assert len(core["narrative"]) >= 3
     assert len(core["advice"]) >= 3
 
@@ -102,7 +102,7 @@ def test_ko_1990_blade_has_content():
     core = report["sections"]["core"]
 
     assert core["archetype"]["key"] == "THE_BLADE"
-    assert core["archetype"]["name"] == "칼날"
+    assert core["archetype"]["name"] == "제련로의 검"  # 1990 = 庚午
     assert core["hero"] != "아직 채워지지 않은 흐름입니다."
     assert len(core["narrative"]) >= 3
 
@@ -122,7 +122,7 @@ def test_en_report_still_works():
     profile = build_semantic_profile(result)
     report = generate_full_report(profile, lang="en")
 
-    assert report["cover"]["archetype"]["name"] == "The Radiator"
+    assert report["cover"]["archetype"]["name"] == "Sun Above Stone"  # 1974 = 丙申
     assert report["cover"]["intensity_label"] == "Self-Sourced"
     assert "Note:" in report["disclaimer"]
 

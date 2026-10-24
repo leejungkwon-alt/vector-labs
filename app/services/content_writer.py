@@ -41,34 +41,71 @@ def _select_variant_content(
 def write_core_section(profile: dict, lang: str = "en") -> dict:
     pack = load_pack(lang, "core")
     archetypes = pack.get("ARCHETYPE_CONTENT", {})
+    intensity_overlays = pack.get("INTENSITY_OVERLAY", {})
     default_intensity = pack.get("DEFAULT_INTENSITY", {})
 
     arch_key = profile["archetype"]["key"]
     intensity_key = profile["archetype"]["intensity"]
+    day_pillar = (profile.get("pillars") or {}).get("day_pillar")
 
     arch = archetypes.get(arch_key)
     if not arch:
         raise KeyError(f"Archetype content not found: {arch_key}")
 
-    intensities = arch.get("intensities") or {}
-    content = intensities.get(intensity_key, default_intensity)
+    # 1) 일주(60) 콘텐츠 우선. 없거나 stub(빈 필드)이면 10×3 fallback.
+    content = None
+    content_source = "intensity_fallback"
+
+    if isinstance(day_pillar, str) and len(day_pillar) == 2:
+        try:
+            candidate = load_pack(lang, f"core_pillars/{day_pillar}")
+        except KeyError:
+            candidate = None
+        if candidate and (candidate.get("hero") or candidate.get("narrative")):
+            content = candidate
+            content_source = "pillar"
+
+    if content is None:
+        intensities = arch.get("intensities") or {}
+        content = intensities.get(intensity_key, default_intensity)
+
+    display_name = content.get("name") if content_source == "pillar" else arch["name"]
+
+    # 2) intensity overlay(3개, 모든 일주 공통) 병합
+    overlay = intensity_overlays.get(intensity_key, {})
+
+    hero = content.get("hero", "")
+
+    narrative = list(content.get("narrative", []))
+    voice = overlay.get("voice")
+    if voice:
+        narrative = [voice] + narrative
+
+    advice = list(content.get("advice", []))
+    for extra in overlay.get("advice_addon", []):
+        if extra not in advice:
+            advice.append(extra)
 
     return {
         "id": "core",
         "title": _title(lang, "core"),
         "archetype": {
             "key": arch_key,
-            "name": arch["name"],
-            "tagline": arch["tagline"],
+            "name": display_name,
+            "tagline": content.get("tagline") or arch["tagline"],
             "symbol": arch["symbol"],
             "color": arch["color"],
             "element": arch["element"],
         },
+        "pillar": day_pillar,
+        "pillar_name": _get_pillar_display(day_pillar, lang)["name"],
+        "pillar_name_traditional": _get_pillar_display(day_pillar, lang)["traditional"],
+        "content_source": content_source,
         "intensity_label": _intensity_label(lang, intensity_key),
-        "hero": content["hero"],
-        "narrative": content.get("narrative", []),
+        "hero": hero,
+        "narrative": narrative,
         "shadows": content.get("shadows", []),
-        "advice": content.get("advice", []),
+        "advice": advice,
         "keywords": content.get("keywords", []),
         "personalized_insights": generate_personalized_notes(profile, lang),
     }
@@ -414,6 +451,8 @@ def write_year_section(profile: dict, lang: str = "en", user_id: str | None = No
         "title": _title(lang, "year"),
         "target_year": year_theme.get("target_year"),
         "pillar": year_theme.get("pillar"),
+        **_get_pillar_display(year_theme.get("pillar"), lang),
+        "pillar_name": _get_pillar_display(year_theme.get("pillar"), lang)["name"],
         "ten_god": ten_god,
         "name": theme["name"],
         "headline": theme["headline"],
@@ -462,6 +501,8 @@ def write_monthly_section(profile: dict, lang: str = "en", user_id: str | None =
         items.append({
             "month_index": m["month_index"],
             "pillar": m["pillar"],
+            "pillar_name": _get_pillar_display(m["pillar"], lang)["name"],
+            "pillar_name_traditional": _get_pillar_display(m["pillar"], lang)["traditional"],
             "branch": m["branch"],
             "approx_solar_month": m["approx_solar_month"],
             "ten_god": tg,
@@ -544,13 +585,23 @@ def write_chart_section(profile: dict, lang: str = "en") -> dict:
         arch_meta = arch_content.get(arch_key, {})
         meta = layer_meta.get(pos, {})
         arch_name = arch_meta.get("name", arch_key)
-        narrative = pos_templates.get(pos, "{archetype}").format(archetype=arch_name)
+        
+        specific_name = arch_name
+        if len(pillar) == 2:
+            try:
+                p_data = load_pack(lang, f"core_pillars/{pillar}")
+                if p_data and p_data.get("name"):
+                    specific_name = p_data["name"]
+            except KeyError:
+                pass
+
+        narrative = pos_templates.get(pos, "{archetype}").format(archetype=specific_name)
 
         layers.append({
             "position": pos,
             "label": meta.get("label", pos),
             "role": meta.get("role", ""),
-            "archetype": arch_name,
+            "archetype": specific_name,
             "archetype_key": arch_key,
             "element": elem_display.get(elem_sig, elem_sig),
             "element_signature": elem_sig,
@@ -744,6 +795,8 @@ def write_timeline_section(profile: dict, lang: str = "en") -> dict:
             "index": d["index"],
             "ages": [start, end],
             "pillar": d["pillar"],
+            "pillar_name": _get_pillar_display(d["pillar"], lang)["name"],
+            "pillar_name_traditional": _get_pillar_display(d["pillar"], lang)["traditional"],
             "score": d["score"],
             "grade": d["grade"],
             "blurb": blurbs.get(d["grade"], ""),
@@ -1034,3 +1087,22 @@ def _intensity_label(lang: str, intensity_key: str) -> str:
     except KeyError:
         labels = {}
     return labels.get(intensity_key, intensity_key)
+
+
+# ============================================================
+# PILLAR NAME HELPER (Hanzi → 친근한 이름)
+# ============================================================
+def _get_pillar_display(pillar: str, lang: str) -> dict:
+    """{'name': ..., 'traditional': ...} 반환. 없으면 빈 dict."""
+    if not isinstance(pillar, str) or len(pillar) != 2:
+        return {"name": "", "traditional": ""}
+    try:
+        names = load_pack(lang, "pillar_names")
+    except KeyError:
+        return {"name": pillar, "traditional": pillar}
+    entry = names.get(pillar) or {}
+    return {
+        "name": entry.get("name", pillar),
+        "traditional": entry.get("traditional", pillar),
+    }
+

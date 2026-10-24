@@ -39,7 +39,7 @@ def test_full_report_cover():
 
     # cover.archetype 안에 모든 정보가 있음
     assert cover["archetype"]["key"] == "THE_RADIATOR"
-    assert cover["archetype"]["name"] == "The Radiator"
+    assert cover["archetype"]["name"] == "Sun Above Stone"  # 1974 = 丙申
     assert cover["archetype"]["color"] == "#E85D2F"
     assert cover["archetype"]["symbol"] == "☀"
     assert cover["archetype"]["tagline"] == "You warm rooms by existing in them."

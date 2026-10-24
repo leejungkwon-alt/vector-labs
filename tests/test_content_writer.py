@@ -38,7 +38,7 @@ def test_core_section_radiator_self_sourced():
     section = write_core_section(profile, lang="en")
 
     assert section["archetype"]["key"] == "THE_RADIATOR"
-    assert section["archetype"]["name"] == "The Radiator"
+    assert section["archetype"]["name"] == "Sun Above Stone"  # 1974 = 丙申
     assert section["intensity_label"] == "Self-Sourced"
     assert len(section["hero"]) > 0
     assert len(section["narrative"]) >= 3

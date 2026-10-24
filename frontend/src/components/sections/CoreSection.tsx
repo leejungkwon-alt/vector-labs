@@ -7,6 +7,11 @@ import type { CoreSection } from "../../../types";
 export function CoreSectionView({ section }: { section: CoreSection }) {
   return (
     <View>
+      {section.pillar_name && (
+        <Text style={[ss.metaText, { marginBottom: 8 }]}>
+          {section.pillar_name}
+        </Text>
+      )}
       <Text style={ss.coreHero}>{section.hero}</Text>
 
       {(section.narrative || []).map((p, i) => (

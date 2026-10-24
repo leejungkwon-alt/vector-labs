@@ -1,0 +1,242 @@
+{
+  "甲子": {
+    "name": "나무 위의 달빛",
+    "traditional": "갑자(甲子)"
+  },
+  "乙丑": {
+    "name": "얼어붙은 땅의 덩굴",
+    "traditional": "을축(乙丑)"
+  },
+  "丙寅": {
+    "name": "숲의 불꽃",
+    "traditional": "병인(丙寅)"
+  },
+  "丁卯": {
+    "name": "봄나무 위의 촛불",
+    "traditional": "정묘(丁卯)"
+  },
+  "戊辰": {
+    "name": "무진",
+    "traditional": "무진(戊辰)"
+  },
+  "己巳": {
+    "name": "온기를 품은 정원",
+    "traditional": "기사(己巳)"
+  },
+  "庚午": {
+    "name": "제련로의 검",
+    "traditional": "경오(庚午)"
+  },
+  "辛未": {
+    "name": "마른 화분 속 보석",
+    "traditional": "신미(辛未)"
+  },
+  "壬申": {
+    "name": "바위를 뚫는 물",
+    "traditional": "임신(壬申)"
+  },
+  "癸酉": {
+    "name": "달빛 비친 우물",
+    "traditional": "계유(癸酉)"
+  },
+  "甲戌": {
+    "name": "마른 땅의 나무",
+    "traditional": "갑술(甲戌)"
+  },
+  "乙亥": {
+    "name": "물가의 버들",
+    "traditional": "을해(乙亥)"
+  },
+  "丙子": {
+    "name": "호수 위의 등불",
+    "traditional": "병자(丙子)"
+  },
+  "丁丑": {
+    "name": "비옥한 흙의 촛불",
+    "traditional": "정축(丁丑)"
+  },
+  "戊寅": {
+    "name": "무인",
+    "traditional": "무인(戊寅)"
+  },
+  "己卯": {
+    "name": "봄을 여는 밭",
+    "traditional": "기묘(己卯)"
+  },
+  "庚辰": {
+    "name": "용의 동굴 속 검",
+    "traditional": "경진(庚辰)"
+  },
+  "辛巳": {
+    "name": "열기 속의 보석",
+    "traditional": "신사(辛巳)"
+  },
+  "壬午": {
+    "name": "불을 품은 바다",
+    "traditional": "임오(壬午)"
+  },
+  "癸未": {
+    "name": "마른 땅의 이슬",
+    "traditional": "계미(癸未)"
+  },
+  "甲申": {
+    "name": "바위에 뿌리내린 나무",
+    "traditional": "갑신(甲申)"
+  },
+  "乙酉": {
+    "name": "단정한 정원의 꽃",
+    "traditional": "을유(乙酉)"
+  },
+  "丙戌": {
+    "name": "언덕 위의 화톳불",
+    "traditional": "병술(丙戌)"
+  },
+  "丁亥": {
+    "name": "수면 위의 촛불",
+    "traditional": "정해(丁亥)"
+  },
+  "戊子": {
+    "name": "무자",
+    "traditional": "무자(戊子)"
+  },
+  "己丑": {
+    "name": "얼어붙은 밭",
+    "traditional": "기축(己丑)"
+  },
+  "庚寅": {
+    "name": "숲을 여는 검",
+    "traditional": "경인(庚寅)"
+  },
+  "辛卯": {
+    "name": "봄 정원의 옥",
+    "traditional": "신묘(辛卯)"
+  },
+  "壬辰": {
+    "name": "용이 사는 바다",
+    "traditional": "임진(壬辰)"
+  },
+  "癸巳": {
+    "name": "안개 낀 호수",
+    "traditional": "계사(癸巳)"
+  },
+  "甲午": {
+    "name": "불을 뿜는 나무",
+    "traditional": "갑오(甲午)"
+  },
+  "乙未": {
+    "name": "마른 초원의 넝쿨",
+    "traditional": "을미(乙未)"
+  },
+  "丙申": {
+    "name": "바위 위의 태양",
+    "traditional": "병신(丙申)"
+  },
+  "丁酉": {
+    "name": "금속 위의 촛불",
+    "traditional": "정유(丁酉)"
+  },
+  "戊戌": {
+    "name": "무술",
+    "traditional": "무술(戊戌)"
+  },
+  "己亥": {
+    "name": "물 머금은 땅",
+    "traditional": "기해(己亥)"
+  },
+  "庚子": {
+    "name": "깊은 호수의 검",
+    "traditional": "경자(庚子)"
+  },
+  "辛丑": {
+    "name": "겨울 화원의 보석",
+    "traditional": "신축(辛丑)"
+  },
+  "壬寅": {
+    "name": "봄을 만난 바다",
+    "traditional": "임인(壬寅)"
+  },
+  "癸卯": {
+    "name": "봄비 내리는 정원",
+    "traditional": "계묘(癸卯)"
+  },
+  "甲辰": {
+    "name": "용의 숲",
+    "traditional": "갑진(甲辰)"
+  },
+  "乙巳": {
+    "name": "꽃피는 화단",
+    "traditional": "을사(乙巳)"
+  },
+  "丙午": {
+    "name": "정오의 태양",
+    "traditional": "병오(丙午)"
+  },
+  "丁未": {
+    "name": "메마른 땅의 촛불",
+    "traditional": "정미(丁未)"
+  },
+  "戊申": {
+    "name": "무신",
+    "traditional": "무신(戊申)"
+  },
+  "己酉": {
+    "name": "정교한 화단",
+    "traditional": "기유(己酉)"
+  },
+  "庚戌": {
+    "name": "마른 땅의 검",
+    "traditional": "경술(庚戌)"
+  },
+  "辛亥": {
+    "name": "물빛 속 보석",
+    "traditional": "신해(辛亥)"
+  },
+  "壬子": {
+    "name": "겨울의 깊은 바다",
+    "traditional": "임자(壬子)"
+  },
+  "癸丑": {
+    "name": "겨울 우물",
+    "traditional": "계축(癸丑)"
+  },
+  "甲寅": {
+    "name": "거대한 거목",
+    "traditional": "갑인(甲寅)"
+  },
+  "乙卯": {
+    "name": "봄 들판의 풀꽃",
+    "traditional": "을묘(乙卯)"
+  },
+  "丙辰": {
+    "name": "안개 낀 들판의 햇살",
+    "traditional": "병진(丙辰)"
+  },
+  "丁巳": {
+    "name": "두 겹의 불꽃",
+    "traditional": "정사(丁巳)"
+  },
+  "戊午": {
+    "name": "무오",
+    "traditional": "무오(戊午)"
+  },
+  "己未": {
+    "name": "마른 초원",
+    "traditional": "기미(己未)"
+  },
+  "庚申": {
+    "name": "두 번 벼려낸 강철",
+    "traditional": "경신(庚申)"
+  },
+  "辛酉": {
+    "name": "완전한 보석",
+    "traditional": "신유(辛酉)"
+  },
+  "壬戌": {
+    "name": "마른 땅에 스며드는 물",
+    "traditional": "임술(壬戌)"
+  },
+  "癸亥": {
+    "name": "깊은 겨울 강",
+    "traditional": "계해(癸亥)"
+  }
+}

@@ -49,7 +49,7 @@ def test_report_cover():
     cover = resp.json()["report"]["cover"]
 
     assert cover["archetype"]["key"] == "THE_RADIATOR"
-    assert cover["archetype"]["name"] == "The Radiator"
+    assert cover["archetype"]["name"] == "Sun Above Stone"  # 1974 = 丙申
     assert cover["intensity_label"] == "Self-Sourced"
 
 

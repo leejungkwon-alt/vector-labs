@@ -906,5 +906,28 @@
     "shadows": [],
     "advice": [],
     "keywords": []
+  },
+  "INTENSITY_OVERLAY": {
+    "SELF_SOURCED": {
+      "voice": "Your energy rises from within. You can set a direction and move on it without waiting for someone else's approval. This self-sourced drive is a major strength — but when the bar you set for yourself climbs too high, it quietly turns into burnout. The sections below describe how that internal engine shows up in concrete ways.",
+      "advice_addon": [
+        "This week, look back at one decision you made on your own. Did it hold up without external approval?",
+        "Lower one standard you hold yourself to. That's how you prevent burnout."
+      ]
+    },
+    "BALANCED_CORE": {
+      "voice": "Your energy balances between inside and out. You move on your own when needed, and you sync with others when the moment calls for it. That calibration is a rare gift — but when it drifts into 'neither side fully,' it can feel like standing still. The sections below describe how that balance actually works day to day.",
+      "advice_addon": [
+        "This week, separate 'what I want to do' from 'what this moment actually needs' — once each.",
+        "Balance is built through repeated choices. Note which side you leaned into in your small decisions."
+      ]
+    },
+    "ENVIRONMENT_TUNED": {
+      "voice": "Your energy blooms in relationship with your environment. Around the right people and conditions, you deepen remarkably; in the wrong ones, you slowly fade. That sensitivity isn't fragility — it's a filter. The sections below describe the conditions where you are most fully yourself.",
+      "advice_addon": [
+        "This week, write down three people, places, or situations that make you feel alive.",
+        "Ask yourself whether your current environment still fits you, or whether you've already outgrown it."
+      ]
+    }
   }
 }
