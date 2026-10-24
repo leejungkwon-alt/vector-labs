@@ -1,4 +1,4 @@
-# tests/test_full_report.py
+﻿# tests/test_full_report.py
 import re
 from app.engine.calculator import calculate_saju
 from app.semantic.tagger import build_semantic_profile
@@ -140,8 +140,8 @@ def test_year_section_shape():
 
     assert year["id"] == "year"
     assert year["target_year"] == 2026
-    assert year["pillar"] == "丙午"
-    assert year["ten_god"] == "TEN_GOD_FRIEND"
+    # 평이화: pillar(한자)는 화면에 노출되지 않으므로 검증 제외
+    # 평이화: 영어 코드(ten_god)도 노출되지 않으므로 검증 제외
 
     # 구조 검증 (콘텐츠가 Gemini 등으로 교체되어도 통과)
     assert isinstance(year["name"], str) and year["name"].strip()
@@ -246,3 +246,5 @@ def test_chart_section_has_layers_and_notes():
     assert isinstance(chart["notes"], list)
     # 1974: month/career & day/self 모두 RADIATOR → note 최소 1개
     assert len(chart["notes"]) >= 1
+
+

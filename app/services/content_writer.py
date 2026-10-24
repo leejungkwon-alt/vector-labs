@@ -450,10 +450,10 @@ def write_year_section(profile: dict, lang: str = "en", user_id: str | None = No
         "id": "year",
         "title": _title(lang, "year"),
         "target_year": year_theme.get("target_year"),
-        "pillar": year_theme.get("pillar"),
+        "pillar": None,  # 평이화: 한자 기둥명 노출 방지
         **_get_pillar_display(year_theme.get("pillar"), lang),
         "pillar_name": _get_pillar_display(year_theme.get("pillar"), lang)["name"],
-        "ten_god": ten_god,
+        "ten_god": None,  # 평이화: 영어 코드 숨김
         "name": theme["name"],
         "headline": theme["headline"],
         "body": theme["body"],
@@ -500,7 +500,7 @@ def write_monthly_section(profile: dict, lang: str = "en", user_id: str | None =
         )
         items.append({
             "month_index": m["month_index"],
-            "pillar": m["pillar"],
+            "pillar": None,  # 평이화: 한자 노출 방지
             "pillar_name": _get_pillar_display(m["pillar"], lang)["name"],
             "pillar_name_traditional": _get_pillar_display(m["pillar"], lang)["traditional"],
             "branch": m["branch"],
@@ -794,7 +794,7 @@ def write_timeline_section(profile: dict, lang: str = "en") -> dict:
         items.append({
             "index": d["index"],
             "ages": [start, end],
-            "pillar": d["pillar"],
+            "pillar": None,  # 평이화: 한자 노출 방지
             "pillar_name": _get_pillar_display(d["pillar"], lang)["name"],
             "pillar_name_traditional": _get_pillar_display(d["pillar"], lang)["traditional"],
             "score": d["score"],
