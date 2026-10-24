@@ -10,13 +10,13 @@
         "상대의 느린 속도를 답답해할 때가 있습니다."
       ],
       "best_match": [
-        "THE_KEEPER",
-        "THE_ANCHOR"
+        "등불 (Keeper)",
+        "산 (Anchor)"
       ],
       "best_reason": "조용히 당신을 땅의 기운하며 흔들릴 때 중심을 잡아주는 사람입니다.",
       "challenging_match": [
-        "THE_PIONEER",
-        "THE_BLADE"
+        "거목 (Pioneer)",
+        "칼날 (Blade)"
       ],
       "challenging_reason": "둘 다 주도권을 원하면 권력 다툼으로 번질 수 있습니다.",
       "actions": [
@@ -38,12 +38,12 @@
         "서운함을 오래 담아두다 한 번에 터뜨립니다."
       ],
       "best_match": [
-        "THE_BLADE",
-        "THE_ANCHOR"
+        "칼날 (Blade)",
+        "산 (Anchor)"
       ],
       "best_reason": "솔직함과 안정감을 가진 사람이 당신의 속마음을 꺼내줍니다.",
       "challenging_match": [
-        "THE_ADAPTER"
+        "덩굴 (Adapter)"
       ],
       "challenging_reason": "둘 다 맞춰주기만 하면 진짜 갈등이 영원히 안 드러납니다.",
       "actions": [
@@ -65,12 +65,12 @@
         "감정을 숨기지 못하지만 상대의 속도는 고려하지 않을 수 있습니다."
       ],
       "best_match": [
-        "THE_KEEPER",
-        "THE_ANCHOR"
+        "등불 (Keeper)",
+        "산 (Anchor)"
       ],
       "best_reason": "조용하고 안정적인 성향의 사람이 당신의 뜨거움을 담아줍니다.",
       "challenging_match": [
-        "THE_RADIATOR"
+        "태양 (Radiator)"
       ],
       "challenging_reason": "같은 불꽃끼리는 서로를 태우다 지칠 수 있습니다.",
       "actions": [
@@ -92,13 +92,13 @@
         "자신의 필요를 뒤로 미루는 경향이 있습니다."
       ],
       "best_match": [
-        "THE_RADIATOR",
-        "THE_CULTIVATOR"
+        "태양 (Radiator)",
+        "정원 (Cultivator)"
       ],
       "best_reason": "당신의 헌신을 따뜻하게 받아주고 되돌려주는 사람입니다.",
       "challenging_match": [
-        "THE_DEEP",
-        "THE_GEM"
+        "바다 (Deep)",
+        "보석 (Gem)"
       ],
       "challenging_reason": "속마음을 잘 드러내지 않는 사람과는 당신의 헌신이 외로워질 수 있습니다.",
       "actions": [
@@ -120,12 +120,12 @@
         "상대의 감정 변화를 늦게 알아차릴 수 있습니다."
       ],
       "best_match": [
-        "THE_RADIATOR",
-        "THE_ADAPTER"
+        "태양 (Radiator)",
+        "덩굴 (Adapter)"
       ],
       "best_reason": "표현이 풍부한 사람이 당신의 안정감 위에 설렘을 더해줍니다.",
       "challenging_match": [
-        "THE_ANCHOR"
+        "산 (Anchor)"
       ],
       "challenging_reason": "둘 다 변화에 소극적이면 관계가 정체될 수 있습니다.",
       "actions": [
@@ -147,12 +147,12 @@
         "상대의 감사가 부족하다고 느낄 때 서운해합니다."
       ],
       "best_match": [
-        "THE_CULTIVATOR",
-        "THE_ANCHOR"
+        "정원 (Cultivator)",
+        "산 (Anchor)"
       ],
       "best_reason": "서로를 돌보는 방식을 이해하고, 그 안에서 편안함을 느낍니다.",
       "challenging_match": [
-        "THE_RADIATOR"
+        "태양 (Radiator)"
       ],
       "challenging_reason": "표현이 화려한 사람과는 당신의 조용한 헌신이 잘 안 보일 수 있습니다.",
       "actions": [
@@ -174,13 +174,13 @@
         "감정보다 논리로 대화를 이끌어갑니다."
       ],
       "best_match": [
-        "THE_ADAPTER",
-        "THE_KEEPER"
+        "덩굴 (Adapter)",
+        "등불 (Keeper)"
       ],
       "best_reason": "당신의 솔직함을 부드럽게 감싸고, 당신이 놓치는 감정을 읽어줍니다.",
       "challenging_match": [
-        "THE_BLADE",
-        "THE_CHALLENGER"
+        "칼날 (Blade)",
+        "도전자 (Challenger)"
       ],
       "challenging_reason": "둘 다 강하게 밀어붙이면 대화가 싸움으로 변합니다.",
       "actions": [
@@ -202,12 +202,12 @@
         "관계의 완성도를 자주 점검합니다."
       ],
       "best_match": [
-        "THE_DEEP",
-        "THE_CULTIVATOR"
+        "바다 (Deep)",
+        "정원 (Cultivator)"
       ],
       "best_reason": "깊이와 인내를 가진 사람이 당신의 기준을 부담 없이 받아줍니다.",
       "challenging_match": [
-        "THE_GEM"
+        "보석 (Gem)"
       ],
       "challenging_reason": "둘 다 완벽을 추구하면 아무것도 충분하지 않게 됩니다.",
       "actions": [
@@ -229,12 +229,12 @@
         "속마음을 늦게 드러내 상대를 답답하게 합니다."
       ],
       "best_match": [
-        "THE_GEM",
-        "THE_KEEPER"
+        "보석 (Gem)",
+        "등불 (Keeper)"
       ],
       "best_reason": "깊이를 이해하는 사람이 당신의 느린 사랑을 기다려줍니다.",
       "challenging_match": [
-        "THE_RADIATOR"
+        "태양 (Radiator)"
       ],
       "challenging_reason": "빠른 감정 표현을 원하는 사람과는 속도가 안 맞을 수 있습니다.",
       "actions": [
@@ -256,12 +256,12 @@
         "감정 표현이 늦어 기회를 놓칠 수 있습니다."
       ],
       "best_match": [
-        "THE_BLADE",
-        "THE_PIONEER"
+        "칼날 (Blade)",
+        "거목 (Pioneer)"
       ],
       "best_reason": "명확한 사람이 당신의 조용한 마음을 끌어내줍니다.",
       "challenging_match": [
-        "THE_DEEP"
+        "바다 (Deep)"
       ],
       "challenging_reason": "둘 다 조용해서 감정이 영영 드러나지 않을 수 있습니다.",
       "actions": [

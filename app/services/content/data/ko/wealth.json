@@ -10,12 +10,12 @@
         "꾸준한 관리에는 약합니다."
       ],
       "best_match": [
-        "THE_STEWARD",
-        "THE_ANCHOR"
+        "관리자 (Steward)",
+        "산 (Anchor)"
       ],
       "best_reason": "당신이 번 돈을 지켜줄 사람입니다.",
       "challenging_match": [
-        "THE_OPERATOR"
+        "운영자 (Operator)"
       ],
       "challenging_reason": "둘 다 리스크를 즐겨서 위기 시 회복이 어렵습니다.",
       "actions": [
@@ -37,12 +37,12 @@
         "한 곳에 집중하기 어려워합니다."
       ],
       "best_match": [
-        "THE_STEWARD",
-        "THE_ANCHOR"
+        "관리자 (Steward)",
+        "산 (Anchor)"
       ],
       "best_reason": "당신의 흩어진 수입을 모아주는 사람입니다.",
       "challenging_match": [
-        "THE_ADAPTER"
+        "덩굴 (Adapter)"
       ],
       "challenging_reason": "둘 다 흩어지면 재무 관리가 안 됩니다.",
       "actions": [
@@ -64,12 +64,12 @@
         "충동구매가 잦습니다."
       ],
       "best_match": [
-        "THE_STEWARD",
-        "THE_CULTIVATOR"
+        "관리자 (Steward)",
+        "정원 (Cultivator)"
       ],
       "best_reason": "당신의 지출을 절제해줄 사람입니다.",
       "challenging_match": [
-        "THE_RADIATOR"
+        "태양 (Radiator)"
       ],
       "challenging_reason": "둘 다 크게 쓰면 파산합니다.",
       "actions": [
@@ -91,12 +91,12 @@
         "꾸준히 모읍니다."
       ],
       "best_match": [
-        "THE_OPERATOR",
-        "THE_PIONEER"
+        "운영자 (Operator)",
+        "거목 (Pioneer)"
       ],
       "best_reason": "당신의 안전 자산 위에 수익을 얹어줄 사람입니다.",
       "challenging_match": [
-        "THE_RADIATOR"
+        "태양 (Radiator)"
       ],
       "challenging_reason": "리스크 성향이 정반대라 재정 갈등이 생깁니다.",
       "actions": [
@@ -118,12 +118,12 @@
         "빠른 기회 포착에는 약합니다."
       ],
       "best_match": [
-        "THE_OPERATOR",
-        "THE_STEWARD"
+        "운영자 (Operator)",
+        "관리자 (Steward)"
       ],
       "best_reason": "당신의 안정 자산을 조율해줄 사람입니다.",
       "challenging_match": [
-        "THE_PIONEER"
+        "거목 (Pioneer)"
       ],
       "challenging_reason": "빠른 베팅을 원하는 사람과는 충돌합니다.",
       "actions": [
@@ -145,12 +145,12 @@
         "지인 부탁에 약합니다."
       ],
       "best_match": [
-        "THE_STEWARD",
-        "THE_KEEPER"
+        "관리자 (Steward)",
+        "등불 (Keeper)"
       ],
       "best_reason": "당신의 성실함을 이해하고 함께 성장합니다.",
       "challenging_match": [
-        "THE_OPERATOR"
+        "운영자 (Operator)"
       ],
       "challenging_reason": "빠른 수익을 원하는 사람과 충돌합니다.",
       "actions": [
@@ -172,12 +172,12 @@
         "자신의 판단에 강한 확신을 가집니다."
       ],
       "best_match": [
-        "THE_STEWARD",
-        "THE_KEEPER"
+        "관리자 (Steward)",
+        "등불 (Keeper)"
       ],
       "best_reason": "당신의 리스크를 통제해줄 사람입니다.",
       "challenging_match": [
-        "THE_SURVIVOR"
+        "생존자 (Survivor)"
       ],
       "challenging_reason": "둘 다 공격적이면 위기 시 회복이 어렵습니다.",
       "actions": [
@@ -199,12 +199,12 @@
         "감정적 소비가 잦습니다."
       ],
       "best_match": [
-        "THE_STEWARD",
-        "THE_DEEP"
+        "관리자 (Steward)",
+        "바다 (Deep)"
       ],
       "best_reason": "당신의 취향을 이해하고 재정을 관리해줍니다.",
       "challenging_match": [
-        "THE_RADIATOR"
+        "태양 (Radiator)"
       ],
       "challenging_reason": "둘 다 감정적 소비가 심하면 파산합니다.",
       "actions": [
@@ -226,12 +226,12 @@
         "결정에 오래 걸립니다."
       ],
       "best_match": [
-        "THE_PIONEER",
-        "THE_OPERATOR"
+        "거목 (Pioneer)",
+        "운영자 (Operator)"
       ],
       "best_reason": "당신의 분석을 실행으로 옮겨줄 사람입니다.",
       "challenging_match": [
-        "THE_DEEP"
+        "바다 (Deep)"
       ],
       "challenging_reason": "둘 다 분석만 하면 기회를 놓칩니다.",
       "actions": [
@@ -253,12 +253,12 @@
         "주변의 꾐에 약합니다."
       ],
       "best_match": [
-        "THE_STEWARD",
-        "THE_ANCHOR"
+        "관리자 (Steward)",
+        "산 (Anchor)"
       ],
       "best_reason": "당신의 직관을 검증해줄 사람입니다.",
       "challenging_match": [
-        "THE_OPERATOR"
+        "운영자 (Operator)"
       ],
       "challenging_reason": "둘 다 즉흥적이면 위기 시 무너집니다.",
       "actions": [

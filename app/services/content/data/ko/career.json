@@ -10,12 +10,12 @@
         "정체된 상황을 견디지 못합니다."
       ],
       "best_match": [
-        "THE_ANCHOR",
-        "THE_OPERATOR"
+        "산 (Anchor)",
+        "운영자 (Operator)"
       ],
       "best_reason": "당신의 비전을 안정적으로 실행해줄 파트너입니다.",
       "challenging_match": [
-        "THE_OFFICER"
+        "원칙주의자 (Officer)"
       ],
       "challenging_reason": "규칙과 절차를 중시하는 상사·동료와 자주 부딪힙니다.",
       "actions": [
@@ -37,12 +37,12 @@
         "전문성보다 관계로 신뢰를 얻습니다."
       ],
       "best_match": [
-        "THE_BLADE",
-        "THE_OFFICER"
+        "칼날 (Blade)",
+        "원칙주의자 (Officer)"
       ],
       "best_reason": "명확한 기준을 가진 사람이 당신의 전문성을 끌어올려줍니다.",
       "challenging_match": [
-        "THE_PIONEER"
+        "거목 (Pioneer)"
       ],
       "challenging_reason": "빠른 결정과 강한 주도권을 원하는 사람과 부딪힐 수 있습니다.",
       "actions": [
@@ -64,12 +64,12 @@
         "분석·내근 업무가 많으면 지칩니다."
       ],
       "best_match": [
-        "THE_ANCHOR",
-        "THE_CULTIVATOR"
+        "산 (Anchor)",
+        "정원 (Cultivator)"
       ],
       "best_reason": "당신의 에너지를 안정적으로 뒷받침해주는 사람입니다.",
       "challenging_match": [
-        "THE_DEEP"
+        "바다 (Deep)"
       ],
       "challenging_reason": "조용한 사람과는 속도가 안 맞아 답답함을 느낍니다.",
       "actions": [
@@ -91,12 +91,12 @@
         "조직 정치와 잡무를 싫어합니다."
       ],
       "best_match": [
-        "THE_MENTOR",
-        "THE_DEEP"
+        "멘토 (Mentor)",
+        "바다 (Deep)"
       ],
       "best_reason": "깊이를 이해하고, 당신의 전문성을 인정해주는 사람입니다.",
       "challenging_match": [
-        "THE_RADIATOR"
+        "태양 (Radiator)"
       ],
       "challenging_reason": "표면적 소통이 많은 사람과는 에너지가 소모됩니다.",
       "actions": [
@@ -118,12 +118,12 @@
         "급격한 변화에 저항감을 느낍니다."
       ],
       "best_match": [
-        "THE_PIONEER",
-        "THE_CHALLENGER"
+        "거목 (Pioneer)",
+        "도전자 (Challenger)"
       ],
       "best_reason": "당신의 안정 위에 변화를 얹어줄 사람입니다.",
       "challenging_match": [
-        "THE_ANCHOR"
+        "산 (Anchor)"
       ],
       "challenging_reason": "둘 다 변화에 소극적이면 조직이 정체됩니다.",
       "actions": [
@@ -145,12 +145,12 @@
         "자신의 성과를 낮게 평가합니다."
       ],
       "best_match": [
-        "THE_MENTOR",
-        "THE_OFFICER"
+        "멘토 (Mentor)",
+        "원칙주의자 (Officer)"
       ],
       "best_reason": "당신의 기여를 인정하고 함께 성장하는 사람입니다.",
       "challenging_match": [
-        "THE_SURVIVOR"
+        "생존자 (Survivor)"
       ],
       "challenging_reason": "성과 지상주의자와는 가치관 충돌이 일어납니다.",
       "actions": [
@@ -172,12 +172,12 @@
         "감정적 소통을 어려워합니다."
       ],
       "best_match": [
-        "THE_ADAPTER",
-        "THE_KEEPER"
+        "덩굴 (Adapter)",
+        "등불 (Keeper)"
       ],
       "best_reason": "당신의 날카로움을 부드럽게 감싸줄 사람입니다.",
       "challenging_match": [
-        "THE_CHALLENGER"
+        "도전자 (Challenger)"
       ],
       "challenging_reason": "강한 대립 구도가 반복되어 팀이 피로해집니다.",
       "actions": [
@@ -199,12 +199,12 @@
         "낮은 퀄리티의 결과물에 스트레스를 받습니다."
       ],
       "best_match": [
-        "THE_DEEP",
-        "THE_MENTOR"
+        "바다 (Deep)",
+        "멘토 (Mentor)"
       ],
       "best_reason": "당신의 완벽주의를 이해하고 인내해주는 사람입니다.",
       "challenging_match": [
-        "THE_RADIATOR"
+        "태양 (Radiator)"
       ],
       "challenging_reason": "속도 우선주의자와는 방식이 정면충돌합니다.",
       "actions": [
@@ -226,12 +226,12 @@
         "표면적 업무를 싫어합니다."
       ],
       "best_match": [
-        "THE_PIONEER",
-        "THE_OPERATOR"
+        "거목 (Pioneer)",
+        "운영자 (Operator)"
       ],
       "best_reason": "당신의 전략을 실행으로 옮겨줄 사람입니다.",
       "challenging_match": [
-        "THE_SURVIVOR"
+        "생존자 (Survivor)"
       ],
       "challenging_reason": "빠른 실행을 요구하는 사람과 충돌할 수 있습니다.",
       "actions": [
@@ -253,12 +253,12 @@
         "갈등을 중재하는 데 능숙합니다."
       ],
       "best_match": [
-        "THE_PIONEER",
-        "THE_BLADE"
+        "거목 (Pioneer)",
+        "칼날 (Blade)"
       ],
       "best_reason": "당신의 조용한 지원을 인정하고 끌어올려주는 사람입니다.",
       "challenging_match": [
-        "THE_RADIATOR"
+        "태양 (Radiator)"
       ],
       "challenging_reason": "화려한 성과만 주목받는 조직에서는 존재감이 사라집니다.",
       "actions": [
