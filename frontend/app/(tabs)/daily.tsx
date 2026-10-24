@@ -1,28 +1,30 @@
-import { useLanguageStore } from "@/store/languageStore"; // SAJU-PATCH:api-lang
-﻿import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
+import { useLanguageStore } from "@/store/languageStore";
+import { useQuery } from "@tanstack/react-query";
 import { View, Text, ScrollView, ActivityIndicator, StyleSheet, TouchableOpacity } from "react-native";
 import { router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
-import { api, ApiError } from "@/api/client";
+import { api } from "@/api/client";
 import { colors, spacing, radius, gradeColors } from "@/theme";
 import { useAuthStore } from "@/store/authStore";
 import { useProfileStore } from "@/store/profileStore";
+import { PaymentModal } from "@/components/PaymentModal";
 import type { DailyResponse } from "../../types";
 
 export default function DailyScreen() {
-  const lang = useLanguageStore((s) => s.lang); // SAJU-PATCH:lang-decl
+  const lang = useLanguageStore((s) => s.lang);
   const profile = useProfileStore((s) => s.profile);
   const profileReady = useProfileStore((s) => s.ready);
-
-  // 👇 유저 정보(토큰 상태)를 가져옵니다.
   const user = useAuthStore((s) => s.user);
   const ready = useAuthStore((s) => s.ready);
 
-const { data, isLoading, error } = useQuery({
-    queryKey: ["daily", profile, user?.id, lang], // 👈 user.id를 키에 추가하여 로그인 상태 변경 시 재호출
-    // user와 ready 상태가 확실할 때만 API 호출
+  // 결제 모달 상태
+  const [showPayment, setShowPayment] = useState(false);
+
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["daily", profile, user?.id, lang],
     queryFn: () => api.daily({ ...profile, days: 7, lang }),
-    enabled: !!profile && profileReady && !!user && ready, 
+    enabled: !!profile && profileReady && !!user && ready,
     retry: false,
   });
 
@@ -54,7 +56,7 @@ const { data, isLoading, error } = useQuery({
   }
 
   if (error) {
-    const isForbidden = error instanceof ApiError && error.status === 403;
+    const isForbidden = (error as any)?.status === 403;
     if (isForbidden) {
       return (
         <View style={styles.center}>
@@ -64,10 +66,11 @@ const { data, isLoading, error } = useQuery({
             <Text style={{ fontSize: 15, color: colors.textMuted, textAlign: "center", lineHeight: 22, marginBottom: 24 }}>
               매일 아침 당신의 기운을 읽어주는\n데일리 에너지 서비스입니다.\n프리미엄으로 업그레이드하고\n7일치 흐름을 미리 확인하세요.
             </Text>
-            <TouchableOpacity style={{ backgroundColor: colors.primary, paddingHorizontal: 24, paddingVertical: 14, borderRadius: radius.md, width: "100%", alignItems: "center" }} onPress={() => router.push("/(tabs)/settings")}>
+            <TouchableOpacity style={{ backgroundColor: colors.primary, paddingHorizontal: 24, paddingVertical: 14, borderRadius: radius.md, width: "100%", alignItems: "center" }} onPress={() => setShowPayment(true)}>
               <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>프리미엄 업그레이드</Text>
             </TouchableOpacity>
           </View>
+          <PaymentModal visible={showPayment} onClose={() => setShowPayment(false)} />
         </View>
       );
     }
@@ -82,7 +85,7 @@ const { data, isLoading, error } = useQuery({
   const dailyData = data?.daily as DailyResponse["daily"];
   if (!dailyData || !dailyData.items) return null;
 
-return (
+  return (
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 100 }}>
       <View style={styles.heroBox}>
         <Text style={styles.heroTitle}>{dailyData.hero}</Text>

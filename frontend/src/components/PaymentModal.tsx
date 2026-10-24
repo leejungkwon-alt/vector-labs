@@ -52,7 +52,7 @@ export function PaymentModal({ visible, onClose }: Props) {
                 <View style={{ backgroundColor: colors.primary, paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}><Text style={{ color: colors.onPrimary, fontSize: 10, fontWeight: "700" }}>BEST</Text></View>
               </View>
               <Text style={styles.planDetail}>Daily, Monthly & All Deep Reports</Text>
-              <Text style={styles.planPrice}>$2.99 / month</Text>
+              <Text style={styles.planPrice}>$2.99 / month (Cancel anytime)</Text>
             </View>
             {loading === "sub_monthly_299" ? <ActivityIndicator color={colors.primary} /> : <Ionicons name="chevron-forward" size={24} color={colors.primary} />}
           </TouchableOpacity>
@@ -61,8 +61,8 @@ export function PaymentModal({ visible, onClose }: Props) {
           <TouchableOpacity style={styles.planBox} onPress={() => handlePay("addon_deep_099")} disabled={!!loading}>
             <View style={{ flex: 1 }}>
               <Text style={styles.planName}>Deep Report</Text>
-              <Text style={styles.planDetail}>Love, Career & Wealth patterns</Text>
-              <Text style={styles.planPrice}>$0.99 (one-time)</Text>
+              <Text style={styles.planDetail}>Love, Career & Wealth patterns (Keep forever)</Text>
+              <Text style={styles.planPrice}>$0.99 (Lifetime Unlock)</Text>
             </View>
             {loading === "addon_deep_099" ? <ActivityIndicator color={colors.textMuted} /> : <Ionicons name="chevron-forward" size={24} color={colors.textMuted} />}
           </TouchableOpacity>
@@ -71,8 +71,8 @@ export function PaymentModal({ visible, onClose }: Props) {
           <TouchableOpacity style={styles.planBox} onPress={() => handlePay("addon_compat_199")} disabled={!!loading}>
             <View style={{ flex: 1 }}>
               <Text style={styles.planName}>Premium Compatibility</Text>
-              <Text style={styles.planDetail}>4-axis chemistry with your partner</Text>
-              <Text style={styles.planPrice}>$1.99 (one-time)</Text>
+              <Text style={styles.planDetail}>4-axis chemistry (Keep forever)</Text>
+              <Text style={styles.planPrice}>$1.99 (Lifetime Unlock)</Text>
             </View>
             {loading === "addon_compat_199" ? <ActivityIndicator color={colors.textMuted} /> : <Ionicons name="chevron-forward" size={24} color={colors.textMuted} />}
           </TouchableOpacity>

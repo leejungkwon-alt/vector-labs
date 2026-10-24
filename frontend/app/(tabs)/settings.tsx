@@ -1,7 +1,7 @@
 import { useLanguageStore, SupportedLang } from "@/store/languageStore";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, Alert, Platform, Linking } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Alert, Platform, Linking, ScrollView } from "react-native";
 import { router } from "expo-router";
 import { colors, spacing, radius } from "@/theme";
 import { useAuthStore } from "@/store/authStore";
@@ -105,7 +105,7 @@ export default function SettingsScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 40 }}>
       {/* 1. 내 계정 정보 (이메일/생년월일/등급) */}
       <View style={styles.profileBox}>
         <Text style={styles.sectionTitle}>내 계정 정보</Text>
@@ -232,7 +232,7 @@ export default function SettingsScreen() {
         visible={showPayment}
         onClose={() => setShowPayment(false)}
       />
-    </View>
+    </ScrollView>
   );
 }
 

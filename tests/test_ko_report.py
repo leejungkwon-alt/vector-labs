@@ -219,15 +219,16 @@ def test_ko_summary_card_headlines_are_korean():
     for card in report["summary_cards"]:
         h = card["headline"]
         # 영문 대문자 단어 포함 여부 검사
-        has_english_upper = any(c.isupper() and c.isascii() and c.isalpha() for c in h)
-        assert not has_english_upper, f"헤드라인에 영어: {h!r}"
+        # 한글(영어) 병기 정책이므로 raw 코드(THE_)만 아니면 통과
+        assert "THE_" not in h, f"헤드라인에 raw 영어 코드 노출: {h!r}"
+        assert any("\uac00" <= ch <= "\ud7a3" for ch in h), f"한글이 없음: {h!r}"
 
 
 def test_ko_money_bonds_headlines_are_korean():
     report = _ko_report_1974()
     cards = {c["label"]: c for c in report["summary_cards"]}
-    assert cards["재물 모드"]["headline"] == "운영자"       # THE_OPERATOR
-    assert cards["인연"]["headline"] == "동반자"             # THE_TWIN
+    assert cards["재물 모드"]["headline"].startswith("운영자")
+    assert cards["인연"]["headline"].startswith("동반자")
 
 
 def test_ko_lucky_code_hero_is_korean():

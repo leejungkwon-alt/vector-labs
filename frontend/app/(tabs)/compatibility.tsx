@@ -10,6 +10,7 @@ import { colors, spacing, radius, gradeColors } from "@/theme";
 import { useProfileStore } from "@/store/profileStore";
 import { CityPickerModal, CUSTOM_CITY_KEY } from "@/components/CityPickerModal";
 import { TimezonePickerModal } from "@/components/TimezonePickerModal";
+import { PaymentModal } from "@/components/PaymentModal";
 import { CITY_LIST } from "@/constants/cities";
 import { TIMEZONE_LIST } from "@/constants/timezones";
 
@@ -19,6 +20,7 @@ export default function CompatibilityScreen() {
   const myProfile = useProfileStore((s) => s.profile);
 
   const [relationshipType, setRelationshipType] = useState<"romance" | "business" | "friend" | "family">("romance");
+  const [showPayment, setShowPayment] = useState(false);
 
   const [partnerDate, setPartnerDate] = useState(new Date(1995, 9, 24));
   const [showDatePicker, setShowDatePicker] = useState(false);
@@ -117,7 +119,7 @@ export default function CompatibilityScreen() {
             </Text>
             <TouchableOpacity 
               style={{ backgroundColor: colors.primary, paddingHorizontal: 24, paddingVertical: 16, borderRadius: radius.md, width: "100%", alignItems: "center" }} 
-              onPress={() => router.push("/(tabs)/settings")}
+              onPress={() => setShowPayment(true)}
             >
               <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>프리미엄 / 애드온 구매하러 가기</Text>
             </TouchableOpacity>
@@ -272,6 +274,7 @@ export default function CompatibilityScreen() {
 
       <CityPickerModal visible={showCityModal} onClose={() => setShowCityModal(false)} onSelect={onSelectCity} currentCityKey={isCustomCity ? CUSTOM_CITY_KEY : city} />
       <TimezonePickerModal visible={showTimezoneModal} onClose={() => setShowTimezoneModal(false)} onSelect={setCustomTimezone} currentTz={customTimezone} />
+      <PaymentModal visible={showPayment} onClose={() => setShowPayment(false)} />
     </ScrollView>
   );
 }
