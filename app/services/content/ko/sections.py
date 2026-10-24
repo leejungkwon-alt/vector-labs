@@ -2,7 +2,7 @@
 SECTION_TITLES = {
     "cover": "당신의 명식", "core": "당신의 본질", "energy": "당신의 에너지 지도",
     "lucky_code": "당신에게 필요한 기운", "money": "재물과 돈", "work": "일과 재능",
-    "bonds": "인연과 관계", "year": "올해의 흐름", "timeline": "인생의 궤적", "health": "몸과 마음",
+    "bonds": "친구와 동료", "year": "올해의 흐름", "timeline": "인생의 궤적", "health": "몸과 마음",
     "monthly": "월별 흐름", "chart": "당신의 네 가지 얼굴", "sinsal": "특별한 재능",
 }
 SUMMARY_LABELS = {"core": "본질", "energy": "에너지", "lucky_code": "필요한 기운", "money": "재물 모드", "bonds": "인연", "year": "올해", "health": "몸", "monthly": "월별"}

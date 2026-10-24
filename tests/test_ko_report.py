@@ -61,7 +61,7 @@ def test_ko_section_titles():
     assert s["core"]["title"] == "당신의 본질"
     assert s["money"]["title"] == "재물과 돈"
     assert s["work"]["title"] == "일과 재능"
-    assert s["bonds"]["title"] == "인연과 관계"
+    assert s["bonds"]["title"] == "친구와 동료"
     assert s["timeline"]["title"] == "인생의 궤적"
     assert s["year"]["title"] == "올해의 흐름"
 
@@ -149,7 +149,7 @@ def test_ko_work_content_is_korean():
 def test_ko_bonds_content_is_korean():
     report = _ko_report_1974()
     bonds = report["sections"]["bonds"]
-    assert bonds["title"] == "인연과 관계"
+    assert bonds["title"] == "친구와 동료"
     assert any("\uac00" <= ch <= "\ud7a3" for ch in " ".join(bonds["actions"]))
 
 
