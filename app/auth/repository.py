@@ -87,6 +87,15 @@ _SCHEMA_STATEMENTS = [
     )
     """,
     """
+    CREATE TABLE IF NOT EXISTS purchases (
+        id TEXT PRIMARY KEY,
+        user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        product_id TEXT NOT NULL,
+        platform TEXT NOT NULL,
+        purchased_at TEXT NOT NULL
+    )
+    """,
+    """
     CREATE TABLE IF NOT EXISTS telegram_subscribers (
         telegram_id TEXT PRIMARY KEY,
         user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
@@ -223,6 +232,21 @@ class _BaseRepository:
             (user_id,),
         )
         return [r["addon"] for r in rows]
+
+    # ---- purchases ----
+    def log_purchase(self, user_id: str, product_id: str, platform: str) -> dict:
+        pid = uuid.uuid4().hex
+        self._run(
+            "INSERT INTO purchases (id, user_id, product_id, platform, purchased_at) VALUES (?, ?, ?, ?, ?)",
+            (pid, user_id, product_id, platform, _now_iso())
+        )
+        return self._one("SELECT * FROM purchases WHERE id = ?", (pid,))
+
+    def list_purchases(self, user_id: str) -> list:
+        return self._all(
+            "SELECT * FROM purchases WHERE user_id = ? ORDER BY purchased_at DESC",
+            (user_id,),
+        )
 
     # ---- push tokens ----
     def register_push_token(

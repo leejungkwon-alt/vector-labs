@@ -167,6 +167,10 @@ def purchase(body: PurchaseRequest, user: dict = Depends(get_current_user)):
     except IAPVerificationError as e:
         raise HTTPException(status_code=400, detail=str(e))
 
+@router.get("/me/purchases")
+def list_my_purchases(user: dict = Depends(get_current_user)):
+    return {"purchases": get_repository().list_purchases(user["id"])}
+
 @router.get("/me/push-tokens")
 def list_push_tokens(user: dict = Depends(get_current_user)):
     """등록된 푸시 토큰 목록 (다기기 디버깅용)."""

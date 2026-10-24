@@ -22,12 +22,15 @@ def verify_and_grant(user_id: str, platform: str, receipt: str, product_id: str)
         repo = get_repository()
         if product_id == "sub_monthly_299":
             repo.set_tier(user_id, "subscription")
+            repo.log_purchase(user_id, product_id, platform)
             return {"status": "success", "tier": "subscription"}
         elif product_id == "addon_compat_199":
             repo.grant_addon(user_id, "compatibility")
+            repo.log_purchase(user_id, product_id, platform)
             return {"status": "success", "addon": "compatibility"}
         elif product_id == "addon_deep_099":
             repo.grant_addon(user_id, "deep_report")
+            repo.log_purchase(user_id, product_id, platform)
             return {"status": "success", "addon": "deep_report"}
         else:
             raise IAPVerificationError(f"Unknown product_id: {product_id}")

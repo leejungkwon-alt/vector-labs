@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet, ActivityIndicator, Switch } from "react-native";
 import DateTimePicker, { DateTimePickerEvent } from "@react-native-community/datetimepicker";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { router } from "expo-router";
 import { api, ApiError } from "@/api/client";
 import { colors, spacing, radius, gradeColors } from "@/theme";
 import { useProfileStore } from "@/store/profileStore";
@@ -103,6 +104,28 @@ export default function CompatibilityScreen() {
     if (isLoading) return <ActivityIndicator size="large" color={colors.primary} style={{ marginTop: 20 }} />;
     if (error) {
       const msg = error instanceof ApiError ? error.detail : (error as Error).message;
+      
+      // 👇 403 에러(궁합 결제 필요)일 때 예쁜 결제 유도 화면 노출
+      if (error instanceof ApiError && error.status === 403) {
+        return (
+          <View style={{ marginTop: 30, padding: 24, backgroundColor: colors.primary + "10", borderRadius: radius.lg, alignItems: "center", borderWidth: 1, borderColor: colors.primary + "30" }}>
+            <Text style={{ fontSize: 40, marginBottom: 12 }}>💎</Text>
+            <Text style={{ fontSize: 20, fontWeight: "800", color: colors.text, marginBottom: 8 }}>궁합 분석은 유료 기능입니다</Text>
+            <Text style={{ fontSize: 15, color: colors.textMuted, textAlign: "center", marginBottom: 24, lineHeight: 22 }}>
+              상대방과의 4가지 케미(오행, 일간, 가치관, 신살)를 확인하려면{"\n"}
+              궁합 애드온을 구매하거나 프리미엄으로 업그레이드하세요.
+            </Text>
+            <TouchableOpacity 
+              style={{ backgroundColor: colors.primary, paddingHorizontal: 24, paddingVertical: 16, borderRadius: radius.md, width: "100%", alignItems: "center" }} 
+              onPress={() => router.push("/(tabs)/settings")}
+            >
+              <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>프리미엄 / 애드온 구매하러 가기</Text>
+            </TouchableOpacity>
+          </View>
+        );
+      }
+      
+      // 그 외 일반 에러
       return <Text style={{ color: colors.danger, marginTop: 20, textAlign: "center" }}>{msg}</Text>;
     }
     if (!data?.compatibility) return null;

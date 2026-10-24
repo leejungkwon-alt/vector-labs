@@ -76,6 +76,7 @@ export const api = {
   linkProvider: (provider: string, token: string) => request<AuthResponse>(`/auth/link/${provider}`, { method: "POST", body: JSON.stringify({ provider_token: token }) }),
   purchase: (product_id: string) => request<any>("/auth/me/purchase", { method: "POST", body: JSON.stringify({ product_id, receipt: "mock_valid_receipt" }) }),
   deleteAccount: () => request<void>("/auth/me", { method: "DELETE" }),
+  getPurchases: () => request<{ purchases: any[] }>("/auth/me/purchases"),
   calculate: (payload: SajuRequest) =>
     request<SajuResponse>("/saju/calculate", { method: "POST", body: JSON.stringify(payload) }),
   report: (payload: ReportRequest) =>
