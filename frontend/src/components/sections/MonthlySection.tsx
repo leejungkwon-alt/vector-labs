@@ -12,7 +12,7 @@ export function MonthlySectionView({ section }: { section: MonthlySection }) {
         <View key={i} style={ss.blockBox}>
           <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 4, flexWrap: "wrap", gap: 4 }}>
             <Text style={{ fontSize: 15, fontWeight: "700", color: colors.text }}>
-              {item.approx_solar_month} · {item.pillar_name || item.pillar}
+              {item.approx_solar_month}{item.pillar_name ? ` · ${item.pillar_name}` : ""}
             </Text>
             <Text
               style={{

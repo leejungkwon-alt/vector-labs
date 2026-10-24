@@ -49,7 +49,7 @@ function MonthChip({ item, kind }: { item: TimingMonth; kind: "opportunity" | "c
     <View style={{ backgroundColor: bg, borderRadius: radius.md, padding: spacing.md, marginTop: spacing.sm, borderWidth: 1, borderColor: tone + "40" }}>
       <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 4, flexWrap: "wrap", gap: 4 }}>
         <Text style={{ fontSize: 13, fontWeight: "700", color: tone }}>{label} · {item.month}월</Text>
-        <Text style={{ fontSize: 12, color: colors.textMuted, flexShrink: 1, textAlign: "right" }}>{item.pillar} · {item.grade_label}</Text>
+        <Text style={{ fontSize: 12, color: colors.textMuted, flexShrink: 1, textAlign: "right" }}>{item.grade_label}</Text>
       </View>
       <Text style={{ fontSize: 14, color: colors.text, lineHeight: 22 }}>{item.narrative}</Text>
     </View>

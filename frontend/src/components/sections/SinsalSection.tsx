@@ -12,11 +12,7 @@ export function SinsalSectionView({ section }: { section: SinsalSection }) {
         <View key={i} style={ss.blockBox}>
           <Text style={ss.blockTitle}>
             {item.name}
-            {item.name_traditional && (
-              <Text style={{ fontSize: 13, color: colors.textMuted }}>
-                {" "}({item.name_traditional})
-              </Text>
-            )}
+
           </Text>
           <Text style={ss.metaText}>
             {item.position_label} · {item.position}

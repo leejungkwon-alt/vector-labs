@@ -7,7 +7,7 @@ export function YearSectionView({ section }: { section: YearSection }) {
   return (
     <View>
       <Text style={ss.metaText}>
-        {section.target_year}년 · {section.pillar_name || section.pillar} · {section.ten_god}
+        {section.target_year}년{section.pillar_name ? ` · ${section.pillar_name}` : ""}
       </Text>
       <Text style={ss.coreHero}>{section.name}</Text>
       <Text style={[ss.paragraph, { fontWeight: "600" }]}>{section.headline}</Text>
