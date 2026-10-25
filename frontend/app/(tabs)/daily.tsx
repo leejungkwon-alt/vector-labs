@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLanguageStore } from "@/store/languageStore";
+import { useT } from "@/i18n";
 import { useQuery } from "@tanstack/react-query";
 import { View, Text, ScrollView, ActivityIndicator, StyleSheet, TouchableOpacity } from "react-native";
 import { router } from "expo-router";
@@ -13,6 +14,7 @@ import type { DailyResponse } from "../../types";
 
 export default function DailyScreen() {
   const lang = useLanguageStore((s) => s.lang);
+  const t = useT();
   const profile = useProfileStore((s) => s.profile);
   const profileReady = useProfileStore((s) => s.ready);
   const user = useAuthStore((s) => s.user);
@@ -32,7 +34,7 @@ export default function DailyScreen() {
     return (
       <View style={styles.center}>
         <ActivityIndicator size="large" color={colors.primary} />
-        <Text style={styles.loadingText}>사용자 정보를 불러오는 중...</Text>
+        <Text style={styles.loadingText}>{t("daily.loadingUser")}</Text>
       </View>
     );
   }
@@ -40,8 +42,8 @@ export default function DailyScreen() {
   if (!profile) {
     return (
       <View style={styles.center}>
-        <Text style={styles.errorText}>사주 정보가 없습니다.</Text>
-        <Text style={styles.errorDetail}>홈 탭에서 사주 정보를 먼저 입력해 주세요.</Text>
+        <Text style={styles.errorText}>{t("daily.noProfileTitle")}</Text>
+        <Text style={styles.errorDetail}>{t("daily.noProfileDetail")}</Text>
       </View>
     );
   }
@@ -50,7 +52,7 @@ export default function DailyScreen() {
     return (
       <View style={styles.center}>
         <ActivityIndicator size="large" color={colors.primary} />
-        <Text style={styles.loadingText}>7일간의 기운을 읽어오고 있습니다...</Text>
+        <Text style={styles.loadingText}>{t("daily.loading")}</Text>
       </View>
     );
   }
@@ -62,12 +64,12 @@ export default function DailyScreen() {
         <View style={styles.center}>
           <View style={{ backgroundColor: colors.surface, padding: 24, borderRadius: radius.lg, alignItems: "center", borderWidth: 1, borderColor: colors.border }}>
             <Ionicons name="lock-closed" size={48} color={colors.primary} style={{ marginBottom: 16 }} />
-            <Text style={{ fontSize: 20, fontWeight: "700", color: colors.text, marginBottom: 8 }}>구독자 전용 기능입니다</Text>
+            <Text style={{ fontSize: 20, fontWeight: "700", color: colors.text, marginBottom: 8 }}>{t("daily.subscriberOnlyTitle")}</Text>
             <Text style={{ fontSize: 15, color: colors.textMuted, textAlign: "center", lineHeight: 22, marginBottom: 24 }}>
-              매일 아침 당신의 기운을 읽어주는\n데일리 에너지 서비스입니다.\n프리미엄으로 업그레이드하고\n7일치 흐름을 미리 확인하세요.
+              {t("daily.subscriberOnlyBody")}
             </Text>
             <TouchableOpacity style={{ backgroundColor: colors.primary, paddingHorizontal: 24, paddingVertical: 14, borderRadius: radius.md, width: "100%", alignItems: "center" }} onPress={() => setShowPayment(true)}>
-              <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>프리미엄 업그레이드</Text>
+              <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>{t("daily.upgrade")}</Text>
             </TouchableOpacity>
           </View>
           <PaymentModal visible={showPayment} onClose={() => setShowPayment(false)} />
@@ -76,7 +78,7 @@ export default function DailyScreen() {
     }
     return (
       <View style={styles.center}>
-        <Text style={styles.errorText}>오류가 발생했습니다</Text>
+        <Text style={styles.errorText}>{t("daily.errorTitle")}</Text>
         <Text style={styles.errorDetail}>{(error as Error).message}</Text>
       </View>
     );
@@ -89,7 +91,7 @@ export default function DailyScreen() {
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 100 }}>
       <View style={styles.heroBox}>
         <Text style={styles.heroTitle}>{dailyData.hero}</Text>
-        <Text style={styles.heroSub}>앞으로 7일간의 일운입니다.</Text>
+        <Text style={styles.heroSub}>{t("daily.heroSub")}</Text>
       </View>
 
       <View style={styles.list}>
@@ -109,8 +111,8 @@ export default function DailyScreen() {
             <Text style={styles.body}>{item.body}</Text>
             
             <View style={styles.tipBox}>
-              <Text style={styles.tipText}>💡 <Text style={{fontWeight: "700"}}>집중:</Text> {item.lean_into}</Text>
-              <Text style={styles.tipText}>⚠️ <Text style={{fontWeight: "700"}}>주의:</Text> {item.watch_for}</Text>
+              <Text style={styles.tipText}>💡 <Text style={{fontWeight: "700"}}>{t("daily.focus")}:</Text> {item.lean_into}</Text>
+              <Text style={styles.tipText}>⚠️ <Text style={{fontWeight: "700"}}>{t("daily.watch")}:</Text> {item.watch_for}</Text>
             </View>
           </View>
         ))}
