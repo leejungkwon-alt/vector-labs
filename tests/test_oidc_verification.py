@@ -492,3 +492,22 @@ def test_fetch_jwks_ignores_jwk_without_kid(monkeypatch):
     assert len(keys) == 1
 
     prov._JWKS_CACHE.clear()
+
+def test_mock_token_rejected_in_production(monkeypatch):
+    """SAJU_ENV=production 이면 mock:<subject> 토큰이 거부되어야 한다."""
+    import app.auth.providers as prov
+
+    monkeypatch.setenv("SAJU_ENV", "production")
+    with pytest.raises(
+        prov.ProviderTokenError, match="not allowed in production"
+    ):
+        prov.verify_provider_token("apple", "mock:alice")
+
+
+def test_mock_token_accepted_in_dev(monkeypatch):
+    """SAJU_ENV != production 이면 mock:<subject> 가 정상 통과해야 한다."""
+    import app.auth.providers as prov
+
+    monkeypatch.delenv("SAJU_ENV", raising=False)
+    out = prov.verify_provider_token("google", "mock:bob")
+    assert out == {"provider": "google", "subject": "bob"}
