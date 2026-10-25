@@ -158,11 +158,9 @@ def _verify_apple(token: str) -> dict:
 
 
 def _verify_google(token: str) -> dict:
-    raise ProviderTokenError(
-        "Google OIDC verifier not configured yet. "
-        "Use 'mock:<subject>' in non-production, or configure "
-        "SAJU_GOOGLE_CLIENT_ID and complete step 1-D."
-    )
+    claims = _decode_oidc_token("google", token)
+    return {"provider": "google", "subject": claims["sub"]}
+
 
 
 def _verify_kakao(token: str) -> dict:
