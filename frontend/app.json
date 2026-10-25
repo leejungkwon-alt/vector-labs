@@ -28,7 +28,8 @@
       "@react-native-community/datetimepicker",
       "expo-font",
       "expo-router",
-      "expo-localization"
+      "expo-localization",
+      "expo-web-browser"
     ],
     "scheme": "gyeol"
   }
