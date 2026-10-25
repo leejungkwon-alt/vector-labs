@@ -6,7 +6,7 @@ __pycache__/
 venv/
 _*.py
 
-# --- ë³´ì/ë¡ì»¬ ìì° ---
+# --- Security/Local Assets ---
 .env
 .env.*
 !.env.example
@@ -22,6 +22,7 @@ botfather_api
 *.p12
 *.jks
 *.mobileprovision
+data/
 data/auth.db
 data/auth.db-journal
 data/auth.db-wal
@@ -48,14 +49,8 @@ frontend/.env.*
 *.bak_*
 prompts/
 
-# --- ë¡ì»¬ ì ì© íì¤í¸ (requirements.txtë ë°ëì í¬í¨ëëë¡ ì ì¸) ---
-preview.txt
-HANDOFF_*.txt
-saju_complete_code.txt
-
 # --- Large files ---
 *.apk
-# ´ýÇÁ ÆÄÀÏ
 saju_full.txt
 saju_dump.txt
 *.dump.txt
@@ -64,12 +59,10 @@ saju_dump.txt
 *.bak.*
 *.broken.*
 
-# --- 비밀/임시 산출물 (P0 보안 패치) ---
+# --- Temp artifacts ---
 token.txt
 *.jwt
-*.bak
 *.bak_*
-*.bak.*
 report_*.json
 review.txt
 saju_complete_code*.txt
@@ -78,10 +71,5 @@ saju_p0_patch.diff
 frontend/*.apk
 
 # SAJU patch backups & temp
-*.bak.*
-*.bak_*
 __pycache__/
 scripts/__pycache__/
-
-# ���� SQLite DB (dev/staging ��ü)
-data/

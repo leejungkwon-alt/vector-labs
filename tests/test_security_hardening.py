@@ -135,3 +135,28 @@ def test_iap_mock_receipt_rejected_in_production(monkeypatch, tmp_path):
         verify_and_grant(
             a["user"]["id"], "ios", "mock_valid_receipt", "sub_monthly_299"
         )
+
+def test_jwt_short_secret_rejected_in_production(monkeypatch):
+    """production + 짧은 시크릿 → RuntimeError (최소 32자)."""
+    monkeypatch.setenv("SAJU_ENV", "production")
+    monkeypatch.setenv("SAJU_JWT_SECRET", "too-short")
+    from app.auth.jwt_utils import _secret
+    with pytest.raises(RuntimeError, match="at least 32"):
+        _secret()
+
+
+def test_jwt_exactly_min_length_ok_in_production(monkeypatch):
+    """production + 정확히 32자 → 통과 (경계값)."""
+    monkeypatch.setenv("SAJU_ENV", "production")
+    monkeypatch.setenv("SAJU_JWT_SECRET", "x" * 32)
+    from app.auth.jwt_utils import _secret
+    assert _secret() == "x" * 32
+
+
+def test_jwt_short_secret_ok_in_development(monkeypatch):
+    """dev는 짧은 커스텀 시크릿 허용 (기존 동작 보존)."""
+    monkeypatch.delenv("SAJU_ENV", raising=False)
+    monkeypatch.setenv("SAJU_JWT_SECRET", "short-dev")
+    from app.auth.jwt_utils import _secret
+    assert _secret() == "short-dev"
+

@@ -52,7 +52,7 @@ def test_ko_summary_labels():
     labels = [c["label"] for c in report["summary_cards"]]
     assert "본질" in labels
     assert "재물 모드" in labels
-    assert "인연" in labels
+    assert "친구" in labels
 
 
 def test_ko_section_titles():
@@ -228,7 +228,7 @@ def test_ko_money_bonds_headlines_are_korean():
     report = _ko_report_1974()
     cards = {c["label"]: c for c in report["summary_cards"]}
     assert cards["재물 모드"]["headline"].startswith("운영자")
-    assert cards["인연"]["headline"].startswith("동반자")
+    assert cards["친구"]["headline"].startswith("동반자")
 
 
 def test_ko_lucky_code_hero_is_korean():

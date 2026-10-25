@@ -7,19 +7,31 @@ import jwt
 
 
 _DEFAULT_SECRET = "dev-insecure-secret-change-me-in-production-32b"
+_MIN_SECRET_LEN = 32
 _ALG = "HS256"
 _ISSUER = "saju-auth"
 
 
 def _secret() -> str:
     s = os.environ.get("SAJU_JWT_SECRET", "").strip()
+    is_prod = os.environ.get("SAJU_ENV", "").lower() == "production"
+
+    if is_prod:
+        if not s:
+            raise RuntimeError(
+                "SAJU_JWT_SECRET must be set in production. "
+                "The default development secret must not be used in deployment."
+            )
+        if len(s) < _MIN_SECRET_LEN:
+            raise RuntimeError(
+                f"SAJU_JWT_SECRET must be at least {_MIN_SECRET_LEN} characters "
+                f"in production (got {len(s)}). "
+                f"Generate one with: openssl rand -hex 32"
+            )
+        return s
+
     if s:
         return s
-    if os.environ.get("SAJU_ENV", "").lower() == "production":
-        raise RuntimeError(
-            "SAJU_JWT_SECRET must be set in production. "
-            "The default development secret must not be used in deployment."
-        )
     return _DEFAULT_SECRET
 
 
