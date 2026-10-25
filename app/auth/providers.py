@@ -164,11 +164,56 @@ def _verify_google(token: str) -> dict:
 
 
 def _verify_kakao(token: str) -> dict:
-    raise ProviderTokenError(
-        "Kakao verifier not configured yet. "
-        "Use 'mock:<subject>' in non-production, or configure "
-        "SAJU_KAKAO_APP_KEY and complete step 1-E."
-    )
+    # 정책적 fail-closed: 카카오 콘솔/서버 env 미설정이면 어떤 토큰도 수용 안 함.
+    # (실제 /v2/user/me 호출에는 app key가 필요 없지만,
+    #  운영 환경 셋업 의무를 강제하기 위해 요구.)
+    if not _env("SAJU_KAKAO_APP_KEY"):
+        raise ProviderTokenError(
+            "SAJU_KAKAO_APP_KEY is not configured on the server; "
+            "cannot verify Kakao tokens."
+        )
+
+    # Kakao /v2/user/me: 사용자 access token으로 프로필 조회.
+    # Kakao user id는 앱별 스코프이므로 그대로 subject로 사용.
+    try:
+        resp = httpx.get(
+            "https://kapi.kakao.com/v2/user/me",
+            headers={"Authorization": f"Bearer {token}"},
+            timeout=_HTTP_TIMEOUT_SECONDS,
+        )
+    except httpx.HTTPError as exc:
+        raise ProviderTokenError(
+            f"Kakao API request failed: {exc}"
+        ) from exc
+
+    if resp.status_code in (401, 403):
+        raise ProviderTokenError("Invalid Kakao access token.")
+    if resp.status_code != 200:
+        raise ProviderTokenError(
+            f"Kakao API returned status {resp.status_code}."
+        )
+
+    try:
+        payload = resp.json()
+    except ValueError as exc:
+        raise ProviderTokenError(
+            "Kakao API returned non-JSON response."
+        ) from exc
+
+    kid = payload.get("id") if isinstance(payload, dict) else None
+    if kid is None:
+        raise ProviderTokenError("Kakao API response missing 'id'.")
+
+    subject = str(kid).strip()
+    if not subject:
+        raise ProviderTokenError("Kakao returned empty user id.")
+    if len(subject) > _MAX_SUBJECT_LEN:
+        raise ProviderTokenError("Kakao user id too long.")
+
+    return {"provider": "kakao", "subject": subject}
+
+
+
 
 
 _VERIFIERS: dict = {

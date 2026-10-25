@@ -208,3 +208,107 @@ def test_google_mock_rejected_in_production(monkeypatch, google_setup):
     monkeypatch.setenv("SAJU_ENV", "production")
     with pytest.raises(prov.ProviderTokenError, match="production"):
         prov.verify_provider_token("google", "mock:dev-google")
+
+# =============================================================================
+# Kakao (1-E: /v2/user/me 토큰 조회)
+# =============================================================================
+
+class _FakeKakaoResp:
+    def __init__(self, status_code, payload=None, bad_json=False):
+        self.status_code = status_code
+        self._payload = payload
+        self._bad_json = bad_json
+
+    def json(self):
+        if self._bad_json:
+            raise ValueError("not json")
+        return self._payload
+
+
+def _fake_kakao_get(resp):
+    def fake_get(url, headers=None, timeout=None):
+        return resp
+    return fake_get
+
+
+@pytest.fixture
+def kakao_env(monkeypatch):
+    monkeypatch.setenv("SAJU_KAKAO_APP_KEY", "test-kakao-key")
+    monkeypatch.delenv("SAJU_ENV", raising=False)
+    yield
+
+
+def test_kakao_valid(monkeypatch, kakao_env):
+    resp = _FakeKakaoResp(200, {"id": 123456789})
+    monkeypatch.setattr(prov.httpx, "get", _fake_kakao_get(resp))
+    result = prov.verify_provider_token("kakao", "kakao-access-token-xyz")
+    assert result == {"provider": "kakao", "subject": "123456789"}
+
+
+def test_kakao_unauthorized(monkeypatch, kakao_env):
+    monkeypatch.setattr(prov.httpx, "get", _fake_kakao_get(_FakeKakaoResp(401)))
+    with pytest.raises(prov.ProviderTokenError, match="Invalid Kakao"):
+        prov.verify_provider_token("kakao", "bad-token")
+
+
+def test_kakao_forbidden(monkeypatch, kakao_env):
+    monkeypatch.setattr(prov.httpx, "get", _fake_kakao_get(_FakeKakaoResp(403)))
+    with pytest.raises(prov.ProviderTokenError, match="Invalid Kakao"):
+        prov.verify_provider_token("kakao", "bad-token")
+
+
+def test_kakao_server_error(monkeypatch, kakao_env):
+    monkeypatch.setattr(prov.httpx, "get", _fake_kakao_get(_FakeKakaoResp(500)))
+    with pytest.raises(prov.ProviderTokenError, match="status 500"):
+        prov.verify_provider_token("kakao", "some-token")
+
+
+def test_kakao_non_json(monkeypatch, kakao_env):
+    monkeypatch.setattr(
+        prov.httpx, "get", _fake_kakao_get(_FakeKakaoResp(200, bad_json=True))
+    )
+    with pytest.raises(prov.ProviderTokenError, match="non-JSON"):
+        prov.verify_provider_token("kakao", "some-token")
+
+
+def test_kakao_missing_id(monkeypatch, kakao_env):
+    monkeypatch.setattr(
+        prov.httpx, "get", _fake_kakao_get(_FakeKakaoResp(200, {"nickname": "x"}))
+    )
+    with pytest.raises(prov.ProviderTokenError, match="missing 'id'"):
+        prov.verify_provider_token("kakao", "some-token")
+
+
+def test_kakao_network_error(monkeypatch, kakao_env):
+    import httpx as real_httpx
+
+    def fake_get(url, headers=None, timeout=None):
+        raise real_httpx.ConnectError("boom")
+
+    monkeypatch.setattr(prov.httpx, "get", fake_get)
+    with pytest.raises(prov.ProviderTokenError, match="request failed"):
+        prov.verify_provider_token("kakao", "some-token")
+
+
+def test_kakao_missing_env(monkeypatch, kakao_env):
+    monkeypatch.delenv("SAJU_KAKAO_APP_KEY", raising=False)
+
+    def fake_get(*a, **k):
+        raise AssertionError("should not call HTTP when env missing")
+
+    monkeypatch.setattr(prov.httpx, "get", fake_get)
+    with pytest.raises(
+        prov.ProviderTokenError, match="SAJU_KAKAO_APP_KEY is not configured"
+    ):
+        prov.verify_provider_token("kakao", "some-token")
+
+
+def test_kakao_mock_still_works_in_dev(kakao_env):
+    result = prov.verify_provider_token("kakao", "mock:dev-kakao")
+    assert result == {"provider": "kakao", "subject": "dev-kakao"}
+
+
+def test_kakao_mock_rejected_in_production(monkeypatch, kakao_env):
+    monkeypatch.setenv("SAJU_ENV", "production")
+    with pytest.raises(prov.ProviderTokenError, match="production"):
+        prov.verify_provider_token("kakao", "mock:dev-kakao")
