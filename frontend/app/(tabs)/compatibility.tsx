@@ -1,4 +1,5 @@
 import { useLanguageStore } from "@/store/languageStore"; // SAJU-PATCH:api-lang
+import { useT } from "@/i18n";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet, ActivityIndicator, Switch } from "react-native";
@@ -16,6 +17,7 @@ import { TIMEZONE_LIST } from "@/constants/timezones";
 
 export default function CompatibilityScreen() {
   const lang = useLanguageStore((s) => s.lang); // SAJU-PATCH:lang-decl
+  const t = useT();
   const insets = useSafeAreaInsets();
   const myProfile = useProfileStore((s) => s.profile);
 
@@ -37,7 +39,7 @@ export default function CompatibilityScreen() {
   const [showTimezoneModal, setShowTimezoneModal] = useState(false);
 
   const [isCalculated, setIsCalculated] = useState(false);
-  const cityLabel = isCustomCity ? "직접 입력" : (CITY_LIST.find(c => c.key === city)?.label || "서울 (Seoul)");
+  const cityLabel = isCustomCity ? t("birthInput.customCity") : (CITY_LIST.find(c => c.key === city)?.label || "서울 (Seoul)");
   const tzLabel = TIMEZONE_LIST.find(t => t.key === customTimezone)?.label || customTimezone;
 
   const onSelectCity = (key: string) => {
@@ -112,16 +114,15 @@ export default function CompatibilityScreen() {
         return (
           <View style={{ marginTop: 30, padding: 24, backgroundColor: colors.primary + "10", borderRadius: radius.lg, alignItems: "center", borderWidth: 1, borderColor: colors.primary + "30" }}>
             <Text style={{ fontSize: 40, marginBottom: 12 }}>💎</Text>
-            <Text style={{ fontSize: 20, fontWeight: "800", color: colors.text, marginBottom: 8 }}>궁합 분석은 유료 기능입니다</Text>
+            <Text style={{ fontSize: 20, fontWeight: "800", color: colors.text, marginBottom: 8 }}>{t("compatibility.paywallTitle")}</Text>
             <Text style={{ fontSize: 15, color: colors.textMuted, textAlign: "center", marginBottom: 24, lineHeight: 22 }}>
-              상대방과의 4가지 케미(오행, 일간, 가치관, 신살)를 확인하려면{"\n"}
-              궁합 애드온을 구매하거나 프리미엄으로 업그레이드하세요.
+              {t("compatibility.paywallBody")}
             </Text>
             <TouchableOpacity 
               style={{ backgroundColor: colors.primary, paddingHorizontal: 24, paddingVertical: 16, borderRadius: radius.md, width: "100%", alignItems: "center" }} 
               onPress={() => setShowPayment(true)}
             >
-              <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>프리미엄 / 애드온 구매하러 가기</Text>
+              <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>{t("compatibility.paywallCta")}</Text>
             </TouchableOpacity>
           </View>
         );
@@ -143,15 +144,15 @@ export default function CompatibilityScreen() {
       <View style={{ marginTop: 30, gap: 16 }}>
         <View style={styles.resultCard}>
           <Text style={styles.resultLabel}>
-            {relationshipType === "romance" ? "연애 케미" : 
-             relationshipType === "business" ? "비즈니스 케미" : 
-             relationshipType === "friend" ? "친구 케미" : "가족 케미"}
+            {relationshipType === "romance" ? t("compatibility.resultRomance") : 
+             relationshipType === "business" ? t("compatibility.resultBusiness") : 
+             relationshipType === "friend" ? t("compatibility.resultFriend") : t("compatibility.resultFamily")}
           </Text>
           
           {/* 👇 100점 만점 점수 표시 및 게이지 바 */}
           <View style={{ flexDirection: "row", alignItems: "flex-end", marginBottom: 8 }}>
             <Text style={[styles.overallScore, { color }]}>{displayScore}</Text>
-            <Text style={{ fontSize: 20, fontWeight: "700", color: colors.textMuted, marginBottom: 10 }}> / 100점</Text>
+            <Text style={{ fontSize: 20, fontWeight: "700", color: colors.textMuted, marginBottom: 10 }}> / 100 {t("compatibility.scoreUnit")}</Text>
           </View>
           
           <View style={styles.gaugeBg}>
@@ -165,7 +166,7 @@ export default function CompatibilityScreen() {
 
         {compat.relationship_advice && (
           <View style={styles.tipCard}>
-            <Text style={styles.tipTitle}>💡 관계 맞춤 조언</Text>
+            <Text style={styles.tipTitle}>{t("compatibility.adviceTitle")}</Text>
             <Text style={styles.tipBody}>{compat.relationship_advice}</Text>
           </View>
         )}
@@ -174,7 +175,7 @@ export default function CompatibilityScreen() {
           <View key={key} style={styles.axisCard}>
             <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 8 }}>
               <Text style={styles.axisTitle}>
-                {key === "elements" ? "오행 상생" : key === "day_master" ? "일간 관계" : key === "ten_gods" ? "가치관/모드" : "신살 공명"}
+                {key === "elements" ? t("compatibility.axisElements") : key === "day_master" ? t("compatibility.axisDayMaster") : key === "ten_gods" ? t("compatibility.axisTenGods") : t("compatibility.axisSinsal")}
               </Text>
               <Text style={{ fontWeight: "700", color: gradeColors[axis.grade] }}>{axis.grade}</Text>
             </View>
@@ -189,76 +190,76 @@ export default function CompatibilityScreen() {
   if (!myProfile) {
     return (
       <View style={[styles.container, { justifyContent: "center", alignItems: "center" }]}>
-        <Text style={{ color: colors.textMuted }}>내 사주 정보를 먼저 입력해 주세요.</Text>
+        <Text style={{ color: colors.textMuted }}>{t("compatibility.noProfile")}</Text>
       </View>
     );
   }
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: insets.bottom + 40 }}>
-      <Text style={styles.title}>누구와의 케미를 확인해 볼까요?</Text>
+      <Text style={styles.title}>{t("compatibility.title")}</Text>
 
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginBottom: 24 }}>
         <View style={[styles.segmentWrap, { paddingRight: 0 }]}>
           {[
-            { key: "romance", label: "💖 연애" },
-            { key: "business", label: "💼 비즈니스" },
-            { key: "friend", label: "🤝 친구" },
-            { key: "family", label: "🏠 가족" },
-          ].map((t) => (
+            { key: "romance", label: t("compatibility.typeRomance") },
+            { key: "business", label: t("compatibility.typeBusiness") },
+            { key: "friend", label: t("compatibility.typeFriend") },
+            { key: "family", label: t("compatibility.typeFamily") },
+          ].map((tab) => (
             <TouchableOpacity 
-              key={t.key}
-              style={[styles.segmentBtn, relationshipType === t.key && styles.segmentBtnActive, { paddingHorizontal: 16 }]} 
-              onPress={() => setRelationshipType(t.key as any)}
+              key={tab.key}
+              style={[styles.segmentBtn, relationshipType === tab.key && styles.segmentBtnActive, { paddingHorizontal: 16 }]} 
+              onPress={() => setRelationshipType(tab.key as any)}
             >
-              <Text style={[styles.segmentText, relationshipType === t.key && styles.segmentTextActive]}>{t.label}</Text>
+              <Text style={[styles.segmentText, relationshipType === tab.key && styles.segmentTextActive]}>{tab.label}</Text>
             </TouchableOpacity>
           ))}
         </View>
       </ScrollView>
 
-      <Text style={styles.label}>상대방 생년월일</Text>
+      <Text style={styles.label}>{t("compatibility.partnerDate")}</Text>
       <TouchableOpacity style={styles.inputBtn} onPress={() => setShowDatePicker(true)}>
         <Text style={styles.inputText}>{partnerDate.getFullYear()}년 {partnerDate.getMonth() + 1}월 {partnerDate.getDate()}일</Text>
       </TouchableOpacity>
       {showDatePicker && <DateTimePicker value={partnerDate} mode="date" display="spinner" onChange={onChangeDate} />}
 
       <View style={styles.rowBetween}>
-        <Text style={styles.label}>상대방 출생 시간</Text>
+        <Text style={styles.label}>{t("compatibility.partnerTime")}</Text>
         <View style={styles.switchWrap}>
-          <Text style={{ fontSize: 13, color: colors.textMuted, marginRight: 6 }}>시간을 몰라요</Text>
+          <Text style={{ fontSize: 13, color: colors.textMuted, marginRight: 6 }}>{t("compatibility.unknownTime")}</Text>
           <Switch value={unknownTime} onValueChange={setUnknownTime} trackColor={{ false: colors.border, true: colors.primary }} />
         </View>
       </View>
 
       <TouchableOpacity style={[styles.inputBtn, unknownTime && { opacity: 0.4, backgroundColor: colors.bgMuted }]} onPress={() => { if(!unknownTime) setShowTimePicker(true); }} disabled={unknownTime}>
         <Text style={styles.inputText}>
-          {unknownTime ? "시간 모름 (정오 기준)" : `${String(partnerTime.getHours()).padStart(2, "0")}시 ${String(partnerTime.getMinutes()).padStart(2, "0")}분`}
+          {unknownTime ? t("compatibility.timeUnknown") : `${String(partnerTime.getHours()).padStart(2, "0")}:${String(partnerTime.getMinutes()).padStart(2, "0")}`}
         </Text>
       </TouchableOpacity>
       {showTimePicker && <DateTimePicker value={partnerTime} mode="time" display="spinner" onChange={onChangeTime} />}
 
-      <Text style={styles.label}>상대방 출생지</Text>
+      <Text style={styles.label}>{t("compatibility.partnerCity")}</Text>
       <TouchableOpacity style={styles.inputBtn} onPress={() => setShowCityModal(true)}>
         <Text style={styles.inputText}>{cityLabel}</Text>
       </TouchableOpacity>
 
       {isCustomCity && (
         <View style={styles.customBox}>
-          <Text style={styles.label}>출생지 타임존 (Timezone)</Text>
+          <Text style={styles.label}>{t("compatibility.partnerTimezone")}</Text>
           <TouchableOpacity style={styles.textInput} onPress={() => setShowTimezoneModal(true)}>
             <Text style={{ fontSize: 15, color: colors.text }}>{tzLabel}</Text>
           </TouchableOpacity>
         </View>
       )}
 
-      <Text style={styles.label}>상대방 성별</Text>
+      <Text style={styles.label}>{t("compatibility.partnerGender")}</Text>
       <View style={{ flexDirection: "row", gap: 10, marginBottom: 24 }}>
         <TouchableOpacity style={[styles.genderBtn, gender === "M" && styles.genderBtnActive]} onPress={() => setGender("M")}>
-          <Text style={[styles.genderText, gender === "M" && styles.genderTextActive]}>남성</Text>
+          <Text style={[styles.genderText, gender === "M" && styles.genderTextActive]}>{t("compatibility.male")}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.genderBtn, gender === "F" && styles.genderBtnActive]} onPress={() => setGender("F")}>
-          <Text style={[styles.genderText, gender === "F" && styles.genderTextActive]}>여성</Text>
+          <Text style={[styles.genderText, gender === "F" && styles.genderTextActive]}>{t("compatibility.female")}</Text>
         </TouchableOpacity>
       </View>
 
@@ -267,7 +268,7 @@ export default function CompatibilityScreen() {
         onPress={handleCalculate}
         disabled={!myProfile}
       >
-        <Text style={styles.nextBtnText}>케미 보기</Text>
+        <Text style={styles.nextBtnText}>{t("compatibility.calculate")}</Text>
       </TouchableOpacity>
 
       {isCalculated && renderResult()}

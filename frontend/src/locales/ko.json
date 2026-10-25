@@ -68,7 +68,8 @@
     "axisElements": "오행 상생",
     "axisDayMaster": "일간 관계",
     "axisTenGods": "가치관/모드",
-    "axisSinsal": "신살 공명"
+    "axisSinsal": "신살 공명",
+    "partnerTimezone": "출생지 타임존 (Timezone)"
   },
   "settings": {
     "accountInfo": "내 계정 정보",
