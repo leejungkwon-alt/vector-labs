@@ -1,8 +1,19 @@
 {
+  "name": "Mountain Spring",
   "pillar": "戊子",
-  "hero": "",
-  "narrative": [],
-  "shadows": [],
-  "advice": [],
-  "keywords": []
+  "hero": "A clear spring flowing beneath a massive mountain.",
+  "narrative": [
+    "You possess the stability of a mountain and the wisdom of water. You may look calm on the outside, but deep insight flows within."
+  ],
+  "shadows": [
+    "You might delay action because you think too deeply."
+  ],
+  "advice": [
+    "Trust your intuition and take a step forward."
+  ],
+  "keywords": [
+    "stability",
+    "grounded",
+    "power"
+  ]
 }

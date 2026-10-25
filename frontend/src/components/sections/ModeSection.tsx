@@ -1,9 +1,11 @@
 // frontend/src/components/sections/ModeSection.tsx
 import { View, Text } from "react-native";
 import { ss, CompatBox, RedFlagsBox } from "./shared";
+import { useT } from "@/i18n";
 import type { ModeSection } from "../../../types";
 
 export function ModeSectionView({ section }: { section: ModeSection }) {
+  const t = useT();
   const allActions = section.actions || [];
   const featured = section.action || allActions[0];
   const rest = allActions.filter(a => a !== featured);
@@ -16,7 +18,7 @@ export function ModeSectionView({ section }: { section: ModeSection }) {
 
       {section.patterns && section.patterns.length > 0 && (
         <View style={{ marginTop: 12 }}>
-          <Text style={ss.blockTitle}>패턴</Text>
+          <Text style={ss.blockTitle}>{t("sections.patterns")}</Text>
           {section.patterns.map((p, i) => (
             <Text key={i} style={ss.paragraph}>• {p}</Text>
           ))}
@@ -25,7 +27,7 @@ export function ModeSectionView({ section }: { section: ModeSection }) {
 
       {rest.length > 0 && (
         <View style={{ marginTop: 12 }}>
-          <Text style={ss.blockTitle}>추가 실천</Text>
+          <Text style={ss.blockTitle}>{t("sections.additionalActions")}</Text>
           {rest.map((a, i) => (
             <Text key={i} style={ss.paragraph}>→ {a}</Text>
           ))}

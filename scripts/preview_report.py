@@ -5,6 +5,14 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+# --- Hangul readings for Hanja (inlined from removed template_interpreter) ---
+HANJA_TO_HANGUL = {
+    "甲": "갑", "乙": "을", "丙": "병", "丁": "정", "戊": "무",
+    "己": "기", "庚": "경", "辛": "신", "壬": "임", "癸": "계",
+    "子": "자", "丑": "축", "寅": "인", "卯": "묘", "辰": "진", "巳": "사",
+    "午": "오", "未": "미", "申": "신", "酉": "유", "戌": "술", "亥": "해",
+}
+
 from datetime import date
 from app.engine.calculator import calculate_saju
 from app.semantic.tagger import build_semantic_profile
@@ -503,7 +511,6 @@ def main():
         f"{result['day_pillar']}  {hp}"
     )
     if args.lang in ("ko", "both"):
-        from app.services.template_interpreter import HANJA_TO_HANGUL
         readings = "  ".join(
             "".join(HANJA_TO_HANGUL.get(c, c) for c in p)
             for p in (

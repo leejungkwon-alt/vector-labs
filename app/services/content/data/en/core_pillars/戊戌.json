@@ -1,8 +1,19 @@
 {
+  "name": "Dry Mountain",
   "pillar": "戊戌",
-  "hero": "",
-  "narrative": [],
-  "shadows": [],
-  "advice": [],
-  "keywords": []
+  "hero": "A mountain on dry earth.",
+  "narrative": [
+    "You have the strong patience to endure harsh environments. You forge yourself solid."
+  ],
+  "shadows": [
+    "You can be unnecessarily stubborn."
+  ],
+  "advice": [
+    "Find the courage to let go."
+  ],
+  "keywords": [
+    "stability",
+    "grounded",
+    "power"
+  ]
 }

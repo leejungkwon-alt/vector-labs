@@ -1,8 +1,19 @@
 {
+  "name": "Mountain in Fire",
   "pillar": "戊午",
-  "hero": "",
-  "narrative": [],
-  "shadows": [],
-  "advice": [],
-  "keywords": []
+  "hero": "A volcano holding a blazing fire.",
+  "narrative": [
+    "You possess immense energy and passion. Once ignited, you burn hotter than anyone."
+  ],
+  "shadows": [
+    "Your explosive energy can overwhelm those around you."
+  ],
+  "advice": [
+    "Rest to regulate your inner heat."
+  ],
+  "keywords": [
+    "stability",
+    "grounded",
+    "power"
+  ]
 }

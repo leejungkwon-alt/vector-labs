@@ -3,13 +3,13 @@ import { View, Text } from "react-native";
 import { colors } from "@/theme";
 import { ss } from "./shared";
 import { DonutChart, ELEMENT_COLORS } from "@/components/DonutChart";
+import { useT } from "@/i18n";
 import type { EnergySection } from "../../../types";
 
-const ELEM_LABELS: Record<string, string> = {
-  "木": "성장(Wood)", "火": "불꽃(Spark)", "土": "대지(Earth)", "金": "예리함(Metal)", "水": "흐름(Water)",
-};
+
 
 export function EnergySectionView({ section }: { section: EnergySection }) {
+  const t = useT();
   const pct = section.percentages || {};
   const pctEntries = Object.entries(pct);
 
@@ -28,7 +28,7 @@ export function EnergySectionView({ section }: { section: EnergySection }) {
               <View key={elem} style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
                 <View style={{ width: 12, height: 12, borderRadius: 6, backgroundColor: ELEMENT_COLORS[elem] || colors.primary }} />
                 <Text style={{ fontSize: 13, color: colors.text, fontWeight: "500" }}>
-                  {ELEM_LABELS[elem] || elem} {val}%
+                  {t(`sections.${({"木":"wood","火":"fire","土":"earth","金":"metal","水":"water"}[elem] || "unknown")}`)} {val}%
                 </Text>
               </View>
             ))}

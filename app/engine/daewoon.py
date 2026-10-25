@@ -2,6 +2,7 @@
 from datetime import datetime, timezone
 from app.engine.solar_terms import get_adjacent_terms
 from app.engine.pillars import HEAVENLY_STEMS, EARTHLY_BRANCHES, get_month_pillar
+from app.services.content.loader import load_pack
 
 YANG_STEMS = {"甲", "丙", "戊", "庚", "壬"}
 
@@ -58,10 +59,22 @@ def calculate_daewoon(utc_instant, gender, year_stem, solar_year, month_branch_i
             "pillar": pillar,
         })
 
-    # 표시 문자열: 일반 케이스는 "N년 M개월". years_int == 0일 때만 보정 안내 추가.
-    display = f"{years_int}년 {months_int}개월"
-    if years_int == 0:
-        display += f" (시작 나이 {start_age_first}세로 보정)"
+    # 표시 문자열: 언어 중립 데이터(data/{lang}/daewoon.json). 기본 "ko".
+    try:
+        _daewoon_pack = load_pack("ko", "daewoon")
+    except KeyError:
+        _daewoon_pack = {
+            "DISPLAY_TPL": "{years}y {months}m",
+            "CORRECTION_TPL": " (corrected to start age {start_age})",
+        }
+    display = _daewoon_pack["DISPLAY_TPL"].format(
+        years=years_int, months=months_int,
+    )
+    corrected = (years_int == 0)
+    if corrected:
+        display += _daewoon_pack["CORRECTION_TPL"].format(
+            start_age=start_age_first,
+        )
 
     return {
         "is_forward": is_forward,
@@ -71,5 +84,6 @@ def calculate_daewoon(utc_instant, gender, year_stem, solar_year, month_branch_i
         "daewoon_months": months_int,
         "daewoon_display": display,
         "start_age_first_daewoon": start_age_first,
+        "daewoon_was_corrected": corrected,
         "daewoon_pillars": daewoon_list,
     }

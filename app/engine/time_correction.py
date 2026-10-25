@@ -3,6 +3,30 @@ from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 
+class DSTGapError(ValueError):
+    """DST로 건너뛴 존재하지 않는 시각. 엔드포인트에서 lang별 재구성."""
+    def __init__(self, clock, tz_key):
+        self.clock = clock
+        self.tz_key = tz_key
+        super().__init__(
+            f"존재하지 않는 시각입니다: {clock}은 {tz_key}에서 DST로 건너뛴 시각입니다."
+        )
+
+
+class DSTAmbiguousError(ValueError):
+    """DST 종료로 두 번 발생하는 모호한 시각. 엔드포인트에서 lang별 재구성."""
+    def __init__(self, clock, tz_key, off0, off1):
+        self.clock = clock
+        self.tz_key = tz_key
+        self.off0 = off0
+        self.off1 = off1
+        super().__init__(
+            f"모호한 시각입니다: {clock}은 {tz_key}에서 두 번 발생합니다. "
+            f"dst_fold=0(offset {off0}) 또는 dst_fold=1(offset {off1})로 "
+            "재요청해 주세요."
+        )
+
+
 def get_zone(timezone_str: str) -> ZoneInfo:
     try:
         return ZoneInfo(timezone_str)
@@ -28,9 +52,7 @@ def _resolve_wall_clock(clock: datetime, tz: ZoneInfo,
     # gap 검출
     round_trip = aware0.astimezone(timezone.utc).astimezone(tz).replace(tzinfo=None)
     if round_trip != clock:
-        raise ValueError(
-            f"존재하지 않는 시각입니다: {clock}은 {tz.key}에서 DST로 건너뛴 시각입니다."
-        )
+        raise DSTGapError(clock, tz.key)
 
     # ambiguity 검출
     aware1 = clock.replace(tzinfo=tz, fold=1)
@@ -39,11 +61,7 @@ def _resolve_wall_clock(clock: datetime, tz: ZoneInfo,
     if is_ambiguous and dst_fold is None:
         off0 = aware0.utcoffset()
         off1 = aware1.utcoffset()
-        raise ValueError(
-            f"모호한 시각입니다: {clock}은 {tz.key}에서 두 번 발생합니다. "
-            f"dst_fold=0(offset {off0}) 또는 dst_fold=1(offset {off1})로 "
-            "재요청해 주세요."
-        )
+        raise DSTAmbiguousError(clock, tz.key, off0, off1)
 
     return clock.replace(tzinfo=tz, fold=dst_fold or 0)
 

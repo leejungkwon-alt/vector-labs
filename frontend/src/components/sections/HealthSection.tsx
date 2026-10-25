@@ -2,9 +2,11 @@
 import { View, Text } from "react-native";
 import { colors } from "@/theme";
 import { ss } from "./shared";
+import { useT } from "@/i18n";
 import type { HealthSection } from "../../../types";
 
 export function HealthSectionView({ section }: { section: HealthSection }) {
+  const t = useT();
   return (
     <View>
       <Text style={ss.coreHero}>{section.hero}</Text>
@@ -19,7 +21,7 @@ export function HealthSectionView({ section }: { section: HealthSection }) {
 
       {section.practices.length > 0 && (
         <View style={{ marginTop: 8 }}>
-          <Text style={ss.blockTitle}>실천</Text>
+          <Text style={ss.blockTitle}>{t("sections.practices")}</Text>
           {section.practices.map((p, i) => (
             <Text key={i} style={ss.paragraph}>• {p}</Text>
           ))}

@@ -99,7 +99,8 @@ _SCHEMA_STATEMENTS = [
     CREATE TABLE IF NOT EXISTS telegram_subscribers (
         telegram_id TEXT PRIMARY KEY,
         user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-        created_at TEXT NOT NULL
+        created_at TEXT NOT NULL,
+        language_code TEXT
     )
     """,
 ]
@@ -276,13 +277,18 @@ class _BaseRepository:
         )
 
     # ---- telegram subscribers ----
-    def upsert_telegram_subscriber(self, telegram_id: str, user_id: str) -> None:
-        """검증된 telegram_id 를 사용자 계정에 연결 (재등록 시 소유자 갱신)."""
+    def upsert_telegram_subscriber(
+        self, telegram_id: str, user_id: str, lang: str = "ko"
+    ) -> None:
+        """검증된 telegram_id 를 사용자 계정에 연결 (재등록 시 소유자·lang 갱신)."""
         self._run(
-            "INSERT INTO telegram_subscribers (telegram_id, user_id, created_at) "
-            "VALUES (?, ?, ?) "
-            "ON CONFLICT(telegram_id) DO UPDATE SET user_id = excluded.user_id",
-            (telegram_id, user_id, _now_iso()),
+            "INSERT INTO telegram_subscribers "
+            "(telegram_id, user_id, created_at, language_code) "
+            "VALUES (?, ?, ?, ?) "
+            "ON CONFLICT(telegram_id) DO UPDATE SET "
+            "user_id = excluded.user_id, "
+            "language_code = excluded.language_code",
+            (telegram_id, user_id, _now_iso(), lang),
         )
 
     def delete_telegram_subscriber(self, telegram_id: str) -> bool:
@@ -295,9 +301,14 @@ class _BaseRepository:
         )
 
     def list_telegram_subscribers(self) -> list:
-        """[{telegram_id, user_id}] — 프로필이 있는 구독자만 푸시 대상."""
+        """[{telegram_id, user_id, language_code}] — 프로필이 있는 구독자만 푸시 대상.
+
+        language_code 는 NULL 가능 (Phase 4-B 이전 등록 row). 이 경우
+        호출자가 전역 lang 폴백을 적용한다.
+        """
         return self._all(
-            "SELECT telegram_id, user_id FROM telegram_subscribers ORDER BY created_at"
+            "SELECT telegram_id, user_id, language_code "
+            "FROM telegram_subscribers ORDER BY created_at"
         )
 
 
@@ -320,6 +331,18 @@ class Repository(_BaseRepository):
         with self._lock, self._conn:
             for stmt in _SCHEMA_STATEMENTS:
                 self._conn.execute(stmt)
+            # migration (Phase 4-B): existing DBs need ADD COLUMN
+            cols = {
+                r[1]
+                for r in self._conn.execute(
+                    "PRAGMA table_info(telegram_subscribers)"
+                ).fetchall()
+            }
+            if "language_code" not in cols:
+                self._conn.execute(
+                    "ALTER TABLE telegram_subscribers "
+                    "ADD COLUMN language_code TEXT"
+                )
 
     def _one(self, sql, params=()):
         with self._lock:
@@ -374,6 +397,18 @@ class PostgresRepository(_BaseRepository):
             conn.execute("SELECT pg_advisory_xact_lock(7340301)")
             for stmt in _SCHEMA_STATEMENTS:
                 conn.execute(stmt)
+            # migration (Phase 4-B)
+            row = conn.execute(
+                "SELECT 1 FROM information_schema.columns "
+                "WHERE table_name = 'telegram_subscribers' "
+                "AND column_name = 'language_code' "
+                "AND table_schema = current_schema()"
+            ).fetchone()
+            if row is None:
+                conn.execute(
+                    "ALTER TABLE telegram_subscribers "
+                    "ADD COLUMN language_code TEXT"
+                )
 
     def _one(self, sql, params=()):
         with self._pool.connection() as conn:

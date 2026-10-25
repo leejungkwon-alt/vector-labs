@@ -190,7 +190,7 @@
     "compatibility": "Chemistry",
     "bestMatch": "Best match",
     "challengingMatch": "Challenging match",
-    "redFlags": "Watch out",
+    "redFlags": "Red flags",
     "coreEssence": "(Core)",
     "energy": "Energy",
     "distribution": "Distribution",
@@ -207,9 +207,17 @@
     "hiddenFaces": "Your hidden three faces",
     "lifeStage": "Life stage",
     "age": "y",
-    "yearsOld": "yo",
+    "yearsOld": " y/o",
     "male": "Male",
-    "female": "Female"
+    "female": "Female",
+    "powerElement": "Power",
+    "supportElement": "Support",
+    "colors": "Colors",
+    "numbers": "Numbers",
+    "directions": "Directions",
+    "activities": "Activities",
+    "foods": "Foods",
+    "watchOutLabel": "Watch out"
   },
   "api": {
     "timeout": "Server timed out. Please check your network."

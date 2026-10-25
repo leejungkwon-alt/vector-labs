@@ -27,6 +27,7 @@ from app.auth.repository import get_repository
 from app.engine.calculator import calculate_saju
 from app.semantic.tagger import build_semantic_profile
 from app.services.visual_generator import get_daily_wallpaper_url
+from app.services.content.loader import load_pack
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -39,6 +40,11 @@ class TelegramInitData(BaseModel):
     init_data: str = Field(
         min_length=1,
         description="Telegram.WebApp.initData 원문 (서버가 서명을 검증합니다)",
+    )
+    lang: str = Field(
+        default="ko",
+        max_length=8,
+        description="UI 언어 (ko/en/ja/zh_cn/zh_tw). 미지원 값은 en 폴백.",
     )
 
 
@@ -114,7 +120,7 @@ def register_user(
     except ValueError as e:
         raise HTTPException(status_code=403, detail=str(e))
 
-    repo.upsert_telegram_subscriber(tg_id, user["id"])
+    repo.upsert_telegram_subscriber(tg_id, user["id"], payload.lang or "ko")
     return {"status": "ok", "message": "Subscribed to daily push."}
 
 
@@ -153,10 +159,29 @@ def _wallpaper_for(profile_row: dict) -> str:
 
 
 @router.post("/push-daily")
-def push_daily_wallpapers(authorization: str | None = Header(default=None)):
+def push_daily_wallpapers(
+    authorization: str | None = Header(default=None),
+    lang: str = "ko",
+):
     _check_cron_auth(authorization)
     bot_token = _bot_token()
     webapp_url = os.getenv("SAJU_WEBAPP_URL", "https://vector-labs-three.vercel.app")
+
+    # 캡션 템플릿: row별 language_code → 전역 lang 파라미터 → "ko" 순 폴백.
+    # (Phase 4-B 이전 등록 row 는 language_code IS NULL → ?lang= 사용)
+    _caption_cache: dict[str, str] = {}
+
+    def _caption_for(row_lang: str | None) -> str:
+        key = (row_lang or lang or "ko").strip() or "ko"
+        if key not in _caption_cache:
+            try:
+                _caption_cache[key] = load_pack(key, "telegram")["PUSH_DAILY_CAPTION"]
+            except KeyError:
+                try:
+                    _caption_cache[key] = load_pack("en", "telegram")["PUSH_DAILY_CAPTION"]
+                except KeyError:
+                    _caption_cache[key] = "{url}"
+        return _caption_cache[key]
 
     repo = get_repository()
     sent = failed = removed = skipped = 0
@@ -182,10 +207,7 @@ def push_daily_wallpapers(authorization: str | None = Header(default=None)):
                     json={
                         "chat_id": sub["telegram_id"],
                         "photo": image_url,
-                        "caption": (
-                            "🌅 Good morning!\n오늘 당신을 채워줄 에너지가 도착했어요.\n"
-                            f"[3D 배경화면 다운로드하기]({webapp_url})"
-                        ),
+                        "caption": _caption_for(sub.get("language_code")).format(url=webapp_url),
                         "parse_mode": "Markdown",
                     },
                 )

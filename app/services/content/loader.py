@@ -67,6 +67,22 @@ def load_pack(lang: str, section: str) -> dict:
     raise KeyError(f"Data file not found: {data_path}")
 
 
+def load_labels(lang: str) -> dict:
+    """UI 라벨 팩. ko/en만 존재하므로 미지원 언어는 en으로 폴백."""
+    try:
+        return load_pack(lang, "labels")
+    except KeyError:
+        return load_pack("en", "labels")
+
+
+def load_errors(lang: str) -> dict:
+    """에러 메시지 팩. ko/en만 존재하므로 미지원 언어는 en으로 폴백."""
+    try:
+        return load_pack(lang, "errors")
+    except KeyError:
+        return load_pack("en", "errors")
+
+
 def list_available(lang: str) -> list:
     """해당 언어에서 사용 가능한 섹션 목록 (JSON 파일 기준)."""
     import pathlib

@@ -35,27 +35,27 @@ def test_score_daewoon_1974_values():
 
     # 丁卯: 火(-1) + 木(-2) = -3 → 흉
     assert by_index[1]["score"] == -3.0
-    assert by_index[1]["grade"]["ko"] == "흉"
+    assert by_index[1]["grade"] == "CHALLENGING"
 
     # 戊辰: 土(+1) + 土(+2) = +3 → 대길
     assert by_index[2]["score"] == 3.0
-    assert by_index[2]["grade"]["ko"] == "대길"
+    assert by_index[2]["grade"] == "PEAK"
 
     # 己巳: 土(+1) + 火(-2) = -1 → 주의
     assert by_index[3]["score"] == -1.0
-    assert by_index[3]["grade"]["ko"] == "주의"
+    assert by_index[3]["grade"] == "CAUTION"
 
     # 庚午: 金(+0.5) + 火(-2) = -1.5 → 주의
     assert by_index[4]["score"] == -1.5
-    assert by_index[4]["grade"]["ko"] == "주의"
+    assert by_index[4]["grade"] == "CAUTION"
 
     # 辛未: 金(+0.5) + 土(+2) = +2.5 → 대길
     assert by_index[5]["score"] == 2.5
-    assert by_index[5]["grade"]["ko"] == "대길"
+    assert by_index[5]["grade"] == "PEAK"
 
     # 壬申: 水(0) + 金(+1) = +1 → 길
     assert by_index[6]["score"] == 1.0
-    assert by_index[6]["grade"]["ko"] == "길"
+    assert by_index[6]["grade"] == "FAVORABLE"
 
 
 def test_score_elements_present():

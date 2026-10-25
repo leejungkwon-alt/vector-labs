@@ -1,8 +1,19 @@
 {
+  "name": "불을 품은 산",
   "pillar": "戊午",
-  "hero": "",
-  "narrative": [],
-  "shadows": [],
-  "advice": [],
-  "keywords": []
+  "hero": "뜨거운 불을 품은 화산",
+  "narrative": [
+    "당신은 거대한 에너지와 열정을 지녔습니다. 한 번 불붙으면 누구보다 뜨겁게 타오릅니다."
+  ],
+  "shadows": [
+    "에너지가 폭발할 때 주변을 압도할 수 있습니다."
+  ],
+  "advice": [
+    "휴식을 통해 내면의 열기를 조절하세요."
+  ],
+  "keywords": [
+    "stability",
+    "grounded",
+    "power"
+  ]
 }

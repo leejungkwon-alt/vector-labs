@@ -2,9 +2,11 @@
 import { View, Text } from "react-native";
 import { colors, gradeColors } from "@/theme";
 import { ss } from "./shared";
+import { useT } from "@/i18n";
 import type { TimelineSection } from "../../../types";
 
 export function TimelineSectionView({ section }: { section: TimelineSection }) {
+  const t = useT();
   return (
     <View>
       {section.hero && <Text style={ss.coreHero}>{section.hero}</Text>}
@@ -18,8 +20,8 @@ export function TimelineSectionView({ section }: { section: TimelineSection }) {
         >
           <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 4, flexWrap: "wrap", gap: 4 }}>
             <Text style={{ fontSize: 15, fontWeight: "700", color: colors.text }}>
-              {item.ages[0]}–{item.ages[1]}세{item.pillar_name ? ` · ${item.pillar_name}` : ""}
-              {item.is_current && <Text style={{ color: colors.primary }}> · 현재</Text>}
+              {item.ages[0]}–{item.ages[1]}{t("sections.yearsOld")}{item.pillar_name ? ` · ${item.pillar_name}` : ""}
+              {item.is_current && <Text style={{ color: colors.primary }}> · {t("sections.current")}</Text>}
             </Text>
             <Text
               style={{

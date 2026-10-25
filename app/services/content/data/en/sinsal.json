@@ -4,43 +4,50 @@
       "name": "Magnetic Draw",
       "headline": "People notice you — often before you've said a word.",
       "body": "You carry a natural charisma that draws others in. This isn't performative; it's a quiet gravity. People remember you, and they want to be around you.",
-      "advice": "Use this pull responsibly. Let people in, but don't collect them. Depth beats volume."
+      "advice": "Use this pull responsibly. Let people in, but don't collect them. Depth beats volume.",
+      "name_traditional": ""
     },
     "RESTLESS_FEET": {
       "name": "Restless Feet",
       "headline": "You are wired for movement.",
       "body": "Staying in one place — physically or mentally — wears you down. You thrive when you're traveling, exploring, or constantly learning something new.",
-      "advice": "Build movement into your life intentionally. If you can't travel, change your routine."
+      "advice": "Build movement into your life intentionally. If you can't travel, change your routine.",
+      "name_traditional": ""
     },
     "SOLITARY_DEPTH": {
       "name": "Solitary Depth",
       "headline": "You have a rich inner world that few get to see.",
       "body": "You are drawn to quiet, introspection, and solitary pursuits. Your creativity and insight come from this deep well. It's not loneliness — it's space.",
-      "advice": "Protect your alone time. It's not a luxury; it's your source of power."
+      "advice": "Protect your alone time. It's not a luxury; it's your source of power.",
+      "name_traditional": ""
     },
     "ALLY_MAGNET": {
       "name": "Ally Magnet",
       "headline": "You attract people who want to help you.",
       "body": "You naturally draw in mentors, allies, and supporters. When you're in trouble, help arrives from unexpected places. This is a rare and valuable gift.",
-      "advice": "Accept help gracefully. You don't have to do everything alone."
+      "advice": "Accept help gracefully. You don't have to do everything alone.",
+      "name_traditional": ""
     },
     "SCHOLAR_MIND": {
       "name": "Scholar Mind",
       "headline": "You have a natural hunger for knowledge.",
       "body": "You process information deeply and love learning for its own sake. You are at your best when you're studying, writing, or teaching others.",
-      "advice": "Never stop learning. Your mind is your greatest asset."
+      "advice": "Never stop learning. Your mind is your greatest asset.",
+      "name_traditional": ""
     },
     "SHARP_EDGE": {
       "name": "Sharp Edge",
       "headline": "You have a competitive, unyielding drive.",
       "body": "You are ambitious, competitive, and fiercely independent. When you decide to win, you don't stop. This is a double-edged sword — it can burn you out if you don't pace yourself.",
-      "advice": "Direct your intensity toward your goals, not against yourself."
+      "advice": "Direct your intensity toward your goals, not against yourself.",
+      "name_traditional": ""
     },
     "COMMANDER": {
       "name": "Commander",
       "headline": "You are a natural leader with a strong moral compass.",
       "body": "You take charge when others hesitate. You have a strong sense of justice and aren't afraid to make tough decisions. People look to you when things get hard.",
-      "advice": "Lead with empathy. Strength without kindness becomes isolation."
+      "advice": "Lead with empathy. Strength without kindness becomes isolation.",
+      "name_traditional": ""
     }
   }
 }

@@ -20,6 +20,8 @@ from app.semantic.tagger import _extract_pillars
 from app.services.daily_writer import write_daily_section
 from app.auth.dependencies import get_current_user
 from app.schemas.daily import DailyRequest, DailyResponse
+from app.api.errors import format_dst_error
+from app.engine.time_correction import DSTAmbiguousError, DSTGapError
 
 
 logger = logging.getLogger(__name__)
@@ -68,6 +70,8 @@ def api_daily(
         pillars = _extract_pillars(result)
         day_stem = pillars["day_pillar"][0]
         yongsin = derive_useful_god(pillars)
+    except (DSTAmbiguousError, DSTGapError) as e:
+        raise HTTPException(status_code=400, detail=format_dst_error(payload.lang, e))
     except (ValueError, TypeError) as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception:

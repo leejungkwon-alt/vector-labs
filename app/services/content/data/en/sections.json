@@ -43,7 +43,17 @@
     "THE_TWIN": "Twin",
     "THE_RIVAL": "Rival",
     "THE_ALLY": "Ally",
-    "THE_EMPATH": "Empath"
+    "THE_EMPATH": "Empath",
+    "THE_PIONEER": "Pioneer",
+    "THE_ADAPTER": "Adapter",
+    "THE_RADIATOR": "Radiator",
+    "THE_KEEPER": "Keeper",
+    "THE_ANCHOR": "Anchor",
+    "THE_CULTIVATOR": "Cultivator",
+    "THE_BLADE": "Blade",
+    "THE_GEM": "Gem",
+    "THE_DEEP": "Deep",
+    "THE_SPRING": "Spring"
   },
   "ENERGY_HERO_TEMPLATES": {
     "missing": "You run on {dominant} — with almost no {missing}.",

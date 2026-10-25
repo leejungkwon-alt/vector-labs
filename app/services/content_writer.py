@@ -5,7 +5,7 @@ Semantic Tags → 자연어 콘텐츠.
 엔진(semantic profile)은 언어 중립.
 콘텐츠는 이 writer가 언어별 팩에서 꺼내 조립.
 """
-from app.services.content.loader import load_pack
+from app.services.content.loader import load_labels, load_pack
 from app.services.personalizer import generate_personalized_notes
 from app.compliance.crisis_resources import get_crisis_resources
 from app.services.visual_generator import get_daily_wallpaper_url
@@ -33,6 +33,38 @@ def _select_variant_content(
         )
         return pick_variant(entry, seed_parts=seed)
     return {}
+
+
+def _personalized_addon(profile: dict, lang: str, section_name: str) -> str:
+    """
+    심화 섹션(love/career/wealth) 본문 뒤에 붙는 개인화 문단.
+    데이터는 data/{lang}/labels.json 의 PERSONALIZATION_BLOCK.
+    없는 항목은 조용히 생략.
+    """
+    try:
+        block = load_labels(lang).get("PERSONALIZATION_BLOCK") or {}
+    except KeyError:
+        return ""
+    if not block:
+        return ""
+
+    intensity = profile["archetype"].get("intensity", "BALANCED_CORE")
+    dom = (profile.get("energy_signature", {}).get("dominant") or ["BALANCED"])[0]
+
+    mode_field = {"love": "bond_mode", "career": "work_mode", "wealth": "money_mode"}.get(section_name)
+    mode = profile.get(mode_field, "") if mode_field else ""
+
+    parts = [
+        block.get("BY_INTENSITY", {}).get(intensity, ""),
+        block.get("BY_ELEMENT", {}).get(dom, ""),
+        block.get("BY_MODE_SECTION", {}).get(section_name, {}).get(mode, ""),
+    ]
+    parts = [p for p in parts if p]
+    if not parts:
+        return ""
+
+    header = block.get("HEADER", "")
+    return f"\n\n[{header}]\n" + " ".join(parts)
 
 
 # ============================================================
@@ -181,7 +213,7 @@ def _energy_hero(lang: str, dominant: list, missing: list, deficient: list) -> s
     def name(sig: str) -> str:
         return display.get(sig, sig)
 
-    balance_fallback = {"ko": "균형", "en": "balance"}.get(lang, "balance")
+    balance_fallback = load_labels(lang)["BALANCE_LABEL"]
 
     dom = ", ".join(name(s) for s in dominant) or balance_fallback
     miss = ", ".join(name(s) for s in missing)
@@ -358,7 +390,7 @@ def _health_hero(lang: str, dominant: list, deficient: list, missing: list) -> s
     if deficient and "deficient" in templates:
         return templates["deficient"].format(dominant=join(dominant), deficient=join(deficient))
     return templates.get("default", "{dominant} energy shapes your body.").format(
-        dominant=join(dominant) or ("균형" if lang == "ko" else "Balanced")
+        dominant=join(dominant) or (load_labels(lang)["BALANCE_LABEL"])
     )
 
 
@@ -529,22 +561,6 @@ def write_monthly_section(profile: dict, lang: str = "en", user_id: str | None =
 # ============================================================
 # CHART (C+ Global)
 # ============================================================
-_LAYER_META = {
-    "en": {
-        "year_pillar":  {"label": "Childhood", "role": "Your roots — how you started and family influence"},
-        "month_pillar": {"label": "Career",    "role": "Your social life — how you work and interact"},
-        "day_pillar":   {"label": "Core Self", "role": "Your true identity — who you are at your core"},
-        "hour_pillar":  {"label": "Future",    "role": "Your inner world — your dreams and later years"},
-    },
-    "ko": {
-        "year_pillar":  {"label": "어린 시절 (년주)", "role": "가족과 유년기의 영향 — 당신의 시작점"},
-        "month_pillar": {"label": "사회 생활 (월주)", "role": "직장과 사회에서의 모습 — 당신의 활동 무대"},
-        "day_pillar":   {"label": "나의 본질 (일주)", "role": "가장 핵심이 되는 나 — 진짜 내 모습"},
-        "hour_pillar":  {"label": "미래와 내면 (시주)", "role": "나이 들수록 드러나는 꿈과 내면의 세계"},
-    },
-}
-
-
 from app.semantic.tags import (
     ARCHETYPES as _ARCHETYPES_SRC,
     ELEMENT_SIGNATURES as _ELEM_SIG_SRC,
@@ -560,7 +576,7 @@ _STEM_TO_ELEM_SIG = {
 
 def write_chart_section(profile: dict, lang: str = "en") -> dict:
     pillars = profile.get("pillars", {})
-    layer_meta = _LAYER_META.get(lang, _LAYER_META["en"])
+    layer_meta = load_labels(lang)["CHART_LAYER_META"]
 
     core_pack = load_pack(lang, "core")
     arch_content = core_pack.get("ARCHETYPE_CONTENT", {})
@@ -627,11 +643,7 @@ def write_chart_section(profile: dict, lang: str = "en") -> dict:
                     )
                 )
 
-    hero = (
-        "Your blueprint, expressed as four faces."
-        if lang == "en"
-        else "당신의 청사진, 네 가지 얼굴."
-    )
+    hero = load_labels(lang)["CHART_HERO"]
 
     return {
         "id": "chart",
@@ -646,43 +658,6 @@ def write_chart_section(profile: dict, lang: str = "en") -> dict:
 # ============================================================
 # SINSAL (C+ Global)
 # ============================================================
-_SINSAL_POS_LABEL = {
-    "en": {"year_pillar": "Origins", "month_pillar": "Career",
-           "day_pillar": "Self", "hour_pillar": "Legacy"},
-    "ko": {"year_pillar": "뿌리", "month_pillar": "커리어",
-           "day_pillar": "본질", "hour_pillar": "유산"},
-}
-
-_SINSAL_POS_ROLE = {
-    "en": {
-        "year_pillar": "ancestry / early environment",
-        "month_pillar": "career / public life",
-        "day_pillar": "self / partnership",
-        "hour_pillar": "inner world / legacy",
-    },
-    "ko": {
-        "year_pillar": "가문과 어린 시절",
-        "month_pillar": "직업과 사회 활동",
-        "day_pillar": "자신과 친밀한 관계",
-        "hour_pillar": "내면과 말년",
-    },
-}
-
-_SINSAL_THEME_KEYWORD = {
-    "MAGNETIC_DRAW": {"en": "magnetism and attraction", "ko": "매력과 인연"},
-    "RESTLESS_FEET": {"en": "movement and exploration", "ko": "이동과 탐험"},
-    "SOLITARY_DEPTH": {"en": "reflection and creativity", "ko": "성찰과 창조"},
-    "ALLY_MAGNET": {"en": "help and support", "ko": "도움과 귀인"},
-    "SCHOLAR_MIND": {"en": "study and learning", "ko": "학습과 지식"},
-    "SHARP_EDGE": {"en": "drive and competition", "ko": "추진과 경쟁"},
-    "COMMANDER": {"en": "leadership and decisiveness", "ko": "결단과 카리스마"},
-}
-
-_SINSAL_NOTE_TPL = {
-    "en": "This trait sits in your {role} — so {theme} shows up most in that area.",
-    "ko": "{role}에 자리해, 그 영역에서 {theme}의 기운이 두드러집니다.",
-}
-
 def write_sinsal_section(profile: dict, lang: str = "en") -> dict | None:
     raw = profile.get("special_traits_raw") or {}
     if not raw:
@@ -698,9 +673,10 @@ def write_sinsal_section(profile: dict, lang: str = "en") -> dict | None:
         "천을귀인": "ALLY_MAGNET", "문창귀인": "SCHOLAR_MIND",
         "양인": "SHARP_EDGE", "괴강": "COMMANDER",
     }
-    pos_labels = _SINSAL_POS_LABEL.get(lang, _SINSAL_POS_LABEL["en"])
-    pos_roles = _SINSAL_POS_ROLE.get(lang, _SINSAL_POS_ROLE["en"])
-    note_tpl = _SINSAL_NOTE_TPL.get(lang, _SINSAL_NOTE_TPL["en"])
+    _sinsal_lbls = load_labels(lang)
+    pos_labels = _sinsal_lbls["SINSAL_POS_LABEL"]
+    pos_roles = _sinsal_lbls["SINSAL_POS_ROLE"]
+    note_tpl = _sinsal_lbls["SINSAL_NOTE_TPL"]
 
     items = []
     for ko_name, entries in raw.items():
@@ -708,7 +684,7 @@ def write_sinsal_section(profile: dict, lang: str = "en") -> dict | None:
         if not code: continue
         content = content_map.get(code)
         if not content: continue
-        theme_kw = _SINSAL_THEME_KEYWORD.get(code, {}).get(lang, "")
+        theme_kw = _sinsal_lbls["SINSAL_THEME_KEYWORD"].get(code, "")
         for entry in entries:
             pos = entry.get("position")
             role = pos_roles.get(pos, "")
@@ -727,11 +703,9 @@ def write_sinsal_section(profile: dict, lang: str = "en") -> dict | None:
                 ),
             })
     if not items: return None
-    if lang == "en":
-        word = "trait" if len(items) == 1 else "traits"
-        hero = f"You carry {len(items)} special {word}."
-    else:
-        hero = f"당신에게는 {len(items)}개의 특별한 기질이 있습니다."
+    n = len(items)
+    hero_key = "SINSAL_HERO_ONE" if n == 1 else "SINSAL_HERO_MANY"
+    hero = _sinsal_lbls[hero_key].format(n=n)
     return {
         "id": "sinsal",
         "title": _title(lang, "sinsal"),
@@ -825,9 +799,10 @@ def _timeline_hero(lang: str, best: dict | None, worst: dict | None) -> str:
     if not best or not worst or not template:
         return "Your decades, mapped."
 
+    best_pillar_disp = _get_pillar_display(best["pillar"], lang)["name"]
     return template.format(
         best_age=best["start_age"],
-        best_pillar=best["pillar"],
+        best_pillar=best_pillar_disp,
         worst_age=worst["start_age"],
     )
 
@@ -846,61 +821,11 @@ def write_premium_section(profile: dict, lang: str, section_name: str) -> dict |
     content_map = pack.get("CONTENT", {})
     content = content_map.get(arch, {"headline": "Premium feature", "body": "Analyze your chart deeply."})
     
-    # ----------------------------------------------------
-    # 다차원 개인화 (Dynamic Personalization)
-    # ----------------------------------------------------
-    # 1. 에너지 강도 (신강/중화/신약)
-    intensity = profile["archetype"].get("intensity", "BALANCED_CORE")
-    # 2. 주 오행 (Dominant Element)
-    dom_elems = profile.get("energy_signature", {}).get("dominant", [])
-    dom_elem = dom_elems[0] if dom_elems else "BALANCED"
-    # 3. 행동/재물/관계 모드
-    work_mode = profile.get("work_mode", "THE_GENERALIST")
-    money_mode = profile.get("money_mode", "THE_FLOW")
-    bond_mode = profile.get("bond_mode", "THE_EMPATH")
-    
-    # 한글 개인화 문장 조합
-    p_text_ko = "\n\n[당신의 사주를 깊이 읽은 맞춤 인사이트]\n"
-    
-    # 강도별 수식어
-    if intensity == "SELF_SOURCED":
-        p_text_ko += "당신의 강한 '자기충전형' 에너지가 이 성향을 더욱 뚜렷하고 주도적으로 만듭니다. "
-    elif intensity == "ENVIRONMENT_TUNED":
-        p_text_ko += "당신의 '환경반응형' 기질로 인해, 주변 환경과 만나는 사람에 따라 이 성향이 깊게 발현됩니다. "
-    else:
-        p_text_ko += "당신의 균형 잡힌 '중심' 에너지가 이 성향을 안정적이고 조화롭게 이끕니다. "
-        
-    # 오행별 수식어
-    elem_map_ko = {
-        "GROWTH": "여기에 성장(木)의 기운이 더해져, 끊임없이 확장하고 새로운 방향을 개척하려는 욕구가 강하게 작용합니다.",
-        "SPARK": "여기에 불꽃(火)의 뜨거운 기운이 더해져, 열정적이고 즉각적인 에너지로 이 성향을 밀어붙입니다.",
-        "GROUND": "여기에 대지(土)의 안정적인 기운이 더해져, 신중하고 듬직하게 기반을 다지는 방향으로 발현됩니다.",
-        "EDGE": "여기에 예리함(金)의 기운이 더해져, 명확한 기준과 날카로운 결단력으로 이 상황을 정리해 나갑니다.",
-        "FLOW": "여기에 흐름(水)의 유연한 기운이 더해져, 상황에 맞춰 지혜롭고 유연하게 대처하는 힘이 생깁니다.",
-    }
-    p_text_ko += elem_map_ko.get(dom_elem, "")
-    
-    # 십성(모드)별 수식어 (섹션에 맞게 다르게 적용)
-    if section_name == "love":
-        mode_map = {"THE_TWIN": "특히 '동반자' 모드가 강해, 연인을 평생의 동료이자 동등한 파트너로 대우합니다.", "THE_RIVAL": "특히 '경쟁자' 모드가 강해, 서로 자극을 주고받으며 함께 성장하는 관계를 원합니다.", "THE_ALLY": "특히 '조력자' 모드가 강해, 한 번 맺은 인연을 끝까지 책임지고 헌신합니다."}
-        p_text_ko += mode_map.get(bond_mode, "")
-    elif section_name == "career":
-        mode_map = {"THE_CREATOR": "특히 '창작자' 모드가 강해, 기존의 틀을 깨고 나만의 독창적인 결과물을 만들어내는 일에서 빛납니다.", "THE_OFFICER": "특히 '원칙주의자' 모드가 강해, 체계가 잡힌 조직에서 신뢰받는 핵심 인재로 성장합니다.", "THE_CHALLENGER": "특히 '도전자' 모드가 강해, 문제를 해결하고 위기를 돌파하는 리더의 기질이 있습니다."}
-        p_text_ko += mode_map.get(work_mode, "")
-    elif section_name == "wealth":
-        mode_map = {"THE_OPERATOR": "특히 '운영자' 모드가 강해, 남들이 보지 못하는 기회를 포착해 과감하게 자산을 불려 나갑니다.", "THE_STEWARD": "특히 '관리자' 모드가 강해, 한 번 모은 자산을 안전하게 지키고 복리로 불려나가는 능력이 탁월합니다.", "THE_FLOW": "특히 '흐름' 모드가 강해, 얽매이지 않고 유연하게 돈의 흐름을 타고 자연스럽게 부를 끌어당깁니다."}
-        p_text_ko += mode_map.get(money_mode, "")
-
-    # 영어 (간단 버전)
-    p_text_en = "\n\n[Personalized Insight]\nBased on your chart, your energy is highly self-sourced and balanced with specific elements. " \
-                "This trait manifests uniquely in your life, aligning with your innate drive and specific mode."
-    
-    # 본문에 개인화 문장 병합
+    # 다차원 개인화 — 데이터는 data/{lang}/labels.json
+    addon = _personalized_addon(profile, lang, section_name)
     final_body = content.get("body", "")
-    if lang == "ko":
-        final_body += p_text_ko
-    else:
-        final_body += p_text_en
+    if addon:
+        final_body += addon
     
     return {
         "id": section_name,
@@ -971,7 +896,7 @@ def _build_summary_cards(profile: dict, lang: str, user_id: str | None = None) -
     dom_sigs = profile["energy_signature"].get("dominant", [])
     dom_names = [elem_name(s) for s in dom_sigs]
     energy_headline = " · ".join(dom_names) if dom_names else (
-        "균형" if lang == "ko" else "Balanced"
+        load_labels(lang)["BALANCE_LABEL"]
     )
     cards.append({
         "label": labels.get("energy", "Energy"),

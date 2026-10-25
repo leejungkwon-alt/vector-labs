@@ -85,7 +85,8 @@ def test_en_disclaimer_no_romanized_jargon():
 
 # ---- position_role 순한국어 ----
 def test_ko_position_role_is_plain_korean():
-    from app.services.content_writer import _SINSAL_POS_ROLE
-    ko = _SINSAL_POS_ROLE["ko"]
+    # Phase 1 이후: 상수는 data/{lang}/labels.json 으로 이관됨
+    from app.services.content.loader import load_labels
+    ko = load_labels("ko")["SINSAL_POS_ROLE"]
     for role in ko.values():
         assert "궁" not in role, f"'궁' 잔존: {role}"

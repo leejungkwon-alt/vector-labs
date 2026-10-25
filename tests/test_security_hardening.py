@@ -32,25 +32,6 @@ CALC_PAYLOAD = {
 }
 
 
-# ---- /interpret 게이팅 ----
-def test_interpret_works_by_default(monkeypatch):
-    monkeypatch.delenv("SAJU_REQUIRE_AUTH_FOR_INTERPRET", raising=False)
-    resp = client.post(
-        "/api/v1/saju/interpret",
-        json={"saju_data": {"day_pillar": "庚午"}, "lang": "en"},
-    )
-    assert resp.status_code == 200
-
-
-def test_interpret_requires_auth_when_enabled(monkeypatch):
-    monkeypatch.setenv("SAJU_REQUIRE_AUTH_FOR_INTERPRET", "true")
-    resp = client.post(
-        "/api/v1/saju/interpret",
-        json={"saju_data": {"day_pillar": "庚午"}, "lang": "en"},
-    )
-    assert resp.status_code == 401
-
-
 # ---- /calculate 게이팅 ----
 def test_calculate_works_by_default(monkeypatch):
     monkeypatch.delenv("SAJU_REQUIRE_AUTH_FOR_CALCULATE", raising=False)

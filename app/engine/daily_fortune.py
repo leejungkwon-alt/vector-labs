@@ -14,7 +14,6 @@ from app.engine.elements import (
     get_ten_god, TEN_GOD_CODES, STEM_TO_ELEMENT, BRANCH_MAIN_STEM,
 )
 from app.engine.daewoon_score import _element_score, _grade
-from app.semantic.tags import DAEWOON_GRADES
 
 
 _DAY_STEM_WEIGHT = 1.0
@@ -42,7 +41,7 @@ def calculate_daily_fortune(
         + _element_score(branch_elem, yongsin_info) * _DAY_BRANCH_WEIGHT
     )
     score = round(max(-2.5, min(2.5, score)), 2)
-    grade = DAEWOON_GRADES.get(_grade(score)["ko"], "NEUTRAL")
+    grade = _grade(score)
 
     return {
         "date": target_date.isoformat(),

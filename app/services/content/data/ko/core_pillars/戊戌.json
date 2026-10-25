@@ -1,8 +1,19 @@
 {
+  "name": "메마른 산",
   "pillar": "戊戌",
-  "hero": "",
-  "narrative": [],
-  "shadows": [],
-  "advice": [],
-  "keywords": []
+  "hero": "메마른 대지 위의 산",
+  "narrative": [
+    "당신은 혹독한 환경에서도 버텨내는 강한 인내심을 지녔습니다. 스스로를 단단하게 다져냅니다."
+  ],
+  "shadows": [
+    "쓸데없는 고집을 부릴 수 있습니다."
+  ],
+  "advice": [
+    "내려놓는 용기를 내보세요."
+  ],
+  "keywords": [
+    "stability",
+    "grounded",
+    "power"
+  ]
 }

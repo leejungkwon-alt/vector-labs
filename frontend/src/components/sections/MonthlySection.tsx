@@ -2,9 +2,11 @@
 import { View, Text } from "react-native";
 import { colors, gradeColors } from "@/theme";
 import { ss } from "./shared";
+import { useT } from "@/i18n";
 import type { MonthlySection } from "../../../types";
 
 export function MonthlySectionView({ section }: { section: MonthlySection }) {
+  const t = useT();
   return (
     <View>
       {section.hero && <Text style={ss.coreHero}>{section.hero}</Text>}
@@ -32,8 +34,8 @@ export function MonthlySectionView({ section }: { section: MonthlySection }) {
           {item.grade_context && <Text style={ss.metaText}>{item.grade_context}</Text>}
           {(item.lean_into || item.watch_for) && (
             <View style={{ marginTop: 6 }}>
-              {item.lean_into && <Text style={ss.metaText}>💡 집중: {item.lean_into}</Text>}
-              {item.watch_for && <Text style={ss.metaText}>⚠️ 주의: {item.watch_for}</Text>}
+              {item.lean_into && <Text style={ss.metaText}>💡 {t("sections.focus")}: {item.lean_into}</Text>}
+              {item.watch_for && <Text style={ss.metaText}>⚠️ {t("sections.watch")}: {item.watch_for}</Text>}
             </View>
           )}
         </View>

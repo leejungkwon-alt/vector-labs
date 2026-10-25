@@ -65,11 +65,17 @@ def test_premium_section_ko_content():
 
 
 def test_premium_section_en_content():
-    """영어 팩이 제대로 로드되는지 검증."""
+    """영어 팩이 제대로 로드되는지 검증 — 실제 콘텐츠(스텁 아님, 한국어 아님)."""
     profile = _profile()
     career_sec = write_career_section(profile, lang="en")
     assert career_sec["title"] == "Career & Transition"
-    assert career_sec["headline"] == "Premium insight for your chart."
+    # 실제 EN 콘텐츠가 로드되어야 함
+    assert career_sec["headline"]
+    assert career_sec["headline"] == (
+        "You shine on stage, such as in sales, marketing, and presentations."
+    )
+    # 한국어가 새어나오면 실패 (팩 로딩 오류 방지)
+    assert not any("\uac00" <= ch <= "\ud7a3" for ch in career_sec["headline"])
 
 
 # ============================================================

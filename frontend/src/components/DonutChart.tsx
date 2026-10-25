@@ -3,6 +3,7 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import Svg, { Circle } from "react-native-svg";
 import { colors } from "@/theme";
+import { useT } from "@/i18n";
 
 export const ELEMENT_COLORS: Record<string, string> = {
   "木": "#2F7A3F", // Growth (Green)
@@ -13,6 +14,7 @@ export const ELEMENT_COLORS: Record<string, string> = {
 };
 
 export function DonutChart({ data }: { data: Record<string, number> }) {
+  const t = useT();
   const size = 180;
   const strokeWidth = 26;
   const radius = (size - strokeWidth) / 2;
@@ -57,8 +59,8 @@ export function DonutChart({ data }: { data: Record<string, number> }) {
         })}
       </Svg>
       <View style={styles.centerText}>
-        <Text style={styles.centerLabel}>에너지</Text>
-        <Text style={styles.centerValue}>분포</Text>
+        <Text style={styles.centerLabel}>{t("sections.energy")}</Text>
+        <Text style={styles.centerValue}>{t("sections.distribution")}</Text>
       </View>
     </View>
   );

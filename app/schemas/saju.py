@@ -164,40 +164,6 @@ class SajuResponse(BaseModel):
     region: Optional[str] = None
 
 
-class SajuDataSchema(BaseModel):
-    """`/interpret` 입력용 사주 데이터. day_pillar만 필수, 나머지는 선택.
-
-    Pydantic v2의 `extra`는 기본값('ignore')이라 추가 필드는 무시됩니다.
-    `calculate` 응답을 그대로 넣어도 필요한 키만 뽑혀 안전합니다.
-    """
-    day_pillar: str = Field(..., description="일주 (예: 庚午)", examples=["庚午"])
-    ten_gods: Dict[str, Any] = Field(
-        default_factory=dict, description="사주 팔자 십성 정보"
-    )
-    year_pillar: Optional[str] = Field(None, examples=["庚午"])
-    month_pillar: Optional[str] = Field(None, examples=["庚辰"])
-    hour_pillar: Optional[str] = Field(None, examples=["癸未"])
-    daewoon_info: Optional[Dict[str, Any]] = Field(
-        default=None,
-        description=(
-            "인생의 큰 흐름 정보. age_basis='international'이면 start_age/end_age는 만 나이. "
-            "daewoon_number는 소수 년수(참고), daewoon_display는 '3년 4개월' 형태."
-        ),
-    )
-    luck_info: Optional[Dict[str, Any]] = Field(
-        None, description="올해의 흐름/이번 달의 흐름 정보 (calculate 응답의 luck_info)"
-    )
-
-
-class InterpretRequest(BaseModel):
-    saju_data: SajuDataSchema
-    lang: str = Field("ko", description="리포트 언어 설정 (ko / en)")
-
-
-class InterpretResponse(BaseModel):
-    interpretation: Dict[str, Any]
-
-    # ---- 새로 추가: Report API ----
 class ReportRequest(SajuRequest):
     """완성 리포트 요청. SajuRequest의 모든 필드 + lang."""
     lang: str = Field(default="en", examples=["en", "ko"], description="리포트 언어")

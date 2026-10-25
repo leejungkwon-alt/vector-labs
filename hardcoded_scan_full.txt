@@ -1,0 +1,1600 @@
+# Hardcoded-string / lang-branch scan
+# Root    : C:\Users\lenovo\Desktop\SAJU
+# Scanned : 63 .py files (content packs skipped)
+# Findings: 676
+
+## By kind
+  HARDCODED_KO             363
+  COMMENT_KO               182
+  DOCSTRING_KO             122
+  HARDCODED_KO_FSTRING     8
+  LANG_BRANCH              1
+
+## Top files
+    62  app/engine/yongsin.py
+    56  app/engine/locations.py
+    52  app/engine/relations.py
+    52  app/engine/sinsal.py
+    46  app/semantic/tags.py
+    41  app/engine/twelve_stages.py
+    39  app/engine/elements.py
+    38  app/engine/gyeokguk.py
+    35  app/services/entitlements.py
+    25  app/services/content_writer.py
+    21  app/engine/compatibility.py
+    21  app/schemas/saju.py
+    20  app/auth/repository.py
+    17  app/semantic/tagger.py
+    15  app/engine/time_correction.py
+    12  app/api/v1/endpoints/telegram.py
+    12  app/auth/providers.py
+    10  app/engine/strength.py
+     8  app/compliance/disclaimers.py
+     8  app/services/visual_generator.py
+     7  app/services/content/loader.py
+     6  app/auth/router.py
+     6  app/compliance/crisis_resources.py
+     6  app/schemas/auth.py
+     5  app/engine/calculator.py
+     5  app/engine/daewoon_score.py
+     5  app/engine/solar_terms.py
+     4  app/services/variation.py
+     3  app/engine/daewoon.py
+     3  app/engine/daily_fortune.py
+     3  app/ops/logging_config.py
+     3  app/services/compatibility_writer.py
+     3  app/services/iap.py
+     2  app/api/errors.py
+     2  app/api/v1/endpoints/compatibility.py
+     2  app/api/v1/endpoints/daily.py
+     2  app/api/v1/endpoints/report.py
+     2  app/auth/dependencies.py
+     2  app/compliance/age.py
+     2  app/engine/age_band.py
+
+
+## Full findings
+
+==========================================================================================
+FILE: app/api/errors.py   (2)
+==========================================================================================
+[DOCSTRING_KO] L1
+    
+[DOCSTRING_KO] L24
+    DST 구조화 예외를 lang별 사용자 메시지로 변환. 실패 시 EN fallback.
+
+==========================================================================================
+FILE: app/api/v1/endpoints/compatibility.py   (2)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[DOCSTRING_KO] L36
+    SajuRequest → semantic profile. target_year 은 궁합에 무관하므로 미사용.
+
+==========================================================================================
+FILE: app/api/v1/endpoints/daily.py   (2)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[COMMENT_KO] L88
+    # Step 3: variation seed — 유저 ID 우선, 없으면 birth_date
+
+==========================================================================================
+FILE: app/api/v1/endpoints/report.py   (2)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[DOCSTRING_KO] L54
+    
+
+==========================================================================================
+FILE: app/api/v1/endpoints/saju.py   (1)
+==========================================================================================
+[DOCSTRING_KO] L30
+    정밀 사주 명식 및 운세 데이터를 계산합니다.
+
+==========================================================================================
+FILE: app/api/v1/endpoints/telegram.py   (12)
+==========================================================================================
+[DOCSTRING_KO] L1
+    
+[HARDCODED_KO] L42
+    Telegram.WebApp.initData 원문 (서버가 서명을 검증합니다)
+[HARDCODED_KO] L47
+    UI 언어 (ko/en/ja/zh_cn/zh_tw). 미지원 값은 en 폴백.
+[DOCSTRING_KO] L57
+    
+[COMMENT_KO] L116
+    try:  # 만 14세 미만 차단 (calculate_saju 와 동일 정책)
+[COMMENT_KO] L137
+    # 기본값 없음: 미설정/약한 시크릿이면 엔드포인트 자체를 비활성화
+[COMMENT_KO] L170
+    # 캡션 템플릿: row별 language_code → 전역 lang 파라미터 → "ko" 순 폴백.
+[COMMENT_KO] L171
+    # (Phase 4-B 이전 등록 row 는 language_code IS NULL → ?lang= 사용)
+[COMMENT_KO] L188
+    # 봇 토큰이 URL 에 들어가므로 httpx 요청 로그(INFO)를 남기지 않는다.
+[COMMENT_KO] L199
+    except Exception:  # 연령 미달/잘못된 프로필 등
+[COMMENT_KO] L221
+    # 봇 차단/채팅 없음 → 구독 해제 (불필요한 재시도·스팸 방지)
+[COMMENT_KO] L229
+    time.sleep(0.05)  # Telegram 전송 한도(초당 ~30건) 보호
+
+==========================================================================================
+FILE: app/auth/dependencies.py   (2)
+==========================================================================================
+[DOCSTRING_KO] L2
+    FastAPI 의존성 — Bearer 토큰 → user dict.
+[DOCSTRING_KO] L26
+    인증 있으면 user, 없거나 무효면 None. 다음 스텝의 게이팅에서 사용.
+
+==========================================================================================
+FILE: app/auth/jwt_utils.py   (1)
+==========================================================================================
+[DOCSTRING_KO] L2
+    JWT 발급/검증 (pyjwt, HS256).
+
+==========================================================================================
+FILE: app/auth/providers.py   (12)
+==========================================================================================
+[DOCSTRING_KO] L1
+    
+[DOCSTRING_KO] L50
+    provider 또는 토큰이 유효하지 않음.
+[DOCSTRING_KO] L109
+    ID 토큰 서명/issuer/audience/exp 검증 후 claims 반환.
+[COMMENT_KO] L110
+    # 1. 헤더 파싱 먼저 — malformed 토큰은 네트워크 없이 fail-fast
+[COMMENT_KO] L116
+    # 2. audience(env) 확인 — 미설정이면 fail-closed
+[COMMENT_KO] L125
+    # 3. JWKS fetch + kid lookup (kid 로테이션 시 캐시 1회 무효화 후 재시도)
+[COMMENT_KO] L134
+    # 4. 서명 + 표준 클레임 검증
+[COMMENT_KO] L167
+    # 정책적 fail-closed: 카카오 콘솔/서버 env 미설정이면 어떤 토큰도 수용 안 함.
+[COMMENT_KO] L168
+    # (실제 /v2/user/me 호출에는 app key가 필요 없지만,
+[COMMENT_KO] L169
+    #  운영 환경 셋업 의무를 강제하기 위해 요구.)
+[COMMENT_KO] L176
+    # Kakao /v2/user/me: 사용자 access token으로 프로필 조회.
+[COMMENT_KO] L177
+    # Kakao user id는 앱별 스코프이므로 그대로 subject로 사용.
+
+==========================================================================================
+FILE: app/auth/repository.py   (20)
+==========================================================================================
+[DOCSTRING_KO] L1
+    
+[COMMENT_KO] L44
+    # 두 DB 에서 동일하게 동작하는 DDL (DOUBLE PRECISION 은 SQLite 에서 REAL affinity)
+[DOCSTRING_KO] L110
+    공통 비즈니스 로직. 하위 클래스가 _one/_all/_run 만 구현한다.
+[COMMENT_KO] L114
+    # -- 하위 클래스가 구현 --
+[DOCSTRING_KO] L122
+    쓰기. 영향받은 행 수 반환.
+[COMMENT_KO] L179
+    # ---- 소셜 링크 ----
+[DOCSTRING_KO] L189
+    익명 → 소셜 승격. 다른 사용자가 이미 점유한 identity 면 ValueError.
+[DOCSTRING_KO] L206
+    계정 및 연관 데이터(프로필, 애드온, 푸시 토큰, 텔레그램 구독) 삭제.
+[DOCSTRING_KO] L210
+    관리/테스트용. 실제 결제 연동은 IAP 스텝에서.
+[DOCSTRING_KO] L216
+    1회성 애드온 부여 (idempotent).
+[DOCSTRING_KO] L256
+    다기기 지원. (user_id, token) PK — 같은 토큰 중복 등록 무시.
+[DOCSTRING_KO] L283
+    검증된 telegram_id 를 사용자 계정에 연결 (재등록 시 소유자·lang 갱신).
+[DOCSTRING_KO] L304
+    [{telegram_id, user_id, language_code}] — 프로필이 있는 구독자만 푸시 대상.
+[DOCSTRING_KO] L316
+    SQLite 백엔드 (개발/테스트). 기존 클래스명 유지.
+[DOCSTRING_KO] L367
+    PostgreSQL 백엔드 (psycopg 3 + psycopg_pool). Cloud SQL 권장.
+[HARDCODED_KO] L376
+    SAJU_DATABASE_URL 사용에는 'psycopg[binary]' 와 'psycopg_pool' 이 필요합니다.
+[COMMENT_KO] L391
+    # 이 모듈의 SQL 에는 리터럴 '?' / '%' 가 없다.
+[COMMENT_KO] L396
+    # 다중 인스턴스 동시 기동 시 DDL 경쟁 방지
+[HARDCODED_KO] L440
+    SAJU_ENV=production 인데 SAJU_DATABASE_URL 이 없고 SAJU_AUTH_DB_PATH 도 지정되지 않았습니다. 컨테이너 로컬 SQLite 는 재배포 시 모든 사용자/구독 데이터가 사라집니다. PostgreSQL(SAJU_DATABASE_URL) 또는 영속 볼륨 경로(SAJU_AUTH_DB_PATH)를 지정하세요.
+[DOCSTRING_KO] L458
+    테스트 격리용. 다음 get_repository() 호출 시 새로 생성.
+
+==========================================================================================
+FILE: app/auth/router.py   (6)
+==========================================================================================
+[DOCSTRING_KO] L55
+    현재 로그인한 계정을 영구 삭제합니다.
+[DOCSTRING_KO] L84
+    익명 세션을 소셜 계정으로 승격. 실패 시 400/409.
+[DOCSTRING_KO] L108
+    이미 링크된 소셜 identity 로 로그인. 없으면 404.
+[DOCSTRING_KO] L141
+    푸시 토큰 등록. 인증된 모든 유저 가능 (구독 안 해도 등록은 OK).
+[DOCSTRING_KO] L153
+    푸시 토큰 해지. 로그아웃·기기 변경 시 호출.
+[DOCSTRING_KO] L176
+    등록된 푸시 토큰 목록 (다기기 디버깅용).
+
+==========================================================================================
+FILE: app/compliance/age.py   (2)
+==========================================================================================
+[DOCSTRING_KO] L2
+    연령 확인 (만 14세 미만 차단).
+[DOCSTRING_KO] L8
+    
+
+==========================================================================================
+FILE: app/compliance/crisis_resources.py   (6)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[COMMENT_KO] L10
+    # region → 리소스. 앱의 region 버킷(locations.py)과 같은 키 사용.
+[COMMENT_KO] L11
+    # 매핑 없으면 global fallback.
+[HARDCODED_KO] L14
+    자살예방상담전화
+[HARDCODED_KO] L17
+    24시간 무료 상담
+[DOCSTRING_KO] L68
+    지역 리소스. 없으면 글로벌 fallback. 항상 dict 반환.
+
+==========================================================================================
+FILE: app/compliance/disclaimers.py   (8)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[HARDCODED_KO] L11
+    안내: 본 리포트는 정밀한 천문 계산과 현대 심리 코칭을 결합한 것입니다. 의료·금융·심리 상담이 아니며, 자기 이해와 오락 목적으로 제공됩니다. 학파에 따라 해석이 다를 수 있습니다. 위기 상황이라면 지역 응급 서비스나 자살예방 핫라인에 연락하세요.
+[COMMENT_KO] L25
+    # 금지 표현: 미래 단정, 100% 확신, 운명 결정론
+[HARDCODED_KO] L28
+    당신의 운명은
+[HARDCODED_KO] L31
+    100% 정확
+[HARDCODED_KO] L33
+    반드시 일어날
+[LANG_BRANCH] L39
+    if lang == "ko":
+[DOCSTRING_KO] L45
+    금지 표현 목록 반환. 빈 리스트 = 통과.
+
+==========================================================================================
+FILE: app/engine/age_band.py   (2)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[DOCSTRING_KO] L26
+    
+
+==========================================================================================
+FILE: app/engine/calculator.py   (5)
+==========================================================================================
+[COMMENT_KO] L27
+    # ---- 연령 확인 ----
+[COMMENT_KO] L30
+    # ---- birth_time_mode 처리 ----
+[COMMENT_KO] L57
+    # ---- 도시 프리셋 우선 ----
+[COMMENT_KO] L109
+    # 각 월의 십성 계산 (일간 기준)
+[COMMENT_KO] L134
+    # ---- Step 9-A 신규 ----
+
+==========================================================================================
+FILE: app/engine/compatibility.py   (21)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[HARDCODED_KO] L48
+    정인
+[HARDCODED_KO] L48
+    정재
+[HARDCODED_KO] L48
+    정관
+[HARDCODED_KO] L48
+    식신
+[HARDCODED_KO] L49
+    편인
+[HARDCODED_KO] L49
+    편재
+[HARDCODED_KO] L49
+    편관
+[HARDCODED_KO] L49
+    상관
+[HARDCODED_KO] L50
+    비견
+[HARDCODED_KO] L50
+    겁재
+[HARDCODED_KO] L54
+    정인
+[HARDCODED_KO] L54
+    편인
+[HARDCODED_KO] L55
+    정재
+[HARDCODED_KO] L55
+    편재
+[HARDCODED_KO] L56
+    정관
+[HARDCODED_KO] L56
+    편관
+[HARDCODED_KO] L57
+    식신
+[HARDCODED_KO] L57
+    상관
+[HARDCODED_KO] L58
+    비견
+[HARDCODED_KO] L58
+    겁재
+
+==========================================================================================
+FILE: app/engine/daewoon.py   (3)
+==========================================================================================
+[DOCSTRING_KO] L17
+    3일=1년, 1일=4개월 규칙. 절사 + 개월 반올림.
+[HARDCODED_KO] L33
+    남
+[COMMENT_KO] L62
+    # 표시 문자열: 언어 중립 데이터(data/{lang}/daewoon.json). 기본 "ko".
+
+==========================================================================================
+FILE: app/engine/daewoon_score.py   (5)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[DOCSTRING_KO] L21
+    오행 하나의 가점/감점.
+[DOCSTRING_KO] L32
+    점수 → 등급 코드(언어 중립). 표시 라벨은 콘텐츠 계층에서.
+[DOCSTRING_KO] L45
+    
+[DOCSTRING_KO] L89
+    인생의 큰 흐름 점수 리스트를 요약. 최고/최저 인생의 큰 흐름, 전체 흐름.
+
+==========================================================================================
+FILE: app/engine/daily_fortune.py   (3)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[DOCSTRING_KO] L28
+    하루치 일운.
+[DOCSTRING_KO] L65
+    start_date부터 days일치.
+
+==========================================================================================
+FILE: app/engine/elements.py   (39)
+==========================================================================================
+[COMMENT_KO] L3
+    # NOTE: BRANCH_MAIN_STEM은 '체(體)'가 아닌 '용(用)' 기준의 본기(本氣)를 사용한다.
+[COMMENT_KO] L4
+    #       子=癸, 午=丁, 巳=丙, 亥=壬. 체 기준 만세력을 채택하려면 이 표를 교체할 것.
+[COMMENT_KO] L14
+    # 땅의 기운의 본기(Main Hidden Stem) 매핑
+[COMMENT_KO] L21
+    # 글로벌 확장을 위한 십성 시스템 코드 정의
+[HARDCODED_KO] L23
+    비견
+[HARDCODED_KO] L24
+    겁재
+[HARDCODED_KO] L25
+    식신
+[HARDCODED_KO] L26
+    상관
+[HARDCODED_KO] L27
+    편재
+[HARDCODED_KO] L28
+    정재
+[HARDCODED_KO] L29
+    편관
+[HARDCODED_KO] L30
+    정관
+[HARDCODED_KO] L31
+    편인
+[HARDCODED_KO] L32
+    정인
+[DOCSTRING_KO] L37
+    일간(day_stem)을 기준으로 대상 하늘의 기운(target_stem)의 십성을 판정합니다.
+[HARDCODED_KO] L47
+    비견
+[HARDCODED_KO] L47
+    겁재
+[HARDCODED_KO] L49
+    식신
+[HARDCODED_KO] L49
+    상관
+[HARDCODED_KO] L51
+    편재
+[HARDCODED_KO] L51
+    정재
+[HARDCODED_KO] L53
+    편관
+[HARDCODED_KO] L53
+    정관
+[HARDCODED_KO] L55
+    편인
+[HARDCODED_KO] L55
+    정인
+[DOCSTRING_KO] L60
+    주(Pillar, 예: '庚午')에 대해 하늘의 기운과 땅의 기운의 십성 시스템 코드를 반환합니다.
+[COMMENT_KO] L78
+    # 오행 분포 분석 (Phase 1 확장)
+[COMMENT_KO] L81
+    # 오행 인덱스 (기존 STEM_ATTRIBUTES와 동일): 0=木, 1=火, 2=土, 3=金, 4=水
+[COMMENT_KO] L92
+    # 지장간: [정기, 중기, 여기] 순서 (인덱스 0 = 정기)
+[COMMENT_KO] L93
+    # 학파에 따라 중기/여기 유무가 다를 수 있음.
+[COMMENT_KO] L109
+    # 지장간 가중치: 정기 1.0, 중기 0.3, 여기 0.2
+[DOCSTRING_KO] L114
+    
+[COMMENT_KO] L137
+    # 하늘의 기운 가중치 1.0
+[COMMENT_KO] L141
+    # 땅의 기운: 지장간에 가중치 부여
+[COMMENT_KO] L147
+    raw_total = sum(counts.values())              # 표시용 실제 합계
+[COMMENT_KO] L148
+    divisor = raw_total if raw_total > 0 else 1.0 # 0 나눗셈 방지용
+[COMMENT_KO] L171
+    # 오행 상생·상극 관계 (인덱스 기반)
+[DOCSTRING_KO] L173
+    a가 b를 生하는가 (木→火→土→金→水→木)
+[DOCSTRING_KO] L178
+    a가 b를 剋하는가 (木→土→水→火→金→木)
+
+==========================================================================================
+FILE: app/engine/gyeokguk.py   (38)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[COMMENT_KO] L20
+    # ---- 록(祿) 표: 일간이 건록하는 땅의 기운 ----
+[COMMENT_KO] L29
+    # ---- 양인(刃) 표: 양간만 정설 ----
+[COMMENT_KO] L35
+    # 십성 → 격국 이름 (비견·겁재는 별도 처리)
+[HARDCODED_KO] L37
+    정관
+[HARDCODED_KO] L37
+    정관격
+[HARDCODED_KO] L38
+    편관
+[HARDCODED_KO] L38
+    편관격
+[HARDCODED_KO] L39
+    정재
+[HARDCODED_KO] L39
+    정재격
+[HARDCODED_KO] L40
+    편재
+[HARDCODED_KO] L40
+    편재격
+[HARDCODED_KO] L41
+    식신
+[HARDCODED_KO] L41
+    식신격
+[HARDCODED_KO] L42
+    상관
+[HARDCODED_KO] L42
+    상관격
+[HARDCODED_KO] L43
+    정인
+[HARDCODED_KO] L43
+    정인격
+[HARDCODED_KO] L44
+    편인
+[HARDCODED_KO] L44
+    편인격
+[DOCSTRING_KO] L49
+    
+[HARDCODED_KO] L65
+    미정
+[COMMENT_KO] L71
+    # ---- 1) 록 위치 우선 ----
+[HARDCODED_KO] L74
+    건록격
+[HARDCODED_KO] L77
+    비견
+[COMMENT_KO] L80
+    # ---- 2) 양인 위치 우선 ----
+[HARDCODED_KO] L83
+    양인격
+[HARDCODED_KO] L86
+    겁재
+[COMMENT_KO] L89
+    # ---- 3) 투출 우선 (비견/겁재는 skip) ----
+[HARDCODED_KO] L104
+    비견
+[HARDCODED_KO] L104
+    겁재
+[COMMENT_KO] L105
+    continue        # 록·양인 아닌 위치의 비견/겁재는 격으로 부적합
+[COMMENT_KO] L110
+    # ---- 4) 정기 fallback ----
+[HARDCODED_KO] L117
+    비견
+[HARDCODED_KO] L117
+    겁재
+[COMMENT_KO] L118
+    # 록·양인 위치가 아니면서 정기까지 비견/겁재 → 월겁격
+[HARDCODED_KO] L119
+    월겁격
+[HARDCODED_KO] L121
+    기타
+
+==========================================================================================
+FILE: app/engine/locations.py   (56)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[HARDCODED_KO] L13
+    서울
+[HARDCODED_KO] L14
+    부산
+[HARDCODED_KO] L15
+    인천
+[HARDCODED_KO] L16
+    대구
+[HARDCODED_KO] L17
+    대전
+[HARDCODED_KO] L18
+    광주
+[HARDCODED_KO] L19
+    울산
+[HARDCODED_KO] L20
+    수원
+[HARDCODED_KO] L21
+    창원
+[HARDCODED_KO] L22
+    고양
+[HARDCODED_KO] L23
+    용인
+[HARDCODED_KO] L24
+    성남
+[HARDCODED_KO] L25
+    전주
+[HARDCODED_KO] L28
+    도쿄
+[HARDCODED_KO] L29
+    오사카
+[HARDCODED_KO] L30
+    나고야
+[HARDCODED_KO] L31
+    삿포로
+[HARDCODED_KO] L32
+    후쿠오카
+[HARDCODED_KO] L35
+    베이징
+[HARDCODED_KO] L36
+    상하이
+[HARDCODED_KO] L37
+    홍콩
+[HARDCODED_KO] L38
+    타이베이
+[HARDCODED_KO] L39
+    싱가포르
+[HARDCODED_KO] L42
+    뉴욕
+[HARDCODED_KO] L43
+    로스앤젤레스
+[HARDCODED_KO] L44
+    시카고
+[HARDCODED_KO] L45
+    휴스턴
+[HARDCODED_KO] L46
+    피닉스
+[HARDCODED_KO] L47
+    필라델피아
+[HARDCODED_KO] L48
+    샌프란시스코
+[HARDCODED_KO] L49
+    시애틀
+[HARDCODED_KO] L52
+    토론토
+[HARDCODED_KO] L53
+    밴쿠버
+[HARDCODED_KO] L56
+    런던
+[HARDCODED_KO] L57
+    파리
+[HARDCODED_KO] L58
+    베를린
+[HARDCODED_KO] L59
+    마드리드
+[HARDCODED_KO] L60
+    로마
+[HARDCODED_KO] L61
+    암스테르담
+[HARDCODED_KO] L62
+    스톡홀름
+[HARDCODED_KO] L63
+    취리히
+[HARDCODED_KO] L64
+    더블린
+[HARDCODED_KO] L65
+    바르셀로나
+[HARDCODED_KO] L68
+    방콕
+[HARDCODED_KO] L69
+    자카르타
+[HARDCODED_KO] L70
+    마닐라
+[HARDCODED_KO] L71
+    쿠알라룸푸르
+[HARDCODED_KO] L74
+    두바이
+[HARDCODED_KO] L75
+    텔아비브
+[HARDCODED_KO] L78
+    상파울루
+[HARDCODED_KO] L79
+    멕시코시티
+[HARDCODED_KO] L82
+    시드니
+[HARDCODED_KO] L83
+    멜버른
+[DOCSTRING_KO] L88
+    
+[DOCSTRING_KO] L107
+    도시 목록. region 필터 가능.
+
+==========================================================================================
+FILE: app/engine/luck.py   (2)
+==========================================================================================
+[COMMENT_KO] L22
+    # pillars.py의 get_month_pillar를 호출하여 월두법 로직 단일화
+[COMMENT_KO] L25
+    # 양력 기준 대략적 월 (寅월 ≈ 2월)
+
+==========================================================================================
+FILE: app/engine/pillars.py   (2)
+==========================================================================================
+[COMMENT_KO] L19
+    # 五虎遁元: 甲己년 丙寅월 시작
+[DOCSTRING_KO] L47
+    
+
+==========================================================================================
+FILE: app/engine/relations.py   (52)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[COMMENT_KO] L23
+    # ---- 육합 ----
+[COMMENT_KO] L33
+    # ---- 삼합/반합 ----
+[COMMENT_KO] L47
+    # ---- 방합 ----
+[HARDCODED_KO] L49
+    동방
+[HARDCODED_KO] L50
+    남방
+[HARDCODED_KO] L51
+    서방
+[HARDCODED_KO] L52
+    북방
+[COMMENT_KO] L55
+    # ---- 육충 ----
+[COMMENT_KO] L62
+    # ---- 삼형/쌍형 ----
+[HARDCODED_KO] L64
+    무은지형
+[HARDCODED_KO] L64
+    배은망덕
+[HARDCODED_KO] L65
+    지세지형
+[HARDCODED_KO] L65
+    권력 다툼·고집
+[HARDCODED_KO] L66
+    무례지형
+[HARDCODED_KO] L66
+    예의 결여·성급함
+[COMMENT_KO] L68
+    # 자형: 같은 땅의 기운가 2개 이상 있을 때 성립
+[COMMENT_KO] L71
+    # ---- 육해 ----
+[COMMENT_KO] L78
+    # ---- 파 ----
+[COMMENT_KO] L85
+    # ---- 하늘의 기운합 ----
+[COMMENT_KO] L94
+    # ---- 하늘의 기운충 (7충 아님, 4충) ----
+[HARDCODED_KO] L105
+    년주
+[HARDCODED_KO] L106
+    월주
+[HARDCODED_KO] L107
+    일주
+[HARDCODED_KO] L108
+    시주
+[DOCSTRING_KO] L113
+    
+[HARDCODED_KO] L130
+    육충
+[HARDCODED_KO] L132
+    육해
+[HARDCODED_KO] L133
+    파
+[HARDCODED_KO] L135
+    하늘의 기운충
+[COMMENT_KO] L159
+    # 육합
+[HARDCODED_KO] L165
+    육합
+[HARDCODED_KO] L170
+    합 성립. 化 오행은 월령 조건에 따라 달라짐.
+[COMMENT_KO] L173
+    # 삼합 (완전)
+[HARDCODED_KO] L178
+    삼합
+[HARDCODED_KO] L183
+    삼합 성립. 化 오행은 월령 조건에 따라 달라짐.
+[COMMENT_KO] L186
+    # 반합 (삼합 완전이 없을 때만)
+[HARDCODED_KO] L197
+    반합
+[HARDCODED_KO] L202
+    반합 성립. 완전한 化는 아님.
+[COMMENT_KO] L205
+    # 방합
+[HARDCODED_KO] L210
+    방합
+[HARDCODED_KO] L216
+    방합 성립. 계절·방위 응집.
+[COMMENT_KO] L227
+    # 삼형 / 쌍형
+[HARDCODED_KO] L232
+    삼형
+[HARDCODED_KO] L232
+    쌍형
+[COMMENT_KO] L240
+    # 자형: 같은 땅의 기운가 2개 이상
+[HARDCODED_KO] L246
+    자형
+[HARDCODED_KO] L247
+    자형
+[HARDCODED_KO] L248
+    자기 파괴·내적 갈등
+[HARDCODED_KO] L265
+    하늘의 기운합
+[HARDCODED_KO] L270
+    하늘의 기운합 성립. 化 오행은 월령 조건에 따라 달라짐.
+[DOCSTRING_KO] L276
+    관계 검출 결과를 요약.
+
+==========================================================================================
+FILE: app/engine/sinsal.py   (52)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[HARDCODED_KO] L18
+    년주
+[HARDCODED_KO] L19
+    월주
+[HARDCODED_KO] L20
+    일주
+[HARDCODED_KO] L21
+    시주
+[COMMENT_KO] L25
+    # ---- 삼합국 분류 (년지 기준) ----
+[DOCSTRING_KO] L36
+    땅의 기운가 속한 삼합국 문자열 반환. 없으면 빈 문자열.
+[COMMENT_KO] L37
+    if not branch:                     # ← 빈 문자열 / None 방어
+[COMMENT_KO] L45
+    # ---- 삼합국별 신살 대상 땅의 기운 ----
+[COMMENT_KO] L50
+    # ---- 일간 기준 귀인 ----
+[COMMENT_KO] L65
+    # ---- 양인(羊刃) — 양간만 ----
+[COMMENT_KO] L70
+    # ---- 괴강(魁罡) — 일주(일간+일지)가 특정 조합 ----
+[DOCSTRING_KO] L75
+    
+[HARDCODED_KO] L97
+    도화
+[HARDCODED_KO] L97
+    역마
+[HARDCODED_KO] L97
+    화개
+[HARDCODED_KO] L98
+    천을귀인
+[HARDCODED_KO] L98
+    문창귀인
+[HARDCODED_KO] L98
+    양인
+[HARDCODED_KO] L98
+    괴강
+[HARDCODED_KO] L106
+    도화
+[HARDCODED_KO] L107
+    역마
+[HARDCODED_KO] L108
+    화개
+[HARDCODED_KO] L109
+    천을귀인
+[HARDCODED_KO] L110
+    문창귀인
+[HARDCODED_KO] L111
+    양인
+[HARDCODED_KO] L112
+    괴강
+[COMMENT_KO] L115
+    # ---- 삼합 기반 (년지 기준) ----
+[HARDCODED_KO] L124
+    도화
+[HARDCODED_KO] L124
+    도화
+[HARDCODED_KO] L126
+    역마
+[HARDCODED_KO] L126
+    역마
+[HARDCODED_KO] L128
+    화개
+[HARDCODED_KO] L128
+    화개
+[COMMENT_KO] L130
+    # ---- 일간 기준 ----
+[HARDCODED_KO] L134
+    천을귀인
+[HARDCODED_KO] L134
+    천을귀인
+[HARDCODED_KO] L140
+    문창귀인
+[HARDCODED_KO] L140
+    문창귀인
+[HARDCODED_KO] L146
+    양인
+[HARDCODED_KO] L146
+    양인
+[COMMENT_KO] L148
+    # ---- 괴강 (일주 조합) ----
+[HARDCODED_KO] L151
+    괴강
+[HARDCODED_KO] L151
+    괴강
+[DOCSTRING_KO] L166
+    콘텐츠에서 쓰기 좋은 요약.
+[HARDCODED_KO] L168
+    도화
+[HARDCODED_KO] L169
+    역마
+[HARDCODED_KO] L170
+    화개
+[HARDCODED_KO] L171
+    천을귀인
+[HARDCODED_KO] L172
+    문창귀인
+[HARDCODED_KO] L173
+    양인
+[HARDCODED_KO] L174
+    괴강
+
+==========================================================================================
+FILE: app/engine/solar_terms.py   (5)
+==========================================================================================
+[COMMENT_KO] L7
+    # (태양 황경, 월지 인덱스: 子=0 … 亥=11) — 입춘부터 소한까지 12절(節)
+[DOCSTRING_KO] L20
+    입춘(solar_year)부터 다음 해 소한까지 12절의 UTC 시각: [(datetime, branch_idx), ...]
+[DOCSTRING_KO] L34
+    실제 UTC 순간(instant)을 받아 (입춘 기준 연도, 월지 인덱스) 반환.
+[DOCSTRING_KO] L50
+    임의의 UTC 시각을 기준으로 직전·직후 절기를 반환. 인생의 큰 흐름수 계산에 사용.
+[COMMENT_KO] L57
+    # 전년도·당해년도·내년도의 모든 절기 시각을 수집해 시간순 정렬
+
+==========================================================================================
+FILE: app/engine/strength.py   (10)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[DOCSTRING_KO] L30
+    
+[COMMENT_KO] L37
+    return "support"  # 비겁
+[COMMENT_KO] L41
+    return "support"  # 인성 (target이 day master를 生)
+[DOCSTRING_KO] L46
+    
+[COMMENT_KO] L62
+    # 땅의 기운의 정기(첫 번째 지장간)로 판정
+[COMMENT_KO] L78
+    # 하늘의 기운 (일간 제외) 각 1.0
+[HARDCODED_KO] L94
+    신강
+[HARDCODED_KO] L96
+    신약
+[HARDCODED_KO] L98
+    중화
+
+==========================================================================================
+FILE: app/engine/time_correction.py   (15)
+==========================================================================================
+[DOCSTRING_KO] L7
+    DST로 건너뛴 존재하지 않는 시각. 엔드포인트에서 lang별 재구성.
+[HARDCODED_KO] L12
+    존재하지 않는 시각입니다: 
+[HARDCODED_KO] L12
+    은 
+[HARDCODED_KO] L12
+    에서 DST로 건너뛴 시각입니다.
+[HARDCODED_KO_FSTRING] L12
+    f'존재하지 않는 시각입니다: {clock}은 {tz_key}에서 DST로 건너뛴 시각입니다.'
+[DOCSTRING_KO] L17
+    DST 종료로 두 번 발생하는 모호한 시각. 엔드포인트에서 lang별 재구성.
+[HARDCODED_KO] L24
+    모호한 시각입니다: 
+[HARDCODED_KO] L24
+    은 
+[HARDCODED_KO] L24
+    에서 두 번 발생합니다. dst_fold=0(offset 
+[HARDCODED_KO_FSTRING] L24
+    f'모호한 시각입니다: {clock}은 {tz_key}에서 두 번 발생합니다. dst_fold=0(offset {off0}) 또는 dst_fold=1(offset {off1})로 재요청해 주세요.'
+[HARDCODED_KO] L25
+    ) 또는 dst_fold=1(offset 
+[HARDCODED_KO] L25
+    )로 재요청해 주세요.
+[DOCSTRING_KO] L39
+    
+[COMMENT_KO] L52
+    # gap 검출
+[COMMENT_KO] L57
+    # ambiguity 검출
+
+==========================================================================================
+FILE: app/engine/twelve_stages.py   (41)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[HARDCODED_KO] L16
+    장생
+[HARDCODED_KO] L16
+    목욕
+[HARDCODED_KO] L16
+    관대
+[HARDCODED_KO] L16
+    건록
+[HARDCODED_KO] L16
+    제왕
+[HARDCODED_KO] L16
+    쇠
+[HARDCODED_KO] L17
+    병
+[HARDCODED_KO] L17
+    사
+[HARDCODED_KO] L17
+    묘
+[HARDCODED_KO] L17
+    절
+[HARDCODED_KO] L17
+    태
+[HARDCODED_KO] L17
+    양
+[COMMENT_KO] L20
+    # 각 일간이 장생하는 땅의 기운
+[DOCSTRING_KO] L33
+    
+[DOCSTRING_KO] L53
+    
+[COMMENT_KO] L68
+    # 12운성의 성격 요약 (콘텐츠 활용용, 한국어)
+[HARDCODED_KO] L70
+    장생
+[HARDCODED_KO] L70
+    새로 시작하는 생명력. 순수하고 성장 지향적.
+[HARDCODED_KO] L71
+    목욕
+[HARDCODED_KO] L71
+    변화와 유혹. 감정 기복, 예술성.
+[HARDCODED_KO] L72
+    관대
+[HARDCODED_KO] L72
+    사회 진출. 자립과 성숙.
+[HARDCODED_KO] L73
+    건록
+[HARDCODED_KO] L73
+    자수성가. 자기 힘으로 서는 단계.
+[HARDCODED_KO] L74
+    제왕
+[HARDCODED_KO] L74
+    최전성기. 강한 추진력과 리더십.
+[HARDCODED_KO] L75
+    쇠
+[HARDCODED_KO] L75
+    전성기 이후. 안정과 내실.
+[HARDCODED_KO] L76
+    병
+[HARDCODED_KO] L76
+    쇠약. 섬세함, 예민함.
+[HARDCODED_KO] L77
+    사
+[HARDCODED_KO] L77
+    정지. 내면 성찰, 영적 깊이.
+[HARDCODED_KO] L78
+    묘
+[HARDCODED_KO] L78
+    저장. 축적, 숨은 재능.
+[HARDCODED_KO] L79
+    절
+[HARDCODED_KO] L79
+    단절과 재생. 극적인 전환점.
+[HARDCODED_KO] L80
+    태
+[HARDCODED_KO] L80
+    잉태. 새로운 가능성, 잠재력.
+[HARDCODED_KO] L81
+    양
+[HARDCODED_KO] L81
+    양육. 성장 준비, 보호받는 시기.
+
+==========================================================================================
+FILE: app/engine/yongsin.py   (62)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[DOCSTRING_KO] L24
+    
+[HARDCODED_KO] L36
+    비겁
+[HARDCODED_KO] L37
+    인성
+[HARDCODED_KO] L38
+    식상
+[HARDCODED_KO] L39
+    재성
+[HARDCODED_KO] L40
+    관성
+[DOCSTRING_KO] L45
+    
+[COMMENT_KO] L69
+    # 오행을 직접 지정하는 조후 케이스와, 역할 이름으로 지정하는 억부 케이스 분리
+[HARDCODED_KO] L70
+    억부
+[HARDCODED_KO] L71
+    신강
+[HARDCODED_KO] L73
+    관성
+[HARDCODED_KO] L74
+    재성
+[HARDCODED_KO] L75
+    인성
+[HARDCODED_KO] L75
+    비겁
+[HARDCODED_KO] L76
+    신강 (ratio=
+[HARDCODED_KO] L76
+    ) → 관성으로 제압
+[HARDCODED_KO_FSTRING] L76
+    f'신강 (ratio={ratio}) → 관성으로 제압'
+[HARDCODED_KO] L78
+    식상
+[HARDCODED_KO] L79
+    재성
+[HARDCODED_KO] L80
+    인성
+[HARDCODED_KO] L80
+    비겁
+[HARDCODED_KO] L81
+    신강 (ratio=
+[HARDCODED_KO] L81
+    ) → 식상으로 설기
+[HARDCODED_KO_FSTRING] L81
+    f'신강 (ratio={ratio}) → 식상으로 설기'
+[HARDCODED_KO] L87
+    신약
+[HARDCODED_KO] L88
+    인성
+[HARDCODED_KO] L89
+    비겁
+[HARDCODED_KO] L90
+    재성
+[HARDCODED_KO] L90
+    관성
+[HARDCODED_KO] L90
+    식상
+[HARDCODED_KO] L91
+    신약 (ratio=
+[HARDCODED_KO] L91
+    ) → 인성으로 생조
+[HARDCODED_KO_FSTRING] L91
+    f'신약 (ratio={ratio}) → 인성으로 생조'
+[COMMENT_KO] L97
+    else:  # 중화
+[HARDCODED_KO] L98
+    조후
+[HARDCODED_KO] L103
+    중화 (ratio=
+[HARDCODED_KO] L103
+    ) + 여름생 → 水로 조후
+[HARDCODED_KO_FSTRING] L103
+    f'중화 (ratio={ratio}) + 여름생 → 水로 조후'
+[HARDCODED_KO] L108
+    중화 (ratio=
+[HARDCODED_KO] L108
+    ) + 겨울생 → 火로 조후
+[HARDCODED_KO_FSTRING] L108
+    f'중화 (ratio={ratio}) + 겨울생 → 火로 조후'
+[COMMENT_KO] L110
+    # 계절 중간: support ratio 방향으로 약하게
+[HARDCODED_KO] L112
+    식상
+[HARDCODED_KO] L113
+    재성
+[HARDCODED_KO] L114
+    인성
+[HARDCODED_KO] L114
+    비겁
+[HARDCODED_KO] L116
+    인성
+[HARDCODED_KO] L117
+    비겁
+[HARDCODED_KO] L118
+    재성
+[HARDCODED_KO] L118
+    관성
+[HARDCODED_KO] L118
+    식상
+[HARDCODED_KO] L123
+    중화 (ratio=
+[HARDCODED_KO] L123
+    ), 계절 중간 → 
+[HARDCODED_KO] L123
+     위주
+[HARDCODED_KO_FSTRING] L123
+    f'중화 (ratio={ratio}), 계절 중간 → {yongsin_role} 위주'
+[COMMENT_KO] L125
+    # 역할 라벨 최종 확정
+[HARDCODED_KO] L126
+    조후
+[HARDCODED_KO] L126
+    억부
+[HARDCODED_KO] L126
+    조후
+[HARDCODED_KO] L127
+    조후
+[HARDCODED_KO] L128
+    조후
+
+==========================================================================================
+FILE: app/main.py   (2)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[COMMENT_KO] L25
+    # Starlette: 마지막에 추가된 미들웨어가 outermost
+
+==========================================================================================
+FILE: app/ops/logging_config.py   (3)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[DOCSTRING_KO] L30
+    record.request_id가 비어 있으면 contextvar에서 채움.
+[COMMENT_KO] L77
+    # uvicorn 로그도 동일 포맷으로 통일
+
+==========================================================================================
+FILE: app/ops/middleware.py   (1)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+
+==========================================================================================
+FILE: app/ops/rate_limit.py   (2)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[COMMENT_KO] L16
+    # 헬스체크·프리플라이트는 우회
+
+==========================================================================================
+FILE: app/schemas/auth.py   (6)
+==========================================================================================
+[COMMENT_KO] L24
+    # 기존 이름 호환 (anonymous/login/link 응답 shape 동일)
+[HARDCODED_KO] L68
+    연도는 1900년에서 2100년 사이여야 합니다.
+[HARDCODED_KO] L70
+    연도는
+[HARDCODED_KO] L114
+    남
+[HARDCODED_KO] L114
+    여
+[HARDCODED_KO] L116
+    남
+
+==========================================================================================
+FILE: app/schemas/saju.py   (21)
+==========================================================================================
+[HARDCODED_KO] L14
+    생년월일 (YYYY-MM-DD)
+[HARDCODED_KO] L19
+    출생 시간 (HH:MM:SS 또는 HH:MM). birth_time_mode='exact'일 때만 사용.
+[HARDCODED_KO] L24
+    exact=정확한 시각(기본), noon=정오 가정, day_only=일주만.
+[HARDCODED_KO] L27
+    IANA 타임존
+[HARDCODED_KO] L30
+    출생지 경도 (기본 서울)
+[HARDCODED_KO] L33
+    시간 보정 모드 (lmt, none)
+[HARDCODED_KO] L36
+    자시 경계 (23 또는 0)
+[HARDCODED_KO] L38
+    성별 (M 또는 F)
+[HARDCODED_KO] L40
+    운세 조회 대상 연도 (올해의 흐름/이번 달의 흐름)
+[HARDCODED_KO] L45
+    도시 프리셋 키. 지정 시 longitude/timezone_str보다 우선. 목록은 list_cities()로 확인.
+[HARDCODED_KO] L51
+    DST 중복 시각 선택 (0=첫 번째, 1=두 번째). 모호하지 않으면 무시.
+[HARDCODED_KO] L60
+    연도는 1900년에서 2100년 사이여야 합니다.
+[HARDCODED_KO] L62
+    연도는
+[COMMENT_KO] L65
+    return dt.strftime("%Y-%m-%d")  # 1990-5-5 -> 1990-05-05 정규화
+[HARDCODED_KO] L129
+    남
+[HARDCODED_KO] L129
+    여
+[HARDCODED_KO] L131
+    남
+[HARDCODED_KO] L137
+    target_year는 1900년에서 2100년 사이여야 합니다.
+[COMMENT_KO] L161
+    # ---- Step 9-A 신규 ----
+[DOCSTRING_KO] L168
+    완성 리포트 요청. SajuRequest의 모든 필드 + lang.
+[HARDCODED_KO] L169
+    리포트 언어
+
+==========================================================================================
+FILE: app/semantic/tagger.py   (17)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[DOCSTRING_KO] L31
+    calculate_saju 결과에서 기둥을 뽑기. hour_pillar 없으면 3주만.
+[DOCSTRING_KO] L44
+    ten_gods dict에서 모든 시스템 코드를 set으로.
+[DOCSTRING_KO] L58
+    우선순위에 따라 첫 번째 매칭 코드를 mode로 반환.
+[DOCSTRING_KO] L66
+    birth_date + target_year로 age_band 계산. 정보 부족하면 None.
+[DOCSTRING_KO] L81
+    
+[COMMENT_KO] L102
+    # 1. 일간 + 신강/신약
+[COMMENT_KO] L107
+    # 2. 오행 분포
+[COMMENT_KO] L113
+    # 3. 나에게 힘이 되는 기운/나를 도와주는 기운/조심해야 할 기운
+[COMMENT_KO] L116
+    # 4. 십성 → mode
+[COMMENT_KO] L134
+    # 5. 격국
+[COMMENT_KO] L138
+    # 6. 12운성
+[COMMENT_KO] L141
+    # 7. 관계
+[COMMENT_KO] L151
+    # 8. 신살
+[COMMENT_KO] L160
+    # 9. 인생의 큰 흐름 점수화
+[COMMENT_KO] L176
+    # 10. 올해의 흐름
+[COMMENT_KO] L208
+    # ---- 최종 조립 ----
+
+==========================================================================================
+FILE: app/semantic/tags.py   (46)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[COMMENT_KO] L9
+    # ---- 일간 → Archetype ----
+[COMMENT_KO] L10
+    # 10하늘의 기운 → 서양 컨셉 아키타입
+[COMMENT_KO] L24
+    # ---- 신강/신약 → Energy Profile ----
+[HARDCODED_KO] L26
+    신강
+[HARDCODED_KO] L27
+    중화
+[HARDCODED_KO] L28
+    신약
+[COMMENT_KO] L31
+    # ---- 오행 → Energy Signature ----
+[COMMENT_KO] L40
+    # ---- 십성(코드) → 역할 ----
+[COMMENT_KO] L41
+    # 엔진이 뱉는 TEN_GOD_* 코드를 그대로 키로 사용
+[COMMENT_KO] L65
+    # ---- 신살 → 특성 태그 ----
+[HARDCODED_KO] L67
+    도화
+[HARDCODED_KO] L68
+    역마
+[HARDCODED_KO] L69
+    화개
+[HARDCODED_KO] L70
+    천을귀인
+[HARDCODED_KO] L71
+    문창귀인
+[HARDCODED_KO] L72
+    양인
+[HARDCODED_KO] L73
+    괴강
+[COMMENT_KO] L76
+    # ---- 격국 → 정체성 태그 ----
+[HARDCODED_KO] L78
+    정관격
+[HARDCODED_KO] L79
+    편관격
+[HARDCODED_KO] L80
+    정재격
+[HARDCODED_KO] L81
+    편재격
+[HARDCODED_KO] L82
+    식신격
+[HARDCODED_KO] L83
+    상관격
+[HARDCODED_KO] L84
+    정인격
+[HARDCODED_KO] L85
+    편인격
+[HARDCODED_KO] L86
+    양인격
+[HARDCODED_KO] L87
+    월겁격
+[HARDCODED_KO] L88
+    건록격
+[HARDCODED_KO] L89
+    기타
+[COMMENT_KO] L92
+    # ---- 관계 유형 (관계 태그) ----
+[COMMENT_KO] L94
+    # 땅의 기운
+[HARDCODED_KO] L95
+    육합
+[HARDCODED_KO] L96
+    삼합
+[HARDCODED_KO] L97
+    반합
+[HARDCODED_KO] L98
+    방합
+[HARDCODED_KO] L99
+    육충
+[HARDCODED_KO] L100
+    삼형
+[HARDCODED_KO] L101
+    쌍형
+[HARDCODED_KO] L102
+    자형
+[HARDCODED_KO] L103
+    육해
+[HARDCODED_KO] L104
+    파
+[COMMENT_KO] L105
+    # 하늘의 기운
+[HARDCODED_KO] L106
+    하늘의 기운합
+[HARDCODED_KO] L107
+    하늘의 기운충
+
+==========================================================================================
+FILE: app/services/compatibility_writer.py   (3)
+==========================================================================================
+[COMMENT_KO] L16
+    # 관계 유형(romance/business)에 따른 서브 맵 가져오기
+[COMMENT_KO] L40
+    # Defensive fallback: pack 이 비어있거나 예상 밖 grade 일 때
+[COMMENT_KO] L47
+    # 👇 관계 유형별 맞춤 조언 추가
+
+==========================================================================================
+FILE: app/services/content/loader.py   (7)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[COMMENT_KO] L9
+    # 언어별 팩 레지스트리. 새 언어 추가 시 여기만 갱신.
+[DOCSTRING_KO] L44
+    
+[DOCSTRING_KO] L71
+    UI 라벨 팩. ko/en만 존재하므로 미지원 언어는 en으로 폴백.
+[DOCSTRING_KO] L79
+    에러 메시지 팩. ko/en만 존재하므로 미지원 언어는 en으로 폴백.
+[DOCSTRING_KO] L87
+    해당 언어에서 사용 가능한 섹션 목록 (JSON 파일 기준).
+[DOCSTRING_KO] L96
+    해당 언어에서 사용 가능한 섹션 목록.
+
+==========================================================================================
+FILE: app/services/content_writer.py   (25)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[DOCSTRING_KO] L24
+    dict면 그대로, list면 seed 기반으로 1개 선택 (Step 3 Phase C).
+[DOCSTRING_KO] L39
+    
+[COMMENT_KO] L87
+    # 1) 일주(60) 콘텐츠 우선. 없거나 stub(빈 필드)이면 10×3 fallback.
+[COMMENT_KO] L106
+    # 2) intensity overlay(3개, 모든 일주 공통) 병합
+[COMMENT_KO] L375
+    # signature → 언어별 display (성장/불꽃/대지/예리함/흐름)
+[COMMENT_KO] L463
+    # ---- 생애 단계 컨텍스트 ----
+[COMMENT_KO] L478
+    # 본문(note)은 생략 — age_band 섹션에서 전체 확인
+[COMMENT_KO] L485
+    "pillar": None,  # 평이화: 한자 기둥명 노출 방지
+[COMMENT_KO] L488
+    "ten_god": None,  # 평이화: 영어 코드 숨김
+[COMMENT_KO] L535
+    "pillar": None,  # 평이화: 한자 노출 방지
+[COMMENT_KO] L570
+    # 유일 진실 소스(tags.py / elements.py)에서 파생
+[HARDCODED_KO] L672
+    도화
+[HARDCODED_KO] L672
+    역마
+[HARDCODED_KO] L672
+    화개
+[HARDCODED_KO] L673
+    천을귀인
+[HARDCODED_KO] L673
+    문창귀인
+[HARDCODED_KO] L674
+    양인
+[HARDCODED_KO] L674
+    괴강
+[COMMENT_KO] L718
+    # AGE BAND (신규 — Step 9-B)
+[COMMENT_KO] L771
+    "pillar": None,  # 평이화: 한자 노출 방지
+[COMMENT_KO] L824
+    # 다차원 개인화 — 데이터는 data/{lang}/labels.json
+[DOCSTRING_KO] L939
+    모든 섹션을 조립한 완성 리포트.
+[COMMENT_KO] L1018
+    # PILLAR NAME HELPER (Hanzi → 친근한 이름)
+[DOCSTRING_KO] L1021
+    {'name': ..., 'traditional': ...} 반환. 없으면 빈 dict.
+
+==========================================================================================
+FILE: app/services/daily_writer.py   (2)
+==========================================================================================
+[DOCSTRING_KO] L2
+    
+[DOCSTRING_KO] L14
+    entry가 dict 또는 list일 수 있음. list면 seed로 변형 선택.
+
+==========================================================================================
+FILE: app/services/entitlements.py   (35)
+==========================================================================================
+[DOCSTRING_KO] L1
+    
+[COMMENT_KO] L20
+    # 섹션별 티저 규칙
+[COMMENT_KO] L22
+    # keep_all         : True → 완전 무료 (차트, age_band)
+[COMMENT_KO] L23
+    # keep             : 이 필드들은 그대로 유지
+[COMMENT_KO] L24
+    # truncate         : 리스트 필드를 N개로 자르기 (nested "power.colors" 미지원, 명시 keep로 대체)
+[COMMENT_KO] L25
+    # paragraphs       : 문자열 필드의 첫 N문단만 유지 ("\n\n" 구분)
+[COMMENT_KO] L26
+    # item_keep_fields : items 리스트의 각 항목에서 유지할 필드 (None이면 전부)
+[COMMENT_KO] L27
+    # locked_hint      : 프론트엔드에 "잠김"으로 표시할 필드 라벨
+[COMMENT_KO] L29
+    # 안전 원칙: keep에 없는 필드는 teaser에 포함되지 않음.
+[COMMENT_KO] L32
+    # ---- 완전 무료 (후킹용) ----
+[COMMENT_KO] L36
+    # ---- Core: 첫 문단만 강조, 나머지 잠금 ----
+[COMMENT_KO] L46
+    # ---- Energy: dominant 블록 1개 ----
+[COMMENT_KO] L53
+    # ---- Lucky Code: power 최소 필드만 ----
+[COMMENT_KO] L56
+    "include_power_minimal": True,   # power에서 signature/element/keywords만 노출
+[COMMENT_KO] L65
+    # ---- Health: dominant 블록 1개 + practices 1개 ----
+[COMMENT_KO] L72
+    # ---- Money / Work / Bonds: body 첫 문단만 ----
+[COMMENT_KO] L101
+    # ---- Timeline: 첫 3개 인생의 큰 흐름 ----
+[COMMENT_KO] L108
+    # ---- Year: 헤드라인 + watch_for만 ----
+[COMMENT_KO] L117
+    # ---- Monthly: 첫 2개월 + 헤드라인만 ----
+[COMMENT_KO] L128
+    # ---- Sinsal: 첫 1개 ----
+[COMMENT_KO] L158
+    # Summary Cards 게이팅 (Step 4-A)
+[COMMENT_KO] L160
+    # 무료 티어에서는 summary_cards 중 앞의 두 개(core, energy)만 전체 노출.
+[COMMENT_KO] L161
+    # 나머지는 headline(티저)만 유지하고 body는 잠금.
+[COMMENT_KO] L180
+    "headline": card.get("headline", ""),  # 티저: headline 유지
+[COMMENT_KO] L181
+    "body": "",                              # 본문 잠금
+[DOCSTRING_KO] L194
+    
+[COMMENT_KO] L208
+    # Step 4-A: summary_cards 게이팅
+[COMMENT_KO] L217
+    # [신규] 심화 리포트 애드온이 있으면 love, career, wealth는 잠금 해제
+[COMMENT_KO] L225
+    # 규칙 미정의 → 안전하게 통과 (원본 유지)
+[COMMENT_KO] L245
+    # 내부: teaser 적용
+[COMMENT_KO] L252
+    # 1) keep 필드 유지
+[COMMENT_KO] L257
+    # 2) lucky_code 전용: power 최소 필드만
+[COMMENT_KO] L266
+    # 3) truncate: 리스트 필드 자르기
+[COMMENT_KO] L274
+    # 4) paragraphs: 문자열 필드의 첫 N문단만 유지
+[COMMENT_KO] L283
+    # 5) item_keep_fields: items 각 항목에서 유지할 필드만
+
+==========================================================================================
+FILE: app/services/iap.py   (3)
+==========================================================================================
+[DOCSTRING_KO] L2
+    인앱 결제(IAP) 영수증 검증 뼈대.
+[DOCSTRING_KO] L11
+    
+[COMMENT_KO] L15
+    # Step 4-B: 프로덕션에서 mock 영수증 거부
+
+==========================================================================================
+FILE: app/services/variation.py   (4)
+==========================================================================================
+[DOCSTRING_KO] L1
+    
+[DOCSTRING_KO] L18
+    프로세스 간 안정적인 해시 (Python hash()는 seed 랜덤).
+[DOCSTRING_KO] L29
+    
+[DOCSTRING_KO] L48
+    
+
+==========================================================================================
+FILE: app/services/visual_generator.py   (8)
+==========================================================================================
+[DOCSTRING_KO] L1
+    
+[COMMENT_KO] L10
+    # 오행 시그니처 -> 파일명 접두어
+[COMMENT_KO] L19
+    # 십성 모드 -> 파일명 접미어
+[DOCSTRING_KO] L34
+    
+[COMMENT_KO] L37
+    # 1. 주 오행 추출 (없으면 FLOW 기본값)
+[COMMENT_KO] L42
+    # 2. 주 행동 모드 추출 (없으면 THE_GENERALIST 기본값)
+[COMMENT_KO] L46
+    # 3. 파일명 조합 (예: bg_wood_creator.webp)
+[COMMENT_KO] L49
+    # 4. CDN/Supabase URL 반환 (환경변수로 설정 가능)

@@ -3,6 +3,8 @@ import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { BlurView } from "expo-blur";
 import { Ionicons } from "@expo/vector-icons";
 import { colors, spacing, radius } from "@/theme";
+import { useLanguageStore } from "@/store/languageStore";
+import { useT } from "@/i18n";
 import type { CompatibilityAdvice } from "../../../types";
 
 // 섹션 공통 스타일 — 각 렌더러가 import 해서 사용
@@ -37,16 +39,17 @@ export const ss = StyleSheet.create({
 // LockedHint — 유료 잠금 안내 카드 (기존 home.tsx 에서 이동)
 // ============================================================
 export function LockedHint({ onPress }: { onPress: () => void }) {
+  const t = useT();
   return (
     <View style={sharedStyles.lockedCard}>
       <BlurView intensity={30} tint="light" style={StyleSheet.absoluteFill} />
       <View style={sharedStyles.lockedContent}>
         <Ionicons name="sparkles" size={20} color={colors.primary} />
         <Text style={sharedStyles.lockedText}>
-          더 깊은 분석과 맞춤 인사이트가 준비되어 있어요.
+          {t("home.unlockHint")}
         </Text>
         <TouchableOpacity style={sharedStyles.upgradeBtn} onPress={onPress}>
-          <Text style={sharedStyles.upgradeBtnText}>전체 리포트 보기</Text>
+          <Text style={sharedStyles.upgradeBtnText}>{t("home.viewFullReport")}</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -56,15 +59,56 @@ export function LockedHint({ onPress }: { onPress: () => void }) {
 // ============================================================
 // CompatBox — Mode/Premium 섹션 공용 케미 상자
 // ============================================================
+
+const useFormatMode = () => {
+  const lang = useLanguageStore((s) => s.lang);
+  return (m: string) => {
+    if (!m || !m.startsWith("THE_")) return m;
+    const entry = MODE_LABELS[m];
+    if (!entry) return m;
+    return lang === "ko" ? entry.ko : entry.en;
+  };
+};
+
+
+const MODE_LABELS: Record<string, { ko: string, en: string }> = {
+  THE_PIONEER: { ko: "거목 (Pioneer)", en: "Pioneer" },
+  THE_ADAPTER: { ko: "덩굴 (Adapter)", en: "Adapter" },
+  THE_RADIATOR: { ko: "태양 (Radiator)", en: "Radiator" },
+  THE_KEEPER: { ko: "등불 (Keeper)", en: "Keeper" },
+  THE_ANCHOR: { ko: "산 (Anchor)", en: "Anchor" },
+  THE_CULTIVATOR: { ko: "정원 (Cultivator)", en: "Cultivator" },
+  THE_BLADE: { ko: "칼날 (Blade)", en: "Blade" },
+  THE_GEM: { ko: "보석 (Gem)", en: "Gem" },
+  THE_DEEP: { ko: "바다 (Deep)", en: "Deep" },
+  THE_SPRING: { ko: "샘 (Spring)", en: "Spring" },
+  THE_STEWARD: { ko: "관리자 (Steward)", en: "Steward" },
+  THE_OPERATOR: { ko: "운영자 (Operator)", en: "Operator" },
+  THE_FLOW: { ko: "흐름 (Flow)", en: "Flow" },
+  THE_CREATOR: { ko: "창작자 (Creator)", en: "Creator" },
+  THE_CHALLENGER: { ko: "도전자 (Challenger)", en: "Challenger" },
+  THE_OFFICER: { ko: "원칙주의자 (Officer)", en: "Officer" },
+  THE_SURVIVOR: { ko: "생존자 (Survivor)", en: "Survivor" },
+  THE_MYSTIC: { ko: "탐구자 (Mystic)", en: "Mystic" },
+  THE_MENTOR: { ko: "멘토 (Mentor)", en: "Mentor" },
+  THE_GENERALIST: { ko: "올라운더 (Generalist)", en: "Generalist" },
+  THE_TWIN: { ko: "동반자 (Twin)", en: "Twin" },
+  THE_RIVAL: { ko: "경쟁자 (Rival)", en: "Rival" },
+  THE_ALLY: { ko: "조력자 (Ally)", en: "Ally" },
+  THE_EMPATH: { ko: "공감자 (Empath)", en: "Empath" },
+};
+
 export function CompatBox({ compat }: { compat?: CompatibilityAdvice }) {
+  const t = useT();
+  const formatMode = useFormatMode();
   if (!compat) return null;
   return (
     <View style={{ marginTop: 12, padding: 12, backgroundColor: colors.bg, borderRadius: radius.md }}>
-      <Text style={ss.blockTitle}>케미</Text>
-      <Text style={ss.paragraph}>최고의 케미: {(compat.best_match || []).join(", ")}</Text>
+      <Text style={ss.blockTitle}>{t("sections.compatibility")}</Text>
+      <Text style={ss.paragraph}>{t("sections.bestMatch")}: {(compat.best_match || []).map(formatMode).join(", ")}</Text>
       <Text style={ss.metaText}>{compat.best_reason}</Text>
       <Text style={[ss.paragraph, { marginTop: 6 }]}>
-        주의할 케미: {(compat.challenging_match || []).join(", ")}
+        {t("sections.challengingMatch")}: {(compat.challenging_match || []).map(formatMode).join(", ")}
       </Text>
       <Text style={ss.metaText}>{compat.challenging_reason}</Text>
     </View>
@@ -75,10 +119,11 @@ export function CompatBox({ compat }: { compat?: CompatibilityAdvice }) {
 // RedFlagsBox — Mode/Premium 섹션 공용 주의사항 상자
 // ============================================================
 export function RedFlagsBox({ flags }: { flags?: string[] }) {
+  const t = useT();
   if (!flags || flags.length === 0) return null;
   return (
     <View style={{ marginTop: 12, padding: 12, backgroundColor: colors.dangerSoft, borderRadius: radius.md }}>
-      <Text style={[ss.blockTitle, { color: colors.danger }]}>주의할 점</Text>
+      <Text style={[ss.blockTitle, { color: colors.danger }]}>{t("sections.redFlags")}</Text>
       {flags.map((r, i) => (
         <Text key={i} style={ss.paragraph}>⚠ {r}</Text>
       ))}

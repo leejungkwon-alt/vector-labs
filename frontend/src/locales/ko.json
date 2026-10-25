@@ -209,7 +209,15 @@
     "age": "세",
     "yearsOld": "세",
     "male": "남성",
-    "female": "여성"
+    "female": "여성",
+    "powerElement": "핵심 기운",
+    "supportElement": "보조 기운",
+    "colors": "색상",
+    "numbers": "숫자",
+    "directions": "방위",
+    "activities": "활동",
+    "foods": "음식",
+    "watchOutLabel": "주의"
   },
   "api": {
     "timeout": "서버 응답 시간이 초과되었습니다. 네트워크 상태를 확인해주세요."

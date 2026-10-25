@@ -23,7 +23,7 @@ from app.engine.age_band import compute_age_band           # ---- Step 9-A ----
 from app.semantic.tags import (
     ARCHETYPES, ENERGY_PROFILES, ELEMENT_SIGNATURES,
     MONEY_MODES, WORK_MODES, BOND_MODES,
-    SPECIAL_TRAITS, GYEOKGUK_TAGS, DAEWOON_GRADES, RELATION_TAGS,
+    SPECIAL_TRAITS, GYEOKGUK_TAGS, RELATION_TAGS,
 )
 
 
@@ -167,7 +167,7 @@ def build_semantic_profile(saju_result: dict) -> dict:
             "ages": [d["start_age"], d["end_age"]],
             "pillar": d["pillar"],
             "score": d["score"],
-            "grade": DAEWOON_GRADES.get(d["grade"]["ko"], "NEUTRAL"),
+            "grade": d["grade"],
         }
         for d in scored_daewoon
     ]
@@ -198,7 +198,7 @@ def build_semantic_profile(saju_result: dict) -> dict:
                     "approx_solar_month": s["approx_solar_month"],
                     "ten_god": s.get("ten_god", ""),
                     "score": s["score"],
-                    "grade": DAEWOON_GRADES.get(s["grade"]["ko"], "NEUTRAL"),
+                    "grade": s["grade"],
                 })
 
     # ---- Step 9-A: region + age_band ----

@@ -73,28 +73,6 @@ def test_calculate_saju_with_target_year_endpoint():
     assert len(luck_info["monthly_lucks"]) == 12
 
 
-def test_interpret_endpoint():
-    """확장된 5대 영역 템플릿 기반 /interpret 엔드포인트가 구조화된 리포트를 정상 반환하는지 검증"""
-    dummy_saju_data = {
-        "year_pillar": "庚午",
-        "month_pillar": "庚辰",
-        "day_pillar": "庚午",
-        "hour_pillar": "癸未",
-        "ten_gods": {},
-        "daewoon_info": {},
-        "luck_info": {}
-    }
-    
-    response = client.post("/api/v1/saju/interpret", json={"saju_data": dummy_saju_data, "lang": "en"})
-    assert response.status_code == 200
-    data = response.json()
-    assert "interpretation" in data
-    assert "title" in data["interpretation"]
-    assert "core_blueprint" in data["interpretation"]
-    assert "wealth_flow" in data["interpretation"]
-    assert "career_architecture" in data["interpretation"]
-    assert "wellness_care" in data["interpretation"]
-
 def test_calculate_saju_invalid_jasi_boundary():
     payload = {
         "birth_date": "1990-05-05",

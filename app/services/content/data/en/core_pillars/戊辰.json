@@ -1,8 +1,19 @@
 {
+  "name": "Dragon Mountain",
   "pillar": "戊辰",
-  "hero": "",
-  "narrative": [],
-  "shadows": [],
-  "advice": [],
-  "keywords": []
+  "hero": "A deep mountain where a dragon resides.",
+  "narrative": [
+    "You look ordinary but hold immense potential and a big picture. You unleash great power at decisive moments."
+  ],
+  "shadows": [
+    "You might be misunderstood for not revealing your true feelings."
+  ],
+  "advice": [
+    "Bring your grand plans into the world."
+  ],
+  "keywords": [
+    "stability",
+    "grounded",
+    "power"
+  ]
 }

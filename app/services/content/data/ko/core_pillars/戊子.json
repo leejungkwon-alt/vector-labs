@@ -1,8 +1,19 @@
 {
+  "name": "산 아래 샘물",
   "pillar": "戊子",
-  "hero": "",
-  "narrative": [],
-  "shadows": [],
-  "advice": [],
-  "keywords": []
+  "hero": "거대한 산 아래 흐르는 맑은 샘물",
+  "narrative": [
+    "당신은 묵직한 산의 안정감과 물의 지혜를 동시에 품었습니다. 겉은 무던해 보여도 내면에는 깊은 통찰이 흐릅니다."
+  ],
+  "shadows": [
+    "생각이 너무 깊어 행동이 늦어질 수 있습니다."
+  ],
+  "advice": [
+    "내면의 직관을 믿고 한 걸음 내디뎌 보세요."
+  ],
+  "keywords": [
+    "stability",
+    "grounded",
+    "power"
+  ]
 }

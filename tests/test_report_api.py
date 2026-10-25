@@ -28,7 +28,6 @@ def fresh_auth(tmp_path, monkeypatch):
     reset_repository()
 
 
-
 def test_report_endpoint_200():
     resp = client.post("/api/v1/saju/report", json=BASE_PAYLOAD)
     assert resp.status_code == 200
@@ -119,20 +118,6 @@ def test_existing_calculate_still_works():
     data = resp.json()
     assert data["day_pillar"] == "丙申"
 
-
-def test_existing_interpret_still_works():
-    """기존 /interpret 회귀 방지."""
-    dummy = {
-        "day_pillar": "庚午",
-        "ten_gods": {},
-        "luck_info": {},
-    }
-    resp = client.post(
-        "/api/v1/saju/interpret",
-        json={"saju_data": dummy, "lang": "en"},
-    )
-    assert resp.status_code == 200
-    assert "interpretation" in resp.json()
 
 def test_report_dst_ambiguous_gives_400_with_guidance():
     """1988-10-09 DST 종료일의 모호 시각 → 400, 안내에 dst_fold 언급."""

@@ -1,8 +1,19 @@
 {
+  "name": "Forested Mountain",
   "pillar": "戊寅",
-  "hero": "",
-  "narrative": [],
-  "shadows": [],
-  "advice": [],
-  "keywords": []
+  "hero": "A massive mountain embracing a lush forest.",
+  "narrative": [
+    "You are a stable center with strong vitality and growth. People feel comfortable around you."
+  ],
+  "shadows": [
+    "You might lose yourself while taking care of others."
+  ],
+  "advice": [
+    "Make time for your own growth."
+  ],
+  "keywords": [
+    "stability",
+    "grounded",
+    "power"
+  ]
 }

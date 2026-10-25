@@ -89,15 +89,6 @@ GYEOKGUK_TAGS = {
     "기타":   "UNCLASSIFIED",
 }
 
-# ---- 인생의 큰 흐름 등급 ----
-DAEWOON_GRADES = {
-    "대길": "PEAK",
-    "길":   "FAVORABLE",
-    "중립": "NEUTRAL",
-    "주의": "CAUTION",
-    "흉":   "CHALLENGING",
-}
-
 # ---- 관계 유형 (관계 태그) ----
 RELATION_TAGS = {
     # 땅의 기운

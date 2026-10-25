@@ -18,6 +18,8 @@ from app.services.compatibility_writer import write_compatibility
 from app.auth.dependencies import get_current_user
 from app.auth.repository import get_repository
 from app.schemas.compatibility import CompatibilityRequest, CompatibilityResponse
+from app.api.errors import format_dst_error
+from app.engine.time_correction import DSTAmbiguousError, DSTGapError
 
 
 logger = logging.getLogger(__name__)
@@ -74,6 +76,8 @@ def api_compatibility(
     try:
         pa = _build_profile(payload.person_a)
         pb = _build_profile(payload.person_b)
+    except (DSTAmbiguousError, DSTGapError) as e:
+        raise HTTPException(status_code=400, detail=format_dst_error(payload.lang, e))
     except (ValueError, TypeError) as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception:

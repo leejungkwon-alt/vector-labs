@@ -1,8 +1,19 @@
 {
+  "name": "바위산",
   "pillar": "戊申",
-  "hero": "",
-  "narrative": [],
-  "shadows": [],
-  "advice": [],
-  "keywords": []
+  "hero": "단단한 바위산",
+  "narrative": [
+    "당신은 흔들리지 않는 원칙과 결단력을 지녔습니다. 어떤 풍파에도 무너지지 않는 강인함이 있습니다."
+  ],
+  "shadows": [
+    "너무 곧아서 부러지기 쉽습니다."
+  ],
+  "advice": [
+    "가끔은 유연하게 휘어지는 지혜를 배우세요."
+  ],
+  "keywords": [
+    "stability",
+    "grounded",
+    "power"
+  ]
 }

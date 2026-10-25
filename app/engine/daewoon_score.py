@@ -28,17 +28,17 @@ def _element_score(elem: str, yongsin_info: dict) -> float:
     return 0.0
 
 
-def _grade(score: float) -> dict:
-    """점수 → 등급."""
+def _grade(score: float) -> str:
+    """점수 → 등급 코드(언어 중립). 표시 라벨은 콘텐츠 계층에서."""
     if score >= 2.0:
-        return {"ko": "대길", "en": "peak"}
+        return "PEAK"
     if score >= 1.0:
-        return {"ko": "길", "en": "favorable"}
+        return "FAVORABLE"
     if score > -1.0:
-        return {"ko": "중립", "en": "neutral"}
+        return "NEUTRAL"
     if score > -2.0:
-        return {"ko": "주의", "en": "caution"}
-    return {"ko": "흉", "en": "challenging"}
+        return "CAUTION"
+    return "CHALLENGING"
 
 
 def score_daewoon(daewoon_pillars: list, yongsin_info: dict) -> list:

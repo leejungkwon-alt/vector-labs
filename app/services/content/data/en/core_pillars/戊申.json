@@ -1,8 +1,19 @@
 {
+  "name": "Rocky Mountain",
   "pillar": "戊申",
-  "hero": "",
-  "narrative": [],
-  "shadows": [],
-  "advice": [],
-  "keywords": []
+  "hero": "A solid rocky mountain.",
+  "narrative": [
+    "You have unyielding principles and determination. You have the strength to stand firm against any storm."
+  ],
+  "shadows": [
+    "You might break because you are too straight."
+  ],
+  "advice": [
+    "Learn the wisdom of bending flexibly sometimes."
+  ],
+  "keywords": [
+    "stability",
+    "grounded",
+    "power"
+  ]
 }

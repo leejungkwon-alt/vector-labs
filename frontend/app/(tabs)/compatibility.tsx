@@ -1,4 +1,5 @@
 import { useLanguageStore } from "@/store/languageStore"; // SAJU-PATCH:api-lang
+import { formatPickerDate } from "@/i18n";
 import { useT } from "@/i18n";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
@@ -39,7 +40,7 @@ export default function CompatibilityScreen() {
   const [showTimezoneModal, setShowTimezoneModal] = useState(false);
 
   const [isCalculated, setIsCalculated] = useState(false);
-  const cityLabel = isCustomCity ? t("birthInput.customCity") : (CITY_LIST.find(c => c.key === city)?.label || "서울 (Seoul)");
+  const cityLabel = isCustomCity ? t("birthInput.customCity") : (CITY_LIST.find(c => c.key === city)?.[lang === "en" ? "label_en" : "label"] || "서울 (Seoul)");
   const tzLabel = TIMEZONE_LIST.find(t => t.key === customTimezone)?.label || customTimezone;
 
   const onSelectCity = (key: string) => {
@@ -220,7 +221,7 @@ export default function CompatibilityScreen() {
 
       <Text style={styles.label}>{t("compatibility.partnerDate")}</Text>
       <TouchableOpacity style={styles.inputBtn} onPress={() => setShowDatePicker(true)}>
-        <Text style={styles.inputText}>{partnerDate.getFullYear()}년 {partnerDate.getMonth() + 1}월 {partnerDate.getDate()}일</Text>
+        <Text style={styles.inputText}>{formatPickerDate(partnerDate, lang)}</Text>
       </TouchableOpacity>
       {showDatePicker && <DateTimePicker value={partnerDate} mode="date" display="spinner" onChange={onChangeDate} />}
 
