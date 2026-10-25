@@ -106,6 +106,14 @@ def _fetch_jwks(provider: str) -> dict:
 
 
 def _decode_oidc_token(provider: str, token: str, *, verify_aud: bool = True) -> dict:
+    """ID 토큰 서명/issuer/audience/exp 검증 후 claims 반환."""
+    # 1. 헤더 파싱 먼저 — malformed 토큰은 네트워크 없이 fail-fast
+    try:
+        header = jwt.get_unverified_header(token)
+    except jwt.PyJWTError as exc:
+        raise ProviderTokenError(f"Malformed {provider} token: {exc}") from exc
+
+    # 2. audience(env) 확인 — 미설정이면 fail-closed
     aud_env = _AUDIENCE_ENV.get(provider)
     audience = _env(aud_env) if aud_env else None
     if verify_aud and not audience:
@@ -113,20 +121,21 @@ def _decode_oidc_token(provider: str, token: str, *, verify_aud: bool = True) ->
             f"{aud_env} is not configured on the server; "
             f"cannot verify {provider} ID tokens."
         )
+
+    # 3. JWKS fetch + kid lookup (kid 로테이션 시 캐시 1회 무효화 후 재시도)
     keys = _fetch_jwks(provider)
-    try:
-        header = jwt.get_unverified_header(token)
-    except jwt.PyJWTError as exc:
-        raise ProviderTokenError(f"Malformed {provider} token: {exc}") from exc
     kid = header.get("kid")
     if not kid or kid not in keys:
         _JWKS_CACHE.pop(provider, None)
         keys = _fetch_jwks(provider)
         if not kid or kid not in keys:
             raise ProviderTokenError(f"Unknown signing key id for {provider} token.")
+
+    # 4. 서명 + 표준 클레임 검증
     options = {"require": ["exp", "iat", "iss", "aud", "sub"]}
     if not verify_aud:
         options["verify_aud"] = False
+
     try:
         claims = jwt.decode(
             token, key=keys[kid], algorithms=["RS256"],
@@ -135,17 +144,17 @@ def _decode_oidc_token(provider: str, token: str, *, verify_aud: bool = True) ->
         )
     except jwt.PyJWTError as exc:
         raise ProviderTokenError(f"Invalid {provider} ID token: {exc}") from exc
+
     if not claims.get("sub"):
         raise ProviderTokenError(f"{provider} token missing 'sub'.")
     return claims
 
 
+
 def _verify_apple(token: str) -> dict:
-    raise ProviderTokenError(
-        "Apple OIDC verifier not configured yet. "
-        "Use 'mock:<subject>' in non-production, or configure "
-        "SAJU_APPLE_CLIENT_ID and complete step 1-C."
-    )
+    claims = _decode_oidc_token("apple", token)
+    return {"provider": "apple", "subject": claims["sub"]}
+
 
 
 def _verify_google(token: str) -> dict:

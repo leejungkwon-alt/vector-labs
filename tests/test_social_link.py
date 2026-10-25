@@ -95,7 +95,9 @@ def test_link_invalid_token_format(fresh_auth):
         json={"provider_token": "eyJhbGciOi.something.else"},
     )
     assert r.status_code == 400
-    assert "mock:" in r.json()["detail"]
+    # 1-C 이후: mock 이외 토큰은 Apple 검증기로 넘어가며
+    # malformed 또는 env 미설정으로 fail-closed → 400.
+    assert r.json()["detail"]
 
 
 def test_link_empty_subject(fresh_auth):
