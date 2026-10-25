@@ -1,8 +1,11 @@
 ﻿import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "@/theme";
+import { useT } from "@/i18n";
 
 export default function TabsLayout() {
+  const t = useT();
+
   return (
     <Tabs
       screenOptions={{
@@ -17,30 +20,37 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="home"
         options={{
-          title: "홈",
-          tabBarIcon: ({ color }) => <Ionicons name="sunny-outline" size={24} color={(color as string | undefined) || "#7A6A5C"} />,
+          title: t("tabs.home"),
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="sunny-outline" size={24} color={(color as string | undefined) || "#7A6A5C"} />
+          ),
         }}
       />
       <Tabs.Screen
         name="daily"
         options={{
-          title: "데일리",
-          tabBarIcon: ({ color }) => <Ionicons name="calendar-outline" size={24} color={(color as string | undefined) || "#7A6A5C"} />,
+          title: t("tabs.daily"),
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="calendar-outline" size={24} color={(color as string | undefined) || "#7A6A5C"} />
+          ),
         }}
       />
-      {/* 👇 궁합 탭 추가 */}
       <Tabs.Screen
         name="compatibility"
         options={{
-          title: "케미",
-          tabBarIcon: ({ color }) => <Ionicons name="heart-outline" size={24} color={(color as string | undefined) || "#7A6A5C"} />,
+          title: t("tabs.compatibility"),
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="heart-outline" size={24} color={(color as string | undefined) || "#7A6A5C"} />
+          ),
         }}
       />
       <Tabs.Screen
         name="settings"
         options={{
-          title: "설정",
-          tabBarIcon: ({ color }) => <Ionicons name="settings-outline" size={24} color={(color as string | undefined) || "#7A6A5C"} />,
+          title: t("tabs.settings"),
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="settings-outline" size={24} color={(color as string | undefined) || "#7A6A5C"} />
+          ),
         }}
       />
     </Tabs>
