@@ -6,9 +6,11 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
-    },
+   "ios": {
+    "supportsTablet": true,
+    "usesAppleSignIn": true,
+    "bundleIdentifier": "com.gyeol.app"
+},
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
