@@ -11,7 +11,8 @@
     "next": "다음",
     "back": "뒤로",
     "search": "검색",
-    "noResults": "검색 결과가 없습니다."
+    "noResults": "검색 결과가 없습니다.",
+    "notice": "알림"
   },
   "tabs": {
     "home": "홈",
