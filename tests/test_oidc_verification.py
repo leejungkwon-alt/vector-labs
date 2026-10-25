@@ -312,3 +312,183 @@ def test_kakao_mock_rejected_in_production(monkeypatch, kakao_env):
     monkeypatch.setenv("SAJU_ENV", "production")
     with pytest.raises(prov.ProviderTokenError, match="production"):
         prov.verify_provider_token("kakao", "mock:dev-kakao")
+
+# =============================================================================
+# 1-F: 입력 검증 / kid 로테이션 / JWKS 캐시 / cross-provider
+# =============================================================================
+
+def test_apple_empty_token(apple_setup):
+    with pytest.raises(prov.ProviderTokenError, match="non-empty string"):
+        prov.verify_provider_token("apple", "")
+
+
+def test_apple_none_token(apple_setup):
+    with pytest.raises(prov.ProviderTokenError, match="non-empty string"):
+        prov.verify_provider_token("apple", None)
+
+
+def test_provider_case_insensitive(apple_setup):
+    result = prov.verify_provider_token("APPLE", "mock:dev")
+    assert result == {"provider": "apple", "subject": "dev"}
+
+
+def test_provider_non_string(apple_setup):
+    with pytest.raises(prov.ProviderTokenError, match="provider must be a string"):
+        prov.verify_provider_token(123, "mock:x")
+
+
+def test_apple_aud_as_list(apple_setup):
+    token = _make_apple_token(apple_setup, aud=[AUD, "another-aud"])
+    result = prov.verify_provider_token("apple", token)
+    assert result["subject"] == "apple-sub-1"
+
+
+def test_cross_provider_rejected(apple_setup):
+    # Apple 서명/iss/aud 토큰을 Google 검증기에 주입.
+    # SAJU_GOOGLE_CLIENT_ID 미설정 상태이므로 audience 단계에서 fail-closed.
+    token = _make_apple_token(apple_setup)
+    with pytest.raises(prov.ProviderTokenError, match="not configured"):
+        prov.verify_provider_token("google", token)
+
+
+def test_jwks_kid_rotation_retry(monkeypatch):
+    """kid 회전 시 캐시 무효화 → 재fetch로 성공."""
+    from jwt.algorithms import RSAAlgorithm
+
+    old_key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+    new_key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+
+    old_jwk = RSAAlgorithm.to_jwk(old_key.public_key(), as_dict=True)
+    old_jwk["kid"] = "old-kid"
+    old_jwk["alg"] = "RS256"
+
+    new_jwk = RSAAlgorithm.to_jwk(new_key.public_key(), as_dict=True)
+    new_jwk["kid"] = "new-kid"
+    new_jwk["alg"] = "RS256"
+
+    monkeypatch.setenv("SAJU_APPLE_CLIENT_ID", AUD)
+    monkeypatch.delenv("SAJU_ENV", raising=False)
+    prov._JWKS_CACHE.clear()
+
+    calls = {"n": 0}
+
+    def fake_fetch(_provider):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            return {"old-kid": RSAAlgorithm.from_jwk(old_jwk)}
+        return {
+            "old-kid": RSAAlgorithm.from_jwk(old_jwk),
+            "new-kid": RSAAlgorithm.from_jwk(new_jwk),
+        }
+
+    monkeypatch.setattr(prov, "_fetch_jwks", fake_fetch)
+
+    now = int(time.time())
+    claims = {
+        "iss": ISS, "aud": AUD, "sub": "rotated",
+        "iat": now, "exp": now + 300,
+    }
+    token = jwt.encode(
+        claims, new_key, algorithm="RS256", headers={"kid": "new-kid"}
+    )
+
+    result = prov.verify_provider_token("apple", token)
+    assert result == {"provider": "apple", "subject": "rotated"}
+    assert calls["n"] == 2  # 1차 실패 → 재시도 1회
+
+    prov._JWKS_CACHE.clear()
+
+
+def test_fetch_jwks_http_error(monkeypatch):
+    import httpx as real_httpx
+
+    def fake_get(url, timeout=None):
+        raise real_httpx.RequestError("network down")
+
+    monkeypatch.setattr(prov.httpx, "get", fake_get)
+    prov._JWKS_CACHE.clear()
+
+    with pytest.raises(prov.ProviderTokenError, match="Failed to fetch JWKS"):
+        prov._fetch_jwks("apple")
+
+
+def test_fetch_jwks_empty_keys(monkeypatch):
+    class FakeResp:
+        status_code = 200
+        def raise_for_status(self):
+            return None
+        def json(self):
+            return {"keys": []}
+
+    def fake_get(url, timeout=None):
+        return FakeResp()
+
+    monkeypatch.setattr(prov.httpx, "get", fake_get)
+    prov._JWKS_CACHE.clear()
+
+    with pytest.raises(prov.ProviderTokenError, match="Empty or invalid JWKS"):
+        prov._fetch_jwks("apple")
+
+
+def test_fetch_jwks_cache_hit(monkeypatch):
+    from jwt.algorithms import RSAAlgorithm
+
+    key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+    jwk = RSAAlgorithm.to_jwk(key.public_key(), as_dict=True)
+    jwk["kid"] = "cache-kid"
+    jwk["alg"] = "RS256"
+
+    calls = {"n": 0}
+
+    class FakeResp:
+        status_code = 200
+        def raise_for_status(self):
+            return None
+        def json(self):
+            return {"keys": [jwk]}
+
+    def fake_get(url, timeout=None):
+        calls["n"] += 1
+        return FakeResp()
+
+    monkeypatch.setattr(prov.httpx, "get", fake_get)
+    prov._JWKS_CACHE.clear()
+
+    first = prov._fetch_jwks("apple")
+    second = prov._fetch_jwks("apple")
+    assert "cache-kid" in first
+    assert "cache-kid" in second
+    assert calls["n"] == 1  # 캐시 히트로 HTTP 1회만
+
+    prov._JWKS_CACHE.clear()
+
+
+def test_fetch_jwks_ignores_jwk_without_kid(monkeypatch):
+    from jwt.algorithms import RSAAlgorithm
+
+    key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+    valid_jwk = RSAAlgorithm.to_jwk(key.public_key(), as_dict=True)
+    valid_jwk["kid"] = "valid-kid"
+    valid_jwk["alg"] = "RS256"
+
+    no_kid_jwk = dict(valid_jwk)
+    del no_kid_jwk["kid"]
+
+    class FakeResp:
+        status_code = 200
+        def raise_for_status(self):
+            return None
+        def json(self):
+            return {"keys": [no_kid_jwk, valid_jwk]}
+
+    def fake_get(url, timeout=None):
+        return FakeResp()
+
+    monkeypatch.setattr(prov.httpx, "get", fake_get)
+    prov._JWKS_CACHE.clear()
+
+    keys = prov._fetch_jwks("apple")
+    assert "valid-kid" in keys
+    assert len(keys) == 1
+
+    prov._JWKS_CACHE.clear()
