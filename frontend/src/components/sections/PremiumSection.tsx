@@ -3,6 +3,7 @@
 import { View, Text } from "react-native";
 import { colors, radius, spacing } from "@/theme";
 import { ss, CompatBox, RedFlagsBox } from "./shared";
+import { useT } from "@/i18n";
 import type { PremiumSection, TimingBlock, TimingMonth, CrossInsightBlock } from "../../../types";
 
 const LOCKED_LABELS: Record<string, string> = {
@@ -159,6 +160,7 @@ function CrossInsightBlockView({ block }: { block: CrossInsightBlock }) {
 }
 
 export function PremiumSectionView({ section }: { section: PremiumSection }) {
+  const t = useT();
   return (
     <View>
       <Text style={ss.coreHero}>{section.headline}</Text>
@@ -172,7 +174,7 @@ export function PremiumSectionView({ section }: { section: PremiumSection }) {
 
       {section.patterns && section.patterns.length > 0 ? (
         <View style={{ marginTop: 12 }}>
-          <Text style={ss.blockTitle}>패턴</Text>
+          <Text style={ss.blockTitle}>{t("sections.patterns")}</Text>
           {section.patterns.map((p, i) => (
             <Text key={i} style={ss.paragraph}>• {p}</Text>
           ))}
@@ -181,7 +183,7 @@ export function PremiumSectionView({ section }: { section: PremiumSection }) {
 
       {section.actions && section.actions.length > 0 ? (
         <View style={{ marginTop: 12 }}>
-          <Text style={ss.blockTitle}>실천 가이드</Text>
+          <Text style={ss.blockTitle}>{t("sections.additionalActions")}</Text>
           {section.actions.map((a, i) => (
             <Text key={i} style={ss.paragraph}>→ {a}</Text>
           ))}
