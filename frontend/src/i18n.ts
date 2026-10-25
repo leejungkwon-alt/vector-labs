@@ -55,3 +55,20 @@ export function useLang() {
   ];
   return { lang, setLang, availableLangs };
 }
+// ---------------------------------------------------------------
+// Date/Time helpers (locale-aware display for pickers)
+// ---------------------------------------------------------------
+export function formatPickerDate(d: Date, lang: string): string {
+  if (lang === "ko") {
+    return `${d.getFullYear()}년 ${d.getMonth() + 1}월 ${d.getDate()}일`;
+  }
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December",
+  ];
+  return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+}
+
+export function formatPickerTime(d: Date): string {
+  return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
+}

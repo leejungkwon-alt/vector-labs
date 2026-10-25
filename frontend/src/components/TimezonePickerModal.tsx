@@ -3,6 +3,7 @@ import { Modal, View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet } 
 import { SafeAreaView } from "react-native-safe-area-context";
 import { colors, spacing, radius } from "@/theme";
 import { TIMEZONE_LIST } from "@/constants/timezones";
+import { useT } from "@/i18n";
 
 interface Props {
   visible: boolean;
@@ -13,6 +14,7 @@ interface Props {
 
 export function TimezonePickerModal({ visible, onClose, onSelect, currentTz }: Props) {
   const [search, setSearch] = useState("");
+  const t = useT();
 
   const filtered = TIMEZONE_LIST.filter(c => 
     c.label.toLowerCase().includes(search.toLowerCase()) || 
@@ -23,15 +25,15 @@ export function TimezonePickerModal({ visible, onClose, onSelect, currentTz }: P
     <Modal visible={visible} animationType="slide" presentationStyle="pageSheet" onRequestClose={onClose}>
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.title}>타임존 선택</Text>
+          <Text style={styles.title}>{t("timezoneModal.title")}</Text>
           <TouchableOpacity onPress={onClose} style={styles.closeBtn}>
-            <Text style={styles.closeText}>닫기</Text>
+            <Text style={styles.closeText}>{t("common.close")}</Text>
           </TouchableOpacity>
         </View>
 
         <TextInput
           style={styles.searchInput}
-          placeholder="도시 또는 타임존 검색 (예: 모스크바)"
+          placeholder={t("timezoneModal.placeholder")}
           value={search}
           onChangeText={setSearch}
         />
@@ -50,7 +52,7 @@ export function TimezonePickerModal({ visible, onClose, onSelect, currentTz }: P
               </Text>
             </TouchableOpacity>
           )}
-          ListEmptyComponent={<Text style={{ textAlign: "center", marginTop: 20, color: colors.textMuted }}>검색 결과가 없습니다.</Text>}
+          ListEmptyComponent={<Text style={{ textAlign: "center", marginTop: 20, color: colors.textMuted }}>{t("timezoneModal.noResults")}</Text>}
         />
       </SafeAreaView>
     </Modal>

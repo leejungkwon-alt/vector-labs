@@ -3,6 +3,7 @@ import { Modal, View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet } 
 import { SafeAreaView } from "react-native-safe-area-context"; // 👈 경고를 없애기 위해 import 경로 변경
 import { colors, spacing, radius } from "@/theme";
 import { CITY_LIST } from "@/constants/cities";
+import { useT } from "@/i18n";
 
 interface Props {
   visible: boolean;
@@ -13,6 +14,7 @@ interface Props {
 
 export function CityPickerModal({ visible, onClose, onSelect, currentCityKey }: Props) {
   const [search, setSearch] = useState("");
+  const t = useT();
 
   const filtered = CITY_LIST.filter(c => 
     c.label.toLowerCase().includes(search.toLowerCase()) || 
@@ -25,15 +27,15 @@ export function CityPickerModal({ visible, onClose, onSelect, currentCityKey }: 
     <Modal visible={visible} animationType="slide" presentationStyle="pageSheet" onRequestClose={onClose}>
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.title}>출생지 선택</Text>
+          <Text style={styles.title}>{t("cityModal.title")}</Text>
           <TouchableOpacity onPress={onClose} style={styles.closeBtn}>
-            <Text style={styles.closeText}>닫기</Text>
+            <Text style={styles.closeText}>{t("common.close")}</Text>
           </TouchableOpacity>
         </View>
 
         <TextInput
           style={styles.searchInput}
-          placeholder="도시 이름 검색 (예: 서울, New York)"
+          placeholder={t("cityModal.placeholder")}
           value={search}
           onChangeText={setSearch}
         />
@@ -58,11 +60,11 @@ export function CityPickerModal({ visible, onClose, onSelect, currentCityKey }: 
               onPress={() => { onSelect(CUSTOM_KEY); onClose(); }}
             >
               <Text style={{ fontSize: 16, fontWeight: "700", color: colors.primary, textAlign: "center" }}>
-                + 내 도시가 없나요? (직접 입력)
+                {t("cityModal.customCta")}
               </Text>
             </TouchableOpacity>
           }
-          ListEmptyComponent={<Text style={{ textAlign: "center", marginTop: 20, color: colors.textMuted }}>검색 결과가 없습니다.</Text>}
+          ListEmptyComponent={<Text style={{ textAlign: "center", marginTop: 20, color: colors.textMuted }}>{t("cityModal.noResults")}</Text>}
         />
       </SafeAreaView>
     </Modal>
