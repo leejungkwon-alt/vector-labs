@@ -1,4 +1,5 @@
 import { useLanguageStore } from "@/store/languageStore"; // SAJU-PATCH:api-lang
+import { useT } from "@/i18n";
 // frontend/app/(tabs)/home.tsx
 import { useQuery } from "@tanstack/react-query";
 import {
@@ -57,6 +58,7 @@ function renderSection(key: string, sec: any) {
 
 export default function HomeScreen() {
   const lang = useLanguageStore((s) => s.lang); // SAJU-PATCH:lang-decl
+  const t = useT();
   const profile = useProfileStore((s) => s.profile);
   const profileReady = useProfileStore((s) => s.ready);
   const [expanded, setExpanded] = useState<Record<string, boolean>>({ core: true });
@@ -94,7 +96,7 @@ export default function HomeScreen() {
     return (
       <View style={styles.center}>
         <ActivityIndicator size="large" color={colors.primary} />
-        <Text style={styles.loadingText}>인생 설계도를 분석 중입니다...</Text>
+        <Text style={styles.loadingText}>{t("home.loading")}</Text>
       </View>
     );
   }
@@ -125,7 +127,7 @@ export default function HomeScreen() {
 
       {/* Summary Cards */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>요약</Text>
+        <Text style={styles.sectionTitle}>{t("home.summary")}</Text>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginBottom: 16 }}>
           {report.summary_cards.map((card: any, idx: number) => (
             <View key={idx} style={[styles.summaryCard, card.locked && styles.summaryCardLocked]}>
