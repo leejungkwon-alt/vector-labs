@@ -1,28 +1,28 @@
 {
-  "name": "Vine in Frozen Ground",
+  "name": "凍てつく大地の蔦",
   "pillar": "乙丑",
-  "hero": "You're a vine alive beneath frozen ground. Solid soil on the surface — and underneath, quiet preparation for the next spring.",
+  "hero": "冷たい冬の土の下で、静かに明日を準備する粘り強い蔦です。外は固くても、内には来る春の生命力をしっかり抱いています。",
   "narrative": [
-    "You condense feeling and keep going. 乙丑 is soft vine resting on cold, damp earth. A winter vine is invisible above ground, but its roots are alive and waiting for spring. That's you. You look quiet, but inside you're slowly growing.",
-    "Your strength is quiet continuity. You don't need to be flashy, and you don't stop. You grow even when no one sees. This is a rare ability. Many people start loud and quit midway. You start quiet and last. And at the end, you produce something solid.",
-    "Your shadow is enduring too long. A vine in frozen ground waits for spring — but if spring never comes, the vine stays frozen. You hold feelings too long and bury hurt too long. And when those feelings pile up, one day the vine breaks through the soil all at once.",
-    "A mature Yi-Chou knows both patience and expression. Enduring winter, and flowering without hesitation when spring arrives. Then your quietness stops being withdrawal and becomes the kind of stability people lean on."
+    "あなたは自分の感情とエネルギーを内側に少しずつ蓄え、しなやかに人生を歩む人です。冬の土の下に隠れた根が、見えないところで春の準備をしているように、あなたも外からは静かで穏やかに見えますが、内側では絶えず成長し、次の段階を準備しています。",
+    "あなたの最大の武器は「黙々とした、そして着実な持続力」です。華やかな言葉や目立つ姿がなくても、一度始めたことは決してやめず、最後までやり抜く力があります。多くの人が焦りで途中で諦めるなか、あなたは静かな歩みで、結局は固く実りある果実を結びます。",
+    "あなたの影は「すべての感情を一人で長く我慢して飲み込むこと」です。悲しみや悔しさを長く我慢し続けると、ある日突然、感情が外に噴き出します。飲み込むことだけが最善ではないことを、優しく覚えておいてください。",
+    "一歩成熟すると、あなたは「賢い忍耐と正直な表現をバランスよく扱える人」になります。試練に耐える強さに加えて、時が来たら迷わず自分の美しい花を咲かせられるようになるとき、あなたの沈黙は萎縮ではなく、誰もが頼りたいと願う深い安定感となって輝きます。"
   ],
   "shadows": [
-    "Holding feelings so long that people around you never learn your heart.",
-    "Patience carried so far that you keep holding something that's already over.",
-    "When hurt piles up, it bursts out and startles everyone."
+    "本心や悔しさを長く埋めてしまうため、近しい人でさえあなたの本当の気持ちに気づけません。",
+    "過剰な忍耐のため、自分に合わない、あるいはもう終わったことに縛られ続けます。",
+    "長く積もった悔しさが予期せぬ瞬間に爆発し、周りを驚かせます。"
   ],
   "advice": [
-    "Once this week, bring a small kept hurt up.",
-    "List three things you're holding. One of them can be put down.",
-    "Ask yourself if spring has arrived. If it has, flower without hesitation.",
-    "Say to yourself, 'I did well enough.' Once this week."
+    "今週、心の中に長く埋めてきた小さな悔しさを、思い切って正直に、温かく表現してみましょう。",
+    "今抱えている悩みを三つ書き出し、そのうち一つはそっと下ろしてみましょう。",
+    "「今、自分の花を咲かせるべきときか？」を自問し、来たと感じたら迷わず自信を持って進みましょう。",
+    "一日の終わりに「今日も揺らがず、よくやった」と自分に真摯な励ましを贈りましょう。"
   ],
   "keywords": [
-    "winter vine",
-    "quiet continuity",
-    "condensed feeling",
-    "spring preparation"
+    "冬の蔦",
+    "静かな持続",
+    "感情の凝縮",
+    "春の準備"
   ]
 }

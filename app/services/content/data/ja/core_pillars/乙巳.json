@@ -1,28 +1,28 @@
 {
-  "name": "Blooming Flowerbed",
+  "name": "花咲く花壇",
   "pillar": "乙巳",
-  "hero": "You're a flowerbed in bloom. You color everything around you in many shades — a person of creativity.",
+  "hero": "色鮮やかな花々が咲き誇る多様な庭です。豊かな感性とセンスで世界を一層美しく彩る、創造性の持ち主です。",
   "narrative": [
-    "You're about expression and creativity. 乙巳 is soft vine sitting on hot fire. Wood meeting fire blooms. That's your creativity — past quiet growth, into multicolored expression. People sense in your presence: this person has something else.",
-    "Your strength is multicolored expression. You express your feelings and thoughts in many ways — drawing, writing, speech, action. Whatever form it takes, your expression has color. And the color draws people in. That's rare. Many people fear expression, but for you it's natural.",
-    "Your shadow is getting caught up in expression. A blooming flowerbed is beautiful, but if you only bloom, you forget the root. You focus on expression and miss your own stamina and foundation. And when expression isn't recognized, you're hurt for a long time.",
-    "A mature Yi-Si knows both expression and foundation. Blooming, and honoring the root and soil that hold the bloom. Then your creativity isn't a one-time flower — it becomes a garden that blooms every year."
+    "あなたは多様な表現力と優れた創造的センスを持つ、魅力的な人です。内なる生命力が温かな情熱と出会うとき、輝く花を咲かせるように、あなたの考えや感情は単に心の中に留まらず、周囲に大きなインスピレーションと喜びを届けます。",
+    "あなたの最高の武器は「自分だけの多彩な色を洗練された形で表現する力」です。言葉、文章、行動や感覚的な仕事など、どんな方法であれ、あなたの手を経たものには美しい彩りが添えられます。自分の個性を恐れずに表現し、人を引き寄せる力は、誰もが持てる、あなただけの特別な才能です。",
+    "あなたの影は「外に現れる華やかな表現に没頭し、内面の根をいたわれないこと」です。花を咲かせることだけにすべてのエネルギーを注ぐと、体力が簡単に消耗したり、実質を見失うことがあります。また、自分の表現や真心が十分に評価されないと、長く心に傷を負います。",
+    "一歩成熟すると、あなたは「美しい表現と確かな内面の根の両方を、賢くいたわる人」になります。外に咲く成果と同じくらい、自分を支える健康と実質を大切にするとき、あなたの創造性は一瞬の華やかさではなく、年ごとにより深く豊かに咲く庭として生まれ変わります。"
   ],
   "shadows": [
-    "Focusing on expression while missing the foundation.",
-    "Getting hurt for a long time when expression isn't recognized.",
-    "Expressing so diversely that people can't grasp your real intent."
+    "外に示す表現や成果に過度に没頭して、内面の健康や根本的な実質を逃すことがあります。",
+    "自分が心血を注いだ成果や表現が、期待ほど評価されないと、深く傷つき、心が萎みやすいです。",
+    "華やかで多彩な姿の裏に隠れた、正直で飾らない本心を、周囲が把握しきれないことがあります。"
   ],
   "advice": [
-    "Set aside time this week for your foundation — no expression in it.",
-    "Give yourself permission: expression has value even without recognition.",
-    "Pick one piece of expression and explain its underlying truth to someone.",
-    "Find someone to share your creativity with. A garden blooms more beautifully together."
+    "今週、外の視線から離れて、自分の内面と健康をいたわる、貴重な充電の時間を確保しましょう。",
+    "他人の称賛や評価が少し足りなくても、表現する過程そのものだけでも、あなたはすでに大切だと自分に伝えましょう。",
+    "華やかな外見の奥にある、本当に伝えたかった深い真心のひとかけらを、大切な人に飾らずに分かち合いましょう。",
+    "あなたの独自の感性と才能を、本当に認め、共に分かち合ってくれる温かい人たちと、深く交流を続けましょう。"
   ],
   "keywords": [
-    "multicolored expression",
-    "creativity",
-    "blooming flowerbed",
-    "expression and foundation"
+    "多彩な表現",
+    "創造性",
+    "花咲く花壇",
+    "表現と根本"
   ]
 }

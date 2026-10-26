@@ -1,28 +1,28 @@
 {
-  "name": "Vine on Dry Meadow",
+  "name": "乾いた草原の蔦",
   "pillar": "乙未",
-  "hero": "You're a vine spreading across a dry meadow. Even on barren ground, you survive — a person of remarkable vitality.",
+  "hero": "乾いた草原でも粘り強く蔓を伸ばしていく蔦です。どんな過酷な環境でも生き延びる、偉大な生命力の持ち主です。",
   "narrative": [
-    "You're the person of endurance and life force. 乙未 is soft vine on dry summer earth. A vine on a dry meadow — the ground is poor, but the vine survives. Your life force is like that. It doesn't die completely in any environment. It puts down roots and grows again.",
-    "Your strength is persistent life force. You don't give up in hard situations. Even when others fall over in exhaustion, you slowly grow again. And it's not simple patience — it's flexibility. A vine goes around a rock, and in a drought roots deeper. So do you: you find the way to survive that fits the situation.",
-    "Your shadow is enduring too long. A vine on dry meadow survives, but if the environment lasts too long, it eventually wears out. You tell yourself 'a bit longer will be fine' in bad situations and keep enduring. And your own growth is paused the whole time.",
-    "A mature Yi-Wei knows the difference between enduring and moving. Enduring hard environments, and moving on when the environment is killing you. Then your life force isn't just patience — it's wise survival."
+    "あなたは忍耐と粘り強さ、そして強靭な生命力を秘めた堅実な人です。どんなに乾き苦しい環境に置かれても、最後には根を下ろし蔓を伸ばすあなたの姿は、周囲に深い感動と信頼を与えます。",
+    "あなたの最大の強みは「どんな試練にも屈しない、執念深い生命力」です。誰もが簡単に諦め、疲れて倒れてしまうような厳しい状況でも、あなたはしなやかに状況を把握し、再び立ち上がる方法を見つけ出します。これはただ我慢する頑固さではなく、状況に合わせて賢く道を見つける優れた生存能力です。",
+    "あなたの影は「自分に合わない厳しい環境でも、やみくもに耐え続けようとする習慣」です。どんなに強靭な蔦でも、長引く干ばつの前には疲れます。無条件に耐えることだけが正解ではありません。耐えることにだけ力を注ぐと、本来大きく花開くべき成長の瞬間を逃してしまいます。",
+    "一歩成熟すると、あなたは「耐えるべきときと、より良い環境に移るべきときを明確に区別できる賢明な人」になります。自分を壊す環境なら、勇気をもって離れる。そのとき、あなたの強靭さは、自分自身を美しく咲かせる知恵として完成します。"
   ],
   "shadows": [
-    "Telling yourself 'a bit longer' in bad environments and enduring too long.",
-    "Such strong life force that you can't admit you're tired.",
-    "Staying put in an environment you could change, out of familiarity."
+    "自分を苦しめる悪い環境や状況でも、「もう少しだけ我慢すれば」と過度に自分を追い詰めます。",
+    "自分の生命力と粘り強さだけを信じ、心身が疲弊の悲鳴を上げていることに気づけません。",
+    "もっと良い環境に移れる機会があっても、長く耐えてきた慣れ親しみのせいで離れられません。"
   ],
   "advice": [
-    "Ask this week: does the environment I'm in give me life, or take it?",
-    "Acknowledge your fatigue. Enduring takes energy too.",
-    "Check whether there's an environment you could change but haven't.",
-    "Spend your vitality on your own growth, not only on others."
+    "今週、「今、自分が耐えている状況は本当に自分を生かす道か、それとも疲れさせる道か」を冷静に振り返りましょう。",
+    "一人で耐え続けて疲れ切った自分を、正直に認め、心ゆくまで休める休息を自分に贈りましょう。",
+    "もう自分に益をもたらさない疲れる状況や関係があれば、慣れ親しみから抜け出し、勇気をもって環境を変えてみましょう。",
+    "あなたの驚くべき粘り強さと生命力を、他人を助けるためだけに使わず、自分の夢を咲かせるためにも惜しみなく使いましょう。"
   ],
   "keywords": [
-    "dry meadow",
-    "persistent life force",
-    "flexible endurance",
-    "changing environments"
+    "乾いた草原",
+    "執念深い生命力",
+    "しなやかな忍耐",
+    "環境を変える"
   ]
 }

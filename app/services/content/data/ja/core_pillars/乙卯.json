@@ -1,28 +1,28 @@
 {
-  "name": "Wildflowers of Spring",
+  "name": "春の野原の野の花",
   "pillar": "乙卯",
-  "hero": "You're a wildflower in a spring field. Small, and no spring blooms more strongly than you.",
+  "hero": "陽光あふれる春の野原に咲く、爽やかな野の花です。恥じらいを抱えても、どんな試練よりも強い生命力で、まばゆく咲き誇る人です。",
   "narrative": [
-    "You're the purest form of 乙. 乙卯 is 乙 sitting in its own 祿 (Lu) — double wood, layered on itself. Your growth is overwhelming, your adaptability is remarkable, your flexibility doesn't shake. People sense in your presence: this person is spring itself.",
-    "Your strength is overwhelming growth. You grow anywhere. Barren ground, stony soil, even through cracks in concrete. Like the wildflower in a spring field, your survival instinct is strong. And the survival doesn't just endure — it moves toward flowering.",
-    "Your shadow is being so flexible that you lose direction. A wildflower is flexible, but a strong wind makes it lose direction. Your flexibility carried too far means you lose your center at the moment it matters. And the winds of other people's wishes blow you around, so you lose what you actually wanted.",
-    "A mature Yi-Mao is flexible without losing the center. A root that no wind can move, and above it, flexibility. Then your spring isn't a season that passes — it becomes a field that blooms again every year."
+    "あなたは純粋な生命力と爽やかな成長の気を内にたっぷりと秘めた人です。あなたのそばに立つと、人々は不思議と心が明るくなり、「ああ、この人には温かな春の気が流れている」という前向きな印象を受けます。",
+    "あなたの強みは「どこでも生き延びて咲き誇る、驚くべき成長力」です。やせた土地や予期せぬ試練の中でも、あなたは決してくじけず、土を突き破って芽吹く強さを発揮します。あなたの人生は、ただ耐えるだけにとどまらず、必ず美しい花を咲かせる、希望に満ちた方向へと進みます。",
+    "あなたの影は「しなやかさが溢れて、周囲の風に流されやすいこと」です。周りを思いやり、しなやかに合わせようとするあまり、大事な瞬間に自分の軸を失い、周囲の声に流されて本当に望む道を見失うことがあります。",
+    "一歩成熟すると、あなたは「柔らかくありながら、内なる確かな根を失わない人」になります。周囲の変化にしなやかに対応しながら、自分だけの確かな軸を保つとき、あなたの春は一度きりの季節ではなく、年ごとにより豊かに咲く、まばゆい野原となります。"
   ],
   "shadows": [
-    "Flexibility taken so far that you lose the center when it counts.",
-    "Blown around by other people's winds, losing what you actually wanted.",
-    "Such strong growth that you can lose direction about where to grow."
+    "しなやかで親切な態度が過ぎて、自分に本当に大切な決断をするときに軸を失い、揺らぎます。",
+    "他人の要求や周囲の雰囲気に流されやすく、本当に果たしたい目標や原則を逃すことがあります。",
+    "新しく咲こうとする気が強すぎるあまり、どの方向へ進むべきか、進路と目標を見失ってさまようことがあります。"
   ],
   "advice": [
-    "Write down what your 'root' is this week. That's your center.",
-    "When other people's requests pull at you, ask: is this what I want, or what they want?",
-    "Pick one direction you want to grow and take one small step this week.",
-    "Find someone to greet spring with you. A field blooms more beautifully together than alone."
+    "今週、自分の人生をしっかり支える最も大切な価値観と「軸となる根」は何かを書き出し、心を引き締めましょう。",
+    "他人の要求に心が揺れるときは、「これは本当に自分が望むことか、それとも他人の期待に合わせようとしているのか」を優しく問いましょう。",
+    "本当に成長したい明確な方向を一つ決め、今週その方向へ向けて小さな一歩を一つ踏み出しましょう。",
+    "一人孤独に咲く花よりも、共に咲く野原が美しいように、あなたの春を心から一緒に祝ってくれる、温かい仲間を見つけましょう。"
   ],
   "keywords": [
-    "pure 乙",
-    "overwhelming growth",
-    "spring field",
-    "holding the center"
+    "純粋な乙",
+    "圧倒的な成長",
+    "春の野原",
+    "軸を保つ"
   ]
 }
