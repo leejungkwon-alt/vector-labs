@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field, field_validator
 from app.schemas.saju import SajuRequest
 
 # SAJU-PATCH:lang-schema
-SUPPORTED_LANGS = ("en", "ko", "ja", "zh_cn", "zh_tw")
+SUPPORTED_LANGS = ("en", "ko", "ja", "zh_cn", "es")
 
 
 class DailyRequest(SajuRequest):

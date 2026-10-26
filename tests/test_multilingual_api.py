@@ -16,14 +16,22 @@ BASE_PAYLOAD = {
     "target_year": 2026,
 }
 
-def test_ja_report_multilingual_rejected():
-    """ja는 현재 지원하지 않음 (422)."""
+def test_ja_report_multilingual_accepted():
+    """ja 지원 (P3-D). 데이터 없는 section은 en 폴백."""
     payload = {**BASE_PAYLOAD, "lang": "ja"}
     resp = client.post("/api/v1/saju/report", json=payload)
-    assert resp.status_code == 422
+    assert resp.status_code == 200
+    assert resp.json()["report"]["meta"]["lang"] == "ja"
 
-def test_zh_cn_report_multilingual_rejected():
-    """zh_cn은 현재 지원하지 않음 (422)."""
+def test_zh_cn_report_multilingual_accepted():
     payload = {**BASE_PAYLOAD, "lang": "zh_cn"}
     resp = client.post("/api/v1/saju/report", json=payload)
-    assert resp.status_code == 422
+    assert resp.status_code == 200
+    assert resp.json()["report"]["meta"]["lang"] == "zh_cn"
+
+def test_es_report_multilingual_accepted():
+    """es는 신규 — 모든 section이 en 폴백이어도 계약은 성립."""
+    payload = {**BASE_PAYLOAD, "lang": "es"}
+    resp = client.post("/api/v1/saju/report", json=payload)
+    assert resp.status_code == 200
+    assert resp.json()["report"]["meta"]["lang"] == "es"

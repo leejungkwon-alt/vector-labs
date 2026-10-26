@@ -24,12 +24,12 @@ def fresh_auth(tmp_path, monkeypatch):
     reset_repository()
 
 def test_unsupported_lang_rejected():
-    for bad_lang in ("ja", "zh_cn", "zh_tw", "fr"):
+    for bad_lang in ("zh_tw", "fr", "ja_JP"):
         resp = client.post("/api/v1/saju/report", json={**BASE_PAYLOAD, "lang": bad_lang})
         assert resp.status_code == 422, f"lang={bad_lang} should be rejected"
 
 def test_supported_lang_accepted():
-    for good_lang in ("en", "ko"):
+    for good_lang in ("en", "ko", "ja", "zh_cn", "es"):
         resp = client.post("/api/v1/saju/report", json={**BASE_PAYLOAD, "lang": good_lang})
         assert resp.status_code == 200
 

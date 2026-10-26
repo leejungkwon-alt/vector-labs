@@ -4,7 +4,7 @@ from typing import Any, Dict, Optional
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 # SAJU-PATCH:lang-schema
-SUPPORTED_LANGS = ("en", "ko", "ja", "zh_cn", "zh_tw")
+SUPPORTED_LANGS = ("en", "ko", "ja", "zh_cn", "es")
 
 
 class SajuRequest(BaseModel):
@@ -186,9 +186,8 @@ class ReportRequest(SajuRequest):
     @field_validator("lang")
     @classmethod
     def validate_lang(cls, v: str) -> str:
-        supported = ("en", "ko")
-        if v not in supported:
-            raise ValueError(f"lang must be one of {supported}")
+        if v not in SUPPORTED_LANGS:
+            raise ValueError(f"lang must be one of {SUPPORTED_LANGS}")
         return v
 
 

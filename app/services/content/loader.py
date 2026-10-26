@@ -39,6 +39,10 @@ _REGISTRY = {
 
 _CACHE: dict = {}
 
+# 언어팩이 아직 없는 신규 언어(es 등)를 en으로 폴백할 때 허용할 목록.
+# 여기 없는 값(xx, fr 등)은 KeyError로 fail-fast해서, 알 수 없는 lang이
+# 조용히 en 콘텐츠를 받는 것을 막는다.
+_SUPPORTED_FALLBACK_LANGS = frozenset({"en", "ko", "ja", "zh_cn", "es"})
 
 def load_pack(lang: str, section: str) -> dict:
     """
@@ -60,8 +64,20 @@ def load_pack(lang: str, section: str) -> dict:
         _CACHE[cache_key] = pack
         return pack
 
+    # 신규 언어(es 등)의 data/{lang}/ 팩이 아직 없으면 en으로 폴백.
+    # 화이트리스트(_SUPPORTED_FALLBACK_LANGS)에 있는 언어만 — 알 수 없는
+    # lang은 아래 _REGISTRY 검사에서 KeyError로 fail-fast.
+    if lang in _SUPPORTED_FALLBACK_LANGS and lang != "en":
+        en_path = pathlib.Path(__file__).parent / "data" / "en" / f"{section}.json"
+        if en_path.exists():
+            with open(en_path, "r", encoding="utf-8") as f:
+                pack = json.load(f)
+            _CACHE[cache_key] = pack
+            return pack
+
     if lang not in _REGISTRY:
         raise KeyError(f"Language pack not registered: {lang}")
+    
     if section not in _REGISTRY[lang]:
         raise KeyError(f"Section '{section}' not available for lang '{lang}'")
     raise KeyError(f"Data file not found: {data_path}")
