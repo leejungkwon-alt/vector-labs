@@ -369,24 +369,116 @@
   },
   "BONDS_CONTENT": {
     "THE_TWIN": {
-      "headline": "You bond through equals, not audiences.",
-      "body": "You don't want a leader or a follower; you want a partner walking in the same direction. You don't need to be needed — you need to be met.\n\nYou maintain a horizontal perspective with people. You value relationships where you both acknowledge differences and grow together.\n\nBut seeking only 'cool' relationships can make deep intimacy hard. You need to learn to lean on each other occasionally to truly get close.",
-      "action": "Text someone who meets you at your level. Not to ask for anything, just to connect."
+      "headline": "対等な関係の中で最もくつろげます。",
+      "body": "誰かを導いたり、誰かに頼ったりするのが好きではありません。同じ高さで目を合わせ、共に同じ方向へ歩むパートナーを望みます。\n\n互いの違いを認め、共に成長する関係を最も理想的と考えます。互いに負担をかけず、それでいて深い絆を形づくります。\n\nただ、「クール」な関係だけを追い求めすぎると、深い親密さを築くのが難しくなります。ときに互いに寄りかかり、頼ることも覚えましょう。",
+      "action": "Text someone who meets you at your level. Not to ask for anything, just to connect.",
+      "patterns": [
+        "恋人というより、友人のような気楽さを求めます。",
+        "互いのプライベートを尊重します。",
+        "主導権争いを嫌います。"
+      ],
+      "best_match": [
+        "THE_ALLY",
+        "THE_EMPATH"
+      ],
+      "best_reason": "あなたの自律性を尊重し、優しく近づいてくれる人です。",
+      "challenging_match": [
+        "THE_TWIN"
+      ],
+      "challenging_reason": "二人ともクールすぎると、関係が退屈になりがちです。",
+      "actions": [
+        "ときには、あなたから先に手を差し伸べましょう。",
+        "相手にわだかまりがあれば、素直に伝えましょう。",
+        "一緒に楽しめる趣味を一つ作りましょう。"
+      ],
+      "red_flags": [
+        "無関心すぎて、相手が寂しさを感じていませんか？",
+        "喧嘩を避けるために感情を隠していませんか？"
+      ]
     },
     "THE_RIVAL": {
-      "headline": "You bond through friction as much as warmth.",
-      "body": "You need people who push back. Your best relationships have a competitive edge to them, and that's exactly what keeps them alive.\n\nYou find inspiration in conversations with people who have different opinions. You enjoy relationships where you exchange sharp feedback and refine each other.\n\nBut not every conversation needs to be an argument. You need the empathy to understand if the other person is looking for comfort or advice right now.",
-      "action": "Reach out to someone you've had productive tension with and ask for their real opinion."
+      "headline": "互いに刺激し合う健全な競争を楽しみます。",
+      "body": "無条件に同意してくれる人よりも、進んで議論し、押し返してくれる人を求めます。\n\n異なる意見を交わし、ときに鋭くフィードバックし合いながら、互いを鍛えていきます。そうした関係は退屈する暇がなく、常に相手から学び続けることができます。\n\nただ、すべての会話を議論にする必要はありません。相手が今、慰めを求めているのか、助言を求めているのかを見抜く共感力が必要です。",
+      "action": "Reach out to someone you've had productive tension with and ask for their real opinion.",
+      "patterns": [
+        "意見の衝突を恐れません。",
+        "ユーモアと勝負欲が強いです。",
+        "感情よりも論理で会話をします。"
+      ],
+      "best_match": [
+        "THE_EMPATH",
+        "THE_ALLY"
+      ],
+      "best_reason": "あなたの鋭さを優しく和らげ、包み込んでくれる人です。",
+      "challenging_match": [
+        "THE_RIVAL"
+      ],
+      "challenging_reason": "二人とも勝とうとすると、関係が壊れます。",
+      "actions": [
+        "議論の最中でも、相手の感情を確認しましょう。",
+        "一日に一度は相手を褒めましょう。",
+        "ときに、反論せずに聞く練習をしましょう。"
+      ],
+      "red_flags": [
+        "勝つために傷つける言葉を口にしていませんか？",
+        "相手が疲れているのに、論理を振りかざしていませんか？"
+      ]
     },
     "THE_ALLY": {
-      "headline": "You bond through loyalty and shared standards.",
-      "body": "You don't collect people. You choose them carefully, and then you stay. Your loyalty is quiet but unmistakable.\n\nYou value loyalty very highly. You are the first to rush to help a friend or family member in trouble. Your steadfastness makes many people trust and rely on you.\n\nBut your loyalty can sometimes be a burden to the other person. Letting go of the obsession to solve everything for them and watching them stand up on their own is also a form of love.",
-      "action": "Check in on someone you've been meaning to talk to. Not because you have to, but because you want to."
+      "headline": "一度受け入れた縁は、最後まで責任を持ちます。",
+      "body": "誰とでも気軽に付き合うタイプではありません。慎重に選び、一度自分の人と決めたら長く続きます。あなたの忠誠心は静かですが、とても強いものです。\n\n友人や家族が困難に陥ったとき、真っ先に駆けつけて助けます。あなたの傍らには、いつも頼もしい支え手たちがついてきます。\n\nただ、行きすぎた忠誠心はときに相手の重荷になります。自分がすべてを解決しなければならないという強迫を手放し、相手が自力で立ち上がる姿を見守ることも愛です。",
+      "action": "Check in on someone you've been meaning to talk to. Not because you have to, but because you want to.",
+      "patterns": [
+        "義理を非常に大切にします。",
+        "危険に陥った友人を放っておけません。",
+        "自分の人には限りなく寛大です。"
+      ],
+      "best_match": [
+        "THE_TWIN",
+        "THE_PIONEER"
+      ],
+      "best_reason": "あなたの頼もしい支えをありがたく思い、共に成長する人です。",
+      "challenging_match": [
+        "THE_OPERATOR"
+      ],
+      "challenging_reason": "あなたの忠誠心を利用しようとする人に傷つけられることがあります。",
+      "actions": [
+        "自分がすべてを解決しなければならないという強迫を捨てましょう。",
+        "助けを求められたときだけ助ける練習をしましょう。",
+        "自分を疲れさせる関係は、大胆に整理しましょう。"
+      ],
+      "red_flags": [
+        "義理を守るために、自分の生活が崩れていませんか？",
+        "利用しようとする人に振り回されていませんか？"
+      ]
     },
     "THE_EMPATH": {
-      "headline": "You bond by feeling what the other person feels.",
-      "body": "You read people fast and accurately. You know when someone is off before they do. This makes you a rare friend — but protect your own energy.\n\nYou have a deep empathy that feels others' pain as your own. People gather around you because you understand their hearts without them speaking.\n\nBut over-empathizing means you often neglect your own feelings and get exhausted. You must practice setting healthy psychological boundaries.",
-      "action": "Once this week, check: 'Is this emotion mine, or am I carrying someone else's?'"
+      "headline": "相手の感情を深く読み取る共感力の持ち主です。",
+      "body": "人の気分を素早く正確に読み取ります。本人より先に、気分が良くないことに気づきます。だからこそ、稀な良い友人になります。\n\n言葉にしなくても心を理解してくれるあなたの傍らに、人々が集まってきます。あなたは相手に深い情緒的な安定感を与えます。\n\nただ、他人の感情に入り込みすぎると、自分の感情をいたわらずに疲弊してしまいます。他者と自分の間に、健全な心理的な境界線を引く練習が欠かせません。",
+      "action": "Once this week, check: 'Is this emotion mine, or am I carrying someone else's?'",
+      "patterns": [
+        "相手の表情の変化をよく読み取ります。",
+        "共感が得意で、慰めるのも上手です。",
+        "他人の感情を一人で抱え込もうとします。"
+      ],
+      "best_match": [
+        "THE_RIVAL",
+        "THE_BLADE"
+      ],
+      "best_reason": "あなたの感情に流されず、中心を保ってくれる人です。",
+      "challenging_match": [
+        "THE_EMPATH"
+      ],
+      "challenging_reason": "二人とも感情を抱え込むと、互いに疲弊します。",
+      "actions": [
+        "一日に一度、自分の気分はどうかを先に問いかけましょう。",
+        "相手の感情を代わりに解決しないでください。",
+        "一人の時間を十分にとりましょう。"
+      ],
+      "red_flags": [
+        "他人の悲しみに深く沈み込んでいませんか？",
+        "自分の感情を後回しにしていませんか？"
+      ]
     }
   }
 }
