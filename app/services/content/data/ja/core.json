@@ -450,450 +450,450 @@
     },
     "THE_CULTIVATOR": {
       "name": "耕作者",
-      "tagline": "You grow things. Quietly, patiently, for real.",
+      "tagline": "静かに、忍耐強く、本物を育てる人です。",
       "symbol": "❉",
       "color": "#A89060",
       "element": "Earth",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You build things that last, by hand, without shortcuts.",
+          "hero": "近道も派手さもなしに、自分の手で長く続くものを築きます。",
           "narrative": [
-            "You don't need grand gestures. You need steady work, close attention, and time. You're the person who actually finishes what others only started.",
-            "People underestimate you because your power doesn't announce itself. Then years pass and you're the one still standing with something real.",
-            "This is a rare gift. Most people can start things. Very few can grow them.",
-            "You are the master gardener of life. You plant seeds and nurture them with tireless patience, even when no one else can see the growth.",
-            "But don't forget to leave some water in the can for yourself. Your own garden needs tending too."
+            "大げさな身振りは要りません。必要なのは、着実な仕事、細やかな注意、そして時間です。他の人が始めるだけで終わるものを、本当に仕上げる人です。",
+            "力が自ら名乗らないため、人はあなたを過小評価します。数年が過ぎ、本物を手にして立っているのがあなたです。",
+            "これは稀な才能です。多くの人は物事を始められます。育てられる人はほんの一握りです。",
+            "あなたは人生の庭師の達人です。種を蒔き、誰も成長を目にできないときにも、疲れを知らない忍耐で育てます。",
+            "ただ、自分のための水もジョウロに残しておくことを忘れないでください。自分の庭も手をかける必要があります。"
           ],
           "shadows": [
-            "You take on responsibility for everyone else's success.",
-            "You keep giving past the point where it's working.",
-            "You might feel unappreciated because your work is often invisible until it blooms."
+            "他人の成功まで自分の責任として背負ってしまいます。",
+            "うまくいっていない地点を過ぎても、与え続けてしまいます。",
+            "仕事が目に見えるようになるまでは評価されず、報われないと感じることがあります。"
           ],
           "advice": [
-            "Pick one thing you've been tending out of loyalty, not love. Let it go.",
-            "Ask yourself what you'd grow if no one needed anything from you.",
-            "You're allowed to build something just for you.",
-            "Celebrate a small win today. You worked hard for it."
+            "愛ではなく義理で世話してきたことを一つ選んで、手放しましょう。",
+            "誰も自分に何も求めなかったら、何を育てたいか自問してください。",
+            "自分のためだけに何かを築いてもいいのです。",
+            "今日、小さな勝利を一つ祝いましょう。そのために努力したのですから。"
           ],
           "keywords": [
-            "patient",
-            "practical",
-            "nurturing",
-            "builder"
+            "忍耐",
+            "実践",
+            "育成",
+            "築く人"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You make things grow — including people.",
+          "hero": "人をも含めて、物事を育みます。",
           "narrative": [
-            "You have a rare instinct for what a person, project, or place needs to thrive. You don't impose it — you just quietly supply what's missing.",
-            "This makes you invaluable in collaborative work. You're the reason things actually happen, even when your name isn't on them.",
-            "You also know when to step back. That's the mark of a real cultivator.",
-            "You are the soil that others grow in. You provide the nutrients, the stability, and the support so others can shine.",
-            "Remember that you also deserve to bloom. You don't have to stay in the background forever."
+            "人・プロジェクト・場所が健やかに育つのに何が必要かを、直感的に知っています。押しつけるのではなく、足りないものを静かに供給します。",
+            "だからこそ、協働の場でかけがえのない存在になります。名前が出なくても、物事が実際に進む理由はあなたです。",
+            "立ち位置を引くタイミングもわかっています。これが本物の耕作者の証です。",
+            "あなたは、他人が育つ土壌そのものです。栄養と安定、支えを提供し、他人が輝けるようにします。",
+            "自分にも花開く資格があることを忘れないでください。永遠に後ろにいる必要はありません。"
           ],
           "shadows": [
-            "You over-support until the other person stops trying.",
-            "You downplay your role because the growing isn't dramatic.",
-            "You might feel resentful when others take credit for your quiet work."
+            "支えすぎて、相手が挑戦しなくなるまで世話をしてしまいます。",
+            "成長が派手でないため、自分の役割を小さく扱ってしまいます。",
+            "静かな仕事の功績を他人に取られると、不満を感じます。"
           ],
           "advice": [
-            "Once this week, name what you actually contributed to a success.",
-            "Notice where your support is being taken for granted. Adjust.",
-            "Let one person fail without stepping in. Watch what they do.",
-            "Speak up about your contribution. It's not bragging; it's the truth."
+            "今週一度、自分がどの成功に実際に貢献したのかを、名前をつけて語りましょう。",
+            "自分の支えが当たり前になっている場所に気づき、調整しましょう。",
+            "一人を、介入せずに失敗させてみましょう。その人がどう動くか見てください。",
+            "自分の貢献について声に出しましょう。自慢ではなく、真実です。"
           ],
           "keywords": [
-            "nurturing",
-            "practical",
-            "steady",
-            "supportive"
+            "育成",
+            "実践",
+            "着実",
+            "支え"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You bloom when someone tends to you back.",
+          "hero": "誰かがあなたをケアしてくれるとき、花開きます。",
           "narrative": [
-            "You give naturally, but you're not great at receiving. People assume you're fine because you seem fine. You usually are. Usually.",
-            "Your best work happens when someone believes in you a little more than the situation warrants.",
-            "You don't need to become harder. You need to choose softer soil.",
-            "You are a mirror. When someone gives you love and attention, you reflect it back tenfold. But you need someone to give it first.",
-            "Don't wait for permission to take care of yourself. You deserve the same care you freely give to everyone else."
+            "自然に与えますが、受け取るのは得意ではありません。あなたは大丈夫そうに見えるので、みんな大丈夫だと思います。たいてい大丈夫。たいてい。",
+            "誰かが状況以上にあなたを信じてくれるとき、最高の仕事をします。",
+            "もっと硬くなる必要はありません。もっと柔らかい土を選べばいいのです。",
+            "あなたは鏡です。誰かが愛と注意を注げば、何倍にもなって映し返します。ただ、誰かが最初に注ぐ必要があります。",
+            "自分をケアするのに許可を待たないでください。誰にでも惜しみなく与えているのと同じケアを、自分にも受ける資格があります。"
           ],
           "shadows": [
-            "You give more than you have and call it generosity.",
-            "You mistake over-responsibility for love.",
-            "You might burn out trying to be everything to everyone."
+            "持っている以上のものを与え、それを寛容と呼んでしまいます。",
+            "過剰な責任を愛と取り違えてしまいます。",
+            "みんなにとっての何かになろうとして燃え尽きてしまうことがあります。"
           ],
           "advice": [
-            "Once this week, let someone take care of something for you.",
-            "Write down what you need. Not what others need from you.",
-            "You can put down a burden without putting down the person.",
-            "Surround yourself with people who nurture your growth, not just those who need your nurturing."
+            "今週一度、誰かに何かをやってもらうのを、断らずに受け取りましょう。",
+            "自分に必要なことを書き出しましょう。他人があなたに求めていることではなく。",
+            "人を下ろさずに、荷物を下ろすことはできます。",
+            "あなたの成長を養ってくれる人たちで、自分を囲みましょう。あなたの育成だけを必要とする人たちではなく。"
           ],
           "keywords": [
-            "nurturing",
-            "sensitive",
-            "giving",
-            "patient"
+            "育成",
+            "感受性",
+            "惜しみない",
+            "忍耐"
           ]
         }
       }
     },
     "THE_BLADE": {
       "name": "刃",
-      "tagline": "You cut through what everyone else is avoiding.",
+      "tagline": "みんなが避けている問題を、切り開いていく人です。",
       "symbol": "⚔",
       "color": "#5A6B7A",
       "element": "Metal",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You call it what it is — and you'd rather be right than liked.",
+          "hero": "あるがままを口にします。好かれるより、正しくありたい人です。",
           "narrative": [
-            "You have a moral clarity that most people spend their lives trying to develop. You see what's true about a situation fast, and you don't need to soften it to make it true.",
-            "This makes you reliable in a crisis and intimidating in a meeting. Both are useful.",
-            "You're not cold. You're direct. The difference matters, and you don't always explain it.",
-            "You are the scalpel in a world of butter knives. You cut to the heart of the matter, slicing through the noise and confusion with surgical precision.",
-            "But a blade that's always drawn will eventually dull. Know when to put yourself away, to rest, and to just observe."
+            "多くの人が人生をかけて培おうとする「道徳的明晰さ」を、あなたは最初から持っています。状況の真実をすばやく見抜き、それを真実にするために和らげる必要を感じません。",
+            "だから危機では頼られ、会議では威圧的に映ります。どちらも有用です。",
+            "冷たいのではなく、まっすぐです。その違いは重要ですが、いつも説明するとは限りません。",
+            "あなたはバターナイフの世界の中のメスです。雑音と混乱を切り抜け、問題の核心に外科的な精密さで迫ります。",
+            "ただ、抜いたままの刃はやがて鈍ります。自分をしまい、休み、ただ観察するタイミングを知ってください。"
           ],
           "shadows": [
-            "You cut too fast. Sometimes people need a second to catch up.",
-            "You can win the argument and lose the room.",
-            "You might use your directness as a shield to avoid dealing with your own emotions."
+            "切り込みが速すぎます。人がついてくるのに1秒必要なこともあります。",
+            "議論に勝って、部屋を失うことがあります。",
+            "自分の率直さを盾にして、自分の感情に向き合うのを避けてしまいます。"
           ],
           "advice": [
-            "Once this week, ask a question before giving the answer.",
-            "Notice where your honesty is a weapon instead of a gift.",
-            "Being right isn't always the win. Sometimes being heard is.",
-            "Ask yourself: 'Am I speaking to be understood, or to be right?'"
+            "今週一度、答えを出す前に質問を一つしましょう。",
+            "自分の正直さが贈り物ではなく武器になっている場面に気づきましょう。",
+            "正しいことが常に勝ちとは限りません。ときには、聞かれることが勝ちです。",
+            "自問してください。「理解されるために話しているのか、勝つために話しているのか？」"
           ],
           "keywords": [
-            "direct",
-            "principled",
-            "sharp",
-            "decisive"
+            "まっすぐ",
+            "原則",
+            "鋭さ",
+            "決断"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You know when to cut and when to hold.",
+          "hero": "いつ切るか、いつ抱えるかを知っています。",
           "narrative": [
-            "You have the blade's clarity without its edge-for-edge's-sake. You can tell the truth without making it into a fight.",
-            "People trust you because you don't lie. They also come to you with hard things because you don't flinch.",
-            "This is an unusual kind of strength — one that doesn't need to prove itself.",
-            "You are the fair judge. You listen to all sides, weigh the evidence, and deliver a verdict that is both just and compassionate.",
-            "Your integrity is your most valuable asset. Guard it fiercely, but allow yourself some grace."
+            "刃の明晰さを持ちながら、「鋭さのための鋭さ」はありません。喧嘩にせずに真実を伝えられます。",
+            "嘘をつかないので信頼されます。動じないので、難しいことも持ち込まれます。",
+            "これは珍しい種類の強さです。自分を証明する必要のない強さです。",
+            "あなたは公正な裁判官です。あらゆる側の話を聞き、証拠を量り、正義と慈悲の両方を備えた判決を下します。",
+            "誠実さは、あなたの最も貴重な資産です。それを守りながら、自分にも優しくしてください。"
           ],
           "shadows": [
-            "You can slip into being the fixer for everyone else's mess.",
-            "You confuse being needed with being wanted.",
-            "You might become overly critical of yourself when you fall short of your own high standards."
+            "みんなの問題を修復する人になりがちです。",
+            "必要とされることと、望まれることを混同してしまいます。",
+            "自分の高い基準に届かないとき、自分に厳しくなりすぎます。"
           ],
           "advice": [
-            "Once this week, let someone else be the one who knows.",
-            "Say what you feel, not just what you see.",
-            "Notice who you soften around. Learn from that.",
-            "Forgive yourself for a mistake you made. You're human, not a machine."
+            "今週一度、知っている人の場所を、誰かに譲りましょう。",
+            "見えることだけでなく、感じることも一つ口に出しましょう。",
+            "自分が優しくなる相手に気づきましょう。そこから学びましょう。",
+            "自分が犯した一つの失敗を、赦しましょう。あなたは機械ではなく、人間です。"
           ],
           "keywords": [
-            "principled",
-            "clear",
-            "decisive",
-            "trusted"
+            "原則",
+            "明晰",
+            "決断",
+            "信頼"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "Your edge is real — it just needs to be respected, not dulled.",
+          "hero": "あなたの鋭さは本物です。ただ、鈍らされるのではなく、尊重される必要があるだけ。",
           "narrative": [
-            "You have strong convictions, but you've probably been told to soften them. You've learned to hide your edge. That was survival, not growth.",
-            "In the right environment, your precision becomes an asset. In the wrong one, it's a liability.",
-            "You don't need to become less. You need to find people who can hold sharpness.",
-            "You are the diamond in the rough. Under pressure, you shine. But you need an environment that appreciates your hardness, not one that tries to crush it.",
-            "Don't dim your light or dull your edge for anyone. Find your people, and let your sharpness be a gift."
+            "強い信念を持っていますが、和らげるように言われたことがあるでしょう。自分の刃を隠す術を覚えた。それは成長ではなく、生存でした。",
+            "ふさわしい環境では、あなたの精密さは資産になります。ふさわしくない環境では、負債になります。",
+            "「少なくなる」必要はありません。鋭さを受け止められる人を見つける必要があるのです。",
+            "あなたは荒削りのダイヤモンドです。プレッシャーのもとで輝きます。ただ、あなたの硬さを評価してくれる環境が必要で、砕こうとする環境は不要です。",
+            "誰のためにも自分の光を落とさず、刃を鈍らせないでください。あなたの仲間を見つけ、鋭さを贈り物にしましょう。"
           ],
           "shadows": [
-            "You've internalized other people's discomfort with your honesty.",
-            "You second-guess instincts that are usually right.",
-            "You might isolate yourself because you feel you don't fit in."
+            "自分の正直さに対する周囲の不快感を、内面化してしまっています。",
+            "たいてい正しい直感を、疑ってしまいます。",
+            "居場所がないと感じて、孤立してしまうことがあります。"
           ],
           "advice": [
-            "Once this week, say the thing you've been softening. Notice what happens.",
-            "Find one person who can take your real opinion. Keep them.",
-            "You're not too much. You're in the wrong room.",
-            "Trust your instincts. They are usually right. If someone can't handle your truth, they are not your people."
+            "今週一度、ずっと柔らかく包んでいたことを、そのまま口にしてみましょう。何が起こるか観察してください。",
+            "本気の意見を受け止められる人を一人見つけ、手放さないでください。",
+            "あなたは「多すぎる」わけではありません。ただ、部屋が違うのです。",
+            "直感を信じてください。たいてい正しい。あなたの真実を扱えない人は、あなたの仲間ではありません。"
           ],
           "keywords": [
-            "principled",
-            "sharp",
-            "loyal",
-            "misunderstood"
+            "原則",
+            "鋭さ",
+            "忠誠",
+            "誤解されやすい"
           ]
         }
       }
     },
     "THE_GEM": {
       "name": "宝石",
-      "tagline": "You shine because you were cut with intent.",
+      "tagline": "意図をもって削られたからこそ、輝く人です。",
       "symbol": "◈",
       "color": "#9AACB8",
       "element": "Metal",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You've spent years refining your taste — and it shows.",
+          "hero": "何年もかけて自分の好みを磨いてきました。そして、それは現れています。",
           "narrative": [
-            "You notice quality that other people walk past. A phrase, a finish, a detail in a room — you see the difference, and you care about it.",
-            "You hold yourself to a standard that doesn't come from outside. You're not chasing approval, you're chasing the version of the thing that would make you proud to have made it.",
-            "This makes you exceptional at a certain kind of work. It also makes you difficult to satisfy — including with yourself.",
-            "You are a piece of fine art, meticulously crafted. Your eye for detail is a superpower, but it can also be a curse if you don't learn to let things go.",
-            "Remember that perfection is a horizon you can never reach. The beauty is in the pursuit, not in the arrival."
+            "他の人が通り過ぎる「質」に気づきます。フレーズ、仕上げ、部屋の細部。違いを認識し、それを大切にします。",
+            "基準は外から来るものではありません。承認を追うのではなく、「これを自分で作ったら誇りに思える」バージョンを追います。",
+            "特定の種類の仕事で卓越します。同時に、満足させにくくもなります。自分自身も含めて。",
+            "あなたは精密に仕上げられた芸術作品です。細部を見る眼は超能力ですが、手放す術を覚えなければ呪いにもなります。",
+            "完璧は決して到達できない地平線だということを覚えておいてください。美しさは到達にあるのではなく、追い求める過程にあります。"
           ],
           "shadows": [
-            "You can burn a lot of energy on details no one else will notice.",
-            "You're harder on yourself than you'd ever be on someone else.",
-            "You might become paralyzed by perfectionism, unable to finish anything."
+            "誰も気づかない細部に、多くのエネルギーを費やしてしまいます。",
+            "誰かにする以上に、自分に厳しくしてしまいます。",
+            "完璧主義で麻痺して、何も完成できなくなることがあります。"
           ],
           "advice": [
-            "Once this week, ship something at 80%. Notice that no one died.",
-            "Say one kind thing to yourself out loud. Yes, out loud.",
-            "Ask: 'Is this the best I can do, or the best that's needed?'",
-            "Give yourself a break. Take a day off from being perfect."
+            "今週一度、80%で出してみましょう。誰も死なないことに気づいてください。",
+            "自分に優しい言葉を一つ、声に出して言いましょう。ええ、声に出して。",
+            "問いかけてください。「これは自分にできる最善か、それとも必要な最善か？」",
+            "自分に休みを与えましょう。完璧でなくていい日を取ってください。"
           ],
           "keywords": [
-            "refined",
-            "precise",
-            "perfectionist",
-            "taste"
+            "洗練",
+            "精密",
+            "完璧主義",
+            "好み"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You have taste without letting it run your life.",
+          "hero": "自分の好みに人生を支配させず、持ち合わせています。",
           "narrative": [
-            "You know the difference between good and great, but you don't let it stop you from moving. You refine as you go, not before you start.",
-            "This is a rare balance — one that lets you actually finish things while still caring about how they're made.",
-            "People notice the quality of what you touch, even if they can't name why.",
-            "You are a polished gem, radiating elegance and refinement. You don't have to shout to be noticed; your presence speaks for itself.",
-            "But make sure your pursuit of excellence doesn't isolate you from the messy, imperfect beauty of the world."
+            "良いものと卓越したものの違いを知っていますが、それで動きを止めません。始める前にではなく、進めながら洗練します。",
+            "これは稀なバランスです。実際に物事を完成させながら、作られ方を気にかけていられる。",
+            "あなたが触れたものの質を、人は理由を言えないながらも気づきます。",
+            "あなたは磨かれた宝石で、優雅さと洗練を放っています。声を張らなくても注目され、存在そのものが語ります。",
+            "ただ、卓越への追求が、世界の混沌とした不完全な美からあなたを切り離さないように気をつけてください。"
           ],
           "shadows": [
-            "You can slip into editing other people's choices without being asked.",
-            "You downplay your own standards to fit into rooms that don't share them.",
-            "You might use your taste as a way to feel superior to others."
+            "頼まれもしないのに、他人の選択を「編集」してしまいます。",
+            "自分の基準を共有しない部屋に合わせて、基準を下げてしまいます。",
+            "自分の趣味を、他人より優れていると感じるための道具にしてしまうことがあります。"
           ],
           "advice": [
-            "Once this week, notice where your standards are a gift, and where they're a gate.",
-            "Pick one thing to do badly on purpose. See what happens.",
-            "Let someone else's version of 'good' be good enough.",
-            "Appreciate the beauty in the imperfect. Wabi-sabi is a thing."
+            "今週一度、自分の基準が贈り物になる場面と、門になる場面を見極めましょう。",
+            "一つのことを、わざと下手にやってみましょう。何が起こるか見てください。",
+            "他人の「良い」を、そのまま良いと認めましょう。",
+            "不完全の中の美を味わいましょう。侘び寂びもまた、ひとつの美です。"
           ],
           "keywords": [
-            "refined",
-            "balanced",
-            "tasteful",
-            "precise"
+            "洗練",
+            "バランス",
+            "趣味",
+            "精密"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "Your shine depends on the light you're standing in.",
+          "hero": "あなたの輝きは、立っている光に左右されます。",
           "narrative": [
-            "You have a refined inner world, but it only comes out when the conditions are right. In the wrong place, you go quiet and small.",
-            "You've probably been told you're 'too picky' at some point. You're not. You just notice things.",
-            "The right rooms don't dim you — they reveal you.",
-            "You are a delicate crystal. You need the right lighting, the right angle, and the right company to truly sparkle.",
-            "Don't waste your light in places that can't see your value. Find the space where you are appreciated, and let yourself shine."
+            "洗練された内面世界がありますが、条件が整ったときにだけ表に出ます。間違った場所では、静かで小さくなります。",
+            "「うるさすぎる」と言われたことがあるでしょう。違います。ただ気づくのです。",
+            "ふさわしい部屋は、あなたを曇らせず、現します。",
+            "あなたは繊細なクリスタルです。本当に輝くには、ふさわしい照明と角度、そしてふさわしい仲間が必要です。",
+            "自分の価値を見出せない場所に、自分の光を浪費しないでください。評価される空間を見つけて、自分を輝かせましょう。"
           ],
           "shadows": [
-            "You don't speak up because you assume other people won't get it.",
-            "You over-edit yourself before anyone else even sees the work.",
-            "You might feel like an outsider, even when you're in a group."
+            "他の人は理解しないだろうと決めつけて、口に出しません。",
+            "誰かが見る前に、自分を編集しすぎてしまいます。",
+            "グループにいるときでさえ、外の人だと感じることがあります。"
           ],
           "advice": [
-            "Find one person who gets your taste. Show them the real version.",
-            "Say the specific thing you noticed this week, even if no one asked.",
-            "You don't need everyone to see the detail. You need one person who does.",
-            "Speak up about your preferences. You are allowed to have high standards."
+            "自分の趣味をわかってくれる人を一人見つけ、本当のバージョンを見せましょう。",
+            "今週、誰も聞いていなくても、自分が気づいた具体的なことを一つ口に出しましょう。",
+            "細部を全員が見る必要はありません。誰か一人が見てくれればいいのです。",
+            "自分の好みを声に出しましょう。高い基準を持つことは、あなたの権利です。"
           ],
           "keywords": [
-            "refined",
-            "sensitive",
-            "perceptive",
-            "quiet"
+            "洗練",
+            "感受性",
+            "洞察",
+            "静けさ"
           ]
         }
       }
     },
     "THE_DEEP": {
       "name": "深海",
-      "tagline": "You move like an ocean — slow on the surface, vast underneath.",
+      "tagline": "海のように動きます。表面はゆっくり、けれどその下は広大です。",
       "symbol": "≈",
       "color": "#1B3A5C",
       "element": "Water",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You think in systems, not moments.",
+          "hero": "瞬間ではなく、仕組みで考えます。",
           "narrative": [
-            "You have an unusual capacity to hold a lot of context at once. Where other people see a situation, you see the machinery under it.",
-            "You don't rush to conclusions. You let things settle, and your conclusions are usually right because of it.",
-            "This makes you a strategist, an advisor, someone others consult when the easy answers have failed.",
-            "You are the deep ocean. You hold mysteries and wisdom that others can only guess at. Your depth is your greatest strength.",
-            "But don't drown in your own thoughts. Sometimes, it's okay to surface and just experience the present moment."
+            "一度に多くの文脈を保持できる、並外れた容量を持っています。他の人が「状況」を見るところで、あなたはその下にある機械を見ます。",
+            "結論を急ぎません。物事を沈めます。だからこそ、あなたの結論はたいてい正しいのです。",
+            "だからこそあなたは戦略家であり、助言者であり、簡単な答えが失敗したあとに人が訪ねる人です。",
+            "あなたは深い海です。他の人が推し量るしかない神秘と知恵を、あなたは抱いています。あなたの深さこそ、最大の強みです。",
+            "ただ、自分の思考の中で溺れないでください。ときに、浮上してただ現在を体験することも許してください。"
           ],
           "shadows": [
-            "You think so long that you miss the window to act.",
-            "You stay above your own emotions because you can see them from far away.",
-            "You might use your intellect to analyze your feelings, instead of actually feeling them."
+            "考えすぎて、行動すべき窓を逃してしまいます。",
+            "感情を遠くから見られるがために、自分の感情から距離をとってしまいます。",
+            "感情を分析するために知性を使い、実際に感じることを避けてしまいます。"
           ],
           "advice": [
-            "Once this week, act on a decision before you feel 'ready.'",
-            "Say what you actually feel — not what you've analyzed about what you feel.",
-            "Notice when your depth is a gift and when it's a hiding place.",
-            "Take a break from thinking. Go for a walk, listen to music, or just breathe."
+            "今週一度、「準備できた」と感じる前に、決断を行動に移しましょう。",
+            "「感じたことについて分析したこと」ではなく、実際に感じたことを口にしましょう。",
+            "自分の深さが贈り物になる場面と、隠れ蓑になる場面に気づきましょう。",
+            "考えるのを休みましょう。散歩し、音楽を聴き、ただ呼吸を。"
           ],
           "keywords": [
-            "strategic",
-            "philosophical",
-            "deep",
-            "adaptive"
+            "戦略",
+            "哲学的",
+            "深さ",
+            "適応"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You adapt without losing your direction.",
+          "hero": "方向を失わずに適応する人です。",
           "narrative": [
-            "You can shift with circumstances and still arrive where you meant to go. That's not luck — that's a skill most people never develop.",
-            "You read situations well, and you read people better. You rarely say the wrong thing because you usually know what the right thing is.",
-            "This makes you trusted in rooms where trust is scarce.",
-            "You are the wise counselor. People come to you for your insight, knowing you will offer a perspective they haven't considered.",
-            "Trust that your intuition is a valid source of knowledge. It's not just a feeling; it's a deep knowing."
+            "状況に合わせて動きながらも、目指した場所にたどり着きます。それは運ではなく、多くの人が決して身につけない技術です。",
+            "状況をよく読み、人はもっとよく読みます。正しいことが何かをたいてい知っているため、間違ったことをめったに言いません。",
+            "信頼が乏しい部屋で信頼される人です。",
+            "あなたは賢明な助言者です。人があなたのもとへ、まだ考慮していない視点を得るために訪れます。",
+            "直感を知識の正当な源として信頼しましょう。それは単なる感覚ではなく、深い確信です。"
           ],
           "shadows": [
-            "You can flow around conflict instead of resolving it.",
-            "You keep your real opinions in reserve so long that they stop mattering.",
-            "You might use your wisdom as an excuse to stay detached from the world."
+            "衝突を解決する代わりに、流れでかわしてしまいます。",
+            "本心を長くしまいすぎて、意味を失ってしまいます。",
+            "知恵を、世界から距離をとる口実にしてしまいます。"
           ],
           "advice": [
-            "Once this week, take a position instead of reflecting on the positions available.",
-            "Say the true thing, not the safe thing.",
-            "Notice where you're adapting to avoid, not to build.",
-            "Speak up about your beliefs. You have valuable things to say."
+            "今週一度、選択肢を吟味する代わりに、立場を取ってみましょう。",
+            "安全なことではなく、真実を口にしましょう。",
+            "避けるために適応している場面に気づきましょう。築くために適応している場面とは違います。",
+            "自分の信念について声に出しましょう。価値あることを言うべきなのです。"
           ],
           "keywords": [
-            "adaptive",
-            "wise",
-            "fluid",
-            "trusted"
+            "適応",
+            "知恵",
+            "しなやか",
+            "信頼"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You need a container big enough to hold you.",
+          "hero": "あなたを抱えられるほど大きな器が必要です。",
           "narrative": [
-            "You have a lot going on inside — ideas, questions, feelings — and it doesn't all fit into small spaces.",
-            "In the right environment, your depth becomes presence. In the wrong one, you go silent and start drifting.",
-            "You're not hard to know. You're hard to hold. That's different.",
-            "You are a vast, unexplored ocean. You need a space where you can be your full, complex self without feeling judged.",
-            "Don't shrink yourself to fit into small minds. Find the people who can hold your depth."
+            "内にたくさんのものがあります。アイデア、問い、感情。小さな空間には収まりません。",
+            "ふさわしい環境では、あなたの深さは存在感になります。間違った環境では、静かになり、漂流し始めます。",
+            "あなたは「知りにくい人」ではなく、「保ちにくい人」です。その二つは違います。",
+            "あなたは広大で未探索の海です。あなたの完全で複雑な自分を、裁かれることなく表現できる空間が必要です。",
+            "小さな心に収まろうと、自分を縮めないでください。あなたの深さを抱えられる人を見つけましょう。"
           ],
           "shadows": [
-            "You retreat into your own world instead of asking for what you need.",
-            "You confuse being unknown with being unknowable.",
-            "You might feel lonely even in a crowded room."
+            "必要なものを求める代わりに、自分の世界に引きこもってしまいます。",
+            "知られていないことと、知りえないことを混同してしまいます。",
+            "混み合った部屋の中でも、孤独を感じることがあります。"
           ],
           "advice": [
-            "Find the one person you can say the whole thing to. Not the summary.",
-            "Give your inner world one place to live this week — a page, a song, a room.",
-            "You're not too much. You're just not in the right size container.",
-            "Reach out. You might be surprised who is willing to dive deep with you."
+            "全部を話せる人を一人見つけましょう。要約ではなく、全体を。",
+            "今週、自分の内面世界に、居場所を一つ与えましょう。ページを一枚、歌を一曲、部屋を一つ。",
+            "あなたは多すぎるわけではありません。ただ、器のサイズが合っていないだけです。",
+            "手を伸ばしましょう。あなたと一緒に深く潜ってくれる人が、思わぬ人かもしれません。"
           ],
           "keywords": [
-            "deep",
-            "sensitive",
-            "philosophical",
-            "adaptive"
+            "深さ",
+            "感受性",
+            "哲学的",
+            "適応"
           ]
         }
       }
     },
     "THE_SPRING": {
       "name": "泉",
-      "tagline": "You arrive quietly, and everything grows around you.",
+      "tagline": "静かに現れ、周りのすべてを育てます。",
       "symbol": "◌",
       "color": "#4A6FA5",
       "element": "Water",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You know things before you can explain how.",
+          "hero": "説明できる前に、知っています。",
           "narrative": [
-            "Your intuition is unusually accurate. You get a read on a person or a situation fast, and it's usually right — even when you can't articulate why.",
-            "You don't perform certainty. You just move as if you already know, because you do.",
-            "This makes you a natural in work that requires subtle judgment. It also makes you hard to argue with when you've made up your mind.",
-            "You are a clear mountain spring. Your intuition is pure and refreshing. It flows from a deep well of inner knowing.",
-            "Trust your gut. It is your most reliable guide, even when logic points in the other direction."
+            "直感が並外れて正確です。人や状況を素早く読み、たいてい当たります。なぜか説明できなくても。",
+            "確信を演じません。ただ、もう知っているかのように動きます。実際に知っているからです。",
+            "繊細な判断が必要な仕事で、生まれつきの才能があります。それに、心を決めたら議論しにくくもあります。",
+            "あなたは澄んだ山の泉です。直感は純粋で清々しく、深い内なる知から湧き出ます。",
+            "直感を信じてください。論理が別の方向を指しても、最も信頼できる案内人です。"
           ],
           "shadows": [
-            "You rely on your own read so much that you stop asking for input.",
-            "You keep your deepest insights private, which means people don't get to benefit from them.",
-            "You might become overly mysterious, keeping everyone at arm's length."
+            "自分の読みに頼りすぎて、意見を求めなくなってしまいます。",
+            "最も深い洞察を自分の中に留めてしまい、誰もその恩恵を受けられません。",
+            "過度に神秘的な人になり、みんなを遠ざけてしまいます。"
           ],
           "advice": [
-            "Once this week, say the thing you intuited — even without proof.",
-            "Let someone in on the reasoning, not just the conclusion.",
-            "You don't need to be sure to be right.",
-            "Share your wisdom. It's a gift that shouldn't be kept hidden."
+            "今週一度、証拠がなくても、直感したことを口に出しましょう。",
+            "結論だけでなく、理由も誰かに伝えましょう。",
+            "確信がなくても、正しくあれます。",
+            "自分の知恵を分かち合いましょう。隠すべきでない贈り物です。"
           ],
           "keywords": [
-            "intuitive",
-            "subtle",
-            "strategic",
-            "quiet"
+            "直感",
+            "繊細",
+            "戦略",
+            "静けさ"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You listen more than you talk — and you hear more than most.",
+          "hero": "話す以上に耳を傾け、多くの人より多くを聞きます。",
           "narrative": [
-            "You have a still, perceptive quality that makes people want to tell you things. You don't push. You just make space.",
-            "Your instincts are quiet, but they're usually on time. You know when to act and when to wait, and the difference is rarely explained to you — you just feel it.",
-            "This is a rare and durable kind of intelligence.",
-            "You are a still lake. Your surface is calm, but your depths are filled with wisdom and insight.",
-            "Remember that you also need a place to share your thoughts. You don't have to hold everything inside."
+            "静かで鋭敏な質があり、人はあなたに話したくなります。押しつけず、ただスペースを作ります。",
+            "直感は静かですが、たいてい時期を外しません。いつ行動し、いつ待つかを知っていて、その違いは説明されることがほとんどありません。ただ感じるだけです。",
+            "これは、稀で長続きする種類の知性です。",
+            "あなたは静かな湖です。表面は穏やかですが、深みには知恵と洞察が満ちています。",
+            "自分にも考えを分かち合う場が必要なことを忘れないでください。すべてを内側に抱える必要はありません。"
           ],
           "shadows": [
-            "You absorb other people's emotions without noticing until later.",
-            "You keep your own counsel so well that people assume you don't need anything.",
-            "You might use silence as a way to avoid confrontation."
+            "他人の感情を、後になってようやく気づくまで吸収してしまいます。",
+            "自分の内にうまく留めすぎて、何も必要としていないように見えます。",
+            "沈黙を、対立を避ける手段にしてしまいます。"
           ],
           "advice": [
-            "Once this week, tell someone what you actually need.",
-            "Notice where your stillness is a gift and where it's a wall.",
-            "You're allowed to be a source without being everyone's well.",
-            "Find a creative outlet. Painting, writing, or music can help you express what you can't say in words."
+            "今週一度、本当に必要なことを誰かに伝えましょう。",
+            "自分の静けさが贈り物になる場面と、壁になる場面に気づきましょう。",
+            "みんなの井戸にならなくても、泉でいられます。",
+            "創造的な出口を見つけましょう。絵を描く、書く、音楽が、言葉にできないものを表現する助けになります。"
           ],
           "keywords": [
-            "intuitive",
-            "gentle",
-            "perceptive",
-            "steady"
+            "直感",
+            "穏やか",
+            "洞察",
+            "軸の強さ"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You're a well — deep, clear, and quietly essential.",
+          "hero": "あなたは井戸です。深く、澄んでいて、静かに不可欠です。",
           "narrative": [
-            "You have real inner depth, but it doesn't always surface in public. You need the right person or the right moment for it to come out.",
-            "People often underestimate you, and you usually let them. You've learned that being seen isn't the same as being understood.",
-            "When you find someone who gets it, you open up in a way that surprises even you.",
-            "You are a hidden gem. You are not for everyone, but for those who take the time to dig, you are a treasure trove.",
-            "Be patient. The right people will know how to appreciate your quiet, subtle brilliance."
+            "本物の内面の深さがありますが、公の場でいつも表面化するわけではありません。表に出るには、ふさわしい人とふさわしい瞬間が必要です。",
+            "しばしば過小評価されますが、たいていそのままにしています。見られることは、理解されることと同じではないと学んだのです。",
+            "わかってくれる人を見つけると、自分でも驚くほど開きます。",
+            "あなたは隠れた宝石です。みんなのものではありません。ただ、時間をかけて掘ってくれる人にとっては、宝物の山です。",
+            "辛抱強く。ふさわしい人は、あなたの静かで繊細な輝きを評価する方法を知っています。"
           ],
           "shadows": [
-            "You hide your depth because you've been misread before.",
-            "You wait for the perfect invitation to be yourself.",
-            "You might become so good at hiding that you lose touch with your true self."
+            "以前誤解された経験から、自分の深さを隠します。",
+            "自分自身でいるための完璧な招待を待ってしまいます。",
+            "隠れるのが上手になりすぎて、本当の自分から離れてしまうことがあります。"
           ],
           "advice": [
-            "Stop waiting for the perfect person. Start sharing with the good ones.",
-            "Once this week, say the thing you've been holding back.",
-            "Being understood is worth the risk of being misread.",
-            "Express yourself in a way that feels safe to you. You don't have to perform to be seen."
+            "完璧な人を待つのをやめ、良い人に分かち合い始めましょう。",
+            "今週一度、ずっと抑えてきたことを口にしましょう。",
+            "誤解されるリスクを冒す価値が、理解されることにはあります。",
+            "自分にとって安全に感じる方法で表現しましょう。見られるために演じる必要はありません。"
           ],
           "keywords": [
-            "deep",
-            "sensitive",
-            "intuitive",
-            "quiet power"
+            "深さ",
+            "感受性",
+            "直感",
+            "静かな力"
           ]
         }
       }
