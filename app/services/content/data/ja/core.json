@@ -2,450 +2,448 @@
   "ARCHETYPE_CONTENT": {
     "THE_PIONEER": {
       "name": "パイオニア",
-      "tagline": "You grow upward, whether the ground is ready or not.",
+      "tagline": "地面が整っていようといまいと、あなたは上へと伸びていく。",
       "symbol": "↟",
       "color": "#2F7A3F",
       "element": "Wood",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You're built to go first. And to keep going when no one follows.",
+          "hero": "あなたは先に進むために生まれています。誰もついてこなくても、進み続ける人です。",
           "narrative": [
-            "You have a clear inner compass. Once you decide something, it becomes obvious to you long before it's obvious to anyone else.",
-            "You don't wait for consensus. You don't wait for the map to be drawn. You just know where north is, and you move.",
-            "This makes you a founder, a builder, an originator. But it also means you spend a lot of time alone with your vision before anyone understands it.",
-            "Your independence is your greatest asset, but it can also be isolating. When you're the only one who sees the path, it's easy to forget to look back and check if anyone is still with you.",
-            "True leadership isn't just about forging ahead; it's about knowing when to slow down so others can catch up. Your vision is the seed, but collaboration is the water."
+            "あなたの内には明確な方位磁針があります。一度何かを決めると、他の誰よりもはるか早く、それが当然のことになります。",
+            "合意を待ちません。地図が描かれるのを待ちません。北がどこか知っていて、ただ動くのです。",
+            "だからこそあなたは創業者であり、建築家であり、創始者です。その代わり、誰かが理解するずっと前から、ビジョンと二人きりで過ごす時間が長いということでもあります。",
+            "独立心は最大の資産ですが、それは孤立も招きます。自分だけが道を見ているとき、振り返って誰かがまだ一緒にいるかを確かめるのを忘れがちです。",
+            "真のリーダーシップとは、ただ前進することではなく、仲間が追いつけるよう速度を落とすタイミングを知ることです。あなたのビジョンが種なら、協働は水です。"
           ],
           "shadows": [
-            "Your pace feels so clearly right to you that you can accidentally bulldoze over other people's pace.",
-            "You mistake stillness for stagnation. Rest feels like a betrayal of your own ambition.",
-            "You can become rigid in your beliefs, ignoring valuable input because it doesn't align with your original plan."
+            "自分のペースがはっきり正しいと感じるあまり、うっかり他人のペースを押し潰してしまうことがあります。",
+            "静止を停滞と取り違えます。休息は自分の野心への裏切りに感じられます。",
+            "信念が固くなり、当初の計画に沿わないという理由で貴重な意見を無視してしまうことがあります。"
           ],
           "advice": [
-            "Once this week, ask someone you trust how your momentum looks from the outside.",
-            "Pick one goal you've been pushing on for months. Ask: 'Would I still care about this if no one ever knew?'",
-            "Pause for 10 seconds before you say 'I've got it.' Sometimes, you don't.",
-            "Schedule a 'pause day' once a month where you do absolutely nothing related to your goals. Just to breathe."
+            "今週一度、信頼できる人に、あなたの勢いが外からどう見えるか聞いてみましょう。",
+            "何か月も押し進めてきた目標を一つ選び、自問してください。「誰にも知られなくても、これをまだ大切にしたいか？」",
+            "「わかった」と言う前に10秒止まってください。わかっていないこともあるのです。",
+            "月に一度、「一時停止の日」を予定に入れてください。目標に関わることは一切せず、ただ息をする日を。"
           ],
           "keywords": [
-            "visionary",
-            "vertical",
-            "independent",
-            "founder"
+            "先見性",
+            "垂直性",
+            "独立心",
+            "創始者"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You lead without needing the spotlight to do it.",
+          "hero": "スポットライトを必要とせずに、人を導きます。",
           "narrative": [
-            "You have the pioneer's instinct without the pioneer's impatience. You'll go first if you need to, but you'd rather the whole thing move forward than your name be on it.",
-            "People follow you because you're steady. You don't perform ambition — you just keep growing, quietly, in a direction that makes sense to you.",
-            "This is a rare, durable kind of leadership. It's also easy to overlook in yourself.",
-            "You are the steady hand on the rudder. You don't need to shout to be heard, and you don't need to sprint to win the race.",
-            "Your strength lies in your consistency. While others burn out chasing the next shiny thing, you are building something that will outlast the hype."
+            "先駆者の本能はあっても、先駆者の焦りはありません。必要なら先陣を切りますが、自分の名前が載るよりも、物事全体が進むことを望みます。",
+            "人があなたに従うのは、あなたが揺るがないからです。野心を演じることはなく、ただ自分にとって意味のある方向へ、静かに伸び続けます。",
+            "これは稀で、長く続くタイプのリーダーシップです。ただ、自分ではなかなか気づきにくいものでもあります。",
+            "あなたは舵を取る揺るぎない手です。声を張らなくても届き、全力疾走しなくてもレースに勝てます。",
+            "あなたの強さは一貫性にあります。他の人が次の輝くものを追って燃え尽きる中、あなたは流行を超えて生き残るものを築いています。"
           ],
           "shadows": [
-            "You can end up carrying more than your share because you don't want to make it 'a thing.'",
-            "Your steadiness can look like passivity to people who mistake noise for action.",
-            "You might suppress your own needs to maintain the peace, leading to quiet resentment."
+            "「大ごとにしたくない」という理由で、自分の分を超えた重みを背負ってしまうことがあります。",
+            "騒がしさを行動と取り違える人には、あなたの揺るぎなさは受動的に見えるかもしれません。",
+            "平和を保つために自分の必要を抑え、静かなわだかまりを溜めてしまうことがあります。"
           ],
           "advice": [
-            "Name one thing you want and say it out loud this week — no qualifiers.",
-            "Notice who actually follows you. Not who agrees with you — who moves with you.",
-            "Let someone else lead one thing you'd normally take.",
-            "Check in with your own energy levels. Are you being steady, or are you just avoiding conflict?"
+            "今週、自分の欲しいものを一つ、条件もつけず声に出して言ってみましょう。",
+            "本当に自分についてくる人が誰かを観察してください。同意する人ではなく、一緒に動く人を。",
+            "いつも自分が引き受けることを一つ、誰かに任せてみましょう。",
+            "自分のエネルギー状態を確認してください。揺るがないのか、ただ衝突を避けているのか。"
           ],
           "keywords": [
-            "quiet leadership",
-            "growth",
-            "consistency",
-            "grounded"
+            "静かなリーダーシップ",
+            "成長",
+            "一貫性",
+            "軸の強さ"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You're a tree — beautiful, but particular about your soil.",
+          "hero": "あなたは木です。美しいが、土壌にはこだわります。",
           "narrative": [
-            "You have a strong inner direction, but it doesn't always translate into outer action. You need the right conditions before you can really start.",
-            "This isn't laziness. It's accuracy. You feel very clearly when a place, project, or person can hold what you're building.",
-            "Your growth is real, but it's not fast. It's the kind that lasts decades.",
-            "You are deeply intuitive about your environment. You know when the soil is toxic, even if everyone else says it's fine.",
-            "Stop apologizing for needing the right conditions. A seed doesn't grow in concrete. Wait for your spring, and when it comes, you'll shoot up fast."
+            "あなたには強い内なる方向性がありますが、それがいつも外の行動に変わるとは限りません。本気で始めるには、ふさわしい条件が必要なのです。",
+            "これは怠慢ではなく正確さです。ある場所やプロジェクト、ある人が自分が築こうとしているものを支えられるかどうかを、あなたははっきりと感じ取ります。",
+            "あなたの成長は本物ですが、速くはありません。何十年も続くタイプの成長です。",
+            "環境について深い直感を持っています。周りの誰もが「大丈夫」と言っても、その土壌が毒だとわかるのです。",
+            "ふさわしい条件を必要とすることに、謝るのはやめましょう。コンクリートの中では種は育ちません。あなたの春を待ちなさい。訪れたとき、あなたは一気に伸びます。"
           ],
           "shadows": [
-            "You wait for 'ready' longer than you should.",
-            "You stay loyal to the wrong environment past the point of no return.",
-            "You can use the 'waiting for the right conditions' as an excuse to avoid taking action."
+            "「準備ができた」を必要以上に待ってしまいます。",
+            "戻れなくなる地点を過ぎても、間違った環境に忠実に留まってしまいます。",
+            "「条件が整うのを待っている」を、行動しない口実にしてしまうことがあります。"
           ],
           "advice": [
-            "Write down the conditions you actually need. Are you in them? If not, what's one thing you can change?",
-            "Start the thing small — today, in whatever state it's in.",
-            "You're allowed to outgrow a room. Notice which one.",
-            "If a space feels draining, set a boundary. It's okay to leave early."
+            "本当に必要な条件を書き出してみましょう。そこにいますか？いないなら、変えられることは何か一つありますか？",
+            "そのことを小さく始めましょう。今日、どんな状態であれ。",
+            "部屋から卒業してよくなるのです。どの部屋なのか、気づいてください。",
+            "空間が消耗させると感じたら、境界線を引きましょう。早めに離れて構いません。"
           ],
           "keywords": [
-            "patience",
-            "rooted",
-            "loyal",
-            "conditions"
+            "忍耐",
+            "根づき",
+            "忠実",
+            "条件"
           ]
         }
       }
     },
     "THE_ADAPTER": {
       "name": "アダプター",
-      "tagline": "You bend, so you don't break.",
+      "tagline": "しなやかに曲がるから、折れない。",
       "symbol": "⟡",
       "color": "#5FAF7A",
       "element": "Wood",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You survive by reading the room and moving with it.",
+          "hero": "あなたは空気を読み、それに乗ることで生き延びます。",
           "narrative": [
-            "You don't fight systems head-on — you find the crack in them. You've probably been underestimated more than once by people who mistake softness for weakness.",
-            "Your flexibility is a form of intelligence. You see what others are about to do, and you're already halfway there before they realize it.",
-            "This makes you a natural collaborator, negotiator, translator. It also means people don't always see how much work you're doing.",
-            "You are a master of social tai chi. You redirect energy rather than block it. This makes you incredibly effective in chaotic environments.",
-            "But constantly bending means you might eventually forget what your natural shape feels like. You have the right to be rigid when it matters."
+            "あなたはシステムと正面から戦いません。その隙間を見つけます。柔らかさを弱さと取り違えた人たちから、何度も過小評価されてきたでしょう。",
+            "柔軟性は知性の一形態です。人が次に何をしようとしているかを先に読み、相手が気づく前に半ばまで到達しています。",
+            "だからこそ自然な協働者、交渉者、翻訳者になります。その代わり、あなたがどれだけの仕事をこなしているかを、人がいつも見ているわけではありません。",
+            "あなたはソーシャル太極拳の達人です。エネルギーを遮らず、方向を変える。混沌とした環境でこそ、その力は絶大です。",
+            "ただ、曲がり続けていると、やがて自分の本来の形を忘れてしまうかもしれません。本当に大事なときは、頑なになってもいいのです。"
           ],
           "shadows": [
-            "You can bend so far you lose track of your own shape.",
-            "You adapt to please, then resent the person you adapted for.",
-            "You might avoid necessary conflict, letting things fester until they break."
+            "曲がりすぎて、自分の形を見失うことがあります。",
+            "喜ばせるために適応し、そのあと適応した相手に不満を抱いてしまいます。",
+            "必要な衝突を避け、問題をこじらせてしまうことがあります。"
           ],
           "advice": [
-            "Once this week, say 'no' to something small. Notice what happens.",
-            "Write down three things you actually want — not what fits the situation.",
-            "Pick one person who's never seen you be stubborn. Let them.",
-            "When you feel resentful, ask yourself: 'Did I say yes when I meant no?'"
+            "今週一度、小さなことに「いいえ」と言ってみましょう。何が起こるか観察してください。",
+            "本当に欲しいものを三つ書き出しましょう。状況に合うものではなく。",
+            "あなたが頑固な姿を見たことのない人を一人選んで、見せてみましょう。",
+            "不満を感じたとき、自問してください。「嫌だと思っていたのに、はいと言っていなかったか？」"
           ],
           "keywords": [
-            "adaptive",
-            "graceful",
-            "intuitive",
-            "underestimated"
+            "適応力",
+            "優雅さ",
+            "直感",
+            "過小評価"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You move with the current without losing the shore.",
+          "hero": "流れに乗りながら、岸を見失わない人です。",
           "narrative": [
-            "You can be firm or yielding as the moment calls for — and you don't make a big deal about switching between them.",
-            "This is what real social intelligence looks like. Not performance — calibration.",
-            "People trust you because you seem to know what's needed. They also sometimes take that for granted.",
-            "You know when to push and when to yield. This is a rare form of grace that most people spend their whole lives trying to learn.",
-            "You are the glue that holds groups together. You don't demand the spotlight, but you are the reason the light stays on."
+            "状況に応じて強くもなれるし、身を任せることもできる。その切り替えを大げさに扱いません。",
+            "これこそ本物の社会性です。パフォーマンスではなく、キャリブレーションです。",
+            "人があなたを信頼するのは、何が必要かを知っているように見えるからです。ただ、それを当然のことと取られることもあります。",
+            "いつ押し、いつ譲るかを知っています。多くの人が一生をかけて学ぼうとする、稀有な優雅さです。",
+            "あなたはグループを一つに結ぶ接着剤です。脚光を求めませんが、明かりを灯し続けているのはあなたです。"
           ],
           "shadows": [
-            "You over-accommodate, then quietly withdraw.",
-            "You mistake your own flexibility for not having preferences.",
-            "You might let others make decisions that affect you deeply, just to keep the peace."
+            "過度に合わせたあと、静かに身を引いてしまいます。",
+            "自分の柔軟性を、好みがないことと混同してしまいます。",
+            "平和を保つために、深く関わる決定を他人に委ねてしまいます。"
           ],
           "advice": [
-            "Once this week, voice a preference before someone else does.",
-            "Notice where you soften your language unnecessarily.",
-            "You're allowed to want things. Practice wanting them out loud.",
-            "Be honest with yourself about your own boundaries. Are you bending, or are you breaking?"
+            "今週一度、誰かが言う前に自分の好みを口に出してみましょう。",
+            "必要以上に言葉を柔らかくしている場面に気づいてください。",
+            "欲しがってもいいのです。欲しいと声に出す練習をしましょう。",
+            "自分の境界線に正直になりましょう。曲がっているのか、壊れかけているのか。"
           ],
           "keywords": [
-            "calibrated",
-            "graceful",
-            "empathic",
-            "social"
+            "バランス",
+            "優雅さ",
+            "共感",
+            "社会性"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You bloom in the right light. Not every light.",
+          "hero": "ふさわしい光の下でこそ花開きます。どんな光でも、というわけではありません。",
           "narrative": [
-            "You feel other people's moods before they name them. That's a gift, but it makes you susceptible to rooms that drain you.",
-            "When you're in the right place, you're lush and creative. When you're not, you go small.",
-            "You've probably learned to distrust your own sensitivity. Don't. It's the most accurate instrument you have.",
-            "You are a psychic sponge. You need to learn how to wring yourself out at the end of the day, or you'll carry everyone else's weight.",
-            "The right room won't just tolerate you; it will nourish you. Find it, and stay there as long as you can."
+            "相手が言葉にする前に、その人の気分を感じ取ります。才能ですが、消耗させる部屋に弱いということでもあります。",
+            "ふさわしい場所にいれば、豊かで創造的になります。そうでなければ小さく萎みます。",
+            "自分の感受性を信じられなくなってきたかもしれません。信じてください。それはあなたが持つ最も正確な計器です。",
+            "あなたは感情のスポンジです。一日の終わりに自分を絞る術を覚えなければ、他人の重さを全部抱えてしまいます。",
+            "ふさわしい部屋は、あなたをただ我慢するのではなく、養ってくれます。見つけて、できる限りそこにいてください。"
           ],
           "shadows": [
-            "You absorb other people's stress as if it were your own.",
-            "You mistake peacekeeping for peace.",
-            "You might isolate yourself completely after socializing, needing days to recover."
+            "他人のストレスを、自分のことのように吸収してしまいます。",
+            "平和を保つことと、平和そのものを混同してしまいます。",
+            "社交のあと完全に引きこもり、回復に何日も必要になることがあります。"
           ],
           "advice": [
-            "Write down one place and one person where you feel lightest. Spend more time there.",
-            "When you feel 'off' around someone, trust it once before explaining it away.",
-            "You don't need to fix anyone's mood. Not even to protect your own.",
-            "Create a 'detox ritual' after being in crowded spaces. Shower, walk, or just breathe."
+            "自分が最も軽くなれる場所と人を、それぞれ一つ書き出しましょう。そこにもっと多くの時間を費やしてください。",
+            "誰かのそばで「違和感」を覚えたら、理屈をつける前に一度信じてみましょう。",
+            "誰かの気分を直す義務はありません。自分の気分を守るためでさえ、必要ありません。",
+            "人混みのあとに「デトックスの儀式」を作りましょう。シャワー、散歩、あるいはただ呼吸を。"
           ],
           "keywords": [
-            "sensitive",
-            "empathic",
-            "growth",
-            "bloom"
+            "感受性",
+            "共感",
+            "成長",
+            "開花"
           ]
         }
       }
     },
     "THE_RADIATOR": {
       "name": "太陽",
-      "tagline": "You warm rooms by existing in them.",
+      "tagline": "ただ存在するだけで、部屋を温める人です。",
       "symbol": "☀",
       "color": "#E85D2F",
       "element": "Fire",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You run hot. Your own momentum is your fuel — and your risk.",
+          "hero": "あなたは主役のエネルギーを持っていますが、内には落ち着かない炎も抱えています。",
           "narrative": [
-            "You generate your own energy. You don't wait for permission, and you rarely need the room to agree before you move.",
-            "People feel you before they understand you. That first impression — warm, direct, bright — opens doors. But it also sets an expectation: that you're always on.",
-            "You've probably been told you're 'a lot.' That's not a flaw. It's a signal about who's in the room with you.",
-            "Your energy sets the temperature of every room you walk into. When you dim, everyone feels the drop. That's why you often push yourself past your limits just to keep the lights on.",
-            "But remember: you don't owe anyone your shine 24/7. The darkness isn't a failure. It's where you recharge."
+            "部屋に入った瞬間に注目を集めます。情熱、温もり、そして圧倒的な存在感に、人は惹きつけられます。",
+            "しかしその表面の下には、「もっと」を求める強い渇望があります。平凡な日常に落ち着くのが難しく、その落ち着かなさがあなたを前へと突き動かします。",
+            "光は明るいのですが、自分自身の感情的な必要をなおざりにしながら、すべてを他人に注ぎがちです。新しい経験を追い、境界を押し広げているとき、最も生き生きとします。",
+            "自分を「安定した」枠に押し込めるのではなく、本来の躍動的な性質を受け入れましょう。あなたの課題は「平穏を見つけること」ではなく、「絶え間ない変化の中で自分の中心を見つけること」です。"
           ],
           "shadows": [
-            "You can mistake motion for progress. Slowing down feels like failure, so you don't — until you crash.",
-            "You attract people who want to be lit up, then resent the warmth when it fades. Not your fault, but worth noticing.",
-            "You can become overly dependent on external validation, losing touch with what you actually want."
+            "みんなの期待に応えようとして燃え尽きやすいです。",
+            "内なる不安を覆い隠すために、過剰に演じてしまうことがあります。",
+            "非常に頑固で、キレたときの爆発力は凄まじいです。"
           ],
           "advice": [
-            "Schedule one hour a week with nothing to output. Not rest — space.",
-            "Let one small thing go wrong this week without fixing it.",
-            "When you feel unappreciated, ask: 'Did I ask for what I need, or did I assume they'd know?'",
-            "Build your own 'charging station'. Solitude in a room with no one else is essential for you."
+            "一人の時間をとって、内なる炎を冷ましましょう。",
+            "一か所に留まらないこと。旅をし、新しいプロジェクトを始め、エネルギーを外へ向けましょう。",
+            "他人に注ぐ前に、まず自分の器を満たしてください。"
           ],
           "keywords": [
-            "warmth",
-            "momentum",
-            "presence",
-            "self-fuel"
+            "主役",
+            "情熱",
+            "内なる炎",
+            "変化"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You carry warmth that reads the room before it fills it.",
+          "hero": "部屋を満たす前に、その温度を読む温もりを運びます。",
           "narrative": [
-            "Your fire is steady rather than explosive. You know when to lead and when to listen — a rarer gift than most people realize.",
-            "You radiate without demanding attention. People trust you because you seem to know the temperature of a situation without anyone telling you.",
-            "This balance is your superpower. But balanced people often feel invisible next to louder ones.",
-            "You are the campfire that everyone gathers around. You don't need to be the loudest; you just need to be the most consistent.",
-            "Don't let your calm demeanor hide your own needs. You are allowed to flicker, and you are allowed to be seen."
+            "あなたの炎は爆発的ではなく、安定しています。いつ導き、いつ耳を傾けるかを知っている。多くの人が気づかない、稀な才能です。",
+            "注目を求めずに光を放ちます。誰に言われなくても、その場の温度がわかるので、人が信頼を寄せるのです。",
+            "このバランスがあなたの超能力です。ただ、バランスの取れた人は、声の大きい人の隣では見えにくくなりがちです。",
+            "あなたはみんなが集まる焚き火です。最も声が大きい必要はなく、ただ最も一貫している人であればよいのです。",
+            "穏やかな物腰で自分の必要を隠さないでください。揺らめいてもいいし、見られてもいいのです。"
           ],
           "shadows": [
-            "You may shrink your own light to keep things harmonious.",
-            "Your calm can read as distance to people who need more heat than you offer.",
-            "You might neglect your own desires to play the role of the stable one."
+            "調和のために、自分の光を小さくしてしまうことがあります。",
+            "あなたの穏やかさは、より強い熱を求める人には距離として映ることがあります。",
+            "安定した役割を演じるあまり、自分の願望をなおざりにしてしまうことがあります。"
           ],
           "advice": [
-            "Once a week, claim the space you'd normally give away.",
-            "When something lights you up, say it out loud — don't just feel it.",
-            "Notice who you dim around. That's information.",
-            "Ask someone for help. You don't always have to be the strong one."
+            "週に一度、普段は譲ってしまう場所を自分のものにしましょう。",
+            "何かが自分を明るくしたら、ただ感じるだけでなく、声に出してください。",
+            "誰の前で自分を小さくしているかに気づきましょう。それは情報です。",
+            "誰かに助けを求めてください。いつも強い人である必要はありません。"
           ],
           "keywords": [
-            "calibrated",
-            "warmth",
-            "adaptability",
-            "trust"
+            "バランス",
+            "温もり",
+            "適応力",
+            "信頼"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "Your fire is real — but it needs the right room to burn.",
+          "hero": "あなたの炎は本物です。ただ、燃えるべき部屋が必要なだけ。",
           "narrative": [
-            "You have warmth inside you, but it doesn't always come out easily. The wrong environment can make you feel dim.",
-            "You're at your best when you're around people who see you clearly. When you're not, you don't fake it — you just go quiet.",
-            "This sensitivity isn't weakness. It's a filter. It tells you very fast who's good for you.",
-            "You need a space where your warmth is reflected back to you. If you give heat to an icebox, the icebox doesn't warm up — you just freeze.",
-            "Your sensitivity is a compass. It points you toward the people who will actually appreciate your light."
+            "内に温もりはありますが、それがいつも容易に表に出るわけではありません。間違った環境は、あなたを曇らせます。",
+            "あなたをきちんと見てくれる人のそばで、最も良い状態になります。そうでないときは、演じず、ただ静かになります。",
+            "この感受性は弱さではありません。フィルターです。誰が自分にとって良い人かを、素早く教えてくれます。",
+            "温もりが自分に返ってくる空間が必要です。冷蔵庫に熱を注いでも、冷蔵庫は暖まりません。あなたが凍るだけです。",
+            "あなたの感受性は羅針盤です。あなたの光を本当に評価してくれる人へと導きます。"
           ],
           "shadows": [
-            "You wait too long for the 'perfect' moment or the 'perfect' person before you let yourself shine.",
-            "You may have internalized someone else's dim view of you.",
-            "You might dim your own light to match the energy of the room, feeling exhausted later."
+            "「完璧な」瞬間や「完璧な」人が来るのを待ちすぎて、自分を輝かせるのを遅らせてしまいます。",
+            "誰かの自分に対する曇った見方を、内面化してしまったかもしれません。",
+            "部屋のエネルギーに合わせて自分の光を落とし、あとで疲れ果ててしまいます。"
           ],
           "advice": [
-            "Write down three people or places where you feel most yourself. Spend more time there.",
-            "One small thing you've been putting off: start it today, ugly.",
-            "You don't need permission. You need a witness. Find one.",
-            "Give yourself permission to leave a room that doesn't feed your fire."
+            "自分が最も自分らしくいられる人や場所を三つ書き出しましょう。そこにもっと多くの時間を費やしてください。",
+            "先延ばしにしていた小さなことを一つ、今日、不格好に始めましょう。",
+            "許可は要りません。必要なのは目撃者です。一人見つけてください。",
+            "自分の炎を養わない部屋から離れる許可を、自分に与えましょう。"
           ],
           "keywords": [
-            "sensitivity",
-            "loyalty",
-            "quiet fire",
-            "environment"
+            "感受性",
+            "忠誠",
+            "静かな炎",
+            "環境"
           ]
         }
       }
     },
     "THE_KEEPER": {
       "name": "灯台守",
-      "tagline": "You're not a bonfire. You're a lantern.",
+      "tagline": "焚き火ではなく、灯籠です。",
       "symbol": "✦",
       "color": "#C2461F",
       "element": "Fire",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You burn steady, and you burn alone — and that's not loneliness, that's craft.",
+          "hero": "静かに燃え、一人で燃える。それは孤独ではなく、職人芸です。",
           "narrative": [
-            "Your fire is focused, not loud. You don't need an audience to keep going, and you don't need applause to know you're on track.",
-            "You notice things other people miss — a shift in tone, a detail in a room, a pattern in someone's behavior.",
-            "This makes you excellent at things that require precision and patience. It also means you carry a lot inside.",
-            "You are the watchman in the tower. You see the storm coming before anyone else does, but sometimes you forget to warn the people below.",
-            "Your quiet intensity is a gift, but you don't have to hold the whole world in your chest. Let someone else take the watch for a while."
+            "あなたの炎は、騒がしくなく、集中しています。続けるのに観客は要らず、軌道に乗っていることを確かめるのに拍手は要りません。",
+            "他の人が見逃すものに気づきます。声の調子の変化、部屋の中の細部、誰かの行動パターン。",
+            "だからこそ、精密さと忍耐を要する仕事に優れています。その代わり、内側に多くのものを抱えることにもなります。",
+            "あなたは塔の見張り番です。他の誰よりも早く嵐の到来を見ますが、下にいる人たちへの警告を忘れてしまうことがあります。",
+            "静かな強さは贈り物ですが、世界のすべてを胸に抱える必要はありません。しばらく見張りを誰かに任せましょう。"
           ],
           "shadows": [
-            "You hold stress quietly until it becomes physical.",
-            "You can confuse your own intensity with other people's expectations of you.",
-            "You might bottle up your emotions until they explode in private."
+            "ストレスを静かに抱え、身体に症状が出るまで気づきません。",
+            "自分の強さと、他者が自分に抱く期待を混同してしまいます。",
+            "感情を瓶に詰め、ひとりでに爆発させてしまうことがあります。"
           ],
           "advice": [
-            "Name one worry you've been carrying alone. Say it out loud to someone.",
-            "Move your body once this week in a way that isn't for fitness. Just for feeling.",
-            "You're allowed to be a specialist without being a workaholic.",
-            "Find a safe person to share your inner world with. You don't have to be a fortress."
+            "一人で抱えている心配を一つ、誰かに声に出して伝えましょう。",
+            "今週一度、フィットネスのためではなく、ただ感じるために身体を動かしましょう。",
+            "ワーカホリックにならなくても、専門家でいられます。",
+            "内面世界を分かち合える安全な人を見つけましょう。あなたは要塞である必要はありません。"
           ],
           "keywords": [
-            "focused",
-            "precise",
-            "perceptive",
-            "self-contained"
+            "集中",
+            "精密",
+            "洞察",
+            "自己完結"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You light what's near you — not everything.",
+          "hero": "近くにあるものを照らします。すべてではなく。",
           "narrative": [
-            "You have real warmth, and you're not shy with it. But you also know the difference between lighting a room and burning yourself out for it.",
-            "People come to you with their real problems, not their small talk. That's not because you demand it — it's because you invite it without trying.",
-            "You're the kind of person others feel safe around. That's a very specific kind of power.",
-            "You are the trusted confidant. You know how to hold space for someone else's pain without getting swallowed by it.",
-            "Remember that you also need a listener. It's okay to ask for the same kind of space you so freely give."
+            "本物の温もりがあり、それを恥ずかしがりません。ただ、部屋を照らすことと、そのために自分を焼き尽くすことの違いも知っています。",
+            "人はあなたに、世間話ではなく、本物の悩みを持ち込みます。求めているからではなく、自然に招き入れているからです。",
+            "あなたは、人が安心できるタイプの人です。それは、とても特定の種類の力です。",
+            "あなたは信頼される相談相手です。相手の痛みにスペースを保ちながら、それに飲み込まれません。",
+            "自分にも聴き手が必要なことを忘れないでください。惜しみなく与えているのと同じスペースを、自分にも求めていいのです。"
           ],
           "shadows": [
-            "You let certain people take more than they give.",
-            "You deprioritize your own heat to keep other fires going.",
-            "You might enable others by always being the one who fixes things."
+            "ある種の人たちに、与える以上のものを取らせてしまいます。",
+            "他の火を保つために、自分の熱を後回しにしてしまいます。",
+            "いつも問題を解決する人であり続けることで、他人を依存させてしまうことがあります。"
           ],
           "advice": [
-            "Notice who you give your best energy to. Is it mutual?",
-            "Ask for one thing this week without explaining why you need it.",
-            "Let one person take care of you without managing the process.",
-            "Set a boundary with someone who only takes. It's not selfish; it's survival."
+            "自分が最も良いエネルギーを注ぐ相手に気づきましょう。相互的ですか？",
+            "今週、なぜ必要かを説明せずに、一つお願いしてみましょう。",
+            "一人に、プロセスを管理せずに自分をケアさせてみましょう。",
+            "取るだけの人に境界線を引きましょう。わがままではなく、生存です。"
           ],
           "keywords": [
-            "warmth",
-            "trust",
-            "selective",
-            "listener"
+            "温もり",
+            "信頼",
+            "選択的",
+            "聴き手"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You glow in the right company and disappear in the wrong one.",
+          "hero": "ふさわしい仲間の中では輝き、間違った人たちの中では消えていく人です。",
           "narrative": [
-            "Your light isn't loud — it's tender. It shows up strongest when you trust the people around you.",
-            "In the wrong environment, you don't dim on purpose; you just fade. And you often don't notice until someone says 'you've been quiet.'",
-            "Your sensitivity isn't fragility. It's the reason people trust you with their own tenderness.",
-            "You need a small, trusted circle. You are not meant for the loud, crowded room; you are meant for the deep, quiet conversation.",
-            "The right people will protect your softness, not exploit it. Find them, and give them your whole heart."
+            "あなたの光は騒がしくなく、優しい。周りを信頼しているとき、最も強く現れます。",
+            "間違った環境では、意図的に曇らせるのではなく、ただ薄れていきます。そして「最近静かだね」と言われるまで、気づかないことが多いのです。",
+            "感受性は脆さではありません。人が自分の優しさをあなたに預ける理由です。",
+            "小さく信頼できる輪が必要です。騒がしく混み合った部屋ではなく、深く静かな会話のために生まれた人です。",
+            "ふさわしい人は、あなたの柔らかさを利用せず、守ってくれます。その人たちを見つけ、心をすべて預けましょう。"
           ],
           "shadows": [
-            "You carry other people's emotions as if they were yours.",
-            "You mistake self-protection for self-erasure.",
-            "You might isolate yourself completely to avoid getting hurt."
+            "他人の感情を、自分のことのように抱えてしまいます。",
+            "自己防衛を自己消去と取り違えてしまいます。",
+            "傷つくのを避けるために、完全に孤立してしまうことがあります。"
           ],
           "advice": [
-            "Keep a running list of who makes you feel more like yourself, not less.",
-            "Once this week, leave the room early if it doesn't feel right.",
-            "You don't owe anyone a performance of wellness.",
-            "Give yourself permission to be a 'homebody'. Your energy needs a safe harbor."
+            "自分をより自分らしくしてくれる人を、リストにして観察しましょう。",
+            "今週一度、違和感を覚えたら早めに部屋を出ましょう。",
+            "誰かに「健やかさを演じる」義務はありません。",
+            "「家にいる人」でいてもいいのです。あなたのエネルギーには安全な港が必要です。"
           ],
           "keywords": [
-            "tender",
-            "intuitive",
-            "protective",
-            "quiet strength"
+            "優しさ",
+            "直感",
+            "保護",
+            "静かな強さ"
           ]
         }
       }
     },
     "THE_ANCHOR": {
       "name": "錨",
-      "tagline": "You're the ground other people stand on.",
+      "tagline": "他の人が立つ地面そのものです。",
       "symbol": "▣",
       "color": "#8B6F3F",
       "element": "Earth",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You don't move fast — you move last, and you're right.",
+          "hero": "動きは遅いが、最後に動き、しかも正しい。",
           "narrative": [
-            "You have a deep reserve of patience that most people can't fake. When everything around you is shifting, you stay where you are and watch. Eventually, everyone comes back to your position.",
-            "You don't need to be the loudest voice. You need to be the one people trust when the noise dies down.",
-            "This makes you a natural long-term player. You win things slowly, on purpose, and you keep them.",
-            "You are the immovable mountain. You don't chase trends; you build foundations. People come to you because you are the only stable thing in a chaotic world.",
-            "But even mountains weather. Don't mistake your rigidity for strength. Sometimes, bending is the only way to survive the earthquake."
+            "多くの人が真似できない、深い忍耐の蓄えがあります。周りが大きく揺れ動くとき、あなたはその場に留まり、観察します。そして結局、みんながあなたの位置へと戻ってきます。",
+            "最も声の大きい声である必要はありません。騒音が消えたときに人々が信頼する人である必要があるのです。",
+            "だからこそ、あなたは生まれながらの長期プレイヤーです。意図的にゆっくり勝ち、そして手放しません。",
+            "あなたは動かざる山です。流行を追わず、土台を築きます。混沌とした世界で唯一安定したものとして、人があなたのもとへやってきます。",
+            "ただ、山も風化します。硬直を強さと取り違えないでください。ときに、地震を生き延びる唯一の方法は曲がることです。"
           ],
           "shadows": [
-            "You can mistake staying put for staying safe.",
-            "Your stability becomes the reason others stop growing around you.",
-            "You can resist necessary change until it's forced upon you, causing unnecessary stress."
+            "その場に留まることを、安全を保つことと取り違えてしまいます。",
+            "あなたの安定が、周りの人が成長を止める理由になってしまいます。",
+            "必要な変化に抵抗し、無理に強いられるまで抗って、余計なストレスを抱えます。"
           ],
           "advice": [
-            "Once this month, do something with no clear payoff. Just to see.",
-            "Notice where you're the last person holding a position that no longer serves you.",
-            "Say yes to one thing that scares you. Anchor the new thing too.",
-            "Ask a younger person for their perspective. They might see what you're missing."
+            "今月一度、明確な見返りのないことをしてみましょう。ただ見るために。",
+            "もはや役に立たない立場を最後まで守っている場所に気づきましょう。",
+            "怖いことに一つ「はい」と言ってみましょう。新しいことにも錨を下ろしましょう。",
+            "若い人に意見を聞きましょう。あなたが逃しているものが見えているかもしれません。"
           ],
           "keywords": [
-            "steady",
-            "reliable",
-            "long-game",
-            "unshakable"
+            "安定",
+            "信頼",
+            "長期戦",
+            "揺るぎなさ"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You hold steady without holding others back.",
+          "hero": "揺るがずに、他人の歩みを妨げない人です。",
           "narrative": [
-            "You have the anchor's strength without its rigidity. You know when to stand firm and when to bend, and you don't agonize over the choice.",
-            "People lean on you because you don't ask them to. You just happen to be there, and that turns out to matter more than most people realize.",
-            "This is quiet power. It doesn't photograph well, but it lasts.",
-            "You are the pillar of the community. You don't need to be in charge, but you are the one everyone relies on when things get hard.",
-            "Make sure your foundation is solid for yourself first. You can't support others if you're crumbling from within."
+            "錨の強さを持ちながら、その硬直はありません。いつ踏ん張り、いつ曲がるかを知っていて、その選択に苦しみません。",
+            "人があなたに寄りかかるのは、求めたからではありません。ただそこにいる。それが思った以上に大きな意味を持つのです。",
+            "静かな力です。写真には写りにくいけれど、長く続きます。",
+            "あなたはコミュニティの柱です。仕切る必要はないけれど、苦しいときにみんなが頼る人です。",
+            "自分の土台をまず堅固にしましょう。内側から崩れている人に、他人は支えられません。"
           ],
           "shadows": [
-            "You take on more weight than you admit because you don't want to make it a thing.",
-            "You confuse consistency with staying in a role you've outgrown.",
-            "You might let others become overly dependent on you, stunting their growth."
+            "「大ごとにしたくない」ために、認めている以上の重みを背負います。",
+            "一貫性と、もう卒業した役割に留まることを混同してしまいます。",
+            "他人を過度に依存させ、その成長を阻んでしまうことがあります。"
           ],
           "advice": [
-            "Ask for one thing this week that you'd normally just handle yourself.",
-            "Check: are you the ground, or are you the ceiling?",
-            "Give away one responsibility you've been carrying silently.",
-            "Let someone else step up. They might surprise you."
+            "今週、普段は自分で片付けてしまうことを一つ、誰かに頼みましょう。",
+            "自問してください。あなたは地面か、それとも天井か？",
+            "黙って抱えてきた責任を一つ、手放しましょう。",
+            "誰かに前に出てもらいましょう。思わぬ力を見せるかもしれません。"
           ],
           "keywords": [
-            "grounded",
-            "trustworthy",
-            "quiet strength",
-            "balance"
+            "軸",
+            "信頼",
+            "静かな力",
+            "バランス"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "Your stability is real — but it depends on solid ground under you.",
+          "hero": "あなたの安定は本物です。ただし、足元の堅い地面が前提です。",
           "narrative": [
-            "You have the anchor's loyalty, but it needs a place to anchor to. When you find it, you're immovable. When you don't, you drift.",
-            "You feel other people's chaos more than you show. You absorb it, sit with it, and eventually it becomes yours.",
-            "Your power isn't in holding everything — it's in choosing what to hold.",
-            "You are a sponge for the energy of your environment. When the ground is shaky, you feel it in your bones.",
-            "Your first priority must be creating a stable home base. You cannot be a safe harbor for others if you are lost at sea."
+            "錨の忠誠心はありますが、それは錨を下ろす場所を必要とします。見つければ動じません。見つからなければ漂います。",
+            "他人の混沌を、見せている以上に感じ取ります。吸収し、その場に留まり、やがて自分のものにしてしまいます。",
+            "あなたの力は、すべてを抱えることではなく、何を抱えるかを選ぶことにあります。",
+            "あなたは環境のエネルギーのスポンジです。地面が揺れると、骨の髄までその揺れを感じます。",
+            "最優先は安定した拠点を作ることです。海で迷っている人が、他人の安全な港にはなれません。"
           ],
           "shadows": [
-            "You stay loyal to places and people that no longer hold you.",
-            "You carry other people's weight until you forget what yours feels like.",
-            "You might resist moving on because the familiar, even if painful, feels safer."
+            "自分を支えなくなった場所や人に忠実であり続けます。",
+            "他人の重みを背負い続けて、自分の重さがどんなものか忘れてしまいます。",
+            "慣れ親しんだものが、たとえ苦しくても安全に感じ、前へ進むことに抵抗します。"
           ],
           "advice": [
-            "Name one thing you're holding that isn't yours. Put it down this week.",
-            "Find the place where you feel most solid. Go there more.",
-            "You can be steady without being a shelter for everyone.",
-            "If a place or person makes you feel unstable, it's okay to walk away."
+            "自分ではないものを一つ、抱えていることに気づきましょう。今週、それを下ろしてください。",
+            "最も堅固に感じる場所を探して、もっとそこへ行きましょう。",
+            "みんなの避難所にならなくても、揺るがないことはできます。",
+            "不安にさせる場所や人があれば、離れて構いません。"
           ],
           "keywords": [
-            "loyal",
-            "steady",
-            "grounded",
-            "protective"
+            "忠誠",
+            "揺るぎなさ",
+            "軸",
+            "保護"
           ]
         }
       }
