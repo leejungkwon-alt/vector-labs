@@ -1,28 +1,28 @@
 {
-  "name": "Tree Ablaze",
+  "name": "燃え上がる木",
   "pillar": "甲午",
-  "hero": "You're a tree on fire. You light the room with your heat — a person of real charisma.",
+  "hero": "燃え上がる木です。熱い情熱で周囲を照らす、カリスマの人です。",
   "narrative": [
-    "You're the person of passion and expression. 甲午 is a great tree sitting on hot fire. Wood meeting fire burns. Your heat is like that — it lights the room and pulls people in. People feel strange vitality when they're near you.",
-    "Your strength is fiery expression. You don't hide what you think or feel — you express it with heat. That gives you the power to move people. When you say what you love, what you want, what you believe, people are drawn to that fire. It's a rare gift.",
-    "Your shadow is burning too hot. Wood meeting fire burns — but if the fire is too hot, the wood itself burns up. You get caught up in the passion and forget your own stamina. You run without stopping, and then one day you go out completely. And the people around you are startled by your sudden silence.",
-    "A mature Jia-O tunes the fire. Keeping the heat, and controlling it so it doesn't consume you. Then your passion isn't a single flare — it becomes a lighthouse that lights people for a long time."
+    "あなたは情熱と表現の人です。甲午は大樹が熱い火の上に根を張った柱です。木が火に出会うと燃え上がります。あなたの情熱もそれです。熱い熱で周囲を照らし、人を引き寄せます。あなたのそばにいると、人は不思議と活力を得ます。",
+    "あなたの強みは「熱い表現力」です。考えや感情を隠さず、情熱的に表現します。だからこそ、人を動かす力があります。好きなもの、欲しいもの、信じていることを語るとき、人はその熱に引き寄せられます。これは誰にでもある才能ではありません。",
+    "あなたの影は「熱すぎること」です。木が火に出会えば燃えますが、火が熱すぎれば木そのものが焼け尽きます。あなたは情熱に没入して自分の体力を忘れ、休まず走って、ある日突然完全に消えてしまいます。そしてその突然の沈黙に、周囲は驚きます。",
+    "一歩成熟すると、あなたは「情熱を調律できる人」になります。熱い情熱を保ちながら、それが自分を焼き尽くさないよう制御する。そのとき、あなたの情熱は一度きりの炎ではなく、長く人を照らす灯台となります。"
   ],
   "shadows": [
-    "Burning so hot that you forget your own stamina.",
-    "Running without rest until you go out completely.",
-    "Passion that overwhelms or exhausts other people."
+    "情熱が熱すぎて、自分の体力を忘れて走ります。",
+    "休まず走り続け、ある日突然、完全に消えてしまいます。",
+    "情熱が過ぎて、人を圧倒したり疲れさせたりします。"
   ],
   "advice": [
-    "Set aside at least 30 minutes a day this week with nothing productive in it.",
-    "Find one hobby or exercise that lets you discharge the heat healthily.",
-    "When 'what should I be doing' comes up while resting, tell yourself: I'm resting now.",
-    "Spend your passion on yourself before you spend it on others. That's what keeps it burning."
+    "今週、何も生産しない時間を1日30分以上確保しましょう。",
+    "情熱を健全に発散できる趣味や運動を一つ見つけましょう。",
+    "休んでいるときに「今、何をすべきか」が浮かんだら、「今は休んでいるところ」と自分に答えましょう。",
+    "情熱を人に注ぐ前に、まず自分に注ぎましょう。そうしてこそ長く燃え続けます。"
   ],
   "keywords": [
-    "hot passion",
-    "charisma",
-    "expression",
-    "tuning the fire"
+    "熱い情熱",
+    "カリスマ",
+    "表現力",
+    "熱の調律"
   ]
 }

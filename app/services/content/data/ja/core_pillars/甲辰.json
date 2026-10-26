@@ -1,28 +1,28 @@
 {
-  "name": "Forest of Dragons",
+  "name": "龍の森",
   "pillar": "甲辰",
-  "hero": "You're a forest where dragons live. Ordinary on the surface, growing a big picture beneath that could move the world.",
+  "hero": "龍が棲む森です。表面は平凡に見えても、その下に世界を動かす大きな絵が育っている人です。",
   "narrative": [
-    "You're the kind of large vessel that doesn't reveal itself easily. 甲辰 is a giant tree rooted in damp earth. 辰 is the dragon's earth, and it stores water. You look unremarkable most of the time — and then at a decisive moment, your growth shows. People say later, 'Wait — that person was that person?'",
-    "Your strength is seeing the big picture. You sketch the large frame first and arrange people and resources inside it. And you don't rush. You grow heavily, slowly. That's the real strength of 甲辰 — quiet most of the time, moving the world when it counts.",
-    "Your shadow is holding the potential without releasing it. If 甲 doesn't use the water in 辰, it just stays pooled in the ground. Same for you. If you sketch a big picture but never bring it out, people don't know your potential. And over time the label 'what does that person actually do?' starts to attach.",
-    "A mature Jia-Jin brings the big picture out through small starts. Keeping the large frame, and revealing it through small actions. Then your presence stops being intimidating and becomes the thing people trust and lean on."
+    "あなたは自ら姿を見せにくい、大きな器の人です。甲辰は大樹が湿った大地に根を張った柱です。辰は龍の土であり、水を蓄えます。だからあなたは普段は無難に見え、決定的な瞬間に成長の重みが現れます。人は後になって「あの人が、あの人だったの？」と驚くのです。",
+    "あなたの強みは「大きな絵を描く力」です。小さな戦術より先に大きな構図を描き、その中に人と資源を配置します。そしてあなたは急ぎません。十分に時間をかけ、どっしりと成長します。これがあなたの本当の力です。普段は静かでも、必要なときに世界を動かす人です。",
+    "あなたの影は「潜在能力を秘めたままにすること」です。辰の水を甲が使い切らないと、その水はただ地中に澱みます。あなたも同じです。大きな絵を描いていながら、外へ出さなければ、周囲はあなたの潜在能力を知りません。そして時が経てば「あの人は何をしている人？」という評価がついてきます。",
+    "一歩成熟すると、あなたは「大きな絵を小さな始まりで外に出す人」になります。大きな構図を保ちながら、小さな行動を通して世界に示す。そのとき、あなたの存在感は威圧ではなく、人が信頼し寄りかかれる力になります。"
   ],
   "shadows": [
-    "Sketching the big picture and missing the small execution.",
-    "Holding the potential and never revealing it, so people underestimate you.",
-    "Waiting for the decisive moment until it never arrives."
+    "大きな絵ばかり描いて、小さな実行を逃します。",
+    "潜在能力を秘めたまま、外に出さず、過小評価されます。",
+    "決定的な瞬間を待ち続け、その瞬間が訪れません。"
   ],
   "advice": [
-    "Bring one big picture you're holding into concrete action this week.",
-    "Pick one small start inside the big picture that you can do right now.",
-    "Explain your plan to someone. Kept only in your head, people don't know.",
-    "Stop waiting for the decisive moment — create one this week."
+    "今週、自分が抱えている大きな絵の一つを、具体的な行動に落としましょう。",
+    "大きな絵の中から、今すぐできる「小さな始まり」を一つ選びましょう。",
+    "自分の計画を誰かに説明しましょう。頭の中だけでは、人は知りません。",
+    "決定的な瞬間を待たずに、今週、自分で一つ決定的な瞬間を作りましょう。"
   ],
   "keywords": [
-    "big picture",
-    "heavy growth",
-    "dragon forest",
-    "potential made real"
+    "大きな絵",
+    "どっしりした成長",
+    "龍の森",
+    "潜在能力の実現"
   ]
 }
