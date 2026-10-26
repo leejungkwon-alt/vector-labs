@@ -2,11 +2,18 @@
 import { useLanguageStore, SupportedLang } from "@/store/languageStore";
 import ko from "./locales/ko.json";
 import en from "./locales/en.json";
+import ja from "./locales/ja.json";
+import zh_cn from "./locales/zh_cn.json";
+import es from "./locales/es.json";
 
-// 지원 언어 확장 시 여기에 추가 (ja, zh_cn, zh_tw는 이후 단계)
+// 지원 언어: ko, en, ja, zh_cn, es
+// (zh_tw 데이터팩은 디스크에 남아있으나 API 계약에서 제외됨)
 const RESOURCES: Record<string, any> = {
   ko,
   en,
+  ja,
+  zh_cn,
+  es,
 };
 
 // 점 표기법 지원: t("home.loading") → RESOURCES[lang].home.loading
@@ -52,6 +59,9 @@ export function useLang() {
   const availableLangs: { key: SupportedLang; label: string }[] = [
     { key: "ko", label: "한국어" },
     { key: "en", label: "English" },
+    { key: "ja", label: "日本語" },
+    { key: "zh_cn", label: "简体中文" },
+    { key: "es", label: "Español" },
   ];
   return { lang, setLang, availableLangs };
 }
@@ -61,6 +71,19 @@ export function useLang() {
 export function formatPickerDate(d: Date, lang: string): string {
   if (lang === "ko") {
     return `${d.getFullYear()}년 ${d.getMonth() + 1}월 ${d.getDate()}일`;
+  }
+  if (lang === "ja") {
+    return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
+  }
+  if (lang === "zh_cn") {
+    return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
+  }
+  if (lang === "es") {
+    const meses = [
+      "enero", "febrero", "marzo", "abril", "mayo", "junio",
+      "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre",
+    ];
+    return `${d.getDate()} de ${meses[d.getMonth()]} de ${d.getFullYear()}`;
   }
   const months = [
     "January", "February", "March", "April", "May", "June",

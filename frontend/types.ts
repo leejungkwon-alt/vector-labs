@@ -5,7 +5,7 @@
 // 1. 기본 계산 요청/응답 (Saju)
 // ==========================================
 export type BirthTimeMode = "exact" | "noon" | "day_only";
-export type LanguageCode = "en" | "ko" | "ja" | "zh_cn" | "zh_tw";
+export type LanguageCode = "en" | "ko" | "ja" | "zh_cn" | "es";
 
 export interface SajuRequest {
   birth_date: string; // YYYY-MM-DD

@@ -211,7 +211,7 @@ export default function SettingsScreen() {
             { key: "en", label: "English" },
             { key: "ja", label: "日本語" },
             { key: "zh_cn", label: "简体中文" },
-            { key: "zh_tw", label: "繁體中文" },
+            { key: "es", label: "Español" },
           ] as { key: SupportedLang; label: string }[]).map((item) => (
             <TouchableOpacity
               key={item.key}

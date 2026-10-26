@@ -4,17 +4,16 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Localization from "expo-localization";
 
 const LANG_KEY = "saju_language";
-export type SupportedLang = "ko" | "en" | "ja" | "zh_cn" | "zh_tw";
-const SUPPORTED: readonly SupportedLang[] = ["ko", "en", "ja", "zh_cn", "zh_tw"] as const;
+export type SupportedLang = "ko" | "en" | "ja" | "zh_cn" | "es";
+const SUPPORTED: readonly SupportedLang[] = ["ko", "en", "ja", "zh_cn", "es"] as const;
 
 function detectDeviceLang(): SupportedLang {
   const loc = Localization.getLocales()[0];
   const code = (loc?.languageCode ?? "ko").toLowerCase();
-  if (code === "zh") {
-    const region = (loc?.regionCode ?? "").toUpperCase();
-    return ["TW", "HK", "MO"].includes(region) ? "zh_tw" : "zh_cn";
-  }
+  // zh는 간체(zh_cn)로 통일. zh_tw 데이터팩은 API 계약에서 제외됨.
+  if (code === "zh") return "zh_cn";
   if (code === "ja") return "ja";
+  if (code === "es") return "es";
   if (code === "en") return "en";
   return "ko";
 }
