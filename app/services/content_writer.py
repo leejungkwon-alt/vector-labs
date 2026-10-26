@@ -5,6 +5,8 @@ Semantic Tags → 자연어 콘텐츠.
 엔진(semantic profile)은 언어 중립.
 콘텐츠는 이 writer가 언어별 팩에서 꺼내 조립.
 """
+import os
+
 from app.services.content.loader import load_labels, load_pack
 from app.services.personalizer import generate_personalized_notes
 from app.compliance.crisis_resources import get_crisis_resources
@@ -979,6 +981,10 @@ def generate_full_report(profile: dict, lang: str = "en", user_id: str | None = 
             "birth_time_mode": profile.get("birth_time_mode", "exact"),
             "hour_pillar_confidence": profile.get("hour_pillar_confidence", "exact"),
             "calculation_method": "weighted-sum eokbu (simplified), school-dependent",
+            "calculation_method_doc": os.environ.get(
+                "SAJU_CALC_DOC_URL",
+                "docs/calculation-school.md",
+            ),
             "region": profile.get("region"),
             "age_band": profile.get("age_band"),
             "daily_wallpaper_url": get_daily_wallpaper_url(profile),

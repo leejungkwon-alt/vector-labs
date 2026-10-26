@@ -380,7 +380,7 @@ export interface ReportResponse {
       locked_sections: string[];
       birth_time_mode: BirthTimeMode;
       hour_pillar_confidence: string;
-      calculation_method: string;
+      calculation_method_doc?: string;
       region: string | null;
       age_band: any;
     };
