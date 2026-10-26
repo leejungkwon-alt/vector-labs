@@ -17,6 +17,7 @@ export interface SajuRequest {
   jasi_boundary?: 23 | 0;
   gender?: "M" | "F" | "남" | "여";
   target_year?: number | null;
+  use_current_solar_year?: boolean;
   birth_location?: string | null;
   dst_fold?: 0 | 1 | null;
 }

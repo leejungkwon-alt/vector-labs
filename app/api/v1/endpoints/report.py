@@ -74,6 +74,7 @@ def api_generate_report(
             jasi_boundary=payload.jasi_boundary,
             gender=payload.gender,
             target_year=payload.target_year,
+            use_current_solar_year=payload.use_current_solar_year,
             dst_fold=payload.dst_fold,
             birth_location=payload.birth_location,
         )

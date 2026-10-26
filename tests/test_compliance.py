@@ -172,3 +172,20 @@ def test_gitignore_covers_secrets():
     text = p.read_text(encoding="utf-8")
     assert ".env" in text
     assert "data/auth.db" in text
+
+def test_disclaimer_parity_with_sections_pack():
+    """compliance 상수와 sections.json 이 정확히 같은 문구여야 함."""
+    from app.services.content.loader import load_pack
+    from app.compliance.disclaimers import DISCLAIMER_EN, DISCLAIMER_KO
+
+    assert DISCLAIMER_EN == load_pack("en", "sections")["DISCLAIMER"]
+    assert DISCLAIMER_KO == load_pack("ko", "sections")["DISCLAIMER"]
+
+
+def test_report_disclaimer_matches_compliance_constant():
+    """리포트 응답과 compliance 상수가 어긋나면 실패."""
+    from app.compliance.disclaimers import DISCLAIMER_EN, DISCLAIMER_KO
+
+    for lang, expected in (("en", DISCLAIMER_EN), ("ko", DISCLAIMER_KO)):
+        r = _report(lang=lang)
+        assert r["disclaimer"] == expected, f"{lang}: report vs compliance mismatch"    

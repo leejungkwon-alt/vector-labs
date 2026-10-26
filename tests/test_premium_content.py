@@ -72,7 +72,7 @@ def test_premium_section_en_content():
     # 실제 EN 콘텐츠가 로드되어야 함
     assert career_sec["headline"]
     assert career_sec["headline"] == (
-        "You shine on stage, such as in sales, marketing, and presentations."
+        "You shine on stage — in sales, marketing, and presentations."
     )
     # 한국어가 새어나오면 실패 (팩 로딩 오류 방지)
     assert not any("\uac00" <= ch <= "\ud7a3" for ch in career_sec["headline"])

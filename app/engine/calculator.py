@@ -23,6 +23,7 @@ def calculate_saju(
     target_year=None,
     dst_fold=None,
     birth_location=None,
+    use_current_solar_year=False,
 ):
     # ---- 연령 확인 ----
     validate_age(birth_date)
@@ -98,10 +99,19 @@ def calculate_saju(
         ),
     }
 
+    # ---- 세운 기준 절기년 결정 (입춘 반영) ----
+    if use_current_solar_year:
+        from app.engine.luck import current_solar_year
+        effective_solar_year = current_solar_year(timezone_str)
+    elif target_year is not None:
+        effective_solar_year = target_year
+    else:
+        effective_solar_year = None
+
     luck_info = None
-    if target_year is not None:
-        annual = calculate_annual_luck(target_year)
-        monthly = calculate_monthly_lucks(target_year)
+    if effective_solar_year is not None:
+        annual = calculate_annual_luck(effective_solar_year)
+        monthly = calculate_monthly_lucks(effective_solar_year)
 
         annual_stem_korean = get_ten_god(day_stem, annual["stem"])
         annual_stem_god = TEN_GOD_CODES.get(annual_stem_korean, annual_stem_korean)
@@ -113,7 +123,7 @@ def calculate_saju(
             m["ten_god"] = TEN_GOD_CODES.get(tg_kr, tg_kr)
 
         luck_info = {
-            "target_year": target_year,
+            "target_year": effective_solar_year,
             "annual_luck": {**annual, "ten_god": annual_stem_god},
             "monthly_lucks": monthly,
         }

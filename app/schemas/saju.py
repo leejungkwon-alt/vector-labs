@@ -37,7 +37,14 @@ class SajuRequest(BaseModel):
     )
     gender: str = Field(default="M", examples=["M"], description="성별 (M 또는 F)")
     target_year: Optional[int] = Field(
-        default=None, examples=[2026], description="운세 조회 대상 연도 (올해의 흐름/이번 달의 흐름)"
+        default=None, examples=[2026], description="운세 조회 대상 절기년 (입춘~입춘). 올해의 흐름/이번 달의 흐름."
+    )
+    use_current_solar_year: bool = Field(
+        default=False,
+        description=(
+            "true면 요청 시점(now) 기준 절기년(입춘 기준)을 자동 계산하여 "
+            "year/monthly 섹션을 채운다. target_year와 동시 지정 불가."
+        ),
     )
     birth_location: Optional[str] = Field(
         default=None,
@@ -97,6 +104,14 @@ class SajuRequest(BaseModel):
         if mode != "exact" and bt is not None:
             raise ValueError(
                 f"birth_time must be omitted when birth_time_mode='{mode}'."
+            )
+        return self
+
+    @model_validator(mode="after")
+    def validate_year_mode(self):
+        if self.target_year is not None and self.use_current_solar_year:
+            raise ValueError(
+                "target_year and use_current_solar_year are mutually exclusive."
             )
         return self
 

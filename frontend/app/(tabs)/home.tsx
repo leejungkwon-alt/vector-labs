@@ -72,7 +72,7 @@ export default function HomeScreen() {
   const { data, isLoading, error } = useQuery({
     queryKey: ["report", profile, lang],
     queryFn: () =>
-      api.report({ ...profile, target_year: new Date().getFullYear(), lang }),
+      api.report({ ...profile, use_current_solar_year: true, lang }),
     enabled: !!profile,
     retry: false,
   });

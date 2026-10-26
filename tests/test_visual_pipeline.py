@@ -34,3 +34,30 @@ def test_report_contains_wallpaper_url():
     assert "daily_wallpaper_url" in report["meta"]
     assert report["meta"]["daily_wallpaper_url"].endswith(".webp")
     assert "mock-cdn.vectorlabs.app" in report["meta"]["daily_wallpaper_url"]
+
+
+# ==== SAJU_ASSET_BASE_URL production fail-fast ====
+
+import pytest
+
+
+def test_asset_base_url_required_in_production(monkeypatch):
+    monkeypatch.setenv("SAJU_ENV", "production")
+    monkeypatch.delenv("SAJU_ASSET_BASE_URL", raising=False)
+    from app.services.visual_generator import _resolve_asset_base_url
+    with pytest.raises(RuntimeError, match="SAJU_ASSET_BASE_URL"):
+        _resolve_asset_base_url()
+
+
+def test_asset_base_url_explicit_used_in_production(monkeypatch):
+    monkeypatch.setenv("SAJU_ENV", "production")
+    monkeypatch.setenv("SAJU_ASSET_BASE_URL", "https://cdn.example.com/wall/")
+    from app.services.visual_generator import _resolve_asset_base_url
+    assert _resolve_asset_base_url() == "https://cdn.example.com/wall/"
+
+
+def test_asset_base_url_dev_falls_back(monkeypatch):
+    monkeypatch.delenv("SAJU_ENV", raising=False)
+    monkeypatch.delenv("SAJU_ASSET_BASE_URL", raising=False)
+    from app.services.visual_generator import _resolve_asset_base_url
+    assert "mock-cdn.vectorlabs.app" in _resolve_asset_base_url()

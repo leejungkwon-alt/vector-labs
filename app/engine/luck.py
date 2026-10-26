@@ -1,5 +1,8 @@
 # app/engine/luck.py
 
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
+
 from app.engine.pillars import get_year_pillar, get_month_pillar, EARTHLY_BRANCHES
 
 
@@ -34,3 +37,32 @@ def calculate_monthly_lucks(target_year: int) -> list:
         })
 
     return monthly_results
+
+
+def current_solar_year(
+    tz_str: str = "Asia/Seoul",
+    now: datetime | None = None,
+) -> int:
+    """
+    주어진 시각(기본: 지금) 기준 절기년(입춘 기준)을 반환.
+
+    - 2026-01-15 KST → 2025 (乙巳)
+    - 2026-03-15 KST → 2026 (丙午)
+
+    Args:
+        tz_str: 유저 로컬 타임존. 잘못된 값은 Asia/Seoul로 폴백.
+        now: 테스트/재현용 기준 시각. None이면 지금.
+    """
+    from app.engine.solar_terms import determine_solar_year_and_month
+
+    try:
+        tz = ZoneInfo(tz_str)
+    except (ZoneInfoNotFoundError, ValueError):
+        tz = ZoneInfo("Asia/Seoul")
+
+    ref = now if now is not None else datetime.now(tz)
+    if ref.tzinfo is None:
+        ref = ref.replace(tzinfo=tz)
+    utc = ref.astimezone(timezone.utc)
+    solar_year, _ = determine_solar_year_and_month(utc)
+    return solar_year

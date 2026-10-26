@@ -48,3 +48,37 @@ def test_daewoon_age_basis_international():
         gender="M", year_stem="庚", solar_year=1990, month_branch_idx=4,
     )
     assert result["age_basis"] == "international"
+
+
+# ==== 대운 나이 반올림 (6개월 기준) ====
+
+def test_daewoon_rounding_up_6_months():
+    """2년 11개월 → 3년 0개월 (start_age = 3)."""
+    from app.engine.daewoon import _years_months_from_days
+    # raw_years = 8.75 / 3 = 2.9167
+    y, m, raw = _years_months_from_days(8.75)
+    assert (y, m) == (3, 0)
+
+
+def test_daewoon_rounding_boundary_exactly_6_months():
+    """2년 6개월 → 3년 0개월 (경계값)."""
+    from app.engine.daewoon import _years_months_from_days
+    # raw_years = 7.5 / 3 = 2.5
+    y, m, raw = _years_months_from_days(7.5)
+    assert (y, m) == (3, 0)
+
+
+def test_daewoon_rounding_below_6_months():
+    """2년 5개월 → 유지."""
+    from app.engine.daewoon import _years_months_from_days
+    # raw_years = 7.25 / 3 = 2.4167
+    y, m, raw = _years_months_from_days(7.25)
+    assert (y, m) == (2, 5)
+
+
+def test_daewoon_rounding_tiny_delta():
+    """0.4년 이하는 start_age=1 보정 (CORRECTION_TPL 대상)."""
+    from app.engine.daewoon import _years_months_from_days
+    # raw_years = 1.2 / 3 = 0.4 → months=round(4.8)=5
+    y, m, raw = _years_months_from_days(1.2)
+    assert (y, m) == (0, 5)

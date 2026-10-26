@@ -1,4 +1,4 @@
-"""궁합 friend, family 관계 심층 데이터 확인."""
+"""궁합 friend, family 관계 심층 데이터 확인 (en/ko 모두)."""
 import pytest
 from fastapi.testclient import TestClient
 from app.main import app
@@ -22,27 +22,28 @@ def fresh_auth(tmp_path, monkeypatch):
     yield
     reset_repository()
 
-def test_compat_axes_not_empty(fresh_auth):
-    """friend와 family 관계에서도 4개 축의 headline/body가 비어있지 않아야 함."""
+
+@pytest.mark.parametrize("lang", ["en", "ko"])
+@pytest.mark.parametrize("rel_type", ["friend", "family"])
+def test_compat_friend_family_axes_not_empty(fresh_auth, lang, rel_type):
+    """friend/family 관계에서 4축 headline/body가 언어별로 비어있지 않아야 함."""
     a = client.post("/api/v1/auth/anonymous").json()
     from app.auth.repository import get_repository
     get_repository().grant_addon(a["user"]["id"], "compatibility")
-    
-    pair = {
-        "person_a": BASE_PAYLOAD,
-        "person_b": BASE_PAYLOAD,
-        "lang": "ko",
-    }
-    
-    for rel_type in ("friend", "family"):
-        resp = client.post(
-            "/api/v1/saju/compatibility",
-            headers={"Authorization": f"Bearer {a['access_token']}"},
-            json={**pair, "relationship_type": rel_type}
-        )
-        assert resp.status_code == 200, f"{rel_type} 응답 실패: {resp.text}"
-        body = resp.json()["compatibility"]
-        
-        for axis_name, axis in body["axes"].items():
-            assert axis["headline"], f"{rel_type} {axis_name} headline is empty"
-            assert axis["body"], f"{rel_type} {axis_name} body is empty"
+
+    resp = client.post(
+        "/api/v1/saju/compatibility",
+        headers={"Authorization": f"Bearer {a['access_token']}"},
+        json={
+            "person_a": BASE_PAYLOAD,
+            "person_b": BASE_PAYLOAD,
+            "lang": lang,
+            "relationship_type": rel_type,
+        },
+    )
+    assert resp.status_code == 200, f"{lang}/{rel_type}: {resp.text}"
+    body = resp.json()["compatibility"]
+
+    for axis_name, axis in body["axes"].items():
+        assert axis["headline"], f"{lang}/{rel_type}/{axis_name} headline empty"
+        assert axis["body"], f"{lang}/{rel_type}/{axis_name} body empty"

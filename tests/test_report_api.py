@@ -197,3 +197,55 @@ def test_report_lucky_code_domains_locked_in_free(fresh_auth):
     lc = resp.json()["report"]["sections"]["lucky_code"]
     assert "domains" not in lc["power"]
     assert "power.domains" in lc.get("locked_fields", [])
+
+
+# ==== use_current_solar_year (입춘 반영) ====
+
+def test_report_use_current_solar_year_january(monkeypatch):
+    """1월 요청 시 절기년이 전년도로 계산되어야 함."""
+    import app.engine.luck as luck_mod
+    monkeypatch.setattr(luck_mod, "current_solar_year", lambda tz_str="Asia/Seoul": 2025)
+
+    payload = {k: v for k, v in BASE_PAYLOAD.items() if k != "target_year"}
+    payload["use_current_solar_year"] = True
+    resp = client.post("/api/v1/saju/report", json=payload)
+    assert resp.status_code == 200
+    year = resp.json()["report"]["sections"]["year"]
+    assert year["target_year"] == 2025
+
+
+def test_report_use_current_solar_year_march(monkeypatch):
+    """3월 요청 시 절기년이 해당 연도로 계산되어야 함."""
+    import app.engine.luck as luck_mod
+    monkeypatch.setattr(luck_mod, "current_solar_year", lambda tz_str="Asia/Seoul": 2026)
+
+    payload = {k: v for k, v in BASE_PAYLOAD.items() if k != "target_year"}
+    payload["use_current_solar_year"] = True
+    resp = client.post("/api/v1/saju/report", json=payload)
+    assert resp.status_code == 200
+    year = resp.json()["report"]["sections"]["year"]
+    assert year["target_year"] == 2026
+
+
+def test_report_target_year_still_works():
+    """기존 target_year=2026 계약 유지."""
+    payload = {**BASE_PAYLOAD, "target_year": 2026}
+    resp = client.post("/api/v1/saju/report", json=payload)
+    assert resp.status_code == 200
+    year = resp.json()["report"]["sections"]["year"]
+    assert year["target_year"] == 2026
+
+
+def test_report_mutual_exclusion_422():
+    """target_year와 use_current_solar_year 동시 지정 → 422."""
+    payload = {**BASE_PAYLOAD, "target_year": 2026, "use_current_solar_year": True}
+    resp = client.post("/api/v1/saju/report", json=payload)
+    assert resp.status_code == 422
+
+
+def test_report_neither_year_yields_no_section():
+    """둘 다 없으면 기존처럼 year 섹션 없음."""
+    payload = {k: v for k, v in BASE_PAYLOAD.items() if k != "target_year"}
+    resp = client.post("/api/v1/saju/report", json=payload)
+    assert resp.status_code == 200
+    assert "year" not in resp.json()["report"]["sections"]

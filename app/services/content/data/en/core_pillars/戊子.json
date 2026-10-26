@@ -1,19 +1,29 @@
 {
-  "name": "Mountain Spring",
   "pillar": "戊子",
-  "hero": "A clear spring flowing beneath a massive mountain.",
+  "hero": "You're a mountain with a spring running underneath. Solid on the surface — deep, clear water beneath.",
   "narrative": [
-    "You possess the stability of a mountain and the wisdom of water. You may look calm on the outside, but deep insight flows within."
+    "You come across as steady, unremarkable, easy to overlook. People underestimate you — until the moment a room needs someone who can actually think clearly, and you're the only one who does.",
+    "Your strength is quiet insight. You read situations before they're explained, and the best decisions you make almost never come out of a meeting — they come out of silence. What looks like passivity is usually you watching the whole board before moving one piece.",
+    "Your shadow is thinking past the moment. Because the water runs deep, you can keep processing until the window to act has quietly closed. And when you're uncertain, you go silent — and to everyone else, silence looks exactly like distance.",
+    "The mature form of this pillar is a spring that actually flows. Insight that arrives, is spoken, and then moves on. You learn to trust the water without drowning in it — to see, to say, to act, in that order, before the tide changes."
   ],
   "shadows": [
-    "You might delay action because you think too deeply."
+    "You keep thinking past the moment when a decision was still yours to make.",
+    "You go quiet when you're uncertain, and people read the silence as distance.",
+    "You doubt your own insight because it doesn't arrive with proof attached."
   ],
   "advice": [
-    "Trust your intuition and take a step forward."
+    "Once this week, act on a decision before you feel 'ready.' Notice what actually happens.",
+    "Say the observation out loud even if you can't yet explain it. Let people hear the water.",
+    "When you go quiet, tell one person 'I'm thinking.' Don't make them guess.",
+    "Put one open question down for a day. Water settles on its own."
   ],
   "keywords": [
-    "stability",
-    "grounded",
-    "power"
-  ]
+    "hidden depth",
+    "still waters",
+    "quiet insight",
+    "mountain calm"
+  ],
+  "name": "Mountain Spring",
+  "name_traditional": ""
 }

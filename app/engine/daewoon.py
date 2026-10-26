@@ -14,11 +14,19 @@ def _normalize_utc(utc_instant: datetime) -> datetime:
 
 
 def _years_months_from_days(delta_days: float) -> tuple[int, int, float]:
-    """3일=1년, 1일=4개월 규칙. 절사 + 개월 반올림."""
+    """
+    3일=1년, 1일=4개월 규칙. 개월 6개월 이상은 다음 해로 반올림하여
+    표시 값(daewoon_display)과 start_age_first 가 일치하도록 통일한다
+    (전통 만세력 관례).
+    """
     raw_years = delta_days / 3.0
     years_int = int(raw_years)
     months_int = int(round((raw_years - years_int) * 12))
     if months_int == 12:
+        years_int += 1
+        months_int = 0
+    # 6개월 이상은 다음 해로 반올림 (표시·start_age 일치)
+    if months_int >= 6:
         years_int += 1
         months_int = 0
     return years_int, months_int, raw_years
@@ -27,10 +35,24 @@ def _years_months_from_days(delta_days: float) -> tuple[int, int, float]:
 def calculate_daewoon(utc_instant, gender, year_stem, solar_year, month_branch_idx):
     utc_instant = _normalize_utc(utc_instant)
 
+    # 화이트리스트: 스키마를 우회하는 호출(스크립트, telegram, 시각화)에서
+    # 빈 문자열이나 알 수 없는 값이 조용히 여성(역행)으로 처리되는 것을 방지한다.
+    g = (gender or "").strip().upper()
+    _MALE_TOKENS = ("M", "남", "男性", "MALE")
+    _FEMALE_TOKENS = ("F", "여", "女性", "FEMALE")
+    if g in _MALE_TOKENS:
+        is_male = True
+    elif g in _FEMALE_TOKENS:
+        is_male = False
+    else:
+        raise ValueError(
+            f"gender must be one of {_MALE_TOKENS + _FEMALE_TOKENS} "
+            f"(got {gender!r})."
+        )
+
     prev_term, next_term = get_adjacent_terms(utc_instant)
 
     is_year_yang = year_stem in YANG_STEMS
-    is_male = gender.upper() in ("M", "남", "男性", "MALE")
     is_forward = (is_year_yang and is_male) or (not is_year_yang and not is_male)
 
     if is_forward:

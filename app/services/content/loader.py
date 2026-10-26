@@ -91,7 +91,3 @@ def list_available(lang: str) -> list:
         return sorted(p.stem for p in lang_dir.glob("*.json"))
     return list(_REGISTRY.get(lang, {}).keys())
 
-
-def list_available(lang: str) -> list:
-    """해당 언어에서 사용 가능한 섹션 목록."""
-    return list(_REGISTRY.get(lang, {}).keys())

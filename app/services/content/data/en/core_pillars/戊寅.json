@@ -1,19 +1,29 @@
 {
-  "name": "Forested Mountain",
   "pillar": "戊寅",
-  "hero": "A massive mountain embracing a lush forest.",
+  "hero": "You're a mountain with a forest growing on it. What looks like solid ground is actually a place where things can root.",
   "narrative": [
-    "You are a stable center with strong vitality and growth. People feel comfortable around you."
+    "You read as dependable, warm, and hard to rattle. People bring problems to you before they bring them to anyone else — not because you ask them to, but because being near you makes the problem feel more tractable.",
+    "Your strength is generous ground. You don't just support people — you give them the conditions to grow on their own. Teams you've led keep their culture after you leave. Projects you've started keep going after you've stepped back. That's rare, and it doesn't happen by accident.",
+    "Your shadow is giving so much ground that your own foundation erodes. You say yes to the next person who needs a foothold, then quietly resent how little you have left. What feels like generosity can become a habit of staying needed — and staying needed is not the same as being loved.",
+    "The mature form of this pillar is a mountain that holds the forest and still keeps its own rock. Generosity with boundaries. The forest actually grows better when the mountain is intact — and so does everyone who relies on you."
   ],
   "shadows": [
-    "You might lose yourself while taking care of others."
+    "You say yes to more than you can actually hold, then quietly resent the weight.",
+    "You can confuse being needed with being loved.",
+    "You stay available to everyone, and no one notices you're depleted."
   ],
   "advice": [
-    "Make time for your own growth."
+    "Pick one thing you're supporting out of habit rather than choice. Let it go this week.",
+    "Before you say yes to a request, ask yourself: 'Is this mine to carry?'",
+    "Say out loud, once this week, 'I need something back.' Let someone hear it.",
+    "Spend an hour on something that grows you, not someone else."
   ],
   "keywords": [
-    "stability",
-    "grounded",
-    "power"
-  ]
+    "generous ground",
+    "lively stability",
+    "growth enabler",
+    "shared rooting"
+  ],
+  "name": "Forested Mountain",
+  "name_traditional": ""
 }
