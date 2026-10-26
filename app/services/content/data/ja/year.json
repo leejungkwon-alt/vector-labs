@@ -72,10 +72,11 @@
     }
   },
   "DEFAULT_YEAR_THEME": {
-    "name": "The Unfolding Year",
-    "headline": "A year still taking shape.",
-    "body": "The energy of this year is hard to pin to a single pattern. Pay attention — the theme will reveal itself as you go.",
-    "watch_for": "Assuming you already know what this year is about.",
-    "lean_into": "Staying curious about what's actually happening."
-  }
+    "name": "展開する年",
+    "headline": "まだ形を成していく途中の年です。",
+    "body": "この年の気を一つのパターンに絞ることは難しいです。注意深く見守ってください — 進むにつれてテーマが明らかになります。",
+    "watch_for": "今年が何かをすでに知っていると決めつけること。",
+    "lean_into": "実際に起きていることへの好奇心。"
+  },
+  "SOLAR_CALENDAR_NOTE": "上記の年は節気年（立春から立春まで）の基準です。1月にはまだ前年の節気年が適用されます。"
 }

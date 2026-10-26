@@ -1,85 +1,85 @@
 {
-  "BALANCE_LABEL": "balance",
-  "CHART_HERO": "Your blueprint, expressed as four faces.",
+  "BALANCE_LABEL": "バランス",
+  "CHART_HERO": "あなたの設計図、4つの顔。",
   "CHART_LAYER_META": {
     "year_pillar": {
-      "label": "Childhood",
-      "role": "Your roots — how you started and family influence"
+      "label": "幼少期",
+      "role": "あなたのルーツ — 始まりと家族の影響"
     },
     "month_pillar": {
-      "label": "Career",
-      "role": "Your social life — how you work and interact"
+      "label": "キャリア",
+      "role": "あなたの社会生活 — どう働き、どう関わるか"
     },
     "day_pillar": {
-      "label": "Core Self",
-      "role": "Your true identity — who you are at your core"
+      "label": "核となる自分",
+      "role": "本当のアイデンティティ — 本質のあなた"
     },
     "hour_pillar": {
-      "label": "Future",
-      "role": "Your inner world — your dreams and later years"
+      "label": "未来",
+      "role": "あなたの内面世界 — 夢と晩年"
     }
   },
   "SINSAL_POS_LABEL": {
-    "year_pillar": "Origins",
-    "month_pillar": "Career",
-    "day_pillar": "Self",
-    "hour_pillar": "Legacy"
+    "year_pillar": "ルーツ",
+    "month_pillar": "キャリア",
+    "day_pillar": "自分",
+    "hour_pillar": "レガシー"
   },
   "SINSAL_POS_ROLE": {
-    "year_pillar": "ancestry / early environment",
-    "month_pillar": "career / public life",
-    "day_pillar": "self / partnership",
-    "hour_pillar": "inner world / legacy"
+    "year_pillar": "祖先 / 幼少期の環境",
+    "month_pillar": "キャリア / 公の生活",
+    "day_pillar": "自分 / パートナーシップ",
+    "hour_pillar": "内面世界 / 遺産"
   },
   "SINSAL_THEME_KEYWORD": {
-    "MAGNETIC_DRAW": "magnetism and attraction",
-    "RESTLESS_FEET": "movement and exploration",
-    "SOLITARY_DEPTH": "reflection and creativity",
-    "ALLY_MAGNET": "help and support",
-    "SCHOLAR_MIND": "study and learning",
-    "SHARP_EDGE": "drive and competition",
-    "COMMANDER": "leadership and decisiveness"
+    "MAGNETIC_DRAW": "魅力と引き寄せ",
+    "RESTLESS_FEET": "移動と探求",
+    "SOLITARY_DEPTH": "内省と創造性",
+    "ALLY_MAGNET": "助けと支援",
+    "SCHOLAR_MIND": "学びと知識",
+    "SHARP_EDGE": "推進と競争",
+    "COMMANDER": "リーダーシップと決断"
   },
-  "SINSAL_NOTE_TPL": "This trait sits in your {role} — so {theme} shows up most in that area.",
-  "SINSAL_HERO_ONE": "You carry 1 special trait.",
-  "SINSAL_HERO_MANY": "You carry {n} special traits.",
+  "SINSAL_NOTE_TPL": "この特性はあなたの{role}に位置し、その領域で{theme}の気が最も強く現れます。",
+  "SINSAL_HERO_ONE": "あなたには1つの特別な気質があります。",
+  "SINSAL_HERO_MANY": "あなたには{n}つの特別な気質があります。",
   "GRADE_LABELS": {
-    "PEAK": "Peak",
-    "FAVORABLE": "Favorable",
-    "NEUTRAL": "Neutral",
-    "CAUTION": "Caution",
-    "CHALLENGING": "Challenging"
+    "PEAK": "最高",
+    "FAVORABLE": "追い風",
+    "NEUTRAL": "中立",
+    "CAUTION": "注意",
+    "CHALLENGING": "試練"
   },
-  "COMPAT_FALLBACK_HEADLINE": "A relationship you build together.",
+  "COMPAT_FALLBACK_HEADLINE": "関係は二人で一緒に築いていくものです。",
   "PERSONALIZATION_BLOCK": {
-    "HEADER": "Personalized insight",
+    "HEADER": "あなたの命式を深く読む、パーソナルインサイト",
     "BY_INTENSITY": {
-      "SELF_SOURCED": "Your strong 'self-sourced' energy makes this tendency especially pronounced and self-directed.",
-      "ENVIRONMENT_TUNED": "Your 'environment-tuned' temperament means this trait emerges most deeply depending on the people and setting around you.",
-      "BALANCED_CORE": "Your balanced 'core' energy guides this tendency in a stable and harmonious direction."
+      "SELF_SOURCED": "あなたの強い「セルフソース」の気が、この傾向をより鮮明に、主体的に引き出します。",
+      "ENVIRONMENT_TUNED": "あなたの「環境反応型」の気質により、周りの環境や人との出会いに応じてこの傾向が深く現れます。",
+      "BALANCED_CORE": "あなたのバランスの取れた「中心」の気が、この傾向を安定して調和的に導きます。"
     },
     "BY_ELEMENT": {
-      "GROWTH": "Growth (Wood) energy layers on top of this — a strong drive to keep expanding and opening new directions.",
-      "SPARK": "Spark (Fire) energy layers on top of this — a passionate, immediate force pushing this tendency forward.",
-      "GROUND": "Ground (Earth) energy layers on top of this — this tendency expresses through thoughtful, solid foundation-building.",
-      "EDGE": "Edge (Metal) energy layers on top of this — you sort through this with clear standards and sharp decisiveness.",
-      "FLOW": "Flow (Water) energy layers on top of this — this tendency gains a flexible, responsive wisdom that adapts to the moment."
+      "GROWTH": "ここに成長（木）の気が加わり、絶えず拡張し新たな方向を開拓しようとする欲求が強く働きます。",
+      "SPARK": "ここに火花（火）の熱い気が加わり、情熱的で即時的なエネルギーがこの傾向を押し進めます。",
+      "GROUND": "ここに大地（土）の安定した気が加わり、慎重かつどっしりと基盤を築く方向へと発現します。",
+      "EDGE": "ここに鋭さ（金）の気が加わり、明確な基準と鋭い決断力でこの状況を整理していきます。",
+      "FLOW": "ここに流れ（水）の柔軟な気が加わり、状況に応じて賢く柔軟に対処する力が生まれます。"
     },
     "BY_MODE_SECTION": {
       "love": {
-        "THE_TWIN": "The 'Twin' mode is especially strong — you treat your partner as a lifelong colleague and an equal, not a role to play.",
-        "THE_RIVAL": "The 'Rival' mode is especially strong — you want a relationship where you both push each other and grow together.",
-        "THE_ALLY": "The 'Ally' mode is especially strong — once you commit to a bond, you stay with it and give it your full loyalty."
+        "THE_TWIN": "特に「相棒」モードが強く、パートナーを生涯の同僚であり対等な仲間として扱います。",
+        "THE_RIVAL": "特に「ライバル」モードが強く、互いに刺激し合い共に成長する関係を望みます。",
+        "THE_ALLY": "特に「味方」モードが強く、一度結んだ縁は最後まで責任を持ち尽くします。"
       },
       "career": {
-        "THE_CREATOR": "The 'Creator' mode is especially strong — you shine when you break existing molds and create original work.",
-        "THE_OFFICER": "The 'Officer' mode is especially strong — you grow into a trusted core talent inside structured organizations.",
-        "THE_CHALLENGER": "The 'Challenger' mode is especially strong — you have the instincts of a leader who solves problems and breaks through crises."
+        "THE_CREATOR": "特に「創造者」モードが強く、既存の枠を壊し自分だけの独創的な成果物を作り出す仕事で輝きます。",
+        "THE_OFFICER": "特に「原理主義者」モードが強く、体系化された組織で信頼される中核人材として成長します。",
+        "THE_CHALLENGER": "特に「挑戦者」モードが強く、問題を解決し危機を突破するリーダーの気質があります。"
       },
       "wealth": {
-        "THE_OPERATOR": "The 'Operator' mode is especially strong — you spot opportunities others miss and grow your assets decisively.",
-        "THE_STEWARD": "The 'Steward' mode is especially strong — you protect what you have and let compound growth do its work.",
-        "THE_FLOW": "The 'Flow' mode is especially strong — you ride the current of money with flexibility and draw wealth in naturally."
+        "THE_OPERATOR": "特に「運営者」モードが強く、他人が見逃す機会を捉え果敢に資産を増やしていきます。",
+        "THE_STEWARD": "特に「管理人」モードが強く、一度集めた資産を安全に守り複利で増やす能力に優れています。",
+        "THE_FLOW": "特に「流れ」モードが強く、執着せず柔軟にお金の流れに乗って自然に富を引き寄せます。"
       }
     }
   }

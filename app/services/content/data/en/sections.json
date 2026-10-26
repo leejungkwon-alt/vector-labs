@@ -76,12 +76,12 @@
     "default": "{dominant} shapes you."
   },
   "CHART_POSITION_TEMPLATES": {
-    "year_pillar": "In the moment you first met the world, the {archetype} energy was already flowing through you.",
-    "month_pillar": "How you show up in your public work is nothing other than the {archetype} energy.",
-    "day_pillar": "{archetype} — this is your core.",
-    "hour_pillar": "The legacy you leave behind will carry the {archetype} energy."
+    "year_pillar": "Influenced by your childhood and family, you were born with the traits of '{archetype}'.",
+    "month_pillar": "In your social life and career, you stand out by acting like '{archetype}'.",
+    "day_pillar": "Your deepest inner self and core essence is '{archetype}'.",
+    "hour_pillar": "As you grow older and look within, the energy of '{archetype}' emerges."
   },
-  "CHART_NOTE_TEMPLATE": "Your {a} and {b} share the same '{archetype}' energy. This means they're inseparable — your public life and your core are one.",
+  "CHART_NOTE_TEMPLATE": "Your {a} and {b} both share the same '{archetype}' energy. This means that whether you're working or alone, your presence remains exactly the same. Because 'who you are at work' and 'the real you' are not separated, you are always sincere and consistent. However, the boundary between work and daily life can blur, making it easy for you to burn out.",
   "DISCLAIMER": "Note: This report combines astronomical calculations with modern coaching frameworks for personal insight and entertainment. It is not medical, financial, or psychological advice. Traditional Four Pillars analysis is school-dependent — different lineages can reach different conclusions from the same chart, in the same way different therapists can describe the same person differently. Treat this as one thoughtful reading, not a verdict. Your decisions remain your own. If you are in crisis, contact local emergency services or a suicide prevention hotline. If you are outside the US, see https://findahelpline.com/.",
   "MONEY_CONTENT": {
     "THE_STEWARD": {

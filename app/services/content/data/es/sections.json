@@ -76,12 +76,12 @@
     "default": "{dominant} te moldea."
   },
   "CHART_POSITION_TEMPLATES": {
-    "year_pillar": "En tus orígenes, {archetype} moldeó cómo conociste el mundo.",
-    "month_pillar": "En tu trabajo público, {archetype} es cómo te presentas.",
-    "day_pillar": "{archetype} es tu núcleo — esto es quién eres.",
-    "hour_pillar": "En tu legado, {archetype} definirá lo que dejas atrás."
+    "year_pillar": "Influenciado por tu infancia y familia, naciste con los rasgos de '{archetype}'.",
+    "month_pillar": "En tu vida social y carrera, destacas actuando como '{archetype}'.",
+    "day_pillar": "Tu ser interior más profundo y esencia central es '{archetype}'.",
+    "hour_pillar": "A medida que envejeces y miras hacia adentro, emerge la energía de '{archetype}'."
   },
-  "CHART_NOTE_TEMPLATE": "Tu {a} y tu {b} comparten la misma energía '{archetype}'. Esto significa que son inseparables — tu vida pública y tu núcleo son uno.",
+  "CHART_NOTE_TEMPLATE": "Tu {a} y tu {b} comparten la misma energía '{archetype}'. Esto significa que, ya sea trabajando o a solas, tu presencia es exactamente la misma. Como 'quién eres en el trabajo' y 'el verdadero tú' no están separados, siempre eres sincero y consistente. Sin embargo, el límite entre el trabajo y la vida diaria puede difuminarse, haciendo que sea fácil que te agotes.",
   "DISCLAIMER": "Nota: Este informe combina cálculos astronómicos con marcos modernos de coaching para la percepción personal y el entretenimiento. No es consejo médico, financiero ni psicológico. El análisis tradicional de Cuatro Pilares depende de la escuela — distintas líneas pueden llegar a conclusiones diferentes a partir de la misma carta, del mismo modo que distintos terapeutas pueden describir a la misma persona de forma diferente. Trátalo como una lectura reflexiva, no como un veredicto. Tus decisiones siguen siendo tuyas. Si estás en crisis, contacta a los servicios de emergencia locales o a una línea de prevención del suicidio. Si estás fuera de EE. UU., consulta https://findahelpline.com/.",
   "MONEY_CONTENT": {
     "THE_STEWARD": {

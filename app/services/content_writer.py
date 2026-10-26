@@ -636,7 +636,8 @@ def write_chart_section(profile: dict, lang: str = "en") -> dict:
         if cnt < 2:
             continue
         same = [l for l in layers if l["archetype_key"] == key]
-        arch_name = same[0]["archetype"]
+        # [버그수정] 세부 일주 이름(예: 호수 위의 등불) 대신 공통 아키타입 이름(예: 태양) 사용
+        arch_name = arch_content.get(key, {}).get("name", key)
         for i in range(len(same)):
             for j in range(i + 1, len(same)):
                 notes.append(

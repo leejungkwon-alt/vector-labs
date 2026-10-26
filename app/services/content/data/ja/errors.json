@@ -1,4 +1,4 @@
 {
-  "DST_AMBIGUOUS": "This clock time is ambiguous: {clock} occurs twice in {tz}. Re-request with dst_fold=0 (offset {off0}) or dst_fold=1 (offset {off1}).",
-  "DST_GAP": "This clock time does not exist: {clock} is skipped by DST in {tz}."
+  "DST_AMBIGUOUS": "この時刻は曖昧です：{clock} は {tz} で二回発生します。dst_fold=0（オフセット {off0}）または dst_fold=1（オフセット {off1}）で再リクエストしてください。",
+  "DST_GAP": "この時刻は存在しません：{clock} は {tz} の夏時間によりスキップされています。"
 }
