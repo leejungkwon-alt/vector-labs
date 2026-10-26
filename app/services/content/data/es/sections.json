@@ -85,385 +85,385 @@
   "DISCLAIMER": "Nota: Este informe combina cálculos astronómicos con marcos modernos de coaching para la percepción personal y el entretenimiento. No es consejo médico, financiero ni psicológico. El análisis tradicional de Cuatro Pilares depende de la escuela — distintas líneas pueden llegar a conclusiones diferentes a partir de la misma carta, del mismo modo que distintos terapeutas pueden describir a la misma persona de forma diferente. Trátalo como una lectura reflexiva, no como un veredicto. Tus decisiones siguen siendo tuyas. Si estás en crisis, contacta a los servicios de emergencia locales o a una línea de prevención del suicidio. Si estás fuera de EE. UU., consulta https://findahelpline.com/.",
   "MONEY_CONTENT": {
     "THE_STEWARD": {
-      "headline": "You protect your assets and compound them safely.",
-      "body": "You detest risk and can't stomach losing principal. Long-term stability comes before short-term gains.\n\nThat draws you to safe assets — savings, bonds, real estate. While others chase crypto or day-trade stocks, you quietly protect and grow what you have.\n\nBut being too conservative can mean losing to inflation. Diversify a slice into growth positions.",
+      "headline": "Construyes lentamente — y esa es tu fortaleza.",
+      "body": "Prefieres cuidar algo con esmero antes que apostar por un atajo. Para ti, los recursos —el tiempo, la atención, las relaciones— valen más cuando se administran con paciencia.\n\nValoras lo que perdura. Mientras otros persiguen la próxima novedad, tú fortaleces en silencio lo que ya es tuyo. Es una disciplina poco común.\n\nEl riesgo es que 'tener cuidado' se convierta en un hábito que cierre puertas. Jugar demasiado a lo seguro también tiene un costo.",
       "patterns": [
-        "Your cash and savings allocation is very high.",
-        "Fear of loss makes you delay decisions.",
-        "You believe in compounding and prefer long holds."
+        "Tu asignación a efectivo y ahorros es muy alta.",
+        "El miedo a perder hace que retrases las decisiones.",
+        "Crees en el interés compuesto y prefieres mantener a largo plazo."
       ],
       "best_match": [
         "THE_OPERATOR",
         "THE_FLOW"
       ],
-      "best_reason": "A partner who adds returns on top of your safe base.",
+      "best_reason": "Alguien que añada rendimiento sobre tu base segura.",
       "challenging_match": [
         "THE_STEWARD"
       ],
-      "challenging_reason": "If both of you only play it safe, your assets lose to inflation.",
+      "challenging_reason": "Si ambos juegan a lo seguro, sus activos pierden frente a la inflación.",
       "actions": [
-        "Diversify 10% of your assets into an index fund.",
-        "Once a year, compare your savings rate against inflation.",
-        "Start automatic dollar-cost averaging."
+        "Diversifica un 10% de tus activos en un fondo indexado.",
+        "Una vez al año, compara tu tasa de ahorro con la inflación.",
+        "Empieza a promediar el costo en dólares de forma automática."
       ],
       "red_flags": [
-        "Is everything you own locked in savings accounts?",
-        "Have you lent money to friends and never got it back?"
+        "¿Todo lo que tienes está bloqueado en cuentas de ahorro?",
+        "¿Has prestado dinero a amigos y nunca te lo han devuelto?"
       ]
     },
     "THE_OPERATOR": {
-      "headline": "You excel at moving capital and seizing opportunity.",
-      "body": "You enjoy money in motion. Rather than letting capital sit, you're skilled at spotting openings and putting it to work.\n\nSide ventures, small businesses, short-term investments — you have a real feel for generating income across many fronts. Fast decisions let you bet boldly when others hesitate, and sometimes you win big.\n\nBut when everything flows fast, leaks widen too. If you don't build a safety net while cash is good, you'll be fragile in a downturn.",
+      "headline": "Te ves como energía que necesita moverse.",
+      "body": "Detectas oportunidades donde otros ven ruido. Tu instinto para el intercambio —de ideas, de atención, de recursos— es agudo.\n\nRara vez te conformas con dejar las cosas quietas. Disfrutas de la energía dinámica de construir, conectar y hacer avanzar las cosas.\n\nPero cuando todo fluye rápido, las fugas pueden ser tan grandes como los flujos. Lo que te equilibra no es la velocidad, sino la pequeña cantidad de cosas a las que realmente te comprometes.",
       "patterns": [
-        "You try to build multiple income sources.",
-        "You take risks but spread them out.",
-        "Spending rises as fast as income does."
+        "Intentas crear múltiples fuentes de ingresos.",
+        "Asumes riesgos pero los distribuyes.",
+        "El gasto sube tan rápido como los ingresos."
       ],
       "best_match": [
         "THE_STEWARD",
         "THE_ANCHOR"
       ],
-      "best_reason": "A partner who anchors the assets you scatter.",
+      "best_reason": "Alguien que afiance los activos que dispersas.",
       "challenging_match": [
         "THE_OPERATOR"
       ],
-      "challenging_reason": "If both of you love risk, recovery in a crisis is hard.",
+      "challenging_reason": "Si ambos aman el riesgo, la recuperación en una crisis es difícil.",
       "actions": [
-        "Lock 30% of income into automatic savings.",
-        "Impose a 3-day cooling-off period before any new investment.",
-        "Use a debit card instead of credit to control spending."
+        "Bloquea el 30% de tus ingresos en ahorro automático.",
+        "Impón un período de reflexión de 3 días antes de cualquier nueva inversión.",
+        "Usa una tarjeta de débito en lugar de crédito para controlar el gasto."
       ],
       "red_flags": [
-        "Is income high but nothing ever stays in the account?",
-        "Are you borrowing to invest?"
+        "¿Los ingresos son altos pero nunca queda nada en la cuenta?",
+        "¿Estás pidiendo dinero prestado para invertir?"
       ]
     },
     "THE_FLOW": {
-      "headline": "You ride the current of money flexibly.",
-      "body": "You have no fixed dogma about money. Through networks, intuition, and circumstance, income finds you naturally.\n\nSome periods bring big inflows; others run dry. You accept the rhythm calmly — and you have a knack for pulling opportunity toward you when you need it.\n\nThat flexibility is a strength. But improvising without a plan can wreck your finances. A minimum safety net is non-negotiable.",
+      "headline": "Cabalgas la corriente del dinero con flexibilidad.",
+      "body": "No tienes un dogma fijo sobre el dinero. A través de las redes, la intuición y las circunstancias, los ingresos te encuentran de forma natural.\n\nAlgunos períodos traen grandes entradas; otros se secan. Aceptas el ritmo con calma, y tienes un don para atraer oportunidades hacia ti cuando las necesitas.\n\nEsa flexibilidad es una fortaleza. Pero improvisar sin un plan puede arruinar tus finanzas. Una red de seguridad mínima no es negociable.",
       "patterns": [
-        "Your income and spending swing widely.",
-        "Wealth opportunities arrive through people.",
-        "You spend as you go rather than budgeting."
+        "Tus ingresos y gastos fluctúan mucho.",
+        "Las oportunidades de riqueza llegan a través de las personas.",
+        "Gastas sobre la marcha en lugar de presupuestar."
       ],
       "best_match": [
         "THE_STEWARD",
         "THE_ANCHOR"
       ],
-      "best_reason": "Someone who keeps you centered so your life has fewer swings.",
+      "best_reason": "Alguien que te mantenga centrado para que tu vida tenga menos altibajos.",
       "challenging_match": [
         "THE_OPERATOR"
       ],
-      "challenging_reason": "Two improvisers is a fast road to ruin.",
+      "challenging_reason": "Dos improvisadores es un camino rápido a la ruina.",
       "actions": [
-        "Split into two accounts (emergency / living).",
-        "Wait 24 hours before any large purchase.",
-        "Save 10% of every month's income, unconditionally."
+        "Divide en dos cuentas (emergencia / vida diaria).",
+        "Espera 24 horas antes de cualquier compra grande.",
+        "Ahorra el 10% de los ingresos de cada mes, sin condiciones."
       ],
       "red_flags": [
-        "Are you juggling credit-card debt from month to month?",
-        "Have you been talked into an investment by a friend and lost money?"
+        "¿Estás haciendo malabares con la deuda de la tarjeta de crédito de un mes a otro?",
+        "¿Te han convencido para invertir un amigo y has perdido dinero?"
       ]
     }
   },
   "WORK_CONTENT": {
     "THE_CREATOR": {
-      "headline": "You shine when the work carries your own mark.",
-      "body": "You hate following the manual. You feel most accomplished when you plan and build something yourself and imprint your own color on it.\n\nIn fields that demand creativity — planning, design, marketing, content — you perform best, especially in environments that grant autonomy.\n\nBut being a creator has a price. Dry spells and undervalued output hurt easily. Practicing joy in the process, not just the result, is essential.",
+      "headline": "Prosperas cuando puedes ver tu propia marca en el trabajo.",
+      "body": "Eres alérgico al trabajo inútil sin sentido. Necesitas construir algo desde cero o añadir tu voz única.\n\nTu mente siempre está dando vueltas con ideas. Sientes el mayor sentido de logro cuando las traes al mundo e inspiras a otros. Brillas en entornos autónomos donde puedes expresar tu creatividad.\n\nPero también debes aceptar el dolor de ser creador. Te hieren fácilmente cuando tus ideas se agotan o tu trabajo es infravalorado. Aprende a desvincularte del resultado y disfrutar del proceso en sí.",
       "patterns": [
-        "Autonomy matters more to you than rules.",
-        "You have the execution muscle to make ideas real.",
-        "You react sharply to criticism."
+        "La autonomía te importa más que las reglas.",
+        "Tienes el músculo de ejecución para hacer realidad las ideas.",
+        "Reaccionas con dureza a las críticas."
       ],
       "best_match": [
         "THE_OFFICER",
         "THE_MENTOR"
       ],
-      "best_reason": "Someone who can systemize and champion your creativity.",
+      "best_reason": "Alguien que pueda sistematizar y defender tu creatividad.",
       "challenging_match": [
         "THE_OFFICER"
       ],
-      "challenging_reason": "You clash head-on with bosses who demand only compliance.",
+      "challenging_reason": "Chocas de frente con jefes que solo exigen cumplimiento.",
       "actions": [
-        "Carve out 5 hours a week of deep creative focus.",
-        "Ship output at 80% instead of 100%.",
-        "Reframe criticism as feedback, not attack."
+        "Reserva 5 horas a la semana de enfoque creativo profundo.",
+        "Entrega resultados al 80% en lugar del 100%.",
+        "Reinterpreta las críticas como feedback, no como ataque."
       ],
       "red_flags": [
-        "Is perfectionism making you miss deadlines?",
-        "Are you ignoring every instruction from a boss?"
+        "¿El perfeccionismo te está haciendo perder fechas límite?",
+        "¿Estás ignorando todas las instrucciones de un jefe?"
       ]
     },
     "THE_CHALLENGER": {
-      "headline": "You come alive when you flip the board.",
-      "body": "You can't stand stagnant peace. When someone says 'we've always done it this way,' your brain silently screams, 'Is there a better way?'\n\nIn crises, restructurings, or new ventures, your true leadership shows. You latch onto problems others abandon and keep going until you find the answer.\n\nBut too much criticism erodes team morale. Don't just point out what's broken — always offer the alternative.",
+      "headline": "Estás en tu mejor momento cuando las cosas están rotas y necesitan arreglo.",
+      "body": "No necesitas un sistema perfecto; necesitas un problema real. Ves lo que no funciona antes que nadie.\n\nEres un innovador que odia el statu quo. Preguntas '¿Por qué lo hacemos así?' y encuentras mejores caminos. Te conviertes en un verdadero líder en una crisis.\n\nPero si criticar se convierte en un hábito, la gente podría verte como negativo. No solo señales los problemas; ofrece soluciones y alternativas.",
       "patterns": [
-        "You can't let inefficiency slide.",
-        "You rise into leadership during crises.",
-        "You're unafraid to challenge authority."
+        "No puedes dejar pasar la ineficiencia.",
+        "Sobresales en el liderazgo durante las crisis.",
+        "No temes desafiar a la autoridad."
       ],
       "best_match": [
         "THE_CREATOR",
         "THE_OFFICER"
       ],
-      "best_reason": "Someone who can turn your ideas into products or systems.",
+      "best_reason": "Alguien que pueda convertir tus ideas en productos o sistemas.",
       "challenging_match": [
         "THE_OFFICER"
       ],
-      "challenging_reason": "You collide with people who insist on the rules.",
+      "challenging_reason": "Chocas con personas que insisten en las reglas.",
       "actions": [
-        "Always pair complaints with alternatives.",
-        "Learn to save face for the boss in conversations.",
-        "Practice listening to a colleague all the way through."
+        "Siempre acompaña las quejas con alternativas.",
+        "Aprende a guardar las apariencias para el jefe en las conversaciones.",
+        "Practica escuchar a un colega hasta el final."
       ],
       "red_flags": [
-        "Are you opposing for the sake of opposing?",
-        "Is your presence making teammates shrink?"
+        "¿Te estás oponiendo por el simple hecho de oponerte?",
+        "¿Tu presencia está haciendo que los miembros del equipo se encojan?"
       ]
     },
     "THE_OFFICER": {
-      "headline": "You're a trusted core player in structured organizations.",
-      "body": "You value principles and process. You perform most reliably when the rules are clear and the systems are well-built.\n\nYour fairness and responsibility earn deep trust from both bosses and peers. Large companies, public institutions, finance, law — you fit well there.\n\nBut in fast-moving or ambiguous settings you may feel stuck. Sometimes flexibility beats the rulebook.",
+      "headline": "Eres un jugador central de confianza en organizaciones estructuradas.",
+      "body": "Valoras los principios y el proceso. Te desempeñas de manera más confiable cuando las reglas son claras y los sistemas están bien construidos.\n\nTu equidad y responsabilidad te ganan una profunda confianza tanto de jefes como de compañeros. Grandes empresas, instituciones públicas, finanzas, derecho... encajas bien allí.\n\nPero en entornos cambiantes o ambiguos puedes sentirte estancado. A veces la flexibilidad vence al manual de reglas.",
       "patterns": [
-        "You finish what you're given, no matter what.",
-        "You value hierarchy and clear reporting lines.",
-        "You're excellent at pre-empting risk."
+        "Terminas lo que te dan, pase lo que pase.",
+        "Valoras la jerarquía y las líneas de reporte claras.",
+        "Eres excelente anticipando riesgos."
       ],
       "best_match": [
         "THE_CHALLENGER",
         "THE_PIONEER"
       ],
-      "best_reason": "Innovators who add change on top of your stable foundation.",
+      "best_reason": "Innovadores que añaden cambio sobre tu base estable.",
       "challenging_match": [
         "THE_CHALLENGER"
       ],
-      "challenging_reason": "You clash with people who constantly break the rules.",
+      "challenging_reason": "Chocas con personas que rompen las reglas constantemente.",
       "actions": [
-        "Learn a new tool and automate part of your workflow.",
-        "When a directive is unfair, persuade with data.",
-        "Practice welcoming ideas from younger colleagues."
+        "Aprende una nueva herramienta y automatiza parte de tu flujo de trabajo.",
+        "Cuando una directiva sea injusta, persuade con datos.",
+        "Practica recibir con agrado las ideas de colegas más jóvenes."
       ],
       "red_flags": [
-        "Do you say 'we've always done it this way' too often?",
-        "Are you falling behind by resisting change?"
+        "¿Dices 'siempre lo hemos hecho así' con demasiada frecuencia?",
+        "¿Te estás quedando atrás al resistirte al cambio?"
       ]
     },
     "THE_SURVIVOR": {
-      "headline": "You're forged under pressure that others would break from.",
-      "body": "You have a higher stress threshold than most. In crises your focus sharpens, and you find grit others can't summon when they say it's impossible.\n\nYou stand out in sales, restructuring, crisis management — anywhere pressure is real. Once you commit to a goal, you go all in.\n\nBut that toughness can read as cold or ruthless. Showing vulnerability is also a form of leadership.",
+      "headline": "Estás forjado bajo una presión de la que otros se romperían.",
+      "body": "Tienes un umbral de estrés más alto que la mayoría. En las crisis tu enfoque se agudiza y encuentras una determinación que otros no pueden reunir cuando dicen que es imposible.\n\nDestacas en ventas, reestructuraciones, gestión de crisis, cualquier lugar donde la presión sea real. Una vez que te comprometes con un objetivo, lo das todo.\n\nPero esa dureza puede leerse como frialdad o crueldad. Mostrar vulnerabilidad también es una forma de liderazgo.",
       "patterns": [
-        "You stay calm under crisis.",
-        "Your obsession with the goal is intense.",
-        "You're clumsy with emotional expression."
+        "Mantienes la calma bajo crisis.",
+        "Tu obsesión por el objetivo es intensa.",
+        "Eres torpe con la expresión emocional."
       ],
       "best_match": [
         "THE_MENTOR",
         "THE_FLOW"
       ],
-      "best_reason": "Someone who softens your edge.",
+      "best_reason": "Alguien que suavice tu filo.",
       "challenging_match": [
         "THE_SURVIVOR"
       ],
-      "challenging_reason": "Two aggressives and the team gets scorched.",
+      "challenging_reason": "Dos agresivos y el equipo se quema.",
       "actions": [
-        "Set one full day off each week.",
-        "Approach a colleague first with thanks.",
-        "Use exercise or a hobby to discharge stress."
+        "Establece un día completo libre a la semana.",
+        "Acércate primero a un colega con agradecimiento.",
+        "Usa el ejercicio o un pasatiempo para descargar el estrés."
       ],
       "red_flags": [
-        "Are you running through burnout signals?",
-        "Are teammates afraid of you?"
+        "¿Estás ignorando las señales de burnout?",
+        "¿Los compañeros de equipo te tienen miedo?"
       ]
     },
     "THE_MYSTIC": {
-      "headline": "You see the essence and structure others miss.",
-      "body": "You dig past the surface to the mechanics underneath. You're excellent at extracting the core from complex data or situations.\n\nResearch, strategic planning, data analysis, consulting — anything requiring deep thinking. Your intuition spots connections others overlook.\n\nBut thinking too deeply delays action. Summon the courage to start before the picture is complete.",
+      "headline": "Ves la esencia y la estructura que otros pasan por alto.",
+      "body": "Excavas más allá de la superficie hasta la mecánica subyacente. Eres excelente extrayendo el núcleo de datos o situaciones complejas.\n\nInvestigación, planificación estratégica, análisis de datos, consultoría, cualquier cosa que requiera pensamiento profundo. Tu intuición detecta conexiones que otros pasan por alto.\n\nPero pensar demasiado profundamente retrasa la acción. Reúne el coraje para empezar antes de que la imagen esté completa.",
       "patterns": [
-        "You analyze heavily before acting.",
-        "Your intuitive insight is outstanding.",
-        "Surface-level work bores you."
+        "Analizas mucho antes de actuar.",
+        "Tu intuición es sobresaliente.",
+        "El trabajo superficial te aburre."
       ],
       "best_match": [
         "THE_PIONEER",
         "THE_CHALLENGER"
       ],
-      "best_reason": "Executors who turn your analysis into action.",
+      "best_reason": "Ejecutores que convierten tu análisis en acción.",
       "challenging_match": [
         "THE_GENERALIST"
       ],
-      "challenging_reason": "You can't connect with people who skim the surface.",
+      "challenging_reason": "No puedes conectar con personas que solo rozan la superficie.",
       "actions": [
-        "Force yourself to take the first step within 3 days of analysis.",
-        "Visualize and share your analysis with the team.",
-        "Find a partner with strong execution."
+        "Oblígate a dar el primer paso dentro de los 3 días posteriores al análisis.",
+        "Visualiza y comparte tu análisis con el equipo.",
+        "Busca un socio con gran capacidad de ejecución."
       ],
       "red_flags": [
-        "Are you analyzing while opportunities slip by?",
-        "Are you too deep inside your own head?"
+        "¿Estás analizando mientras las oportunidades se escapan?",
+        "¿Estás demasiado metido en tu propia cabeza?"
       ]
     },
     "THE_MENTOR": {
-      "headline": "You're exceptional at unlocking others' potential.",
-      "body": "You have a natural gift for spotting and growing others' strengths. Teaching and advising brings you deep satisfaction.\n\nEducation, HR, consulting, management — you flourish. Teams you pass through carry your culture long after you leave.\n\nBut focusing on others' growth can leave you behind. Show that you're still growing too, and respect grows even deeper.",
+      "headline": "Eres excepcional desbloqueando el potencial de los demás.",
+      "body": "Tienes un don natural para detectar y hacer crecer las fortalezas de los demás. Enseñar y aconsejar te brinda una profunda satisfacción.\n\nEducación, recursos humanos, consultoría, gestión... prosperas. Los equipos por los que pasas llevan tu cultura mucho después de que te vayas.\n\nPero centrarte en el crecimiento de los demás puede dejarte atrás. Demuestra que tú también sigues creciendo y el respeto crecerá aún más.",
       "patterns": [
-        "You listen well to juniors' struggles.",
-        "You love sharing what you know.",
-        "You tend to put your own results last."
+        "Escuchas bien las dificultades de los más jóvenes.",
+        "Te encanta compartir lo que sabes.",
+        "Tiendes a poner tus propios resultados al final."
       ],
       "best_match": [
         "THE_SURVIVOR",
         "THE_CREATOR"
       ],
-      "best_reason": "People who take your warm advice and pay it back with results.",
+      "best_reason": "Personas que toman tu cálido consejo y lo devuelven con resultados.",
       "challenging_match": [
         "THE_SURVIVOR"
       ],
-      "challenging_reason": "Lone-wolf styles may not mesh with yours.",
+      "challenging_reason": "Los estilos de lobo solitario pueden no encajar con el tuyo.",
       "actions": [
-        "Define your own career goals clearly.",
-        "Build expertise of your own beyond mentoring.",
-        "Show juniors that you're still learning from them."
+        "Define claramente tus propios objetivos profesionales.",
+        "Construye tu propia experiencia más allá de la tutoría.",
+        "Muestra a los más jóvenes que tú también sigues aprendiendo de ellos."
       ],
       "red_flags": [
-        "Are you caring for juniors while your own review sinks?",
-        "Are you resting on teaching alone?"
+        "¿Estás cuidando a los más jóvenes mientras tu propia evaluación se hunde?",
+        "¿Te estás apoyando únicamente en enseñar?"
       ]
     },
     "THE_GENERALIST": {
-      "headline": "You create synergy by crossing many fields.",
-      "body": "You're not a one-well specialist. You're a T-shaped talent who connects knowledge across domains to create new value.\n\nPlanning, PM, project management — anywhere you can play the lubricant between stakeholders. You adapt fluidly and survive in any org.\n\nBut you may be told you lack depth. For your breadth to be a real strength, build at least one spike no one can match.",
+      "headline": "Creas sinergia cruzando muchos campos.",
+      "body": "No eres un especialista de un solo pozo. Eres un talento en forma de 'T' que conecta conocimientos de distintos dominios para crear nuevo valor.\n\nPlanificación, gestión de proyectos, dirección de proyectos... en cualquier lugar donde puedas ser el lubricante entre las partes interesadas. Te adaptas con fluidez y sobrevives en cualquier organización.\n\nPero es posible que te digan que te falta profundidad. Para que tu amplitud sea una verdadera fortaleza, construye al menos un pico que nadie pueda igualar.",
       "patterns": [
-        "You're curious and love learning.",
-        "You adapt roles fluidly to the moment.",
-        "Your focus sometimes scatters."
+        "Eres curioso y te encanta aprender.",
+        "Adaptas tus roles con fluidez al momento.",
+        "A veces tu enfoque se dispersa."
       ],
       "best_match": [
         "THE_MYSTIC",
         "THE_BLADE"
       ],
-      "best_reason": "People who integrate your varied ideas into one strategy.",
+      "best_reason": "Personas que integran tus variadas ideas en una sola estrategia.",
       "challenging_match": [
         "THE_OFFICER"
       ],
-      "challenging_reason": "People who insist on one rule frustrate you.",
+      "challenging_reason": "Las personas que insisten en una sola regla te frustran.",
       "actions": [
-        "Pick the single expertise you'll concentrate on this year.",
-        "Use your broad network to create collaboration opportunities.",
-        "Turn your experience into content."
+        "Elige la única especialidad en la que te concentrarás este año.",
+        "Usa tu amplia red para crear oportunidades de colaboración.",
+        "Convierte tu experiencia en contenido."
       ],
       "red_flags": [
-        "Are you starting a lot and finishing nothing?",
-        "Are you actually working to become an expert at something?"
+        "¿Estás empezando muchas cosas y no terminando ninguna?",
+        "¿Estás trabajando realmente para convertirte en un experto en algo?"
       ]
     }
   },
   "BONDS_CONTENT": {
     "THE_TWIN": {
-      "headline": "You feel most comfortable as equals.",
-      "body": "You dislike leading or leaning on someone. You want eye-level partnership and walking in the same direction together.\n\nYou value acknowledging each other's differences and growing side by side. You build deep bonds without burdening each other.\n\nBut if you only chase the 'cool' dynamic, deep intimacy can be hard. Learn to lean in sometimes.",
+      "headline": "Te sientes más cómodo entre iguales.",
+      "body": "No te gusta liderar ni depender de alguien. Quieres una asociación de igual a igual y caminar juntos en la misma dirección.\n\nValoras reconocer las diferencias del otro y crecer uno al lado del otro. Construyes vínculos profundos sin cargarse mutuamente.\n\nPero si solo persigues la dinámica 'genial', la intimidad profunda puede ser difícil. Aprende a apoyarte a veces.",
       "patterns": [
-        "You prefer friend-level comfort over romance.",
-        "You respect each other's private space.",
-        "You dislike power struggles."
+        "Prefieres la comodidad de la amistad al romance.",
+        "Respetas el espacio privado de cada uno.",
+        "No te gustan las luchas de poder."
       ],
       "best_match": [
         "THE_ALLY",
         "THE_EMPATH"
       ],
-      "best_reason": "Someone who respects your autonomy and approaches softly.",
+      "best_reason": "Alguien que respete tu autonomía y se acerque con suavidad.",
       "challenging_match": [
         "THE_TWIN"
       ],
-      "challenging_reason": "Two cool types can make the relationship stale.",
+      "challenging_reason": "Dos tipos geniales pueden hacer que la relación se vuelva aburrida.",
       "actions": [
-        "Sometimes be the first to reach out.",
-        "Speak up honestly when something is off.",
-        "Create one shared hobby."
+        "A veces sé el primero en acercarte.",
+        "Habla con honestidad cuando algo no esté bien.",
+        "Crea un pasatiempo compartido."
       ],
       "red_flags": [
-        "Are you so detached that your partner feels hurt?",
-        "Are you hiding feelings to avoid conflict?"
+        "¿Estás tan distante que tu pareja se siente herida?",
+        "¿Estás ocultando sentimientos para evitar el conflicto?"
       ]
     },
     "THE_RIVAL": {
-      "headline": "You enjoy healthy competition that spurs each other.",
-      "body": "You'd rather have someone who challenges you than someone who always agrees. You want a partner willing to debate and push.\n\nYou exchange strong opinions and sharpen each other through honest feedback. Never boring — you keep learning from each other.\n\nBut not every conversation needs to be a debate. Know when the other person needs comfort, not advice.",
+      "headline": "Disfrutas de la competencia sana que los estimula mutuamente.",
+      "body": "Prefieres a alguien que te desafíe a alguien que siempre esté de acuerdo. Quieres una pareja dispuesta a debatir y empujar.\n\nIntercambian opiniones fuertes y se agudizan mutuamente a través de comentarios honestos. Nunca aburrido, siguen aprendiendo el uno del otro.\n\nPero no todas las conversaciones necesitan ser un debate. Sabe cuándo la otra persona necesita consuelo, no consejos.",
       "patterns": [
-        "You don't fear disagreement.",
-        "Your humor and competitive streak run deep.",
-        "You argue with logic more than emotion."
+        "No temes el desacuerdo.",
+        "Tu humor y vena competitiva son profundos.",
+        "Argumentas más con lógica que con emoción."
       ],
       "best_match": [
         "THE_EMPATH",
         "THE_ALLY"
       ],
-      "best_reason": "People who soften your edge and arbitrate gently.",
+      "best_reason": "Personas que suavicen tu filo y medien con delicadeza.",
       "challenging_match": [
         "THE_RIVAL"
       ],
-      "challenging_reason": "If both want to win, the relationship breaks.",
+      "challenging_reason": "Si ambos quieren ganar, la relación se rompe.",
       "actions": [
-        "Check the other person's feelings mid-debate.",
-        "Compliment your partner once a day.",
-        "Practice listening without countering."
+        "Verifica los sentimientos de la otra persona a mitad del debate.",
+        "Elogia a tu pareja una vez al día.",
+        "Practica escuchar sin contraatacar."
       ],
       "red_flags": [
-        "Are you saying hurtful things to win?",
-        "Are you arguing logic while your partner is exhausted?"
+        "¿Estás diciendo cosas hirientes para ganar?",
+        "¿Estás argumentando con lógica mientras tu pareja está agotada?"
       ]
     },
     "THE_ALLY": {
-      "headline": "Once you take someone in, you stay for good.",
-      "body": "You don't collect people. You choose carefully, and once someone is 'yours,' you stay. Your loyalty is quiet but very strong.\n\nWhen friends or family fall into trouble, you rush in first. Steady allies trail you everywhere.\n\nBut that loyalty can burden the other person. Letting go of the need to fix everything is also love.",
+      "headline": "Una vez que aceptas a alguien, te quedas para siempre.",
+      "body": "No coleccionas personas. Eliges con cuidado, y una vez que alguien es 'tuyo', te quedas. Tu lealtad es silenciosa pero muy fuerte.\n\nCuando amigos o familiares caen en problemas, eres el primero en acudir. Los aliados incondicionales te siguen a todas partes.\n\nPero esa lealtad puede sobrecargar a la otra persona. Soltar la necesidad de arreglarlo todo también es amor.",
       "patterns": [
-        "You place enormous value on loyalty.",
-        "You can't look away when a friend is in trouble.",
-        "You're endlessly generous to your inner circle."
+        "Le das un valor enorme a la lealtad.",
+        "No puedes apartar la mirada cuando un amigo está en problemas.",
+        "Eres infinitamente generoso con tu círculo íntimo."
       ],
       "best_match": [
         "THE_TWIN",
         "THE_PIONEER"
       ],
-      "best_reason": "People who treasure your steady support and grow with it.",
+      "best_reason": "Personas que atesoren tu firme apoyo y crezcan con él.",
       "challenging_match": [
         "THE_OPERATOR"
       ],
-      "challenging_reason": "People who exploit your loyalty hurt you.",
+      "challenging_reason": "Las personas que explotan tu lealtad te lastiman.",
       "actions": [
-        "Drop the compulsion to solve everything yourself.",
-        "Help only when asked.",
-        "Cut relationships that drain you."
+        "Deja la compulsión de resolverlo todo tú mismo.",
+        "Ayuda solo cuando te lo pidan.",
+        "Corta las relaciones que te drenan."
       ],
       "red_flags": [
-        "Is your life falling apart because you're upholding loyalty?",
-        "Are you being used by takers?"
+        "¿Tu vida se está desmoronando porque estás manteniendo la lealtad?",
+        "¿Te están usando los aprovechados?"
       ]
     },
     "THE_EMPATH": {
-      "headline": "You read other people's emotions deeply.",
-      "body": "You catch how someone feels fast and accurately. You know they're off before they do. That makes you a rare friend.\n\nPeople gather to you because you understand without being told. You give them deep emotional safety.\n\nBut over-empathizing means neglecting your own feelings. Practice healthy boundaries between yourself and others.",
+      "headline": "Lees profundamente las emociones de otras personas.",
+      "body": "Captas cómo se siente alguien rápida y certeramente. Sabes que algo va mal antes que ellos. Eso te convierte en un amigo raro y valioso.\n\nLa gente se reúne a tu alrededor porque comprendes sin que te lo digan. Les brindas una profunda seguridad emocional.\n\nPero empatizar en exceso significa descuidar tus propios sentimientos. Practica límites saludables entre tú y los demás.",
       "patterns": [
-        "You read facial shifts well.",
-        "You're excellent at empathy and comfort.",
-        "You try to carry everyone's feelings alone."
+        "Lees bien los cambios en los rostros.",
+        "Eres excelente para empatizar y consolar.",
+        "Intentas llevar los sentimientos de todos a solas."
       ],
       "best_match": [
         "THE_RIVAL",
         "THE_BLADE"
       ],
-      "best_reason": "People who stay grounded and don't get swept up in your emotions.",
+      "best_reason": "Personas que se mantienen centradas y no se dejan arrastrar por tus emociones.",
       "challenging_match": [
         "THE_EMPATH"
       ],
-      "challenging_reason": "Two empaths exhaust each other.",
+      "challenging_reason": "Dos empáticos se agotan mutuamente.",
       "actions": [
-        "Ask yourself once a day how you feel first.",
-        "Don't resolve others' emotions for them.",
-        "Protect enough alone time."
+        "Pregúntate una vez al día cómo te sientes tú primero.",
+        "No resuelvas las emociones de otros por ellos.",
+        "Protege suficiente tiempo a solas."
       ],
       "red_flags": [
-        "Are you drowning in others' sadness?",
-        "Are you postponing your own feelings?"
+        "¿Te estás ahogando en la tristeza de los demás?",
+        "¿Estás posponiendo tus propios sentimientos?"
       ]
     }
   }

@@ -1,0 +1,383 @@
+#!/usr/bin/env python3
+"""
+Phase 4-A: es/sections.json 장문 콘텐츠 번역.
+- MONEY_CONTENT, WORK_CONTENT, BONDS_CONTENT 스페인어로 교체.
+- 나머지 키(코어, 연운 등)는 그대로 둠 (Phase 4-B 대상).
+"""
+import json
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+ES_SECTIONS = ROOT / "app" / "services" / "content" / "data" / "es" / "sections.json"
+
+TRANSLATIONS = {
+    "MONEY_CONTENT": {
+        "THE_STEWARD": {
+            "headline": "Construyes lentamente — y esa es tu fortaleza.",
+            "body": "Prefieres cuidar algo con esmero antes que apostar por un atajo. Para ti, los recursos —el tiempo, la atención, las relaciones— valen más cuando se administran con paciencia.\n\nValoras lo que perdura. Mientras otros persiguen la próxima novedad, tú fortaleces en silencio lo que ya es tuyo. Es una disciplina poco común.\n\nEl riesgo es que 'tener cuidado' se convierta en un hábito que cierre puertas. Jugar demasiado a lo seguro también tiene un costo.",
+            "patterns": [
+                "Tu asignación a efectivo y ahorros es muy alta.",
+                "El miedo a perder hace que retrases las decisiones.",
+                "Crees en el interés compuesto y prefieres mantener a largo plazo."
+            ],
+            "best_match": ["THE_OPERATOR", "THE_FLOW"],
+            "best_reason": "Alguien que añada rendimiento sobre tu base segura.",
+            "challenging_match": ["THE_STEWARD"],
+            "challenging_reason": "Si ambos juegan a lo seguro, sus activos pierden frente a la inflación.",
+            "actions": [
+                "Diversifica un 10% de tus activos en un fondo indexado.",
+                "Una vez al año, compara tu tasa de ahorro con la inflación.",
+                "Empieza a promediar el costo en dólares de forma automática."
+            ],
+            "red_flags": [
+                "¿Todo lo que tienes está bloqueado en cuentas de ahorro?",
+                "¿Has prestado dinero a amigos y nunca te lo han devuelto?"
+            ]
+        },
+        "THE_OPERATOR": {
+            "headline": "Te ves como energía que necesita moverse.",
+            "body": "Detectas oportunidades donde otros ven ruido. Tu instinto para el intercambio —de ideas, de atención, de recursos— es agudo.\n\nRara vez te conformas con dejar las cosas quietas. Disfrutas de la energía dinámica de construir, conectar y hacer avanzar las cosas.\n\nPero cuando todo fluye rápido, las fugas pueden ser tan grandes como los flujos. Lo que te equilibra no es la velocidad, sino la pequeña cantidad de cosas a las que realmente te comprometes.",
+            "patterns": [
+                "Intentas crear múltiples fuentes de ingresos.",
+                "Asumes riesgos pero los distribuyes.",
+                "El gasto sube tan rápido como los ingresos."
+            ],
+            "best_match": ["THE_STEWARD", "THE_ANCHOR"],
+            "best_reason": "Alguien que afiance los activos que dispersas.",
+            "challenging_match": ["THE_OPERATOR"],
+            "challenging_reason": "Si ambos aman el riesgo, la recuperación en una crisis es difícil.",
+            "actions": [
+                "Bloquea el 30% de tus ingresos en ahorro automático.",
+                "Impón un período de reflexión de 3 días antes de cualquier nueva inversión.",
+                "Usa una tarjeta de débito en lugar de crédito para controlar el gasto."
+            ],
+            "red_flags": [
+                "¿Los ingresos son altos pero nunca queda nada en la cuenta?",
+                "¿Estás pidiendo dinero prestado para invertir?"
+            ]
+        },
+        "THE_FLOW": {
+            "headline": "Cabalgas la corriente del dinero con flexibilidad.",
+            "body": "No tienes un dogma fijo sobre el dinero. A través de las redes, la intuición y las circunstancias, los ingresos te encuentran de forma natural.\n\nAlgunos períodos traen grandes entradas; otros se secan. Aceptas el ritmo con calma, y tienes un don para atraer oportunidades hacia ti cuando las necesitas.\n\nEsa flexibilidad es una fortaleza. Pero improvisar sin un plan puede arruinar tus finanzas. Una red de seguridad mínima no es negociable.",
+            "patterns": [
+                "Tus ingresos y gastos fluctúan mucho.",
+                "Las oportunidades de riqueza llegan a través de las personas.",
+                "Gastas sobre la marcha en lugar de presupuestar."
+            ],
+            "best_match": ["THE_STEWARD", "THE_ANCHOR"],
+            "best_reason": "Alguien que te mantenga centrado para que tu vida tenga menos altibajos.",
+            "challenging_match": ["THE_OPERATOR"],
+            "challenging_reason": "Dos improvisadores es un camino rápido a la ruina.",
+            "actions": [
+                "Divide en dos cuentas (emergencia / vida diaria).",
+                "Espera 24 horas antes de cualquier compra grande.",
+                "Ahorra el 10% de los ingresos de cada mes, sin condiciones."
+            ],
+            "red_flags": [
+                "¿Estás haciendo malabares con la deuda de la tarjeta de crédito de un mes a otro?",
+                "¿Te han convencido para invertir un amigo y has perdido dinero?"
+            ]
+        }
+    },
+    "WORK_CONTENT": {
+        "THE_CREATOR": {
+            "headline": "Prosperas cuando puedes ver tu propia marca en el trabajo.",
+            "body": "Eres alérgico al trabajo inútil sin sentido. Necesitas construir algo desde cero o añadir tu voz única.\n\nTu mente siempre está dando vueltas con ideas. Sientes el mayor sentido de logro cuando las traes al mundo e inspiras a otros. Brillas en entornos autónomos donde puedes expresar tu creatividad.\n\nPero también debes aceptar el dolor de ser creador. Te hieren fácilmente cuando tus ideas se agotan o tu trabajo es infravalorado. Aprende a desvincularte del resultado y disfrutar del proceso en sí.",
+            "patterns": [
+                "La autonomía te importa más que las reglas.",
+                "Tienes el músculo de ejecución para hacer realidad las ideas.",
+                "Reaccionas con dureza a las críticas."
+            ],
+            "best_match": ["THE_OFFICER", "THE_MENTOR"],
+            "best_reason": "Alguien que pueda sistematizar y defender tu creatividad.",
+            "challenging_match": ["THE_OFFICER"],
+            "challenging_reason": "Chocas de frente con jefes que solo exigen cumplimiento.",
+            "actions": [
+                "Reserva 5 horas a la semana de enfoque creativo profundo.",
+                "Entrega resultados al 80% en lugar del 100%.",
+                "Reinterpreta las críticas como feedback, no como ataque."
+            ],
+            "red_flags": [
+                "¿El perfeccionismo te está haciendo perder fechas límite?",
+                "¿Estás ignorando todas las instrucciones de un jefe?"
+            ]
+        },
+        "THE_CHALLENGER": {
+            "headline": "Estás en tu mejor momento cuando las cosas están rotas y necesitan arreglo.",
+            "body": "No necesitas un sistema perfecto; necesitas un problema real. Ves lo que no funciona antes que nadie.\n\nEres un innovador que odia el statu quo. Preguntas '¿Por qué lo hacemos así?' y encuentras mejores caminos. Te conviertes en un verdadero líder en una crisis.\n\nPero si criticar se convierte en un hábito, la gente podría verte como negativo. No solo señales los problemas; ofrece soluciones y alternativas.",
+            "patterns": [
+                "No puedes dejar pasar la ineficiencia.",
+                "Sobresales en el liderazgo durante las crisis.",
+                "No temes desafiar a la autoridad."
+            ],
+            "best_match": ["THE_CREATOR", "THE_OFFICER"],
+            "best_reason": "Alguien que pueda convertir tus ideas en productos o sistemas.",
+            "challenging_match": ["THE_OFFICER"],
+            "challenging_reason": "Chocas con personas que insisten en las reglas.",
+            "actions": [
+                "Siempre acompaña las quejas con alternativas.",
+                "Aprende a guardar las apariencias para el jefe en las conversaciones.",
+                "Practica escuchar a un colega hasta el final."
+            ],
+            "red_flags": [
+                "¿Te estás oponiendo por el simple hecho de oponerte?",
+                "¿Tu presencia está haciendo que los miembros del equipo se encojan?"
+            ]
+        },
+        "THE_OFFICER": {
+            "headline": "Eres un jugador central de confianza en organizaciones estructuradas.",
+            "body": "Valoras los principios y el proceso. Te desempeñas de manera más confiable cuando las reglas son claras y los sistemas están bien construidos.\n\nTu equidad y responsabilidad te ganan una profunda confianza tanto de jefes como de compañeros. Grandes empresas, instituciones públicas, finanzas, derecho... encajas bien allí.\n\nPero en entornos cambiantes o ambiguos puedes sentirte estancado. A veces la flexibilidad vence al manual de reglas.",
+            "patterns": [
+                "Terminas lo que te dan, pase lo que pase.",
+                "Valoras la jerarquía y las líneas de reporte claras.",
+                "Eres excelente anticipando riesgos."
+            ],
+            "best_match": ["THE_CHALLENGER", "THE_PIONEER"],
+            "best_reason": "Innovadores que añaden cambio sobre tu base estable.",
+            "challenging_match": ["THE_CHALLENGER"],
+            "challenging_reason": "Chocas con personas que rompen las reglas constantemente.",
+            "actions": [
+                "Aprende una nueva herramienta y automatiza parte de tu flujo de trabajo.",
+                "Cuando una directiva sea injusta, persuade con datos.",
+                "Practica recibir con agrado las ideas de colegas más jóvenes."
+            ],
+            "red_flags": [
+                "¿Dices 'siempre lo hemos hecho así' con demasiada frecuencia?",
+                "¿Te estás quedando atrás al resistirte al cambio?"
+            ]
+        },
+        "THE_SURVIVOR": {
+            "headline": "Estás forjado bajo una presión de la que otros se romperían.",
+            "body": "Tienes un umbral de estrés más alto que la mayoría. En las crisis tu enfoque se agudiza y encuentras una determinación que otros no pueden reunir cuando dicen que es imposible.\n\nDestacas en ventas, reestructuraciones, gestión de crisis, cualquier lugar donde la presión sea real. Una vez que te comprometes con un objetivo, lo das todo.\n\nPero esa dureza puede leerse como frialdad o crueldad. Mostrar vulnerabilidad también es una forma de liderazgo.",
+            "patterns": [
+                "Mantienes la calma bajo crisis.",
+                "Tu obsesión por el objetivo es intensa.",
+                "Eres torpe con la expresión emocional."
+            ],
+            "best_match": ["THE_MENTOR", "THE_FLOW"],
+            "best_reason": "Alguien que suavice tu filo.",
+            "challenging_match": ["THE_SURVIVOR"],
+            "challenging_reason": "Dos agresivos y el equipo se quema.",
+            "actions": [
+                "Establece un día completo libre a la semana.",
+                "Acércate primero a un colega con agradecimiento.",
+                "Usa el ejercicio o un pasatiempo para descargar el estrés."
+            ],
+            "red_flags": [
+                "¿Estás ignorando las señales de burnout?",
+                "¿Los compañeros de equipo te tienen miedo?"
+            ]
+        },
+        "THE_MYSTIC": {
+            "headline": "Ves la esencia y la estructura que otros pasan por alto.",
+            "body": "Excavas más allá de la superficie hasta la mecánica subyacente. Eres excelente extrayendo el núcleo de datos o situaciones complejas.\n\nInvestigación, planificación estratégica, análisis de datos, consultoría, cualquier cosa que requiera pensamiento profundo. Tu intuición detecta conexiones que otros pasan por alto.\n\nPero pensar demasiado profundamente retrasa la acción. Reúne el coraje para empezar antes de que la imagen esté completa.",
+            "patterns": [
+                "Analizas mucho antes de actuar.",
+                "Tu intuición es sobresaliente.",
+                "El trabajo superficial te aburre."
+            ],
+            "best_match": ["THE_PIONEER", "THE_CHALLENGER"],
+            "best_reason": "Ejecutores que convierten tu análisis en acción.",
+            "challenging_match": ["THE_GENERALIST"],
+            "challenging_reason": "No puedes conectar con personas que solo rozan la superficie.",
+            "actions": [
+                "Oblígate a dar el primer paso dentro de los 3 días posteriores al análisis.",
+                "Visualiza y comparte tu análisis con el equipo.",
+                "Busca un socio con gran capacidad de ejecución."
+            ],
+            "red_flags": [
+                "¿Estás analizando mientras las oportunidades se escapan?",
+                "¿Estás demasiado metido en tu propia cabeza?"
+            ]
+        },
+        "THE_MENTOR": {
+            "headline": "Eres excepcional desbloqueando el potencial de los demás.",
+            "body": "Tienes un don natural para detectar y hacer crecer las fortalezas de los demás. Enseñar y aconsejar te brinda una profunda satisfacción.\n\nEducación, recursos humanos, consultoría, gestión... prosperas. Los equipos por los que pasas llevan tu cultura mucho después de que te vayas.\n\nPero centrarte en el crecimiento de los demás puede dejarte atrás. Demuestra que tú también sigues creciendo y el respeto crecerá aún más.",
+            "patterns": [
+                "Escuchas bien las dificultades de los más jóvenes.",
+                "Te encanta compartir lo que sabes.",
+                "Tiendes a poner tus propios resultados al final."
+            ],
+            "best_match": ["THE_SURVIVOR", "THE_CREATOR"],
+            "best_reason": "Personas que toman tu cálido consejo y lo devuelven con resultados.",
+            "challenging_match": ["THE_SURVIVOR"],
+            "challenging_reason": "Los estilos de lobo solitario pueden no encajar con el tuyo.",
+            "actions": [
+                "Define claramente tus propios objetivos profesionales.",
+                "Construye tu propia experiencia más allá de la tutoría.",
+                "Muestra a los más jóvenes que tú también sigues aprendiendo de ellos."
+            ],
+            "red_flags": [
+                "¿Estás cuidando a los más jóvenes mientras tu propia evaluación se hunde?",
+                "¿Te estás apoyando únicamente en enseñar?"
+            ]
+        },
+        "THE_GENERALIST": {
+            "headline": "Creas sinergia cruzando muchos campos.",
+            "body": "No eres un especialista de un solo pozo. Eres un talento en forma de 'T' que conecta conocimientos de distintos dominios para crear nuevo valor.\n\nPlanificación, gestión de proyectos, dirección de proyectos... en cualquier lugar donde puedas ser el lubricante entre las partes interesadas. Te adaptas con fluidez y sobrevives en cualquier organización.\n\nPero es posible que te digan que te falta profundidad. Para que tu amplitud sea una verdadera fortaleza, construye al menos un pico que nadie pueda igualar.",
+            "patterns": [
+                "Eres curioso y te encanta aprender.",
+                "Adaptas tus roles con fluidez al momento.",
+                "A veces tu enfoque se dispersa."
+            ],
+            "best_match": ["THE_MYSTIC", "THE_BLADE"],
+            "best_reason": "Personas que integran tus variadas ideas en una sola estrategia.",
+            "challenging_match": ["THE_OFFICER"],
+            "challenging_reason": "Las personas que insisten en una sola regla te frustran.",
+            "actions": [
+                "Elige la única especialidad en la que te concentrarás este año.",
+                "Usa tu amplia red para crear oportunidades de colaboración.",
+                "Convierte tu experiencia en contenido."
+            ],
+            "red_flags": [
+                "¿Estás empezando muchas cosas y no terminando ninguna?",
+                "¿Estás trabajando realmente para convertirte en un experto en algo?"
+            ]
+        }
+    },
+    "BONDS_CONTENT": {
+        "THE_TWIN": {
+            "headline": "Te sientes más cómodo entre iguales.",
+            "body": "No te gusta liderar ni depender de alguien. Quieres una asociación de igual a igual y caminar juntos en la misma dirección.\n\nValoras reconocer las diferencias del otro y crecer uno al lado del otro. Construyes vínculos profundos sin cargarse mutuamente.\n\nPero si solo persigues la dinámica 'genial', la intimidad profunda puede ser difícil. Aprende a apoyarte a veces.",
+            "patterns": [
+                "Prefieres la comodidad de la amistad al romance.",
+                "Respetas el espacio privado de cada uno.",
+                "No te gustan las luchas de poder."
+            ],
+            "best_match": ["THE_ALLY", "THE_EMPATH"],
+            "best_reason": "Alguien que respete tu autonomía y se acerque con suavidad.",
+            "challenging_match": ["THE_TWIN"],
+            "challenging_reason": "Dos tipos geniales pueden hacer que la relación se vuelva aburrida.",
+            "actions": [
+                "A veces sé el primero en acercarte.",
+                "Habla con honestidad cuando algo no esté bien.",
+                "Crea un pasatiempo compartido."
+            ],
+            "red_flags": [
+                "¿Estás tan distante que tu pareja se siente herida?",
+                "¿Estás ocultando sentimientos para evitar el conflicto?"
+            ]
+        },
+        "THE_RIVAL": {
+            "headline": "Disfrutas de la competencia sana que los estimula mutuamente.",
+            "body": "Prefieres a alguien que te desafíe a alguien que siempre esté de acuerdo. Quieres una pareja dispuesta a debatir y empujar.\n\nIntercambian opiniones fuertes y se agudizan mutuamente a través de comentarios honestos. Nunca aburrido, siguen aprendiendo el uno del otro.\n\nPero no todas las conversaciones necesitan ser un debate. Sabe cuándo la otra persona necesita consuelo, no consejos.",
+            "patterns": [
+                "No temes el desacuerdo.",
+                "Tu humor y vena competitiva son profundos.",
+                "Argumentas más con lógica que con emoción."
+            ],
+            "best_match": ["THE_EMPATH", "THE_ALLY"],
+            "best_reason": "Personas que suavicen tu filo y medien con delicadeza.",
+            "challenging_match": ["THE_RIVAL"],
+            "challenging_reason": "Si ambos quieren ganar, la relación se rompe.",
+            "actions": [
+                "Verifica los sentimientos de la otra persona a mitad del debate.",
+                "Elogia a tu pareja una vez al día.",
+                "Practica escuchar sin contraatacar."
+            ],
+            "red_flags": [
+                "¿Estás diciendo cosas hirientes para ganar?",
+                "¿Estás argumentando con lógica mientras tu pareja está agotada?"
+            ]
+        },
+        "THE_ALLY": {
+            "headline": "Una vez que aceptas a alguien, te quedas para siempre.",
+            "body": "No coleccionas personas. Eliges con cuidado, y una vez que alguien es 'tuyo', te quedas. Tu lealtad es silenciosa pero muy fuerte.\n\nCuando amigos o familiares caen en problemas, eres el primero en acudir. Los aliados incondicionales te siguen a todas partes.\n\nPero esa lealtad puede sobrecargar a la otra persona. Soltar la necesidad de arreglarlo todo también es amor.",
+            "patterns": [
+                "Le das un valor enorme a la lealtad.",
+                "No puedes apartar la mirada cuando un amigo está en problemas.",
+                "Eres infinitamente generoso con tu círculo íntimo."
+            ],
+            "best_match": ["THE_TWIN", "THE_PIONEER"],
+            "best_reason": "Personas que atesoren tu firme apoyo y crezcan con él.",
+            "challenging_match": ["THE_OPERATOR"],
+            "challenging_reason": "Las personas que explotan tu lealtad te lastiman.",
+            "actions": [
+                "Deja la compulsión de resolverlo todo tú mismo.",
+                "Ayuda solo cuando te lo pidan.",
+                "Corta las relaciones que te drenan."
+            ],
+            "red_flags": [
+                "¿Tu vida se está desmoronando porque estás manteniendo la lealtad?",
+                "¿Te están usando los aprovechados?"
+            ]
+        },
+        "THE_EMPATH": {
+            "headline": "Lees profundamente las emociones de otras personas.",
+            "body": "Captas cómo se siente alguien rápida y certeramente. Sabes que algo va mal antes que ellos. Eso te convierte en un amigo raro y valioso.\n\nLa gente se reúne a tu alrededor porque comprendes sin que te lo digan. Les brindas una profunda seguridad emocional.\n\nPero empatizar en exceso significa descuidar tus propios sentimientos. Practica límites saludables entre tú y los demás.",
+            "patterns": [
+                "Lees bien los cambios en los rostros.",
+                "Eres excelente para empatizar y consolar.",
+                "Intentas llevar los sentimientos de todos a solas."
+            ],
+            "best_match": ["THE_RIVAL", "THE_BLADE"],
+            "best_reason": "Personas que se mantienen centradas y no se dejan arrastrar por tus emociones.",
+            "challenging_match": ["THE_EMPATH"],
+            "challenging_reason": "Dos empáticos se agotan mutuamente.",
+            "actions": [
+                "Pregúntate una vez al día cómo te sientes tú primero.",
+                "No resuelvas las emociones de otros por ellos.",
+                "Protege suficiente tiempo a solas."
+            ],
+            "red_flags": [
+                "¿Te estás ahogando en la tristeza de los demás?",
+                "¿Estás posponiendo tus propios sentimientos?"
+            ]
+        }
+    }
+}
+
+def main() -> int:
+    if not ES_SECTIONS.exists():
+        print(f"❌ {ES_SECTIONS} 없음")
+        return 1
+
+    data = json.loads(ES_SECTIONS.read_text(encoding="utf-8"))
+    
+    changed = False
+    for section_key, translations in TRANSLATIONS.items():
+        if section_key not in data:
+            data[section_key] = {}
+        # 오버라이드
+        data[section_key].update(translations)
+        changed = True
+
+    if changed:
+        ES_SECTIONS.write_text(
+            json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8"
+        )
+        print(f"✅ {ES_SECTIONS.name} 업데이트 완료")
+    else:
+        print("⏭  변경 사항 없음")
+
+    # 검증
+    print("\n[verify]")
+    import importlib
+    import app.services.content.loader as loader
+    importlib.reload(loader)  # 캐시 초기화
+    
+    es_sections = loader.load_pack("es", "sections")
+    
+    # 스팟 체크
+    if es_sections["MONEY_CONTENT"]["THE_STEWARD"]["headline"].startswith("Construyes"):
+        print("  [OK] MONEY_CONTENT Spanish")
+    else:
+        print("  [ERR] MONEY_CONTENT fallback failed")
+        
+    if es_sections["WORK_CONTENT"]["THE_CREATOR"]["headline"].startswith("Prosperas"):
+        print("  [OK] WORK_CONTENT Spanish")
+    else:
+        print("  [ERR] WORK_CONTENT fallback failed")
+        
+    if es_sections["BONDS_CONTENT"]["THE_TWIN"]["headline"].startswith("Te sientes"):
+        print("  [OK] BONDS_CONTENT Spanish")
+    else:
+        print("  [ERR] BONDS_CONTENT fallback failed")
+        
+    print("\n[OK] Phase 4-A 완료")
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main())
