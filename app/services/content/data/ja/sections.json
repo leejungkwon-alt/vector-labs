@@ -171,39 +171,200 @@
   },
   "WORK_CONTENT": {
     "THE_CREATOR": {
-      "headline": "You thrive when you can see your own mark on the work.",
-      "body": "You're allergic to meaningless busywork. You need to build something from scratch or add your unique voice to it.\n\nYour mind is always swirling with ideas. You feel the greatest sense of achievement when you bring them into the world and inspire others. You shine in autonomous environments where you can express your creativity.\n\nBut you must also accept the pain of being a creator. You are easily hurt when your ideas run dry or your work is undervalued. Learn to detach from the outcome and enjoy the process itself.",
-      "action": "Block out 90 minutes this week for pure creation, with zero interruptions."
+      "headline": "自分の痕跡を仕事に見いだせるときに、あなたは輝きます。",
+      "body": "意味のない雑務が我慢なりません。ゼロから何かを築くか、自分だけの声を加える必要があります。\n\n頭の中はいつもアイデアで渦巻いています。それを世に送り出し、誰かを刺激したときに最大の達成感を味わいます。自律性が保証された環境でこそ、創造力を存分に発揮できます。\n\nただ、創造者であることの痛みも受け入れる必要があります。アイデアが尽きたときや、仕事が過小評価されたときに、あなたは傷つきやすい。結果から距離を置き、プロセスそのものを楽しむ術を身につけましょう。",
+      "action": "Block out 90 minutes this week for pure creation, with zero interruptions.",
+      "patterns": [
+        "ルールよりも自律性を重んじます。",
+        "アイデアを現実にする実行力を備えています。",
+        "批判に敏感に反応します。"
+      ],
+      "best_match": [
+        "THE_OFFICER",
+        "THE_MENTOR"
+      ],
+      "best_reason": "あなたの創造性を体系化し、後押ししてくれる人です。",
+      "challenging_match": [
+        "THE_OFFICER"
+      ],
+      "challenging_reason": "規則だけを押しつける上司とは正面衝突します。",
+      "actions": [
+        "創作のための没頭時間を週5時間確保しましょう。",
+        "成果物を80%の状態で世に出してみましょう。",
+        "批判を個人への攻撃ではなく、フィードバックとして受け止めましょう。"
+      ],
+      "red_flags": [
+        "完璧主義のため締め切りに間に合っていませんか？",
+        "上司の指示を無条件に無視していませんか？"
+      ]
     },
     "THE_CHALLENGER": {
-      "headline": "You're at your best when things are broken and need fixing.",
-      "body": "You don't need a perfect system; you need a real problem. You see what's not working before anyone else does.\n\nYou are an innovator who hates the status quo. You ask 'Why do we do it this way?' and find better paths. You become a true leader in a crisis.\n\nBut if criticizing becomes a habit, people might see you as negative. Don't just point out the problems; offer solutions and alternatives.",
-      "action": "Speak up about one quiet frustration to someone who actually has the power to change it."
+      "headline": "物事が壊れていて、直す必要があるときに、あなたは最高の力を発揮します。",
+      "body": "完璧な仕組みは要りません。必要なのは本物の問題です。何が機能していないかを、誰よりも早く見抜きます。\n\nあなたは現状維持を嫌う革新者です。「なぜこうやるのか？」と問い、より良い道を見つけます。危機のときにこそ真のリーダーシップを発揮します。\n\nただ、批判が習慣になると、周囲はあなたをネガティブに見るかもしれません。問題を指摘するだけでなく、解決策と代替案を示しましょう。",
+      "action": "Speak up about one quiet frustration to someone who actually has the power to change it.",
+      "patterns": [
+        "非効率を見逃すことができません。",
+        "危機のときにリーダーシップを発揮します。",
+        "権威に挑むことを恐れません。"
+      ],
+      "best_match": [
+        "THE_CREATOR",
+        "THE_OFFICER"
+      ],
+      "best_reason": "あなたのアイデアを製品や仕組みに具現化してくれる人です。",
+      "challenging_match": [
+        "THE_OFFICER"
+      ],
+      "challenging_reason": "既存のルールを重んじる人と衝突します。",
+      "actions": [
+        "不満を口にするときは、必ず「代替案」を添えましょう。",
+        "上司の顔を立てる会話術を身につけましょう。",
+        "同僚の意見を最後まで聞く練習をしましょう。"
+      ],
+      "red_flags": [
+        "反対のための反対をしていませんか？",
+        "あなたのせいでチームが縮こまっていませんか？"
+      ]
     },
     "THE_OFFICER": {
-      "headline": "You do your best work inside a structure worth believing in.",
-      "body": "You need rules that make sense. In the right team, you are the rock. In the wrong one, you just burn out.\n\nYou value principles and fairness. You have the ability to build and maintain systems that allow others to work safely. You earn trust through your strong sense of responsibility and reliability.\n\nBut being too attached to the rules can make you seem inflexible. Remember that sometimes people matter more than the protocol.",
-      "action": "Write down three values your work should embody. Are you currently in a place that shares them?"
+      "headline": "体系化された組織で、信頼される中核人材です。",
+      "body": "原則とプロセスを重んじます。ルールが明確で、仕組みがしっかり整った組織で最も安定的に成果を出します。\n\n公正さと責任感が強く、上司と同僚から厚い信頼を得ます。大企業・公共機関・金融・法律など、体系が重要な分野に適しています。\n\nただ、変化の速い環境や基準の曖昧な組織では、窮屈に感じるかもしれません。ときにルールより柔軟な対応が必要だということを覚えておきましょう。",
+      "action": "Write down three values your work should embody. Are you currently in a place that shares them?",
+      "patterns": [
+        "任されたことは必ず最後までやり遂げます。",
+        "ヒエラルキーと報告の流れを重んじます。",
+        "リスクを事前に防ぐ能力に優れています。"
+      ],
+      "best_match": [
+        "THE_CHALLENGER",
+        "THE_PIONEER"
+      ],
+      "best_reason": "あなたの仕組みの上に新しい変化を乗せてくれる革新者です。",
+      "challenging_match": [
+        "THE_CHALLENGER"
+      ],
+      "challenging_reason": "ルールを破りたがる人とは摩擦が生まれます。",
+      "actions": [
+        "新しい業務ツールを学び、仕事を自動化しましょう。",
+        "上司の指示が不当なときは、データで説得しましょう。",
+        "若い同僚のアイデアを受け入れる練習をしましょう。"
+      ],
+      "red_flags": [
+        "「昔からこうやってきた」を口癖にしていませんか？",
+        "変化を拒んで立ち遅れていませんか？"
+      ]
     },
     "THE_SURVIVOR": {
-      "headline": "You grow under pressure, but the pressure has to have a point.",
-      "body": "You have a high tolerance for hard work, but you know when the cost is too high. You've walked away from things that would break others.\n\nYou instinctively enter survival mode in a crisis. You have the energy to break through when others say it's impossible. You turn adversity into a stepping stone for growth.\n\nBut your toughness can be seen as cold or ruthless by those around you. Don't forget that showing vulnerability is also a form of true strength.",
-      "action": "Remember the last time you chose yourself over a deadline. Remember why you did it."
+      "headline": "他者が折れてしまうようなプレッシャーの中で、あなたは鍛え上げられます。",
+      "body": "多くの人より高いストレス限界を持っています。危機のときにこそ集中力が高まり、他の人が不可能だと言うときにも、やり遂げる粘りを発揮します。\n\n営業・構造改革・危機管理など、強いプレッシャーが伴う分野で頭角を現します。一度目標を決めたら、なりふり構わず突き進みます。\n\nただ、過度な強さは周囲に「冷たい」「非情」という誤解を与えます。ときに弱さを見せることも、リーダーシップの一形態です。",
+      "action": "Remember the last time you chose yourself over a deadline. Remember why you did it.",
+      "patterns": [
+        "危機の最中でも平静を保ちます。",
+        "目標への執念が強いです。",
+        "感情表現が苦手です。"
+      ],
+      "best_match": [
+        "THE_MENTOR",
+        "THE_FLOW"
+      ],
+      "best_reason": "あなたの鋭さを優しく包み込んでくれる人です。",
+      "challenging_match": [
+        "THE_SURVIVOR"
+      ],
+      "challenging_reason": "二人とも攻撃的だと、チームが被害を受けます。",
+      "actions": [
+        "週に一日は完全に休む日と決めましょう。",
+        "同僚に先に感謝を伝えましょう。",
+        "運動や趣味でストレスを解消しましょう。"
+      ],
+      "red_flags": [
+        "バーンアウトのサインを無視して走っていませんか？",
+        "同僚があなたを恐れていませんか？"
+      ]
     },
     "THE_MYSTIC": {
-      "headline": "You think sideways, and that's your superpower.",
-      "body": "You see connections others miss. Your best work takes the long way around. When it lands, it lands differently.\n\nYour intuition and insight are exceptional. You see the essence behind surface phenomena. Deep focus work — research, analysis, strategy — is where you excel.\n\nBut thinking too deeply can delay action. Start before the perfect picture is formed. The path opens as you walk.",
-      "action": "Give yourself one unstructured hour this week. Follow whatever thread pulls you without a goal."
+      "headline": "他の人が見落とす本質と構造を見抜きます。",
+      "body": "表面の現象ではなく、その奥の原理を掘り下げます。複雑なデータや状況を分析し、核心を抽出するのに卓越しています。\n\n研究・戦略企画・データ分析・コンサルティングなど、深い思考を要する分野で並外れた成果を出します。直感と洞察力に優れ、他の人が見落とすつながりを見つけ出します。\n\nただ、考えすぎると実行が遅れます。完璧な絵が描ける前に、まず始める勇気を持ちましょう。",
+      "action": "Give yourself one unstructured hour this week. Follow whatever thread pulls you without a goal.",
+      "patterns": [
+        "行動の前に多くの分析をします。",
+        "直感的な洞察力に優れています。",
+        "表面的な仕事に退屈します。"
+      ],
+      "best_match": [
+        "THE_PIONEER",
+        "THE_CHALLENGER"
+      ],
+      "best_reason": "あなたの分析を実際の行動に移してくれる実行者です。",
+      "challenging_match": [
+        "THE_GENERALIST"
+      ],
+      "challenging_reason": "深みのない人とは話が通じません。",
+      "actions": [
+        "分析後3日以内に、必ず最初の一歩を踏み出しましょう。",
+        "あなたの分析を可視化して、同僚と共有しましょう。",
+        "実行力の強いパートナーを探しましょう。"
+      ],
+      "red_flags": [
+        "分析ばかりして、機会を逃していませんか？",
+        "自分だけの世界に没入しすぎていませんか？"
+      ]
     },
     "THE_MENTOR": {
-      "headline": "You thrive when you're helping someone else grow.",
-      "body": "You don't just want to be good; you want to make others good. Your best work is often invisible, happening inside someone else.\n\nYou have a natural talent for sharing knowledge and experience. You recognize the potential in juniors or peers and nurture them to flourish.\n\nBut helping others grow might cause you to neglect your own. Show that you are still learning and growing yourself; it will inspire others even more.",
-      "action": "Reach out to someone you've helped and tell them what potential you saw in them."
+      "headline": "人の潜在能力を引き出すことに卓越しています。",
+      "body": "他の人の強みを見出し、育てることに生まれつきの才能があります。教え、助言することを楽しみ、後輩の成長に大きなやりがいを感じます。\n\n教育・HR・コンサルティング・マネジメント分野で優れた力を発揮します。あなたが通ったチームは、あなたが去った後もその文化を引き継ぎます。\n\nただ、他人の成長に没頭するあまり、自分の成長を見失うことがあります。あなたも学び、成長していることを示すとき、より大きな尊敬を得ます。",
+      "action": "Reach out to someone you've helped and tell them what potential you saw in them.",
+      "patterns": [
+        "後輩の悩みをよく聞きます。",
+        "知識を共有することを好みます。",
+        "自分の成果を後回しにする傾向があります。"
+      ],
+      "best_match": [
+        "THE_SURVIVOR",
+        "THE_CREATOR"
+      ],
+      "best_reason": "あなたの温かい助言を受け止め、成果で応えてくれる人です。",
+      "challenging_match": [
+        "THE_SURVIVOR"
+      ],
+      "challenging_reason": "一匹狼タイプとは息が合わないことがあります。",
+      "actions": [
+        "自分のキャリア目標を明確に定義しましょう。",
+        "教える立場を超えて、自分自身の専門性を確立しましょう。",
+        "メンティーから学ぶ姿勢も見せましょう。"
+      ],
+      "red_flags": [
+        "後輩だけを世話して、自分の評価は低くありませんか？",
+        "教えることだけに安住していませんか？"
+      ]
     },
     "THE_GENERALIST": {
-      "headline": "You're the person who can do a little of everything.",
-      "body": "You aren't a specialist, and that's your strength. You hold projects together across different fields. You're needed exactly where the seams are.\n\nYou prefer broad experiences over digging deep into one thing. You are actually a 'T-shaped' talent who connects different domains to create new value.\n\nYou might be told you lack depth. For your breadth to be a true strength, you need to build at least one 'spike' — an area where no one can match you.",
-      "action": "Pick two skills you usually keep separate and find one project that requires both."
+      "headline": "多様な分野を横断しながら、シナジーを生み出します。",
+      "body": "ひとつの井戸だけを掘る専門家ではありません。代わりに、複数の領域の知識をつなげ、新しい価値を創り出す「T字型人材」です。\n\n企画・PM・プロジェクトマネジメントなど、多様なステークホルダーの間で潤滑油の役割を果たす職務に適しています。変化に柔軟に適応し、どんな組織でも生き残ります。\n\nただ、深みがないという評価を受けることがあります。広い視野が強みになるためには、少なくとも一つの分野で誰にも負けない「スパイク」を作る必要があります。",
+      "action": "Pick two skills you usually keep separate and find one project that requires both.",
+      "patterns": [
+        "好奇心旺盛で、学ぶことを楽しみます。",
+        "状況に合わせて役割を柔軟に変えます。",
+        "集中力が分散することがあります。"
+      ],
+      "best_match": [
+        "THE_MYSTIC",
+        "THE_BLADE"
+      ],
+      "best_reason": "あなたの多様なアイデアを、一つの戦略へと統合してくれる人です。",
+      "challenging_match": [
+        "THE_OFFICER"
+      ],
+      "challenging_reason": "一つのルールだけを押しつける人とは、息苦しさを感じます。",
+      "actions": [
+        "今年集中する一つの専門分野を選びましょう。",
+        "多様なネットワークを活かして、協働の機会を作りましょう。",
+        "あなたの経験をコンテンツとしてまとめてみましょう。"
+      ],
+      "red_flags": [
+        "あれこれ手を出して、仕上げができていませんか？",
+        "専門家と呼ばれるために努力していますか？"
+      ]
     }
   },
   "BONDS_CONTENT": {
