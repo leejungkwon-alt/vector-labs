@@ -1,29 +1,29 @@
 {
   "pillar": "丙子",
-  "hero": "You're a lantern floating on a dark lake. Warm light above the surface — cold, deep currents below.",
+  "hero": "暗い湖の上に浮かぶ灯火です。表面は明るく華やかで、内面は深くひんやりとした知恵を秘めた人です。",
   "narrative": [
-    "People who meet you first remember a bright, expressive person. You lead conversations, warm up rooms, and naturally become the center of things. But step closer, and they notice — there's something deeper moving under the brightness. You are more complex inside than you look from across the room.",
-    "Your strength is this duality. The heat on the surface draws people in; the depth underneath keeps them there. Having both makes you someone who isn't light, and isn't heavy either. The trouble comes when these two halves lose their balance. When only the surface leads, you seem shallow. When only the depth leads, you go dark.",
-    "This is probably why your emotional tides rise and fall as they do. Some days you could love everything in the world. Other days you sink for no clear reason. You don't have to explain the wave to yourself — just notice, 'I'm on the deep side right now.' Don't force yourself back up.",
-    "Your maturity comes from letting both the fire and the depth exist at once. If you only love the bright side and hide the dark one, they start eating each other. When both are present, you become the place people actually want to stay. That's your most solid charm."
+    "あなたに初めて会う人は、いつも快活で表現力豊かで、場の雰囲気を明るく引っ張る人として記憶します。人の中で自然に中心となり、会話を導きます。しかしもう少し深い対話を交わすと、その明るい微笑みの下に、思った以上に深く静かな内面の海が流れていることに気づきます。",
+    "あなたは外見の情熱と内面の深さという二つの魅力を併せ持つ人です。表面の温かさで人を引き寄せ、底の深い洞察力でその関係をじっくりと続けます。軽すぎず重すぎないバランス感覚を持っていますが、この二つの質が時に自分の中でぶつかり、混乱を招くこともあります。",
+    "あなたの影は「理由もなく訪れる感情の深い波」です。ある日は世界中の人を抱きしめられるほど優しいのに、ある日は説明のつかない深い地の底へと沈みます。そんなとき、無理に明るい表情を作って水面に浮上しようとしなくていいのです。「今、私は深い内面の時間を過ぎている」と自分をいたわりましょう。",
+    "一歩成熟すると、あなたは「自分の明るい情熱と深い内面の両方を、愛し、抱きしめられる人」になります。明るい面だけ見せて深い痛みや悩みを隠そうとすると心が疲れます。二つの姿が完全に調和するとき、あなたは人々が本当に心を預けたくなる、最も魅力的な場所となります。"
   ],
   "shadows": [
-    "When you sink, you can't explain why, and people misread you.",
-    "People used to the surface don't notice your deeper worries.",
-    "The deeper your feeling, the blurrier your judgment. Make big decisions when the tide is low."
+    "ふと心が深く沈む日でも、周囲に明確な理由を説明できず、小さな誤解を生むことがあります。",
+    "普段の明るく快活な姿に慣れた人が、あなたの深い悩みや孤独に気づけず、寂しさを感じます。",
+    "感情の波が大きく揺れる瞬間に重要な決定をしようとして、軸を失い後悔することがあります。"
   ],
   "advice": [
-    "This week, catch one moment of sinking without a reason. Just notice what kind of wave it is.",
-    "Tell someone close, 'I'm on the deep side right now.' No explanation needed.",
-    "Make big decisions after the emotional wave has passed. Calls made on the wave don't last.",
-    "Separate the moments when your brightness is real from when it's a performance for others."
+    "今週、理由もなく心が沈む瞬間が訪れたら、原因を探すよりも「ああ、今、私の心に深い波が立っている」とただ気づいてあげましょう。",
+    "近しい人に複雑な説明の代わりに「最近、少し深い思索に沈んでいる」と素直に心を伝えてみましょう。",
+    "人生の重要な決断は、感情の波が十分に静まってからにしましょう。",
+    "人前で光を放つべき瞬間と、一人で深い湖を見つめるべき瞬間を、賢く区別しましょう。"
   ],
   "keywords": [
-    "warm depth",
-    "light and tide",
-    "surface and abyss",
-    "quiet fire"
+    "温かな深さ",
+    "光と波",
+    "表面と深淵",
+    "静かな情熱"
   ],
-  "name": "Lantern on a Lake",
+  "name": "湖の上の灯火",
   "name_traditional": ""
 }

@@ -1,29 +1,29 @@
 {
   "pillar": "丙午",
-  "hero": "You're the sun at noon. No shadow, everything lit, everything hot.",
+  "hero": "真昼の熱い太陽のように、周囲をまばゆく照らし、勢いよくエネルギーを放つ情熱的な人です。",
   "narrative": [
-    "You are intensity itself. Walk into a room and the temperature changes. Speak, and the conversation turns. This isn't something you work at — it just happens. People either laugh loud around you or quietly step back. There's rarely a middle.",
-    "You can't hide. When you're happy, everyone sees it. When you're angry, everyone sees it too. That transparency earns trust — people know you're not a liar. But it's also a fatigue. Being fully visible is a constant pressure.",
-    "The sun at noon casts no shadow. But that also means it can't last. The sun has to tilt, and shadows have to grow back. Your task isn't to hold noon forever — it's to accept the tilt. The sun going down is not the sun failing.",
-    "A mature Bing-Wu is someone who can dim the light on purpose. Who doesn't always burn at full capacity. Who can sometimes be the sunlight on a cloudy day. That's when you stop being someone who burns people and become the temperature they want to stay in."
+    "あなたはその存在そのものだけで、空間の雰囲気を明るく変える強いエネルギーを持っています。部屋に入った瞬間に空気の温度が変わり、会話の流れをリードし、人の視線を集めます。ためらいなく自分の気持ちを正直に表現するあなたの姿は、いつも周囲に大きな波を起こします。",
+    "あなたは偽りや隠し事のない透明な人です。気分が良いときは顔いっぱいに喜びを表し、つらいときは隠せずにその感情がそのまま伝わります。人はあなたが嘘をつけない純粋で正直な人だとよく知っているので、深い信頼を寄せます。ただ、いつも最高値で輝かなければならないという無言のプレッシャーは、大きな疲労になります。",
+    "あなたの影は「影のない真昼の太陽のように、休まず燃え続けて訪れる燃え尽き」です。太陽もいつも真昼の暑さを保てないように、陽が傾き長い影が落ちる休息の時間が必ず必要です。陽が沈んでもその一日が失敗ではないように、あなたの停止も次のための大切なプロセスなのです。",
+    "一歩成熟すると、あなたは「光の強さと速度を賢く調節できる人」になります。いつも最高潮に燃えるより、ときには曇りの日の日差しのように柔らかく穏やかに存在する。そのとき、あなたは人を圧倒する存在ではなく、誰もが心地よく留まりたい温かな安息の場となります。"
   ],
   "shadows": [
-    "Constant maximum output eats your body and mind. Burnout is your nearest shadow.",
-    "Your intensity overwhelms people, and deep conversations rarely happen around you.",
-    "You don't allow yourself to say, 'I'm running lower lately.'"
+    "常にエネルギーを最高値で注ぎ続けるため、心身が疲れやすく、燃え尽きの影に直面しがちです。",
+    "あなたの溢れる情熱と強さが、周囲を圧倒し、深い話を気軽にできない壁を作ることがあります。",
+    "自分に「最近、とても疲れた、少し休むべきだ」と正直に認め、許すことがとても苦手です。"
   ],
   "advice": [
-    "This week, ask yourself once: am I at max output or at a reasonable output?",
-    "Deliberately set up one situation where things run fine without you.",
-    "Practice being a cloudy-day sun. Sitting quietly for a day is also a way of being.",
-    "Don't deny your intensity — but treat the recovery after it as equally important."
+    "今週、立ち止まって「今、自分のエネルギーは最大出力か、それとも心地よい速度か」と自分の状態を点検しましょう。",
+    "自分がいなくても周囲が十分に回るよう、日常の荷物を少し下ろして余裕を贈りましょう。",
+    "今日は強く燃えるより、雲の向こうの日差しのように一歩下がって静かに休む穏やかな一日を練習しましょう。",
+    "熱く情熱を燃やす時間と同じくらい、そのあとに必ず続く回復と休みの時間を、同じように大切にしましょう。"
   ],
   "keywords": [
-    "noon light",
-    "magnetic presence",
-    "transparent heat",
-    "dialing the light"
+    "正午の光",
+    "強烈な存在感",
+    "透明な情熱",
+    "光の調節"
   ],
-  "name": "Noon Sun",
+  "name": "正午の太陽",
   "name_traditional": ""
 }

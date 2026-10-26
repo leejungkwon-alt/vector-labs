@@ -1,29 +1,29 @@
 {
   "pillar": "丙戌",
-  "hero": "You're a campfire on a hill. Built to burn long — a place where anyone can warm up.",
+  "hero": "丘の上で、世界中のみんなの心を温かく溶かす、長くどっしりと燃え続ける焚き火のような人です。",
   "narrative": [
-    "You carry warmth and stability together. Other Bing-day people burn in their own ways; yours is anchored to the ground. That's why you aren't just hot — you're the kind of warmth people can stay in for a long time.",
-    "You have a natural talent for caring for people. Just as a campfire draws people near, people naturally gather around you. It's not because you do something special. It's because being there is enough to comfort them. That's rarer than it sounds.",
-    "The trouble is that 'everyone's warmth' can burn you out. If you keep giving warmth without stopping, your own fire eventually goes out. Even a campfire needs fuel. Ask yourself: what is my fuel, and when did I last feed it?",
-    "A mature Bing-Xu is someone who knows how to give warmth with boundaries. Open to anyone, but open in a way that doesn't burn you. Your fire was built to burn long — so how long it burns is your real worth."
+    "あなたは温かな温もりと変わらぬ安定を、同時に贈る優しい人です。他の熱い炎がそれぞれのやり方で慌ただしく燃えるとき、あなたの炎は暖かな大地の上に、どっしりと確かな足場を持って燃え続けます。だからこそあなたは、ただ熱いだけの人ではなく、誰もがいつでも訪れて心を溶かせる、深い温もりを持つ人なのです。",
+    "あなたは周囲を真摯に抱き、気遣う温かな本質を持っています。焚き火の周りに人が自然と集まるように、あなたのそばには自然と心を預けたくなる人々が集まります。あなたが特に何かを頑張らなくても、ただ静かにそばにいるという存在だけで、人は大きな安らぎを得ます。",
+    "あなたの影は「すべての人に温もりを分けようとして、自分の炎が消えること」です。休まず燃えて周囲を気遣っていると、あなたの火を支えていた薪は、いつの間にか底を尽きます。「最後に自分を温める薪をくべたのはいつか」、自分にそっと問いかけてください。",
+    "一歩成熟すると、あなたは「大切な自分の境界を守りながら、他人に健全な温もりを分ける人」になります。誰にでも優しくしながら、自分を焼き尽くさない賢い方法を身につける。長く燃えるように作られたあなただからこそ、どれだけ自分を大切にしながら光を放てるかが、人生最大の喜びになります。"
   ],
   "shadows": [
-    "You care for others and forget your own fuel.",
-    "Your warmth can tip into control.",
-    "You hold everyone up without rest, then suddenly go completely dark."
+    "周囲を気遣い世話するあまり、自分の心の薪をくべるのを忘れがちです。",
+    "相手への温かな気遣いが時に過ぎて、相手に負担や束縛のように感じさせることがあります。",
+    "つらくても気づかれず、皆を世話するうちに、ある日突然完全に力尽きて消えてしまいます。"
   ],
   "advice": [
-    "This week, write down three things that are your fuel. If none, you can't burn long.",
-    "Ask one of the people you care for to care for you this time.",
-    "Separate the warmth you give because they want it from the warmth you give because you want to give.",
-    "Leave at least one ember for yourself before you go out completely."
+    "今週、自分を支える心の薪を三つ書き出し、自分のためにしっかりエネルギーを充電しましょう。",
+    "普段は誰かを世話することばかりなら、今回は感謝する人に静かに寄りかかり、自分を世話してもらうよう頼みましょう。",
+    "自分が贈る温もりが、本当に相手が望んでのことか、それとも自分が与えたくてのことかを、一度振り返りましょう。",
+    "炎が完全に消える前に、内側の最も温かな小さな火種を一つだけ、自分のために残しておきましょう。"
   ],
   "keywords": [
-    "long fire",
-    "solid warmth",
-    "power of care",
-    "boundaries that hold"
+    "長く燃える火",
+    "確かな温もり",
+    "気遣いの力",
+    "守る境界"
   ],
-  "name": "Hilltop Campfire",
+  "name": "丘の上の焚き火",
   "name_traditional": ""
 }

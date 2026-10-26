@@ -1,29 +1,29 @@
 {
   "pillar": "丙辰",
-  "hero": "You're sunlight over a misty marsh. Warmth that turns to vapor and quietly wraps around everything.",
+  "hero": "霧の立ちこめる野原を、そっと包み込む朝の日差しです。静かに立ちのぼる水蒸気のように、周囲を温かく抱きしめる人です。",
   "narrative": [
-    "You're warm but blurry. The heat is real, but where it points and what it's building is often not clear — even to you. That blur isn't a flaw; it's a texture. Some people remember you as 'the warm one.' Others remember you as 'the one I couldn't quite read.'",
-    "You're a person of transformation. Just as fire meets earth and becomes vapor, you take shape according to what's around you. You're more natural changing form with relationships and settings than staying fixed in one place. That's why you read people and rooms so well. Not because you're perceptive as a strategy — because that's simply your language.",
-    "The trouble is when the blur blurs your judgment. Feeling and fact get tangled, and you can't tell what you actually feel or want. When that happens, don't force yourself to 'become clear.' Fog doesn't clear by being pushed. It clears by being given time.",
-    "Your strength is the softness and acceptance this blur produces. You don't slice the world into clean lines; you can hold it with a blurred kindness. That's why people stay near you. But you need to ask yourself a sharp question sometimes: 'Where am I, and where do I want to go?'"
+    "あなたは柔らかく豊かな温もりで周囲を包み込む、温かい心の持ち主です。その温もりが特定の場所に留まらず、ほのかに広がるので、ある人はあなたを「最も安らぐ避難所のような人」と記憶し、別の人は「深さの計り知れない不思議な魅力の人」と感じます。",
+    "あなたは環境や状況に合わせて、自分をしなやかに変化させる柔軟さを持つ人です。日差しが水蒸気と出会って柔らかな霧になるように、周囲の心と雰囲気を感じ取り、自然に染み込む優れた包容力を持っています。相手の小さな変化も繊細に気づく温かいセンスは、あなたの大切な贈り物です。",
+    "あなたの影は、感情と事実が複雑に絡み合い、自分が本当に何を望むのか自分自身で混乱するときです。心がぼんやりして霧がかったように息苦しいときは、無理に鮮明な答えを出そうとせず、霧が自然に晴れるまで、少し呼吸を整えて待つだけで十分です。",
+    "あなたの真の強みは、世界を鋭い基準で切り分けず、優しく包み込む広い懐にあります。ただ、自分の心の道を見失わないよう、ときには自分に「今、自分はどこに立ち、どの方向へ歩きたいのか」と優しく問いかけましょう。"
   ],
   "shadows": [
-    "Feeling and fact get tangled, and you don't know what you want.",
-    "You use the blur as an excuse to delay important decisions.",
-    "People around you are unsure whether you're 'deep' or 'indecisive.'"
+    "複雑な感情と現実が混ざり合い、自分が本当に望むものが何か明確にわからないことがあります。",
+    "考えや心が整理されないという理由で、大切な決定や選択を先延ばしにしてしまいます。",
+    "周囲があなたの優柔不断さや多くの悩みを見て、深い本心を誤解したり混乱したりすることがあります。"
   ],
   "advice": [
-    "Once a day, ask one sharp question of yourself: 'What do I actually want right now?'",
-    "When feelings are unclear, write down the facts first. Feelings come next.",
-    "Don't strain to become clear. Give the fog time. Judgment comes after.",
-    "Once a month, say clearly where you are — to family, friends, work, whoever."
+    "一日に一度、自分に「今、本当に望むことは何か」と明確で温かい問いを投げかけましょう。",
+    "感情が複雑に絡み合うときは、目の前の客観的な事実だけを一つずつ紙に書き出して心を整理しましょう。",
+    "無理に心を鮮明にしようと焦らず、心の霧が自然に晴れるまで十分な休息と時間を贈りましょう。",
+    "月に一度は、今どんな夢を抱きどこへ向かっているのかを、大切な人や自分自身にそっと語ってみましょう。"
   ],
   "keywords": [
-    "warm blur",
-    "power of form",
-    "soft perception",
-    "wisdom of fog"
+    "温かな曖昧さ",
+    "変容の力",
+    "柔らかな感知",
+    "霧の知恵"
   ],
-  "name": "Sunlight Over a Marsh",
+  "name": "霧の野原の陽光",
   "name_traditional": ""
 }
