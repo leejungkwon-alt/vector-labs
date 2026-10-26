@@ -1,0 +1,4 @@
+{
+  "DST_AMBIGUOUS": "This clock time is ambiguous: {clock} occurs twice in {tz}. Re-request with dst_fold=0 (offset {off0}) or dst_fold=1 (offset {off1}).",
+  "DST_GAP": "This clock time does not exist: {clock} is skipped by DST in {tz}."
+}

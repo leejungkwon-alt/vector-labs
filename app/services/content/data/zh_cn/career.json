@@ -1,0 +1,275 @@
+{
+  "SECTION_TITLE": "Career & Transition",
+  "CONTENT": {
+    "THE_PIONEER": {
+      "headline": "Suited for entrepreneurship, new ventures, and planning with a pioneer spirit.",
+      "body": "You gain energy when creating new paths. You are stronger at pioneering unknown territory than following a set manual.\n\nThis trait shines in new business teams, new projects, and startups within an organization. Conversely, you feel frustrated in stagnant organizations.\n\nYour risk is 'deciding too fast alone'. For important decisions, always seek verification from trusted colleagues.",
+      "patterns": [
+        "You proactively start new projects.",
+        "You suggest directions in meetings.",
+        "You can't stand stagnant situations."
+      ],
+      "best_match": [
+        "Anchor",
+        "Operator"
+      ],
+      "best_reason": "A partner who can reliably execute your vision.",
+      "challenging_match": [
+        "Officer"
+      ],
+      "challenging_reason": "You often clash with bosses/colleagues who value rules and procedures.",
+      "actions": [
+        "Before deciding, ask yourself 'Who verified this?'",
+        "Propose one new project this quarter.",
+        "Delegate execution details to stable colleagues."
+      ],
+      "red_flags": [
+        "Are you pushing alone without verification?",
+        "Are team members unable to keep up with your pace?"
+      ]
+    },
+    "THE_ADAPTER": {
+      "headline": "You survive in any organization with flexible adaptability.",
+      "body": "You learn the language of the organization quickly. You are skilled at mediating conflicts and making the team feel smooth.\n\nThis flexibility is a strength, but there is a risk of your expertise blurring. A 'person who is good at everything' is easily replaced.\n\nWhat you need is one solid spike. Create one clear expertise where people say 'this is the person for this field'.",
+      "patterns": [
+        "You volunteer as the lubricant in the team.",
+        "You flexibly change your stance according to the situation.",
+        "You earn trust through relationships rather than expertise."
+      ],
+      "best_match": [
+        "Blade",
+        "Officer"
+      ],
+      "best_reason": "Someone with clear standards elevates your expertise.",
+      "challenging_match": [
+        "Pioneer"
+      ],
+      "challenging_reason": "You may clash with someone who wants fast decisions and strong initiative.",
+      "actions": [
+        "Invest in one skill this quarter.",
+        "Clearly appeal your expertise to your boss.",
+        "Don't solve every conflict; let one go."
+      ],
+      "red_flags": [
+        "Are you remaining as 'a person who does anything'?",
+        "Does no one know your achievements?"
+      ]
+    },
+    "THE_RADIATOR": {
+      "headline": "You shine on stage — in sales, marketing, and presentations.",
+      "body": "You gain energy from dealing with people. You have a natural talent for persuading, inspiring, and leading the atmosphere.\n\nThis strength shines in sales, marketing, branding, and lecturing. However, you get bored quickly if given only desk/analysis work.\n\nYour risk is burnout. You don't recognize your own fatigue while trying to stay bright. You need a regular recovery routine.",
+      "patterns": [
+        "You achieve results at touchpoints with people.",
+        "You take the initiative in presentations/meetings.",
+        "You get tired when there is a lot of analysis/desk work."
+      ],
+      "best_match": [
+        "Anchor",
+        "Cultivator"
+      ],
+      "best_reason": "Someone who stably supports your energy.",
+      "challenging_match": [
+        "Deep"
+      ],
+      "challenging_reason": "You feel frustrated when the pace doesn't match with quiet people.",
+      "actions": [
+        "Set one day a week as a 'no-meeting day'.",
+        "Summarize your achievements in numbers once a month.",
+        "Always keep one long-term project going."
+      ],
+      "red_flags": [
+        "Are you ignoring burnout signals?",
+        "Are you only chasing short-term results?"
+      ]
+    },
+    "THE_KEEPER": {
+      "headline": "You become a master in professional, research, or technical fields.",
+      "body": "You are the type to succeed by digging one deep well. Your value increases as you dig deeper and accumulate expertise.\n\nThis trait shines in fields requiring precision, such as research, development, design, medical, and legal. Conversely, frequent job changes and changes blur your assets.\n\nThe most important criterion is whether your current organization can nurture your expertise. If so, becoming a master in your current position is better than changing jobs.",
+      "patterns": [
+        "You are deeply immersed in one field.",
+        "You have strong pride in your expertise.",
+        "You hate organizational politics and chores."
+      ],
+      "best_match": [
+        "Mentor",
+        "Deep"
+      ],
+      "best_reason": "Someone who understands depth and acknowledges your expertise.",
+      "challenging_match": [
+        "Radiator"
+      ],
+      "challenging_reason": "Energy is consumed with people who communicate superficially.",
+      "actions": [
+        "Set an 'expertise goal for this year' every year.",
+        "Create one channel to publicize your expertise externally.",
+        "Boldly reject chores."
+      ],
+      "red_flags": [
+        "Are chores taking away time from your expertise?",
+        "Does the organization support your growth?"
+      ]
+    },
+    "THE_ANCHOR": {
+      "headline": "Excellent at management, administration, and system building.",
+      "body": "You are good at laying the foundation of an organization. You are strong at creating processes and operating them stably.\n\nThis strength shines in organizations where structure is important, such as large corporations, public institutions, and manufacturing. Conversely, extremely fast startups can be frustrating.\n\nYour risk is becoming insensitive to change. You must consciously learn trends so you don't get alienated in the organization.",
+      "patterns": [
+        "You are strong at creating and maintaining processes.",
+        "You build trust over a long time.",
+        "You feel resistance to rapid changes."
+      ],
+      "best_match": [
+        "Pioneer",
+        "Challenger"
+      ],
+      "best_reason": "Someone who adds change on top of your stability.",
+      "challenging_match": [
+        "Anchor"
+      ],
+      "challenging_reason": "If both are passive to change, the organization stagnates.",
+      "actions": [
+        "Learn one new trend every quarter.",
+        "Find a way to automate your process.",
+        "Intentionally ask for young colleagues' opinions."
+      ],
+      "red_flags": [
+        "Are you often saying 'we've always done it this way'?",
+        "Are you falling behind on new tools?"
+      ]
+    },
+    "THE_CULTIVATOR": {
+      "headline": "Suited for growing people — in education, planning, and HR.",
+      "body": "You are excellent at recognizing and nurturing people's potential. Roles like developing juniors or coordinating projects suit you.\n\nThis trait shines in education, HR, consulting, and planning. Conversely, you get tired in cold organizations that only demand results.\n\nYour risk is yielding results to others. Clearly record and appeal your contributions.",
+      "patterns": [
+        "You have a lot of interest in the growth of juniors/colleagues.",
+        "You soften the team atmosphere.",
+        "You undervalue your own achievements."
+      ],
+      "best_match": [
+        "Mentor",
+        "Officer"
+      ],
+      "best_reason": "Someone who acknowledges your contribution and grows together.",
+      "challenging_match": [
+        "Survivor"
+      ],
+      "challenging_reason": "Value clashes occur with result-oriented people.",
+      "actions": [
+        "Document your contributions once a month.",
+        "Clearly state your career goals to your boss.",
+        "Consciously mentor one person."
+      ],
+      "red_flags": [
+        "Are others taking your achievements?",
+        "Are you postponing your own growth?"
+      ]
+    },
+    "THE_BLADE": {
+      "headline": "Fits places where principles matter, such as law, finance, military/police, and engineering.",
+      "body": "You are logical and quick to decide. You achieve the best results in environments with clear standards and principles.\n\nThis strength shines in law, finance, military/police, engineering, and medical fields. Conversely, you feel frustrated in organizations with ambiguous standards.\n\nYour risk is putting principles before people. The result may be right, but relationships can be damaged. Soft communication is needed.",
+      "patterns": [
+        "You draw conclusions quickly.",
+        "You are good at finding logical loopholes.",
+        "You find emotional communication difficult."
+      ],
+      "best_match": [
+        "Adapter",
+        "Keeper"
+      ],
+      "best_reason": "Someone who softly wraps your sharpness.",
+      "challenging_match": [
+        "Challenger"
+      ],
+      "challenging_reason": "Strong confrontations repeat, tiring the team.",
+      "actions": [
+        "Check emotions once before concluding.",
+        "Have informal conversations with bosses/colleagues once a month.",
+        "Practice expressing your judgments softly."
+      ],
+      "red_flags": [
+        "Is your conviction of 'I am right' hurting relationships?",
+        "Are colleagues reluctant to talk to you?"
+      ]
+    },
+    "THE_GEM": {
+      "headline": "You stand out in design, art, and precision technology fields.",
+      "body": "You pursue perfection. Your obsession with detail creates your expertise.\n\nThis trait shines in design, art, editing, precision machining, and premium services. Conversely, you get tired in organizations that demand 'fast and sloppy'.\n\nYour risk is not finishing due to perfectionism. You need to practice releasing at 80%.",
+      "patterns": [
+        "You obsess over details.",
+        "You can't release unless it's perfect.",
+        "You stress over low-quality results."
+      ],
+      "best_match": [
+        "Deep",
+        "Mentor"
+      ],
+      "best_reason": "Someone who understands your perfectionism and is patient.",
+      "challenging_match": [
+        "Radiator"
+      ],
+      "challenging_reason": "Methods clash head-on with speed-first people.",
+      "actions": [
+        "Practice 'this is good enough'.",
+        "Pick one perfect project and release it at 80%.",
+        "Agree on your standards with your boss in advance."
+      ],
+      "red_flags": [
+        "Are you missing schedules due to perfection?",
+        "Are you forcing your standards on the team?"
+      ]
+    },
+    "THE_DEEP": {
+      "headline": "Outstanding in strategic planning, analysis, and research fields.",
+      "body": "You have an excellent ability to draw the big picture. You have the power to see the structure beneath the surface.\n\nThis trait shines in strategic planning, research, consulting, and data analysis. Conversely, you feel frustrated in positions that only demand execution.\n\nYour risk is delayed execution due to falling into analysis. Teaming up with a strong execution partner maximizes synergy.",
+      "patterns": [
+        "You draw the big picture first.",
+        "You spend time analyzing before executing.",
+        "You hate superficial tasks."
+      ],
+      "best_match": [
+        "Pioneer",
+        "Operator"
+      ],
+      "best_reason": "Someone who turns your strategy into execution.",
+      "challenging_match": [
+        "Survivor"
+      ],
+      "challenging_reason": "You may clash with people demanding fast execution.",
+      "actions": [
+        "Start the first execution within 3 days after strategizing.",
+        "Find an execution-strong partner.",
+        "Set a 30% time limit on analysis."
+      ],
+      "red_flags": [
+        "Are you only analyzing and delaying execution?",
+        "Are you missing decision timing?"
+      ]
+    },
+    "THE_SPRING": {
+      "headline": "You quietly support the team and build trust.",
+      "body": "You are an essential core talent, though not flashy. You melt team conflicts and quietly solve problems.\n\nThis strength shines in operations, HR, customer support, and project management. Conversely, you are undervalued in sales organizations where self-PR is important.\n\nThe risk is not being recognized for your achievements. You need to practice actively appealing your contributions.",
+      "patterns": [
+        "You are the quiet problem solver of the team.",
+        "You don't show off your achievements well.",
+        "You are skilled at mediating conflicts."
+      ],
+      "best_match": [
+        "Pioneer",
+        "Blade"
+      ],
+      "best_reason": "Someone who acknowledges and elevates your quiet support.",
+      "challenging_match": [
+        "Radiator"
+      ],
+      "challenging_reason": "In organizations that only notice flashy results, your presence disappears.",
+      "actions": [
+        "Document your achievements once a month.",
+        "Speak up about your contributions once in a meeting.",
+        "Find a boss who recognizes you."
+      ],
+      "red_flags": [
+        "Are your achievements being recorded as someone else's?",
+        "Are you being ignored for being quiet?"
+      ]
+    }
+  }
+}

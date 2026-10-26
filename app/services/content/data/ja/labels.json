@@ -1,0 +1,86 @@
+{
+  "BALANCE_LABEL": "balance",
+  "CHART_HERO": "Your blueprint, expressed as four faces.",
+  "CHART_LAYER_META": {
+    "year_pillar": {
+      "label": "Childhood",
+      "role": "Your roots — how you started and family influence"
+    },
+    "month_pillar": {
+      "label": "Career",
+      "role": "Your social life — how you work and interact"
+    },
+    "day_pillar": {
+      "label": "Core Self",
+      "role": "Your true identity — who you are at your core"
+    },
+    "hour_pillar": {
+      "label": "Future",
+      "role": "Your inner world — your dreams and later years"
+    }
+  },
+  "SINSAL_POS_LABEL": {
+    "year_pillar": "Origins",
+    "month_pillar": "Career",
+    "day_pillar": "Self",
+    "hour_pillar": "Legacy"
+  },
+  "SINSAL_POS_ROLE": {
+    "year_pillar": "ancestry / early environment",
+    "month_pillar": "career / public life",
+    "day_pillar": "self / partnership",
+    "hour_pillar": "inner world / legacy"
+  },
+  "SINSAL_THEME_KEYWORD": {
+    "MAGNETIC_DRAW": "magnetism and attraction",
+    "RESTLESS_FEET": "movement and exploration",
+    "SOLITARY_DEPTH": "reflection and creativity",
+    "ALLY_MAGNET": "help and support",
+    "SCHOLAR_MIND": "study and learning",
+    "SHARP_EDGE": "drive and competition",
+    "COMMANDER": "leadership and decisiveness"
+  },
+  "SINSAL_NOTE_TPL": "This trait sits in your {role} — so {theme} shows up most in that area.",
+  "SINSAL_HERO_ONE": "You carry 1 special trait.",
+  "SINSAL_HERO_MANY": "You carry {n} special traits.",
+  "GRADE_LABELS": {
+    "PEAK": "Peak",
+    "FAVORABLE": "Favorable",
+    "NEUTRAL": "Neutral",
+    "CAUTION": "Caution",
+    "CHALLENGING": "Challenging"
+  },
+  "COMPAT_FALLBACK_HEADLINE": "A relationship you build together.",
+  "PERSONALIZATION_BLOCK": {
+    "HEADER": "Personalized insight",
+    "BY_INTENSITY": {
+      "SELF_SOURCED": "Your strong 'self-sourced' energy makes this tendency especially pronounced and self-directed.",
+      "ENVIRONMENT_TUNED": "Your 'environment-tuned' temperament means this trait emerges most deeply depending on the people and setting around you.",
+      "BALANCED_CORE": "Your balanced 'core' energy guides this tendency in a stable and harmonious direction."
+    },
+    "BY_ELEMENT": {
+      "GROWTH": "Growth (Wood) energy layers on top of this — a strong drive to keep expanding and opening new directions.",
+      "SPARK": "Spark (Fire) energy layers on top of this — a passionate, immediate force pushing this tendency forward.",
+      "GROUND": "Ground (Earth) energy layers on top of this — this tendency expresses through thoughtful, solid foundation-building.",
+      "EDGE": "Edge (Metal) energy layers on top of this — you sort through this with clear standards and sharp decisiveness.",
+      "FLOW": "Flow (Water) energy layers on top of this — this tendency gains a flexible, responsive wisdom that adapts to the moment."
+    },
+    "BY_MODE_SECTION": {
+      "love": {
+        "THE_TWIN": "The 'Twin' mode is especially strong — you treat your partner as a lifelong colleague and an equal, not a role to play.",
+        "THE_RIVAL": "The 'Rival' mode is especially strong — you want a relationship where you both push each other and grow together.",
+        "THE_ALLY": "The 'Ally' mode is especially strong — once you commit to a bond, you stay with it and give it your full loyalty."
+      },
+      "career": {
+        "THE_CREATOR": "The 'Creator' mode is especially strong — you shine when you break existing molds and create original work.",
+        "THE_OFFICER": "The 'Officer' mode is especially strong — you grow into a trusted core talent inside structured organizations.",
+        "THE_CHALLENGER": "The 'Challenger' mode is especially strong — you have the instincts of a leader who solves problems and breaks through crises."
+      },
+      "wealth": {
+        "THE_OPERATOR": "The 'Operator' mode is especially strong — you spot opportunities others miss and grow your assets decisively.",
+        "THE_STEWARD": "The 'Steward' mode is especially strong — you protect what you have and let compound growth do its work.",
+        "THE_FLOW": "The 'Flow' mode is especially strong — you ride the current of money with flexibility and draw wealth in naturally."
+      }
+    }
+  }
+}

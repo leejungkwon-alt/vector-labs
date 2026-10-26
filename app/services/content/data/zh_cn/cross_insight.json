@@ -1,0 +1,173 @@
+{
+  "MODE_LABELS": {
+    "THE_TWIN": "Twin",
+    "THE_RIVAL": "Rival",
+    "THE_ALLY": "Ally",
+    "THE_EMPATH": "Empath",
+    "THE_CREATOR": "Creator",
+    "THE_CHALLENGER": "Challenger",
+    "THE_OFFICER": "Officer",
+    "THE_SURVIVOR": "Survivor",
+    "THE_MYSTIC": "Mystic",
+    "THE_MENTOR": "Mentor",
+    "THE_GENERALIST": "Generalist",
+    "THE_STEWARD": "Steward",
+    "THE_OPERATOR": "Operator",
+    "THE_FLOW": "Flow"
+  },
+  "AXES": {
+    "FREEDOM_BOND": {
+      "pos": "Togetherness",
+      "neg": "Solitude"
+    },
+    "RISK_SAFETY": {
+      "pos": "New Challenges",
+      "neg": "Stable Foundation"
+    },
+    "DEPTH_BREADTH": {
+      "pos": "Deep Dive",
+      "neg": "Broad Experience"
+    },
+    "STRUCTURE_FLOW": {
+      "pos": "Set Rules",
+      "neg": "Impromptu Flow"
+    },
+    "EXPRESSION_RESTRAINT": {
+      "pos": "Expression",
+      "neg": "Restraint"
+    },
+    "COMPETITION_COLLABORATION": {
+      "pos": "Compete to Win",
+      "neg": "Collaborate Together"
+    },
+    "SPEED_PATIENCE": {
+      "pos": "Move Fast",
+      "neg": "Take it Slow"
+    },
+    "SELF_OTHERS": {
+      "pos": "Focus on Self",
+      "neg": "Focus on Others"
+    }
+  },
+  "MODE_AXES": {
+    "THE_TWIN": {
+      "FREEDOM_BOND": 1.0,
+      "COMPETITION_COLLABORATION": -0.6
+    },
+    "THE_RIVAL": {
+      "COMPETITION_COLLABORATION": 1.0,
+      "EXPRESSION_RESTRAINT": 0.5
+    },
+    "THE_ALLY": {
+      "FREEDOM_BOND": 0.8,
+      "SELF_OTHERS": -0.8
+    },
+    "THE_EMPATH": {
+      "SELF_OTHERS": -1.0,
+      "FREEDOM_BOND": 0.5
+    },
+    "THE_CREATOR": {
+      "FREEDOM_BOND": -1.0,
+      "EXPRESSION_RESTRAINT": 0.8
+    },
+    "THE_CHALLENGER": {
+      "RISK_SAFETY": 0.9,
+      "COMPETITION_COLLABORATION": 0.5
+    },
+    "THE_OFFICER": {
+      "STRUCTURE_FLOW": 1.2,
+      "RISK_SAFETY": -0.6
+    },
+    "THE_SURVIVOR": {
+      "RISK_SAFETY": 0.8,
+      "COMPETITION_COLLABORATION": 0.6
+    },
+    "THE_MYSTIC": {
+      "DEPTH_BREADTH": 1.2,
+      "FREEDOM_BOND": -0.5
+    },
+    "THE_MENTOR": {
+      "SELF_OTHERS": -0.9,
+      "SPEED_PATIENCE": -0.5
+    },
+    "THE_GENERALIST": {
+      "DEPTH_BREADTH": -1.2,
+      "STRUCTURE_FLOW": -0.5
+    },
+    "THE_STEWARD": {
+      "RISK_SAFETY": -1.2,
+      "SPEED_PATIENCE": -0.8
+    },
+    "THE_OPERATOR": {
+      "RISK_SAFETY": 0.8,
+      "SPEED_PATIENCE": 0.8
+    },
+    "THE_FLOW": {
+      "STRUCTURE_FLOW": -1.2,
+      "FREEDOM_BOND": -0.4
+    }
+  },
+  "INTRO_TEMPLATE": "In relationships, you live as a '{bond_label}' leaning on each other, and at work, you live as a '{work_label}' moving toward your goals. You tend to accept money naturally as it flows rather than obsessing over it.",
+  "ANGLES": {
+    "FREEDOM_BOND": {
+      "love": "So a relationship with 'closeness but with separate rooms' suits you well. Conversely, when this is demanded all at once (e.g., business partners dating), stating boundaries first is the secret to making it last.",
+      "career": "So you need both 'time to focus entirely alone' and 'time to sync with others'. If either is lacking, you easily get tired or lethargic.",
+      "wealth": "So in wealth, it's good to mix 'my decision' and 'shared decision'. Decide big things alone, and share execution with someone you trust."
+    },
+    "RISK_SAFETY": {
+      "love": "So you are attracted to stable people, but get frustrated if it's too stable. Continuously creating small novelties (travel, new hobbies) in the relationship makes it last.",
+      "career": "So you waver between challenge and stability. Before a big decision, check 'Do I have a safety net right now?'. With a safety net, challenges become much lighter.",
+      "wealth": "So in wealth, 'frequent small experiments' suit you better than 'one big bet'. Move only within a range you can afford to lose."
+    },
+    "DEPTH_BREADTH": {
+      "love": "So you waver between 'one person you know deeply' and 'many you meet lightly'. Whichever it is, check once in a while where you are putting your energy.",
+      "career": "So you must distinguish between when to dig one deep well and when to cross many fields. Ask yourself which is right for you now.",
+      "wealth": "So the balance between 'focused investment' and 'diversified investment' is important. Either way, 100% concentration on one side is dangerous."
+    },
+    "STRUCTURE_FLOW": {
+      "love": "So you feel comfortable setting rules in a relationship, but it gets frustrating if too tight. Set 'one thing to keep, one thing to leave free'.",
+      "career": "So you are strong in structured environments, but get tired if flexibility disappears. Intentionally leave some 'spontaneity' within your routine.",
+      "wealth": "So 'structure' like automatic savings saves you. If you have a lot of impulse spending, creating structure comes first."
+    },
+    "EXPRESSION_RESTRAINT": {
+      "love": "So you want to express your feelings, but if you miss the timing, misunderstandings pile up. Say out loud 'what emotion I am feeling' once a day.",
+      "career": "So you have a lot you want to say. Just remember, expression can hurt relationships if too strong. 'Clear content, soft tone'.",
+      "wealth": "So in wealth, 'the urge to splurge' and 'the urge to hold back' clash. A rule to wait a day before big spending is effective."
+    },
+    "COMPETITION_COLLABORATION": {
+      "love": "So you like relationships where you stimulate each other, but if excessive it becomes a battle of attrition. Distinguish between 'winning conversations' and 'solving conversations together'.",
+      "career": "So the balance between competition and collaboration is key. Decide clearly who to compete with and who to collaborate with to save energy.",
+      "wealth": "So in wealth, 'keeping my pace' lasts longer than 'ahead of others'. Comparison clouds judgment."
+    },
+    "SPEED_PATIENCE": {
+      "love": "So you want the relationship to deepen fast, but everyone has a different pace. Asking for your partner's pace builds trust.",
+      "career": "So you want fast results, but distinguish between work that needs to 'ripen' and work that needs to 'be released now'.",
+      "wealth": "So in wealth, 'fast returns' and 'growing slowly' clash. Mixing the two and rolling them is safest."
+    },
+    "SELF_OTHERS": {
+      "love": "So you take care of your partner but lose track of your own feelings. Saying 'how I am right now' first makes the relationship last longer.",
+      "career": "So you help others but lose track of your own evaluation. Practice recording and appealing your achievements.",
+      "wealth": "So in wealth, separate 'giving expenditure' and 'saving for me'. Both must exist to last."
+    }
+  },
+  "BALANCED": {
+    "intro": "In relationships, you are a '{bond_label}', at work a '{work_label}', and you treat money like a '{money_label}'.",
+    "body": "These three form a balance without major clashes. Having no strongly protruding axis means, conversely, that there is a lot of room for you to choose. Decide for yourself which axis to put more weight on now.",
+    "angle": {
+      "love": "In relationships, just asking for your partner's rhythm once in a while makes the balance even firmer.",
+      "career": "At work, distinguish between 'what I want to do' and 'what is needed right now'.",
+      "wealth": "In wealth, organizing the ratio of saving and spending once puts your mind at ease."
+    }
+  },
+  "CLOSING_TEMPLATE": "When these three are demanded all at once (e.g., dating a business partner, family business), saying 'which axis I am standing on right now' first is the secret to making it last.",
+  "DISCLAIMER": "Note: This combination interpretation is not a deterministic prediction, but a reading of where the tendencies of the three domains meet from a coaching perspective. Life's choices are always yours.",
+  "MODE_SECTION_LABEL": {
+    "bond": "Relationship",
+    "work": "Work",
+    "money": "Money"
+  },
+  "COLLISION_SENTENCE": "You are wavering between the '{a_mode_label}'s '{a_label}' and the {b_mode_label}'s '{b_label}'.",
+  "COLLISION_2_SENTENCE": "Add to that the wavering between the {a_mode_label}'s '{a_label}' and the {b_mode_label}'s '{b_label}'.",
+  "PULL_SENTENCE": "On top of that, your mind leans toward the {mode_label}'s '{label}'.",
+  "PULL_2_SENTENCE": "And it also leans toward the {mode_label}'s '{label}'."
+}
