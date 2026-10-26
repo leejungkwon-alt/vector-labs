@@ -110,6 +110,7 @@ FREE_SECTION_RULES = {
         "keep": {
             "id", "title", "target_year", "pillar", "ten_god",
             "name", "headline", "watch_for",
+            "solar_calendar_note",
         },
         "locked_hint": ["body", "lean_into", "life_stage_context"],
     },

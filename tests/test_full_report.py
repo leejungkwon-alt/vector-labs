@@ -247,4 +247,10 @@ def test_chart_section_has_layers_and_notes():
     # 1974: month/career & day/self 모두 RADIATOR → note 최소 1개
     assert len(chart["notes"]) >= 1
 
+def test_year_section_has_solar_calendar_note_en():
+    report = _report_1974()
+    year = report["sections"]["year"]
+    note = year.get("solar_calendar_note", "")
+    assert note
+    assert "solar-term" in note.lower() or "lichun" in note.lower()
 

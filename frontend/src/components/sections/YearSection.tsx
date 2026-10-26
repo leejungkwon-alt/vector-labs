@@ -11,6 +11,11 @@ export function YearSectionView({ section }: { section: YearSection }) {
       <Text style={ss.metaText}>
         {section.target_year}{section.pillar_name ? ` · ${section.pillar_name}` : ""}
       </Text>
+      {section.solar_calendar_note && (
+        <Text style={[ss.metaText, { fontStyle: "italic", marginBottom: 8 }]}>
+          {section.solar_calendar_note}
+        </Text>
+      )}
       <Text style={ss.coreHero}>{section.name}</Text>
       <Text style={[ss.paragraph, { fontWeight: "600" }]}>{section.headline}</Text>
       {section.body && <Text style={ss.paragraph}>{section.body}</Text>}

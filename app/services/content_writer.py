@@ -449,6 +449,7 @@ def write_year_section(profile: dict, lang: str = "en", user_id: str | None = No
     pack = load_pack(lang, "year")
     theme_map = pack.get("YEAR_THEME_CONTENT", {})
     default_theme = pack.get("DEFAULT_YEAR_THEME", {})
+    solar_calendar_note = pack.get("SOLAR_CALENDAR_NOTE", "")
 
     ten_god = year_theme.get("ten_god", "")
     raw = theme_map.get(ten_god, default_theme)
@@ -492,6 +493,7 @@ def write_year_section(profile: dict, lang: str = "en", user_id: str | None = No
         "watch_for": theme.get("watch_for", ""),
         "lean_into": theme.get("lean_into", ""),
         "life_stage_context": life_stage_context,
+        "solar_calendar_note": solar_calendar_note,
     }
 
 

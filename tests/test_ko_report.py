@@ -250,4 +250,23 @@ def test_ko_lucky_code_watch_out_display_names():
     assert "성장" in names
     assert "불꽃" in names
     assert "GROWTH" in sigs
-    assert "SPARK" in sigs    
+    assert "SPARK" in sigs
+
+def test_ko_year_has_solar_calendar_note():
+    report = _ko_report_1974()
+    year = report["sections"]["year"]
+    note = year.get("solar_calendar_note", "")
+    assert note
+    assert "절기년" in note or "입춘" in note
+    assert any("가" <= ch <= "힣" for ch in note)
+
+
+def test_ko_year_free_tier_keeps_solar_calendar_note():
+    from app.services.entitlements import apply_entitlement_gate
+    report = _ko_report_1974()
+    gated = apply_entitlement_gate(report, tier="free")
+    year = gated["sections"]["year"]
+    assert "solar_calendar_note" in year
+    assert year["solar_calendar_note"]
+    assert "body" not in year
+

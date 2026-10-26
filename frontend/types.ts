@@ -323,6 +323,7 @@ export interface YearSection extends ReportSectionBase {
   body?: string;
   watch_for?: string;
   lean_into?: string;
+  solar_calendar_note?: string;
   life_stage_context?: {
     key: string;
     label: string;

@@ -249,3 +249,13 @@ def test_report_neither_year_yields_no_section():
     resp = client.post("/api/v1/saju/report", json=payload)
     assert resp.status_code == 200
     assert "year" not in resp.json()["report"]["sections"]
+
+def test_report_year_solar_calendar_note_present():
+    payload = {k: v for k, v in BASE_PAYLOAD.items() if k != "target_year"}
+    payload["use_current_solar_year"] = True
+    resp = client.post("/api/v1/saju/report", json=payload)
+    assert resp.status_code == 200
+    year = resp.json()["report"]["sections"]["year"]
+    assert "solar_calendar_note" in year
+    assert year["solar_calendar_note"]
+
