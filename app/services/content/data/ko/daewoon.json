@@ -1,0 +1,4 @@
+{
+  "DISPLAY_TPL": "{years}년 {months}개월",
+  "CORRECTION_TPL": " (시작 나이 {start_age}세로 보정)"
+}

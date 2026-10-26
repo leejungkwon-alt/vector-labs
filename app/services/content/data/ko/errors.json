@@ -1,0 +1,4 @@
+{
+  "DST_AMBIGUOUS": "모호한 시각입니다: {clock}은 {tz}에서 두 번 발생합니다. dst_fold=0(offset {off0}) 또는 dst_fold=1(offset {off1})로 재요청해 주세요.",
+  "DST_GAP": "존재하지 않는 시각입니다: {clock}은 {tz}에서 DST로 건너뛴 시각입니다."
+}

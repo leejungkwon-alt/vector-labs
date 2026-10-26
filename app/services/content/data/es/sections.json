@@ -1,0 +1,470 @@
+{
+  "SECTION_TITLES": {
+    "cover": "Tu Carta",
+    "core": "Tu Núcleo",
+    "energy": "Tu Firma Energética",
+    "lucky_code": "Tu Código de Suerte",
+    "health": "Cuerpo y Bienestar",
+    "money": "Dinero y Riqueza",
+    "work": "Trabajo y Oficio",
+    "bonds": "Vínculos y Pertenencia",
+    "year": "Este Año",
+    "timeline": "Tu Línea de Tiempo",
+    "monthly": "Tu Calendario Mensual",
+    "chart": "Tus Cuatro Rostros",
+    "sinsal": "Rasgos Especiales"
+  },
+  "SUMMARY_LABELS": {
+    "core": "Núcleo",
+    "energy": "Energía",
+    "lucky_code": "Código",
+    "money": "Modo Dinero",
+    "bonds": "Vínculos",
+    "year": "Este Año",
+    "health": "Cuerpo",
+    "monthly": "Mensual"
+  },
+  "INTENSITY_LABELS": {
+    "SELF_SOURCED": "Autoabastecido",
+    "BALANCED_CORE": "Núcleo Equilibrado",
+    "ENVIRONMENT_TUNED": "Sintonizado con el Entorno"
+  },
+  "MODE_DISPLAY": {
+    "THE_STEWARD": "Steward",
+    "THE_OPERATOR": "Operator",
+    "THE_FLOW": "Flow",
+    "THE_CREATOR": "Creator",
+    "THE_CHALLENGER": "Challenger",
+    "THE_OFFICER": "Officer",
+    "THE_SURVIVOR": "Survivor",
+    "THE_MYSTIC": "Mystic",
+    "THE_MENTOR": "Mentor",
+    "THE_GENERALIST": "Generalist",
+    "THE_TWIN": "Twin",
+    "THE_RIVAL": "Rival",
+    "THE_ALLY": "Ally",
+    "THE_EMPATH": "Empath",
+    "THE_PIONEER": "Pioneer",
+    "THE_ADAPTER": "Adapter",
+    "THE_RADIATOR": "Radiator",
+    "THE_KEEPER": "Keeper",
+    "THE_ANCHOR": "Anchor",
+    "THE_CULTIVATOR": "Cultivator",
+    "THE_BLADE": "Blade",
+    "THE_GEM": "Gem",
+    "THE_DEEP": "Deep",
+    "THE_SPRING": "Spring"
+  },
+  "ENERGY_HERO_TEMPLATES": {
+    "missing": "Funcionas con {dominant} — casi sin {missing}.",
+    "deficient": "Lideras con {dominant}, pero llevas una escasez silenciosa de {deficient}.",
+    "default": "Funcionas con {dominant}."
+  },
+  "TIMELINE_HERO": "Tu década más fuerte comienza alrededor de los {best_age} años ({best_pillar}). La más desafiante comienza alrededor de los {worst_age} años.",
+  "TIMELINE_GRADE_BLURB": {
+    "PEAK": "Una ventana rara. Úsala deliberadamente.",
+    "FAVORABLE": "Vientos a favor. Muévete con ellos.",
+    "NEUTRAL": "Mixto. Presta atención a lo que realmente funciona.",
+    "CAUTION": "Temporada más lenta. Prioriza el descanso y los límites.",
+    "CHALLENGING": "Período pesado. Sobrevívelo bien y crecerás."
+  },
+  "LUCKY_CODE_HERO_TEMPLATE": "Tu elemento de poder es {element} — apóyate en él.",
+  "WATCH_OUT_LABEL": "Atención",
+  "HEALTH_HERO_TEMPLATES": {
+    "missing": "{dominant} domina — casi no tienes {missing}.",
+    "deficient": "{dominant} te moldea más; {deficient} escasea.",
+    "default": "{dominant} te moldea."
+  },
+  "CHART_POSITION_TEMPLATES": {
+    "year_pillar": "En tus orígenes, {archetype} moldeó cómo conociste el mundo.",
+    "month_pillar": "En tu trabajo público, {archetype} es cómo te presentas.",
+    "day_pillar": "{archetype} es tu núcleo — esto es quién eres.",
+    "hour_pillar": "En tu legado, {archetype} definirá lo que dejas atrás."
+  },
+  "CHART_NOTE_TEMPLATE": "Tu {a} y tu {b} comparten la misma energía '{archetype}'. Esto significa que son inseparables — tu vida pública y tu núcleo son uno.",
+  "DISCLAIMER": "Nota: Este informe combina cálculos astronómicos con marcos modernos de coaching para la percepción personal y el entretenimiento. No es consejo médico, financiero ni psicológico. El análisis tradicional de Cuatro Pilares depende de la escuela — distintas líneas pueden llegar a conclusiones diferentes a partir de la misma carta, del mismo modo que distintos terapeutas pueden describir a la misma persona de forma diferente. Trátalo como una lectura reflexiva, no como un veredicto. Tus decisiones siguen siendo tuyas. Si estás en crisis, contacta a los servicios de emergencia locales o a una línea de prevención del suicidio. Si estás fuera de EE. UU., consulta https://findahelpline.com/.",
+  "MONEY_CONTENT": {
+    "THE_STEWARD": {
+      "headline": "You protect your assets and compound them safely.",
+      "body": "You detest risk and can't stomach losing principal. Long-term stability comes before short-term gains.\n\nThat draws you to safe assets — savings, bonds, real estate. While others chase crypto or day-trade stocks, you quietly protect and grow what you have.\n\nBut being too conservative can mean losing to inflation. Diversify a slice into growth positions.",
+      "patterns": [
+        "Your cash and savings allocation is very high.",
+        "Fear of loss makes you delay decisions.",
+        "You believe in compounding and prefer long holds."
+      ],
+      "best_match": [
+        "THE_OPERATOR",
+        "THE_FLOW"
+      ],
+      "best_reason": "A partner who adds returns on top of your safe base.",
+      "challenging_match": [
+        "THE_STEWARD"
+      ],
+      "challenging_reason": "If both of you only play it safe, your assets lose to inflation.",
+      "actions": [
+        "Diversify 10% of your assets into an index fund.",
+        "Once a year, compare your savings rate against inflation.",
+        "Start automatic dollar-cost averaging."
+      ],
+      "red_flags": [
+        "Is everything you own locked in savings accounts?",
+        "Have you lent money to friends and never got it back?"
+      ]
+    },
+    "THE_OPERATOR": {
+      "headline": "You excel at moving capital and seizing opportunity.",
+      "body": "You enjoy money in motion. Rather than letting capital sit, you're skilled at spotting openings and putting it to work.\n\nSide ventures, small businesses, short-term investments — you have a real feel for generating income across many fronts. Fast decisions let you bet boldly when others hesitate, and sometimes you win big.\n\nBut when everything flows fast, leaks widen too. If you don't build a safety net while cash is good, you'll be fragile in a downturn.",
+      "patterns": [
+        "You try to build multiple income sources.",
+        "You take risks but spread them out.",
+        "Spending rises as fast as income does."
+      ],
+      "best_match": [
+        "THE_STEWARD",
+        "THE_ANCHOR"
+      ],
+      "best_reason": "A partner who anchors the assets you scatter.",
+      "challenging_match": [
+        "THE_OPERATOR"
+      ],
+      "challenging_reason": "If both of you love risk, recovery in a crisis is hard.",
+      "actions": [
+        "Lock 30% of income into automatic savings.",
+        "Impose a 3-day cooling-off period before any new investment.",
+        "Use a debit card instead of credit to control spending."
+      ],
+      "red_flags": [
+        "Is income high but nothing ever stays in the account?",
+        "Are you borrowing to invest?"
+      ]
+    },
+    "THE_FLOW": {
+      "headline": "You ride the current of money flexibly.",
+      "body": "You have no fixed dogma about money. Through networks, intuition, and circumstance, income finds you naturally.\n\nSome periods bring big inflows; others run dry. You accept the rhythm calmly — and you have a knack for pulling opportunity toward you when you need it.\n\nThat flexibility is a strength. But improvising without a plan can wreck your finances. A minimum safety net is non-negotiable.",
+      "patterns": [
+        "Your income and spending swing widely.",
+        "Wealth opportunities arrive through people.",
+        "You spend as you go rather than budgeting."
+      ],
+      "best_match": [
+        "THE_STEWARD",
+        "THE_ANCHOR"
+      ],
+      "best_reason": "Someone who keeps you centered so your life has fewer swings.",
+      "challenging_match": [
+        "THE_OPERATOR"
+      ],
+      "challenging_reason": "Two improvisers is a fast road to ruin.",
+      "actions": [
+        "Split into two accounts (emergency / living).",
+        "Wait 24 hours before any large purchase.",
+        "Save 10% of every month's income, unconditionally."
+      ],
+      "red_flags": [
+        "Are you juggling credit-card debt from month to month?",
+        "Have you been talked into an investment by a friend and lost money?"
+      ]
+    }
+  },
+  "WORK_CONTENT": {
+    "THE_CREATOR": {
+      "headline": "You shine when the work carries your own mark.",
+      "body": "You hate following the manual. You feel most accomplished when you plan and build something yourself and imprint your own color on it.\n\nIn fields that demand creativity — planning, design, marketing, content — you perform best, especially in environments that grant autonomy.\n\nBut being a creator has a price. Dry spells and undervalued output hurt easily. Practicing joy in the process, not just the result, is essential.",
+      "patterns": [
+        "Autonomy matters more to you than rules.",
+        "You have the execution muscle to make ideas real.",
+        "You react sharply to criticism."
+      ],
+      "best_match": [
+        "THE_OFFICER",
+        "THE_MENTOR"
+      ],
+      "best_reason": "Someone who can systemize and champion your creativity.",
+      "challenging_match": [
+        "THE_OFFICER"
+      ],
+      "challenging_reason": "You clash head-on with bosses who demand only compliance.",
+      "actions": [
+        "Carve out 5 hours a week of deep creative focus.",
+        "Ship output at 80% instead of 100%.",
+        "Reframe criticism as feedback, not attack."
+      ],
+      "red_flags": [
+        "Is perfectionism making you miss deadlines?",
+        "Are you ignoring every instruction from a boss?"
+      ]
+    },
+    "THE_CHALLENGER": {
+      "headline": "You come alive when you flip the board.",
+      "body": "You can't stand stagnant peace. When someone says 'we've always done it this way,' your brain silently screams, 'Is there a better way?'\n\nIn crises, restructurings, or new ventures, your true leadership shows. You latch onto problems others abandon and keep going until you find the answer.\n\nBut too much criticism erodes team morale. Don't just point out what's broken — always offer the alternative.",
+      "patterns": [
+        "You can't let inefficiency slide.",
+        "You rise into leadership during crises.",
+        "You're unafraid to challenge authority."
+      ],
+      "best_match": [
+        "THE_CREATOR",
+        "THE_OFFICER"
+      ],
+      "best_reason": "Someone who can turn your ideas into products or systems.",
+      "challenging_match": [
+        "THE_OFFICER"
+      ],
+      "challenging_reason": "You collide with people who insist on the rules.",
+      "actions": [
+        "Always pair complaints with alternatives.",
+        "Learn to save face for the boss in conversations.",
+        "Practice listening to a colleague all the way through."
+      ],
+      "red_flags": [
+        "Are you opposing for the sake of opposing?",
+        "Is your presence making teammates shrink?"
+      ]
+    },
+    "THE_OFFICER": {
+      "headline": "You're a trusted core player in structured organizations.",
+      "body": "You value principles and process. You perform most reliably when the rules are clear and the systems are well-built.\n\nYour fairness and responsibility earn deep trust from both bosses and peers. Large companies, public institutions, finance, law — you fit well there.\n\nBut in fast-moving or ambiguous settings you may feel stuck. Sometimes flexibility beats the rulebook.",
+      "patterns": [
+        "You finish what you're given, no matter what.",
+        "You value hierarchy and clear reporting lines.",
+        "You're excellent at pre-empting risk."
+      ],
+      "best_match": [
+        "THE_CHALLENGER",
+        "THE_PIONEER"
+      ],
+      "best_reason": "Innovators who add change on top of your stable foundation.",
+      "challenging_match": [
+        "THE_CHALLENGER"
+      ],
+      "challenging_reason": "You clash with people who constantly break the rules.",
+      "actions": [
+        "Learn a new tool and automate part of your workflow.",
+        "When a directive is unfair, persuade with data.",
+        "Practice welcoming ideas from younger colleagues."
+      ],
+      "red_flags": [
+        "Do you say 'we've always done it this way' too often?",
+        "Are you falling behind by resisting change?"
+      ]
+    },
+    "THE_SURVIVOR": {
+      "headline": "You're forged under pressure that others would break from.",
+      "body": "You have a higher stress threshold than most. In crises your focus sharpens, and you find grit others can't summon when they say it's impossible.\n\nYou stand out in sales, restructuring, crisis management — anywhere pressure is real. Once you commit to a goal, you go all in.\n\nBut that toughness can read as cold or ruthless. Showing vulnerability is also a form of leadership.",
+      "patterns": [
+        "You stay calm under crisis.",
+        "Your obsession with the goal is intense.",
+        "You're clumsy with emotional expression."
+      ],
+      "best_match": [
+        "THE_MENTOR",
+        "THE_FLOW"
+      ],
+      "best_reason": "Someone who softens your edge.",
+      "challenging_match": [
+        "THE_SURVIVOR"
+      ],
+      "challenging_reason": "Two aggressives and the team gets scorched.",
+      "actions": [
+        "Set one full day off each week.",
+        "Approach a colleague first with thanks.",
+        "Use exercise or a hobby to discharge stress."
+      ],
+      "red_flags": [
+        "Are you running through burnout signals?",
+        "Are teammates afraid of you?"
+      ]
+    },
+    "THE_MYSTIC": {
+      "headline": "You see the essence and structure others miss.",
+      "body": "You dig past the surface to the mechanics underneath. You're excellent at extracting the core from complex data or situations.\n\nResearch, strategic planning, data analysis, consulting — anything requiring deep thinking. Your intuition spots connections others overlook.\n\nBut thinking too deeply delays action. Summon the courage to start before the picture is complete.",
+      "patterns": [
+        "You analyze heavily before acting.",
+        "Your intuitive insight is outstanding.",
+        "Surface-level work bores you."
+      ],
+      "best_match": [
+        "THE_PIONEER",
+        "THE_CHALLENGER"
+      ],
+      "best_reason": "Executors who turn your analysis into action.",
+      "challenging_match": [
+        "THE_GENERALIST"
+      ],
+      "challenging_reason": "You can't connect with people who skim the surface.",
+      "actions": [
+        "Force yourself to take the first step within 3 days of analysis.",
+        "Visualize and share your analysis with the team.",
+        "Find a partner with strong execution."
+      ],
+      "red_flags": [
+        "Are you analyzing while opportunities slip by?",
+        "Are you too deep inside your own head?"
+      ]
+    },
+    "THE_MENTOR": {
+      "headline": "You're exceptional at unlocking others' potential.",
+      "body": "You have a natural gift for spotting and growing others' strengths. Teaching and advising brings you deep satisfaction.\n\nEducation, HR, consulting, management — you flourish. Teams you pass through carry your culture long after you leave.\n\nBut focusing on others' growth can leave you behind. Show that you're still growing too, and respect grows even deeper.",
+      "patterns": [
+        "You listen well to juniors' struggles.",
+        "You love sharing what you know.",
+        "You tend to put your own results last."
+      ],
+      "best_match": [
+        "THE_SURVIVOR",
+        "THE_CREATOR"
+      ],
+      "best_reason": "People who take your warm advice and pay it back with results.",
+      "challenging_match": [
+        "THE_SURVIVOR"
+      ],
+      "challenging_reason": "Lone-wolf styles may not mesh with yours.",
+      "actions": [
+        "Define your own career goals clearly.",
+        "Build expertise of your own beyond mentoring.",
+        "Show juniors that you're still learning from them."
+      ],
+      "red_flags": [
+        "Are you caring for juniors while your own review sinks?",
+        "Are you resting on teaching alone?"
+      ]
+    },
+    "THE_GENERALIST": {
+      "headline": "You create synergy by crossing many fields.",
+      "body": "You're not a one-well specialist. You're a T-shaped talent who connects knowledge across domains to create new value.\n\nPlanning, PM, project management — anywhere you can play the lubricant between stakeholders. You adapt fluidly and survive in any org.\n\nBut you may be told you lack depth. For your breadth to be a real strength, build at least one spike no one can match.",
+      "patterns": [
+        "You're curious and love learning.",
+        "You adapt roles fluidly to the moment.",
+        "Your focus sometimes scatters."
+      ],
+      "best_match": [
+        "THE_MYSTIC",
+        "THE_BLADE"
+      ],
+      "best_reason": "People who integrate your varied ideas into one strategy.",
+      "challenging_match": [
+        "THE_OFFICER"
+      ],
+      "challenging_reason": "People who insist on one rule frustrate you.",
+      "actions": [
+        "Pick the single expertise you'll concentrate on this year.",
+        "Use your broad network to create collaboration opportunities.",
+        "Turn your experience into content."
+      ],
+      "red_flags": [
+        "Are you starting a lot and finishing nothing?",
+        "Are you actually working to become an expert at something?"
+      ]
+    }
+  },
+  "BONDS_CONTENT": {
+    "THE_TWIN": {
+      "headline": "You feel most comfortable as equals.",
+      "body": "You dislike leading or leaning on someone. You want eye-level partnership and walking in the same direction together.\n\nYou value acknowledging each other's differences and growing side by side. You build deep bonds without burdening each other.\n\nBut if you only chase the 'cool' dynamic, deep intimacy can be hard. Learn to lean in sometimes.",
+      "patterns": [
+        "You prefer friend-level comfort over romance.",
+        "You respect each other's private space.",
+        "You dislike power struggles."
+      ],
+      "best_match": [
+        "THE_ALLY",
+        "THE_EMPATH"
+      ],
+      "best_reason": "Someone who respects your autonomy and approaches softly.",
+      "challenging_match": [
+        "THE_TWIN"
+      ],
+      "challenging_reason": "Two cool types can make the relationship stale.",
+      "actions": [
+        "Sometimes be the first to reach out.",
+        "Speak up honestly when something is off.",
+        "Create one shared hobby."
+      ],
+      "red_flags": [
+        "Are you so detached that your partner feels hurt?",
+        "Are you hiding feelings to avoid conflict?"
+      ]
+    },
+    "THE_RIVAL": {
+      "headline": "You enjoy healthy competition that spurs each other.",
+      "body": "You'd rather have someone who challenges you than someone who always agrees. You want a partner willing to debate and push.\n\nYou exchange strong opinions and sharpen each other through honest feedback. Never boring — you keep learning from each other.\n\nBut not every conversation needs to be a debate. Know when the other person needs comfort, not advice.",
+      "patterns": [
+        "You don't fear disagreement.",
+        "Your humor and competitive streak run deep.",
+        "You argue with logic more than emotion."
+      ],
+      "best_match": [
+        "THE_EMPATH",
+        "THE_ALLY"
+      ],
+      "best_reason": "People who soften your edge and arbitrate gently.",
+      "challenging_match": [
+        "THE_RIVAL"
+      ],
+      "challenging_reason": "If both want to win, the relationship breaks.",
+      "actions": [
+        "Check the other person's feelings mid-debate.",
+        "Compliment your partner once a day.",
+        "Practice listening without countering."
+      ],
+      "red_flags": [
+        "Are you saying hurtful things to win?",
+        "Are you arguing logic while your partner is exhausted?"
+      ]
+    },
+    "THE_ALLY": {
+      "headline": "Once you take someone in, you stay for good.",
+      "body": "You don't collect people. You choose carefully, and once someone is 'yours,' you stay. Your loyalty is quiet but very strong.\n\nWhen friends or family fall into trouble, you rush in first. Steady allies trail you everywhere.\n\nBut that loyalty can burden the other person. Letting go of the need to fix everything is also love.",
+      "patterns": [
+        "You place enormous value on loyalty.",
+        "You can't look away when a friend is in trouble.",
+        "You're endlessly generous to your inner circle."
+      ],
+      "best_match": [
+        "THE_TWIN",
+        "THE_PIONEER"
+      ],
+      "best_reason": "People who treasure your steady support and grow with it.",
+      "challenging_match": [
+        "THE_OPERATOR"
+      ],
+      "challenging_reason": "People who exploit your loyalty hurt you.",
+      "actions": [
+        "Drop the compulsion to solve everything yourself.",
+        "Help only when asked.",
+        "Cut relationships that drain you."
+      ],
+      "red_flags": [
+        "Is your life falling apart because you're upholding loyalty?",
+        "Are you being used by takers?"
+      ]
+    },
+    "THE_EMPATH": {
+      "headline": "You read other people's emotions deeply.",
+      "body": "You catch how someone feels fast and accurately. You know they're off before they do. That makes you a rare friend.\n\nPeople gather to you because you understand without being told. You give them deep emotional safety.\n\nBut over-empathizing means neglecting your own feelings. Practice healthy boundaries between yourself and others.",
+      "patterns": [
+        "You read facial shifts well.",
+        "You're excellent at empathy and comfort.",
+        "You try to carry everyone's feelings alone."
+      ],
+      "best_match": [
+        "THE_RIVAL",
+        "THE_BLADE"
+      ],
+      "best_reason": "People who stay grounded and don't get swept up in your emotions.",
+      "challenging_match": [
+        "THE_EMPATH"
+      ],
+      "challenging_reason": "Two empaths exhaust each other.",
+      "actions": [
+        "Ask yourself once a day how you feel first.",
+        "Don't resolve others' emotions for them.",
+        "Protect enough alone time."
+      ],
+      "red_flags": [
+        "Are you drowning in others' sadness?",
+        "Are you postponing your own feelings?"
+      ]
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "DISPLAY_TPL": "{years} años {months} meses",
+  "CORRECTION_TPL": " (corregido a la edad de inicio {start_age})"
+}

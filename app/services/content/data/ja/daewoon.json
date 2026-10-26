@@ -1,0 +1,4 @@
+{
+  "DISPLAY_TPL": "{years}年{months}ヶ月",
+  "CORRECTION_TPL": " (開始年齢{start_age}歳に補正)"
+}

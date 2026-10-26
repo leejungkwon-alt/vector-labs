@@ -1,0 +1,4 @@
+{
+  "DST_AMBIGUOUS": "Esta hora es ambigua: {clock} ocurre dos veces en {tz}. Vuelve a solicitar con dst_fold=0 (offset {off0}) o dst_fold=1 (offset {off1}).",
+  "DST_GAP": "Esta hora no existe: {clock} es omitida por el horario de verano en {tz}."
+}

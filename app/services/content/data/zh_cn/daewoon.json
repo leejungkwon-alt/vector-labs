@@ -1,0 +1,4 @@
+{
+  "DISPLAY_TPL": "{years}年{months}个月",
+  "CORRECTION_TPL": " (调整为 {start_age} 岁开始)"
+}

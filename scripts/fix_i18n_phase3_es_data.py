@@ -14,6 +14,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+# verify() 안에서 `from app...` import가 되도록 — 재실행 시 안전
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 DATA = ROOT / "app" / "services" / "content" / "data"
 EN = DATA / "en"
 ES = DATA / "es"

@@ -22,11 +22,11 @@ botfather_api
 *.p12
 *.jks
 *.mobileprovision
-data/
-data/auth.db
-data/auth.db-journal
-data/auth.db-wal
-data/auth.db-shm
+/data/
+/data/auth.db
+/data/auth.db-journal
+/data/auth.db-wal
+/data/auth.db-shm
 
 # --- OS / IDE ---
 .DS_Store
@@ -73,3 +73,6 @@ frontend/*.apk
 # SAJU patch backups & temp
 __pycache__/
 scripts/__pycache__/
+
+# ÄÜÅÙÃ÷ ÆÑÀº git¿¡ Æ÷ÇÔ
+!app/services/content/data/
