@@ -217,7 +217,12 @@
     "directions": "Directions",
     "activities": "Activities",
     "foods": "Foods",
-    "watchOutLabel": "Watch out"
+    "watchOutLabel": "Watch out",
+    "wood": "Wood",
+    "fire": "Fire",
+    "earth": "Earth",
+    "metal": "Metal",
+    "water": "Water"
   },
   "api": {
     "timeout": "Server timed out. Please check your network."

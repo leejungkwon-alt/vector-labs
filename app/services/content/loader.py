@@ -8,34 +8,6 @@
 
 # 언어별 팩 레지스트리. 새 언어 추가 시 여기만 갱신.
 import json
-_REGISTRY = {
-    "en": {
-        "core": "app.services.content.en.core",
-        "sections": "app.services.content.en.sections",
-        "energy": "app.services.content.en.energy",
-        "lucky_code": "app.services.content.en.lucky_code",
-        "year": "app.services.content.en.year",
-        "health": "app.services.content.en.health",
-        "age_band": "app.services.content.en.age_band",
-        "monthly": "app.services.content.en.monthly", "sinsal": "app.services.content.en.sinsal",
-        "compatibility": "app.services.content.en.compatibility",
-        "personalization": "app.services.content.en.personalization",
-        "daily": "app.services.content.en.daily",
-    },
-    "ko": {
-        "core": "app.services.content.ko.core",
-        "sections": "app.services.content.ko.sections",
-        "energy": "app.services.content.ko.energy",
-        "lucky_code": "app.services.content.ko.lucky_code",
-        "year": "app.services.content.ko.year",
-        "health": "app.services.content.ko.health",
-        "age_band": "app.services.content.ko.age_band",
-        "monthly": "app.services.content.ko.monthly", "sinsal": "app.services.content.ko.sinsal",
-        "compatibility": "app.services.content.ko.compatibility",
-        "personalization": "app.services.content.ko.personalization",
-        "daily": "app.services.content.ko.daily",
-    },
-}
 
 _CACHE: dict = {}
 
@@ -49,7 +21,7 @@ def load_pack(lang: str, section: str) -> dict:
     언어·섹션 팩을 로드.
 
     JSON 파일 우선 로드 (data/{lang}/{section}.json).
-    파일이 없으면 기존 _REGISTRY 기반 KeyError.
+    파일이 없으면 KeyError.
     """
     cache_key = (lang, section)
     if cache_key in _CACHE:
@@ -66,7 +38,7 @@ def load_pack(lang: str, section: str) -> dict:
 
     # 신규 언어(es 등)의 data/{lang}/ 팩이 아직 없으면 en으로 폴백.
     # 화이트리스트(_SUPPORTED_FALLBACK_LANGS)에 있는 언어만 — 알 수 없는
-    # lang은 아래 _REGISTRY 검사에서 KeyError로 fail-fast.
+    # 화이트리스트 밖의 lang은 아래에서 KeyError로 fail-fast.
     if lang in _SUPPORTED_FALLBACK_LANGS and lang != "en":
         en_path = pathlib.Path(__file__).parent / "data" / "en" / f"{section}.json"
         if en_path.exists():
@@ -75,11 +47,6 @@ def load_pack(lang: str, section: str) -> dict:
             _CACHE[cache_key] = pack
             return pack
 
-    if lang not in _REGISTRY:
-        raise KeyError(f"Language pack not registered: {lang}")
-    
-    if section not in _REGISTRY[lang]:
-        raise KeyError(f"Section '{section}' not available for lang '{lang}'")
     raise KeyError(f"Data file not found: {data_path}")
 
 
@@ -105,5 +72,5 @@ def list_available(lang: str) -> list:
     lang_dir = pathlib.Path(__file__).parent / "data" / lang
     if lang_dir.exists():
         return sorted(p.stem for p in lang_dir.glob("*.json"))
-    return list(_REGISTRY.get(lang, {}).keys())
+    return []
 

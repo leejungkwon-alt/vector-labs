@@ -217,7 +217,12 @@
     "directions": "方位",
     "activities": "活动",
     "foods": "食物",
-    "watchOutLabel": "注意"
+    "watchOutLabel": "注意",
+    "wood": "木 (Wood)",
+    "fire": "火 (Fire)",
+    "earth": "土 (Earth)",
+    "metal": "金 (Metal)",
+    "water": "水 (Water)"
   },
   "api": {
     "timeout": "服务器响应超时。请检查网络连接。"

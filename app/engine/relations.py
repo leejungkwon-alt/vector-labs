@@ -65,7 +65,7 @@ SAN_HYEONG = [
     (frozenset(["丑", "戌", "未"]), "지세지형", "권력 다툼·고집"),
     (frozenset(["子", "卯"]), "무례지형", "예의 결여·성급함"),
 ]
-# 자형: 같은 땅의 기운가 2개 이상 있을 때 성립
+# 자형: 같은 땅의 기운이 2개 이상 있을 때 성립
 ZIHYEONG_BRANCHES = {"辰", "午", "酉", "亥"}
 
 # ---- 육해 ----
@@ -237,7 +237,7 @@ def _detect_hyeong(branches_by_pos: dict) -> list:
                 "branches": [branches_by_pos[p] for p in positions_with],
             })
 
-    # 자형: 같은 땅의 기운가 2개 이상
+    # 자형: 같은 땅의 기운이 2개 이상
     counts = Counter(branches_by_pos.values())
     for branch, cnt in counts.items():
         if branch in ZIHYEONG_BRANCHES and cnt >= 2:

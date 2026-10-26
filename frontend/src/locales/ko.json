@@ -217,7 +217,12 @@
     "directions": "방위",
     "activities": "활동",
     "foods": "음식",
-    "watchOutLabel": "주의"
+    "watchOutLabel": "주의",
+    "wood": "목 (Wood)",
+    "fire": "화 (Fire)",
+    "earth": "토 (Earth)",
+    "metal": "금 (Metal)",
+    "water": "수 (Water)"
   },
   "api": {
     "timeout": "서버 응답 시간이 초과되었습니다. 네트워크 상태를 확인해주세요."

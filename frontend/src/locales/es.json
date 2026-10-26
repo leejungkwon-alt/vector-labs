@@ -217,7 +217,12 @@
     "directions": "Direcciones",
     "activities": "Actividades",
     "foods": "Comidas",
-    "watchOutLabel": "Atención"
+    "watchOutLabel": "Atención",
+    "wood": "Madera",
+    "fire": "Fuego",
+    "earth": "Tierra",
+    "metal": "Metal",
+    "water": "Agua"
   },
   "api": {
     "timeout": "El servidor agotó el tiempo de espera. Por favor, revisa tu red."

@@ -33,7 +33,7 @@ SAMHAP_GROUPS = {
 
 
 def _samhap_group(branch: str) -> str:
-    """땅의 기운가 속한 삼합국 문자열 반환. 없으면 빈 문자열."""
+    """땅의 기운이 속한 삼합국 문자열 반환. 없으면 빈 문자열."""
     if not branch:                     # ← 빈 문자열 / None 방어
         return ""
     for group in SAMHAP_GROUPS:
