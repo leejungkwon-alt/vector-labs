@@ -1,53 +1,53 @@
 {
   "AGE_BAND_CONTENT": {
     "EARLY": {
-      "label": "Early",
-      "headline": "You are in the exploration phase.",
-      "body": "The goal right now isn't to have the right answer. It's to gather data — about what energizes you, what drains you, and what you're willing to do when no one is watching. Commitments made now are experiments, not contracts.",
+      "label": "探索期",
+      "headline": "今は人生の探索期です。",
+      "body": "今は正解を当てる時ではなく、データを集める時です。何が自分を生かし、何が自分を疲れさせるのか——誰も見ていないときに自分が何を選ぶのか、それを知っていくプロセスです。今の選択は生涯を縛る契約ではなく、気軽な実験だと思って構いません。",
       "advice": [
-        "Try one thing this quarter that scares you a little.",
-        "Track what actually energizes you, not what looks good on paper.",
-        "Say yes to breadth. Depth comes later."
+        "この四半期に、少し怖いことをひとつ試してみましょう。",
+        "紙の上で立派に見えることではなく、実際に自分を高揚させるものを記録しましょう。",
+        "今は広く経験しましょう。深くなるのは後でもできます。"
       ]
     },
     "MID": {
-      "label": "Building",
-      "headline": "You are in the compounding phase.",
-      "body": "What you plant now has time to grow roots. The returns feel slow because they are slow — and that's exactly why they compound. This is the season to pick the few things worth going deep on and to stop apologizing for the things you leave behind.",
+      "label": "蓄積期",
+      "headline": "今は人生の蓄積期です。",
+      "body": "今蒔く種には、根を張るだけの十分な時間があります。リターンが遅く感じられるのは、実際に遅いから——そしてそれこそが複利で積み上がる理由です。この季節の課題は、深く掘る価値のあるいくつかを選び、手放したものについてもう謝らないことです。",
       "advice": [
-        "Pick one skill, one relationship, one asset. Go deeper, not wider.",
-        "Say no to three things that don't serve the long game.",
-        "Start something that won't pay off for five years."
+        "スキルひとつ、関係ひとつ、資産ひとつだけ選んで深く掘りましょう。",
+        "長いゲームに奉仕しない三つのことに、潔く「いいえ」と言いましょう。",
+        "5年後にはじめて報われる何かを、ひとつ始めましょう。"
       ]
     },
     "PEAK": {
-      "label": "Peak Output",
-      "headline": "You are in the output phase.",
-      "body": "The world wants what you can produce. The risk isn't laziness — it's overextension. Everyone wants a piece of you. What you do now defines your reputation for the next decade. Protect the margins that make the output sustainable.",
+      "label": "全盛期",
+      "headline": "今は人生の全盛期です。",
+      "body": "世界があなたの成果物を求めています。危険なのは怠惰ではなく「過剰拡張」。誰もがあなたのエネルギーを欲しがります。今放つものがこの先10年の評判を決めます。あなたの体力を削らずに済む余白を、意識して守ってください。",
       "advice": [
-        "Design your week around what only you can do.",
-        "Delegate or drop everything else.",
-        "Guard one day a week that is completely yours."
+        "あなたにしかできないことを中心に一週間を設計しましょう。",
+        "それ以外のことは潔く委任するか、捨てましょう。",
+        "週に一日は完全にあなただけの時間として空けておきましょう。"
       ]
     },
     "SENIOR": {
-      "label": "Harvest",
-      "headline": "You are in the harvest phase.",
-      "body": "Shift from doing to directing. From output to wisdom. The value you bring now isn't in the hours you log — it's in the judgment you've earned. The people around you need your perspective more than your labor.",
+      "label": "収穫期",
+      "headline": "今は人生の収穫期です。",
+      "body": "「する」から「導く」へ、成果から知恵へ移動する時期です。今のあなたの価値は、注ぎ込む時間ではなく、積み上げてきた判断力から生まれます。周りの人はあなたの労働よりも、あなたの深い視点を必要としています。",
       "advice": [
-        "Trade one task for one mentee.",
-        "Say the long answer — people are listening now.",
-        "Let one thing go that you've been carrying for years."
+        "一人で抱えていた仕事をひとつ、メンティーに渡して教えましょう。",
+        "長く語って構いません。今、あなたの話を聞こうとする人がいます。",
+        "何年も心に抱えていた荷物をひとつ、下ろしましょう。"
       ]
     },
     "ELDER": {
-      "label": "Legacy",
-      "headline": "You are in the legacy phase.",
-      "body": "Presence matters more than productivity. What you leave behind has already been planted. The work now is in how you show up — for the people who come after, and for the parts of yourself that are still growing.",
+      "label": "存在期",
+      "headline": "今は人生の存在期です。",
+      "body": "生産性よりも存在そのものが大切になる時期です。残すものはすでに植え終えました。今の課題は、どう存在するか——後に来る人たちに、そしてまだ育っている自分の内面に向き合うことです。",
       "advice": [
-        "Write down one thing only you know.",
-        "Spend time with someone younger — as a peer, not a teacher.",
-        "Choose a small ritual to anchor your day."
+        "あなただけが知っていることを、ひとつ書き残しましょう。",
+        "若い人と、先生ではなく対等な仲間として時間を過ごしましょう。",
+        "毎日をしっかり支えてくれる小さな習慣をひとつ選びましょう。"
       ]
     }
   }
