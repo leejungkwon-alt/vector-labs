@@ -1,46 +1,53 @@
 {
   "SINSAL_CONTENT": {
     "MAGNETIC_DRAW": {
-      "name": "Magnetic Draw",
-      "headline": "People notice you — often before you've said a word.",
-      "body": "You carry a natural charisma that draws others in. This isn't performative; it's a quiet gravity. People remember you, and they want to be around you.",
-      "advice": "Use this pull responsibly. Let people in, but don't collect them. Depth beats volume."
+      "name": "引き寄せる魅力",
+      "headline": "あなたは言葉を発する前から、人の視線を引き寄せる魅力を持っています。",
+      "body": "生まれつきの引力があります。これは演じているのではなく、自然に滲み出る重力のようなもの。人はあなたを記憶し、そばにいたいと思います。",
+      "advice": "この引力を責任をもって使いましょう。人を引き寄せても、所有しようとしないこと。深さは量に勝ります。",
+      "name_traditional": "桃花"
     },
     "RESTLESS_FEET": {
-      "name": "Restless Feet",
-      "headline": "You are wired for movement.",
-      "body": "Staying in one place — physically or mentally — wears you down. You thrive when you're traveling, exploring, or constantly learning something new.",
-      "advice": "Build movement into your life intentionally. If you can't travel, change your routine."
+      "name": "旅人の足",
+      "headline": "あなたは動くために生まれています。",
+      "body": "一か所に留まることは、体でも心でもあなたを疲れさせます。旅、探検、新しい学びを通じて生き生きとします。",
+      "advice": "日常に意識的に動きを取り入れましょう。旅が難しければ、ルーティンを変えてみてください。",
+      "name_traditional": "驛馬"
     },
     "SOLITARY_DEPTH": {
-      "name": "Solitary Depth",
-      "headline": "You have a rich inner world that few get to see.",
-      "body": "You are drawn to quiet, introspection, and solitary pursuits. Your creativity and insight come from this deep well. It's not loneliness — it's space.",
-      "advice": "Protect your alone time. It's not a luxury; it's your source of power."
+      "name": "静かな省察者",
+      "headline": "あなたの内面は、誰でも入れる深い空間ではありません。",
+      "body": "静けさ、内省、一人の活動に惹かれます。創造性と洞察はこの深い井戸から生まれます。それは孤独ではなく余白です。",
+      "advice": "一人の時間を守りましょう。贅沢品ではなく、あなたの力の源です。",
+      "name_traditional": "華蓋"
     },
     "ALLY_MAGNET": {
-      "name": "Ally Magnet",
-      "headline": "You attract people who want to help you.",
-      "body": "You naturally draw in mentors, allies, and supporters. When you're in trouble, help arrives from unexpected places. This is a rare and valuable gift.",
-      "advice": "Accept help gracefully. You don't have to do everything alone."
+      "name": "頼れる支援者",
+      "headline": "あなたは助けたいと思ってくれる人を引き寄せます。",
+      "body": "メンター、支援者、恩人が自然と集まってきます。困難なときに予想外の場所から助けが届きます。とても稀有で貴重な才能です。",
+      "advice": "助けを素直に受け入れましょう。すべてを一人でやる必要はありません。",
+      "name_traditional": "天乙貴人"
     },
     "SCHOLAR_MIND": {
-      "name": "Scholar Mind",
-      "headline": "You have a natural hunger for knowledge.",
-      "body": "You process information deeply and love learning for its own sake. You are at your best when you're studying, writing, or teaching others.",
-      "advice": "Never stop learning. Your mind is your greatest asset."
+      "name": "学びの探究者",
+      "headline": "知識に対する生まれつきの渇望があります。",
+      "body": "情報を深く処理し、学ぶこと自体を愛します。学び、書き、教えるときに最高の姿を見せます。",
+      "advice": "学びを止めないでください。あなたの脳こそ最大の資産です。",
+      "name_traditional": "文昌貴人"
     },
     "SHARP_EDGE": {
-      "name": "Sharp Edge",
-      "headline": "You have a competitive, unyielding drive.",
-      "body": "You are ambitious, competitive, and fiercely independent. When you decide to win, you don't stop. This is a double-edged sword — it can burn you out if you don't pace yourself.",
-      "advice": "Direct your intensity toward your goals, not against yourself."
+      "name": "揺るがない推進力",
+      "headline": "あなたは競争心が強く、決して屈しない推進力があります。",
+      "body": "野心家で競争心が強く、独立心も強い。一度勝つと決めたら止まりません。両刃の剣で、ペースを崩すと燃え尽きる可能性があります。",
+      "advice": "あなたの強さを目標に注ぎましょう。自分を削るのではなく。",
+      "name_traditional": "羊刃"
     },
     "COMMANDER": {
-      "name": "Commander",
-      "headline": "You are a natural leader with a strong moral compass.",
-      "body": "You take charge when others hesitate. You have a strong sense of justice and aren't afraid to make tough decisions. People look to you when things get hard.",
-      "advice": "Lead with empathy. Strength without kindness becomes isolation."
+      "name": "生まれながらの指揮官",
+      "headline": "強い道徳観を持つ生まれながらのリーダーです。",
+      "body": "他の人がためらうときに先頭に立ちます。正義感が強く、難しい決断を恐れません。困難なときに人があなたを訪ねます。",
+      "advice": "共感をもって導きましょう。親切のない強さは孤立になります。",
+      "name_traditional": "魁罡"
     }
   }
 }
