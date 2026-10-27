@@ -1,28 +1,28 @@
 {
-  "name": "Jewel in Winter Garden",
+  "name": "冬の庭の宝石",
   "pillar": "辛丑",
-  "hero": "You're a jewel set in a winter garden. Buried in cold ground, but the moment light reaches you, no one shines with more precision.",
+  "hero": "あなたは冬の庭に置かれた宝石です。冷たい土の下に埋もれていても、光が届いた瞬間、誰よりも精密に輝く人です。",
   "narrative": [
-    "You carry a restrained kind of beauty. 辛丑 is crafted metal resting on cold, damp earth. You don't show your feelings loudly, but what's inside you is unusually fine. People remember you as quiet — and then one day they notice a strange care in the things you make and the things you choose.",
-    "Your strength is hidden completeness. You hold your standard even when no one is watching. You don't make a show of it, but the things that pass through your hands don't come out messy. It's less effort than instinct — you can feel the tiny line between 'this is fine' and 'this is not', and you hold it.",
-    "Your shadow is getting tired of not being seen. A jewel in a winter garden is just a cold stone to anyone who doesn't come to look. You don't give yourself credit for your own care, and you quietly wait for someone else to notice. That waiting turns into hurt, and hurt turns into doubting your own standard.",
-    "A mature Xin-Chou knows their own light. Recognizing your own completeness even when nobody's looking, and bringing it out into view when the moment calls. Then your precision stops being a hidden jewel and becomes a garden people come to sit in."
+    "あなたは節制された美しさを携えています。辛丑は、冷たく湿った大地の上に細工された金属が坐した柱です。感情を大きな声で示すことはありませんが、内に秘めたものは並外れて精巧です。人はあなたを静かな人として記憶し、ある日ふと、あなたが作るもの、選ぶものに宿る奇妙な「丁寧さ」に気づきます。",
+    "あなたの強みは隠れた完成度です。誰も見ていないときでも自分の基準を保ちます。それを誇示することはありませんが、あなたの手を通ったものは乱れて出てくることはありません。努力というより本能です。あなたは「これで十分」と「これは違う」の間の、ごく細い線を本能的に感じ取れるのです。",
+    "あなたの影は、認められないことに疲れることです。冬の庭の宝石は、誰かが見に来なければただの冷たい石です。あなたは自分の丁寧さを自分で認めることなく、誰かが気づいてくれるのを静かに待ちます。その待機が長くなると傷になり、傷が長くなると自分の基準そのものを疑い始めるのです。",
+    "成熟した辛丑は、自分自身の光を自分で知る人です。誰も見ていなくても自分の完成度を自ら認め、必要なときには自ら光を差し出せる人。そのとき、あなたの精密さはもはや隠された宝石ではなく、人が訪れて腰を下ろす庭となるのです。"
   ],
   "shadows": [
-    "Quietly storing hurt when your care goes unseen.",
-    "Not giving yourself credit for your own completeness, always feeling insufficient.",
-    "Not showing feelings clearly enough that even those close to you misread you."
+    "せっかく丁寧に尽くしても認められないと、静かに傷を蓄えてしまいます。",
+    "自分の完成度を自分で認められず、いつも足りないと感じています。",
+    "感情をうまく表に出さないため、身近な人さえもあなたの本心を誤解してしまいます。"
   ],
   "advice": [
-    "Once this week, praise yourself out loud for one small thing you finished. No one else needs to hear it.",
-    "Before hurt stacks up, tell someone close: 'I'd like you to see this.'",
-    "Show one thing you've made to someone else. It doesn't have to be perfect.",
-    "Winter gardens have springs too. If you're in a dim season, that's a season, not a failure."
+    "今週は、あなたが成し遂げた小さなことをひとつ、誰が認めなくても自分に声を出して褒めてあげましょう。",
+    "傷が積み重なる前に、親しい人に「これ、見てほしかったんだ」と伝えてみましょう。",
+    "あなたの作品をひとつ、誰かに見せてみましょう。完璧でなくて構いません。",
+    "冬の庭にも春は来ます。今が翳りの季節なら、それは失敗ではなく季節です。"
   ],
   "keywords": [
-    "hidden completeness",
-    "restrained beauty",
-    "winter care",
-    "self-recognition"
+    "隠れた完成度",
+    "節制された美",
+    "冬の丁寧さ",
+    "自分を認める"
   ]
 }

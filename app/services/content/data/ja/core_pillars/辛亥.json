@@ -1,28 +1,28 @@
 {
-  "name": "Jewel in Water's Light",
+  "name": "水の光の宝石",
   "pillar": "辛亥",
-  "hero": "You're a jewel reflected in water. Quietly shining on deep water, illuminating the truth around you.",
+  "hero": "あなたは水の光に映る宝石です。深い水の上で静かに輝き、その光で周囲の真実を照らす人です。",
   "narrative": [
-    "You hold wisdom and precision together. 辛亥 is crafted metal resting on deep water. Metal over water reflects — and so does your mind. You see things more exactly than most people, even when you say nothing.",
-    "Your strength is precision in feeling. You read people with unusual accuracy — what they don't say, what flickers across their face, what sits underneath their voice. When people talk to you, they end up feeling strangely understood.",
-    "Your shadow is thinking like water rippling. Deep water reflects clearly, but ripples blur everything. When emotion rises, you get caught in the ripples and delay the decision that needed to be made. Opportunities pass in that delay.",
-    "A mature Xin-Hai governs the ripples. Keeping the emotion and the wisdom, but settling the water when a decision is actually needed. Then your wisdom is deep insight rather than wavering, and your light becomes a lighthouse people steer by."
+    "あなたは知恵と精密さを同時に携える人です。辛亥は、細工された金属の上に深い水の気が坐した柱です。金属が水の上にあると、その光は反射して周囲を照らします。あなたの知恵も同じです。静かですが、あなたが見ているものは誰よりも正確です。",
+    "あなたの強みは感情の精密さです。人の心をとても細やかに読み取ります。口に出されていないこと、表情をかすめたこと、声の下に横たわるものをあなたは察知します。だから、あなたと話すと人は不思議と「この人は私を理解している」と感じるのです。",
+    "あなたの影は、思考が水の波紋のように尾を引くことです。水が深ければ反射は鮮明ですが、波紋が立つとすべてが乱れます。あなたは感情が高ぶるとその波紋にさらわれ、本当に必要な判断を先延ばしにします。そして先延ばしの間に機会が過ぎ去っていくのです。",
+    "成熟した辛亥は、波紋を統御する人です。感情と知恵を保ちながら、決断が必要なときには波紋を静めて鮮明に見る。そのとき、あなたの知恵は揺らぎではなく深い洞察となり、あなたの光は人が頼りにする灯台となるのです。"
   ],
   "shadows": [
-    "Thinking so much that a decision gets delayed until the moment has passed.",
-    "Swept up by emotional ripples when you need to move.",
-    "Hiding your wisdom so well that people don't learn what you carry."
+    "考えすぎて決断を先延ばしにし、その間に機会を逃します。",
+    "感情の波紋にさらわれ、必要な瞬間に動けなくなります。",
+    "自分の知恵を隠しすぎて、周囲があなたの真価を知りません。"
   ],
   "advice": [
-    "Pick one decision to make this week and make it by a fixed deadline. It doesn't have to be perfect.",
-    "When emotion rises, ask: is this information, or is this a wave pulling me under?",
-    "Share one thing you know with someone. Your wisdom gets clearer when you share it.",
-    "Water needs earth. Give your day one small ritual that doesn't move."
+    "今週、決断すべきことをひとつ選び、期限を決めて必ず決めましょう。完璧でなくて構いません。",
+    "感情が高ぶったとき、「これは情報か、それとも私を沈める波か」と自問しましょう。",
+    "自分が知っていることをひとつ、誰かに分かち合いましょう。知恵は分かち合うほど鮮明になります。",
+    "水には大地が必要です。一日にひとつ、揺るがない小さな習慣を持ちましょう。"
   ],
   "keywords": [
-    "wisdom in water",
-    "precision in feeling",
-    "deep insight",
-    "clear judgment"
+    "水の知恵",
+    "感情の精密さ",
+    "深い洞察",
+    "鮮明な判断"
   ]
 }

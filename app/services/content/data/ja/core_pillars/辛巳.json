@@ -1,28 +1,28 @@
 {
-  "name": "Jewel in Heat",
+  "name": "熱の中の宝石",
   "pillar": "辛巳",
-  "hero": "You're a jewel forged in heat. Pressure makes you more precise, not weaker.",
+  "hero": "あなたは熱の中で鍛えられた宝石です。熱い圧力が、あなたを弱らせるのではなく、より精密にする人です。",
   "narrative": [
-    "You sharpen under pressure. 辛巳 is crafted metal resting on hot fire. Metal meeting fire either hardens or melts — you harden. Under difficulty, your focus actually improves and your precision comes alive.",
-    "Your strength is edge under pressure. When other people scatter, you get clearer. Important presentations, decisive moments, tight deadlines — that's where you're most yourself. This is a gift. Most people can't carry pressure. You burn it as fuel.",
-    "Your shadow is staying hot too long. Fire tempers metal, but kept hot indefinitely it melts it. You keep yourself under pressure out of habit. You feel guilty resting, and even when you rest you wonder what you should be doing. And then one day you go out completely.",
-    "A mature Xin-Si governs the heat. Keeping the pressure but putting recovery in between. Then your edge becomes sustained precision instead of exhaustion."
+    "あなたは圧力の中でより鮮明になる人です。辛巳は、細工された金属の上に熱い火の気が坐した柱です。金属が火に出会うと、強くなるか溶けるか——あなたは強くなる側です。困難な状況でむしろ集中力が高まり、精密さが生き返るのです。",
+    "あなたの強みは「プレッシャー下の鋭さ」です。他の人が乱れるとき、あなたはより正確になります。大切なプレゼン、決定的な瞬間、締め切りが迫るとき——そこでこそあなたの真価が現れます。これは才能です。多くの人はプレッシャーに耐えられませんが、あなたはプレッシャーを燃料に変えるのです。",
+    "あなたの影は、熱いままでいすぎることです。火は金属を鍛えますが、加熱し続ければ最終的に溶かします。あなたは自分の意志で自分を圧力の下に置き続けます。休むことに罪悪感を感じ、休んでいるときでも「この時間に何をすべきか」を考えます。そしてある日突然、完全に消えてしまうのです。",
+    "成熟した辛巳は、熱を統御する人です。熱いプレッシャーを保ちながら、その間に回復の時間を挟む。そのとき、あなたの鋭さは消耗ではなく、長く続く精密さとなるのです。"
   ],
   "shadows": [
-    "Feeling guilty about rest until you burn out completely.",
-    "Getting listless without pressure, so you manufacture your own.",
-    "When sensitivity meets pressure, small things land very hard."
+    "休むことに罪悪感を感じ、結局完全に燃え尽きてしまいます。",
+    "プレッシャーがないと無気力になり、自分でプレッシャーを作り出します。",
+    "感受性がプレッシャーと出会うと、些細なことにも強く響きます。"
   ],
   "advice": [
-    "Set aside at least 30 minutes a day this week with nothing productive in it. That's what restores you.",
-    "When 'what should I be doing' comes up while resting, tell yourself: 'I'm resting now.'",
-    "If there's no pressure and you feel flat, that's a recovery signal, not a failure.",
-    "When sensitivity spikes, ask: is this pressure, or am I tired?"
+    "今週、何も生産しない時間を一日30分以上確保しましょう。生産性のない時間があなたを回復させます。",
+    "休んでいるときに「何をすべきか」が浮かんだら、「今は休んでいるところ」と自分に答えましょう。",
+    "今プレッシャーがないのに無気力なら、それは回復のシグナルで、失敗ではありません。体が先に知らせたのです。",
+    "感受性が些細なことに反応するとき、「これはプレッシャーか、それとも私が疲れているのか」と問いかけましょう。"
   ],
   "keywords": [
-    "edge under pressure",
-    "forged in heat",
-    "precise focus",
-    "recovery rhythm"
+    "プレッシャー下の鋭さ",
+    "熱の鍛錬",
+    "精密な集中",
+    "回復のリズム"
   ]
 }
