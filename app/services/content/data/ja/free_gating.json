@@ -15,13 +15,13 @@
     ]
   },
   "labels": {
-    "cross_insight": "Cross Insight",
-    "timing": "Current Timing",
-    "body": "Body",
-    "patterns": "Patterns",
-    "compatibility": "Chemistry",
-    "actions": "Action Guide",
-    "action": "Action Guide",
-    "red_flags": "Red Flags"
+    "cross_insight": "クロスインサイト",
+    "timing": "今の人生の流れ",
+    "body": "本文",
+    "patterns": "パターン",
+    "compatibility": "相性",
+    "actions": "実践ガイド",
+    "action": "実践ガイド",
+    "red_flags": "注意サイン"
   }
 }
