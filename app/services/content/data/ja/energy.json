@@ -1,63 +1,63 @@
 {
   "ELEMENT_DISPLAY": {
-    "GROWTH": "Growth",
-    "SPARK": "Spark",
-    "GROUND": "Ground",
-    "EDGE": "Edge",
-    "FLOW": "Flow"
+    "GROWTH": "成長",
+    "SPARK": "火花",
+    "GROUND": "大地",
+    "EDGE": "鋭さ",
+    "FLOW": "流れ"
   },
   "ELEMENT_KEYWORDS": {
     "GROWTH": [
-      "expansion",
-      "direction",
-      "initiative"
+      "拡張",
+      "方向",
+      "主導"
     ],
     "SPARK": [
-      "expression",
-      "warmth",
-      "visibility"
+      "表現",
+      "温もり",
+      "可視性"
     ],
     "GROUND": [
-      "stability",
-      "trust",
-      "patience"
+      "安定",
+      "信頼",
+      "忍耐"
     ],
     "EDGE": [
-      "clarity",
-      "structure",
-      "precision"
+      "明晰",
+      "構造",
+      "精密"
     ],
     "FLOW": [
-      "adaptability",
-      "wisdom",
-      "depth"
+      "適応",
+      "知恵",
+      "深さ"
     ]
   },
   "ELEMENT_CONTENT": {
     "GROWTH": {
-      "on_dominant": "You have an overabundance of growth energy. It shows up as relentless forward motion — you start things easily, and you rarely feel finished.",
-      "on_deficient": "Growth is one of your scarcest energies. You can struggle to start things without a clear reason, or to keep growing something once the novelty fades.",
-      "on_missing": "You have almost no growth energy in your chart. This isn't a flaw — it means you operate from a different center, and 'expansion for its own sake' will never motivate you."
+      "on_dominant": "あなたは成長のエネルギーが溢れています。それは絶え間ない前進として現れ、物事を簡単に始められ、なかなか「終わった」と感じません。",
+      "on_deficient": "成長はあなたの最も希少なエネルギーのひとつです。明確な理由がなければ物事を始めにくく、新鮮さが薄れると育て続けるのも難しくなります。",
+      "on_missing": "あなたの命式には成長のエネルギーがほとんどありません。これは欠陥ではなく、異なる中心から動いているという意味です。「拡張のための拡張」があなたを動機づけることは決してありません。"
     },
     "SPARK": {
-      "on_dominant": "Your chart is fire-heavy. You run hot, you radiate visibly, and you don't do subtle. The risk is burnout — everyone wants a piece of the warmth.",
-      "on_deficient": "Spark is one of your scarcest energies. You don't perform enthusiasm, and you're not here for volume. Your warmth is quieter than most.",
-      "on_missing": "You have almost no spark energy. You're drawn to people who carry it — they're the light that makes your own quiet work visible."
+      "on_dominant": "あなたの命式は火の気が強いです。熱く走り、目に見えて光を放ち、繊細さとは無縁です。リスクは燃え尽き——誰もがその温もりの一部を欲しがります。",
+      "on_deficient": "火花はあなたの最も希少なエネルギーのひとつです。熱意を演じることはなく、音量を求めるタイプではありません。あなたの温もりは誰よりも静かです。",
+      "on_missing": "火花のエネルギーはほとんどありません。あなたはそれを持つ人に惹かれます——その人が、あなたの静かな仕事を可視化してくれる光なのです。"
     },
     "GROUND": {
-      "on_dominant": "You have deep ground energy. You're the person others anchor to, and you don't even notice you're doing it. The risk is holding too much for too long.",
-      "on_deficient": "Ground is one of your scarcest energies. You can struggle to stay still, or to make peace with slow progress. You probably move more than you'd admit.",
-      "on_missing": "You have almost no ground energy. Stability isn't your default state — you find your footing by moving, not by settling."
+      "on_dominant": "あなたは深い大地のエネルギーを持っています。人が寄りかかる存在で、しかも本人はそれに気づいていません。リスクは、あまりに多くをあまりに長く抱え続けることです。",
+      "on_deficient": "大地はあなたの最も希少なエネルギーのひとつです。じっとしていることや、ゆっくりした進歩と折り合うことに苦労します。認める以上に動き回っているはずです。",
+      "on_missing": "大地のエネルギーはほとんどありません。安定はあなたのデフォルト状態ではありません——落ち着くのではなく、動くことで足場を見つけるタイプです。"
     },
     "EDGE": {
-      "on_dominant": "Your chart is metal-heavy. You cut through the noise. You'd rather be right than liked, and you're usually right. The risk is losing the room while winning the point.",
-      "on_deficient": "Edge is one of your scarcest energies. You can avoid conflict even when it's the right call, and you soften things that don't need softening.",
-      "on_missing": "You have almost no edge energy. Structure and precision aren't what you lead with — you lead with something warmer, and that's not a weakness."
+      "on_dominant": "あなたの命式は金の気が強いです。雑音を切り裂きます。好かれることより正しいことを選び、たいてい正しい。リスクは、論点を取って場を失うことです。",
+      "on_deficient": "鋭さはあなたの最も希少なエネルギーのひとつです。正しい判断でも衝突を避け、柔らげる必要のないものまで柔らげてしまいます。",
+      "on_missing": "鋭さのエネルギーはほとんどありません。構造と精密さを先頭に立てるのではなく、もっと温かい何かで人を導きます。それは弱さではありません。"
     },
     "FLOW": {
-      "on_dominant": "Your chart is water-heavy. You move easily, adapt easily, and know when to wait. The risk is never quite committing to anything because everything is possible.",
-      "on_deficient": "Flow is one of your scarcest energies. You can struggle to go with the current — you want to know where things are going before you move.",
-      "on_missing": "You have almost no flow energy. You don't drift; you decide. This makes you reliable in a crisis, but it can feel rigid when the situation calls for adaptability."
+      "on_dominant": "あなたの命式は水の気が強いです。容易に動き、容易に適応し、待つべきときを知っています。リスクは、すべてが可能だからこそ、どれにも本気でコミットできなくなることです。",
+      "on_deficient": "流れはあなたの最も希少なエネルギーのひとつです。流れに身を任せるのが難しく、動く前にどこへ向かうかを知りたいと願います。",
+      "on_missing": "流れのエネルギーはほとんどありません。漂うのではなく、決めます。これは危機のときに頼りになりますが、適応力を求められる場面では硬く感じられることがあります。"
     }
   }
 }
