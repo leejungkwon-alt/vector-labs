@@ -1,274 +1,274 @@
 {
-  "SECTION_TITLE": "Wealth & Investment",
+  "SECTION_TITLE": "富と投資",
   "CONTENT": {
     "THE_PIONEER": {
-      "headline": "Asset growth through business suits you.",
-      "body": "You have the ability to make money with your own ideas. It's better to create the board yourself than to invest in a system someone else made.\n\nThis trait shines in startups, new businesses, and personal brands. Conversely, simple day trading doesn't fit your personality.\n\nYour risk is the impulse to bet everything at once. Create a steady cash flow before making big bets.",
+      "headline": "ビジネスを通じた資産成長が合っています。",
+      "body": "あなたは自分のアイデアでお金を稼ぐ能力があります。他人が作ったシステムに投資するよりも、自分で盤面を作るほうが合っています。\n\nこの気質は起業、新規事業、個人ブランドで輝きます。逆に、単純なデイトレードは性格に合いません。\n\nあなたのリスクは、すべてを一度に賭けたい衝動です。大きな賭けの前に、安定したキャッシュフローを作りましょう。",
       "patterns": [
-        "You make money with ideas.",
-        "You enjoy big bets.",
-        "You are weak at steady management."
+        "アイデアでお金を稼ぎます。",
+        "大きな賭けを楽しみます。",
+        "着実な管理が苦手です。"
       ],
       "best_match": [
         "Steward",
         "Anchor"
       ],
-      "best_reason": "Someone who protects the money you earn.",
+      "best_reason": "あなたが稼いだお金を守ってくれる人です。",
       "challenging_match": [
         "Operator"
       ],
-      "challenging_reason": "If both enjoy risk, recovery in a crisis is difficult.",
+      "challenging_reason": "二人ともリスクを楽しむと、危機のときの回復が難しくなります。",
       "actions": [
-        "Fix 30% of income as automatic savings.",
-        "Invest in installments over 3 months instead of one big bet.",
-        "Have a financial manager."
+        "収入の30%は自動貯蓄で固定しましょう。",
+        "一度に大きな賭けをする代わりに3ヶ月分割で投資しましょう。",
+        "財務マネージャーを置きましょう。"
       ],
       "red_flags": [
-        "Do you not know where your earned money went?",
-        "Is your living expense account empty?"
+        "稼いだお金がどこに消えたか分からないのでは？",
+        "生活費の口座が空になっていませんか？"
       ]
     },
     "THE_ADAPTER": {
-      "headline": "Wealth luck opens when you have various income sources.",
-      "body": "Putting everything in one place increases risk for you. Digging multiple wells is your wealth strategy.\n\nThis trait suits side jobs, freelancing, multiple income sources, and small investments. Conversely, betting all assets on one company/asset is dangerous.\n\nThe risk is earning a lot but not saving. Just make sure to do one automatic saving.",
+      "headline": "多様な収入源を持つときに財運が開きます。",
+      "body": "あなたは一箇所に集中するとリスクが大きくなります。複数の井戸を掘ることがあなたの財産戦略です。\n\nこの気質は副業、フリーランス、複数の収入源、小規模投資に適しています。逆に、一社・一資産に全財産を賭けるのは危険です。\n\nあなたのリスクは、稼ぐけれど貯まらないことです。自動貯蓄をひとつだけ確実に行いましょう。",
       "patterns": [
-        "You are skilled at creating multiple income sources.",
-        "Spending is also flexible.",
-        "It's hard to focus on one place."
+        "複数の収入源を作るのが得意です。",
+        "支出も柔軟です。",
+        "一箇所に集中するのが苦手です。"
       ],
       "best_match": [
         "Steward",
         "Anchor"
       ],
-      "best_reason": "Someone who gathers your scattered income.",
+      "best_reason": "あなたの散らばった収入をまとめてくれる人です。",
       "challenging_match": [
         "Adapter"
       ],
-      "challenging_reason": "If both scatter, financial management becomes impossible.",
+      "challenging_reason": "二人とも散らばると財務管理が立ち行かなくなります。",
       "actions": [
-        "Create one automatic savings account.",
-        "Write a monthly income-expense table.",
-        "Add expertise to one main income source."
+        "自動貯蓄口座をひとつ作りましょう。",
+        "月ごとの収支表を作りましょう。",
+        "主収入源のひとつに専門性を加えましょう。"
       ],
       "red_flags": [
-        "Is income high but savings zero?",
-        "Is your energy scattered across multiple sources?"
+        "収入は多いのに貯蓄がゼロでは？",
+        "複数の収入源にエネルギーが分散していませんか？"
       ]
     },
     "THE_RADIATOR": {
-      "headline": "You are the type where honor and wealth come together.",
-      "body": "You make money through people. Connections, reputation, and brand are your assets.\n\nThis trait shines in business, sales, and entertainment. Conversely, you are weak at solitary analytical investing.\n\nThe risk is spending big when you spend. Automatic savings and spending limits are essential.",
+      "headline": "名誉と富が共にやってくるタイプです。",
+      "body": "あなたは人を通じてお金を稼ぎます。人脈、評判、ブランドがあなたの資産です。\n\nこの気質は事業、営業、エンターテインメントで輝きます。逆に、孤独な分析投資は苦手です。\n\nあなたのリスクは、使うときに大きく使うことです。自動貯蓄と支出上限の設定が必須です。",
       "patterns": [
-        "You gain opportunities through people.",
-        "You spend big when you spend.",
-        "Frequent impulse buying."
+        "人を通じて機会を得ます。",
+        "使うときも大きく使います。",
+        "衝動買いが多い。"
       ],
       "best_match": [
         "Steward",
         "Cultivator"
       ],
-      "best_reason": "Someone who moderates your spending.",
+      "best_reason": "あなたの支出を節制してくれる人です。",
       "challenging_match": [
         "Radiator"
       ],
-      "challenging_reason": "If both spend big, bankruptcy.",
+      "challenging_reason": "二人とも大きく使えば破産します。",
       "actions": [
-        "Automatically save 20% of income.",
-        "Set a monthly spending limit.",
-        "Decide on big purchases after 24 hours."
+        "収入の20%は自動振込で貯蓄しましょう。",
+        "月の支出上限を決めましょう。",
+        "大きな出費は24時間後に決めましょう。"
       ],
       "red_flags": [
-        "Is your card bill exceeding your income?",
-        "Do you often regret impulse purchases?"
+        "カード請求が収入を超えていませんか？",
+        "衝動買いの後悔が多いのでは？"
       ]
     },
     "THE_KEEPER": {
-      "headline": "Excellent at protecting and growing assets.",
-      "body": "You hate risk extremely. You prefer safe assets and can't stand losing principal.\n\nThis trait shines in savings, bonds, and real estate. Conversely, never touch day trading or crypto.\n\nYour risk is not beating inflation. An appropriate level of inflation-hedge investment is necessary.",
+      "headline": "資産を守り育てることに卓越しています。",
+      "body": "あなたはリスクを極度に嫌います。安全資産を好み、元本割れに耐えられません。\n\nこの気質は預貯金、債券、不動産など安定資産で輝きます。逆に、デイトレードや仮想通貨には絶対に手を出さないでください。\n\nあなたのリスクは物価上昇に勝てないことです。適切な水準のインフレヘッジ投資が必要です。",
       "patterns": [
-        "You prefer safe assets.",
-        "You are sensitive to principal loss.",
-        "You save steadily."
+        "安全資産を好みます。",
+        "元本損失に敏感です。",
+        "着実に貯めます。"
       ],
       "best_match": [
         "Operator",
         "Pioneer"
       ],
-      "best_reason": "Someone who adds returns on top of your safe assets.",
+      "best_reason": "あなたの安全資産の上にリターンを乗せてくれる人です。",
       "challenging_match": [
         "Radiator"
       ],
-      "challenging_reason": "Risk tendencies are exactly opposite, causing financial conflicts.",
+      "challenging_reason": "リスク選好が正反対で、財務的な衝突が生じます。",
       "actions": [
-        "Invest only 10% of assets in index funds.",
-        "Compare inflation rates and deposit rates.",
-        "Do a financial checkup once a year."
+        "資産の10%だけをインデックスファンドに投資しましょう。",
+        "物価上昇率と預金金利を比較しましょう。",
+        "年に一度財務点検を行いましょう。"
       ],
       "red_flags": [
-        "Is all your wealth in deposits?",
-        "Are you failing to keep up with inflation?"
+        "すべての財産が預金だけに縛られていませんか？",
+        "物価上昇率に追いつけていませんか？"
       ]
     },
     "THE_ANCHOR": {
-      "headline": "You find wealth luck in real assets like real estate.",
-      "body": "You are strong in visible real assets. Wealth luck opens in real estate, gold, and savings.\n\nThis trait suits long-term investment, real estate, and real assets. Conversely, it doesn't fit coins or derivatives.\n\nThe risk is missing opportunities. If you only seek safety, assets won't grow.",
+      "headline": "不動産などの実物資産で財運を見出します。",
+      "body": "あなたは目に見える実物資産に強い。不動産、金、預貯金など手に取れる資産で財運が開きます。\n\nこの気質は長期投資、不動産、実物資産に適しています。逆に、仮想通貨やデリバティブには向きません。\n\nあなたのリスクは機会を逃すことです。安全だけを求めすぎれば、資産は成長しません。",
       "patterns": [
-        "You prefer real assets.",
-        "You are strong in long-term investment.",
-        "You are weak at capturing fast opportunities."
+        "実物資産を好みます。",
+        "長期投資に強い。",
+        "素早い機会の捕捉は苦手です。"
       ],
       "best_match": [
         "Operator",
         "Steward"
       ],
-      "best_reason": "Someone who coordinates your safe assets.",
+      "best_reason": "あなたの安定資産を調整してくれる人です。",
       "challenging_match": [
         "Pioneer"
       ],
-      "challenging_reason": "Conflicts with people who want fast bets.",
+      "challenging_reason": "素早い賭けを望む人と衝突します。",
       "actions": [
-        "Allocate 20% of assets to growth assets.",
-        "Study alternative investments besides real estate.",
-        "Rebalance your portfolio once a year."
+        "資産の20%を成長資産に配分しましょう。",
+        "不動産以外の代替投資を学びましょう。",
+        "年に一度ポートフォリオをリバランスしましょう。"
       ],
       "red_flags": [
-        "Are all your assets concentrated in real estate?",
-        "Are you ignoring new investment opportunities?"
+        "すべての資産が不動産に集中していませんか？",
+        "新しい投資機会を無視していませんか？"
       ]
     },
     "THE_CULTIVATOR": {
-      "headline": "Honest labor and steady accumulation create wealth.",
-      "body": "You don't believe in luck. You believe in faithful savings and the power of compounding.\n\nThis trait shines in installment investments, pensions, and long-term deposits. Conversely, never touch speculative investments.\n\nThe risk is lending money to acquaintances. Lending money loses both money and relationships.",
+      "headline": "誠実な労働と着実な積立が富を築きます。",
+      "body": "あなたは幸運を信じません。忠実な貯蓄と複利の力を信じます。\n\nこの気質は積立投資、年金、長期預金で輝きます。逆に、投機的な投資には絶対に手を出さないでください。\n\nあなたのリスクは知人にお金を貸すことです。お金を貸せば関係も失います。",
       "patterns": [
-        "You save steadily.",
-        "You believe in the power of compounding.",
-        "You are weak to acquaintances' requests."
+        "着実に貯蓄します。",
+        "複利の力を信じます。",
+        "知人の頼みに弱い。"
       ],
       "best_match": [
         "Steward",
         "Keeper"
       ],
-      "best_reason": "Someone who understands your faithfulness and grows together.",
+      "best_reason": "あなたの誠実さを理解し、共に成長する人です。",
       "challenging_match": [
         "Operator"
       ],
-      "challenging_reason": "Conflicts with people who want fast returns.",
+      "challenging_reason": "素早いリターンを望む人と衝突します。",
       "actions": [
-        "Invest in installments via automatic transfer every month.",
-        "Don't lend money to acquaintances.",
-        "Sign up for a pension savings account."
+        "毎月自動振込で積立投資をしましょう。",
+        "知人にお金を貸さないようにしましょう。",
+        "年金貯蓄に加入しましょう。"
       ],
       "red_flags": [
-        "Have you lent money to acquaintances and not gotten it back?",
-        "Are you postponing installment investments?"
+        "知人にお金を貸して返ってこなかったことは？",
+        "積立投資を先延ばしにしていませんか？"
       ]
     },
     "THE_BLADE": {
-      "headline": "You make profits with decisive investments.",
-      "body": "Your cut-loss and take-profit are fast. You logically analyze market trends and make decisions.\n\nThis trait shines in stocks, futures, and trading. Conversely, it's dangerous for emotional investing or coins.\n\nThe risk is leverage (debt investment). Big losses follow big profits. Never use leverage.",
+      "headline": "決断力ある投資で利益を出します。",
+      "body": "あなたは損切りと利確が速い。市場の流れを論理的に分析して決断を下します。\n\nこの気質は株式、先物、トレーディングで輝きます。逆に、感情的な投資や仮想通貨には危険です。\n\nあなたのリスクはレバレッジ（借金投資）です。大きな利益の後に大きな損失が来ます。レバレッジは絶対に禁止です。",
       "patterns": [
-        "Cut-loss and take-profit are fast.",
-        "You logically analyze the market.",
-        "You have strong conviction in your judgment."
+        "損切りと利確が速い。",
+        "論理的に市場を分析します。",
+        "自分の判断に強い確信を持ちます。"
       ],
       "best_match": [
         "Steward",
         "Keeper"
       ],
-      "best_reason": "Someone who controls your risk.",
+      "best_reason": "あなたのリスクをコントロールしてくれる人です。",
       "challenging_match": [
         "Survivor"
       ],
-      "challenging_reason": "If both are aggressive, recovery in a crisis is hard.",
+      "challenging_reason": "二人とも攻撃的だと、危機のときの回復が難しくなります。",
       "actions": [
-        "Never use leverage.",
-        "Keep 70% of your portfolio in safe assets.",
-        "Write a trading journal."
+        "レバレッジは絶対に使いません。",
+        "ポートフォリオの70%は安全資産に置きましょう。",
+        "売買日誌を書きましょう。"
       ],
       "red_flags": [
-        "Have you suffered big losses from debt investment?",
-        "Are you making emotional trades?"
+        "借金投資で大きな損失を出したことは？",
+        "感情的な売買をしていませんか？"
       ]
     },
     "THE_GEM": {
-      "headline": "Invest in valuable objects and scarce assets.",
-      "body": "You have an excellent sense of beauty and scarcity. Wealth luck opens in luxury goods, art, and premium real estate.\n\nThis trait suits art, watches, wine, and premium real estate investment. Conversely, it doesn't fit low-priced day trading.\n\nThe risk is confusing hobbies and investments. Separate emotional consumption and investment.",
+      "headline": "価値ある物・希少資産に投資しましょう。",
+      "body": "あなたは美しさと希少性への感覚が優れています。高級品、芸術品、高級不動産などで財運が開きます。\n\nこの気質は美術品、時計、ワイン、プレミアム不動産投資に適しています。逆に、低価格株のデイトレードには向きません。\n\nあなたのリスクは趣味と投資を混同することです。感情的な消費と投資を分けましょう。",
       "patterns": [
-        "You invest in beauty.",
-        "You are sensitive to scarcity.",
-        "Frequent emotional spending."
+        "美しさに投資します。",
+        "希少性に敏感です。",
+        "感情的な消費が多い。"
       ],
       "best_match": [
         "Steward",
         "Deep"
       ],
-      "best_reason": "Someone who understands your taste and manages your finances.",
+      "best_reason": "あなたの趣味を理解し、財務を管理してくれる人です。",
       "challenging_match": [
         "Radiator"
       ],
-      "challenging_reason": "If both have severe emotional spending, bankruptcy.",
+      "challenging_reason": "二人とも感情的な消費が激しければ破産します。",
       "actions": [
-        "Separate hobby and investment budgets.",
-        "Get expert appraisal for art/watches.",
-        "Decide emotional spending after 24 hours."
+        "趣味の予算と投資の予算を分けましょう。",
+        "美術品や時計は専門家の鑑定を経ましょう。",
+        "感情的な消費は24時間後に決めましょう。"
       ],
       "red_flags": [
-        "Are you consuming while saying 'this is investment'?",
-        "Are you buying and selling based on emotion?"
+        "「これは投資だ」と言いながら消費していませんか？",
+        "感情で売買していませんか？"
       ]
     },
     "THE_DEEP": {
-      "headline": "You are a strategist who buys when others don't know and sells when they do.",
-      "body": "You analyze the structure of the market. You quietly move when the crowd is excited and boldly when the crowd is in fear.\n\nThis trait shines in value investing, long-term investing, unlisted stocks, and real estate.\n\nThe risk is missing the timing due to falling into analysis. Set a decision deadline.",
+      "headline": "他人が知らないときに買い、知ったときに売る戦略家です。",
+      "body": "あなたは市場の構造を分析します。大衆が興奮しているときに静かに、恐怖に陥っているときに大胆に動きます。\n\nこの気質はバリュー投資、長期投資、非上場株、不動産で輝きます。\n\nあなたのリスクは分析に没頭してタイミングを逃すことです。決断の期限を定めましょう。",
       "patterns": [
-        "You analyze the market structure.",
-        "You prefer contrarian investing.",
-        "It takes a long time to decide."
+        "市場の構造を分析します。",
+        "逆張り投資を好みます。",
+        "決断に時間がかかります。"
       ],
       "best_match": [
         "Pioneer",
         "Operator"
       ],
-      "best_reason": "Someone who puts your analysis into action.",
+      "best_reason": "あなたの分析を実行に移してくれる人です。",
       "challenging_match": [
         "Deep"
       ],
-      "challenging_reason": "If both only analyze, you miss opportunities.",
+      "challenging_reason": "二人とも分析だけなら機会を逃します。",
       "actions": [
-        "Set a decision deadline.",
-        "Finish analysis within 3 days.",
-        "Find an execution partner."
+        "決断の期限を定めましょう。",
+        "分析は3日以内に終えましょう。",
+        "実行パートナーを見つけましょう。"
       ],
       "red_flags": [
-        "Have you missed opportunities while analyzing?",
-        "Are you continuously postponing decisions?"
+        "分析するうちに機会を逃したことは？",
+        "決断を先延ばしにし続けていませんか？"
       ]
     },
     "THE_SPRING": {
-      "headline": "You trust your intuition and respond flexibly.",
-      "body": "You instinctively read the flow of money. You have the power to sense opportunities others can't see.\n\nThis trait shines in short-term investing, trading, and capturing business opportunities.\n\nThe risk is falling for the tricks of people around you. If you are not sure, firmly refuse.",
+      "headline": "直感を信じ、柔軟に対処します。",
+      "body": "あなたはお金の流れを本能的に読みます。他人には見えない機会を感じ取る力があります。\n\nこの気質は短期投資、トレーディング、ビジネス機会の捕捉で輝きます。\n\nあなたのリスクは周囲の人の誘いに乗ってしまうことです。確信がなければ、きっぱりと断りましょう。",
       "patterns": [
-        "You capture opportunities with intuition.",
-        "You respond flexibly.",
-        "You are weak to the tricks of those around you."
+        "直感で機会を捉えます。",
+        "柔軟に対処します。",
+        "周囲の誘いに弱い。"
       ],
       "best_match": [
         "Steward",
         "Anchor"
       ],
-      "best_reason": "Someone who verifies your intuition.",
+      "best_reason": "あなたの直感を検証してくれる人です。",
       "challenging_match": [
         "Operator"
       ],
-      "challenging_reason": "If both are impulsive, you collapse in a crisis.",
+      "challenging_reason": "二人とも衝動的なら危機のときに崩れます。",
       "actions": [
-        "Always get expert verification before big investments.",
-        "Decide on friends' investment advice after 3 days.",
-        "Automatically save 10% of income."
+        "大きな投資の前に必ず専門家の検証を受けましょう。",
+        "知人の投資勧誘は3日後に決めましょう。",
+        "収入の10%は自動貯蓄しましょう。"
       ],
       "red_flags": [
-        "Have you suffered losses from friends' tricks?",
-        "Are you skipping verification trusting only intuition?"
+        "周囲の誘いに乗って損をしたことは？",
+        "直感だけを信じて検証を省いていませんか？"
       ]
     }
   }

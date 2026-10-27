@@ -1,5 +1,5 @@
 {
-  "SECTION_TITLE": "Career & Transition",
+  "SECTION_TITLE": "キャリアと転機",
   "CONTENT": {
     "THE_PIONEER": {
       "headline": "開拓者精神で起業・新規事業・企画に適しています。",
@@ -137,138 +137,138 @@
       ]
     },
     "THE_CULTIVATOR": {
-      "headline": "Suited for growing people — in education, planning, and HR.",
-      "body": "You are excellent at recognizing and nurturing people's potential. Roles like developing juniors or coordinating projects suit you.\n\nThis trait shines in education, HR, consulting, and planning. Conversely, you get tired in cold organizations that only demand results.\n\nYour risk is yielding results to others. Clearly record and appeal your contributions.",
+      "headline": "教育・企画・人事など、人を育てる仕事に適しています。",
+      "body": "あなたは人の可能性を見抜き、育てることに卓越しています。後輩を育成したり、プロジェクトを調整する役割がよく合います。\n\nこの気質は教育、人事、コンサルティング、企画で輝きます。逆に、成果だけを求める冷たい組織では消耗します。\n\nあなたのリスクは、成果を他人に譲ってしまうことです。自分の貢献を明確に記録し、アピールしましょう。",
       "patterns": [
-        "You have a lot of interest in the growth of juniors/colleagues.",
-        "You soften the team atmosphere.",
-        "You undervalue your own achievements."
+        "後輩や同僚の成長に大きな関心があります。",
+        "チームの雰囲気を柔らかくします。",
+        "自分の実績を低く評価しがちです。"
       ],
       "best_match": [
         "Mentor",
         "Officer"
       ],
-      "best_reason": "Someone who acknowledges your contribution and grows together.",
+      "best_reason": "あなたの貢献を認め、共に成長してくれる人です。",
       "challenging_match": [
         "Survivor"
       ],
-      "challenging_reason": "Value clashes occur with result-oriented people.",
+      "challenging_reason": "成果主義の人とは価値観の衝突が起きます。",
       "actions": [
-        "Document your contributions once a month.",
-        "Clearly state your career goals to your boss.",
-        "Consciously mentor one person."
+        "月に一度、あなたの貢献を文書でまとめましょう。",
+        "上司にキャリア目標を明確に伝えましょう。",
+        "意識的にひとりのメンティーを育てましょう。"
       ],
       "red_flags": [
-        "Are others taking your achievements?",
-        "Are you postponing your own growth?"
+        "あなたの実績を他人が持っていっていませんか？",
+        "自分の成長を後回しにしていませんか？"
       ]
     },
     "THE_BLADE": {
-      "headline": "Fits places where principles matter, such as law, finance, military/police, and engineering.",
-      "body": "You are logical and quick to decide. You achieve the best results in environments with clear standards and principles.\n\nThis strength shines in law, finance, military/police, engineering, and medical fields. Conversely, you feel frustrated in organizations with ambiguous standards.\n\nYour risk is putting principles before people. The result may be right, but relationships can be damaged. Soft communication is needed.",
+      "headline": "法曹・金融・軍警・エンジニアリングなど、原則が重要な場に合います。",
+      "body": "あなたは論理的で、決断が速い。明確な基準と原則のある環境で最高の成果を出します。\n\nこの強みは法曹、金融、軍警、エンジニアリング、医療で輝きます。逆に、基準が曖昧な組織ではもどかしさを感じます。\n\nあなたのリスクは、人よりも原則を優先してしまうことです。結果は正しくても、関係が損なわれることがあります。柔らかなコミュニケーションが必要です。",
       "patterns": [
-        "You draw conclusions quickly.",
-        "You are good at finding logical loopholes.",
-        "You find emotional communication difficult."
+        "素早く結論を出します。",
+        "論理的な抜け穴を見つけるのが得意です。",
+        "感情的なコミュニケーションが苦手です。"
       ],
       "best_match": [
         "Adapter",
         "Keeper"
       ],
-      "best_reason": "Someone who softly wraps your sharpness.",
+      "best_reason": "あなたの鋭さを柔らかく包み込んでくれる人です。",
       "challenging_match": [
         "Challenger"
       ],
-      "challenging_reason": "Strong confrontations repeat, tiring the team.",
+      "challenging_reason": "強い対立構図が繰り返され、チームが疲弊します。",
       "actions": [
-        "Check emotions once before concluding.",
-        "Have informal conversations with bosses/colleagues once a month.",
-        "Practice expressing your judgments softly."
+        "結論の前に一度、感情を確認しましょう。",
+        "月に一度、上司や同僚と非公式な会話を持ちましょう。",
+        "自分の判断を柔らかく表現する練習をしましょう。"
       ],
       "red_flags": [
-        "Is your conviction of 'I am right' hurting relationships?",
-        "Are colleagues reluctant to talk to you?"
+        "「自分が正しい」という確信が関係を傷つけていませんか？",
+        "同僚があなたに話しかけるのをためらっていませんか？"
       ]
     },
     "THE_GEM": {
-      "headline": "You stand out in design, art, and precision technology fields.",
-      "body": "You pursue perfection. Your obsession with detail creates your expertise.\n\nThis trait shines in design, art, editing, precision machining, and premium services. Conversely, you get tired in organizations that demand 'fast and sloppy'.\n\nYour risk is not finishing due to perfectionism. You need to practice releasing at 80%.",
+      "headline": "デザイン・アート・精密技術分野で頭角を現します。",
+      "body": "あなたは完璧を追求します。細部へのこだわりがあなたの専門性を作り出します。\n\nこの気質はデザイン、アート、編集、精密加工、プレミアムサービスで輝きます。逆に、「速く、雑に」を求める組織では疲弊します。\n\nあなたのリスクは完璧主義で仕上がらないことです。80%で世に出す練習が必要です。",
       "patterns": [
-        "You obsess over details.",
-        "You can't release unless it's perfect.",
-        "You stress over low-quality results."
+        "細部にこだわります。",
+        "完璧でないと世に出せません。",
+        "低品質な成果物にストレスを感じます。"
       ],
       "best_match": [
         "Deep",
         "Mentor"
       ],
-      "best_reason": "Someone who understands your perfectionism and is patient.",
+      "best_reason": "あなたの完璧主義を理解し、忍耐してくれる人です。",
       "challenging_match": [
         "Radiator"
       ],
-      "challenging_reason": "Methods clash head-on with speed-first people.",
+      "challenging_reason": "速度優先主義の人とは方法が正面衝突します。",
       "actions": [
-        "Practice 'this is good enough'.",
-        "Pick one perfect project and release it at 80%.",
-        "Agree on your standards with your boss in advance."
+        "「これで十分」を実践しましょう。",
+        "完璧なプロジェクトをひとつ選び、80%で公開しましょう。",
+        "自分の基準を上司と事前に合意しましょう。"
       ],
       "red_flags": [
-        "Are you missing schedules due to perfection?",
-        "Are you forcing your standards on the team?"
+        "完璧さのせいでスケジュールを逃していませんか？",
+        "あなたの基準をチームに押し付けていませんか？"
       ]
     },
     "THE_DEEP": {
-      "headline": "Outstanding in strategic planning, analysis, and research fields.",
-      "body": "You have an excellent ability to draw the big picture. You have the power to see the structure beneath the surface.\n\nThis trait shines in strategic planning, research, consulting, and data analysis. Conversely, you feel frustrated in positions that only demand execution.\n\nYour risk is delayed execution due to falling into analysis. Teaming up with a strong execution partner maximizes synergy.",
+      "headline": "戦略立案・分析・研究分野で卓越しています。",
+      "body": "あなたは大きな絵を描く能力に優れています。表面の下の構造を見抜く力があります。\n\nこの気質は戦略立案、リサーチ、コンサルティング、データ分析で輝きます。逆に、実行だけを求める立場ではもどかしさを感じます。\n\nあなたのリスクは分析に没頭して実行が遅れることです。実行力の強いパートナーと組むことで、シナジーが最大化します。",
       "patterns": [
-        "You draw the big picture first.",
-        "You spend time analyzing before executing.",
-        "You hate superficial tasks."
+        "まず大きな絵を描きます。",
+        "実行の前に分析に時間をかけます。",
+        "表面的な仕事を嫌います。"
       ],
       "best_match": [
         "Pioneer",
         "Operator"
       ],
-      "best_reason": "Someone who turns your strategy into execution.",
+      "best_reason": "あなたの戦略を実行に移してくれる人です。",
       "challenging_match": [
         "Survivor"
       ],
-      "challenging_reason": "You may clash with people demanding fast execution.",
+      "challenging_reason": "素早い実行を求める人と衝突することがあります。",
       "actions": [
-        "Start the first execution within 3 days after strategizing.",
-        "Find an execution-strong partner.",
-        "Set a 30% time limit on analysis."
+        "戦略化から3日以内に最初の実行を始めましょう。",
+        "実行力の強いパートナーを見つけましょう。",
+        "分析に30%の時間制限を設けましょう。"
       ],
       "red_flags": [
-        "Are you only analyzing and delaying execution?",
-        "Are you missing decision timing?"
+        "分析ばかりで実行を先延ばしにしていませんか？",
+        "決断のタイミングを逃していませんか？"
       ]
     },
     "THE_SPRING": {
-      "headline": "You quietly support the team and build trust.",
-      "body": "You are an essential core talent, though not flashy. You melt team conflicts and quietly solve problems.\n\nThis strength shines in operations, HR, customer support, and project management. Conversely, you are undervalued in sales organizations where self-PR is important.\n\nThe risk is not being recognized for your achievements. You need to practice actively appealing your contributions.",
+      "headline": "静かにチームを支え、信頼を築きます。",
+      "body": "あなたは派手ではありませんが、なくてはならない中核人材です。チームの衝突を溶かし、静かに問題を解決します。\n\nこの強みはオペレーション、人事、カスタマーサポート、プロジェクトマネジメントで輝きます。逆に、自己PRが重視される営業組織では過小評価されます。\n\nあなたのリスクは実績が認められないことです。自分の貢献を積極的にアピールする練習が必要です。",
       "patterns": [
-        "You are the quiet problem solver of the team.",
-        "You don't show off your achievements well.",
-        "You are skilled at mediating conflicts."
+        "チームの静かな問題解決者です。",
+        "自分の実績をうまく見せません。",
+        "衝突の調停が得意です。"
       ],
       "best_match": [
         "Pioneer",
         "Blade"
       ],
-      "best_reason": "Someone who acknowledges and elevates your quiet support.",
+      "best_reason": "あなたの静かな支えを認め、引き上げてくれる人です。",
       "challenging_match": [
         "Radiator"
       ],
-      "challenging_reason": "In organizations that only notice flashy results, your presence disappears.",
+      "challenging_reason": "派手な成果だけが注目される組織では存在感が消えます。",
       "actions": [
-        "Document your achievements once a month.",
-        "Speak up about your contributions once in a meeting.",
-        "Find a boss who recognizes you."
+        "月に一度、実績を文書に残しましょう。",
+        "会議で一度は自分の貢献について発言しましょう。",
+        "あなたを認めてくれる上司を見つけましょう。"
       ],
       "red_flags": [
-        "Are your achievements being recorded as someone else's?",
-        "Are you being ignored for being quiet?"
+        "あなたの実績が他人のものとして記録されていませんか？",
+        "静かさのせいで無視されていませんか？"
       ]
     }
   }
