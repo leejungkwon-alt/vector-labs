@@ -1,28 +1,28 @@
 {
-  "name": "Spring Rain Garden",
+  "name": "春の雨の庭",
   "pillar": "癸卯",
-  "hero": "You're a garden in spring rain. Quietly seeping water — and quiet is exactly how you help people and things grow.",
+  "hero": "あなたは春の雨に濡れる庭です。静かに沁み込む水——その静けさこそが、あなたが人やものを育む方法なのです。",
   "narrative": [
-    "You help growth happen. 癸卯 is water giving birth to wood. Like spring rain feeding trees, you seep in quietly so people and projects can grow. Not flashy leadership — the one watering from behind. The places you've passed through are a little greener.",
-    "Your strength is delicate creation. Not big explosions — steady light that develops ideas, encourages people, and grows relationships. People who've worked with you realize, months later, 'that was because of them.' Your contribution is always recognized after the fact.",
-    "Your shadow is postponing your own growth. Spring rain falls for the trees and then disappears into the earth. You help other people grow while continuing to push your own growth back. And when someone you cultivated leaves, a loss you can't quite name arrives.",
-    "A mature Gye-Mao knows they're part of the garden too. Growing yourself in the same season you grow others. Then your spring rain isn't a one-season event — it becomes years of steady rainfall that keeps people alive."
+    "あなたは成長を助ける人です。癸卯は水が木を生む柱です。春の雨が木を育てるように、あなたは静かに沁み込み、人やプロジェクトが育つ手助けをします。派手なリーダーシップではなく、後ろから水をやる人です。あなたが通った場所は、ほんの少し緑が増しているのです。",
+    "あなたの強みは繊細な創造です。大きな爆発ではなく、アイデアを育て、人を励まし、関係を成長させる安定した光。だからこそ、あなたと一緒に働いた人は何ヶ月も経ってから「あれはあの人のおかげだった」と気づきます。あなたの貢献はいつも事後に認められます。",
+    "あなたの影は、自分の成長を先延ばしにすることです。春の雨は木のために降り、そして大地に消えていきます。あなたは他者の成長を助けながら、自分の成長を後ろへ押し続けます。そして、自分が育てた人が去っていくとき、言葉にできない喪失感が訪れるのです。",
+    "成熟した癸卯は、自分も庭の一部であることを知っています。他者を育てるのと同じ季節に自分も育つ。そのとき、あなたの春の雨は一季の出来事ではなく、何年にもわたって人を生かし続ける慈雨となるのです。"
   ],
   "shadows": [
-    "Helping others grow while postponing your own growth indefinitely.",
-    "Feeling loss you can't name when someone you cultivated leaves.",
-    "Valuing your contribution so low that you're stingy with yourself."
+    "他者の成長を助けながら、自分の成長をいつまでも先延ばしにします。",
+    "自分が育てた人が去るとき、名前のつけられない喪失感を覚えます。",
+    "自分の貢献をあまりに低く評価し、自分にさえも吝嗇になります。"
   ],
   "advice": [
-    "Put your own growth on the calendar first this week.",
-    "Before helping, ask: can this person do this themselves?",
-    "When someone leaves, tell yourself: this is proof of growth.",
-    "Separate the people you share rain with from the people who share rain with you."
+    "今週は、自分の成長のための時間をまずカレンダーに入れましょう。",
+    "誰かを助ける前に問いかけましょう。この人は自分でできるだろうか？と。",
+    "誰かが去るとき、「これは成長の証」と自分に言い聞かせましょう。",
+    "雨を分かち合う人と、雨を共に分かち合ってくれる人を区別しましょう。"
   ],
   "keywords": [
-    "spring rain",
-    "delicate creation",
-    "growing support",
-    "growing together"
+    "春の雨",
+    "繊細な創造",
+    "成長の支え",
+    "共に育つ"
   ]
 }

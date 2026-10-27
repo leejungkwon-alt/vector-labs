@@ -1,28 +1,28 @@
 {
-  "name": "Moonlit Well",
+  "name": "月明かりの井戸",
   "pillar": "癸酉",
-  "hero": "You're a well lit by the moon. Quietly shining, and your light shows other people their own hearts.",
+  "hero": "あなたは月に照らされた井戸です。静かに輝き、その光で他者の心を映し出す人です。",
   "narrative": [
-    "You have precise sensitivity. 癸酉 is delicate water with crafted metal resting on it. Moonlight on a well brightens the water inside — and your sensitivity is exact like that. People feel oddly 'understood' around you.",
-    "Your strength is refined wisdom. 癸's sensitivity meeting 酉's precision makes very sharp, very delicate insight. You read people's hearts accurately, and you name what they need. This is a rare gift. Your advice always hits a true spot.",
-    "Your shadow is the weight of perfect sensitivity. Precise sensitivity is beautiful, but it makes the world's messiness land very hard. You feel other people's pain as your own, and imperfect relationships stay with you a long time. And that precision also turns inward — you can't forgive yourself for not being perfect.",
-    "A mature Gye-You governs the sensitivity. Keeping the sharpness, and calibrating so it doesn't deplete you. Then your precision stops being pressure and becomes the kind of deep understanding people come to you for."
+    "あなたは精密な感受性の持ち主です。癸酉は、繊細な水の上に細工された金属が坐した柱です。月明かりが井戸に差すと、中の水が明るくなる——あなたの感受性もそれと同じくらい正確です。人はあなたの前で、不思議と「自分の心を読まれている」ような感覚を覚えます。",
+    "あなたの強みは洗練された知恵です。癸の感受性と酉の精密さが出会うと、非常に鋭く、非常に繊細な洞察が生まれます。あなたは人の心を正確に読み、その人に必要なものを正確に言い当てます。これは稀な才能です。あなたの助言は、いつも本当の急所を突くのです。",
+    "あなたの影は、完璧な感受性の重さです。精密な感受性は美しいものですが、その分、世界の乱雑さがとても強く響きます。あなたは他者の痛みを自分のことのように感じ、不完全な関係に長く心を引きずられます。そしてその精密さが内側にも向かい、完璧でない自分を赦せなくなるのです。",
+    "成熟した癸酉は、感受性を統御します。鋭さを保ちながら、それが自分を消耗させないように調整する。そのとき、あなたの精密さはプレッシャーではなく、人があなたを訪ねてくる深い理解へと変わるのです。"
   ],
   "shadows": [
-    "Feeling other people's pain as your own until you're emotionally exhausted.",
-    "Staying attached to imperfect relationships, unable to release them.",
-    "Precision turned inward, unable to forgive your own imperfection."
+    "他者の痛みを自分のことのように感じ、感情的に疲弊してしまいます。",
+    "不完全な関係に執着し、手放せなくなります。",
+    "精密さが内側に向かい、完璧でない自分を赦せません。"
   ],
   "advice": [
-    "Once this week, consciously step back from one person's emotion.",
-    "Pick one imperfect relationship and accept the imperfection as it is.",
-    "Create a moment this week where you say 'this is enough' to yourself.",
-    "Set up regular recovery time so your sensitivity isn't depleted."
+    "今週一度、誰かの感情から意識的に一歩引いてみましょう。",
+    "不完全な関係をひとつ選び、その不完全さをそのまま受け入れましょう。",
+    "今週、自分に「これで十分」と言える瞬間をひとつ作りましょう。",
+    "感受性が消耗しないよう、定期的な回復の時間を確保しましょう。"
   ],
   "keywords": [
-    "moonlit well",
-    "precise sensitivity",
-    "refined wisdom",
-    "deep understanding"
+    "月明かりの井戸",
+    "精密な感受性",
+    "洗練された知恵",
+    "深い理解"
   ]
 }

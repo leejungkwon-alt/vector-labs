@@ -1,28 +1,28 @@
 {
-  "name": "Misty Lake",
+  "name": "霧の湖",
   "pillar": "癸巳",
-  "hero": "You're a misty lake. Blurry on the surface, with hot water running underneath.",
+  "hero": "あなたは霧の湖です。表面はぼんやりと霞み、その下には熱い水が流れています。",
   "narrative": [
-    "You hold feeling and heat together. 癸巳 is delicate water with hot fire resting on it. You look gentle on the surface while a hot current runs inside. People remember you as warm — and then are surprised by the intensity you can show.",
-    "Your strength is combining feeling with practicality. 癸 is sensitivity, 巳 is practical execution. You can feel something and put it into real action. People find you warm and precise at once. That combination is rare.",
-    "Your shadow is getting stuck in the mist. A misty lake is beautiful, but it's easy to lose direction. Feelings and thoughts tangle together, and at the moment a decision is needed you can't see clearly. And the heat that piles up inside eventually bursts out suddenly, surprising everyone who knew you as calm.",
-    "A mature Gye-Si clears their own mist. Keeping the feeling and the heat, and seeing clearly when a decision is actually required. Then your duality stops being a shake and becomes the kind of deep warmth people want to lean on."
+    "あなたは感情と熱を同時に携える人です。癸巳は、繊細な水の上に熱い火が坐した柱です。表面は穏やかに見えながら、内側には熱い流れが走っています。人はあなたを温かい人として記憶し、そしてふと、あなたが見せる強さに驚かされるのです。",
+    "あなたの強みは、感情と実用性を結びつけることです。癸は感受性、巳は実践的な実行力。あなたは何かを感じ、それを実際の行動に移すことができます。人はあなたを「温かく、しかも正確な人」と感じます。この組み合わせは稀なのです。",
+    "あなたの影は、霧の中に立ち往生することです。霧の湖は美しいですが、方向を失いやすい。感情と思考が絡み合い、決断が必要な瞬間に鮮明に見えなくなります。そして内側に溜まった熱は、やがて突然噴き出し、穏やかな人だと思っていた周囲を驚かせるのです。",
+    "成熟した癸巳は、自分自身の霧を晴らすことができます。感情と熱を保ちながら、本当に決断が必要なときには鮮明に見る。そのとき、あなたの二重性は揺らぎではなく、人が寄りかかりたいと願う深い温もりへと変わるのです。"
   ],
   "shadows": [
-    "Feelings and thoughts tangled at the moment a decision is needed.",
-    "Suppressed heat that eventually bursts out.",
-    "The gap between surface and interior makes people misread you."
+    "決断が必要な瞬間に、感情と思考が絡み合ってしまいます。",
+    "抑え込んだ熱が、やがて噴き出します。",
+    "表面と内面の温度差のため、周囲があなたを誤解します。"
   ],
   "advice": [
-    "Pick one decision to make this week and clear the mist before you make it.",
-    "Say one of your hot feelings out loud. What you love, what you want.",
-    "When emotion rises, ask: is this the moment to express it, or to give it more shape?",
-    "Tell someone close, 'I look quiet but I run hot inside.' It clears years of misreading."
+    "今週、決断すべきことをひとつ選び、霧を晴らしてから決めましょう。",
+    "あなたの熱い感情をひとつ声に出してみましょう。好きなもの、欲しいものを。",
+    "感情が湧いたとき、問いかけてください。今は表に出すべきか、もう少し形を整えるべきか、と。",
+    "親しい人に「静かに見えるけれど、内側では熱いんだ」と伝えましょう。何年もの誤解が晴れます。"
   ],
   "keywords": [
-    "misty lake",
-    "feeling and practice",
-    "hidden heat",
-    "clear judgment"
+    "霧の湖",
+    "感情と実践",
+    "隠れた熱",
+    "明確な判断"
   ]
 }

@@ -1,28 +1,28 @@
 {
-  "name": "Winter Well",
+  "name": "冬の井戸",
   "pillar": "癸丑",
-  "hero": "You're a well beneath frozen ground. Cold and hard on the surface, with water that never runs dry underneath.",
+  "hero": "あなたは凍てつく大地の下に湧く井戸です。表面は冷たく固いですが、その下には決して涸れることのない水が湛えられています。",
   "narrative": [
-    "You condense feeling deep inside. 癸丑 is delicate water resting on cold, damp earth. Your sensitivity doesn't show on the surface, but the well beneath it is very deep. People remember you as quiet — and then one day they realize how exact a single thing you said was.",
-    "Your strength is hidden wisdom. You don't talk much, but what you see runs deeper than most. And your wisdom accumulates like savings. In a crisis, when everyone else has run dry, your well still has water. That's why you quietly keep people alive in hard seasons.",
-    "Your shadow is storing feeling too long. A winter well still has water under the ice, but if the ice gets too thick, you can't draw the water when it's needed. You don't bring feelings out easily, so the people around you don't know your heart. And when a decisive moment comes, you tell yourself, 'Hold on a little longer' — and don't draw.",
-    "A mature Gye-Chou breaks their own ice. Keeping the feelings and the wisdom deep, and knowing how to draw them up when the moment actually calls. Then your quietness stops being distance and becomes the kind of stability people want to lean on."
+    "あなたは感情を深く内側に凝縮する人です。癸丑は、冷たく湿った大地の上に繊細な水が坐した柱です。あなたの感受性は表面には現れませんが、その下の井戸はとても深いのです。人はあなたを静かな人として記憶し、ある日ふと、あなたが発したひと言がどれほど正確だったかに気づきます。",
+    "あなたの強みは隠れた知恵です。多くは語りませんが、あなたが見ているものは誰よりも深いところまで届いています。そしてあなたの知恵は貯蓄のように積み上がっていきます。危機のとき、他の誰もが涸れてしまったとき、あなたの井戸にはまだ水が残っているのです。だからこそあなたは、厳しい季節に静かに人を生かす役割を果たします。",
+    "あなたの影は、感情を長く蓄えすぎることです。冬の井戸は氷の下に水を湛えていますが、氷が厚くなりすぎると、必要なときに水を汲み上げられなくなります。あなたは感情を外に出しにくいので、周囲はあなたの本心を知りません。そして決断のときが来ても、「もう少しだけ」と自分に言い聞かせて、水を汲まないのです。",
+    "成熟した癸丑は、自分自身の氷を割ることができる人です。感情と知恵を深く保ちながら、本当に必要な瞬間にそれを汲み上げる術を知っています。そのとき、あなたの静けさは距離ではなく、人が寄りかかりたいと願う安定へと変わるのです。"
   ],
   "shadows": [
-    "Storing feeling so long that people never learn your heart.",
-    "Postponing decisions with 'just a little longer.'",
-    "Not recognizing your own wisdom, always feeling insufficient."
+    "感情を蓄えすぎて、周囲があなたの本心をいつまでも知らないままになります。",
+    "「もう少しだけ」と決断を先延ばしにしてしまいます。",
+    "自分の知恵に気づかず、いつも足りないと感じています。"
   ],
   "advice": [
-    "Once this week, bring one stored feeling up. Small is fine.",
-    "Pick one decision and make it by a fixed deadline.",
-    "Share one piece of your wisdom with someone. The well doesn't dry when shared.",
-    "Winter wells have springs too. If you're in a dim season, that's a season, not a failure."
+    "今週一度、蓄えてきた感情をひとつ外に出してみましょう。小さなもので構いません。",
+    "決めるべきことをひとつ選び、期限を決めて決めましょう。",
+    "自分の知恵を誰かに分かち合いましょう。井戸は分かち合っても涸れません。",
+    "冬の井戸にも泉はあります。今が翳りの季節なら、それは失敗ではなく季節です。"
   ],
   "keywords": [
-    "winter well",
-    "hidden wisdom",
-    "condensed feeling",
-    "breaking the ice"
+    "冬の井戸",
+    "隠れた知恵",
+    "感情の凝縮",
+    "氷を割る"
   ]
 }
