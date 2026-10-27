@@ -1,29 +1,29 @@
 {
   "pillar": "戊申",
-  "hero": "You're a mountain with rock running through it. Not a wall — a frame. Things take shape around you.",
+  "hero": "あなたは岩が走る山です。壁ではなく、骨格。あなたの周りで物事が形を成します。",
   "narrative": [
-    "You come across as clear, fair, and slightly formal. People trust your judgment before they know your history — which is unusual, and not something you consciously earn. It's just the shape of you.",
-    "Your strength is structure. You don't just hold things up — you give them edges. Plans, teams, and decisions you touch end up with a visible skeleton, and the skeleton is what makes them work when conditions shift. You're not the loudest voice; you're the one the loudest voice eventually needs.",
-    "Your shadow is a mountain too straight to bend. Your clarity can land as coldness, and your standard can become a wall others don't know how to approach. The harder problem is that you hold yourself to the same sharp standard, and it grinds you down slowly — you rarely notice until the edges start wearing inward.",
-    "The mature form of this pillar is principle that holds and bends. You keep the frame and add a door. When you learn to soften the edge without losing the shape, people trust you more, not less — because they can finally get close enough to see how solid you actually are."
+    "あなたは明晰で公正で、やや形式ばって見えます。人はあなたの履歴を知る前に、あなたの判断を信頼します――それは珍しいことで、意識して獲得するものでもありません。ただ、それがあなたの形なのです。",
+    "あなたの強みは構造です。あなたは物事を支えるだけでなく、それに縁を与えます。あなたが触れた計画、チーム、決断には、目に見える骨格が宿り、その骨格が、状況が変わるときにそれを機能させるのです。あなたは最も声の大きい人ではなく、最終的に最も声の大きい人が必要とする人なのです。",
+    "あなたの影は、曲がるにはあまりに真っ直ぐな山です。あなたの明晰さは冷たさとして着地し、あなたの基準は他者が近づき方を知らない壁となりえます。さらに難しいのは、その鋭い基準を自分自身にも等しく課し、自分をゆっくりと削っていることです――縁が内側へ磨耗し始めるまで、ほとんど気づかないのです。",
+    "この柱の成熟した姿は、保ちながら曲がる原則です。骨格を保ちつつ、扉を一つ加える。形を失わずに縁を柔らかくする術を学ぶと、人はあなたをより信頼します――あなたが実際にどれほど堅固かを、ようやく近くで見られるようになるからです。"
   ],
   "shadows": [
-    "Your clarity can land as coldness, and you rarely see it happening in the moment.",
-    "You hold yourself to a standard you would call unreasonable in anyone else.",
-    "You can build a structure so rigid that it stops accommodating the people it was built for."
+    "あなたの明晰さが冷たさとして着地することがあり、その瞬間をほとんど自覚できません。",
+    "他の誰かに「理不尽だ」と言う基準を、自分自身にはそのまま課してしまいます。",
+    "構造をあまりに堅固に築き、それが本来支えるはずだった人々を収容できなくなることがあります。"
   ],
   "advice": [
-    "Once this week, ask a question before giving the answer. Let someone else frame it first.",
-    "Say one thing you feel, not just one thing you see — even in a small way.",
-    "Notice who softens you. Spend more time with them.",
-    "Forgive yourself for one mistake this week. Out loud, if you can."
+    "今週一度、答えを出す前に質問をしましょう。誰か他の人に先に枠を描かせるのです。",
+    "見えることだけでなく、感じることも一つ言ってみましょう。小さくても。",
+    "誰があなたを柔らかくするか観察しましょう。その人とより多くの時間を過ごしてください。",
+    "今週、失敗を一つ赦しましょう。できれば声に出して。"
   ],
   "keywords": [
-    "structured clarity",
-    "rock-hard principle",
-    "form-maker",
-    "upright strength"
+    "構造化された明晰さ",
+    "岩のような原則",
+    "形を作る力",
+    "真っ直ぐな強さ"
   ],
-  "name": "Rocky Mountain",
+  "name": "岩山",
   "name_traditional": ""
 }

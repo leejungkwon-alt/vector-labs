@@ -1,29 +1,29 @@
 {
   "pillar": "戊戌",
-  "hero": "You're a mountain on dry earth — one of the pillars the tradition calls a Commander. Quiet, hard to move, slow to yield.",
+  "hero": "あなたは乾いた大地の上の山です。伝統が「魁罡(魁罡)」と呼ぶ柱の一つで、静かで、動きにくく、なかなか屈しません。",
   "narrative": [
-    "You don't announce yourself. People often register you as quiet, then realize — months later — that you were the one holding the line. That delayed recognition is part of your signature.",
-    "The tradition names this pillar 魁罡, one of the four Commanders. Your strength is structural: an internal standard you don't trade away. When things get ugly, you're the person others rely on not to bend. Your steadiness is not performed — it's the actual shape of you.",
-    "Your shadow is that dry earth cracks. You can hold so firmly that you stop listening, and the tension you don't show erupts as sudden anger or sudden withdrawal. You also tend to be much harsher on yourself than anyone else would ever be — the standard you refuse to impose on others, you impose on yourself without mercy.",
-    "The mature form of this pillar is command without commandeering. You keep the standard and you also keep the door open — for the people still working toward it, and for yourself. When you can loosen one rule without losing the frame, your weight stops feeling like a wall and starts feeling like a harbor."
+    "あなたは自分を名乗りません。人はあなたをよく「静かな人」として認識し、数ヶ月後に気づくのです。あの一線を保っていたのは、あなただったのだと。その遅れてやってくる認識こそ、あなたの署名です。",
+    "伝統はこの柱を魁罡(魁罡)と呼び、四つの司令官の柱の一つに数えます。強みは構造です。簡単には手放さない内なる基準。状況が醜くなるとき、屈しない人として信頼されます。あなたの落ち着きは演技ではなく、あなたの実際の形なのです。",
+    "あなたの影は、乾いた大地がひび割れることです。あまりに固く握るので、聞くのをやめてしまい、表に出さない緊張が突然の怒りや突然の引きこもりとして噴き出します。そして、他人には決して課さない基準を、自分自身には無慈悲に課してしまうのです。",
+    "この柱の成熟した姿は、支配するが占領しないことです。基準を保ちながら、扉も開けておく。まだその基準へ向かって歩いている人々にも、そして自分自身にも。枠を失わずに規則を一つ緩められるとき、あなたの重みは壁ではなく港のように感じられ始めるのです。"
   ],
   "shadows": [
-    "You hold your position so firmly that other people's different choices start to look like errors.",
-    "Unspoken tension builds until it snaps — and the people around you never see the snap coming.",
-    "You judge yourself against a standard you would never impose on another human being."
+    "自分の立場をあまりに固く保つので、他の人の異なる選択が誤りに見え始めます。",
+    "語られない緊張が積み上がって、ある瞬間にぷつりと切れる――周囲はその瞬間を予期できません。",
+    "他の人間には決して課さない基準で、自分自身を裁いてしまいます。"
   ],
   "advice": [
-    "When someone chooses differently than you would, ask: 'Is this wrong, or just not mine?'",
-    "Say one small frustration out loud this week, before it becomes an eruption.",
-    "Loosen one rule on purpose. Notice the world doesn't fall apart.",
-    "Once this week, say to yourself: 'This is enough.' Mean it."
+    "誰かが自分と違う選択をするとき、問いかけましょう。「これは間違いか、それとも単に私のものでないだけか？」と。",
+    "今週、小さな不満を一つ声に出しましょう。噴出になる前に。",
+    "意図的に規則を一つ緩めてみましょう。世界は崩れないと気づくために。",
+    "今週一度、自分に「これで十分」と言ってみましょう。心から。"
   ],
   "keywords": [
-    "魁罡 resolve",
-    "dry endurance",
-    "unshakable",
-    "principled weight"
+    "魁罡",
+    "乾いた忍耐",
+    "揺るぎなさ",
+    "原則の重み"
   ],
-  "name": "Dry Mountain",
+  "name": "乾いた山",
   "name_traditional": ""
 }

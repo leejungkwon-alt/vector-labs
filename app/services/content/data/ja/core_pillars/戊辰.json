@@ -1,29 +1,29 @@
 {
   "pillar": "戊辰",
-  "hero": "You're a mountain with a dragon asleep inside it. Unremarkable to look at — until the moment it isn't.",
+  "hero": "あなたは内に眠る龍を抱く山です。見た目はありふれていて、それがそうでなくなる瞬間までは。",
   "narrative": [
-    "Most days you look ordinary, maybe even underwhelming. Then a decisive moment arrives, and the room realizes it's been sitting on something much heavier than it thought. People say 'Wait — that was *them*?' a lot around you.",
-    "Your strength is stored potential. 辰 holds water and wood inside dry earth — an aquifer under a plain. You are a long-game player: patient, quiet, arranging things until the moment it matters, and then moving with a weight that surprises everyone including people who thought they knew you.",
-    "Your shadow is a dragon that never wakes. You can spend years sketching a big picture without ever bringing it out, and after a while people stop asking what you're building. You can also wait for the perfect decisive moment so long that the ordinary moments — the ones that were actually available — pass while you're waiting.",
-    "The mature form of this pillar is a mountain that wakes the dragon on purpose. You learn to show pieces of the big picture early, in small starts, so the world can see what's forming before it's finished. When you do, the weight that used to surprise people becomes the thing they came to rely on."
+    "ほとんどの日、あなたは普通に見えます。あるいは物足りなく見えるかもしれません。けれど決定的な瞬間が訪れると、その場の全員が気づくのです。自分たちが思っていたより、ずっと重いものの上に座っていたのだと。「待って、あれがあの人がやったの？」という言葉が、あなたの周りではよく聞かれます。",
+    "あなたの強みは、蓄えられた潜在力です。辰は乾いた大地の中に水と木を蓄えています。平原の下の帯水層のように。あなたは長いゲームの使い手です――忍耐強く、静かに、重要な瞬間まで物事を整え、そしてあなたを知っていると思っていた人々さえ驚かせる重みで動くのです。",
+    "あなたの影は、決して目覚めない龍です。何年も大きな絵を描きながら決して外に出さなければ、人はあなたが何を作っているのか尋ねるのをやめます。完璧な決定的瞬間をあまりに長く待ちすぎて、実際に利用可能だった普通の瞬間が、その待機のあいだに過ぎ去ってしまうこともあるのです。",
+    "成熟した戊辰は、意図的に龍を目覚めさせる山です。大きな絵のひとかけらを早めに、小さな始まりとして見せ、世界が完成前に形成されている様子を見られるようにします。そうすれば、かつて人を驚かせた重みが、人が頼るようになるものへと変わるのです。"
   ],
   "shadows": [
-    "You hold the plan so close that people stop believing there is one.",
-    "You wait for the perfect decisive moment, and ordinary opportunities pass while you wait.",
-    "You can sketch the big picture endlessly without shipping the small version."
+    "計画をあまりに近く抱えすぎて、計画があることさえ信じられなくなります。",
+    "完璧な決定的瞬間を待つうちに、普通の機会が通り過ぎてしまいます。",
+    "大きな絵だけを果てしなく描き、その小さなバージョンを世に出しません。"
   ],
   "advice": [
-    "Bring one piece of the plan into action this week — small, real, and visible.",
-    "Tell one person what you're building. Kept only in your head, the dragon stays asleep.",
-    "Pick one 'small first step' from the big picture. Do it today.",
-    "Stop waiting for the decisive moment. Create one this week."
+    "今週、計画のひとかけらを行動に移しましょう。小さく、現実的で、目に見える形で。",
+    "誰か一人に、あなたが作っているものを伝えましょう。頭の中だけでは龍は眠ったままです。",
+    "大きな絵の中から「小さな第一歩」を一つ選び、今日実行しましょう。",
+    "決定的瞬間を待つのをやめましょう。今週、自分で一つ作るのです。"
   ],
   "keywords": [
-    "dragon stillness",
-    "stored potential",
-    "big-picture patience",
-    "decisive emergence"
+    "龍の静けさ",
+    "蓄えた潜在力",
+    "大きな絵の忍耐",
+    "決定的な出現"
   ],
-  "name": "Dragon Mountain",
+  "name": "龍を抱く山",
   "name_traditional": ""
 }

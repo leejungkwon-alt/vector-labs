@@ -1,29 +1,29 @@
 {
   "pillar": "戊寅",
-  "hero": "You're a mountain with a forest growing on it. What looks like solid ground is actually a place where things can root.",
+  "hero": "あなたは森が育つ山です。固い地面に見えて、実は何かが根を下ろせる場所なのです。",
   "narrative": [
-    "You read as dependable, warm, and hard to rattle. People bring problems to you before they bring them to anyone else — not because you ask them to, but because being near you makes the problem feel more tractable.",
-    "Your strength is generous ground. You don't just support people — you give them the conditions to grow on their own. Teams you've led keep their culture after you leave. Projects you've started keep going after you've stepped back. That's rare, and it doesn't happen by accident.",
-    "Your shadow is giving so much ground that your own foundation erodes. You say yes to the next person who needs a foothold, then quietly resent how little you have left. What feels like generosity can become a habit of staying needed — and staying needed is not the same as being loved.",
-    "The mature form of this pillar is a mountain that holds the forest and still keeps its own rock. Generosity with boundaries. The forest actually grows better when the mountain is intact — and so does everyone who relies on you."
+    "あなたは信頼でき、温かく、動じにくい人として映ります。人は他の誰よりも先にあなたに問題を持ち込みます――あなたがそう頼むからではなく、あなたのそばにいると問題が扱いやすく感じられるからです。",
+    "あなたの強みは寛大な地面です。あなたは人を支えるだけでなく、その人が自分の力で育つ条件を与えます。あなたが率いたチームは、あなたが去った後もその文化を保ちます。あなたが始めたプロジェクトは、あなたが手を引いた後も動き続ける。それは稀なことで、偶然ではありません。",
+    "あなたの影は、あまりに多くの地面を差し出して、自分の土台が侵食されることです。次に足場を必要とする人に「はい」と言い、その後、残ったものがいかに少ないかに静かに不満を覚えます。寛容に感じられるものが、必要とされ続ける習慣になることがあるのです――必要とされることは、愛されることと同じではありません。",
+    "この柱の成熟した姿は、森を抱えながら自分の岩を保つ山です。境界線のある寛容さ。山が無傷であるとき、森は実際によりよく育ちます――そしてあなたに頼るすべての人も。"
   ],
   "shadows": [
-    "You say yes to more than you can actually hold, then quietly resent the weight.",
-    "You can confuse being needed with being loved.",
-    "You stay available to everyone, and no one notices you're depleted."
+    "実際に抱えられる以上のものに「はい」と言い、静かに重さに不満を覚えます。",
+    "必要とされることと愛されることを混同してしまいます。",
+    "誰にでも開かれているため、あなたが枯渇していることに誰も気づきません。"
   ],
   "advice": [
-    "Pick one thing you're supporting out of habit rather than choice. Let it go this week.",
-    "Before you say yes to a request, ask yourself: 'Is this mine to carry?'",
-    "Say out loud, once this week, 'I need something back.' Let someone hear it.",
-    "Spend an hour on something that grows you, not someone else."
+    "選択ではなく習慣で支えているものを一つ選び、今週手放しましょう。",
+    "依頼に「はい」と言う前に、自問してください。「これは私が背負うものか？」と。",
+    "今週一度、「私も何か返してほしい」と声に出しましょう。誰かに聞かせるのです。",
+    "他人ではなく、自分を育てることに一時間を使いましょう。"
   ],
   "keywords": [
-    "generous ground",
-    "lively stability",
-    "growth enabler",
-    "shared rooting"
+    "寛大な地面",
+    "生き生きとした安定",
+    "成長を可能にする人",
+    "共に根を張る"
   ],
-  "name": "Forested Mountain",
+  "name": "森を抱く山",
   "name_traditional": ""
 }

@@ -1,29 +1,29 @@
 {
   "pillar": "戊子",
-  "hero": "You're a mountain with a spring running underneath. Solid on the surface — deep, clear water beneath.",
+  "hero": "あなたは下に泉が走る山です。表面は固く、その下には深く澄んだ水が流れています。",
   "narrative": [
-    "You come across as steady, unremarkable, easy to overlook. People underestimate you — until the moment a room needs someone who can actually think clearly, and you're the only one who does.",
-    "Your strength is quiet insight. You read situations before they're explained, and the best decisions you make almost never come out of a meeting — they come out of silence. What looks like passivity is usually you watching the whole board before moving one piece.",
-    "Your shadow is thinking past the moment. Because the water runs deep, you can keep processing until the window to act has quietly closed. And when you're uncertain, you go silent — and to everyone else, silence looks exactly like distance.",
-    "The mature form of this pillar is a spring that actually flows. Insight that arrives, is spoken, and then moves on. You learn to trust the water without drowning in it — to see, to say, to act, in that order, before the tide changes."
+    "あなたは落ち着いていて、ありふれていて、見過ごしやすい人に見えます。周囲はあなたを過小評価します――部屋が、実際に明晰に考えられる人を必要とする瞬間までは。そしてそれができるのは、あなた一人だけなのです。",
+    "あなたの強みは静かな洞察です。状況が説明される前に状況を読み、あなたの最良の判断はほとんど会議から出ません――沈黙から出るのです。受動性に見えるものは、たいてい一つの駒を動かす前に盤面全体をじっと見つめている姿なのです。",
+    "あなたの影は、瞬間を超えて考え続けることです。水が深いため、行動の窓が静かに閉じるまで処理を続けられます。そして不確かなときは沈黙する――他の人にとって、その沈黙は距離とまったく同じに見えるのです。",
+    "この柱の成熟した姿は、実際に流れる泉です。洞察が届き、語られ、そして流れていきます。水を信頼し、しかし水に溺れないことを学ぶ――見て、言って、動く、その順序で、潮目が変わる前に。"
   ],
   "shadows": [
-    "You keep thinking past the moment when a decision was still yours to make.",
-    "You go quiet when you're uncertain, and people read the silence as distance.",
-    "You doubt your own insight because it doesn't arrive with proof attached."
+    "決断がまだ自分のものだった瞬間を超えて、考え続けてしまいます。",
+    "不確かなときに静かになり、周囲はその沈黙を距離として読みます。",
+    "証拠が添えられていないので、自分の洞察を疑ってしまいます。"
   ],
   "advice": [
-    "Once this week, act on a decision before you feel 'ready.' Notice what actually happens.",
-    "Say the observation out loud even if you can't yet explain it. Let people hear the water.",
-    "When you go quiet, tell one person 'I'm thinking.' Don't make them guess.",
-    "Put one open question down for a day. Water settles on its own."
+    "今週一度、「準備できた」と感じる前に、決断を実行しましょう。実際に何が起きるか観察してください。",
+    "説明がまだつかなくても、観察を声に出しましょう。人に水の音を聞かせるのです。",
+    "静かになるとき、一人に「今、考えている」と伝えましょう。推測させないでください。",
+    "開かれた問いを一日、机の上に置きましょう。水は自然に落ち着くのです。"
   ],
   "keywords": [
-    "hidden depth",
-    "still waters",
-    "quiet insight",
-    "mountain calm"
+    "隠れた深さ",
+    "静かな水",
+    "静かな洞察",
+    "山の落ち着き"
   ],
-  "name": "Mountain Spring",
+  "name": "山の湧き水",
   "name_traditional": ""
 }

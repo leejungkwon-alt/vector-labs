@@ -1,29 +1,29 @@
 {
   "pillar": "戊午",
-  "hero": "You're a mountain with a fire burning at its core. Quiet from the outside, warm — sometimes explosive — underneath.",
+  "hero": "あなたは芯に火を抱く山です。外からは静かで、内側は温かく、時に爆発的です。",
   "narrative": [
-    "You carry enormous energy, but it doesn't leak out at random. You look calm — often the calmest person in the room — and yet there's something warm and pressurized moving just under the surface. When you choose to act, everyone feels it.",
-    "Your engine runs on conviction. Half-measures and hedging don't move you, and you have a low tolerance for people who speak without meaning it. Once you commit, you commit fully — and that intensity is what people remember about you.",
-    "Your shadow is the fire you don't regulate. Because you can hold so much in, small irritations can build into a sudden eruption that surprises everyone around you. And when you push too hard for too long, you can exhaust yourself without noticing — the mountain doesn't feel the tremors until it cracks.",
-    "The mature form of this pillar is controlled warmth. Not a fire that goes out — a fire that is deliberate. You learn when to release heat in small, steady amounts, and you learn how to share some of that heat with others. When you do, your intensity stops being a risk to manage and becomes the thing that makes you unmistakable."
+    "あなたは莫大なエネルギーを携えていますが、それは無作為に漏れ出しません。あなたは穏やかに見えます――たいてい、その場で最も落ち着いた人です――それでも、表面のすぐ下で温かく加圧された何かが動いています。あなたが動くことを選んだ瞬間、全員が感じるのです。",
+    "あなたのエンジンは確信で動きます。中途半端や曖昧な姿勢はあなたを動かさず、本気で言っていない人には寛容でいられません。一度コミットすれば、完全にコミットする――その強度が、人があなたについて覚えていることなのです。",
+    "あなたの影は、統御しない火です。あまりに多くを抱えられるため、小さな苛立ちが突然の噴出に積み上がり、周囲を驚かせます。そしてあまりに長く、あまりに強く自分を押し続けると、気づかないうちに自分を疲弊させてしまいます――山はひびが入るまで、震えを感じないのです。",
+    "この柱の成熟した姿は、制御された温もりです。消える火ではなく、意図して使う火。熱を小さく安定した量で放つ術を学び、その熱の一部を他者と分かち合う術を学びます。そうすれば、あなたの強度は管理すべきリスクではなく、あなたを紛れもない存在にするものへと変わるのです。"
   ],
   "shadows": [
-    "You can hold so much in that the eventual release feels sudden and unfair to the people around you.",
-    "You run at full capacity without noticing fatigue, then feel betrayed by your own exhaustion.",
-    "Under pressure, you can become convinced that your read of a situation is the only correct one."
+    "あまりに多くを抱え込み、結局の放出が周囲にとって突然で不公平に感じられます。",
+    "疲労に気づかないまま全力で走り、その後自分の疲弊に裏切られたように感じます。",
+    "プレッシャーの下で、自分の状況の読みが唯一の正しいものだと確信してしまいがちです。"
   ],
   "advice": [
-    "Once this week, name an irritation the moment you notice it — out loud, to a person who can hear it. Don't wait until it's a fire.",
-    "Find one deliberate way to release heat every day. Not productivity — movement, breath, or something that uses your body.",
-    "When you catch yourself running at full capacity, stop one thing. Say 'I'm choosing this' out loud, so it doesn't feel like failure.",
-    "Ask one trusted person a genuinely open question. Not 'do you agree?' — 'what do you see that I don't?'"
+    "今週一度、苛立ちに気づいた瞬間に声に出しましょう。聞こえる人がいる場所で。火になるまで待たないでください。",
+    "毎日、熱を放つ意図的な方法を一つ見つけましょう。生産性ではなく、動き、呼吸、身体を使う何かです。",
+    "全力で走っていると気づいたら、一つ止めましょう。「これは私が選んだことだ」と声に出して。失敗に感じられないように。",
+    "信頼できる人に、本当に開かれた問いを一つ投げかけましょう。「賛成する？」ではなく「私が見えていない何かが見える？」と。"
   ],
   "keywords": [
-    "volcanic drive",
-    "contained intensity",
-    "protective heat",
-    "regulated fire"
+    "火山の推進力",
+    "内に秘めた強度",
+    "保護する熱",
+    "統御された火"
   ],
-  "name": "Mountain in Fire",
+  "name": "火を抱く山",
   "name_traditional": ""
 }
