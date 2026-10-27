@@ -1,29 +1,29 @@
 {
   "pillar": "庚午",
-  "hero": "You're a blade inside a forge. The heat doesn't soften you — it makes you clearer.",
+  "hero": "あなたは鍛冶場の中の剣です。熱はあなたを柔らかくせず、むしろより明瞭にするのです。",
   "narrative": [
-    "You're someone whose principles and passion live in the same body. When you decide something, you try to judge by a standard rather than by mood. But that standard isn't cold calculation — it comes from a conviction that burns hot. 'This is right' or 'this is not' ignites in you first, and only then becomes words.",
-    "At work, what shows first is decisiveness. You cut through vague discussions, make calls, and take responsibility. People tend to hand you the role of 'the one who decides.' It's the same in relationships. You find ambiguity hard to sit with, and you express what you like and dislike clearly. That clarity reads to others as trust — and sometimes as pressure.",
-    "Your task is to separate the 'hot standard' from the 'cool judgment.' The hot standard is your values. The cool judgment is the tool that executes those values. Mix them, and a right word becomes a wound. Separate them, and decisiveness becomes respect. Before a decision, ask: 'Is this what I believe is right, or is this the most accurate read of this situation right now?'",
-    "Once that distinction settles in, your intensity stops pushing people away and starts pulling them in. Someone who holds principles and still sees people. Someone who carries heat and still executes calmly. That is the mature form of this pillar. You don't have to get there all at once — just keep walking in that direction."
+    "あなたは原則と情熱を同じ身体に宿す人です。何かを決めるとき、感情よりも基準で判断しようとします。けれどその基準は冷たい計算ではなく、熱く燃える確信から来ています。「これは正しい」「これは正しくない」がまずあなたの中で発火し、それから初めて言葉になるのです。",
+    "仕事では、まず決断力が目立ちます。曖昧な議論を切り開き、判断を下し、責任を取ります。人はあなたに「決める人」の役割を自然に手渡します。人間関係も同じです。曖昧さに耐えられず、好きなものと嫌いなものをはっきり表現します。その明瞭さは周囲には信頼として映り、ときにプレッシャーとしても映ります。",
+    "あなたの課題は、「熱い基準」と「冷たい判断」を切り離すことです。熱い基準はあなたの価値観。冷たい判断はその価値観を実行する道具です。混ぜれば、正しい言葉が傷になります。切り離せば、決断力は敬意へと変わります。決める前に問いかけてください。「これは私が正しいと信じるものか、それとも今この状況の最も正確な読みか？」と。",
+    "その区別が落ち着くと、あなたの強さは人を遠ざけるのではなく、引き寄せるようになります。原則を保ちながら人を見られる人。熱を抱えながら静かに実行できる人。それがこの柱の成熟した姿です。一度に到達する必要はありません――その方向へ歩き続けるだけでいいのです。"
   ],
   "shadows": [
-    "When your certainty is strong, you close the door on hearing the other person out.",
-    "You sometimes dress up emotion as 'judgment.' That's not a standard — that's hurt.",
-    "Deciding nonstop wears you down, and you often can't admit your own fatigue."
+    "確信が強いとき、相手の話を最後まで聞く扉を閉ざしてしまいます。",
+    "感情を「判断」と着飾ってしまうことがあります。それは基準ではなく、傷です。",
+    "決断を続けることで疲弊し、自分の疲れを認められないことがよくあります。"
   ],
   "advice": [
-    "Before deciding, ask once: is this my values, or is this the best call for this specific moment?",
-    "This week, listen all the way through before you judge — just once.",
-    "Give yourself recovery time after a hard decision. Strong calls need strong rest.",
-    "Tell one person you respect about something you're wrestling with. You don't have to carry it all alone."
+    "決める前に一度問いかけてください。これは私の価値観か、それとも今この瞬間の最善か、と。",
+    "今週一度、判断する前に最後まで聞いてみましょう。ただ一度だけ。",
+    "難しい決断の後には、自分に回復の時間を与えましょう。強い決断には強い休息が必要です。",
+    "尊敬する人に、悩んでいることを一つ打ち明けましょう。すべてを一人で抱える必要はありません。"
   ],
   "keywords": [
-    "hot principles",
-    "clear resolve",
-    "passionate cool",
-    "weight of responsibility"
+    "熱い原則",
+    "明晰な決断",
+    "情熱的な冷静",
+    "責任の重み"
   ],
-  "name": "Blade in the Forge",
+  "name": "鍛冶場の剣",
   "name_traditional": ""
 }

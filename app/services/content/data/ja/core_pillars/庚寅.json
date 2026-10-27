@@ -1,28 +1,28 @@
 {
-  "name": "Blade Opening the Forest",
+  "name": "森を開く剣",
   "pillar": "庚寅",
-  "hero": "You're a blade clearing a path through a forest. Not felling trees for the sake of it — opening the way so others can walk.",
+  "hero": "あなたは森に道を開く剣です。ただ木を伐るのではなく、誰かが歩けるように道を通すのです。",
   "narrative": [
-    "You move before you've finished thinking. When an opening appears, you take it. Your decisions come fast, and 'start first, refine later' is already wired into you. That puts you miles ahead of most people at the beginning of things.",
-    "Your strength is momentum. Metal cuts wood — you don't negotiate with a mess. You clear it. Long meetings without conclusions, people circling the same point, projects that won't move: a few sentences from you and they're done. People feel the project move because of you.",
-    "Your shadow is cutting too fast. You're so focused on the forward line that you leave behind people, hurt feelings, and seeds that hadn't sprouted yet. Pioneers always get called 'the one who does it alone.' It's not your intention — it's your speed.",
-    "A mature Geng-In knows the difference between what to cut and what to grow. Someone who lets things take their time, and uses that waiting window to work on something else. Then your momentum pulls people in, and the place you passed through has a road in it."
+    "あなたは考え終える前に動きます。突破口が現れたら、すぐに取ります。決断は速く、「まず始めて、後で整える」がすでに身体に刻まれている。それが、物事の始まりにおいて他の誰よりも先へ出る理由です。",
+    "あなたの強みは勢いです。金は木を切る――あなたは乱れたものと交渉しない。切り開く。結論の出ない長い会議、同じ論点を回り続ける人々、動かないプロジェクト。あなたの数言でそれらは片付きます。人が「プロジェクトが進んだ」と感じるのは、あなたのせいです。",
+    "あなたの影は、切りすぎることです。前へ進む線に集中しすぎて、人を置き去りにし、感情を傷つけ、まだ芽吹いていない種を残してしまいます。先駆者はいつも「一人でやる人」と言われます。それは意図ではなく、速度なのです。",
+    "成熟した庚寅は、切るべきものと育てるべきものの違いを知っています。物事に時間を与え、その待ち時間を別の仕事に使える人。そうすれば、あなたの勢いは人を引き寄せ、あなたが通った場所には道が残るのです。"
   ],
   "shadows": [
-    "Fast decisions sometimes ignore the preparation time others need.",
-    "Moving ahead alone can isolate you from the very team you're leading.",
-    "You're so used to speed that you abandon slow processes halfway through."
+    "速い決断は、他の人が必要とする準備の時間を無視することがあります。",
+    "一人で先へ進むことで、率いているチームから孤立してしまうことがあります。",
+    "速度に慣れすぎて、遅いプロセスを途中で投げ出してしまいます。"
   ],
   "advice": [
-    "Before deciding something, ask one relevant person this week: 'How do you see it?'",
-    "Pick one thing you've set in motion and deliberately leave it unfinished this week. Let it grow.",
-    "When someone moves slowly, ask once why. Usually there's a reason you didn't see.",
-    "Build one part of your project that runs without you. That's real leadership."
+    "何かを決める前に、今週は関係する一人に「どう見える？」と聞いてみましょう。",
+    "動かし始めたことを一つ選び、今週は意図的に未完成のままにしてみましょう。育ててください。",
+    "誰かがゆっくり動くとき、一度なぜかを聞きましょう。たいてい、あなたが見落としている理由があります。",
+    "あなたのプロジェクトの一部を、あなたなしで動くように作りましょう。それが本当のリーダーシップです。"
   ],
   "keywords": [
-    "pioneering",
-    "speed",
-    "opening paths",
-    "momentum"
+    "開拓",
+    "速さ",
+    "道を開く力",
+    "勢い"
   ]
 }

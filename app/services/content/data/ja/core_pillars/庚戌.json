@@ -1,27 +1,28 @@
 {
-  "name": "Blade on Dry Earth",
+  "name": "乾いた大地の剣",
   "pillar": "庚戌",
-  "hero": "You're a blade planted on dry earth. Not a blade of passion — a blade of unbroken principle.",
+  "hero": "あなたは乾いた大地に突き立てられた剣です。情熱の剣ではなく、折れない原則の剣なのです。",
   "narrative": [
-    "You share the 魁罡 (Commander) pillar with Geng-Jin — but where Geng-Jin sits on wet earth, you sit on dry. So your strength is drier, more decisive, more principled. You don't waver. But you don't bend either.",
-    "You carry a strong moral compass. 'This is right, that is not' is clear to you, and you don't trade it away. That makes you the center people lean on in a crisis, and the person in an organization who everyone knows won't cross a line.",
-    "Your shadow is forgetting the sheath. 戌 (Xu) is the storage of fire — there's a hot interior inside that dry earth. If that heat isn't governed, your firmness can suddenly erupt as anger. And your standard, held too tightly, becomes an impossibly high wall to the people around you."
+    "あなたは庚辰と同じ魁罡(魁罡)の柱を共有しますが、庚辰が湿った大地に坐するのに対し、あなたは乾いた大地に坐します。だからあなたの強さはより乾いており、より断固としており、より原則的です。あなたは揺らがない。けれど、曲がりもしません。",
+    "あなたは強い道徳の羅針盤を携えています。「これは正しく、あれは正しくない」があなたには明瞭で、それを手放しません。だから危機の際に人が寄りかかる中心となり、組織の中で「一線を越えない人」として誰もが知る存在になるのです。",
+    "あなたの影は、鞘を忘れることです。戌は火の蔵――乾いた大地の中に熱い内側があります。その熱が統御されなければ、あなたの固さは突然、怒りとして噴き出すことがあります。そしてあなたの基準は、あまりに固く握られると、周囲にとって越えられない高い壁となるのです。",
+    "成熟した庚戌は、統率と抱え込みの違いを知っています。基準を保ちながら、扉を開けておく。まだ基準へ向かって歩いている人にも、そして自分自身にも。枠を失わずに一つの規則を緩められるとき、あなたの重みは壁ではなく港のように感じられるのです。"
   ],
   "shadows": [
-    "Holding principle so tightly that other people's differences look like errors.",
-    "Stored heat that erupts suddenly, catching everyone off guard.",
-    "Being so strict with yourself that you can't admit you're tired."
+    "原則をあまりに固く握るので、他の人の違いが誤りのように見えてしまいます。",
+    "蓄えた熱が突然噴き出し、周囲が面食らいます。",
+    "自分に厳しすぎて、疲れていることを認められません。"
   ],
   "advice": [
-    "When someone chooses differently than you would, ask once: is this wrong, or just not mine?",
-    "Once this week, name a small resentment out loud before it becomes an eruption.",
-    "Ask: is this judgment coming from my values, or from my exhaustion?",
-    "Loosen one rule this week on purpose. Confirm the world doesn't fall apart."
+    "誰かが自分と違う選択をしたとき、一度問いかけましょう。これは間違いか、それとも単に私のものでないだけか、と。",
+    "今週一度、小さな不満を声に出しましょう。噴出になる前に。",
+    "自問してください。この判断は私の価値観からか、それとも私の疲労からか、と。",
+    "今週は意図的に規則を一つ緩めてみましょう。世界は崩れないと確かめるために。"
   ],
   "keywords": [
     "魁罡",
-    "principled steel",
-    "dry resolve",
-    "hidden heat"
+    "原則の鋼",
+    "乾いた決意",
+    "隠れた熱"
   ]
 }

@@ -1,28 +1,28 @@
 {
-  "name": "Blade in the Deep Lake",
+  "name": "深い湖の剣",
   "pillar": "庚子",
-  "hero": "You're a blade resting at the bottom of a deep lake. You don't flash above the surface — you simply know, from below, exactly where the cut belongs.",
+  "hero": "あなたは深い湖の底に眠る剣です。水面に閃かずとも、下から、切るべき場所を正確に知っているのです。",
   "narrative": [
-    "You think deeper than you speak. In a meeting, you can sit in silence while everyone else talks over each other, and still see the whole board before anyone else does. You're not quiet because you have nothing to say. You're quiet because you're already weighing which voice in the room is actually true.",
-    "Your strength is precision. Metal flowing into water — the blade doesn't shout, it seeps. You say one thing, and weeks later people realize it was the thing that mattered. Your words land because you don't waste them.",
-    "Your shadow is sinking too deep. When the thinking gets heavier and the feelings only flow inward, people around you can't tell what's happening inside you. If you've ever been called cold or hard to read, it's not because you don't care — it's because you care so far down the current doesn't reach the surface.",
-    "A mature Geng-Ja is sharp without being cold. The same edge, but aimed at the problem instead of the person. When you get there, your depth stops being distance and becomes the kind of wisdom people want to lean on."
+    "あなたは話す以上に深く考えます。会議で、他の人が声を張り合っている間、あなたは沈黙のまま座っていられます。それでも、誰よりも先に盤面全体を見ているのです。あなたが静かなのは、言うことがないからではありません。すでに、この場で本当に正しい声はどれかを見極めているからです。",
+    "あなたの強みは精密さです。金が水へと流れる――剣は叫ばず、沁みる。あなたが一つのことを言い、数週間後に人々はそれが本当に重要だったことだったと気づきます。あなたの言葉が届くのは、無駄にしないからです。",
+    "あなたの影は、深く沈みすぎることです。思考が重くなり、感情が内へだけ流れると、周囲はあなたの内側で何が起きているのかわからなくなります。冷たい、読みにくいと言われたことがあるなら、それはあなたが気にかけていないからではなく、あまりに深く気にかけているため、流れが表面に届かないからなのです。",
+    "成熟した庚子は、冷たさのない鋭さを持ちます。同じ刃を、人ではなく問題に向ける。そこへ至れば、あなたの深さは距離ではなく、人が寄りかかりたいと願う知恵へと変わるのです。"
   ],
   "shadows": [
-    "Thinking so deeply that you don't speak when speaking is what the moment needed.",
-    "Holding emotions in until people around you can't read your care.",
-    "Deciding alone out of habit, so it takes longer than it should for others to trust you."
+    "深く考えすぎて、話すべき瞬間に話さないことがあります。",
+    "感情を抱え込み、周囲があなたの気遣いを読めなくなります。",
+    "習慣で一人で決めるので、他者があなたを信頼するまでに時間がかかります。"
   ],
   "advice": [
-    "Once this week, say the thing out loud even if it isn't fully formed. Timing matters more than polish.",
-    "Pick one judgment you've kept silent. Explain to someone why you see it the way you do.",
-    "Keep your solitude, but add a practice of emptying — not analyzing. Just letting the water settle.",
-    "Tell someone close, 'I think a lot before I speak.' That one sentence clears up years of misreading."
+    "今週一度、未完成でも声に出してみましょう。仕上げよりタイミングが大事です。",
+    "沈黙のままにした判断を一つ選び、なぜそう見るのかを誰かに説明しましょう。",
+    "一人の時間は保ちつつ、分析ではなく空にする練習を加えましょう。ただ水を澄ませるように。",
+    "親しい人に「話す前にたくさん考えるんだ」と伝えましょう。その一言で何年もの誤読が晴れます。"
   ],
   "keywords": [
-    "deep insight",
-    "precise words",
-    "quiet judgment",
-    "cool clarity"
+    "深い洞察",
+    "正確な言葉",
+    "静かな判断",
+    "冷たい明晰さ"
   ]
 }

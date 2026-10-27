@@ -1,27 +1,28 @@
 {
-  "name": "Twice-Forged Steel",
+  "name": "二度鍛えられた鋼",
   "pillar": "庚申",
-  "hero": "You're steel forged twice. You were made not to break — to be the one steady line in a world that won't hold still.",
+  "hero": "あなたは二度鍛えられた鋼です。折れないために生まれ、動かない世界の中で一筋の揺るがない線となる人です。",
   "narrative": [
-    "You're the purest form of Geng. Geng-Shin is Geng sitting on its own 祿 (Lu) — double metal, layered on itself. So your standard doesn't shift, your judgment is clean, and your stance is steel. Not because you're trying to be — because that's the shape you were made in.",
-    "You see right and wrong with unusual accuracy. Ambiguity bothers you, and injustice is something you cannot just walk past. This sharpness makes you the person an organization trusts to call the hard thing, and people bring you the decisions they can't make alone.",
-    "Your shadow is a blade that cuts everything. A right word at the wrong moment becomes a wound. Firmness taken too far reads as cold. And the blade also turns inward — you hold yourself to a standard you'd never demand of another human being, and you don't forgive yourself when you fall short."
+    "あなたは庚の中でも最も純粋な庚です。庚申は庚が自分の禄(祿)の位置に坐した、金の気が二重に重なった柱です。だからあなたの基準は揺らがず、判断は澄み、姿勢は鋼です。そうしようとしているのではなく、そのようにできているからそうなのです。",
+    "あなたは異例なほど正確に善悪を見ます。曖昧さはあなたを苛立ちさせ、不正義はそのまま通り過ぎられないもの。その鋭さゆえ、組織は難しいことを言える人としてあなたを信頼し、人は一人では決められない判断をあなたに運んでくるのです。",
+    "あなたの影は、すべてを切る刃です。正しい言葉も、間違ったタイミングでは傷になります。固さが過ぎると冷たさとして読まれます。そして刃は内側にも向かう――あなたは他の誰にも求めない基準を自分に課し、届かないときに自分を赦さないのです。",
+    "成熟した庚申は、二つの問いを同時に使います。「これは正しいか」と「これは今、役に立つか」。鋼はそのままで、狙いを人ではなく問題へ定めるとき、あなたの刃は人を遠ざけるものではなく、人が頼るべき一線となるのです。"
   ],
   "shadows": [
-    "Accurate criticism sometimes lands as a wound. Being right and being kind are different jobs.",
-    "Holding yourself to a standard you'd never impose on anyone else.",
-    "People around you get tense, or start hiding their mistakes, in your presence."
+    "正確な批判がときに傷として届きます。正しいことと優しいことは別の仕事です。",
+    "他の誰にも課さない基準を、自分自身には課してしまいます。",
+    "あなたの前で、周囲が緊張したり、失敗を隠し始めたりします。"
   ],
   "advice": [
-    "Before correcting someone, ask once: will this be medicine for them right now, or a blade?",
-    "Once this week, say to yourself, 'This is enough.' Whatever the result is.",
-    "Tell one person you respect a place where you're not strong. Let steel be human for a moment.",
-    "When you judge something, ask both: 'Is this right?' and 'Is this useful right now?' The two questions sharpen the edge."
+    "誰かを正す前に一度問いかけましょう。これは今この人にとって薬になるか、それとも刃になるか、と。",
+    "今週一度、結果がどうであれ、自分に「これで十分」と言ってみましょう。",
+    "尊敬する人に、自分が強くない場所を一つ打ち明けましょう。鋼を一瞬だけ人間にするのです。",
+    "何かを判断するとき、「これは正しいか」「これは今役に立つか」の両方を問いましょう。二つの問いが刃を鋭くします。"
   ],
   "keywords": [
-    "pure steel",
-    "clear standard",
-    "unshakeable",
-    "precise edge"
+    "純粋な鋼",
+    "明確な基準",
+    "揺るぎなさ",
+    "精密な刃"
   ]
 }
