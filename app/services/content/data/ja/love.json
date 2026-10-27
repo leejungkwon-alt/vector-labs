@@ -1,277 +1,277 @@
 {
-  "SECTION_TITLE": "Love & Marriage",
+  "SECTION_TITLE": "恋愛と結婚",
   "CONTENT": {
     "THE_PIONEER": {
-      "headline": "You want to set the direction of the relationship yourself.",
-      "body": "You are skilled at drawing the big picture of the relationship. You are comfortable leading your partner and mapping out the way forward.\n\nHowever, this initiative can sometimes overwhelm your partner. If you move forward without asking for their pace or opinion, they will feel like they are just 'following' rather than 'walking together'.\n\nYour real gift is opening the way. When you share that gift with your partner, the relationship becomes richer.",
+      "headline": "関係の方向を自分で決めたい人です。",
+      "body": "あなたは関係の大きな絵を描くのが得意です。パートナーを導き、進むべき道を思い描くことに抵抗がありません。\n\nしかし、この主導性はときに相手を圧倒します。相手のペースや意見を十分に聞かずに先へ進めば、相手は「共に歩く」よりも「ついていく」感覚を覚えます。\n\nあなたの本当の贈り物は、道を開く力です。その力をパートナーと分かち合うとき、関係はより豊かになります。",
       "patterns": [
-        "You decide quickly and expect your partner to follow.",
-        "You are good at designing the big direction of the relationship.",
-        "You sometimes feel frustrated by your partner's slower pace."
+        "素早く決めて、相手がついてくることを期待します。",
+        "関係の大きな方向性を設計するのが得意です。",
+        "相手の遅いペースに苛立つことがあります。"
       ],
       "best_match": [
         "Keeper",
         "Anchor"
       ],
-      "best_reason": "Someone who quietly supports you and keeps you centered when you waver.",
+      "best_reason": "静かにあなたを支え、揺らぐとき中心を保たせてくれる人です。",
       "challenging_match": [
         "Pioneer",
         "Blade"
       ],
-      "challenging_reason": "If both want to lead, it can turn into a power struggle.",
+      "challenging_reason": "二人とも主導権を望めば、権力争いに発展しかねません。",
       "actions": [
-        "Before an important decision, ask yourself, 'Am I asking my partner's pace?'",
-        "This week, ask what your partner wants to do first.",
-        "Share your direction verbally and wait for their reaction."
+        "重要な決断の前に「相手のペースを尋ねているか」と自問しましょう。",
+        "今週、相手が何をしたいのかを先に尋ねてみましょう。",
+        "あなたの方向性を言葉で共有し、相手の反応を待ちましょう。"
       ],
       "red_flags": [
-        "Check if you only see your partner as 'part of my plan'.",
-        "Are you taking it for granted that they are accommodating you?"
+        "相手を「自分の計画の一部」とだけ見ていないか確認しましょう。",
+        "相手が合わせてくれることを当然と思っていませんか？"
       ]
     },
     "THE_ADAPTER": {
-      "headline": "You smoothly lead the relationship by adapting to your partner.",
-      "body": "You are good at going with the flow of the relationship. You have an excellent ability to read your partner's emotions and melt away conflict in advance.\n\nHowever, if this flexibility is excessive, your own feelings disappear. If you keep putting off saying 'I want this', your disappointment might explode at some point.\n\nYour partner thinks you are always fine. So they have no chance to know your true feelings. Sometimes you need to reveal your discomfort to keep the relationship healthy.",
+      "headline": "相手に寄り添いながら、関係を滑らかに導く人です。",
+      "body": "あなたは関係の流れにうまく乗ります。相手の感情を読み、衝突を前もって溶かす能力に長けています。\n\nしかし、この柔軟さが過剰になれば、あなた自身の感情が消えてしまいます。「私はこれが欲しい」と言うのを先延ばしにし続ければ、ある瞬間に不満が爆発するかもしれません。\n\n相手はあなたがいつも大丈夫だと思っています。だからこそ、あなたの本当の感情を知る機会がありません。ときに、関係を健全に保つためには、あなたの不快感を明かす必要があるのです。",
       "patterns": [
-        "You prioritize reading your partner's mood and react to it.",
-        "You yield your opinions to avoid conflict.",
-        "You hold onto disappointment for a long time and explode all at once."
+        "相手の気分を優先して読み、それに反応します。",
+        "衝突を避けるために自分の意見を譲ります。",
+        "不満を長く抱え込み、一度に爆発させます。"
       ],
       "best_match": [
         "Blade",
         "Anchor"
       ],
-      "best_reason": "Someone with honesty and stability will bring out your true feelings.",
+      "best_reason": "誠実さと安定感を持つ人があなたの本当の感情を引き出します。",
       "challenging_match": [
         "Adapter"
       ],
-      "challenging_reason": "If both only accommodate, real conflict will never surface.",
+      "challenging_reason": "二人とも合わせてばかりでは、本当の衝突が決して表面化しません。",
       "actions": [
-        "Once a day, speak your preference first.",
-        "If you feel disappointed, say it within 24 hours.",
-        "Express 'I like this right now' often to your partner."
+        "一日に一度、あなたの好みを先に言葉にしましょう。",
+        "不満を感じたら24時間以内に伝えましょう。",
+        "「今、これが好き」とパートナーによく表現しましょう。"
       ],
       "red_flags": [
-        "Are you putting off your feelings thinking 'I'll just adjust'?",
-        "Does your partner not know your preferences at all?"
+        "「私が合わせればいい」と思って感情を後回しにしていませんか？",
+        "パートナーがあなたの好みをまったく知らないのでは？"
       ]
     },
     "THE_RADIATOR": {
-      "headline": "You have a passionate romance with clear expression.",
-      "body": "You can't hide your love. Your emotions show on your face, and you pour all your energy into expressing them to the person you like.\n\nThis heat makes your partner bright, but your mood swings can be misunderstood. Your explosive power when angry is just as big.\n\nThe key is the direction of your passion. If you pour your hot energy only into your partner, it won't last. You need to create space to cool your heat with time alone.",
+      "headline": "情熱的で表現がはっきりした恋愛をします。",
+      "body": "あなたは愛を隠せません。感情が顔に出て、好きな人には全力で気持ちを表現します。\n\nこの熱は相手を明るくしますが、あなたの気分の波は誤解されがちです。怒ったときの爆発力も同じくらい大きいのです。\n\n鍵は情熱の方向です。あなたの熱いエネルギーを相手にだけ注ぎ続ければ長続きしません。一人の時間で熱を冷ます空間を作る必要があります。",
       "patterns": [
-        "You fall in love fast and cool down fast.",
-        "You repeat the cycle of idealizing your partner and being disappointed.",
-        "You can't hide your emotions but may not consider your partner's pace."
+        "すぐに惹かれ、すぐに冷めます。",
+        "相手を理想化して失望するサイクルを繰り返します。",
+        "感情は隠せないものの、相手のペースを考慮しないことがあります。"
       ],
       "best_match": [
         "Keeper",
         "Anchor"
       ],
-      "best_reason": "Someone with a quiet and stable nature will contain your heat.",
+      "best_reason": "静かで安定した性質の人があなたの熱を受け止めます。",
       "challenging_match": [
         "Radiator"
       ],
-      "challenging_reason": "Two same fires can burn each other out.",
+      "challenging_reason": "同じ火同士は互いを焼き尽くしてしまうことがあります。",
       "actions": [
-        "Even if angry, wait a day before speaking.",
-        "Observe your partner's way of expressing love. It might differ from yours.",
-        "Intentionally secure time alone."
+        "怒っていても、話す前に一日待ちましょう。",
+        "相手の愛の表現方法を観察しましょう。あなたと違うかもしれません。",
+        "意図的に一人の時間を確保しましょう。"
       ],
       "red_flags": [
-        "Check if you are overly dependent on your partner.",
-        "Look back to see if you said hurtful words when you exploded."
+        "相手に過度に依存していないか確認しましょう。",
+        "爆発したときに傷つける言葉を言わなかったか振り返りましょう。"
       ]
     },
     "THE_KEEPER": {
-      "headline": "You dedicate yourself deeply to one person.",
-      "body": "You don't open your heart easily. You choose people carefully, and once you give your heart, you try to take responsibility to the end.\n\nThis dedication builds deep trust, but if your partner takes it for granted, disappointment builds. Also, if your focus is too intense, your partner may feel suffocated.\n\nYour love is quiet but strong. You need the wisdom to step back sometimes so your partner can handle its intensity.",
+      "headline": "一人の人に深く身を捧げる恋愛をします。",
+      "body": "あなたは簡単に心を開きません。人を慎重に選び、一度心を渡したら最後まで責任を取ろうとします。\n\nこの献身は深い信頼を築きますが、相手がそれを当然とすれば不満が積み重なります。また、あなたの集中が強すぎれば、相手は息苦しく感じるかもしれません。\n\nあなたの愛は静かですが強い。その強さを相手が受け止められるよう、ときに一歩引く知恵が必要です。",
       "patterns": [
-        "You focus all your energy on one person.",
-        "You sensitively notice small changes in your partner.",
-        "You tend to put your own needs behind your partner's."
+        "一人の人にすべてのエネルギーを注ぎます。",
+        "相手の小さな変化に敏感に気づきます。",
+        "自分の必要を後ろに回す傾向があります。"
       ],
       "best_match": [
         "Radiator",
         "Cultivator"
       ],
-      "best_reason": "Someone who warmly receives and returns your dedication.",
+      "best_reason": "あなたの献身を温かく受け取り、返してくれる人です。",
       "challenging_match": [
         "Deep",
         "Gem"
       ],
-      "challenging_reason": "With someone who hides their feelings, your dedication can feel lonely.",
+      "challenging_reason": "感情を隠す人とでは、あなたの献身が孤独に感じられることがあります。",
       "actions": [
-        "Once a month, directly request what you want to receive.",
-        "Don't solve your partner's problems for them; watch them instead.",
-        "Share your emotions with your partner too."
+        "月に一度、自分が受け取りたいものを直接お願いしましょう。",
+        "相手の問題を代わりに解決せず、見守りましょう。",
+        "あなたの感情も相手と分かち合いましょう。"
       ],
       "red_flags": [
-        "Are you accommodating your partner excessively?",
-        "Is your dedication making your partner helpless?"
+        "相手に過度に合わせていませんか？",
+        "あなたの献身が相手を無力にしていませんか？"
       ]
     },
     "THE_ANCHOR": {
-      "headline": "You are a stable and reliable partner.",
-      "body": "You provide an unwavering center in the relationship. You give dependability rather than fluttering excitement, and you are someone your partner can lean on.\n\nHowever, stability is sometimes read as boredom. Your partner might appreciate your reliability but look for 'excitement' elsewhere.\n\nYour strength is continuity. If you add small events and changes on top of it, the relationship will have both stability and excitement.",
+      "headline": "安定して信頼できるパートナーです。",
+      "body": "あなたは関係に揺るがない中心を提供します。ときめきよりも頼もしさを与え、相手が寄りかかれる人です。\n\nしかし、安定はときに退屈と読まれます。相手はあなたの頼もしさに感謝しながらも、別の場所に「刺激」を求めるかもしれません。\n\nあなたの強みは継続性です。その上に小さなイベントや変化を加えれば、関係は安定と刺激の両方を持つようになります。",
       "patterns": [
-        "You show love through actions rather than emotional expression.",
-        "When conflict arises, you tend to take time in silence.",
-        "You may notice your partner's emotional changes late."
+        "感情表現よりも行動で愛を示します。",
+        "衝突が起きると、沈黙で時間を取る傾向があります。",
+        "相手の感情の変化に気づくのが遅れることがあります。"
       ],
       "best_match": [
         "Radiator",
         "Adapter"
       ],
-      "best_reason": "Someone expressive adds excitement on top of your stability.",
+      "best_reason": "表現力豊かな人があなたの安定の上に刺激を加えます。",
       "challenging_match": [
         "Anchor"
       ],
-      "challenging_reason": "If both are passive to change, the relationship can stagnate.",
+      "challenging_reason": "二人とも変化に消極的だと、関係が停滞してしまいます。",
       "actions": [
-        "Once a month, plan a small event your partner will like.",
-        "Once a day, express your emotions in words.",
-        "Pay attention to your partner's emotional changes."
+        "月に一度、相手が喜ぶ小さなイベントを計画しましょう。",
+        "一日に一度、感情を言葉で表現しましょう。",
+        "相手の感情の変化に注意を払いましょう。"
       ],
       "red_flags": [
-        "Are you stopping your efforts thinking 'this is enough'?",
-        "Are you failing to notice your partner's changes?"
+        "「これで十分」と思って努力を止めていませんか？",
+        "相手の変化に気づけていないのでは？"
       ]
     },
     "THE_CULTIVATOR": {
-      "headline": "You have a romance where you carefully care for your partner.",
-      "body": "You read your partner's needs sensitively. You have deep consideration and are skilled at creating an environment where your partner feels comfortable.\n\nHowever, if this care is excessive, your partner becomes helpless. The attitude of 'I'll do everything for you' can take away their chance to grow.\n\nYour love is like gardening. Giving only water and light so the plant grows on its own lasts longer than making it grow.",
+      "headline": "相手を丁寧に気遣う恋愛をします。",
+      "body": "あなたは相手の必要を敏感に読み取ります。深い配慮を持ち、相手が快適に感じる環境を作るのが得意です。\n\nしかし、この気遣いが過剰になれば、相手は無力になります。「私が何でもやってあげる」という態度は、相手の成長の機会を奪いかねません。\n\nあなたの愛は庭仕事のようなものです。植物が自ら育つように水と光だけを与えるほうが、無理に育てるより長く続きます。",
       "patterns": [
-        "You take care of your partner before they need it.",
-        "You try to solve your partner's problems for them.",
-        "You feel disappointed when your partner lacks gratitude."
+        "相手が必要とする前に世話をします。",
+        "相手の問題を代わりに解決しようとします。",
+        "相手が感謝を示さないと失望を感じます。"
       ],
       "best_match": [
         "Cultivator",
         "Anchor"
       ],
-      "best_reason": "You understand each other's way of caring and feel comfortable in it.",
+      "best_reason": "互いの気遣いの方法を理解し、その中で心地よく感じられます。",
       "challenging_match": [
         "Radiator"
       ],
-      "challenging_reason": "With someone with flashy expressions, your quiet dedication might not be seen well.",
+      "challenging_reason": "表現が華やかな人とでは、あなたの静かな献身が十分に見られないことがあります。",
       "actions": [
-        "Even if your partner fails, don't intervene once; watch.",
-        "Practice providing your care only when requested.",
-        "Secure time for yourself."
+        "相手が失敗しても、一度は介入せずに見守りましょう。",
+        "頼まれたときだけ気遣いを提供する練習をしましょう。",
+        "自分のための時間を確保しましょう。"
       ],
       "red_flags": [
-        "Are you blocking your partner's independence with over-care?",
-        "Is your partner taking your dedication for granted?"
+        "過剰な気遣いで相手の自立を妨げていませんか？",
+        "相手があなたの献身を当然と思っていませんか？"
       ]
     },
     "THE_BLADE": {
-      "headline": "You have an honest and straightforward romance.",
-      "body": "You hate lies. You prefer clear emotions over ambiguous relationships or superficial expressions.\n\nThis straightforwardness gives trust, but sometimes it hurts your partner's feelings. Even the right words become wounds if the timing and method are wrong.\n\nYour true strength is 'saying exactly what is needed when your partner needs it'. If you wrap this power with warmth, the relationship becomes much deeper.",
+      "headline": "誠実でまっすぐな恋愛をします。",
+      "body": "あなたは嘘が嫌いです。曖昧な関係や表面的な表現よりも、はっきりした感情を好みます。\n\nこのまっすぐさは信頼を与えますが、ときに相手の感情を傷つけます。正しい言葉も、タイミングと方法を誤れば傷になります。\n\nあなたの本当の強みは「相手が必要とするときに、必要なことを正確に言う」力です。この力を温もりで包めば、関係ははるかに深まります。",
       "patterns": [
-        "You point out problems and try to solve them right away.",
-        "You can't stand ambiguity.",
-        "You lead conversations with logic rather than emotion."
+        "問題を指摘し、すぐに解決しようとします。",
+        "曖昧さに耐えられません。",
+        "感情よりも論理で会話を導きます。"
       ],
       "best_match": [
         "Adapter",
         "Keeper"
       ],
-      "best_reason": "Someone who softly wraps your honesty and reads the emotions you miss.",
+      "best_reason": "あなたの誠実さを柔らかく包み、あなたが見落とす感情を読み取ってくれる人です。",
       "challenging_match": [
         "Blade",
         "Challenger"
       ],
-      "challenging_reason": "If both push strongly, conversation turns into a fight.",
+      "challenging_reason": "二人とも強く押せば、会話が喧嘩になります。",
       "actions": [
-        "Before pointing out, ask for your partner's perspective first.",
-        "Ask a question before giving an answer.",
-        "Try expressing your emotions in words too."
+        "指摘する前に、まず相手の立場を尋ねましょう。",
+        "答えを出す前に質問をしましょう。",
+        "あなたの感情も言葉で表現してみましょう。"
       ],
       "red_flags": [
-        "Are you pushing your partner because you are right?",
-        "Is your directness felt as a threat to your partner?"
+        "正しいからという理由で相手を追い詰めていませんか？",
+        "あなたの直接さが相手に脅威と感じられていませんか？"
       ]
     },
     "THE_GEM": {
-      "headline": "You have high ideals and a fastidious romance.",
-      "body": "You don't compromise easily. You carefully observe your partner's taste, way of speaking, and attitude one by one.\n\nThis meticulousness raises the quality of the relationship, but it can be a burden to your partner. If they feel 'why am I always lacking?', love becomes heavy.\n\nYour standards are a gift. But when you don't force them on your partner, the relationship grows into something for both of you.",
+      "headline": "理想が高く、こだわりの強い恋愛をします。",
+      "body": "あなたは簡単に妥協しません。相手の趣味、話し方、態度をひとつひとつ注意深く観察します。\n\nこの几帳面さは関係の質を高めますが、相手にとっては負担になることがあります。「なぜ自分はいつも足りないのか」と感じさせれば、愛は重くなります。\n\nあなたの基準は贈り物です。しかし、それを相手に押し付けなければ、関係は二人のためのものへと育ちます。",
       "patterns": [
-        "You remember your partner's minor flaws for a long time.",
-        "You miss the timing waiting for the perfect moment.",
-        "You frequently check the perfection of the relationship."
+        "相手の小さな欠点を長く覚えています。",
+        "完璧な瞬間を待つうちにタイミングを逃します。",
+        "関係の完璧さを頻繁に確認します。"
       ],
       "best_match": [
         "Deep",
         "Cultivator"
       ],
-      "best_reason": "Someone with depth and patience receives your standards without burden.",
+      "best_reason": "深さと忍耐を持つ人が、負担なくあなたの基準を受け止めます。",
       "challenging_match": [
         "Gem"
       ],
-      "challenging_reason": "If both seek perfection, nothing will ever be enough.",
+      "challenging_reason": "二人とも完璧を求めれば、何も十分にはなりません。",
       "actions": [
-        "If you are 80% satisfied, say 'it's enough'.",
-        "Acknowledge and let go of one of your partner's flaws each week.",
-        "Be generous to yourself too."
+        "80%満足できたら「これで十分」と言いましょう。",
+        "毎週、相手の欠点をひとつ認めて手放しましょう。",
+        "自分にも寛大でいましょう。"
       ],
       "red_flags": [
-        "Can you not say 'this is enough'?",
-        "Is your partner nervous around you?"
+        "「これで十分」と言えずにいませんか？",
+        "相手があなたの前で緊張していませんか？"
       ]
     },
     "THE_DEEP": {
-      "headline": "You have a deep and cautious romance.",
-      "body": "You don't reveal your emotions easily. You observe your partner enough and dig deep once you make up your mind.\n\nThis cautiousness looks like mature love, but it's hard for your partner to know your true feelings. The question 'does this person like me?' pushes the relationship away.\n\nYour love is like the ocean. The surface is calm, but you need to come up to the surface sometimes and let your partner know 'I am here'.",
+      "headline": "深く慎重な恋愛をします。",
+      "body": "あなたは感情を簡単には明かしません。相手を十分に観察し、心を決めたら深く掘り下げます。\n\nこの慎重さは成熟した愛のように見えますが、相手があなたの本当の感情を知るのは難しいものです。「この人は私を好きなのか」という問いが関係を遠ざけます。\n\nあなたの愛は海のようなものです。表面は穏やかですが、ときに水面へ上がって「私はここにいる」と相手に知らせる必要があります。",
       "patterns": [
-        "You express after analyzing and organizing your emotions.",
-        "You observe your partner for a long time and approach slowly.",
-        "You reveal your true feelings late, frustrating your partner."
+        "感情を分析し整理してから表現します。",
+        "相手を長く観察し、ゆっくり近づきます。",
+        "本心を明かすのが遅く、相手をじらします。"
       ],
       "best_match": [
         "Gem",
         "Keeper"
       ],
-      "best_reason": "Someone who understands depth waits for your slow love.",
+      "best_reason": "深さを理解する人が、あなたのゆっくりした愛を待ってくれます。",
       "challenging_match": [
         "Radiator"
       ],
-      "challenging_reason": "With someone who wants fast emotional expression, the pace might not match.",
+      "challenging_reason": "素早い感情表現を望む人とはペースが合わないかもしれません。",
       "actions": [
-        "Don't analyze your feelings; just say them.",
-        "Express your heart in one sentence once a day.",
-        "Make your partner understand your pace."
+        "感情を分析せず、ただ言葉にしましょう。",
+        "一日に一度、心を一文で表現しましょう。",
+        "相手にあなたのペースを理解させましょう。"
       ],
       "red_flags": [
-        "Are you missing the timing while analyzing?",
-        "Are you giving your partner a chance to know your heart?"
+        "分析するうちにタイミングを逃していませんか？",
+        "相手があなたの心を知る機会を与えていますか？"
       ]
     },
     "THE_SPRING": {
-      "headline": "You have a quiet and affectionate romance.",
-      "body": "You have the power to make your partner comfortable. Without exaggeration, you naturally seep into their day.\n\nHowever, if this quietness is excessive, your partner will find it hard to know your feelings. The question 'does this person like me?' delays the relationship.\n\nYour affection is strong. But when you express that affection in clear words once in a while, the relationship deepens.",
+      "headline": "静かで愛情深い恋愛をします。",
+      "body": "あなたは相手を心地よくさせる力を持っています。誇張なく、自然に相手の一日に沁み込んでいきます。\n\nしかし、この静けさが過剰になれば、相手はあなたの感情を知るのが難しくなります。「この人は私を好きなのか」という問いが関係を遅らせます。\n\nあなたの愛情は強い。しかし、その愛情をときどき明確な言葉で表現すれば、関係はより深まります。",
       "patterns": [
-        "You convey love through atmosphere rather than words.",
-        "You adapt well to your partner's mood.",
-        "Your emotional expression is late, and you might miss opportunities."
+        "言葉よりも雰囲気で愛を伝えます。",
+        "相手の気分によく合わせます。",
+        "感情表現が遅く、機会を逃すことがあります。"
       ],
       "best_match": [
         "Blade",
         "Pioneer"
       ],
-      "best_reason": "Someone clear pulls out your quiet heart.",
+      "best_reason": "はっきりした人があなたの静かな心を引き出します。",
       "challenging_match": [
         "Deep"
       ],
-      "challenging_reason": "If both are quiet, feelings might never be revealed.",
+      "challenging_reason": "二人とも静かだと、感情が永遠に明かされないかもしれません。",
       "actions": [
-        "Say directly that you like them.",
-        "Express how you feel about your partner once a week.",
-        "Tell your partner your pace."
+        "好きだと直接言いましょう。",
+        "週に一度、相手への気持ちを表現しましょう。",
+        "あなたのペースを相手に伝えましょう。"
       ],
       "red_flags": [
-        "Are you putting it off thinking 'they will know someday'?",
-        "Is your partner doubting your feelings?"
+        "「いつか分かってくれる」と思って先延ばしにしていませんか？",
+        "相手があなたの気持ちを疑っていませんか？"
       ]
     }
   }
