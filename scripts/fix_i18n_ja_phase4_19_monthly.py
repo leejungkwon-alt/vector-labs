@@ -1,0 +1,147 @@
+#!/usr/bin/env python3
+"""Phase 4-19: JA monthly.json — MONTHLY_THEME_CONTENT 10 + DEFAULT/HERO/GRADE/GRADE_CONTEXT."""
+import json, re, sys
+from pathlib import Path
+ROOT = Path(__file__).resolve().parent.parent
+JA = ROOT / "app" / "services" / "content" / "data" / "ja" / "monthly.json"
+KANA_RE = re.compile(r'[\u3040-\u30FF]')
+
+THEMES = {
+    "TEN_GOD_FRIEND": {
+        "name": "整列の月",
+        "headline": "あなた自身のエネルギーが戻ってきます。",
+        "body": "今月は、すでにあなたである姿が反映される月です。自信は自然に湧きますが、頑固さも同じだけ顔を出します。同僚との力学が表に出やすい時期。自分自身と出会うような感覚を覚えるでしょう。",
+        "watch_for": "立場を確認せずに押し通してしまうこと。",
+        "lean_into": "ソロ作業。個人プロジェクト。自分の名前がつくすべて。",
+    },
+    "TEN_GOD_ROB_WEALTH": {
+        "name": "推進の月",
+        "headline": "推進力が増幅します。せっかちさも同じです。",
+        "body": "アウトプットの多い月。速く動きつつ、ペース配分を。今月は大胆さを報い、燃え尽きを等しく罰します。大きな一手をひとつ選びましょう。",
+        "watch_for": "ライバルではない人と競争すること。",
+        "lean_into": "意欲的な目標ひとつ。動作ではなく意図で動くこと。",
+    },
+    "TEN_GOD_EATING_GOD": {
+        "name": "創造の月",
+        "headline": "より柔らかく、生成的なエネルギー。",
+        "body": "何かを作りましょう。こなすのではなく、創る。今月は生産より遊びを報い、自分でも驚くような成果を手渡してくれます。",
+        "watch_for": "予定の詰め込みすぎ。今月は余白が必要です。",
+        "lean_into": "手仕事。遊び。アイデアを頭から外へ。",
+    },
+    "TEN_GOD_HURTING_OFFICER": {
+        "name": "突破口の月",
+        "headline": "鋭い声、鋭い視野。",
+        "body": "今月は壊れているものがいつもよりはっきり見え、口にしたくなります。使い方次第で、本当に何かを変えられる月です。",
+        "watch_for": "正しいことを間違ったタイミングで言うこと。",
+        "lean_into": "システムレベルの変化。不満ではなく、修正。",
+    },
+    "TEN_GOD_INDIRECT_WEALTH": {
+        "name": "地平線の月",
+        "headline": "扉が開き——すぐ閉じます。",
+        "body": "機会が現れては消えます。あなたの直感は鋭く、すべてを追いたい衝動もまた鋭い。1〜2個に集中しましょう。",
+        "watch_for": "FOMOが大きいからという理由で「はい」と言うこと。",
+        "lean_into": "機会1〜2個に、深く取り組むこと。",
+    },
+    "TEN_GOD_DIRECT_WEALTH": {
+        "name": "地盤固めの月",
+        "headline": "ゆっくり、着実、リアル。",
+        "body": "劇的な月ではありません——それが贈り物です。今築くものが静かに複利で効いてきます。地味が戦略なのです。",
+        "watch_for": "焦り。今月は野心より忍耐を報います。",
+        "lean_into": "ルーティン。システム。一貫した小さな行動。",
+    },
+    "TEN_GOD_SEVEN_KILLINGS": {
+        "name": "るつぼの月",
+        "headline": "重さ、そしてその下であなたが何になるか。",
+        "body": "今月はプレッシャーが来ます。悪いとは限らず——しばしば有益ですが——重い。もっと力をかけるのではなく、休息で迎えましょう。",
+        "watch_for": "自分のものではない責任に「はい」と言うこと。",
+        "lean_into": "境界線。休息。あなたを支えてくれる人々。",
+    },
+    "TEN_GOD_DIRECT_OFFICER": {
+        "name": "節目の月",
+        "headline": "物事が整います。",
+        "body": "今月は構造が助けになります。昇進、コミットメント、承認——他者を巻き込む成功の形が、いつもより手に届きます。",
+        "watch_for": "見られるのを避けて小さく振る舞うこと。",
+        "lean_into": "公式な約束。公の節目。",
+    },
+    "TEN_GOD_INDIRECT_RESOURCE": {
+        "name": "洞窟の月",
+        "headline": "出力より深さ。",
+        "body": "今月はあなたを内へ引き込みます。より多くの本を読み、考え、一人の時間を欲しがるでしょう。うつではなく——孵化です。",
+        "watch_for": "準備が整う前に可視性を押しつけること。",
+        "lean_into": "読書。リサーチ。孤独。",
+    },
+    "TEN_GOD_DIRECT_RESOURCE": {
+        "name": "聖域の月",
+        "headline": "休み、再建する。",
+        "body": "今月は優しい月です。生産性を押しつけるのをやめれば、滋養が手に入ります。許せばサポートが現れます。",
+        "watch_for": "休息を怠惰と取り違えること。",
+        "lean_into": "滋養。メンタリング。あなたの器を満たすもの。",
+    },
+}
+
+DEFAULT_THEME = {
+    "name": "展開する月",
+    "headline": "まだ形を成していく途中の月です。",
+    "body": "今月の気を一つのパターンに絞ることは難しいです。注意深く見守ってください——進むにつれてテーマが明らかになります。",
+    "watch_for": "今月が何かをすでに知っていると決めつけること。",
+    "lean_into": "実際に起きていることへの好奇心。",
+}
+
+HERO_TEMPLATE = "{year}年、十二の扉。"
+
+GRADE_LABEL = {
+    "PEAK": "絶好調",
+    "FAVORABLE": "追い風",
+    "NEUTRAL": "中立",
+    "CAUTION": "注意",
+    "CHALLENGING": "重い",
+}
+
+GRADE_CONTEXT = {
+    "PEAK": "地の気（地支）の基盤が有利な月です——テーマとは別軸。",
+    "FAVORABLE": "地の気の流れが穏やかです。",
+    "NEUTRAL": "地の気の流れが混在しています——テーマが月の性格を引っ張ります。",
+    "CAUTION": "地の気の流れが注意を要します——ペースを落としましょう。",
+    "CHALLENGING": "地の気の基盤が重い月です——余白を守りましょう。",
+}
+
+def _ja(s): return bool(s) and bool(KANA_RE.search(s))
+
+def main():
+    print("=" * 60); print("[Phase 4-19] monthly 10 themes + defaults"); print("=" * 60)
+    if not JA.exists(): print(f"❌ {JA}"); return 1
+    data = json.loads(JA.read_text(encoding="utf-8"))
+    data.setdefault("MONTHLY_THEME_CONTENT", {})
+    for key, tr in THEMES.items():
+        data["MONTHLY_THEME_CONTENT"][key] = tr
+    data["DEFAULT_MONTHLY_THEME"] = DEFAULT_THEME
+    data["MONTHLY_HERO_TEMPLATE"] = HERO_TEMPLATE
+    data["GRADE_LABEL"] = GRADE_LABEL
+    data["MONTHLY_GRADE_CONTEXT"] = GRADE_CONTEXT
+    payload = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
+    json.loads(payload)
+    JA.write_text(payload, encoding="utf-8")
+    print(f"✅ {len(THEMES)} themes + DEFAULT/HERO/GRADE/GRADE_CONTEXT")
+
+    print("\n[verify]")
+    ok = True
+    for key, tr in THEMES.items():
+        d = data["MONTHLY_THEME_CONTENT"][key]
+        for k in ("name", "headline", "body", "watch_for", "lean_into"):
+            if not _ja(d.get(k, "")):
+                print(f"  [ERR] {key}.{k}"); ok = False
+    for k in ("name", "headline", "body", "watch_for", "lean_into"):
+        if not _ja(data["DEFAULT_MONTHLY_THEME"].get(k, "")):
+            print(f"  [ERR] DEFAULT.{k}"); ok = False
+    if not _ja(data["MONTHLY_HERO_TEMPLATE"]):
+        print("  [ERR] HERO_TEMPLATE"); ok = False
+    for g in ("PEAK", "FAVORABLE", "NEUTRAL", "CAUTION", "CHALLENGING"):
+        if not _ja(data["GRADE_LABEL"].get(g, "")):
+            print(f"  [ERR] GRADE_LABEL.{g}"); ok = False
+        if not _ja(data["MONTHLY_GRADE_CONTEXT"].get(g, "")):
+            print(f"  [ERR] GRADE_CONTEXT.{g}"); ok = False
+    if ok: print("  [OK] monthly.json 10/10 + defaults = JA 🏆")
+    print("=" * 60)
+    return 0 if ok else 1
+
+if __name__ == "__main__": sys.exit(main())
