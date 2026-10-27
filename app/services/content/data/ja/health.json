@@ -1,58 +1,58 @@
 {
   "HEALTH_DISPLAY": {
-    "GROWTH": "Growth",
-    "SPARK": "Spark",
-    "GROUND": "Ground",
-    "EDGE": "Edge",
-    "FLOW": "Flow"
+    "GROWTH": "成長",
+    "SPARK": "火花",
+    "GROUND": "大地",
+    "EDGE": "鋭さ",
+    "FLOW": "流れ"
   },
   "HEALTH_CONTENT": {
     "GROWTH": {
-      "over_pattern": "When growth energy is dominant, you run on forward motion. The challenge isn't starting — it's stopping. Rest can feel like a betrayal of your own ambition, and stillness can look like stagnation.",
-      "under_pattern": "When growth energy is scarce, you may struggle to begin — mentally and physically. Getting started can feel like pushing through concrete.",
+      "over_pattern": "成長のエネルギーが優勢なとき、あなたは前進の勢いで走ります。課題は「始めること」ではなく「止まること」です。休息は自分の野心への裏切りに感じられ、静止は停滞のように見えるかもしれません。",
+      "under_pattern": "成長のエネルギーが希薄なとき、始めること自体に苦労するかもしれません——心でも体でも。スタートを切るのは、コンクリートを押し進めるような感覚になることがあります。",
       "practices": [
-        "Take a 10-minute walk with no goal. Just movement, not exercise.",
-        "Say 'no' to one small thing this week. Notice how it feels.",
-        "Try a slow, aimless stretch before bed. Just feeling, not fixing."
+        "目的のない10分の散歩をしてみましょう。運動ではなく、ただの移動として。",
+        "今週、小さなことひとつに「いいえ」と言ってみましょう。その感覚を観察してください。",
+        "寝る前に、ゆっくり目的のないストレッチを。直すのではなく、ただ感じるために。"
       ]
     },
     "SPARK": {
-      "over_pattern": "When spark energy dominates, you run hot. Ideas, emotions, and enthusiasm arrive at full volume. The risk is pouring so much outward that little remains for you.",
-      "under_pattern": "When spark energy is scarce, motivation can feel distant. You don't perform enthusiasm — your warmth is quieter than most.",
+      "over_pattern": "火花のエネルギーが優勢なとき、あなたは熱く走ります。アイデア、感情、熱意が最大音量でやってきます。リスクは、外へ注ぎすぎて自分の分が残らなくなることです。",
+      "under_pattern": "火花のエネルギーが希薄なとき、やる気が遠く感じられることがあります。熱意を演じるタイプではなく、あなたの温もりは誰よりも静かです。",
       "practices": [
-        "Ten quiet minutes before checking your phone in the morning.",
-        "Notice one small pleasure today. Say it out loud.",
-        "Skip scheduling anything after 9pm for one week. Just try it."
+        "朝、スマホを見る前に10分だけ静かに過ごしましょう。",
+        "今日の小さな喜びをひとつ見つけて、声に出してみましょう。",
+        "一週間だけ、夜9時以降の予定を入れずに過ごしてみましょう。"
       ]
     },
     "GROUND": {
-      "over_pattern": "When ground energy dominates, you become the person others lean on. The risk: carrying so much for so long that you forget what your own weight feels like.",
-      "under_pattern": "When ground energy is scarce, you may feel unmoored — always slightly off balance, even when everything looks fine from outside.",
+      "over_pattern": "大地のエネルギーが優勢なとき、あなたは誰かが寄りかかる存在になります。リスクは、あまりに多くをあまりに長く抱え、自分の重さを忘れてしまうことです。",
+      "under_pattern": "大地のエネルギーが希薄なとき、地に足がつかない感覚を覚えるかもしれません——外から見れば何も問題なく見えても、いつもどこか均衡を失っているような感覚。",
       "practices": [
-        "Eat one meal a day slowly, sitting down, no screen.",
-        "Stand barefoot on real ground for 5 minutes.",
-        "Eat at the same time for three days in a row."
+        "一日一食はゆっくり、座って、画面を見ずに食べましょう。",
+        "裸足で本物の大地に5分間立ってみましょう。",
+        "三日間続けて、同じ時刻に食事をとりましょう。"
       ]
     },
     "EDGE": {
-      "over_pattern": "When edge energy dominates, you cut through the noise. The risk: winning the point and losing the room — or turning that sharpness inward.",
-      "under_pattern": "When edge energy is scarce, you may avoid conflict even when it's the right call. Boundaries can feel harder to set than they should.",
+      "over_pattern": "鋭さのエネルギーが優勢なとき、あなたは雑音を切り裂きます。リスクは、論点を取って場を失うこと、あるいはその鋭さを自分自身に向けてしまうことです。",
+      "under_pattern": "鋭さのエネルギーが希薄なとき、正しい判断でも衝突を避けてしまうことがあります。境界を引くのが、本来より難しく感じられるかもしれません。",
       "practices": [
-        "Three slow, deep breaths before opening email.",
-        "Clear one small surface today — a desk, a drawer, a list.",
-        "Spend 10 minutes outside, even if it's cold."
+        "メールを開く前に、ゆっくり深く呼吸を三回。",
+        "今日、小さな面をひとつ片づけましょう——机、引き出し、リスト。",
+        "寒くても、外で10分過ごしましょう。"
       ]
     },
     "FLOW": {
-      "over_pattern": "When flow energy dominates, you adapt easily. The risk: never quite committing — because everything is still possible.",
-      "under_pattern": "When flow energy is scarce, you want to know where things are going before you move. That caution is useful — until it becomes a cage.",
+      "over_pattern": "流れのエネルギーが優勢なとき、あなたは容易に適応します。リスクは、なかなか本気でコミットできないこと——すべてがまだ可能だからです。",
+      "under_pattern": "流れのエネルギーが希薄なとき、動く前に物事がどこへ向かうかを知りたいと願います。その慎重さは有用ですが——檻になるまでは。",
       "practices": [
-        "Drink a full glass of water before every meal.",
-        "Take one full rest day this month with no output.",
-        "Sit quietly with an unresolved question for 5 minutes. No answer needed."
+        "毎食前にコップ一杯の水を飲みましょう。",
+        "今月、何も産まない完全な休息の日を一日取りましょう。",
+        "未解決の問いと共に、5分間静かに座ってみましょう。答えは要りません。"
       ]
     }
   },
-  "HEALTH_DISCLAIMER": "This section offers lifestyle reflections inspired by traditional Five Elements philosophy. It is not medical advice, diagnosis, or treatment. If you have a health concern, please consult a qualified healthcare professional.",
+  "HEALTH_DISCLAIMER": "このセクションは、伝統的な五行思想から着想を得たライフスタイルの省察を提供します。これは医療上の助言、診断、治療ではありません。健康に関する懸念がある場合は、資格を持つ医療専門家にご相談ください。",
   "HEALTH_FRAMEWORK_NOTE": "Framework: Five Elements (五行) philosophy — a traditional lens for self-reflection and personal insight. Not clinical guidance. Individual interpretations vary across traditions."
 }
