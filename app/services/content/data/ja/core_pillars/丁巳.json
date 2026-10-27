@@ -1,29 +1,29 @@
 {
   "pillar": "丁巳",
-  "hero": "You're a double flame. The inner candle burns deeper for passing through the outer heat.",
+  "hero": "あなたは二重の炎です。外の熱を通り抜けることで、内なる灯はさらに深く燃えるのです。",
   "narrative": [
-    "You're quiet but intense. You gather heat inward more than you radiate outward, so new people read you as calm. Spend more time with you, though, and they discover how exact and persistent your gaze is.",
-    "Your strength is 'focused attention.' You catch details others miss, sharpen what's blurred, and read beneath surfaces. That's why your work tends to be dense — small in quantity, but a different quality. Not something you trained. A natural result of two flames in one body.",
-    "Your shadow is 'being too hard on yourself.' A double flame burns itself easily. You're generous with others and astonishingly severe with yourself. That standard has grown you — and it's also eating you.",
-    "A mature Ding-Si gives themselves the same accurate warmth they give others. Seeing oneself with the same precision you use on others — and allowing the tired parts the warmth they're owed. Then your dense gaze stops being pressure and becomes deep understanding."
+    "あなたは静かでありながら強烈です。外へ放つよりも内側に熱を集めるため、初めて会う人はあなたを穏やかな人と受け取ります。けれど、もっと時間を共に過ごすと、あなたの眼差しがどれほど正確で執拗であるかに気づくのです。",
+    "あなたの強みは「集中した注意力」です。他の人が見落とす細部を捉え、ぼやけたものを鋭くし、表面の下を読み取ります。だからこそ、あなたの仕事は密度が濃くなる傾向があります。量は少なくても、質が違うのです。それは訓練して身につけたものではなく、一つの身体に二つの炎が宿る自然な結果です。",
+    "あなたの影は「自分自身に厳しすぎること」です。二重の炎は自分自身を焼きやすいのです。あなたは他者には寛容でありながら、自分には驚くほど厳しい。その基準があなたを育ててきた一方で、あなた自身を蝕んでもいるのです。",
+    "成熟した丁巳は、他者に与えるのと同じ正確な温もりを自分自身にも与えられる人です。他者に向けるのと同じ精密さで自分を見つめ、疲れた部分に当然の温もりを与えられるようになります。そうすれば、あなたの濃密な眼差しはプレッシャーではなく、深い理解となるのです。"
   ],
   "shadows": [
-    "Generous with others, astonishingly harsh with yourself.",
-    "When the result isn't perfect, you torment yourself for a long time.",
-    "The intensity of your focus means recovery takes longer when you're depleted."
+    "他者には寛容で、自分には驚くほど厳しい。",
+    "結果が完璧でないと、長い間自分を責め苛みます。",
+    "集中の強さゆえに、消耗したときの回復に時間がかかります。"
   ],
   "advice": [
-    "This week, do 'this is enough' once — to yourself.",
-    "Take one act of generosity you'd give others and give it to yourself.",
-    "After focusing, always attach recovery. A double flame dies without it.",
-    "Change one 'why is this all I did' into 'what did I actually do.'"
+    "今週、自分自身に一度「これで十分」と言ってみましょう。",
+    "他者にする寛容な行いを一つ、自分自身に向けてみましょう。",
+    "集中の後には必ず回復を添えましょう。二重の炎はそれなしでは消えてしまいます。",
+    "「なぜこれだけしかできなかったのか」を一つ、「実際に何を成し遂げたのか」に変えてみてください。"
   ],
   "keywords": [
-    "focused heat",
-    "precise gaze",
-    "double flame",
-    "self-gentleness"
+    "集中した熱",
+    "正確な眼差し",
+    "二重の炎",
+    "自分への優しさ"
   ],
-  "name": "Double Flame",
+  "name": "二重の炎",
   "name_traditional": ""
 }

@@ -1,29 +1,29 @@
 {
   "pillar": "丁卯",
-  "hero": "You're a candle on a spring branch. Not a flame that consumes — a light that helps things grow.",
+  "hero": "あなたは春の枝に灯る蝋燭です。何かを焼き尽くす炎ではなく、育つものを照らす光なのです。",
   "narrative": [
-    "You carry growth and warmth together. Where a candle would normally consume wood, your light instead illuminates what's growing. People around you get a strange sense that they could become better versions of themselves. And you didn't do anything special to produce it.",
-    "Your creativity is quiet. Not explosions — steady light that develops ideas, encourages people, and grows relationships. That's why people who've worked with you often realize, months later, 'that was because of them.' Your contribution is always recognized after the fact.",
-    "Your shadow is spending your light entirely on other people's growth. You cultivate others' potential while leaving your own neglected. Growing others is natural to you — but your own growth matters just as much.",
-    "A mature Ding-Mao is someone who puts their own growth side by side with others'. When you cultivate someone and grow yourself in the same season, your light stops being a tool for others and becomes your own life."
+    "あなたは成長と温もりを同時に携える人です。蝋燭が通常は木を燃やすのに対し、あなたの光は育つものを照らします。あなたのそばにいる人は、なぜか「自分はもっと良くなれるかもしれない」という不思議な感覚を持ちます。そしてあなたは、そのために特に何かをしているわけではありません。",
+    "あなたの創造性は静かです。爆発ではなく、アイデアを育て、人を励まし、関係を育む安定した光です。だからこそ、共に働いた人々は何ヶ月も経ってから「あれはあの人のおかげだった」と気づくのです。あなたの貢献は、いつも事後に認められます。",
+    "あなたの影は、自分の光をすべて他人の成長に費やしてしまうことです。他者の可能性を育みながら、自分自身の成長はおざなりにしています。他者を育てることはあなたにとって自然ですが、自分自身の成長も同じくらい大切なのです。",
+    "成熟した丁卯は、自分自身の成長を他者の成長と並べて置ける人です。誰かを育てながら同じ季節に自分も成長するとき、あなたの光は他者のための道具ではなく、あなた自身の人生となるのです。"
   ],
   "shadows": [
-    "You grow others well and postpone your own growth indefinitely.",
-    "Your quiet contribution is often undervalued, and that quietly accumulates into resentment.",
-    "When someone you cultivated grows and leaves, it feels almost like betrayal."
+    "他者をよく育てる一方で、自分自身の成長をいつまでも先延ばしにしてしまいます。",
+    "静かな貢献がしばしば過小評価され、それが静かに不満として積み重なっていきます。",
+    "自分が育てた人が成長して去っていくとき、それはほとんど裏切りのように感じられます。"
   ],
   "advice": [
-    "This week, pick one small thing you'll start for yourself.",
-    "Say your contribution out loud once. Not bragging — confirming a fact.",
-    "Someone leaving is proof of growth, not betrayal. Explain that to yourself.",
-    "Allow time for your own growth without guilt. That's how you keep your light."
+    "今週は、自分のために始める小さなことを一つ選んでみましょう。",
+    "自分の貢献を一度声に出してみましょう。自慢ではなく、事実の確認として。",
+    "誰かが去ることは裏切りではなく、成長の証です。それを自分自身に説明してあげてください。",
+    "罪悪感なく自分自身の成長のための時間を許しましょう。そうしてこそ、あなたの光は保たれるのです。"
   ],
   "keywords": [
-    "growing light",
-    "quiet creation",
-    "warmth of growth",
-    "own growth"
+    "育つ光",
+    "静かな創造",
+    "成長の温もり",
+    "自分自身の成長"
   ],
-  "name": "Candle on a Spring Branch",
+  "name": "春の枝の灯火",
   "name_traditional": ""
 }

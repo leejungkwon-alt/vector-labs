@@ -1,29 +1,29 @@
 {
   "pillar": "丁未",
-  "hero": "You're a candle on dry earth. Swaying but not going out — a fire that burns firm.",
+  "hero": "あなたは乾いた大地に灯る蝋燭です。揺れながらも消えない、固く燃え続ける火です。",
   "narrative": [
-    "You don't go out easily. Bad conditions, restless surroundings — your flame keeps burning. At first you look quiet, but over time you leave the impression: this person doesn't break easily. That impression is accurate.",
-    "You're a person of endurance. Under difficulty your focus actually increases, and you can face the problem directly. That's rare. Most people scatter under pressure. You get sharper as things get harder.",
-    "Your shadow is making endurance into a virtue. Keep enduring long enough, and you start enduring where endurance isn't needed. Bad environments, wrong relationships, projects already finished — you hold on because 'letting go feels like losing.' That's not endurance. That's clinging.",
-    "A mature Ding-Wei can tell what to endure from what to release. Your resistance is a weapon — but you have to choose where to use it. Enduring and releasing are both your powers."
+    "あなたは簡単には消えません。悪条件や落ち着かない環境でも、あなたの炎は燃え続けます。最初は静かに見えますが、時間と共に「この人は簡単には折れない」という印象を残します。その印象は正確です。",
+    "あなたは忍耐の人です。困難な状況ほど集中力が増し、問題に真っ向から立ち向かえます。それは稀なことです。多くの人はプレッシャーの下で散り散りになります。あなたは状況が厳しくなるほど、むしろ鋭くなるのです。",
+    "あなたの影は、忍耐そのものを美徳にしてしまうことです。あまりに長く耐え続けると、耐える必要のないところでも耐えるようになります。悪い環境、間違った関係、既に終わったプロジェクト――「手放すことは負けのように感じる」から手放せません。それは忍耐ではなく、執着です。",
+    "成熟した丁未は、耐えるべきものと手放すべきものを見分けられる人です。あなたの抵抗力は武器ですが、どこで使うかを選ばなければなりません。耐えることも手放すことも、どちらもあなたの力なのです。"
   ],
   "shadows": [
-    "You keep enduring bad situations until you've burned out.",
-    "Giving up feels like losing, so you keep holding on to things already over.",
-    "Your resilience makes others assume you're always fine."
+    "悪い状況を燃え尽きるまで耐え続けてしまいます。",
+    "諦めることは負けのように感じるため、既に終わったものにもすがり続けます。",
+    "あなたの回復力の高さゆえ、周囲はあなたがいつも大丈夫だと思い込んでしまいます。"
   ],
   "advice": [
-    "This week, list three things you're enduring. One of them you can put down.",
-    "Remind yourself: letting go isn't failure, it's the choice to move on.",
-    "Catch one moment you're pretending to be fine — and say you're not.",
-    "Your resistance is a weapon — but weapons only work when you choose where to swing."
+    "今週は、耐えていることを三つ書き出してみましょう。そのうち一つは手放しても構いません。",
+    "自分に言い聞かせてください。手放すことは失敗ではなく、前へ進む選択なのだと。",
+    "大丈夫なふりをしている瞬間を一度捕まえて、「大丈夫じゃない」と言ってみましょう。",
+    "あなたの抵抗力は武器です。けれど武器は振る場所を選んだときにだけ機能します。"
   ],
   "keywords": [
-    "firm ember",
-    "power to resist",
-    "not easily extinguished",
-    "courage to release"
+    "固い残り火",
+    "抵抗力",
+    "消えにくさ",
+    "手放す勇気"
   ],
-  "name": "Candle on Dry Earth",
+  "name": "乾いた大地の灯火",
   "name_traditional": ""
 }

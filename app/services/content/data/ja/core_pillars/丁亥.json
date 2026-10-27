@@ -1,29 +1,29 @@
 {
   "pillar": "丁亥",
-  "hero": "You're a candle floating on water. Swaying but never going out — a person of delicate balance.",
+  "hero": "あなたは水面に揺れる蝋燭です。揺れながらも決して消えない、繊細な均衡の持ち主です。",
   "narrative": [
-    "You carry sensitivity and wisdom together. A candle on water always sways, but even in that swaying, it doesn't go out. Your sensitivity works the same way. You're easily moved, and that very movement is your depth.",
-    "You feel other people's emotions as if they were your own. You read someone's state without being told, notice the moment a room changes. That's rare. It's also exhausting. If you absorb every wave, your own stillness disappears.",
-    "Your shadow is being swept up by other people's tides. When their emotion is strong, you go with it — and sometimes you can't tell whether the feeling is yours or theirs. Standing on that wave, ask yourself once: 'Is this my wave, or theirs?'",
-    "A mature Ding-Hai keeps their own wave intact. Retain the sensitivity — but build a boundary so it doesn't all flow into someone else's sea. Then your light becomes a very particular kind: swaying, and never out."
+    "あなたは感受性と知恵を同時に携える人です。水面の蝋燭はいつも揺れていますが、その揺れの中でも消えません。あなたの感受性も同じです。あなたはすぐに揺らぎ、その揺らぎこそがあなたの深さなのです。",
+    "あなたは他人の感情を自分のことのように感じます。言葉にされなくても人の状態を読み取り、場の空気が変わる瞬間に気づきます。それは稀な才能ですが、同時に疲れることでもあります。すべての波を吸収してしまえば、自分自身の静けさが失われてしまうのです。",
+    "あなたの影は、他人の波にさらわれてしまうことです。相手の感情が強いとき、あなたはそれに乗ってしまい、時にはその感情が自分のものか相手のものかわからなくなります。その波の上で、一度自分に問いかけてみてください。「この波は私のもの？それとも相手のもの？」と。",
+    "成熟した丁亥は、自分自身の波を保てる人です。感受性はそのままに、すべてが他人の海へ流れ込まないよう境界線を築きます。そうすれば、あなたの光はとても特別な種類のものになります。揺れながらも、決して消えない光へと。"
   ],
   "shadows": [
-    "You can't tell other people's emotions from your own, so you carry both.",
-    "Sensitivity accumulates as fatigue until you stop feeling anything.",
-    "Without enough solitude, you lose your own color."
+    "他人の感情と自分の感情を区別できず、両方を抱え込んでしまいます。",
+    "感受性が疲労として積み重なり、やがて何も感じなくなってしまいます。",
+    "十分な一人の時間がないと、自分自身の色を失ってしまいます。"
   ],
   "advice": [
-    "When emotions sway, ask once: 'Is this my wave, or theirs?'",
-    "This week, secure at least one full hour of complete solitude. That's your recovery.",
-    "Give yourself permission not to absorb every emotion around you.",
-    "Sensitivity is a gift — and keeping it means regularly emptying yourself."
+    "感情が揺れたら、一度問いかけてみましょう。「この波は私のもの？それとも相手のもの？」と。",
+    "今週は、少なくとも1時間の完全な一人の時間を確保しましょう。それがあなたの回復なのです。",
+    "周囲のすべての感情を吸収しなくてもいいと、自分に許可を与えましょう。",
+    "感受性は贈り物です。それを保つには、定期的に自分を空にすることが必要なのです。"
   ],
   "keywords": [
-    "delicate balance",
-    "light on water",
-    "sensitive wisdom",
-    "own wave"
+    "繊細な均衡",
+    "水面の光",
+    "敏感な知恵",
+    "自分の波"
   ],
-  "name": "Candle on Water",
+  "name": "水面の灯火",
   "name_traditional": ""
 }

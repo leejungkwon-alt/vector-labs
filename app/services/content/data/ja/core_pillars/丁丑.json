@@ -1,29 +1,29 @@
 {
   "pillar": "丁丑",
-  "hero": "You're a candle set on fertile soil. Nourished quietly from below, shining steadily above.",
+  "hero": "あなたは肥沃な土の上に灯る蝋燭です。下から静かに養分を受け取り、上へと絶えず光を放つ人です。",
   "narrative": [
-    "Your warmth isn't loud. It's not a heat that overwhelms — it's a light that doesn't burden people even after hours by your side. New people remember you as quiet and composed. Over time, they realize that composure is actually a very precisely held temperature.",
-    "You carry stability and care together. You become the one people lean on, the quiet center an organization can't do without. That role comes naturally to you — and because it does, the people around you too easily assume you're fine. Even when you're exhausted, most of them won't notice.",
-    "Your shadow is 'being taken for granted.' When you keep shining, that shine becomes air. What you need then isn't more brightness — it's the courage to dim yourself, just for a moment, for your own sake. A candle that goes out isn't failing. Neither are you, when you rest.",
-    "A mature Ding-Chou is someone who accepts being cared for too. When you turn even a tenth of the care you give others back on yourself, your light lasts. That's the only way you last."
+    "あなたの温もりは決して騒がしくありません。誰かを圧倒する熱ではなく、何時間そばにいても負担にならない光です。初めて会う人は、あなたを静かで落ち着いた人として記憶します。けれど時間が経つにつれ、その落ち着きが実は非常に精密に保たれた温度であることに気づくのです。",
+    "あなたは安定と気遣いを同時に携える人です。人が寄りかかる存在となり、組織になくてはならない静かな中心となります。その役割はあなたにとって自然なため、周囲はあなたが「大丈夫」だとあまりにも簡単に思い込んでしまいます。あなたが疲れていても、ほとんどの人は気づかないのです。",
+    "あなたの影は「当然のものとして扱われること」です。光を放ち続けると、その光は空気のように当たり前になってしまいます。そのとき必要なのは、もっと明るくなることではなく、ほんの少し自分のために自分を暗くする勇気です。消えた蝋燭は失敗ではありません。あなたも、休むときはそうなのです。",
+    "成熟した丁丑は、自分も大切にされることを受け入れられる人です。他者に向ける気遣いの十分の一でも自分自身に向けたなら、あなたの光はずっと長く保たれます。それが、あなたが長く在り続ける唯一の方法なのです。"
   ],
   "shadows": [
-    "Because you're steady, people don't notice your fatigue.",
-    "The one being cared for is always someone else. You keep landing last.",
-    "Rest makes you feel guilty, so you force your body to stop instead."
+    "あなたが変わらず安定しているため、周囲はあなたの疲労に気づきません。",
+    "大切にされるのはいつも誰か他の人。あなた自身はいつも最後に回ってしまいます。",
+    "休むことに罪悪感を覚え、かえって身体に強制的に止まらせてしまいます。"
   ],
   "advice": [
-    "This week, pick one person who could care for you and make one small request.",
-    "Skip one thing you'd normally do this week. Give the space to yourself.",
-    "Say your state out loud once. 'I'm kind of worn down lately.'",
-    "If you fear going out, remember: going out and relighting is also a rhythm."
+    "今週は、あなたを大切にしてくれそうな人を一人選び、小さなお願いを一つしてみましょう。",
+    "普段ならやっていることを一つ、今週は飛ばしてみましょう。その余白を自分に与えてください。",
+    "自分の状態を一度声に出してみましょう。「最近、ちょっと疲れているんだ」と。",
+    "消えるのが怖いなら思い出してください。消えてまた灯ることも、一つのリズムなのだと。"
   ],
   "keywords": [
-    "warm stability",
-    "quiet care",
-    "fertile warmth",
-    "self-care"
+    "温かな安定",
+    "静かな気遣い",
+    "肥沃な温もり",
+    "セルフケア"
   ],
-  "name": "Candle on Fertile Soil",
+  "name": "肥沃な土の灯火",
   "name_traditional": ""
 }
