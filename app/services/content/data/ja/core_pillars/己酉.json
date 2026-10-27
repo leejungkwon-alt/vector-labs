@@ -1,28 +1,28 @@
 {
-  "name": "Precise Flowerbed",
+  "name": "精巧な花壇",
   "pillar": "己酉",
-  "hero": "You're a carefully tended flowerbed. A person with a delicate hand, always looking for beauty that actually serves.",
+  "hero": "あなたは丁寧に手入れされた花壇です。繊細な手を持ち、役に立つ美しさをいつも探している人です。",
   "narrative": [
-    "You hold precision and practicality at the same time. 己酉 is soft earth with a sharp metal edge on top. So you want beauty, but you want that beauty to do something useful. You prefer the modest and finished over the showy and empty.",
-    "Your strength is craftsmanship. Whatever you touch has visible care in it. You work every detail into place and keep the whole thing from falling out of tune. What you make and what you choose carries a signature — 'this passed through that person's hands.'",
-    "Your shadow is perfectionism. The precision of 己酉 is beautiful, but pushed too far it starts to close in on you. Hours on a detail no one will notice. Long disappointment over results that weren't quite right. And you apply the same standard to other people, which can hurt them without meaning to. Your bar is natural to you — but to others it can be a wall.",
-    "A mature Ji-You uses the standard with generosity. Keeping the quality bar, and understanding people who can't reach it yet. Then your precision stops being pressure and becomes the kind of beauty people want to learn."
+    "あなたは精密さと実用性を同時に携える人です。己酉は柔らかな土の上に鋭い金属の縁が坐した柱です。だからあなたは美しさを求めつつ、その美しさが何かの役に立つことを望みます。派手で空っぽなものより、地味でも完成されたものを好むのです。",
+    "あなたの強みは職人性です。あなたが触れるものには、目に見える気配りが宿ります。細部を一つひとつ正しい位置に収め、全体が調子を崩さないようにする。あなたが作るもの、選ぶものには、ある種の署名が残ります――「あの人の手を通った」という署名です。",
+    "あなたの影は完璧主義です。己酉の精密さは美しいものですが、行きすぎるとあなた自身を締めつけ始めます。誰も気づかない細部に何時間も費やし、少し違う結果に長く失望する。そして同じ基準を他者にも適用し、意図せず傷つけてしまう。あなたの基準はあなたには自然ですが、他者には壁になるのです。",
+    "成熟した己酉は、基準を寛容さと共に使います。品質の基準は保ちつつ、まだそこへ届かない人を理解する。そうすれば、あなたの精密さはプレッシャーではなく、人が学びたいと願う美しさへと変わるのです。"
   ],
   "shadows": [
-    "Stuck on imperfect results long enough that you can't move on to the next thing.",
-    "Applying your bar to other people and hurting them without meaning to.",
-    "Burning energy on details no one will see, and missing the thing that mattered."
+    "不完全な結果に長く囚われ、次へ進めなくなってしまいます。",
+    "自分の基準を他者に適用し、意図せず傷つけてしまいます。",
+    "誰も見ない細部にエネルギーを燃やし、本当に大切なものを見逃してしまいます。"
   ],
   "advice": [
-    "Once this week, practice stopping at 80%. Any result.",
-    "When you look at someone else's work, remind yourself first: this is their bar, not mine.",
-    "Turn one 'why is it only this good?' into 'what did I actually make?'",
-    "Notice when the perfectionism peaks. It's usually when you're tired."
+    "今週一度、どんな結果でも80%で止める練習をしましょう。",
+    "誰かの仕事を見るとき、まず「これはその人の基準であって、私の基準ではない」と思い出しましょう。",
+    "「なぜこれだけしか良くないのか」を一つ、「実際に何を作ったのか」に変えてみましょう。",
+    "完璧主義が高まる瞬間に気づきましょう。たいてい、あなたが疲れているときです。"
   ],
   "keywords": [
-    "delicate hand",
-    "aesthetic sense",
-    "useful beauty",
-    "craftsmanship"
+    "繊細な手",
+    "美的感覚",
+    "役立つ美しさ",
+    "職人性"
   ]
 }

@@ -1,28 +1,28 @@
 {
-  "name": "Frozen Field",
+  "name": "凍てつく畑",
   "pillar": "己丑",
-  "hero": "You're a field holding spring underground. Cold and solid on the surface, with an unfreed life force still asleep beneath.",
+  "hero": "あなたは春を地中に抱く畑です。表面は冷たく固く、その下にはまだ眠る解き放たれていない生命力があります。",
   "narrative": [
-    "You don't show yourself easily. 己丑 is damp winter earth layered on itself. Your emotions stay inside, and the temperature people see is much cooler than the temperature you actually feel. People remember you as composed, or even bland. It's not because you don't feel — it's because you store what you feel rather than spending it.",
-    "Your strength is the instinct to save. 己丑 is soil that buries seeds. You don't spend money, emotion, trust, or time carelessly. You hold them for the right moment and then release them with precision. That's why you're stronger in a crisis than most people. When everyone else is empty, your storehouse still has something in it.",
-    "Your shadow is staying frozen too long. 己丑 stores spring, but if you never open the storehouse, the soil itself hardens. If you don't let out what you've been holding, people can't read your heart even when they're standing next to you. 'Always fine' gets written on you, and beneath that label your private fatigue quietly stacks up.",
-    "A mature Ji-Chou knows how to release the stored spring. Opening the kept emotion, the banked trust, the buried gift at the right moment. Then your coolness stops being distance and becomes deep stability, and the people around you get to experience actual spring."
+    "あなたは自分を簡単には見せません。己丑は湿った冬の土が幾重にも重なった柱です。感情は内に留まり、人が見る温度は、あなたが実際に感じている温度よりずっと低いのです。人はあなたを「落ち着いた人」あるいは「無難な人」と記憶します。それは感じていないからではなく、感じたものを消費せず蓄えるからなのです。",
+    "あなたの強みは、蓄える本能です。己丑は種を埋める土です。あなたはお金、感情、信頼、時間を無造作に使わない。正しい瞬間のために蓄え、そのときに精密に放つ。だからこそ、あなたは多くの人より危機に強いのです。他の人が空になったとき、あなたの蔵にはまだ何かが残っているのです。",
+    "あなたの影は、凍てついたまま長くいすぎることです。己丑は春を蓄えますが、蔵を決して開けなければ、土そのものが固くなっていきます。抱えてきたものを外へ出さなければ、隣に立っていてもあなたの心は読めません。「いつも大丈夫」というレッテルが貼られ、その下で私的な疲労が静かに積み上がっていくのです。",
+    "成熟した己丑は、蓄えた春を解き放つ術を知っています。保ってきた感情、蓄えた信頼、埋めた贈り物を、適切な瞬間に開く。そうすれば、あなたの冷たさは距離ではなく、深い安定となり、周囲は実際の春を体験できるのです。"
   ],
   "shadows": [
-    "Keeping feelings inside so long that people misread your temperature entirely.",
-    "Conserving trust so tightly that you don't ask for help when you need it.",
-    "The saving instinct taken so far it makes you stingy with yourself."
+    "感情を内に保ちすぎて、周囲があなたの温度を完全に誤読してしまいます。",
+    "信頼を蓄えすぎて、必要なときに助けを求められません。",
+    "蓄える本能が過ぎて、自分自身にさえも吝嗇になってしまいます。"
   ],
   "advice": [
-    "Once this week, take out one feeling you've been keeping. Small is fine.",
-    "Pick one thing you're solving alone and ask for help before you need it.",
-    "Ask yourself, 'Why am I holding this in right now?' Of the answers, one can be let out.",
-    "Set up a regular spend on yourself — money or time — so the storehouse doesn't overflow."
+    "今週一度、保ってきた感情を一つ外へ出してみましょう。小さなもので構いません。",
+    "自分だけで解決していることを一つ選び、必要になる前に助けを求めましょう。",
+    "自問してください。「今、なぜこれを抱えているのだろう？」答えのうち、一つは外に出して構いません。",
+    "定期的に自分への支出――お金か時間――を設定しましょう。蔵が溢れないように。"
   ],
   "keywords": [
-    "winter earth",
-    "deep storage",
-    "patient strength",
-    "stored spring"
+    "冬の土",
+    "深い貯蔵",
+    "忍耐の力",
+    "蓄えた春"
   ]
 }
