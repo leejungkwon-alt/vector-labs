@@ -1,28 +1,28 @@
 {
-  "name": "Water Piercing Stone",
+  "name": "石を穿つ水",
   "pillar": "壬申",
-  "hero": "You're water that pierces stone. Gentle to look at, and, given time, impossible to stop.",
+  "hero": "あなたは石を穿つ水です。見た目は優しく、時間さえあれば止められない存在です。",
   "narrative": [
-    "You hold sharpness and wisdom together. 壬申 is metal giving birth to water. Sharp metal meeting deep water makes water extremely precise and persistent. Your wisdom is like that. It looks soft, but give it time and it gets through anything.",
-    "Your strength is persistent drive. Where other people quit, you keep flowing. But not by pushing like a hammer — by finding the exact spot and continuing to flow into it. So difficult projects do get finished by you. That's why organizations say, 'If this person takes it, it somehow gets done.'",
-    "Your shadow is pushing too long. Water is gentle, but if it keeps flowing in one spot, it cuts through. Your persistence is a weapon that sometimes becomes stubbornness. You lose flexibility, can't admit you're tired, and keep holding something that should have ended. And the people around you can't stop you.",
-    "A mature Im-Shin knows the difference between flowing and piercing. Sometimes changing direction, sometimes stopping, instead of always pushing. Then your persistence becomes sustained drive instead of exhaustion."
+    "あなたは鋭さと知恵を同時に携える人です。壬申は金が水を生む柱です。鋭い金属が深い水に出会うと、水は極めて精密で執拗になります。あなたの知恵も同じです。柔らかく見えますが、時間を与えればあらゆるものを通り抜けるのです。",
+    "あなたの強みは執拗な推進力です。他の人が諦めるところでも、あなたは流れ続けます。ただし、ハンマーのように押すのではなく、正確な一点を見つけてそこへ流れ込み続けるのです。だからこそ難しいプロジェクトもあなたによって完成します。組織が「この人が引き受ければ、なぜか片付く」と言うのはそのためです。",
+    "あなたの影は、押し続けすぎることです。水は優しいですが、一点に流れ続ければ、やがて穿ちます。あなたの粘り強さは武器ですが、それがときに頑固さに変わります。柔軟性を失い、疲れていることを認められず、終わるべきものを抱え続けます。そして周囲はあなたを止められないのです。",
+    "成熟した壬申は、流れることと穿つことの違いを知っています。常に押すのではなく、ときに方向を変え、ときに止まる。そうすれば、あなたの粘り強さは消耗ではなく、持続する推進力へと変わるのです。"
   ],
   "shadows": [
-    "Persistence taken so far that you keep holding onto something already finished.",
-    "Losing flexibility, pushing the same direction when a turn was needed.",
-    "Unable to admit exhaustion until your body forces you to stop."
+    "粘り強さが過ぎて、既に終わったものを抱え続けてしまいます。",
+    "柔軟性を失い、方向転換が必要なときに同じ方向へ押し続けます。",
+    "身体が止めさせるまで、疲労を認められません。"
   ],
   "advice": [
-    "List three things you're holding this week. One of them can be put down.",
-    "Before pushing, ask once: is this direction still right?",
-    "Give yourself regular recovery. Water that never rests runs dry.",
-    "Share one piece of wisdom you've been carrying for a long time. It opens a new channel."
+    "今週、抱えていることを三つ書き出してみましょう。そのうち一つは下ろして構いません。",
+    "押す前に一度問いかけましょう。この方向はまだ正しいだろうか？と。",
+    "定期的な回復を自分に与えましょう。休まない水は涸れるのです。",
+    "長く携えてきた知恵を一つ、誰かと分かち合いましょう。新しい水路が開けます。"
   ],
   "keywords": [
-    "piercing persistence",
-    "sharp wisdom",
-    "relentless drive",
-    "strength of flow"
+    "穿つ粘り強さ",
+    "鋭い知恵",
+    "執拗な推進力",
+    "流れの強さ"
   ]
 }

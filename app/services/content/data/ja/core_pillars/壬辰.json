@@ -1,28 +1,28 @@
 {
-  "name": "Sea Where Dragons Live",
+  "name": "龍が棲む海",
   "pillar": "壬辰",
-  "hero": "You're a sea where dragons live. Ordinary on the surface, with the kind of potential beneath that could move the world.",
+  "hero": "あなたは龍が棲む海です。表面はありふれて見えて、その下には世界を動かす可能性を抱えています。",
   "narrative": [
-    "You're the kind of large vessel that doesn't reveal itself easily. 壬辰 belongs to the 魁罡 (Commander) set of pillars. 辰 is the dragon's earth, and it stores water. You look unremarkable most of the time — and then at a decisive moment, your weight shows. People say later, 'Wait — that person was that person?'",
-    "Your strength is seeing the big picture. You sketch the large frame before the small tactics, and inside it you arrange people and resources. In the decisive moment, while everyone else is shaking, you quietly hold the center. That's the real power of 壬辰 — quiet most of the time, moving the world when it counts.",
-    "Your shadow is holding the potential without releasing it. A dragon that stays in the cave forever becomes a legend. Same for you. You're sketching the big picture but not bringing it out, so people never find out what you carry. And over time, the label 'what does that person actually do?' starts to attach.",
-    "A mature Im-Jin knows how to wake the dragon. Keeping the big picture, and bringing it into the world through small beginnings. Then your presence stops being intimidating and becomes the thing people rely on."
+    "あなたは自らを明かしにくい大きな器の持ち主です。壬辰は魁罡(魁罡)の柱に属します。辰は龍の土であり、水を蓄えます。普段はありふれて見えて、決定的な瞬間にあなたの重みが現れます。人は後になって「待って、あの人がそんな人だったの？」と驚くのです。",
+    "あなたの強みは、大きな絵を見る力です。小さな戦術より先に大きな枠組みを描き、その中に人と資源を配置します。決定的な瞬間には、周囲が震えている中で、あなたは静かに中心を保ちます。それが壬辰の本当の力です――普段は静かで、必要なときに世界を動かすのです。",
+    "あなたの影は、可能性を抱えたまま外に出さないことです。洞窟にずっと留まる龍は伝説になります。あなたも同じです。大きな絵を描いていながら外に出さなければ、人々はあなたが何を携えているのかを知りません。そして時間が経つにつれて、「あの人は実際、何をしている人なの？」というレッテルが貼られ始めるのです。",
+    "成熟した壬辰は、龍を目覚めさせる術を知っています。大きな絵を保ちながら、小さな始まりを通して世界に出す。そうすれば、あなたの存在は威圧ではなく、人が頼りにするものへと変わるのです。"
   ],
   "shadows": [
-    "Holding the potential and never releasing it, so people underestimate you.",
-    "Sketching the big picture and missing the small execution.",
-    "Waiting so long for the decisive moment that it never arrives."
+    "可能性を抱えたまま決して外に出さないので、周囲があなたを過小評価します。",
+    "大きな絵を描きながら、小さな実行を逃してしまいます。",
+    "決定的な瞬間を長く待ちすぎて、それが訪れません。"
   ],
   "advice": [
-    "Bring one piece of your potential out this week as a concrete action.",
-    "Pick one 'small start' inside the big picture that you can do right now.",
-    "Explain your plan to someone. Kept only in your head, the dragon stays asleep.",
-    "Stop waiting for the decisive moment. Make one this week."
+    "今週、自分の可能性のひとかけらを具体的な行動として外に出しましょう。",
+    "大きな絵の中から、今すぐできる「小さな始まり」を一つ選びましょう。",
+    "自分の計画を誰かに説明しましょう。頭の中だけでは、龍は眠ったままです。",
+    "決定的な瞬間を待つのをやめましょう。今週、自分で一つ作るのです。"
   ],
   "keywords": [
     "魁罡",
-    "large vessel",
-    "sleeping dragon",
-    "decisive weight"
+    "大きな器",
+    "眠れる龍",
+    "決定的な重み"
   ]
 }

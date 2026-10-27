@@ -1,28 +1,28 @@
 {
-  "name": "Frozen Deep Sea",
+  "name": "凍てつく深海",
   "pillar": "壬子",
-  "hero": "You're a winter sea. Hard as ice on the surface, and beneath it, a current that never stops moving.",
+  "hero": "あなたは冬の海です。表面は氷のように固く、その下では止まることなく流れる海流が脈打っています。",
   "narrative": [
-    "You're the purest form of 壬. 壬子 is 壬 sitting in its own 祿 (Lu) — double water, layered on itself. Your wisdom doesn't shake, your field of vision is wide, your thinking is deep. People get a strange sense in your presence: this person is different.",
-    "Your strength is depth of thought. Where others see only the surface, you see the machinery under a situation. You don't rush to conclusions, and the conclusions you arrive at after letting things settle tend to be right. So organizations end up trusting you with the biggest judgments.",
-    "Your shadow is emotion locked under the ice. The surface of a winter sea is ice, but underneath it's still moving — and so are you. You look calm, but you carry deep currents. The problem is the ice keeps them from reaching the people around you. If you've been called cold or hard to read, it's not because you don't care — it's because you carry too much too deep.",
-    "A mature Im-Ja knows how to melt their own ice. Keeping the deep wisdom, and letting some of that inner water come up. Then your depth stops being distance and becomes wisdom people want to lean on."
+    "あなたは壬の中でも最も純粋な壬です。壬子は壬が自分の禄(祿)の位置に坐した、水の気が二重に重なった柱です。だからあなたの知恵は揺らがず、視野は広く、思考は深い。人はあなたの前で、不思議と「この人は何かが違う」という印象を受けます。",
+    "あなたの強みは思索の深さです。他の人が表面だけを見るところで、あなたは状況の下にある仕組みを見ます。結論を急がず、物事を沈めてから至る結論は、たいてい正しい。だから組織は、最も重大な判断をあなたに委ねるようになるのです。",
+    "あなたの影は、氷の下に閉じ込められた感情です。冬の海の表面は氷ですが、その下は今も動き続けています――あなたも同じです。あなたは穏やかに見えて、深い海流を抱えている。問題は、その氷が周囲の人に海流を届かせないことです。冷たい、あるいは読みにくいと言われたことがあるなら、それはあなたが気にかけていないからではなく、あまりにも深く抱えすぎているからなのです。",
+    "成熟した壬子は、自分の氷を溶かす術を知っています。深い知恵を保ちながら、内なる水の一部を表へ上げる。そうすれば、あなたの深さは距離ではなく、人が寄りかかりたいと願う知恵へと変わるのです。"
   ],
   "shadows": [
-    "Holding feelings under the ice so long that people misread your temperature.",
-    "Delaying decisions long enough that the opening closes.",
-    "Your depth reads as distance, so intimacy takes a long time to build."
+    "感情を氷の下に長く保ちすぎて、周囲があなたの温度を誤読してしまいます。",
+    "決断を先延ばしにするうちに、扉が閉じてしまいます。",
+    "あなたの深さが距離として読まれ、親密さを築くのに時間がかかります。"
   ],
   "advice": [
-    "Once this week, bring one kept feeling up. Small is fine.",
-    "Pick one decision to make by a fixed deadline. It doesn't have to be perfect.",
-    "Explain one piece of your wisdom to someone. Wisdom sharpens when shared.",
-    "Even the sea needs earth. Give your day one small ritual that doesn't move."
+    "今週一度、抱えていた感情を一つ表に出してみましょう。小さなもので構いません。",
+    "決めるべきことを一つ、期限を決めて決めましょう。完璧でなくて構いません。",
+    "自分の知恵のひとかけらを誰かに説明してみましょう。知恵は分かち合うほど鋭くなるのです。",
+    "海にも大地が必要です。一日に一つ、動かない小さな儀式を持ちましょう。"
   ],
   "keywords": [
-    "deep wisdom",
-    "currents under ice",
-    "wide field of vision",
-    "long sight"
+    "深い知恵",
+    "氷の下の海流",
+    "広い視野",
+    "遠くを見る眼"
   ]
 }
