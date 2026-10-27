@@ -1,69 +1,69 @@
 {
   "TIMING": {
     "ten_god_labels": {
-      "TEN_GOD_FRIEND": "Energy of Companionship",
-      "TEN_GOD_ROB_WEALTH": "Competitive Energy",
-      "TEN_GOD_EATING_GOD": "Energy of Enjoyment",
-      "TEN_GOD_HURTING_OFFICER": "Expressive Energy",
-      "TEN_GOD_INDIRECT_WEALTH": "Opportunity-Seizing Energy",
-      "TEN_GOD_DIRECT_WEALTH": "Managing Energy",
-      "TEN_GOD_SEVEN_KILLINGS": "Breakthrough Energy",
-      "TEN_GOD_DIRECT_OFFICER": "Energy of Order",
-      "TEN_GOD_INDIRECT_RESOURCE": "Intuitive Energy",
-      "TEN_GOD_DIRECT_RESOURCE": "Energy of Learning"
+      "TEN_GOD_FRIEND": "仲間のエネルギー",
+      "TEN_GOD_ROB_WEALTH": "競争のエネルギー",
+      "TEN_GOD_EATING_GOD": "楽しみのエネルギー",
+      "TEN_GOD_HURTING_OFFICER": "表現のエネルギー",
+      "TEN_GOD_INDIRECT_WEALTH": "機会を掴むエネルギー",
+      "TEN_GOD_DIRECT_WEALTH": "管理するエネルギー",
+      "TEN_GOD_SEVEN_KILLINGS": "突破のエネルギー",
+      "TEN_GOD_DIRECT_OFFICER": "秩序のエネルギー",
+      "TEN_GOD_INDIRECT_RESOURCE": "直感のエネルギー",
+      "TEN_GOD_DIRECT_RESOURCE": "学びのエネルギー"
     },
     "grade_labels": {
-      "PEAK": "Peak",
-      "FAVORABLE": "Favorable",
-      "NEUTRAL": "Neutral",
-      "CAUTION": "Caution",
-      "CHALLENGING": "Challenging"
+      "PEAK": "最高潮",
+      "FAVORABLE": "順調",
+      "NEUTRAL": "均衡",
+      "CAUTION": "注意",
+      "CHALLENGING": "難しさ"
     },
     "daewoon_narratives": {
-      "favorable": "You are currently in a major life chapter ruled by {pillar}, from age {start_age} to {end_age}. This period carries a strong tailwind that amplifies your natural rhythm. {section_angle}",
-      "neutral": "You are currently in a major life chapter ruled by {pillar}, from age {start_age} to {end_age}. This period mixes tailwinds and headwinds, so the same situation can feel very different depending on your choices. {section_angle}",
-      "caution": "You are currently in a major life chapter ruled by {pillar}, from age {start_age} to {end_age}. This is a period when you need to take especially careful care of yourself. {section_angle}"
+      "favorable": "今あなたは{start_age}歳から{end_age}歳まで続く{pillar}の人生の大きな流れの中にいます。この時期はあなたのリズムを後押しする強い追い風があります。{section_angle}",
+      "neutral": "今あなたは{start_age}歳から{end_age}歳まで続く{pillar}の人生の大きな流れの中にいます。この時期は追い風と向かい風が混ざっているので、同じ状況でも選択によって体感が大きく変わります。{section_angle}",
+      "caution": "今あなたは{start_age}歳から{end_age}歳まで続く{pillar}の人生の大きな流れの中にいます。この時期は自分自身をより丁寧にケアする必要があります。{section_angle}"
     },
     "section_daewoon_angle": {
       "love": {
-        "favorable": "In relationships, your heart opens naturally, and it's easy to match the rhythm with your partner. The better the flow, the more you should ask for your partner's pace first. That ease makes the relationship deeper.",
-        "neutral": "In relationships, the balance between approaching and stepping back is important. When differences surface, ask yourself what you want to confirm in that scene.",
-        "caution": "In relationships, the same signal is easily interpreted differently. Take a breath before important conversations, and choose 'confirmation' over 'conviction'."
+        "favorable": "関係では、心が自然に開いて、相手とのリズムが合いやすい時です。流れが良いほど、相手のペースを先に尋ねてみましょう。その余裕が関係をより深くします。",
+        "neutral": "関係では、近づくことと一歩引くことのバランスが大切です。互いの違いが表に出るとき、その場面で自分が何を確かめたいのか、自問してみてください。",
+        "caution": "関係では、同じシグナルも違う意味に解釈されやすい時です。大切な会話の前に一度深呼吸して、確信よりも「確認」を選びましょう。"
       },
       "career": {
-        "favorable": "At work, your judgment operates relatively clearly. It's a good flow to bring out postponed proposals or responsibilities.",
-        "neutral": "At work, it's a flow asking for a balance between expansion and maintenance. Decide for yourself whether to put more time into new attempts or existing routines.",
-        "caution": "At work, energy easily scatters, so rushing decisions increases fatigue. In this period, it's more effective to decide 'what not to do' first."
+        "favorable": "仕事では、判断が比較的クリアに働きます。後回しにしていた提案や責任を手放すのに良い流れです。",
+        "neutral": "仕事では、拡張と整備のバランスを問われる流れです。新しい試みと既存のルーティンのどちらに時間を多く使うか、自分で決めてみてください。",
+        "caution": "仕事では、エネルギーが分散しやすく、決断を急ぐと疲労が大きくなります。この時期は「やらないこと」を先に決めるのが効果的です。"
       },
       "wealth": {
-        "favorable": "In wealth, growing what you already have suits you well. The accuracy of management creates results rather than big adventures.",
-        "neutral": "In wealth, the rhythm of income and expenditure easily fluctuates together. The habit of checking once more before big spending makes a difference.",
-        "caution": "In wealth, there may be moments when judgment blurs. Avoid impulsive decisions and leave a day's margin before paying."
+        "favorable": "お金については、すでに持っているものを育てる方向がよく合います。大きな冒険よりも、管理の正確さが結果を作ります。",
+        "neutral": "お金については、収入と支出のリズムが一緒に揺れやすい時期です。大きな出費の前に一度確認する習慣が違いを生みます。",
+        "caution": "お金については、判断がぼやける瞬間が来るかもしれません。衝動的な決定を避け、支払いの前に一日の余裕を置きましょう。"
       }
     },
-    "year_narrative": "The big energy of this year ({target_year}) is '{ten_god_label}'. Look at how this energy manifests in your {domain_kr} along with the flow below.",
+    "year_narrative": "今年（{target_year}年）の大きなエネルギーは「{ten_god_label}」です。このエネルギーがあなたの{domain_kr}でどう現れるか、以下の流れと共に見てみてください。",
     "domain_labels": {
-      "love": "relationships",
-      "career": "work",
-      "wealth": "wealth"
+      "love": "関係",
+      "career": "仕事",
+      "wealth": "富"
     },
-    "month_opportunity_narrative": "{month} ({pillar}) is a month where a relatively natural door opens for you among this year's flow. {section_angle}",
-    "month_caution_narrative": "{month} ({pillar}) is a month where judgment requires special caution among this year's flow. {section_angle}",
+    "month_opportunity_narrative": "{month}月（{pillar}）は、今年の流れの中で、あなたにとって比較的自然に扉が開く月です。{section_angle}",
+    "month_caution_narrative": "{month}月（{pillar}）は、今年の流れの中で、特に判断に注意が必要な月です。{section_angle}",
     "section_month_angle": {
       "love": {
-        "opportunity": "Scenes where hearts connect in relationships may increase. The better the flow, the more the practice of listening to your partner to the end creates depth.",
-        "caution": "It's a month where misunderstandings easily pile up in relationships. Check your partner's intention once more before deciding."
+        "opportunity": "関係で心が通じ合う場面が増えるかもしれません。流れが良いほど、相手の話を最後まで聞く練習が深さを生みます。",
+        "caution": "関係で誤解が積み重なりやすい月です。決断の前に、相手の意図をもう一度確認してください。"
       },
       "career": {
-        "opportunity": "It's a month suitable for attempts like proposals, collaborations, and interviews at work.",
-        "caution": "It's a month where emotional exhaustion can grow at work. Postpone important decisions to a day when you are in good condition."
+        "opportunity": "仕事で提案・協働・面接など、扉を叩く試みがよく合う月です。",
+        "caution": "仕事で感情的な消耗が大きくなりやすい月です。大切な決断は体調の良い日に先延ばししましょう。"
       },
       "wealth": {
-        "opportunity": "It's a month favorable for management, organization, and contracts in wealth. It's good to put already planned tasks into action.",
-        "caution": "It's a month where you are easily shaken by impulsive judgment in wealth. Postpone big spending by a day."
+        "opportunity": "お金については、管理・整理・契約に有利な月です。すでに計画していたことを実行に移すのが良いでしょう。",
+        "caution": "お金については、衝動的な判断に揺れやすい月です。大きな支出は一日後ろに延ばしてください。"
       }
     },
-    "no_daewoon": "Your major life chapter is still taking shape, so this reading focuses on this year's momentum and this month's energy.",
-    "disclaimer": "Note: This timing interpretation is not a deterministic prediction, but a coaching perspective to read the current flow. Life's choices are always yours."
+    "no_daewoon": "人生の大きな流れの詳細はまだ十分に現れていないため、今年の流れと今月のエネルギーを中心に読みます。",
+    "disclaimer": "ご案内：この時期の解釈は決定論的な予測ではなく、今の流れを読むためのコーチングの視点です。人生の選択は、いつでもあなたのものです。"
   }
 }
