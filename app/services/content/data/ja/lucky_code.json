@@ -1,253 +1,253 @@
 {
   "LUCKY_CODE_CONTENT": {
     "GROWTH": {
-      "element": "Wood",
+      "element": "木",
       "keywords": [
-        "expansion",
-        "direction",
-        "initiative"
+        "拡張",
+        "方向",
+        "主導"
       ],
       "colors": [
-        "Forest green",
-        "Jade",
-        "Olive"
+        "深緑",
+        "翡翠色",
+        "オリーブ"
       ],
       "numbers": [
         3,
         8
       ],
       "directions": [
-        "East",
-        "Southeast"
+        "東",
+        "東南"
       ],
       "activities": [
-        "Morning walks",
-        "Hiking",
-        "Gardening",
-        "Reading",
-        "Starting something small"
+        "朝の散歩",
+        "ハイキング",
+        "庭仕事",
+        "読書",
+        "小さなことを始める"
       ],
       "foods": [
-        "Leafy greens",
-        "Sour foods",
-        "Fresh herbs"
+        "葉物野菜",
+        "酸味のある食べ物",
+        "フレッシュハーブ"
       ],
       "practices": [
-        "Start one thing this week without a full plan.",
-        "Spend 20 minutes in nature — not as fitness, just as presence.",
-        "Write one direction you're moving toward, and one you're not."
+        "今週、計画なしでひとつ始めてみましょう。",
+        "自然の中で20分を過ごしましょう——運動ではなく、ただ存在すること。",
+        "向かっている方向をひとつ、向かっていない方向をひとつ書き出しましょう。"
       ]
     },
     "SPARK": {
-      "element": "Fire",
+      "element": "火",
       "keywords": [
-        "expression",
-        "warmth",
-        "visibility"
+        "表現",
+        "温もり",
+        "可視性"
       ],
       "colors": [
-        "Red",
-        "Orange",
-        "Magenta"
+        "赤",
+        "オレンジ",
+        "マゼンタ"
       ],
       "numbers": [
         2,
         7
       ],
       "directions": [
-        "South"
+        "南"
       ],
       "activities": [
-        "Social gatherings",
-        "Live music",
-        "Performance",
-        "High-intensity training"
+        "人と会う",
+        "ライブ音楽",
+        "発表・パフォーマンス",
+        "高強度トレーニング"
       ],
       "foods": [
-        "Bitter greens",
-        "Warm spices",
-        "Coffee or tea"
+        "苦味のある葉物",
+        "温かいスパイス",
+        "コーヒーかお茶"
       ],
       "practices": [
-        "Say one thing out loud this week you've been feeling quietly.",
-        "Do something visible — post, present, perform. Even small.",
-        "Put yourself in a room with warm people."
+        "今週、静かに抱えてきた思いをひとつ声に出しましょう。",
+        "目に見えることをしましょう——投稿、発表、パフォーマンス。小さくても。",
+        "温かい人がいる場に身を置きましょう。"
       ]
     },
     "GROUND": {
-      "element": "Earth",
+      "element": "土",
       "keywords": [
-        "stability",
-        "trust",
-        "patience"
+        "安定",
+        "信頼",
+        "忍耐"
       ],
       "colors": [
-        "Yellow",
-        "Brown",
-        "Beige",
-        "Ochre"
+        "黄色",
+        "茶色",
+        "ベージュ",
+        "黄土色"
       ],
       "numbers": [
         5,
         10
       ],
       "directions": [
-        "Southwest",
-        "Northeast",
-        "Center"
+        "南西",
+        "北東",
+        "中央"
       ],
       "activities": [
-        "Cooking",
-        "Pottery",
-        "Slow walks",
-        "Journaling",
-        "Grounding"
+        "料理",
+        "陶芸",
+        "ゆっくりした散歩",
+        "日記",
+        "グラウンディング"
       ],
       "foods": [
-        "Root vegetables",
-        "Whole grains",
-        "Sweet foods in moderation"
+        "根菜",
+        "全粒穀物",
+        "適度な甘味"
       ],
       "practices": [
-        "Eat one meal a week with no screen.",
-        "Keep one physical object near you that reminds you of home.",
-        "Do one thing this week with your hands, not your mind."
+        "週に一度は画面のない食事をしましょう。",
+        "家を思い出させる品をひとつ、そばに置きましょう。",
+        "今週、頭ではなく手ですることをひとつしましょう。"
       ]
     },
     "EDGE": {
-      "element": "Metal",
+      "element": "金",
       "keywords": [
-        "clarity",
-        "structure",
-        "precision"
+        "明晰さ",
+        "構造",
+        "精密さ"
       ],
       "colors": [
-        "White",
-        "Silver",
-        "Metallic gold"
+        "白",
+        "銀",
+        "メタリックゴールド"
       ],
       "numbers": [
         4,
         9
       ],
       "directions": [
-        "West",
-        "Northwest"
+        "西",
+        "北西"
       ],
       "activities": [
-        "Strength training",
-        "Decluttering",
-        "Learning an instrument",
-        "Editing something"
+        "筋力トレーニング",
+        "片づけ",
+        "楽器を習う",
+        "編集作業"
       ],
       "foods": [
-        "Pungent spices",
-        "Nuts and seeds",
-        "White fish"
+        "刺激の強いスパイス",
+        "ナッツと種",
+        "白身魚"
       ],
       "practices": [
-        "Declutter one drawer, one inbox, one list.",
-        "Say the direct thing this week — without softening it.",
-        "Ask one question before giving the answer."
+        "引き出しひとつ、受信箱ひとつ、リストひとつを整えましょう。",
+        "今週、和らげずにそのまま伝えましょう。",
+        "答えを出す前に質問をひとつしましょう。"
       ]
     },
     "FLOW": {
-      "element": "Water",
+      "element": "水",
       "keywords": [
-        "adaptability",
-        "wisdom",
-        "depth"
+        "適応力",
+        "知恵",
+        "深さ"
       ],
       "colors": [
-        "Black",
-        "Navy",
-        "Deep gray"
+        "黒",
+        "ネイビー",
+        "濃いグレー"
       ],
       "numbers": [
         1,
         6
       ],
       "directions": [
-        "North"
+        "北"
       ],
       "activities": [
-        "Swimming",
-        "Meditation",
-        "Journaling",
-        "Music",
-        "Long conversations"
+        "水泳",
+        "瞑想",
+        "日記",
+        "音楽",
+        "長い会話"
       ],
       "foods": [
-        "Sea vegetables",
-        "Black beans",
-        "Salty foods in moderation"
+        "海藻",
+        "黒豆",
+        "適度な塩味"
       ],
       "practices": [
-        "Sit with one unresolved question without forcing an answer.",
-        "Write a page of stream-of-consciousness this week.",
-        "Say yes to one thing that has no clear plan."
+        "未解決の問いをひとつ、答えを強要せずに抱えてみましょう。",
+        "今週、意識の流れを1ページ書きましょう。",
+        "計画のないことにひとつ「はい」と言いましょう。"
       ]
     }
   },
   "LUCKY_CODE_DOMAINS": {
     "GROWTH": {
-      "career": "Teaching, publishing, gardening, fashion, planning, education — roles where you grow people or projects.",
-      "wealth": "Tending what you already have, rather than chasing what's new. Long-term thinking suits you — trust the compounding.",
-      "relationships": "Peer relationships that push you forward. Find people who grow alongside you, not toward you.",
-      "learning": "Deep study over fast skimming. One topic for a year beats ten for a month.",
-      "everyday": "Start things small and often. Forward motion is your medicine.",
+      "career": "教育・出版・園芸・ファッション・企画・教育——人やプロジェクトを育てる役割。",
+      "wealth": "新しいものを追うより、すでに持っているものを育てる。長期的思考が合います——複利を信じましょう。",
+      "relationships": "あなたを前へ押し出す仲間関係。あなたのほうへ向かってくる人ではなく、一緒に育つ人を見つけましょう。",
+      "learning": "速いスキミングより深い学習。1ヶ月に10テーマより、1年に1テーマ。",
+      "everyday": "小さく頻繁に始めましょう。前進そのものがあなたの薬です。",
       "avoid": [
-        "Waiting for perfect conditions",
-        "Perfectionist paralysis",
-        "Sitting still for too long"
+        "完璧な条件を待つこと",
+        "完璧主義による麻痺",
+        "長く立ち止まること"
       ]
     },
     "SPARK": {
-      "career": "Marketing, media, IT, energy, hospitality, entertainment — anything that needs visibility and heat.",
-      "wealth": "Opportunity often finds you through people. Watch for the urge to say yes to everything — focus is your real multiplier.",
-      "relationships": "Warm, expressive people who don't need you to be quiet. Small talk is not your enemy.",
-      "learning": "Learn out loud. Teach what you're learning before you master it.",
-      "everyday": "One visibly warm gesture a day. Text, call, thank someone.",
+      "career": "マーケティング・メディア・IT・エネルギー・ホスピタリティ・エンタメ——可視性と熱を必要とするすべて。",
+      "wealth": "機会はしばしば人を通じて訪れます。すべてに「はい」と言いたくなる衝動に注意——集中こそ本当の乗数です。",
+      "relationships": "温かく表現力豊かな人。あなたに静かでいてほしいと思わない人。スモールトークは敵ではありません。",
+      "learning": "声に出して学びましょう。マスターする前に教えましょう。",
+      "everyday": "毎日目に見える温かい仕草をひとつ。メッセージ、電話、感謝。",
       "avoid": [
-        "Being the only light in a dark room",
-        "Saying yes to every invitation",
-        "Running on empty"
+        "暗い部屋で唯一の光になること",
+        "すべての誘いに「はい」と言うこと",
+        "空っぽで走り続けること"
       ]
     },
     "GROUND": {
-      "career": "Real estate, construction, education, brokerage, agriculture — anything with a foundation under it.",
-      "wealth": "Steady is your advantage. Respect the power of the same small choice repeated. Boring, done well, compounds.",
-      "relationships": "Few, deep, steady. Loyalty over novelty. Quality time beats quality words.",
-      "learning": "Structured programs. Teachers with credentials. Certifications over inspiration.",
-      "everyday": "Same wake time. Same meal time. Rhythm is the whole game.",
+      "career": "不動産・建設・教育・仲介・農業——基盤のあるすべての仕事。",
+      "wealth": "安定があなたの武器。同じ小さな選択を繰り返す力を信じましょう。地味でも、うまくやれば複利で効きます。",
+      "relationships": "少数・深く・着実。目新しさより忠誠。質の高い言葉より、質の高い時間。",
+      "learning": "体系化されたプログラム。資格のある講師。インスピレーションより資格。",
+      "everyday": "同じ起床時刻。同じ食事時刻。リズムがすべてです。",
       "avoid": [
-        "Chasing the new thing every quarter",
-        "Speed for its own sake",
-        "Change without reason"
+        "四半期ごとに新しもの追い",
+        "速度のための速度",
+        "理由のない変化"
       ]
     },
     "EDGE": {
-      "career": "Finance, law, military, police, medicine, engineering — work with rules, precision, and consequence.",
-      "wealth": "Clarity is your currency. You'd rather understand than chase. Check you're not mistaking caution for avoidance.",
-      "relationships": "Directness is your love language. People who can take your real opinion. Nothing performative.",
-      "learning": "Formal training. Apprenticeships. Systems and frameworks over inspiration.",
-      "everyday": "One thing cleaned, one thing said, one line drawn.",
+      "career": "金融・法律・軍警・医療・エンジニアリング——ルール・精密さ・結果が伴う仕事。",
+      "wealth": "明晰さがあなたの通貨。追うより理解することを選びましょう。慎重さを回避と取り違えていないか確認してください。",
+      "relationships": "直接さがあなたの愛の言語。本気の意見を受け止められる人。演技のない関係。",
+      "learning": "正規の訓練。徒弟制度。インスピレーションよりシステムとフレームワーク。",
+      "everyday": "ひとつ片づける、ひとつ言う、ひとつ線を引く。",
       "avoid": [
-        "Winning the argument at all costs",
-        "Emotional coldness masked as honesty",
-        "Over-structuring your life"
+        "何が何でも議論に勝つこと",
+        "正直さを装った情緒的冷淡さ",
+        "人生の過度な構造化"
       ]
     },
     "FLOW": {
-      "career": "Trading, logistics, travel, consulting, research, anything that moves or connects.",
-      "wealth": "Your relationship with resources moves with the seasons. Trust the rhythm — but build one steady habit to anchor you.",
-      "relationships": "Deep, quiet, unhurried. People you can think with, not just talk to.",
-      "learning": "Slow, immersive study. You learn by absorbing, not by drilling.",
-      "everyday": "Say yes to one unplanned thing a week. Keep the current moving.",
+      "career": "トレーディング・物流・旅行・コンサルティング・研究——動く、あるいはつなぐすべての仕事。",
+      "wealth": "資源との関係は季節と共に動きます。リズムを信じつつ、あなたを錨付けする安定した習慣をひとつ持ちましょう。",
+      "relationships": "深く・静か・急がない。ただ話す相手ではなく、共に考えられる人。",
+      "learning": "ゆっくりした没入型の学習。ドリルより吸収で学びます。",
+      "everyday": "週に一度、予定外のことひとつに「はい」。流れを止めないでください。",
       "avoid": [
-        "Committing too early",
-        "Over-analyzing instead of acting",
-        "Scattering focus"
+        "早すぎるコミット",
+        "行動の代わりに過剰な分析",
+        "集中の分散"
       ]
     }
   }
