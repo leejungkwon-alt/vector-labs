@@ -117,6 +117,7 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     color: "#8B1E1E",
     marginLeft: 6,
+    flexShrink: 1,
   },
   body: {
     fontSize: 13,
@@ -148,5 +149,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: "#8B1E1E",
     textDecorationLine: "underline",
+    textAlign: "center",
+    flexShrink: 1,
   },
 });
