@@ -1,29 +1,29 @@
 {
   "pillar": "戊午",
-  "hero": "You're a mountain with a fire burning at its core. Quiet from the outside, warm — sometimes explosive — underneath.",
+  "hero": "Eres una montaña con un fuego ardiendo en su interior. Tranquila por fuera, cálida —y a veces explosiva— por dentro.",
   "narrative": [
-    "You carry enormous energy, but it doesn't leak out at random. You look calm — often the calmest person in the room — and yet there's something warm and pressurized moving just under the surface. When you choose to act, everyone feels it.",
-    "Your engine runs on conviction. Half-measures and hedging don't move you, and you have a low tolerance for people who speak without meaning it. Once you commit, you commit fully — and that intensity is what people remember about you.",
-    "Your shadow is the fire you don't regulate. Because you can hold so much in, small irritations can build into a sudden eruption that surprises everyone around you. And when you push too hard for too long, you can exhaust yourself without noticing — the mountain doesn't feel the tremors until it cracks.",
-    "The mature form of this pillar is controlled warmth. Not a fire that goes out — a fire that is deliberate. You learn when to release heat in small, steady amounts, and you learn how to share some of that heat with others. When you do, your intensity stops being a risk to manage and becomes the thing that makes you unmistakable."
+    "Desprendes una energía enorme, pero no se manifiesta de forma aleatoria. Pareces tranquilo —a menudo, la persona más tranquila de la sala— y, sin embargo, hay algo cálido y tenso que se mueve justo bajo la superficie. Cuando decides actuar, todo el mundo lo nota.",
+    "Tu motor es la convicción. Las medias tintas y las evasivas no te mueven, y tienes poca tolerancia con las personas que hablan sin creer en lo que dicen. Una vez que te comprometes, lo haces a fondo, y esa intensidad es lo que la gente recuerda de ti.",
+    "Tu lado oscuro es ese fuego que no controlas. Como eres capaz de reprimir tantas cosas, las pequeñas molestias pueden acumularse hasta provocar una erupción repentina que sorprenda a todos los que te rodean. Y cuando te exiges demasiado durante demasiado tiempo, puedes agotarte sin darte cuenta: la montaña no nota los temblores hasta que se resquebraja.",
+    "La forma madura de este pilar es el calor controlado. No un fuego que se apaga, sino un fuego deliberado. Aprendes cuándo liberar calor en pequeñas cantidades constantes y aprendes a compartir parte de ese calor con los demás. Cuando lo haces, tu intensidad deja de ser un riesgo que hay que gestionar y se convierte en lo que te hace inconfundible."
   ],
   "shadows": [
-    "You can hold so much in that the eventual release feels sudden and unfair to the people around you.",
-    "You run at full capacity without noticing fatigue, then feel betrayed by your own exhaustion.",
-    "Under pressure, you can become convinced that your read of a situation is the only correct one."
+    "Eres capaz de reprimir tantas cosas que, cuando finalmente las dejas salir, resulta repentino e injusto para las personas que te rodean.",
+    "Corres a pleno rendimiento sin notar cansancio, y luego te sientes traicionado por tu propio agotamiento.",
+    "Cuando estás bajo presión, puedes llegar a convencerte de que tu interpretación de una situación es la única correcta."
   ],
   "advice": [
-    "Once this week, name an irritation the moment you notice it — out loud, to a person who can hear it. Don't wait until it's a fire.",
-    "Find one deliberate way to release heat every day. Not productivity — movement, breath, or something that uses your body.",
-    "When you catch yourself running at full capacity, stop one thing. Say 'I'm choosing this' out loud, so it doesn't feel like failure.",
-    "Ask one trusted person a genuinely open question. Not 'do you agree?' — 'what do you see that I don't?'"
+    "Una vez esta semana, expresa en voz alta lo que te molesta en el momento en que te des cuenta, a alguien que pueda oírte. No esperes a que la situación se agrave.",
+    "Busca una forma consciente de liberar calor cada día. No se trata de productividad, sino de movimiento, respiración o cualquier actividad en la que utilices tu cuerpo.",
+    "Cuando te des cuenta de que estás funcionando a pleno rendimiento, deja de hacer una cosa. Di en voz alta «Elijo esto», para que no te parezca un fracaso.",
+    "Hazle a una persona de confianza una pregunta realmente abierta. No le preguntes «¿estás de acuerdo?», sino «¿qué ves tú que yo no veo?»."
   ],
   "keywords": [
-    "volcanic drive",
-    "contained intensity",
-    "protective heat",
-    "regulated fire"
+    "ruta volcánica",
+    "intensidad contenida",
+    "calor protector",
+    "fuego controlado"
   ],
-  "name": "Mountain in Fire",
+  "name": "La montaña en llamas",
   "name_traditional": ""
 }

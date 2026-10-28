@@ -1,28 +1,28 @@
 {
-  "name": "Water Piercing Stone",
+  "name": "Piedra que atraviesa el agua",
   "pillar": "壬申",
-  "hero": "You're water that pierces stone. Gentle to look at, and, given time, impossible to stop.",
+  "hero": "Eres como el agua que perfora la piedra. De aspecto apacible y, con el tiempo, imposible de detener.",
   "narrative": [
-    "You hold sharpness and wisdom together. 壬申 is metal giving birth to water. Sharp metal meeting deep water makes water extremely precise and persistent. Your wisdom is like that. It looks soft, but give it time and it gets through anything.",
-    "Your strength is persistent drive. Where other people quit, you keep flowing. But not by pushing like a hammer — by finding the exact spot and continuing to flow into it. So difficult projects do get finished by you. That's why organizations say, 'If this person takes it, it somehow gets done.'",
-    "Your shadow is pushing too long. Water is gentle, but if it keeps flowing in one spot, it cuts through. Your persistence is a weapon that sometimes becomes stubbornness. You lose flexibility, can't admit you're tired, and keep holding something that should have ended. And the people around you can't stop you.",
-    "A mature Im-Shin knows the difference between flowing and piercing. Sometimes changing direction, sometimes stopping, instead of always pushing. Then your persistence becomes sustained drive instead of exhaustion."
+    "En ti se unen la agudeza y la sabiduría. 壬申 representa el metal que da origen al agua. Cuando el metal afilado se encuentra con el agua profunda, esta se vuelve extremadamente precisa y persistente. Tu sabiduría es así. Parece suave, pero, con el tiempo, es capaz de abrirse paso a través de cualquier cosa.",
+    "Tu punto fuerte es tu perseverancia. Cuando otros se rinden, tú sigues adelante. Pero no a la fuerza, como un martillo, sino encontrando el punto exacto y centrándote en él. Por eso consigues llevar a buen puerto los proyectos difíciles. De ahí que en las empresas se diga: «Si esta persona se encarga de ello, de alguna manera se hace».",
+    "Tu sombra se alarga demasiado. El agua es suave, pero si sigue fluyendo en un mismo punto, acaba abriéndose paso. Tu persistencia es un arma que, a veces, se convierte en terquedad. Pierdes flexibilidad, no eres capaz de admitir que estás cansado y sigues aferrándote a algo que ya debería haber terminado. Y las personas que te rodean no pueden detenerte.",
+    "Un Im-Shin maduro sabe distinguir entre fluir y penetrar. A veces cambia de dirección, otras se detiene, en lugar de seguir empujando sin cesar. Así, tu perseverancia se convierte en un impulso constante, en lugar de agotamiento."
   ],
   "shadows": [
-    "Persistence taken so far that you keep holding onto something already finished.",
-    "Losing flexibility, pushing the same direction when a turn was needed.",
-    "Unable to admit exhaustion until your body forces you to stop."
+    "Perseverancia llevada al extremo, hasta el punto de seguir aferrándose a algo que ya ha terminado.",
+    "Pérdida de flexibilidad, seguir empujando en la misma dirección cuando se necesitaba girar.",
+    "No poder admitir el cansancio hasta que tu cuerpo te obligue a parar."
   ],
   "advice": [
-    "List three things you're holding this week. One of them can be put down.",
-    "Before pushing, ask once: is this direction still right?",
-    "Give yourself regular recovery. Water that never rests runs dry.",
-    "Share one piece of wisdom you've been carrying for a long time. It opens a new channel."
+    "Enumera tres cosas que tengas entre manos esta semana. Una de ellas puedes dejarla a un lado.",
+    "Antes de seguir adelante, pregúntate una vez: ¿sigue siendo esta la dirección correcta?",
+    "Tómate un descanso de vez en cuando. El agua que nunca descansa acaba por secarse.",
+    "Comparte una reflexión que lleves tiempo guardando. Te abrirá nuevas perspectivas."
   ],
   "keywords": [
-    "piercing persistence",
-    "sharp wisdom",
-    "relentless drive",
-    "strength of flow"
+    "una persistencia penetrante",
+    "sagacidad aguda",
+    "empuje incansable",
+    "caudal"
   ]
 }

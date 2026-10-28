@@ -1,29 +1,29 @@
 {
   "pillar": "丁酉",
-  "hero": "You're a candle on fine metal. Reflected light makes yours many times over.",
+  "hero": "Eres una vela sobre un metal fino. La luz reflejada multiplica tu resplandor.",
   "narrative": [
-    "You carry precision and warmth together. A candle reflected in metal becomes brighter, more refined. Your warmth is like that — not just warm, but exactly the right amount in exactly the right place.",
-    "Your aesthetic sense and standards are high. You notice the difference between good and fine, and you take it seriously. That sense seeps into everything you touch. People feel a strange 'precision' in what you make and what you choose. They can't explain it.",
-    "Your shadow is perfectionism that blocks relationships. With high standards, you sometimes apply those standards to people too. To you they're natural — to them, they're a burden. And to you, also. Forgiving your imperfect self has to come before accepting the imperfect other.",
-    "A mature Ding-You uses standards with generosity. Your standards are a gift — but check whether the other person is ready to receive it. Keep the standard, don't push away the people who stumble on the way to it. That's when your warmth truly shines."
+    "Aúnas precisión y calidez. Una vela que se refleja en el metal brilla más y adquiere un aspecto más refinado. Tu calidez es así: no solo cálida, sino exactamente la cantidad justa en el lugar perfecto.",
+    "Tu sentido de la estética y tus criterios son muy exigentes. Distingues la diferencia entre lo bueno y lo excelente, y te lo tomas muy en serio. Ese sentido se refleja en todo lo que tocas. La gente percibe una extraña «precisión» en lo que creas y en lo que eliges. No saben explicarlo.",
+    "Tu lado oscuro es el perfeccionismo, que obstaculiza las relaciones. Tienes unas expectativas muy altas y, a veces, las aplicas también a los demás. Para ti son algo natural; para ellos, una carga. Y para ti también. Perdonar tu propio yo imperfecto tiene que ser lo primero antes de aceptar al otro imperfecto.",
+    "Un Ding-You maduro aplica sus criterios con generosidad. Tus criterios son un regalo, pero comprueba si la otra persona está preparada para recibirlo. Mantén tus criterios, pero no alejes a quienes tropiezan en el camino hacia ellos. Es entonces cuando tu calidez brilla de verdad."
   ],
   "shadows": [
-    "You apply your standards to others as if they were theirs, and wear people out.",
-    "Imperfect results take up your mind for a long time.",
-    "The high bar makes it hard for you to feel 'this is enough.'"
+    "Aplicas tus criterios a los demás como si fueran suyos, y acabas agotando a la gente.",
+    "Los resultados imperfectos te quitan el sueño durante mucho tiempo.",
+    "El listón tan alto hace que te resulte difícil sentir que «esto es suficiente»."
   ],
   "advice": [
-    "This week, practice stopping at 80% once. Any result.",
-    "Before applying your standard to someone, ask: can they carry it right now?",
-    "Create one moment a day where 'this is enough' actually feels true.",
-    "Forgive your imperfect self first. That's how accepting others begins."
+    "Esta semana, practica parar una vez al llegar al 80 %. Da igual el resultado.",
+    "Antes de aplicar tu norma a alguien, pregúntate: ¿es capaz de cumplirla en este momento?",
+    "Crea un momento al día en el que realmente sientas que «esto es suficiente».",
+    "Perdona primero tus propias imperfecciones. Así es como empieza la aceptación de los demás."
   ],
   "keywords": [
-    "precise warmth",
-    "reflected light",
-    "high standards",
-    "generous precision"
+    "calidez precisa",
+    "luz reflejada",
+    "altos estándares",
+    "precisión generosa"
   ],
-  "name": "Candle on Metal",
+  "name": "Vela sobre metal",
   "name_traditional": ""
 }

@@ -1,29 +1,29 @@
 {
   "pillar": "丁巳",
-  "hero": "You're a double flame. The inner candle burns deeper for passing through the outer heat.",
+  "hero": "Eres una llama doble. La vela interior arde con más intensidad al atravesar el calor exterior.",
   "narrative": [
-    "You're quiet but intense. You gather heat inward more than you radiate outward, so new people read you as calm. Spend more time with you, though, and they discover how exact and persistent your gaze is.",
-    "Your strength is 'focused attention.' You catch details others miss, sharpen what's blurred, and read beneath surfaces. That's why your work tends to be dense — small in quantity, but a different quality. Not something you trained. A natural result of two flames in one body.",
-    "Your shadow is 'being too hard on yourself.' A double flame burns itself easily. You're generous with others and astonishingly severe with yourself. That standard has grown you — and it's also eating you.",
-    "A mature Ding-Si gives themselves the same accurate warmth they give others. Seeing oneself with the same precision you use on others — and allowing the tired parts the warmth they're owed. Then your dense gaze stops being pressure and becomes deep understanding."
+    "Eres callado, pero intenso. Acumulas calor en tu interior más de lo que irradias al exterior, por lo que las personas que te conocen por primera vez te perciben como alguien tranquilo. Sin embargo, al pasar más tiempo contigo, descubren lo preciso y persistente que es tu mirada.",
+    "Tu punto fuerte es la «atención concentrada». Detectas detalles que a los demás se les escapan, nítides lo que está borroso y lees más allá de las apariencias. Por eso tu trabajo suele ser denso: escaso en cantidad, pero de una calidad diferente. No es algo que hayas aprendido. Es el resultado natural de dos llamas en un mismo cuerpo.",
+    "Tu lado oscuro es «ser demasiado duro contigo mismo». Una llama doble se consume fácilmente. Eres generoso con los demás y sorprendentemente severo contigo mismo. Ese listón te ha hecho crecer… y también te está consumiendo.",
+    "Un Ding-Si maduro se brinda a sí mismo la misma calidez y precisión que ofrece a los demás. Verse a uno mismo con la misma precisión con la que se trata a los demás —y permitir que las partes cansadas reciban la calidez que se merecen—. Entonces, tu mirada intensa deja de ser una presión y se convierte en una comprensión profunda."
   ],
   "shadows": [
-    "Generous with others, astonishingly harsh with yourself.",
-    "When the result isn't perfect, you torment yourself for a long time.",
-    "The intensity of your focus means recovery takes longer when you're depleted."
+    "Generoso con los demás, sorprendentemente duro contigo mismo.",
+    "Cuando el resultado no es perfecto, te atormentas durante mucho tiempo.",
+    "La intensidad con la que te concentras hace que la recuperación te lleve más tiempo cuando estás agotado."
   ],
   "advice": [
-    "This week, do 'this is enough' once — to yourself.",
-    "Take one act of generosity you'd give others and give it to yourself.",
-    "After focusing, always attach recovery. A double flame dies without it.",
-    "Change one 'why is this all I did' into 'what did I actually do.'"
+    "Esta semana, repítete una vez «ya basta».",
+    "Elige un gesto de generosidad que solías tener con los demás y dedícalo a ti mismo.",
+    "Después de enfocar, aplica siempre la recuperación. Sin ella, la llama doble se apaga.",
+    "Cambia un «¿por qué es esto lo único que he hecho?» por «¿qué he hecho realmente?»."
   ],
   "keywords": [
-    "focused heat",
-    "precise gaze",
-    "double flame",
-    "self-gentleness"
+    "calor concentrado",
+    "mirada precisa",
+    "doble llama",
+    "bondad hacia uno mismo"
   ],
-  "name": "Double Flame",
+  "name": "Doble llama",
   "name_traditional": ""
 }

@@ -1,29 +1,29 @@
 {
   "pillar": "丁亥",
-  "hero": "You're a candle floating on water. Swaying but never going out — a person of delicate balance.",
+  "hero": "Eres una vela que flota sobre el agua. Se mece, pero nunca se apaga: una persona de delicado equilibrio.",
   "narrative": [
-    "You carry sensitivity and wisdom together. A candle on water always sways, but even in that swaying, it doesn't go out. Your sensitivity works the same way. You're easily moved, and that very movement is your depth.",
-    "You feel other people's emotions as if they were your own. You read someone's state without being told, notice the moment a room changes. That's rare. It's also exhausting. If you absorb every wave, your own stillness disappears.",
-    "Your shadow is being swept up by other people's tides. When their emotion is strong, you go with it — and sometimes you can't tell whether the feeling is yours or theirs. Standing on that wave, ask yourself once: 'Is this my wave, or theirs?'",
-    "A mature Ding-Hai keeps their own wave intact. Retain the sensitivity — but build a boundary so it doesn't all flow into someone else's sea. Then your light becomes a very particular kind: swaying, and never out."
+    "En ti se unen la sensibilidad y la sabiduría. Una vela sobre el agua siempre se balancea, pero, incluso mientras se balancea, no se apaga. Tu sensibilidad funciona de la misma manera. Te conmueves con facilidad, y esa misma emoción es lo que te da profundidad.",
+    "Sientes las emociones de los demás como si fueran tuyas. Percibes el estado de ánimo de alguien sin que te lo digan, notas en cuanto cambia el ambiente de una habitación. Eso es algo poco habitual. Y también resulta agotador. Si absorbes cada onda, tu propia tranquilidad desaparece.",
+    "Tu sombra se ve arrastrada por las corrientes de los demás. Cuando sus emociones son intensas, te dejas llevar por ellas, y a veces no sabes distinguir si ese sentimiento es tuyo o suyo. Desde esa ola, pregúntate una vez: «¿Es esta mi ola o la de ellos?».",
+    "Un Ding-Hai maduro mantiene intacta su propia ola. Conserva la sensibilidad, pero establece un límite para que no todo fluya hacia el mar de otra persona. Entonces, tu luz se convierte en algo muy especial: oscilante, y que nunca se apaga."
   ],
   "shadows": [
-    "You can't tell other people's emotions from your own, so you carry both.",
-    "Sensitivity accumulates as fatigue until you stop feeling anything.",
-    "Without enough solitude, you lose your own color."
+    "No puedes distinguir las emociones de los demás de las tuyas propias, así que acabas cargando con ambas.",
+    "La sensibilidad se va acumulando en forma de cansancio hasta que dejas de sentir nada.",
+    "Sin la soledad necesaria, pierdes tu propio color."
   ],
   "advice": [
-    "When emotions sway, ask once: 'Is this my wave, or theirs?'",
-    "This week, secure at least one full hour of complete solitude. That's your recovery.",
-    "Give yourself permission not to absorb every emotion around you.",
-    "Sensitivity is a gift — and keeping it means regularly emptying yourself."
+    "Cuando las emociones te invadan, pregúntate una vez: «¿Es esta mi ola o la de ellos?».",
+    "Esta semana, reserva al menos una hora entera de soledad absoluta. Esa es tu recuperación.",
+    "Date permiso para no absorber todas las emociones que te rodean.",
+    "La sensibilidad es un don, y para conservarla hay que vaciarse de vez en cuando."
   ],
   "keywords": [
-    "delicate balance",
-    "light on water",
-    "sensitive wisdom",
-    "own wave"
+    "delicado equilibrio",
+    "luz sobre el agua",
+    "sabiduría sensible",
+    "su propia ola"
   ],
-  "name": "Candle on Water",
+  "name": "Vela sobre el agua",
   "name_traditional": ""
 }

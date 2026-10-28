@@ -1,29 +1,29 @@
 {
   "pillar": "丙午",
-  "hero": "You're the sun at noon. No shadow, everything lit, everything hot.",
+  "hero": "Eres el sol del mediodía. No hay sombras, todo está iluminado, todo está caliente.",
   "narrative": [
-    "You are intensity itself. Walk into a room and the temperature changes. Speak, and the conversation turns. This isn't something you work at — it just happens. People either laugh loud around you or quietly step back. There's rarely a middle.",
-    "You can't hide. When you're happy, everyone sees it. When you're angry, everyone sees it too. That transparency earns trust — people know you're not a liar. But it's also a fatigue. Being fully visible is a constant pressure.",
-    "The sun at noon casts no shadow. But that also means it can't last. The sun has to tilt, and shadows have to grow back. Your task isn't to hold noon forever — it's to accept the tilt. The sun going down is not the sun failing.",
-    "A mature Bing-Wu is someone who can dim the light on purpose. Who doesn't always burn at full capacity. Who can sometimes be the sunlight on a cloudy day. That's when you stop being someone who burns people and become the temperature they want to stay in."
+    "Eres la intensidad en estado puro. Entras en una habitación y la atmósfera cambia. Hablas, y la conversación da un giro. No es algo en lo que te esfuerces: simplemente ocurre. La gente o bien se ríe a carcajadas a tu alrededor o bien se aleja discretamente. Rara vez hay un término medio.",
+    "No puedes esconderte. Cuando estás contento, todo el mundo lo nota. Cuando estás enfadado, todo el mundo también lo nota. Esa transparencia genera confianza: la gente sabe que no mientes. Pero también es agotador. Estar totalmente a la vista supone una presión constante.",
+    "El sol del mediodía no proyecta sombras. Pero eso también significa que no puede durar para siempre. El sol tiene que inclinarse y las sombras tienen que volver a crecer. Tu tarea no es mantener el mediodía para siempre, sino aceptar esa inclinación. Que el sol se ponga no significa que el sol falle.",
+    "Un Bing-Wu maduro es alguien capaz de atenuar la luz a propósito. Alguien que no brilla siempre a pleno rendimiento. Alguien que, a veces, puede ser la luz del sol en un día nublado. Es entonces cuando dejas de ser alguien que quema a los demás y te conviertes en la temperatura en la que quieren permanecer."
   ],
   "shadows": [
-    "Constant maximum output eats your body and mind. Burnout is your nearest shadow.",
-    "Your intensity overwhelms people, and deep conversations rarely happen around you.",
-    "You don't allow yourself to say, 'I'm running lower lately.'"
+    "Un rendimiento máximo constante te agota el cuerpo y la mente. El agotamiento es tu sombra más cercana.",
+    "Tu intensidad abruma a la gente, y rara vez se producen conversaciones profundas a tu alrededor.",
+    "No te permites decir: «Últimamente estoy un poco bajo de energía»."
   ],
   "advice": [
-    "This week, ask yourself once: am I at max output or at a reasonable output?",
-    "Deliberately set up one situation where things run fine without you.",
-    "Practice being a cloudy-day sun. Sitting quietly for a day is also a way of being.",
-    "Don't deny your intensity — but treat the recovery after it as equally important."
+    "Esta semana, pregúntate una vez: ¿estoy rindiendo al máximo o a un nivel razonable?",
+    "Crea a propósito una situación en la que todo funcione bien sin ti.",
+    "Practica ser como el sol en un día nublado. Pasarse un día sentado en silencio también es una forma de ser.",
+    "No renuncies a tu intensidad, pero dale la misma importancia a la recuperación posterior."
   ],
   "keywords": [
-    "noon light",
-    "magnetic presence",
-    "transparent heat",
-    "dialing the light"
+    "luz del mediodía",
+    "presencia magnética",
+    "calor transparente",
+    "regular la intensidad de la luz"
   ],
-  "name": "Noon Sun",
+  "name": "Sol del mediodía",
   "name_traditional": ""
 }

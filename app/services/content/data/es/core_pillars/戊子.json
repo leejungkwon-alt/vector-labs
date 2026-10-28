@@ -1,29 +1,29 @@
 {
   "pillar": "戊子",
-  "hero": "You're a mountain with a spring running underneath. Solid on the surface — deep, clear water beneath.",
+  "hero": "Eres como una montaña por cuya base discurre un manantial. Sólida en la superficie, con aguas profundas y cristalinas en su interior.",
   "narrative": [
-    "You come across as steady, unremarkable, easy to overlook. People underestimate you — until the moment a room needs someone who can actually think clearly, and you're the only one who does.",
-    "Your strength is quiet insight. You read situations before they're explained, and the best decisions you make almost never come out of a meeting — they come out of silence. What looks like passivity is usually you watching the whole board before moving one piece.",
-    "Your shadow is thinking past the moment. Because the water runs deep, you can keep processing until the window to act has quietly closed. And when you're uncertain, you go silent — and to everyone else, silence looks exactly like distance.",
-    "The mature form of this pillar is a spring that actually flows. Insight that arrives, is spoken, and then moves on. You learn to trust the water without drowning in it — to see, to say, to act, in that order, before the tide changes."
+    "Das la impresión de ser una persona estable, discreta y fácil de pasar por alto. La gente te subestima… hasta que llega el momento en que se necesita a alguien capaz de pensar con claridad, y tú eres el único que puede hacerlo.",
+    "Tu punto fuerte es tu perspicacia silenciosa. Analizas las situaciones antes de que se expliquen, y las mejores decisiones que tomas casi nunca surgen en una reunión, sino del silencio. Lo que parece pasividad suele ser, en realidad, que estás observando todo el tablero antes de mover una pieza.",
+    "Tu sombra piensa más allá del momento presente. Como el agua corre en lo profundo, puedes seguir reflexionando hasta que la oportunidad de actuar se haya cerrado silenciosamente. Y cuando tienes dudas, te quedas en silencio; y para todos los demás, el silencio se percibe exactamente como distanciamiento.",
+    "La forma madura de este pilar es un manantial que realmente fluye. La intuición que llega, se expresa y luego se va. Aprendes a confiar en el agua sin ahogarte en ella: a ver, a decir, a actuar, en ese orden, antes de que cambie la marea."
   ],
   "shadows": [
-    "You keep thinking past the moment when a decision was still yours to make.",
-    "You go quiet when you're uncertain, and people read the silence as distance.",
-    "You doubt your own insight because it doesn't arrive with proof attached."
+    "No dejas de pensar en el momento en el que aún te correspondía a ti tomar la decisión.",
+    "Te quedas callado cuando tienes dudas, y la gente interpreta ese silencio como distanciamiento.",
+    "Dudas de tu propia intuición porque no viene acompañada de pruebas."
   ],
   "advice": [
-    "Once this week, act on a decision before you feel 'ready.' Notice what actually happens.",
-    "Say the observation out loud even if you can't yet explain it. Let people hear the water.",
-    "When you go quiet, tell one person 'I'm thinking.' Don't make them guess.",
-    "Put one open question down for a day. Water settles on its own."
+    "Al menos una vez esta semana, pon en práctica una decisión antes de sentirte «preparado». Fíjate en lo que ocurre realmente.",
+    "Di en voz alta lo que has observado, aunque todavía no sepas explicarlo. Deja que la gente oiga el agua.",
+    "Cuando te quedes en silencio, dile a alguien: «Estoy pensando». No dejes que tengan que adivinar.",
+    "Deja una pregunta abierta sin responder durante un día. Las cosas se aclaran solas."
   ],
   "keywords": [
-    "hidden depth",
-    "still waters",
-    "quiet insight",
-    "mountain calm"
+    "profundidad oculta",
+    "aguas tranquilas",
+    "reflexión serena",
+    "tranquilidad de montaña"
   ],
-  "name": "Mountain Spring",
+  "name": "Manantial de montaña",
   "name_traditional": ""
 }

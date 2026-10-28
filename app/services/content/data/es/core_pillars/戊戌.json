@@ -1,29 +1,29 @@
 {
   "pillar": "戊戌",
-  "hero": "You're a mountain on dry earth — one of the pillars the tradition calls a Commander. Quiet, hard to move, slow to yield.",
+  "hero": "Eres una montaña en tierra firme, uno de los pilares a los que la tradición llama «Comandante». Silencioso, difícil de mover, lento a la hora de ceder.",
   "narrative": [
-    "You don't announce yourself. People often register you as quiet, then realize — months later — that you were the one holding the line. That delayed recognition is part of your signature.",
-    "The tradition names this pillar 魁罡, one of the four Commanders. Your strength is structural: an internal standard you don't trade away. When things get ugly, you're the person others rely on not to bend. Your steadiness is not performed — it's the actual shape of you.",
-    "Your shadow is that dry earth cracks. You can hold so firmly that you stop listening, and the tension you don't show erupts as sudden anger or sudden withdrawal. You also tend to be much harsher on yourself than anyone else would ever be — the standard you refuse to impose on others, you impose on yourself without mercy.",
-    "The mature form of this pillar is command without commandeering. You keep the standard and you also keep the door open — for the people still working toward it, and for yourself. When you can loosen one rule without losing the frame, your weight stops feeling like a wall and starts feeling like a harbor."
+    "No sueles llamar la atención. La gente suele pensar que eres callado, pero luego, meses más tarde, se da cuenta de que eras tú quien mantenía la línea. Ese reconocimiento tardío forma parte de tu forma de ser.",
+    "La tradición denomina a este pilar «魁罡», uno de los cuatro Comandantes. Tu fuerza es estructural: un principio interno del que nunca renuncias. Cuando las cosas se ponen feas, eres la persona en la que los demás confían para que no cedas. Tu firmeza no es algo que finjas: es tu verdadera esencia.",
+    "Tu sombra son esas grietas en la tierra seca. Eres capaz de aferrarte con tanta fuerza que dejas de escuchar, y la tensión que no muestras estalla en forma de ira repentina o de retraimiento repentino. También tiendes a ser mucho más duro contigo mismo de lo que nadie más lo sería jamás: el listón que te niegas a imponer a los demás, te lo impones a ti mismo sin piedad.",
+    "La forma madura de este pilar consiste en mandar sin imponer. Mantienes el nivel de exigencia y, al mismo tiempo, dejas la puerta abierta —tanto para quienes aún están trabajando para alcanzarlo como para ti mismo—. Cuando eres capaz de flexibilizar una norma sin perder el marco de referencia, tu presencia deja de parecer un muro y empieza a parecer un puerto."
   ],
   "shadows": [
-    "You hold your position so firmly that other people's different choices start to look like errors.",
-    "Unspoken tension builds until it snaps — and the people around you never see the snap coming.",
-    "You judge yourself against a standard you would never impose on another human being."
+    "Defiendes tu postura con tanta firmeza que las decisiones diferentes de los demás empiezan a parecer errores.",
+    "La tensión tácita va aumentando hasta que estalla, y las personas que te rodean nunca ven venir ese estallido.",
+    "Te juzgas a ti mismo según un criterio que nunca le impondrías a otra persona."
   ],
   "advice": [
-    "When someone chooses differently than you would, ask: 'Is this wrong, or just not mine?'",
-    "Say one small frustration out loud this week, before it becomes an eruption.",
-    "Loosen one rule on purpose. Notice the world doesn't fall apart.",
-    "Once this week, say to yourself: 'This is enough.' Mean it."
+    "Cuando alguien tome una decisión diferente a la que tú tomarías, pregúntate: «¿Está mal esto, o simplemente no es lo mío?».",
+    "Esta semana, expresa en voz alta una pequeña frustración, antes de que se convierta en una explosión.",
+    "Infringe una norma a propósito. Fíjate en que el mundo no se viene abajo.",
+    "Al menos una vez esta semana, repítete: «Ya basta». Y dilo de corazón."
   ],
   "keywords": [
-    "魁罡 resolve",
-    "dry endurance",
-    "unshakable",
-    "principled weight"
+    "Kai Gang decide",
+    "resistencia en seco",
+    "inquebrantable",
+    "peso teórico"
   ],
-  "name": "Dry Mountain",
+  "name": "Montaña Seca",
   "name_traditional": ""
 }

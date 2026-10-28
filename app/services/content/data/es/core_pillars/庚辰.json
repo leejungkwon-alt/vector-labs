@@ -1,28 +1,28 @@
 {
-  "name": "Sword in the Dragon's Lair",
+  "name": "La espada en la guarida del dragón",
   "pillar": "庚辰",
-  "hero": "You're a sword kept in a dragon's lair. Hidden under solid earth most of the time — drawn only when the world needs a blade.",
+  "hero": "Eres una espada guardada en la guarida de un dragón. Oculta bajo la tierra la mayor parte del tiempo, y solo se desenvaina cuando el mundo necesita una espada.",
   "narrative": [
-    "Your power doesn't announce itself. You can look unremarkable at a glance, and then at one decisive moment your weight shows. People say later, 'Wait — that person was that person?' In classical Saju, Geng-Jin is one of the four 魁罡 (Commander) pillars — among the strongest in the system.",
-    "You have clear principles, and you don't bend them easily. That firmness builds enormous trust in organizations — when everyone else is wavering, you aren't. You hold the center, quietly and unmistakably.",
-    "Your shadow is enduring too much, too long. A sword that stays sheathed for too long either explodes out when it shouldn't, or fails to draw when it should. People assume you're the one who's always fine — and then your sudden firmness catches them off guard.",
-    "A mature Geng-Jin knows when to sheath and when to draw. Generous most of the time, precise when it counts. Then your presence stops feeling intimidating and becomes the thing people rely on."
+    "Tu poder no se hace notar a primera vista. A simple vista puedes parecer una persona corriente, pero en un momento decisivo se hace patente tu influencia. La gente dice después: «Un momento, ¿esa persona era esa persona?». En el Saju clásico, Geng-Jin es uno de los cuatro pilares 魁罡 (Comandante), que se cuentan entre los más fuertes del sistema.",
+    "Tienes unos principios claros y no te desvías de ellos fácilmente. Esa firmeza genera una enorme confianza en las organizaciones: cuando todos los demás vacilan, tú no lo haces. Mantienes el equilibrio, con discreción y de forma inequívoca.",
+    "Tu sombra lleva aguantando demasiado, desde hace demasiado tiempo. Una espada que permanece enfundada durante demasiado tiempo o bien sale disparada cuando no debería, o bien no se puede desenvainar cuando hace falta. La gente da por sentado que tú eres de los que siempre están bien, y entonces tu repentina firmeza les pilla desprevenidos.",
+    "Un Geng-Jin maduro sabe cuándo enfundar y cuándo desenvainar. Generoso la mayor parte del tiempo, preciso cuando hace falta. Entonces, tu presencia deja de resultar intimidante y se convierte en aquello en lo que la gente confía."
   ],
   "shadows": [
-    "Holding feelings in so long that your sudden decisiveness catches others off guard.",
-    "Following principles so closely that rules seem to matter more than people.",
-    "Forcing yourself to seem fine, and losing track of your own fatigue."
+    "Reprimir los sentimientos durante tanto tiempo que tu repentina determinación pilla a los demás por sorpresa.",
+    "Seguir los principios tan al pie de la letra que las normas parecen tener más importancia que las personas.",
+    "Esforzarse por aparentar que todo va bien y perder la noción de lo cansado que estás."
   ],
   "advice": [
-    "Once this week, say a small irritation out loud before it grows into a blow-up.",
-    "Before a hard call, ask: is this the principle talking, or is this me being tired?",
-    "Hand off one thing you usually solve yourself. Watch it run without you.",
-    "Tell one trusted person, 'It's been heavy lately.' That sentence sharpens the blade again."
+    "Al menos una vez a la semana, expresa en voz alta una pequeña molestia antes de que se convierta en una discusión.",
+    "Antes de tomar una decisión difícil, pregúntate: ¿es el principio el que habla, o es que estoy cansado?",
+    "Delega una tarea que normalmente resuelves tú mismo. Observa cómo se lleva a cabo sin ti.",
+    "Dile a alguien en quien confíes: «Últimamente lo estoy pasando mal». Esa frase vuelve a afilar la navaja."
   ],
   "keywords": [
-    "魁罡",
-    "hidden strength",
-    "principled center",
-    "decisive weight"
+    "Kuigang",
+    "fuerza oculta",
+    "centro con principios",
+    "peso decisivo"
   ]
 }

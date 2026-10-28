@@ -1,29 +1,29 @@
 {
   "pillar": "丁未",
-  "hero": "You're a candle on dry earth. Swaying but not going out — a fire that burns firm.",
+  "hero": "Eres una vela sobre tierra seca. Te balanceas, pero no te apagas: un fuego que arde con fuerza.",
   "narrative": [
-    "You don't go out easily. Bad conditions, restless surroundings — your flame keeps burning. At first you look quiet, but over time you leave the impression: this person doesn't break easily. That impression is accurate.",
-    "You're a person of endurance. Under difficulty your focus actually increases, and you can face the problem directly. That's rare. Most people scatter under pressure. You get sharper as things get harder.",
-    "Your shadow is making endurance into a virtue. Keep enduring long enough, and you start enduring where endurance isn't needed. Bad environments, wrong relationships, projects already finished — you hold on because 'letting go feels like losing.' That's not endurance. That's clinging.",
-    "A mature Ding-Wei can tell what to endure from what to release. Your resistance is a weapon — but you have to choose where to use it. Enduring and releasing are both your powers."
+    "No te rindes fácilmente. Ya sean las circunstancias adversas o un entorno agitado, tu llama sigue ardiendo. Al principio pareces tranquilo, pero con el tiempo das la impresión de que eres una persona a la que no es fácil doblegar. Esa impresión es acertada.",
+    "Eres una persona con mucha resistencia. Cuando te enfrentas a dificultades, tu concentración aumenta y eres capaz de abordar el problema de frente. Eso es algo poco habitual. La mayoría de la gente se desconcentra bajo presión. Tú, en cambio, te vuelves más lúcido cuanto más difíciles se ponen las cosas.",
+    "Tu sombra está convirtiendo la perseverancia en una virtud. Si perseveras el tiempo suficiente, acabas perseverando incluso cuando no hace falta. Entornos adversos, relaciones equivocadas, proyectos ya terminados… Te aferras a ellos porque «dejar ir es como perder». Eso no es perseverancia. Eso es aferrarse.",
+    "Un Ding-Wei maduro sabe distinguir entre lo que hay que soportar y lo que hay que dejar ir. Tu resistencia es un arma, pero tienes que elegir cuándo utilizarla. Tanto soportar como dejar ir son poderes que posees."
   ],
   "shadows": [
-    "You keep enduring bad situations until you've burned out.",
-    "Giving up feels like losing, so you keep holding on to things already over.",
-    "Your resilience makes others assume you're always fine."
+    "Sigues aguantando situaciones difíciles hasta que acabas agotado.",
+    "Renunciar da la sensación de perder, así que sigues aferrándote a cosas que ya han terminado.",
+    "Tu fortaleza hace que los demás den por hecho que siempre estás bien."
   ],
   "advice": [
-    "This week, list three things you're enduring. One of them you can put down.",
-    "Remind yourself: letting go isn't failure, it's the choice to move on.",
-    "Catch one moment you're pretending to be fine — and say you're not.",
-    "Your resistance is a weapon — but weapons only work when you choose where to swing."
+    "Esta semana, enumera tres cosas que estás soportando. Una de ellas puedes tacharla.",
+    "Recuerda: dejar ir no es un fracaso, es la decisión de seguir adelante.",
+    "Aprovecha un momento en el que finjas que estás bien y di que no es así.",
+    "Tu resistencia es un arma, pero las armas solo funcionan cuando tú decides dónde apuntar."
   ],
   "keywords": [
-    "firm ember",
-    "power to resist",
-    "not easily extinguished",
-    "courage to release"
+    "brasa firme",
+    "capacidad para resistir",
+    "que no se apaga fácilmente",
+    "valor para soltar"
   ],
-  "name": "Candle on Dry Earth",
+  "name": "Una vela sobre tierra seca",
   "name_traditional": ""
 }

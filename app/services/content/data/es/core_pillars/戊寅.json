@@ -1,29 +1,29 @@
 {
   "pillar": "戊寅",
-  "hero": "You're a mountain with a forest growing on it. What looks like solid ground is actually a place where things can root.",
+  "hero": "Eres una montaña en la que crece un bosque. Lo que parece terreno firme es, en realidad, un lugar donde las cosas pueden echar raíces.",
   "narrative": [
-    "You read as dependable, warm, and hard to rattle. People bring problems to you before they bring them to anyone else — not because you ask them to, but because being near you makes the problem feel more tractable.",
-    "Your strength is generous ground. You don't just support people — you give them the conditions to grow on their own. Teams you've led keep their culture after you leave. Projects you've started keep going after you've stepped back. That's rare, and it doesn't happen by accident.",
-    "Your shadow is giving so much ground that your own foundation erodes. You say yes to the next person who needs a foothold, then quietly resent how little you have left. What feels like generosity can become a habit of staying needed — and staying needed is not the same as being loved.",
-    "The mature form of this pillar is a mountain that holds the forest and still keeps its own rock. Generosity with boundaries. The forest actually grows better when the mountain is intact — and so does everyone who relies on you."
+    "Das la impresión de ser una persona de confianza, cálida y a la que no es fácil desconcertar. La gente te cuenta sus problemas antes que a nadie más, no porque se lo pidas, sino porque estar cerca de ti hace que el problema parezca más fácil de resolver.",
+    "Tu punto fuerte es crear un entorno propicio. No te limitas a apoyar a las personas, sino que les proporcionas las condiciones necesarias para que crezcan por sí mismas. Los equipos que has dirigido mantienen su cultura incluso después de que te hayas ido. Los proyectos que has puesto en marcha siguen adelante aunque tú hayas dado un paso al lado. Eso es algo poco habitual, y no ocurre por casualidad.",
+    "Tu sombra está cediendo tanto terreno que tus propios cimientos se están erosionando. Dices que sí a la siguiente persona que necesita un punto de apoyo y, luego, en silencio, te resentís por lo poco que te queda. Lo que parece generosidad puede convertirse en un hábito de seguir siendo necesario, y seguir siendo necesario no es lo mismo que ser querido.",
+    "La forma madura de este pilar es una montaña que alberga el bosque y, al mismo tiempo, conserva su propia roca. Generosidad con límites. De hecho, el bosque crece mejor cuando la montaña está intacta, y lo mismo ocurre con todos aquellos que dependen de ti."
   ],
   "shadows": [
-    "You say yes to more than you can actually hold, then quietly resent the weight.",
-    "You can confuse being needed with being loved.",
-    "You stay available to everyone, and no one notices you're depleted."
+    "Dices que sí a más cosas de las que realmente puedes asumir y luego, en silencio, te resentís por el peso que supone.",
+    "Se puede confundir el hecho de que te necesiten con el hecho de que te quieran.",
+    "Siempre estás disponible para todo el mundo, y nadie se da cuenta de que estás agotado."
   ],
   "advice": [
-    "Pick one thing you're supporting out of habit rather than choice. Let it go this week.",
-    "Before you say yes to a request, ask yourself: 'Is this mine to carry?'",
-    "Say out loud, once this week, 'I need something back.' Let someone hear it.",
-    "Spend an hour on something that grows you, not someone else."
+    "Elige una cosa que hagas por costumbre y no porque sea tu elección. Deja de hacerla esta semana.",
+    "Antes de aceptar una petición, pregúntate: «¿Me corresponde a mí encargarme de esto?».",
+    "Di en voz alta, al menos una vez esta semana: «Necesito que me devuelvan algo». Haz que alguien lo oiga.",
+    "Dedica una hora a algo que te haga crecer a ti, no a otra persona."
   ],
   "keywords": [
-    "generous ground",
-    "lively stability",
-    "growth enabler",
-    "shared rooting"
+    "terreno fértil",
+    "estabilidad dinámica",
+    "factor que impulsa el crecimiento",
+    "enraizamiento compartido"
   ],
-  "name": "Forested Mountain",
+  "name": "Montaña boscosa",
   "name_traditional": ""
 }

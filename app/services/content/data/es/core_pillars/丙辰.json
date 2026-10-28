@@ -1,29 +1,29 @@
 {
   "pillar": "丙辰",
-  "hero": "You're sunlight over a misty marsh. Warmth that turns to vapor and quietly wraps around everything.",
+  "hero": "Eres la luz del sol sobre un pantano brumoso. Un calor que se convierte en vapor y envuelve todo en silencio.",
   "narrative": [
-    "You're warm but blurry. The heat is real, but where it points and what it's building is often not clear — even to you. That blur isn't a flaw; it's a texture. Some people remember you as 'the warm one.' Others remember you as 'the one I couldn't quite read.'",
-    "You're a person of transformation. Just as fire meets earth and becomes vapor, you take shape according to what's around you. You're more natural changing form with relationships and settings than staying fixed in one place. That's why you read people and rooms so well. Not because you're perceptive as a strategy — because that's simply your language.",
-    "The trouble is when the blur blurs your judgment. Feeling and fact get tangled, and you can't tell what you actually feel or want. When that happens, don't force yourself to 'become clear.' Fog doesn't clear by being pushed. It clears by being given time.",
-    "Your strength is the softness and acceptance this blur produces. You don't slice the world into clean lines; you can hold it with a blurred kindness. That's why people stay near you. But you need to ask yourself a sharp question sometimes: 'Where am I, and where do I want to go?'"
+    "Eres cálido, pero difuso. El calor es real, pero a menudo no queda claro hacia dónde apunta ni qué está creando —ni siquiera para ti mismo—. Esa difuminación no es un defecto; es una textura. Algunas personas te recuerdan como «el cálido». Otras te recuerdan como «aquel al que no acababa de entender».",
+    "Eres una persona capaz de transformarte. Al igual que el fuego entra en contacto con la tierra y se convierte en vapor, tú te adaptas a lo que te rodea. Te resulta más natural adaptarte a las relaciones y a los entornos que quedarte estancado en un mismo lugar. Por eso sabes interpretar tan bien a las personas y el ambiente que te rodea. No es que seas perspicaz como estrategia, sino que esa es, sencillamente, tu forma de expresarte.",
+    "El problema surge cuando la confusión nubla tu juicio. Los sentimientos y los hechos se entremezclan, y ya no sabes distinguir lo que realmente sientes o deseas. Cuando eso ocurra, no te obligues a «aclararte». La niebla no se disipa a la fuerza. Se disipa con el tiempo.",
+    "Tu fuerza reside en la dulzura y la aceptación que genera esta vaguedad. No divides el mundo en líneas nítidas; eres capaz de abrazarlo con una amabilidad difusa. Por eso la gente se queda a tu lado. Pero a veces tienes que hacerte una pregunta incisiva: «¿Dónde estoy y adónde quiero ir?»."
   ],
   "shadows": [
-    "Feeling and fact get tangled, and you don't know what you want.",
-    "You use the blur as an excuse to delay important decisions.",
-    "People around you are unsure whether you're 'deep' or 'indecisive.'"
+    "Los sentimientos y la realidad se entremezclan, y no sabes lo que quieres.",
+    "Utilizas la falta de claridad como excusa para posponer decisiones importantes.",
+    "Las personas de tu entorno no tienen claro si eres «profundo» o «indeciso»."
   ],
   "advice": [
-    "Once a day, ask one sharp question of yourself: 'What do I actually want right now?'",
-    "When feelings are unclear, write down the facts first. Feelings come next.",
-    "Don't strain to become clear. Give the fog time. Judgment comes after.",
-    "Once a month, say clearly where you are — to family, friends, work, whoever."
+    "Una vez al día, hazte una pregunta concisa: «¿Qué es lo que realmente quiero ahora mismo?».",
+    "Cuando los sentimientos no estén claros, anota primero los hechos. Los sentimientos vendrán después.",
+    "No te esfuerces por ver las cosas con claridad. Deja que la niebla se disipe. El juicio vendrá después.",
+    "Una vez al mes, di claramente dónde estás: a tu familia, a tus amigos, en el trabajo, a quien sea."
   ],
   "keywords": [
-    "warm blur",
-    "power of form",
-    "soft perception",
-    "wisdom of fog"
+    "desenfoque cálido",
+    "el poder de la forma",
+    "percepción sutil",
+    "la sabiduría de la niebla"
   ],
-  "name": "Sunlight Over a Marsh",
+  "name": "La luz del sol sobre un pantano",
   "name_traditional": ""
 }

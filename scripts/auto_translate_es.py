@@ -244,12 +244,20 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--files", nargs="*", default=[])
     ap.add_argument("--all", action="store_true")
+    ap.add_argument("--pillars", action="store_true") # 👈 추가됨
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
 
     _load_cache()
-    files = sorted(p.name for p in EN_DIR.glob("*.json")) if a.all else a.files
-    if not files: print("--files 또는 --all"); return 2
+    
+    if a.all:
+        files = sorted(p.name for p in EN_DIR.glob("*.json"))
+    elif a.pillars: # 👈 하위 폴더 60개 파일 자동 탐색
+        files = sorted(f"core_pillars/{p.name}" for p in (EN_DIR / "core_pillars").glob("*.json"))
+    else:
+        files = a.files
+        
+    if not files: print("--files 또는 --all 또는 --pillars"); return 2
 
     try:
         tr = _Translator()
@@ -267,6 +275,3 @@ def main():
     print(f"\n결과: ok={ok}, fail={fail}")
     if REVIEW.exists(): print(f"리뷰 큐: {REVIEW}")
     return 0 if fail == 0 else 1
-
-if __name__ == "__main__":
-    sys.exit(main())

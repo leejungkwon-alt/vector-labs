@@ -1,29 +1,29 @@
 {
   "pillar": "丙子",
-  "hero": "You're a lantern floating on a dark lake. Warm light above the surface — cold, deep currents below.",
+  "hero": "Eres una linterna que flota en un lago oscuro. Una luz cálida sobre la superficie; corrientes frías y profundas por debajo.",
   "narrative": [
-    "People who meet you first remember a bright, expressive person. You lead conversations, warm up rooms, and naturally become the center of things. But step closer, and they notice — there's something deeper moving under the brightness. You are more complex inside than you look from across the room.",
-    "Your strength is this duality. The heat on the surface draws people in; the depth underneath keeps them there. Having both makes you someone who isn't light, and isn't heavy either. The trouble comes when these two halves lose their balance. When only the surface leads, you seem shallow. When only the depth leads, you go dark.",
-    "This is probably why your emotional tides rise and fall as they do. Some days you could love everything in the world. Other days you sink for no clear reason. You don't have to explain the wave to yourself — just notice, 'I'm on the deep side right now.' Don't force yourself back up.",
-    "Your maturity comes from letting both the fire and the depth exist at once. If you only love the bright side and hide the dark one, they start eating each other. When both are present, you become the place people actually want to stay. That's your most solid charm."
+    "Las personas que te conocen por primera vez recuerdan a alguien alegre y expresivo. Lideras las conversaciones, animas el ambiente y, de forma natural, te conviertes en el centro de atención. Pero, al conocerte más de cerca, se dan cuenta de que hay algo más profundo que se esconde tras esa alegría. Por dentro eres más complejo de lo que pareces desde lejos.",
+    "Tu fuerza reside en esta dualidad. El calor de la superficie atrae a la gente; la profundidad que hay debajo los mantiene allí. Tener ambas cosas te convierte en alguien que no es ligero, pero tampoco pesado. El problema surge cuando estas dos mitades pierden el equilibrio. Cuando solo predomina la superficie, pareces superficial. Cuando solo predomina la profundidad, te vuelves sombrío.",
+    "Probablemente por eso tus altibajos emocionales son como son. Hay días en los que te parece que todo en el mundo es maravilloso. Otros días, te sientes abatido sin motivo aparente. No tienes que darte explicaciones a ti mismo sobre ese vaivén; simplemente toma conciencia de que «ahora mismo estoy pasando por un bache». No te obligues a recuperarte.",
+    "Tu madurez radica en dejar que el fuego y la profundidad coexistan. Si solo aprecias el lado luminoso y ocultas el oscuro, ambos empiezan a devorarse mutuamente. Cuando ambos están presentes, te conviertes en ese lugar en el que la gente realmente quiere quedarse. Ese es tu encanto más sólido."
   ],
   "shadows": [
-    "When you sink, you can't explain why, and people misread you.",
-    "People used to the surface don't notice your deeper worries.",
-    "The deeper your feeling, the blurrier your judgment. Make big decisions when the tide is low."
+    "Cuando te hundes, no sabes explicar por qué, y la gente te malinterpreta.",
+    "Las personas que solo ven lo superficial no se dan cuenta de tus preocupaciones más profundas.",
+    "Cuanto más intenso es tu sentimiento, más nublado está tu juicio. Toma las decisiones importantes cuando la marea esté baja."
   ],
   "advice": [
-    "This week, catch one moment of sinking without a reason. Just notice what kind of wave it is.",
-    "Tell someone close, 'I'm on the deep side right now.' No explanation needed.",
-    "Make big decisions after the emotional wave has passed. Calls made on the wave don't last.",
-    "Separate the moments when your brightness is real from when it's a performance for others."
+    "Esta semana, fíjate en un momento en el que te sientas decaído sin motivo aparente. Solo fíjate en qué tipo de ola es.",
+    "Dile a alguien cercano: «Ahora mismo estoy un poco sumido en mis pensamientos». No hace falta dar explicaciones.",
+    "Toma las decisiones importantes cuando haya pasado la oleada emocional. Las decisiones tomadas en medio de esa oleada no duran.",
+    "Distingue entre los momentos en los que tu brillantez es auténtica y aquellos en los que solo es una actuación para los demás."
   ],
   "keywords": [
-    "warm depth",
-    "light and tide",
-    "surface and abyss",
-    "quiet fire"
+    "calidez y profundidad",
+    "luz y marea",
+    "superficie y abismo",
+    "fuego silencioso"
   ],
-  "name": "Lantern on a Lake",
+  "name": "Una linterna junto al lago",
   "name_traditional": ""
 }

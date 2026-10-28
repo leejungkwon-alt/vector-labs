@@ -1,27 +1,27 @@
 {
-  "name": "Twice-Forged Steel",
+  "name": "Acero forjado dos veces",
   "pillar": "庚申",
-  "hero": "You're steel forged twice. You were made not to break — to be the one steady line in a world that won't hold still.",
+  "hero": "Eres acero forjado dos veces. Fuiste creado para no romperte, para ser el único punto firme en un mundo que no se detiene.",
   "narrative": [
-    "You're the purest form of Geng. Geng-Shin is Geng sitting on its own 祿 (Lu) — double metal, layered on itself. So your standard doesn't shift, your judgment is clean, and your stance is steel. Not because you're trying to be — because that's the shape you were made in.",
-    "You see right and wrong with unusual accuracy. Ambiguity bothers you, and injustice is something you cannot just walk past. This sharpness makes you the person an organization trusts to call the hard thing, and people bring you the decisions they can't make alone.",
-    "Your shadow is a blade that cuts everything. A right word at the wrong moment becomes a wound. Firmness taken too far reads as cold. And the blade also turns inward — you hold yourself to a standard you'd never demand of another human being, and you don't forgive yourself when you fall short."
+    "Eres la forma más pura de Geng. Geng-Shin es Geng asentado sobre su propio 祿 (Lu): doble metal, superpuesto sobre sí mismo. Por eso tu criterio no vacila, tu juicio es claro y tu postura es firme como el acero. No porque te esfuerces por serlo, sino porque esa es la forma en la que fuiste creado.",
+    "Distingues lo correcto de lo incorrecto con una precisión fuera de lo común. La ambigüedad te molesta, y la injusticia es algo ante lo que no puedes quedarte de brazos cruzados. Esta perspicacia te convierte en la persona en la que una organización confía para abordar los temas difíciles, y la gente acude a ti con las decisiones que no puede tomar por sí misma.",
+    "Tu sombra es una espada que lo corta todo. Una palabra acertada en el momento equivocado se convierte en una herida. La firmeza llevada al extremo se interpreta como frialdad. Y esa espada también se vuelve contra ti mismo: te exiges un nivel que nunca le exigirías a otra persona, y no te perdonas cuando no estás a la altura."
   ],
   "shadows": [
-    "Accurate criticism sometimes lands as a wound. Being right and being kind are different jobs.",
-    "Holding yourself to a standard you'd never impose on anyone else.",
-    "People around you get tense, or start hiding their mistakes, in your presence."
+    "Una crítica acertada a veces puede resultar hiriente. Tener razón y ser amable son cosas distintas.",
+    "Exigirte a ti mismo un nivel que nunca le impondrías a nadie más.",
+    "Las personas que te rodean se ponen nerviosas o empiezan a ocultar sus errores cuando estás presente."
   ],
   "advice": [
-    "Before correcting someone, ask once: will this be medicine for them right now, or a blade?",
-    "Once this week, say to yourself, 'This is enough.' Whatever the result is.",
-    "Tell one person you respect a place where you're not strong. Let steel be human for a moment.",
-    "When you judge something, ask both: 'Is this right?' and 'Is this useful right now?' The two questions sharpen the edge."
+    "Antes de corregir a alguien, pregúntate una vez: ¿será esto un remedio para esa persona en este momento, o un cuchillo?",
+    "Al menos una vez esta semana, repítete: «Ya basta». Sea cual sea el resultado.",
+    "Cuéntale a alguien a quien respetes un aspecto en el que no seas fuerte. Deja que el acero se vuelva humano por un momento.",
+    "Cuando juzgues algo, pregúntate ambas cosas: «¿Es esto correcto?» y «¿Me resulta útil en este momento?». Estas dos preguntas te ayudan a ver las cosas con mayor claridad."
   ],
   "keywords": [
-    "pure steel",
-    "clear standard",
-    "unshakeable",
-    "precise edge"
+    "acero puro",
+    "norma clara",
+    "inquebrantable",
+    "borde preciso"
   ]
 }

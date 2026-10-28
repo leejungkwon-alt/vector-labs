@@ -1,29 +1,29 @@
 {
   "pillar": "丙戌",
-  "hero": "You're a campfire on a hill. Built to burn long — a place where anyone can warm up.",
+  "hero": "Eres una hoguera en una colina. Hecha para arder durante mucho tiempo: un lugar donde cualquiera puede calentarse.",
   "narrative": [
-    "You carry warmth and stability together. Other Bing-day people burn in their own ways; yours is anchored to the ground. That's why you aren't just hot — you're the kind of warmth people can stay in for a long time.",
-    "You have a natural talent for caring for people. Just as a campfire draws people near, people naturally gather around you. It's not because you do something special. It's because being there is enough to comfort them. That's rarer than it sounds.",
-    "The trouble is that 'everyone's warmth' can burn you out. If you keep giving warmth without stopping, your own fire eventually goes out. Even a campfire needs fuel. Ask yourself: what is my fuel, and when did I last feed it?",
-    "A mature Bing-Xu is someone who knows how to give warmth with boundaries. Open to anyone, but open in a way that doesn't burn you. Your fire was built to burn long — so how long it burns is your real worth."
+    "Aportas calidez y estabilidad a la vez. Las demás personas nacidas en el día de Bing arden cada una a su manera; la tuya, en cambio, está firmemente arraigada al suelo. Por eso no solo eres apasionado, sino que eres el tipo de calidez en la que la gente puede quedarse mucho tiempo.",
+    "Tienes un talento natural para cuidar de los demás. Al igual que una hoguera atrae a la gente, las personas se reúnen de forma natural a tu alrededor. No es porque hagas nada especial, sino porque el simple hecho de estar ahí basta para reconfortarlas. Eso es más raro de lo que parece.",
+    "El problema es que «el cariño de todos» puede acabar agotándote. Si sigues dando cariño sin parar, tu propio fuego acabará por apagarse. Incluso una hoguera necesita combustible. Pregúntate: ¿cuál es mi combustible y cuándo fue la última vez que lo avivé?",
+    "Un Bing-Xu maduro es alguien que sabe cómo transmitir calidez sin traspasar los límites. Está abierto a todo el mundo, pero de una forma que no te queme. Tu fuego está hecho para arder durante mucho tiempo; por eso, el tiempo que arda es lo que realmente te da valor."
   ],
   "shadows": [
-    "You care for others and forget your own fuel.",
-    "Your warmth can tip into control.",
-    "You hold everyone up without rest, then suddenly go completely dark."
+    "Te preocupas por los demás y te olvidas de repostar.",
+    "Tu calidez puede convertirse en control.",
+    "Mantienes a todo el mundo a la espera sin descanso y, de repente, te quedas completamente a oscuras."
   ],
   "advice": [
-    "This week, write down three things that are your fuel. If none, you can't burn long.",
-    "Ask one of the people you care for to care for you this time.",
-    "Separate the warmth you give because they want it from the warmth you give because you want to give.",
-    "Leave at least one ember for yourself before you go out completely."
+    "Esta semana, anota tres cosas que te den energía. Si no tienes ninguna, no podrás aguantar mucho tiempo.",
+    "Pide a una de las personas a las que quieres que se ocupe de ti esta vez.",
+    "Distingue entre el cariño que les das porque ellos lo quieren y el cariño que les das porque tú quieres dárselo.",
+    "Deja al menos una brasa para ti antes de apagarte por completo."
   ],
   "keywords": [
-    "long fire",
-    "solid warmth",
-    "power of care",
-    "boundaries that hold"
+    "disparo prolongado",
+    "calidez auténtica",
+    "el poder del cariño",
+    "límites que se mantienen"
   ],
-  "name": "Hilltop Campfire",
+  "name": "Hoguera en la cima de la colina",
   "name_traditional": ""
 }

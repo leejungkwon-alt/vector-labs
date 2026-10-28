@@ -1,28 +1,28 @@
 {
-  "name": "Blade Opening the Forest",
+  "name": "Blade: Abriendo el bosque",
   "pillar": "庚寅",
-  "hero": "You're a blade clearing a path through a forest. Not felling trees for the sake of it — opening the way so others can walk.",
+  "hero": "Eres una hoz que se abre paso por el bosque. No talas árboles por talar, sino que abres el camino para que otros puedan pasar.",
   "narrative": [
-    "You move before you've finished thinking. When an opening appears, you take it. Your decisions come fast, and 'start first, refine later' is already wired into you. That puts you miles ahead of most people at the beginning of things.",
-    "Your strength is momentum. Metal cuts wood — you don't negotiate with a mess. You clear it. Long meetings without conclusions, people circling the same point, projects that won't move: a few sentences from you and they're done. People feel the project move because of you.",
-    "Your shadow is cutting too fast. You're so focused on the forward line that you leave behind people, hurt feelings, and seeds that hadn't sprouted yet. Pioneers always get called 'the one who does it alone.' It's not your intention — it's your speed.",
-    "A mature Geng-In knows the difference between what to cut and what to grow. Someone who lets things take their time, and uses that waiting window to work on something else. Then your momentum pulls people in, and the place you passed through has a road in it."
+    "Actúas antes de haber terminado de pensar. Cuando surge una oportunidad, la aprovechas. Tomas decisiones con rapidez, y el lema «empieza primero, perfecciona después» ya forma parte de tu forma de ser. Eso te sitúa muy por delante de la mayoría de la gente al principio de cualquier proyecto.",
+    "Tu punto fuerte es el impulso. El metal corta la madera: no se negocia con el desorden, sino que se pone orden. Reuniones interminables sin conclusiones, gente dando vueltas sobre lo mismo, proyectos que no avanzan: unas pocas frases tuyas y ya está. La gente nota que el proyecto avanza gracias a ti.",
+    "Tu sombra avanza demasiado rápido. Estás tan centrado en la línea de meta que dejas atrás a personas, sentimientos heridos y semillas que aún no habían brotado. A los pioneros siempre se les llama «los que van por libre». No es tu intención, es tu ritmo.",
+    "Un Geng-In maduro sabe distinguir entre lo que hay que podar y lo que hay que cultivar. Es alguien que deja que las cosas sigan su curso y aprovecha ese tiempo de espera para dedicarse a otra cosa. Entonces, tu impulso atrae a la gente, y el lugar por el que has pasado ya cuenta con un camino."
   ],
   "shadows": [
-    "Fast decisions sometimes ignore the preparation time others need.",
-    "Moving ahead alone can isolate you from the very team you're leading.",
-    "You're so used to speed that you abandon slow processes halfway through."
+    "Las decisiones rápidas a veces pasan por alto el tiempo de preparación que necesitan los demás.",
+    "Si sigues adelante por tu cuenta, puedes acabar aislándote del mismo equipo que diriges.",
+    "Estás tan acostumbrado a la rapidez que abandonas los procesos lentos a mitad de camino."
   ],
   "advice": [
-    "Before deciding something, ask one relevant person this week: 'How do you see it?'",
-    "Pick one thing you've set in motion and deliberately leave it unfinished this week. Let it grow.",
-    "When someone moves slowly, ask once why. Usually there's a reason you didn't see.",
-    "Build one part of your project that runs without you. That's real leadership."
+    "Antes de tomar una decisión, pregúntale esta semana a alguien que esté al tanto del tema: «¿Qué opinas al respecto?».",
+    "Elige una cosa que hayas empezado y déjala deliberadamente sin terminar esta semana. Deja que crezca.",
+    "Cuando alguien se mueva despacio, pregúntale una vez por qué. Normalmente hay una razón que se te ha pasado por alto.",
+    "Crea una parte de tu proyecto que funcione sin que tú intervengas. Eso es verdadero liderazgo."
   ],
   "keywords": [
-    "pioneering",
-    "speed",
-    "opening paths",
-    "momentum"
+    "pionero",
+    "velocidad",
+    "abrir caminos",
+    "impulso"
   ]
 }

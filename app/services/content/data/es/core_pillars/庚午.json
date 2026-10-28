@@ -1,29 +1,29 @@
 {
   "pillar": "庚午",
-  "hero": "You're a blade inside a forge. The heat doesn't soften you — it makes you clearer.",
+  "hero": "Eres una hoja dentro de una forja. El calor no te ablanda, sino que te hace más nítido.",
   "narrative": [
-    "You're someone whose principles and passion live in the same body. When you decide something, you try to judge by a standard rather than by mood. But that standard isn't cold calculation — it comes from a conviction that burns hot. 'This is right' or 'this is not' ignites in you first, and only then becomes words.",
-    "At work, what shows first is decisiveness. You cut through vague discussions, make calls, and take responsibility. People tend to hand you the role of 'the one who decides.' It's the same in relationships. You find ambiguity hard to sit with, and you express what you like and dislike clearly. That clarity reads to others as trust — and sometimes as pressure.",
-    "Your task is to separate the 'hot standard' from the 'cool judgment.' The hot standard is your values. The cool judgment is the tool that executes those values. Mix them, and a right word becomes a wound. Separate them, and decisiveness becomes respect. Before a decision, ask: 'Is this what I believe is right, or is this the most accurate read of this situation right now?'",
-    "Once that distinction settles in, your intensity stops pushing people away and starts pulling them in. Someone who holds principles and still sees people. Someone who carries heat and still executes calmly. That is the mature form of this pillar. You don't have to get there all at once — just keep walking in that direction."
+    "Eres una persona cuyos principios y pasión conviven en un mismo ser. Cuando tomas una decisión, intentas basarte en un criterio, más que en tu estado de ánimo. Pero ese criterio no es un cálculo frío, sino que surge de una convicción ardiente. Primero surge en ti la sensación de «esto está bien» o «esto no está bien», y solo entonces se convierte en palabras.",
+    "En el trabajo, lo primero que se aprecia es tu capacidad de decisión. Acabas con las discusiones vagas, tomas decisiones y asumes responsabilidades. La gente tiende a asignarte el papel de «el que decide». Lo mismo ocurre en las relaciones. Te cuesta aceptar la ambigüedad y expresas con claridad lo que te gusta y lo que no. Esa claridad se interpreta como confianza —y, a veces, como presión— por parte de los demás.",
+    "Tu tarea consiste en separar el «criterio apasionado» del «juicio sereno». El criterio apasionado son tus valores. El juicio sereno es la herramienta que pone en práctica esos valores. Si los mezclas, una palabra acertada se convierte en una herida. Si los separas, la firmeza se convierte en respeto. Antes de tomar una decisión, pregúntate: «¿Es esto lo que creo que es correcto, o es la interpretación más acertada de esta situación en este momento?».",
+    "Una vez que asimiles esa distinción, tu intensidad dejará de alejar a la gente y empezará a atraerla. Alguien que se mantiene fiel a sus principios y, aun así, sigue viendo a las personas. Alguien que transmite pasión y, aun así, actúa con calma. Esa es la forma madura de este pilar. No hace falta que llegues a ese punto de golpe; simplemente sigue avanzando en esa dirección."
   ],
   "shadows": [
-    "When your certainty is strong, you close the door on hearing the other person out.",
-    "You sometimes dress up emotion as 'judgment.' That's not a standard — that's hurt.",
-    "Deciding nonstop wears you down, and you often can't admit your own fatigue."
+    "Cuando estás muy seguro de algo, te cierras a escuchar lo que tiene que decir la otra persona.",
+    "A veces disfrazas una emoción de «juicio». Eso no es una norma, es un dolor.",
+    "Tomar decisiones sin descanso te agota, y a menudo no eres capaz de reconocer tu propio cansancio."
   ],
   "advice": [
-    "Before deciding, ask once: is this my values, or is this the best call for this specific moment?",
-    "This week, listen all the way through before you judge — just once.",
-    "Give yourself recovery time after a hard decision. Strong calls need strong rest.",
-    "Tell one person you respect about something you're wrestling with. You don't have to carry it all alone."
+    "Antes de tomar una decisión, pregúntate una vez: ¿se trata de mis valores o es la mejor decisión para este momento concreto?",
+    "Esta semana, escucha la canción hasta el final antes de juzgarla, aunque solo sea una vez.",
+    "Date un tiempo para recuperarte después de tomar una decisión difícil. Las decisiones difíciles requieren un descanso profundo.",
+    "Cuéntale a alguien a quien respetes algo que te esté preocupando. No tienes por qué cargar con todo eso tú solo."
   ],
   "keywords": [
-    "hot principles",
-    "clear resolve",
-    "passionate cool",
-    "weight of responsibility"
+    "principios clave",
+    "firme determinación",
+    "apasionado y guay",
+    "el peso de la responsabilidad"
   ],
-  "name": "Blade in the Forge",
+  "name": "Blade en la Forja",
   "name_traditional": ""
 }

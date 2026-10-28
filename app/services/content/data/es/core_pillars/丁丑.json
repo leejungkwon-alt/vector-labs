@@ -1,29 +1,29 @@
 {
   "pillar": "丁丑",
-  "hero": "You're a candle set on fertile soil. Nourished quietly from below, shining steadily above.",
+  "hero": "Eres una vela colocada sobre tierra fértil. Nutrida en silencio desde abajo, brillando con firmeza desde arriba.",
   "narrative": [
-    "Your warmth isn't loud. It's not a heat that overwhelms — it's a light that doesn't burden people even after hours by your side. New people remember you as quiet and composed. Over time, they realize that composure is actually a very precisely held temperature.",
-    "You carry stability and care together. You become the one people lean on, the quiet center an organization can't do without. That role comes naturally to you — and because it does, the people around you too easily assume you're fine. Even when you're exhausted, most of them won't notice.",
-    "Your shadow is 'being taken for granted.' When you keep shining, that shine becomes air. What you need then isn't more brightness — it's the courage to dim yourself, just for a moment, for your own sake. A candle that goes out isn't failing. Neither are you, when you rest.",
-    "A mature Ding-Chou is someone who accepts being cared for too. When you turn even a tenth of the care you give others back on yourself, your light lasts. That's the only way you last."
+    "Tu calidez no es estridente. No es un calor que abrume, sino una luz que no agobia a los demás, ni siquiera después de pasar horas a tu lado. Las personas que te conocen por primera vez te recuerdan como alguien tranquilo y sereno. Con el tiempo, se dan cuenta de que esa serenidad es, en realidad, una temperatura mantenida con gran precisión.",
+    "Aúnas estabilidad y cariño. Te conviertes en la persona en la que los demás se apoyan, el pilar silencioso sin el que una organización no puede funcionar. Ese papel te sale de forma natural y, precisamente por eso, las personas que te rodean dan por sentado con demasiada facilidad que estás bien. Incluso cuando estás agotado, la mayoría de ellos ni siquiera se da cuenta.",
+    "Tu sombra está «siendo dada por sentada». Cuando no dejas de brillar, ese brillo se convierte en aire. Lo que necesitas entonces no es más brillo, sino el valor de atenuarte, solo por un momento, por tu propio bien. Una vela que se apaga no está fallando. Tampoco lo estás haciendo tú, cuando descansas.",
+    "Un Ding-Chou maduro es alguien que también acepta que le cuiden. Cuando dedicas a ti mismo tan solo una décima parte del cariño que das a los demás, tu luz perdura. Esa es la única forma de perdurar."
   ],
   "shadows": [
-    "Because you're steady, people don't notice your fatigue.",
-    "The one being cared for is always someone else. You keep landing last.",
-    "Rest makes you feel guilty, so you force your body to stop instead."
+    "Como eres constante, la gente no se da cuenta de lo cansado que estás.",
+    "El que recibe los cuidados siempre es otra persona. Tú siempre acabas siendo el último.",
+    "Descansar te hace sentir culpable, así que, en lugar de eso, obligas a tu cuerpo a detenerse."
   ],
   "advice": [
-    "This week, pick one person who could care for you and make one small request.",
-    "Skip one thing you'd normally do this week. Give the space to yourself.",
-    "Say your state out loud once. 'I'm kind of worn down lately.'",
-    "If you fear going out, remember: going out and relighting is also a rhythm."
+    "Esta semana, elige a una persona que pueda cuidarte y hazle una pequeña petición.",
+    "Deja de hacer una cosa que sueles hacer esta semana. Dedícate ese tiempo a ti mismo.",
+    "Di en voz alta lo que sientes una vez. «Últimamente me siento un poco agotado».",
+    "Si te da miedo salir, recuerda: salir y volver a encender la llama también es un ritmo."
   ],
   "keywords": [
-    "warm stability",
-    "quiet care",
-    "fertile warmth",
-    "self-care"
+    "estabilidad térmica",
+    "atención discreta",
+    "calor fértil",
+    "cuidado personal"
   ],
-  "name": "Candle on Fertile Soil",
+  "name": "Vela sobre tierra fértil",
   "name_traditional": ""
 }
