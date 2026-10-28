@@ -1,7 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react'; // 👈 누락된 임포트 추가
 import './App.css';
 
 const API_BASE = 'https://vector-labs-api-787049663118.asia-northeast3.run.app/api/v1';
+
+// 👈 텔레그램 유저의 언어를 감지하는 함수 추가
+const getTgLang = () => {
+  const tgLang = window.Telegram?.WebApp?.initDataUnsafe?.user?.language_code || 'en';
+  if (tgLang.startsWith('ko')) return 'ko';
+  if (tgLang.startsWith('ja')) return 'ja';
+  if (tgLang.startsWith('zh')) return 'zh_cn';
+  if (tgLang.startsWith('es')) return 'es';
+  return 'en';
+};
 
 // --- 공통 컴포넌트 ---
 function Accordion({ title, isOpen, onToggle, children, isLocked }) {
@@ -37,7 +47,11 @@ function Onboarding({ onSubmit }) {
       <div className="onboarding-card">
         <h1>Gyeol</h1>
         <p>당신의 결을 읽어냅니다.<br/>출생 정보를 입력해 주세요.</p>
-        <form onSubmit={(e) => { e.preventDefault(); onSubmit({ birth_date: bd, birth_time: bt + ':00', birth_location: loc, gender, lang: 'ko' }); }}>
+        <form onSubmit={(e) => { 
+          e.preventDefault(); 
+          // 👈 lang: 'ko' 하드코딩 대신 getTgLang() 적용
+          onSubmit({ birth_date: bd, birth_time: bt + ':00', birth_location: loc, gender, lang: getTgLang() }); 
+        }}>
           <label>생년월일 <input type="date" value={bd} onChange={e => setBd(e.target.value)} required /></label>
           <label>출생 시간 <input type="time" value={bt} onChange={e => setBt(e.target.value)} required /></label>
           <label>성별
@@ -47,7 +61,7 @@ function Onboarding({ onSubmit }) {
           </label>
           <label>출생지
             <select value={loc} onChange={e => setLoc(e.target.value)}>
-              <option value="seoul">서울</option><option value="busan">부산</option>
+              <option value="seoul">서울</option><option value="busan">부산</option>              
               <option value="new_york">뉴욕</option><option value="tokyo">도쿄</option>
             </select>
           </label>
@@ -116,6 +130,7 @@ function DailyTab({ token, profile }) {
     fetch(`${API_BASE}/saju/daily`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+      // 👈 body에 lang: profile.lang 포함 (Onboarding에서 저장된 언어 자동 전송)
       body: JSON.stringify({ ...profile, days: 7 })
     })
       .then(res => { if (!res.ok) throw new Error(res.status); return res.json(); })
@@ -163,9 +178,9 @@ function CompatTab({ token, profile }) {
       headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
       body: JSON.stringify({
         person_a: profile,
-        person_b: { birth_date: partnerBd, birth_time: '12:00:00', birth_location: 'seoul', gender: 'F', lang: 'ko' },
+        person_b: { birth_date: partnerBd, birth_time: '12:00:00', birth_location: 'seoul', gender: 'F', lang: profile.lang || 'en' },
         relationship_type: relType,
-        lang: 'ko'
+        lang: profile.lang || 'en' // 👈 하드코딩된 'ko' 수정
       })
     })
       .then(res => { if (!res.ok) throw new Error(res.status); return res.json(); })
