@@ -10,6 +10,7 @@ import { colors, spacing, radius, gradeColors } from "@/theme";
 import { useAuthStore } from "@/store/authStore";
 import { useProfileStore } from "@/store/profileStore";
 import { PaymentModal } from "@/components/PaymentModal";
+import { CrisisBanner } from "@/components/CrisisBanner";
 import type { DailyResponse } from "../../types";
 
 export default function DailyScreen() {
@@ -117,6 +118,7 @@ export default function DailyScreen() {
           </View>
         ))}
       </View>
+      <CrisisBanner />
     </ScrollView>
   );
 }

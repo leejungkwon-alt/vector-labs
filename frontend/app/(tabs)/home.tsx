@@ -17,6 +17,7 @@ import { useEffect, useState } from "react";
 import { api, ApiError } from "@/api/client";
 import { colors, spacing, radius } from "@/theme";
 import { useProfileStore } from "@/store/profileStore";
+import { CrisisBanner } from "@/components/CrisisBanner";
 import type { ReportResponse } from "../../types";
 import {
   ChartSectionView,
@@ -175,6 +176,7 @@ export default function HomeScreen() {
         })}
       </View>
 
+      <CrisisBanner crisis={(report as any).crisis_resources} />
       <View style={styles.disclaimerBox}>
         <Text style={styles.disclaimerText}>{report.disclaimer}</Text>
       </View>
