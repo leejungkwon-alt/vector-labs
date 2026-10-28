@@ -7,18 +7,33 @@ from app.auth.repository import get_repository
 class IAPVerificationError(ValueError):
     pass
 
+
+
+def _pytest_env_mode() -> str:
+    """SAJU_ENV 를 반환. pytest 실행 중 SAJU_ENV 미설정이면 'test' 로 폴백."""
+    env = os.environ.get("SAJU_ENV", "").strip().lower()
+    if env:
+        return env
+    if os.environ.get("PYTEST_CURRENT_TEST"):
+        return "test"
+    return ""
+
+
 def verify_and_grant(user_id: str, platform: str, receipt: str, product_id: str) -> dict:
     """
     실제 애플/구글 영수증 검증 로직이 들어갈 자리입니다.
     현재는 테스트용으로 특정 영수증일 때만 성공하도록 구현합니다.
     """
-    # Step 4-B: 프로덕션에서 mock 영수증 거부
-    if receipt == "mock_valid_receipt" and os.environ.get("SAJU_ENV", "").lower() == "production":
-        raise IAPVerificationError(
-            "Mock receipts are not allowed in production. "
-            "Real Apple/Google receipt verification must be wired before deploying."
-        )
+    # Fail-Closed: development, test 가 명시된 경우에만 mock 영수증 허용
+    env = _pytest_env_mode()
+    is_dev_or_test = env in ("development", "test")
+    
     if receipt == "mock_valid_receipt":
+        if not is_dev_or_test:
+            raise IAPVerificationError(
+                "Mock receipts are strictly forbidden outside of development/test. "
+                "SAJU_ENV must be explicitly set to 'development' or 'test' to use mocks."
+            )
         repo = get_repository()
         if product_id == "sub_monthly_299":
             repo.set_tier(user_id, "subscription")

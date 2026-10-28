@@ -112,7 +112,7 @@ def test_iap_mock_receipt_rejected_in_production(monkeypatch, tmp_path):
     a = a_resp.json()
 
     from app.services.iap import verify_and_grant, IAPVerificationError
-    with pytest.raises(IAPVerificationError, match="not allowed in production"):
+    with pytest.raises(IAPVerificationError, match="strictly forbidden"):
         verify_and_grant(
             a["user"]["id"], "ios", "mock_valid_receipt", "sub_monthly_299"
         )

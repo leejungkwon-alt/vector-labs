@@ -12,27 +12,40 @@ _ALG = "HS256"
 _ISSUER = "saju-auth"
 
 
+
+
+def _pytest_env_mode() -> str:
+    """SAJU_ENV 를 반환. pytest 실행 중 SAJU_ENV 미설정이면 'test' 로 폴백.
+    프로덕션 환경에는 PYTEST_CURRENT_TEST 가 존재하지 않으므로 fail-closed 유지."""
+    env = os.environ.get("SAJU_ENV", "").strip().lower()
+    if env:
+        return env
+    if os.environ.get("PYTEST_CURRENT_TEST"):
+        return "test"
+    return ""
+
+
 def _secret() -> str:
     s = os.environ.get("SAJU_JWT_SECRET", "").strip()
-    is_prod = os.environ.get("SAJU_ENV", "").lower() == "production"
+    env = _pytest_env_mode()
+    
+    # Fail-Closed: development, test 가 명시된 경우에만 기본 키 허용
+    is_dev_or_test = env in ("development", "test")
 
-    if is_prod:
+    if not is_dev_or_test:
         if not s:
             raise RuntimeError(
-                "SAJU_JWT_SECRET must be set in production. "
-                "The default development secret must not be used in deployment."
+                "SAJU_JWT_SECRET must be set. "
+                "The default development secret is only allowed when SAJU_ENV=development or test."
             )
         if len(s) < _MIN_SECRET_LEN:
             raise RuntimeError(
-                f"SAJU_JWT_SECRET must be at least {_MIN_SECRET_LEN} characters "
-                f"in production (got {len(s)}). "
-                f"Generate one with: openssl rand -hex 32"
+                f"SAJU_JWT_SECRET must be at least {_MIN_SECRET_LEN} characters."
             )
         return s
 
-    if s:
-        return s
-    return _DEFAULT_SECRET
+    return s or _DEFAULT_SECRET
+
 
 
 def ttl_seconds() -> int:

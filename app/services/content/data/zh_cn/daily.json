@@ -1,75 +1,235 @@
 {
   "DAILY_THEME_CONTENT": {
-    "TEN_GOD_FRIEND": {
-      "name": "关注自己",
-      "headline": "你今天的精力比平时更充沛。",
-      "body": "你会感到自信心倍增，并强烈地认为自己的做法才是正确的。但这种高涨的能量也可能导致与他人产生摩擦。\n\n今天，与其试图说服别人，不如将这份能量投入到自己的工作中。现在正是着手进行个人项目或启动一项以你名字命名的项目的绝佳时机。",
-      "watch_for": "不要在没有倾听的情况下固执己见。",
-      "lean_into": "独立工作、个人项目、日常安排。"
-    },
-    "TEN_GOD_ROB_WEALTH": {
-      "name": "“势能构建者”",
-      "headline": "你的干劲十足，但你的急躁同样明显。",
-      "body": "你会想加快步伐，赢得比赛，并一口气处理完积压的工作。今天，你内心那种竞争或追求成就的冲动非常强烈。\n\n不过，全速奔跑会很快耗尽你的精力。今天只选一个大目标，把精力集中在这上面。其他事情都先放一放。",
-      "watch_for": "不要和那些不是你竞争对手的人较劲。",
-      "lean_into": "设定一个明确的目标，全神贯注。"
-    },
-    "TEN_GOD_EATING_GOD": {
-      "name": "创意的火花",
-      "headline": "今天是个将你的创意付诸实践的好日子。",
-      "body": "你的心情很平和，会产生一种创作或表达自我的渴望。与其勉强自己完成枯燥的任务，不如专注于那些你真正能乐在其中的事情。\n\n写作、绘画、烹饪或构思新计划，今天都很适合。享受这个过程，而不是担心结果。",
-      "watch_for": "今天别给自己安排太多事情。",
-      "lean_into": "爱好、创意项目、记录灵感。"
-    },
-    "TEN_GOD_HURTING_OFFICER": {
-      "name": "“真相讲述者”",
-      "headline": "如今，你更能看清这个体系中的缺陷。",
-      "body": "你可能会因效率低下而感到沮丧，或因某些看似“不对劲”的事情而感到恼火。如果运用得当，这种敏锐的洞察力可以成为一种强大的工具。\n\n与其只是抱怨，不如尝试提出解决方案。今天非常适合向同事提出建设性意见，或提出改进建议。",
-      "watch_for": "注意把握时机，以免你的尖刻言辞伤人。",
-      "lean_into": "解决问题、提供解决方案、修复系统。"
-    },
-    "TEN_GOD_INDIRECT_WEALTH": {
-      "name": "机会猎手",
-      "headline": "今天门开得快、关得也快。要保持警惕。",
-      "body": "新的机会或人脉可能会突然出现。你的直觉非常敏锐，所以如果你觉得“就是它了”，就大胆尝试吧。\n\n但不要试图抓住每一个机会。过滤掉那些无关紧要的信息，深入钻研一两件真正与你契合的事情。",
-      "watch_for": "不要让“错失恐惧症”（FOMO）左右你的决定。",
-      "lean_into": "尝试新事物、拓展人脉、相信自己的直觉。"
-    },
-    "TEN_GOD_DIRECT_WEALTH": {
-      "name": "稳扎稳打",
-      "headline": "虽然不是最耀眼的一天，却是最扎实的一天。",
-      "body": "今天更适合埋头处理必要事务，而非追求宏大成果。虽然可能觉得有些枯燥，但今天所积累的成果将在未来产生复利效应。\n\n今天很适合核对预算、存钱或整理空间。请专注于稳定和日常习惯，而非远大抱负。",
-      "watch_for": "想要草率推进这一过程的冲动。",
-      "lean_into": "财务核查、清理、可重复的任务。"
-    },
-    "TEN_GOD_SEVEN_KILLINGS": {
-      "name": "压力测试",
-      "headline": "虽然感觉很沉重，但你会变得更坚强。",
-      "body": "你可能会面临意料之外的责任或压力。虽然这可能会让你感到窒息，但直面挑战将带来巨大的成长。\n\n今天，你需要练习说“不”。保护自己的身心界限是当务之急。工作完成后，彻底断开连接，好好休息。",
-      "watch_for": "不要承担不属于你的责任。",
-      "lean_into": "设定界限、深度睡眠、心理防护。"
-    },
-    "TEN_GOD_DIRECT_OFFICER": {
-      "name": "焦点",
-      "headline": "今天是个收获成果、获得认可的好日子。",
-      "body": "今天，规则和体制对你十分有利，工作进展顺利。这非常适合向上司汇报、签署合同或参加考试。\n\n不要躲在幕后；要挺身而出，展示你的成果。今天，积极展现自己将是一个优势。",
-      "watch_for": "不要因为缺乏自信而退缩。",
-      "lean_into": "官方活动、演讲、采访。"
-    },
-    "TEN_GOD_INDIRECT_RESOURCE": {
-      "name": "深思者",
-      "headline": "这是一个将注意力转向内在而非外在的日子。",
-      "body": "你可能更愿意独自待在安静的地方，而不是与人社交。今天是个好日子，可以不受外界干扰，专注于倾听内心的声音。\n\n不妨读读书、学习一下，或者理清那些挥之不去的担忧。一旦理清思绪，关于下一步该怎么做的明确答案自然会浮现出来。",
-      "watch_for": "去散散步，缓解心情低落。",
-      "lean_into": "独处时光、学习、冥想、研究。"
-    },
-    "TEN_GOD_DIRECT_RESOURCE": {
-      "name": "重焕活力",
-      "headline": "今天你需要一些温暖的慰藉和休息。",
-      "body": "你的身心可能比较敏感，这会让你容易感到疲惫。与其强迫自己提高效率，不如花点时间好好照顾自己。\n\n吃点好吃的，喝杯热茶，或者和喜欢的人聊聊天。今天，按照自己的节奏生活，而不是随波逐流。",
-      "watch_for": "不要把休息误认为是懒惰。",
-      "lean_into": "关注自身健康、摄入营养丰富的食物、与导师交流。"
-    }
+    "TEN_GOD_FRIEND": [
+      {
+        "name": "Social Synergy",
+        "headline": "Connect with your inner circle to refuel your momentum.",
+        "body": "Today brings a grounding energy that reminds you of the strength found in your immediate community. Reach out to a peer or trusted collaborator who understands your current aspirations. Exchanging simple ideas over a short check-in will help clarify your goals and leave you feeling remarkably supported.",
+        "watch_for": "Comparing your timeline to someone else's path.",
+        "lean_into": "Reaching out to a trusted peer for a quick check-in."
+      },
+      {
+        "name": "Standing Together",
+        "headline": "Find confidence by sharing space with like-minded people.",
+        "body": "You do not have to carry every project or responsibility on your own shoulders today. Collaborating with someone who shares your values will bring immediate relief and fresh perspective. Take five minutes to send an encouraging message to a teammate or work alongside a friend.",
+        "watch_for": "Unnecessary stubbornness during group decisions.",
+        "lean_into": "Sharing a quick praise or words of encouragement."
+      },
+      {
+        "name": "Shared Energy",
+        "headline": "Strengthen your confidence through warm, equal connections.",
+        "body": "Your sense of self is anchored best today when you interact with people who treat you as an equal. Engage in a brief conversation where both of you get to share what you are working on. This mutual validation will boost your motivation and keep your momentum steady.",
+        "watch_for": "Over-committing to help others at your own expense.",
+        "lean_into": "Having an open and equal conversation with a friend."
+      }
+    ],
+    "TEN_GOD_ROB_WEALTH": [
+      {
+        "name": "Healthy Competition",
+        "headline": "Channel restless drive into your own self-improvement.",
+        "body": "A surge of competitive energy may make you feel eager to prove your worth today. Instead of measuring your progress against others, direct that intense drive inward toward a personal milestone. Setting a focused timer for a challenging task will transform potential friction into a major win.",
+        "watch_for": "Impulsive spending triggered by fear of missing out.",
+        "lean_into": "Focusing on personal growth rather than comparisons."
+      },
+      {
+        "name": "Boundary Building",
+        "headline": "Protect your energy while striving for individual excellence.",
+        "body": "Today encourages you to recognize where your personal space ends and others' demands begin. You might feel a gentle pressure to compete or keep up, but your best strategy is calm focus. Set clear limits on your time so you can complete one priority with complete precision.",
+        "watch_for": "Reacting defensively to constructive feedback.",
+        "lean_into": "Setting clear, respectful boundaries on your schedule."
+      },
+      {
+        "name": "Refining Your Edge",
+        "headline": "Turn potential friction into productive personal breakthroughs.",
+        "body": "When dynamic environment challenges arise, treat them as invitations to sharpen your skills. Focus on refining a task you have been putting off rather than trying to match someone else's pace. Dedicating uninterrupted effort to your own goals will yield satisfying progress by evening.",
+        "watch_for": "Draining your time by taking on unasked challenges.",
+        "lean_into": "Dedicating quiet time to hone a specific skill."
+      }
+    ],
+    "TEN_GOD_EATING_GOD": [
+      {
+        "name": "Creative Flow",
+        "headline": "Express yourself freely through simple, enjoyable pursuits.",
+        "body": "Your natural creative energy is flowing smoothly today, inviting you to enjoy the process rather than worry about the final result. Take time to draft an idea, prepare a nourishing meal, or engage in a relaxed creative hobby. Allowing yourself to savor small moments will replenish your emotional reserve.",
+        "watch_for": "Overindulging in comfort food or pleasant distractions.",
+        "lean_into": "Savoring a quiet creative activity without pressure."
+      },
+      {
+        "name": "Nourishing Joy",
+        "headline": "Delight in life's simple pleasures to refresh your focus.",
+        "body": "Today calls for stepping back from heavy analytical work to embrace lighthearted expression. Share a thoughtful idea, try a new recipe, or take a peaceful stroll in nature during a work break. Giving yourself permission to enjoy life restores your mental clarity and enthusiasm.",
+        "watch_for": "Procrastinating on necessary administrative tasks.",
+        "lean_into": "Taking a relaxing walk or preparing a healthy meal."
+      },
+      {
+        "name": "Gentle Output",
+        "headline": "Let your authentic thoughts shine in a relaxed manner.",
+        "body": "You will find immense satisfaction today in sharing your genuine thoughts without expecting immediate perfection. Write down your ideas freely or participate in a cheerful conversation with someone close. This calm, authentic expression brings a deep sense of internal alignment.",
+        "watch_for": "Losing track of time during relaxed breaks.",
+        "lean_into": "Journaling your thoughts or sharing a light moment."
+      }
+    ],
+    "TEN_GOD_HURTING_OFFICER": [
+      {
+        "name": "Bold Expression",
+        "headline": "Voice your original ideas with clarity and mindfulness.",
+        "body": "Your intellect is exceptionally sharp today, making it a great time to showcase your unique perspective. Pitch a fresh solution or present an innovative approach to an ongoing challenge. Just remember to pair your persuasive ideas with empathy so everyone feels included in your vision.",
+        "watch_for": "Sharp words or critical remarks in group settings.",
+        "lean_into": "Presenting an innovative idea with warmth."
+      },
+      {
+        "name": "Inspired Innovation",
+        "headline": "Break through routine by offering fresh solutions.",
+        "body": "You may feel a strong urge to challenge the status quo and improve existing systems today. Channel this dynamic insight into refining a practical process or updating a stale habit. Expressing your original vision respectfully will inspire those around you to see new possibilities.",
+        "watch_for": "Impatience with slow or traditional methods.",
+        "lean_into": "Streamlining a daily task with a clever approach."
+      },
+      {
+        "name": "Charismatic Impact",
+        "headline": "Illuminate new pathways through clear, passionate communication.",
+        "body": "Your ability to articulate complex thoughts is heightened today, giving your words real resonance. Use this expressive tone to advocate for a project you care about or inspire a peer. Keeping your delivery constructive will ensure your brilliance is received with enthusiasm.",
+        "watch_for": "Dismissing rules purely for the sake of reform.",
+        "lean_into": "Communicating a creative vision with diplomatic grace."
+      }
+    ],
+    "TEN_GOD_INDIRECT_WEALTH": [
+      {
+        "name": "Flexible Mindset",
+        "headline": "Spot unexpected possibilities in your daily routine.",
+        "body": "An open and flexible mindset will reveal hidden opportunities for growth today. Be curious when unexpected changes arise in your agenda, as they may lead to rewarding shortcuts or useful insights. Take a quick moment to reframe a surprise event as an intriguing chance to adapt.",
+        "watch_for": "Taking uncalculated risks based on excitement.",
+        "lean_into": "Adapting swiftly to small shifts in your schedule."
+      },
+      {
+        "name": "Resourceful Action",
+        "headline": "Maximize your options by staying practical and open.",
+        "body": "Today favors dynamic thinking and practical resourcefulness over rigid adherence to a master plan. Look around your current environment to see how you can repurpose existing tools or time blocks. Taking a swift, practical action now will yield surprisingly efficient progress.",
+        "watch_for": "Spreading your energy across too many goals at once.",
+        "lean_into": "Finding a resourceful shortcut for an routine task."
+      },
+      {
+        "name": "Opportunity Awareness",
+        "headline": "Stay alert to fresh avenues for personal development.",
+        "body": "Your intuition for spotting value is working exceptionally well today. Notice subtle patterns in your work or social interactions that offer helpful leads for the future. Taking a modest step toward a new interest will create positive momentum for days to come.",
+        "watch_for": "Chasing fast results while skipping core steps.",
+        "lean_into": "Exploring a new method with practical curiosity."
+      }
+    ],
+    "TEN_GOD_DIRECT_WEALTH": [
+      {
+        "name": "Steady Management",
+        "headline": "Build lasting peace of mind through consistent habits.",
+        "body": "Today is tailor-made for restoring order and tending to practical, real-world foundations. Organize a small segment of your digital files, manage your daily budget, or declutter your immediate workspace. Small, systematic efforts made today will create a solid foundation for peace of mind.",
+        "watch_for": "Rigidity when unexpected minor tweaks are needed.",
+        "lean_into": "Organizing your workspace or reviewing daily plans."
+      },
+      {
+        "name": "Methodical Progress",
+        "headline": "Focus on step-by-step actions that yield quiet success.",
+        "body": "The energy today rewards patient diligence and steady execution over dramatic gestures. Honor your daily check-lists and give your full attention to one routine duty at a time. The quiet satisfaction of completing practical tasks will keep you grounded and confident.",
+        "watch_for": "Worrying unnecessarily about long-term perfection.",
+        "lean_into": "Checking off routine tasks systematically."
+      },
+      {
+        "name": "Grounded Stability",
+        "headline": "Cultivate security through attentive detail work.",
+        "body": "Focusing on simple, tangible responsibilities will help you feel anchored and accomplished today. Review your priorities methodically and clear away minor pending obligations before starting new ones. This reliable approach strengthens your self-trust and restores daily rhythm.",
+        "watch_for": "Fixating on tiny details at the expense of comfort.",
+        "lean_into": "Finishing a pending administrative task completely."
+      }
+    ],
+    "TEN_GOD_SEVEN_KILLINGS": [
+      {
+        "name": "Courageous Focus",
+        "headline": "Tackle challenging priorities with decisive clarity.",
+        "body": "High-intensity energy is surrounding you today, offering the bravery needed to address difficult items head-on. Pick the most intimidating task on your list and tackle it during your peak morning hours. Taking prompt, decisive action will quickly dispel anxiety and boost your confidence.",
+        "watch_for": "Pushing your physical body past reasonable limits.",
+        "lean_into": "Tackling your hardest task first with bold resolve."
+      },
+      {
+        "name": "Strategic Discipline",
+        "headline": "Channel intensity into structured, transformative action.",
+        "body": "You have the mental fortitude today to eliminate distractions and cut straight to what matters most. Use this sharp focus to streamline your priorities and eliminate inefficient routines. Embracing structured discipline today will transform potential stress into pure productivity.",
+        "watch_for": "Harsh self-criticism during demanding moments.",
+        "lean_into": "Cutting out non-essential tasks to focus on priority."
+      },
+      {
+        "name": "Resilient Momentum",
+        "headline": "Overcome hurdles by taking immediate, confident steps.",
+        "body": "Today gives you the inner strength to confront complex problems without hesitation. Instead of overthinking possible outcomes, take one concrete action that moves you through the obstacle. Your willingness to face challenges directly will earn you respect and newfound clarity.",
+        "watch_for": "Becoming impatient with people moving slower than you.",
+        "lean_into": "Taking immediate, decisive action on a pending issue."
+      }
+    ],
+    "TEN_GOD_DIRECT_OFFICER": [
+      {
+        "name": "Structured Excellence",
+        "headline": "Align with clear principles to build trust and calm.",
+        "body": "Order, clarity, and personal integrity are your best allies throughout the day. Honor your commitments meticulously and stick to a reliable schedule to build lasting respect. Following a structured plan will keep your mind calm and help you move through tasks with graceful efficiency.",
+        "watch_for": "Over-policing yourself or worrying about approval.",
+        "lean_into": "Honoring your commitments with steady consistency."
+      },
+      {
+        "name": "Harmonious Order",
+        "headline": "Restore balance by adhering to reliable routines.",
+        "body": "Today invites you to create harmony through organized habits and clear communication. Take a moment to align your expectations with colleagues or family members so everyone is on the same page. A clear structure fosters a sense of ease for both you and those around you.",
+        "watch_for": "Inflexibility when minor plans need to pivot.",
+        "lean_into": "Creating a clean schedule for your day ahead."
+      },
+      {
+        "name": "Principled Path",
+        "headline": "Gain composure by prioritizing quiet accountability.",
+        "body": "Your natural reliability shines today, making it an ideal time to complete duties smoothly. Focus on doing what is right and balanced rather than seeking shortcuts or dramatic praise. Your calm adherence to high standards brings deep satisfaction and steady focus.",
+        "watch_for": "Feeling burdened by self-imposed obligations.",
+        "lean_into": "Executing your regular duties with high integrity."
+      }
+    ],
+    "TEN_GOD_INDIRECT_RESOURCE": [
+      {
+        "name": "Intuitive Insight",
+        "headline": "Trust your inner wisdom to uncover deep perspective.",
+        "body": "Your quiet intuition is exceptionally keen today, offering fresh clarity on subtle matters. Take a few quiet moments to ponder a creative problem or step away from noisy environments. Trusting those quiet inner nudges will help you synthesize complex thoughts into brilliant ideas.",
+        "watch_for": "Over-analyzing situations into unnecessary worry.",
+        "lean_into": "Pausing for quiet reflection during busy moments."
+      },
+      {
+        "name": "Unconventional Wisdom",
+        "headline": "Explore underlying meanings to find unique answers.",
+        "body": "Today encourages you to look beyond surface-level facts and explore hidden angles. Spend some time reading an inspiring article, meditating, or exploring a new theoretical concept. Connecting disparate ideas will reveal an unconventional solution to a personal challenge.",
+        "watch_for": "Isolating yourself too much from immediate tasks.",
+        "lean_into": "Exploring an intriguing article or new concept."
+      },
+      {
+        "name": "Quiet Synthesis",
+        "headline": "Allow sub-conscious reflection to guide your next step.",
+        "body": "You will benefit greatly from quiet contemplation today rather than rushing into immediate action. Give your mind room to wander while walking or journaling to allow deeper insights to surface naturally. Your instinctual grasp of complex dynamics will serve you well.",
+        "watch_for": "Getting lost in abstract daydreams without execution.",
+        "lean_into": "Journaling your subtle impressions and insights."
+      }
+    ],
+    "TEN_GOD_DIRECT_RESOURCE": [
+      {
+        "name": "Nourishing Rest",
+        "headline": "Refuel your mind and body with comforting care.",
+        "body": "Today emphasizes gentle restoration, self-care, and absorbing helpful knowledge. Give yourself permission to pause, enjoy a soothing beverage, or learn something purely for pleasure. Prioritizing your physical and mental comfort will rebuild your stamina for upcoming goals.",
+        "watch_for": "Passivity or hesitating to start necessary tasks.",
+        "lean_into": "Taking a deliberate pause to rest and recharge."
+      },
+      {
+        "name": "Supportive Learning",
+        "headline": "Absorb wisdom and accept warm guidance from others.",
+        "body": "The atmosphere today supports learning, quiet study, and receiving kind advice from mentors. Reach out to someone you respect or spend time reviewing practical educational material. Nourishing your intellect creates a deep sense of security and readiness.",
+        "watch_for": "Over-reliance on others to solve your problems.",
+        "lean_into": "Reading educational content or seeking sound advice."
+      },
+      {
+        "name": "Grounded Recovery",
+        "headline": "Restore your inner balance through thoughtful quietude.",
+        "body": "A calm, receptive approach will yield the best emotional energy throughout your day. Focus on gentle learning, comfortable environments, and soothing routines that replenish your energy. Taking time to care for your fundamental needs sets a solid tone for sustained resilience.",
+        "watch_for": "Complacency in place of gentle self-care.",
+        "lean_into": "Creating a calm environment for personal study."
+      }
+    ]
   },
   "DEFAULT_DAILY_THEME": {
     "name": "流逝的一天",

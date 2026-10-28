@@ -34,5 +34,13 @@
     "SCHOLAR_MIND": "你那求知若渴的学者气质，让你对深奥的知识有着与生俱来的渴望。",
     "SHARP_EDGE": "你的“锐气”意味着你拥有极强的竞争力与坚韧不拔的进取心。",
     "COMMANDER": "你的“指挥官”特质使你成为一位天生的领导者，拥有坚定的道德准则。"
+  },
+  "RELATIONS": {
+    "day_chong": "You have an inner restlessness that craves constant change. You thrive when you're moving, exploring, or challenging the status quo. In relationships, you need space and novelty to stay engaged.",
+    "has_chong": "Your life is driven by unpredictable changes and challenges. It might feel exhausting at times, but this is exactly what makes you highly adaptable, resilient, and uniquely creative."
+  },
+  "SPECIAL_CONDITIONS": {
+    "RESTLESS_FEET": "You are a born 'wanderer'. You gain energy and grow through new experiences, travel, or career shifts. Being stuck in a rigid routine is your worst nightmare.",
+    "seven_killings": "You possess strong 'Boss' energy. You excel at taking control, strategizing, and leading the pack. You actually get stronger under pressure and crisis."
   }
 }
