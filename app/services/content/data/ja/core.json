@@ -5,7 +5,7 @@
       "tagline": "地面が整っていようといまいと、あなたは上へと伸びていく。",
       "symbol": "↟",
       "color": "#2F7A3F",
-      "element": "Wood",
+      "element": "木",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "あなたは先に進むために生まれています。誰もついてこなくても、進み続ける人です。",
@@ -95,7 +95,7 @@
       "tagline": "しなやかに曲がるから、折れない。",
       "symbol": "⟡",
       "color": "#5FAF7A",
-      "element": "Wood",
+      "element": "木",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "あなたは空気を読み、それに乗ることで生き延びます。",
@@ -185,7 +185,7 @@
       "tagline": "ただ存在するだけで、部屋を温める人です。",
       "symbol": "☀",
       "color": "#E85D2F",
-      "element": "Fire",
+      "element": "火",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "あなたは主役のエネルギーを持っていますが、内には落ち着かない炎も抱えています。",
@@ -273,7 +273,7 @@
       "tagline": "焚き火ではなく、灯籠です。",
       "symbol": "✦",
       "color": "#C2461F",
-      "element": "Fire",
+      "element": "火",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "静かに燃え、一人で燃える。それは孤独ではなく、職人芸です。",
@@ -363,7 +363,7 @@
       "tagline": "他の人が立つ地面そのものです。",
       "symbol": "▣",
       "color": "#8B6F3F",
-      "element": "Earth",
+      "element": "土",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "動きは遅いが、最後に動き、しかも正しい。",
@@ -453,7 +453,7 @@
       "tagline": "静かに、忍耐強く、本物を育てる人です。",
       "symbol": "❉",
       "color": "#A89060",
-      "element": "Earth",
+      "element": "土",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "近道も派手さもなしに、自分の手で長く続くものを築きます。",
@@ -543,7 +543,7 @@
       "tagline": "みんなが避けている問題を、切り開いていく人です。",
       "symbol": "⚔",
       "color": "#5A6B7A",
-      "element": "Metal",
+      "element": "金",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "あるがままを口にします。好かれるより、正しくありたい人です。",
@@ -633,7 +633,7 @@
       "tagline": "意図をもって削られたからこそ、輝く人です。",
       "symbol": "◈",
       "color": "#9AACB8",
-      "element": "Metal",
+      "element": "金",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "何年もかけて自分の好みを磨いてきました。そして、それは現れています。",
@@ -723,7 +723,7 @@
       "tagline": "海のように動きます。表面はゆっくり、けれどその下は広大です。",
       "symbol": "≈",
       "color": "#1B3A5C",
-      "element": "Water",
+      "element": "水",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "瞬間ではなく、仕組みで考えます。",
@@ -813,7 +813,7 @@
       "tagline": "静かに現れ、周りのすべてを育てます。",
       "symbol": "◌",
       "color": "#4A6FA5",
-      "element": "Water",
+      "element": "水",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "説明できる前に、知っています。",
@@ -900,9 +900,9 @@
     }
   },
   "DEFAULT_INTENSITY": {
-    "hero": "You are still becoming.",
+    "hero": "あなたはまだ、形成されつつある存在です。",
     "narrative": [
-      "This chart is being read in a way we don't have words for yet."
+      "このチャートは、まだ言葉にできない方法で読み解かれようとしています。"
     ],
     "shadows": [],
     "advice": [],
