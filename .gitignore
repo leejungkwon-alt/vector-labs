@@ -76,3 +76,6 @@ scripts/__pycache__/
 
 # 콘텐츠 팩은 git에 포함
 !app/services/content/data/
+
+# Dev script cache
+scripts/.cache/
