@@ -220,13 +220,15 @@ function CompatTab({ token, profile, text }) {
     setLoading(true);
 
     const personA = { ...profile, lang: profile.lang || 'en' };
+    delete personA.lang;
+    
     const personB = { 
       birth_date: partnerBd, 
       birth_time: '12:00:00', 
       birth_time_mode: 'exact', // 👈 422 에러 해결을 위해 명시적 추가
       birth_location: 'seoul', 
       gender: 'F', 
-      lang: profile.lang || 'en' 
+      
     };
 
     fetch(`${API_BASE}/saju/compatibility`, {
