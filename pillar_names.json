@@ -1,0 +1,24 @@
+# scripts/fix_es_pillar_names.py
+"""pillar_names.json의 name을 core_pillars/*.json과 동기화 (단일 진실 소스 = core_pillars)"""
+import json, pathlib
+
+base = pathlib.Path('app/services/content/data/es')
+pn_path = base / 'pillar_names.json'
+pn = json.loads(pn_path.read_text('utf-8'))
+
+changed = []
+for p in sorted((base / 'core_pillars').glob('*.json')):
+    key = p.stem
+    if key not in pn:
+        continue
+    d = json.loads(p.read_text('utf-8'))
+    new_name = d.get('name')
+    if new_name and pn[key].get('name') != new_name:
+        changed.append((key, pn[key].get('name'), new_name))
+        pn[key]['name'] = new_name
+
+pn_path.write_text(json.dumps(pn, ensure_ascii=False, indent=2) + '\n', 'utf-8')
+
+for k, old, new in changed:
+    print(f'OK {k}: {old!r} → {new!r}')
+print(f'\nSynced {len(changed)} entries in pillar_names.json')
