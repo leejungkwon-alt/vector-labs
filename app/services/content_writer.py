@@ -994,7 +994,7 @@ def generate_full_report(profile: dict, lang: str = "en", user_id: str | None = 
         "summary_cards": _build_summary_cards(profile, lang, user_id=user_id),
         "sections": sections,
         "disclaimer": _disclaimer(lang),
-        "crisis_resources": get_crisis_resources(profile.get("region")),
+        "crisis_resources": get_crisis_resources(profile.get("region"), lang),
     }
 
 

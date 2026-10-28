@@ -1,3 +1,4 @@
+import { useT } from "@/i18n";
 // frontend/src/components/sections/ChartSection.tsx
 import { View, Text } from "react-native";
 import { colors } from "@/theme";
@@ -5,6 +6,7 @@ import { ss } from "./shared";
 import type { ChartSection } from "../../../types";
 
 export function ChartSectionView({ section }: { section: ChartSection }) {
+  const t = useT();
   return (
     <View>
       {section.hero && (
@@ -29,7 +31,7 @@ export function ChartSectionView({ section }: { section: ChartSection }) {
             }}
           >
             <Text style={ss.blockTitle}>
-              {layer.label} {layer.is_self && "(본질)"}
+              {layer.label} {layer.is_self && t("sections.coreEssence")}
             </Text>
             <Text style={{ fontSize: 14, fontWeight: "700", color: colors.primary }}>
               {layer.archetype} · {layer.element}
