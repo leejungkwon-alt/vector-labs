@@ -1,10 +1,10 @@
 {
   "ELEMENT_DOMINANT": {
     "GROWTH": "Your dominant Growth energy gives you an unstoppable drive to start new things, but it can leave you restless.",
-    "SPARK": "Your intense Spark energy makes you highly visible and magnetic, though it risks burning you out.",
+    "SPARK": "Your intense Spark energy makes you highly visible and compelling, though it risks burning you out.",
     "GROUND": "Your heavy Ground energy makes you the reliable anchor for others, but you may carry too much weight.",
     "EDGE": "Your sharp Edge energy gives you surgical clarity, but you must be careful not to cut too deep.",
-    "FLOW": "Your deep Flow energy grants you profound adaptability and wisdom, but you might struggle to commit."
+    "FLOW": "Your deep Flow energy grants you deep adaptability and wisdom, but you might struggle to commit."
   },
   "ELEMENT_DEFICIENT": {
     "GROWTH": "Your lack of Growth means you often struggle to start things without a clear push.",
@@ -27,7 +27,7 @@
     "SELF_MADE": "With a Self-Made structure, you rely on your own hard work above all else."
   },
   "SINSAL": {
-    "MAGNETIC_DRAW": "Your Magnetic Draw means people notice you before you even speak.",
+    "MAGNETIC_DRAW": "Your natural draw means people notice you before you even speak.",
     "RESTLESS_FEET": "Your Restless Feet mean you are wired for movement and exploration.",
     "SOLITARY_DEPTH": "Your Solitary Depth gives you a rich inner world that few get to see.",
     "ALLY_MAGNET": "Your Ally Magnet means you naturally attract mentors and supporters.",
