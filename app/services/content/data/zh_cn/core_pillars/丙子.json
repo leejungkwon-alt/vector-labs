@@ -1,29 +1,29 @@
 {
   "pillar": "丙子",
-  "hero": "You're a lantern floating on a dark lake. Warm light above the surface — cold, deep currents below.",
+  "hero": "你就像一盏漂浮在黑暗湖面上的灯笼。水面之上是温暖的光芒——水面之下则是冰冷而深邃的暗流。",
   "narrative": [
-    "People who meet you first remember a bright, expressive person. You lead conversations, warm up rooms, and naturally become the center of things. But step closer, and they notice — there's something deeper moving under the brightness. You are more complex inside than you look from across the room.",
-    "Your strength is this duality. The heat on the surface draws people in; the depth underneath keeps them there. Having both makes you someone who isn't light, and isn't heavy either. The trouble comes when these two halves lose their balance. When only the surface leads, you seem shallow. When only the depth leads, you go dark.",
-    "This is probably why your emotional tides rise and fall as they do. Some days you could love everything in the world. Other days you sink for no clear reason. You don't have to explain the wave to yourself — just notice, 'I'm on the deep side right now.' Don't force yourself back up.",
-    "Your maturity comes from letting both the fire and the depth exist at once. If you only love the bright side and hide the dark one, they start eating each other. When both are present, you become the place people actually want to stay. That's your most solid charm."
+    "初次见到你的人，印象中你是一个开朗、富有表现力的人。你善于引导对话，能让气氛活跃起来，自然而然地成为全场的焦点。但当人们走近一些时，他们会发现——在那份开朗之下，还有更深层次的东西在涌动。你的内心比从房间另一端看去要复杂得多。",
+    "你的力量就在于这种双重性。表面的热度吸引人们靠近；深处的内涵则让他们留下来。兼具这两者，让你既不轻浮，也不沉重。问题在于，当这两部分失去平衡时，麻烦就来了。当只有表面占据主导时，你会显得肤浅；当只有内在占据主导时，你会变得阴暗。",
+    "这大概就是你情绪起伏的原因。有些日子，你仿佛能爱上世间万物；而有些日子，你却会莫名地陷入低谷。你不必向自己解释这种情绪波动——只需察觉：“我现在正处于情绪低谷。”不要强迫自己振作起来。",
+    "你的成熟，源于让热情与深度并存。如果你只钟爱光明的一面，而将阴暗的一面隐藏起来，它们就会相互吞噬。当两者并存时，你便会成为人们真正愿意停留的地方。这正是你最持久的魅力所在。"
   ],
   "shadows": [
-    "When you sink, you can't explain why, and people misread you.",
-    "People used to the surface don't notice your deeper worries.",
-    "The deeper your feeling, the blurrier your judgment. Make big decisions when the tide is low."
+    "当你陷入低谷时，你无法解释原因，而别人又会误解你。",
+    "习惯于看表面的人，不会注意到你内心的深层忧虑。",
+    "感情越深，判断就越模糊。重大决策应在退潮时做出。"
   ],
   "advice": [
-    "This week, catch one moment of sinking without a reason. Just notice what kind of wave it is.",
-    "Tell someone close, 'I'm on the deep side right now.' No explanation needed.",
-    "Make big decisions after the emotional wave has passed. Calls made on the wave don't last.",
-    "Separate the moments when your brightness is real from when it's a performance for others."
+    "本周，请留意一个“莫名下沉”的瞬间。只需观察一下那是什么样的波浪。",
+    "对身边的人说一句：“我现在有点情绪低落。”无需多做解释。",
+    "在情绪高涨的浪潮过去之后再做重大决定。在情绪高涨时做出的决定往往难以持久。",
+    "区分那些你真正闪耀的时刻，以及那些只是为了取悦他人的表演。"
   ],
   "keywords": [
-    "warm depth",
-    "light and tide",
-    "surface and abyss",
-    "quiet fire"
+    "温暖的深度",
+    "光与潮汐",
+    "表面与深渊",
+    "静默之火"
   ],
-  "name": "Lantern on a Lake",
+  "name": "湖上的灯笼",
   "name_traditional": ""
 }

@@ -1,253 +1,253 @@
 {
   "LUCKY_CODE_CONTENT": {
     "GROWTH": {
-      "element": "Wood",
+      "element": "木",
       "keywords": [
-        "expansion",
-        "direction",
-        "initiative"
+        "扩展",
+        "方向",
+        "倡议"
       ],
       "colors": [
-        "Forest green",
+        "森林绿",
         "Jade",
-        "Olive"
+        "橄榄"
       ],
       "numbers": [
         3,
         8
       ],
       "directions": [
-        "East",
-        "Southeast"
+        "东",
+        "东南"
       ],
       "activities": [
-        "Morning walks",
-        "Hiking",
-        "Gardening",
-        "Reading",
-        "Starting something small"
+        "晨间散步",
+        "徒步旅行",
+        "园艺",
+        "阅读",
+        "从小事做起"
       ],
       "foods": [
-        "Leafy greens",
-        "Sour foods",
-        "Fresh herbs"
+        "绿叶蔬菜",
+        "酸味食物",
+        "新鲜香草"
       ],
       "practices": [
-        "Start one thing this week without a full plan.",
-        "Spend 20 minutes in nature — not as fitness, just as presence.",
-        "Write one direction you're moving toward, and one you're not."
+        "本周，试着做一件没有详细计划的事情。",
+        "在自然中待上20分钟——不是为了健身，只是为了沉浸其中。",
+        "请写下你正在朝哪个方向前进，以及你没有朝哪个方向前进。"
       ]
     },
     "SPARK": {
-      "element": "Fire",
+      "element": "火",
       "keywords": [
-        "expression",
-        "warmth",
-        "visibility"
+        "表达",
+        "温暖",
+        "可见性"
       ],
       "colors": [
-        "Red",
-        "Orange",
-        "Magenta"
+        "网络",
+        "橙色",
+        "品红"
       ],
       "numbers": [
         2,
         7
       ],
       "directions": [
-        "South"
+        "南方"
       ],
       "activities": [
-        "Social gatherings",
-        "Live music",
-        "Performance",
-        "High-intensity training"
+        "社交聚会",
+        "现场音乐",
+        "性能",
+        "高强度训练"
       ],
       "foods": [
-        "Bitter greens",
-        "Warm spices",
-        "Coffee or tea"
+        "苦叶菜",
+        "暖香辛料",
+        "咖啡还是茶"
       ],
       "practices": [
-        "Say one thing out loud this week you've been feeling quietly.",
-        "Do something visible — post, present, perform. Even small.",
-        "Put yourself in a room with warm people."
+        "这周，试着把一件你一直默默放在心底的事情说出来吧。",
+        "做些能让人看到的事情——发帖、做报告、表演。哪怕是小事也行。",
+        "让自己置身于一群温暖的人之中。"
       ]
     },
     "GROUND": {
-      "element": "Earth",
+      "element": "土",
       "keywords": [
-        "stability",
-        "trust",
-        "patience"
+        "稳定性",
+        "信任",
+        "耐心"
       ],
       "colors": [
-        "Yellow",
-        "Brown",
-        "Beige",
-        "Ochre"
+        "黄色",
+        "布朗",
+        "米色",
+        "赭石"
       ],
       "numbers": [
         5,
         10
       ],
       "directions": [
-        "Southwest",
-        "Northeast",
-        "Center"
+        "西南",
+        "东北",
+        "中心"
       ],
       "activities": [
-        "Cooking",
-        "Pottery",
-        "Slow walks",
-        "Journaling",
-        "Grounding"
+        "烹饪",
+        "陶器",
+        "慢步",
+        "写日记",
+        "接地"
       ],
       "foods": [
-        "Root vegetables",
-        "Whole grains",
-        "Sweet foods in moderation"
+        "根茎类蔬菜",
+        "全谷物",
+        "甜食要适量"
       ],
       "practices": [
-        "Eat one meal a week with no screen.",
-        "Keep one physical object near you that reminds you of home.",
-        "Do one thing this week with your hands, not your mind."
+        "每周安排一顿不看电子屏幕的饭。",
+        "在身边放一件能让你想起家的实物。",
+        "本周做一件用双手而不是用脑子的事。"
       ]
     },
     "EDGE": {
-      "element": "Metal",
+      "element": "金",
       "keywords": [
-        "clarity",
-        "structure",
-        "precision"
+        "清晰度",
+        "结构",
+        "精度"
       ],
       "colors": [
-        "White",
-        "Silver",
-        "Metallic gold"
+        "白色",
+        "银",
+        "金属金"
       ],
       "numbers": [
         4,
         9
       ],
       "directions": [
-        "West",
-        "Northwest"
+        "西部",
+        "西北"
       ],
       "activities": [
-        "Strength training",
-        "Decluttering",
-        "Learning an instrument",
-        "Editing something"
+        "力量训练",
+        "整理收纳",
+        "学习乐器",
+        "编辑某内容"
       ],
       "foods": [
-        "Pungent spices",
-        "Nuts and seeds",
-        "White fish"
+        "辛辣的香料",
+        "坚果和种子",
+        "白鱼"
       ],
       "practices": [
-        "Declutter one drawer, one inbox, one list.",
-        "Say the direct thing this week — without softening it.",
-        "Ask one question before giving the answer."
+        "整理一个抽屉、一个收件箱、一份清单。",
+        "本周请直截了当地表达——不要拐弯抹角。",
+        "在给出答案之前，先问一个问题。"
       ]
     },
     "FLOW": {
-      "element": "Water",
+      "element": "水",
       "keywords": [
-        "adaptability",
-        "wisdom",
-        "depth"
+        "适应性",
+        "智慧",
+        "深度"
       ],
       "colors": [
-        "Black",
-        "Navy",
-        "Deep gray"
+        "黑色",
+        "海军",
+        "深灰色"
       ],
       "numbers": [
         1,
         6
       ],
       "directions": [
-        "North"
+        "北"
       ],
       "activities": [
-        "Swimming",
-        "Meditation",
-        "Journaling",
-        "Music",
-        "Long conversations"
+        "游泳",
+        "冥想",
+        "写日记",
+        "音乐",
+        "长谈"
       ],
       "foods": [
-        "Sea vegetables",
-        "Black beans",
-        "Salty foods in moderation"
+        "海藻",
+        "黑豆",
+        "咸味食物应适量食用"
       ],
       "practices": [
-        "Sit with one unresolved question without forcing an answer.",
-        "Write a page of stream-of-consciousness this week.",
-        "Say yes to one thing that has no clear plan."
+        "静下心来，面对一个尚未解决的问题，不要强求答案。",
+        "本周写一页意识流文字。",
+        "对一件没有明确计划的事情说“好”。"
       ]
     }
   },
   "LUCKY_CODE_DOMAINS": {
     "GROWTH": {
-      "career": "Teaching, publishing, gardening, fashion, planning, education — roles where you grow people or projects.",
-      "wealth": "Tending what you already have, rather than chasing what's new. Long-term thinking suits you — trust the compounding.",
-      "relationships": "Peer relationships that push you forward. Find people who grow alongside you, not toward you.",
-      "learning": "Deep study over fast skimming. One topic for a year beats ten for a month.",
-      "everyday": "Start things small and often. Forward motion is your medicine.",
+      "career": "教学、出版、园艺、时尚、规划、教育——这些都是能够培养人才或推动项目发展的领域。",
+      "wealth": "专注于你已拥有的，而非一味追求新事物。长远规划更适合你——相信复利效应。",
+      "relationships": "能推动你前进的同伴关系。寻找那些与你共同成长、而非向你靠拢的人。",
+      "learning": "深入钻研胜过匆匆浏览。一年钻研一个课题，胜过一个月钻研十个课题。",
+      "everyday": "从小事做起，并坚持经常去做。不断前进就是你的良药。",
       "avoid": [
-        "Waiting for perfect conditions",
-        "Perfectionist paralysis",
-        "Sitting still for too long"
+        "等待最佳条件",
+        "完美主义导致的行动瘫痪",
+        "久坐不动"
       ]
     },
     "SPARK": {
-      "career": "Marketing, media, IT, energy, hospitality, entertainment — anything that needs visibility and heat.",
-      "wealth": "Opportunity often finds you through people. Watch for the urge to say yes to everything — focus is your real multiplier.",
-      "relationships": "Warm, expressive people who don't need you to be quiet. Small talk is not your enemy.",
-      "learning": "Learn out loud. Teach what you're learning before you master it.",
-      "everyday": "One visibly warm gesture a day. Text, call, thank someone.",
+      "career": "营销、媒体、IT、能源、酒店、娱乐——任何需要提升知名度和热度的领域。",
+      "wealth": "机会往往通过人找到你。要警惕那种对所有事情都想说“好”的冲动——专注才是你真正的助力。",
+      "relationships": "那些热情、善于表达的人，他们并不需要你保持沉默。闲聊并不是你的敌人。",
+      "learning": "大声学习。在完全掌握之前，就去教别人你正在学的内容。",
+      "everyday": "每天做一件能让人感受到温暖的小事。发条短信、打个电话，或者向某人道声谢。",
       "avoid": [
-        "Being the only light in a dark room",
-        "Saying yes to every invitation",
-        "Running on empty"
+        "成为黑暗房间里唯一的光芒",
+        "对每份邀请都答应下来",
+        "油箱见底"
       ]
     },
     "GROUND": {
-      "career": "Real estate, construction, education, brokerage, agriculture — anything with a foundation under it.",
-      "wealth": "Steady is your advantage. Respect the power of the same small choice repeated. Boring, done well, compounds.",
-      "relationships": "Few, deep, steady. Loyalty over novelty. Quality time beats quality words.",
-      "learning": "Structured programs. Teachers with credentials. Certifications over inspiration.",
-      "everyday": "Same wake time. Same meal time. Rhythm is the whole game.",
+      "career": "房地产、建筑、教育、经纪、农业——任何有根基的行业。",
+      "wealth": "稳健是你的优势。要尊重同一个微小选择反复实践所产生的力量。看似枯燥的事情，只要做得好，就会产生复利效应。",
+      "relationships": "数量少，但要深厚而稳定。忠诚胜过新奇。高质量的相处时光胜过华丽的辞藻。",
+      "learning": "结构化的课程。持有资质的教师。证书重于启发。",
+      "everyday": "同样的起床时间。同样的用餐时间。节奏才是关键。",
       "avoid": [
-        "Chasing the new thing every quarter",
-        "Speed for its own sake",
-        "Change without reason"
+        "每季度都追逐新事物",
+        "为了速度而追求速度",
+        "无缘无故的变化"
       ]
     },
     "EDGE": {
-      "career": "Finance, law, military, police, medicine, engineering — work with rules, precision, and consequence.",
-      "wealth": "Clarity is your currency. You'd rather understand than chase. Check you're not mistaking caution for avoidance.",
-      "relationships": "Directness is your love language. People who can take your real opinion. Nothing performative.",
-      "learning": "Formal training. Apprenticeships. Systems and frameworks over inspiration.",
-      "everyday": "One thing cleaned, one thing said, one line drawn.",
+      "career": "金融、法律、军事、警察、医学、工程——这些领域的工作都讲究规则、精准和后果。",
+      "wealth": "清晰是你的资本。你宁愿弄明白，也不愿盲目追逐。请确认自己没有将谨慎误认为逃避。",
+      "relationships": "直率是你的爱之语言。能坦然接受你真实看法的人。绝不做作。",
+      "learning": "正规培训。学徒制。重视体系和框架，而非灵感。",
+      "everyday": "清理一件事，说一句话，划一条线。",
       "avoid": [
-        "Winning the argument at all costs",
-        "Emotional coldness masked as honesty",
-        "Over-structuring your life"
+        "不惜一切代价赢得争论",
+        "伪装成诚实的冷漠",
+        "将生活安排得过于刻板"
       ]
     },
     "FLOW": {
-      "career": "Trading, logistics, travel, consulting, research, anything that moves or connects.",
-      "wealth": "Your relationship with resources moves with the seasons. Trust the rhythm — but build one steady habit to anchor you.",
-      "relationships": "Deep, quiet, unhurried. People you can think with, not just talk to.",
-      "learning": "Slow, immersive study. You learn by absorbing, not by drilling.",
-      "everyday": "Say yes to one unplanned thing a week. Keep the current moving.",
+      "career": "贸易、物流、旅游、咨询、研究——凡是涉及流动或连接的事物。",
+      "wealth": "你与资源的关系随季节更替而变化。顺应这种节奏——但要养成一个稳定的习惯，作为你的精神支柱。",
+      "relationships": "深邃、沉静、从容。是那些能与你共同思考的人，而不仅仅是聊聊天的人。",
+      "learning": "缓慢而沉浸式的学习。你是通过吸收来学习，而不是通过机械重复。",
+      "everyday": "每周尝试做一件计划外的事情。让生活保持流动。",
       "avoid": [
-        "Committing too early",
-        "Over-analyzing instead of acting",
-        "Scattering focus"
+        "过早做出承诺",
+        "过度分析而非付诸行动",
+        "散射焦点"
       ]
     }
   }

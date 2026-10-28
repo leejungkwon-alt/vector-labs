@@ -1,29 +1,29 @@
 {
   "pillar": "丙辰",
-  "hero": "You're sunlight over a misty marsh. Warmth that turns to vapor and quietly wraps around everything.",
+  "hero": "你就像笼罩在雾气弥漫的沼泽上空的阳光。那份温暖化作水汽，静静地将万物包裹其中。",
   "narrative": [
-    "You're warm but blurry. The heat is real, but where it points and what it's building is often not clear — even to you. That blur isn't a flaw; it's a texture. Some people remember you as 'the warm one.' Others remember you as 'the one I couldn't quite read.'",
-    "You're a person of transformation. Just as fire meets earth and becomes vapor, you take shape according to what's around you. You're more natural changing form with relationships and settings than staying fixed in one place. That's why you read people and rooms so well. Not because you're perceptive as a strategy — because that's simply your language.",
-    "The trouble is when the blur blurs your judgment. Feeling and fact get tangled, and you can't tell what you actually feel or want. When that happens, don't force yourself to 'become clear.' Fog doesn't clear by being pushed. It clears by being given time.",
-    "Your strength is the softness and acceptance this blur produces. You don't slice the world into clean lines; you can hold it with a blurred kindness. That's why people stay near you. But you need to ask yourself a sharp question sometimes: 'Where am I, and where do I want to go?'"
+    "你给人一种温暖却又模糊的感觉。这份温暖是真实存在的，但它指向何处、正在酝酿什么，往往并不清晰——甚至连你自己也不清楚。这种模糊并非缺陷，而是一种特质。有些人记得你是“那个温暖的人”，另一些人则记得你是“那个我始终无法完全看透的人”。",
+    "你是一个善于转变的人。正如火焰遇上泥土便化作水汽，你也会根据周围的环境而改变形态。 与固守一处相比，你更擅长根据人际关系和环境变化而调整自己。正因如此，你才能如此敏锐地洞察他人和氛围。这并非因为你将敏锐作为一种策略——而是因为这本就是你的语言。",
+    "问题在于，当迷雾模糊了你的判断时。情感与事实交织在一起，你无法分辨自己真正感受或想要的是什么。遇到这种情况时，不要强迫自己“理清思绪”。雾气不会因为被驱散而消散，而是需要时间才能散去。",
+    "你的力量，正源于这种模糊感所带来的柔和与包容。你不会将世界划分为泾渭分明的界限；你能以一种模糊而温和的方式包容世界。这就是人们愿意留在你身边的原因。但有时，你需要问自己一个尖锐的问题：“我现在身在何处？我又想去哪里？”"
   ],
   "shadows": [
-    "Feeling and fact get tangled, and you don't know what you want.",
-    "You use the blur as an excuse to delay important decisions.",
-    "People around you are unsure whether you're 'deep' or 'indecisive.'"
+    "感觉与事实交织在一起，你不知道自己到底想要什么。",
+    "你把这种模糊不清当作借口，来拖延做出重要决定。",
+    "周围的人不确定你是“深沉”还是“优柔寡断”。"
   ],
   "advice": [
-    "Once a day, ask one sharp question of yourself: 'What do I actually want right now?'",
-    "When feelings are unclear, write down the facts first. Feelings come next.",
-    "Don't strain to become clear. Give the fog time. Judgment comes after.",
-    "Once a month, say clearly where you are — to family, friends, work, whoever."
+    "每天问自己一个尖锐的问题：“我现在真正想要的是什么？”",
+    "当情绪不明朗时，先把事实写下来。情绪留到后面再说。",
+    "不要勉强自己看清一切。给迷雾一些时间。判断自然会随之而来。",
+    "每月一次，向家人、朋友、同事或任何人明确告知你的行踪。"
   ],
   "keywords": [
-    "warm blur",
-    "power of form",
-    "soft perception",
-    "wisdom of fog"
+    "温暖的模糊",
+    "形式的威力",
+    "柔和的感知",
+    "雾中的智慧"
   ],
-  "name": "Sunlight Over a Marsh",
+  "name": "沼泽上的阳光",
   "name_traditional": ""
 }

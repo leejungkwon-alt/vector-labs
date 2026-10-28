@@ -1,29 +1,29 @@
 {
   "pillar": "庚午",
-  "hero": "You're a blade inside a forge. The heat doesn't soften you — it makes you clearer.",
+  "hero": "你就像锻炉里的刀刃。高温不会让你变软——反而让你更加锋利。",
   "narrative": [
-    "You're someone whose principles and passion live in the same body. When you decide something, you try to judge by a standard rather than by mood. But that standard isn't cold calculation — it comes from a conviction that burns hot. 'This is right' or 'this is not' ignites in you first, and only then becomes words.",
-    "At work, what shows first is decisiveness. You cut through vague discussions, make calls, and take responsibility. People tend to hand you the role of 'the one who decides.' It's the same in relationships. You find ambiguity hard to sit with, and you express what you like and dislike clearly. That clarity reads to others as trust — and sometimes as pressure.",
-    "Your task is to separate the 'hot standard' from the 'cool judgment.' The hot standard is your values. The cool judgment is the tool that executes those values. Mix them, and a right word becomes a wound. Separate them, and decisiveness becomes respect. Before a decision, ask: 'Is this what I believe is right, or is this the most accurate read of this situation right now?'",
-    "Once that distinction settles in, your intensity stops pushing people away and starts pulling them in. Someone who holds principles and still sees people. Someone who carries heat and still executes calmly. That is the mature form of this pillar. You don't have to get there all at once — just keep walking in that direction."
+    "你是一个将原则与热情融为一体的人。当你做出决定时，你会试图依据某种标准来判断，而不是凭一时兴起。但这个标准并非冷冰冰的算计——它源于一种炽热的信念。“这是对的”或“这是错的”这种想法首先在你心中燃起，然后才化作言语。",
+    "在工作中，最先展现出来的就是果断。你能一锤定音，结束那些模棱两可的讨论，果断做出决定，并勇于承担责任。 人们往往会把“决策者”的角色交给你。在人际关系中也是如此。你难以忍受模棱两可，会明确表达自己的喜好与厌恶。这种明确性在他人眼中代表着信任——有时也会被视为压力。",
+    "你的任务是将“激情标准”与“冷静判断”区分开来。“激情标准”就是你的价值观，“冷静判断”则是践行这些价值观的工具。若将二者混为一谈，一句恰当的话便会伤人；若能将二者区分开来，果断便会赢得尊重。 在做出决定之前，请自问：“这是我认为正确的事情，还是对当下局势最准确的判断？”",
+    "一旦这种区别深入人心，你的那股劲头就不会再把人推开，反而会把人吸引过来。既坚守原则，又能体恤他人；既充满激情，又能沉着应对。这就是这一支柱的成熟形态。你不必一蹴而就——只需朝着那个方向不断前行。"
   ],
   "shadows": [
-    "When your certainty is strong, you close the door on hearing the other person out.",
-    "You sometimes dress up emotion as 'judgment.' That's not a standard — that's hurt.",
-    "Deciding nonstop wears you down, and you often can't admit your own fatigue."
+    "当你确信无疑时，你就不再愿意倾听对方的意见了。",
+    "你有时会把情绪包装成“评判”。那不是标准——那是受伤了。",
+    "不停地做决定会让人精疲力尽，而你往往无法承认自己已经疲惫了。"
   ],
   "advice": [
-    "Before deciding, ask once: is this my values, or is this the best call for this specific moment?",
-    "This week, listen all the way through before you judge — just once.",
-    "Give yourself recovery time after a hard decision. Strong calls need strong rest.",
-    "Tell one person you respect about something you're wrestling with. You don't have to carry it all alone."
+    "在做出决定之前，请先问自己一次：这是我的价值观，还是当下这一刻的最佳选择？",
+    "本周，在做出判断之前，请先完整听一遍——就这一遍。",
+    "在做出艰难决定后，请给自己留出恢复的时间。艰难的抉择需要充分的休息。",
+    "向一位你敬重的人倾诉一下你正在纠结的事情。你不必独自承担这一切。"
   ],
   "keywords": [
-    "hot principles",
-    "clear resolve",
-    "passionate cool",
-    "weight of responsibility"
+    "热门原则",
+    "坚定决心",
+    "充满激情又酷",
+    "责任之重"
   ],
-  "name": "Blade in the Forge",
+  "name": "熔炉中的刀刃",
   "name_traditional": ""
 }

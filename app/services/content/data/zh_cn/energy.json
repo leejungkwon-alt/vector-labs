@@ -1,63 +1,63 @@
 {
   "ELEMENT_DISPLAY": {
-    "GROWTH": "Growth",
-    "SPARK": "Spark",
-    "GROUND": "Ground",
-    "EDGE": "Edge",
-    "FLOW": "Flow"
+    "GROWTH": "成长",
+    "SPARK": "火花",
+    "GROUND": "大地",
+    "EDGE": "锐利",
+    "FLOW": "流动"
   },
   "ELEMENT_KEYWORDS": {
     "GROWTH": [
-      "expansion",
-      "direction",
-      "initiative"
+      "扩展",
+      "方向",
+      "倡议"
     ],
     "SPARK": [
-      "expression",
-      "warmth",
-      "visibility"
+      "表达",
+      "温暖",
+      "可见性"
     ],
     "GROUND": [
-      "stability",
-      "trust",
-      "patience"
+      "稳定性",
+      "信任",
+      "耐心"
     ],
     "EDGE": [
-      "clarity",
-      "structure",
-      "precision"
+      "清晰度",
+      "结构",
+      "精度"
     ],
     "FLOW": [
-      "adaptability",
-      "wisdom",
-      "depth"
+      "适应性",
+      "智慧",
+      "深度"
     ]
   },
   "ELEMENT_CONTENT": {
     "GROWTH": {
-      "on_dominant": "You have an overabundance of growth energy. It shows up as relentless forward motion — you start things easily, and you rarely feel finished.",
-      "on_deficient": "Growth is one of your scarcest energies. You can struggle to start things without a clear reason, or to keep growing something once the novelty fades.",
-      "on_missing": "You have almost no growth energy in your chart. This isn't a flaw — it means you operate from a different center, and 'expansion for its own sake' will never motivate you."
+      "on_dominant": "你拥有过剩的成长能量。这表现为永不停歇的向前推进——你很容易开始做事情，却很少觉得已经完成。",
+      "on_deficient": "成长是你最稀缺的能量之一。你可能会在没有明确理由的情况下难以着手做某事，或者在新鲜感消退后难以坚持将某件事做下去。",
+      "on_missing": "你的星盘中几乎没有成长能量。这并不是缺点——这意味着你的行动源于不同的核心，而“为了扩张而扩张”永远无法激励你。"
     },
     "SPARK": {
-      "on_dominant": "Your chart is fire-heavy. You run hot, you radiate visibly, and you don't do subtle. The risk is burnout — everyone wants a piece of the warmth.",
-      "on_deficient": "Spark is one of your scarcest energies. You don't perform enthusiasm, and you're not here for volume. Your warmth is quieter than most.",
-      "on_missing": "You have almost no spark energy. You're drawn to people who carry it — they're the light that makes your own quiet work visible."
+      "on_dominant": "你的星盘中火元素过盛。你热情高涨，浑身散发着热量，行事从不含蓄。这可能会导致精疲力竭——因为每个人都想分得一份这份温暖。",
+      "on_deficient": "“火花”是你最稀缺的能量之一。你不会刻意表现热情，也不追求表面上的热闹。你的温暖比大多数人都要内敛。",
+      "on_missing": "你几乎没有那种闪耀的能量。你被那些拥有这种能量的人所吸引——他们就像一盏明灯，让你的默默付出得以显现。"
     },
     "GROUND": {
-      "on_dominant": "You have deep ground energy. You're the person others anchor to, and you don't even notice you're doing it. The risk is holding too much for too long.",
-      "on_deficient": "Ground is one of your scarcest energies. You can struggle to stay still, or to make peace with slow progress. You probably move more than you'd admit.",
-      "on_missing": "You have almost no ground energy. Stability isn't your default state — you find your footing by moving, not by settling."
+      "on_dominant": "你拥有深厚的内在力量。你是他人赖以依靠的支柱，而你自己却浑然不觉。其中的风险在于，你承担了太多，且持续了太久。",
+      "on_deficient": "“接地气”是你最稀缺的能量之一。你可能很难保持静止，或者难以接受缓慢的进展。你行动的频率可能比你承认的要高。",
+      "on_missing": "你几乎没有内力支撑。稳定并非你的常态——你是通过行动来站稳脚跟，而不是通过安于现状。"
     },
     "EDGE": {
-      "on_dominant": "Your chart is metal-heavy. You cut through the noise. You'd rather be right than liked, and you're usually right. The risk is losing the room while winning the point.",
-      "on_deficient": "Edge is one of your scarcest energies. You can avoid conflict even when it's the right call, and you soften things that don't need softening.",
-      "on_missing": "You have almost no edge energy. Structure and precision aren't what you lead with — you lead with something warmer, and that's not a weakness."
+      "on_dominant": "你的星盘中金属元素占主导。你能穿透表象直击本质。你宁可正确也不愿讨人喜欢，而且你通常都是对的。风险在于，虽然赢得了论点，却可能因此失去全场支持。",
+      "on_deficient": "“锋芒”是你最稀缺的能量之一。即使采取冲突是正确的决定，你也会避免冲突，甚至会对本不需要缓和的事情加以缓和。",
+      "on_missing": "你几乎没有那种锐气。结构和精准度并不是你的亮点——你的亮点在于一种更温暖的特质，而这绝非弱点。"
     },
     "FLOW": {
-      "on_dominant": "Your chart is water-heavy. You move easily, adapt easily, and know when to wait. The risk is never quite committing to anything because everything is possible.",
-      "on_deficient": "Flow is one of your scarcest energies. You can struggle to go with the current — you want to know where things are going before you move.",
-      "on_missing": "You have almost no flow energy. You don't drift; you decide. This makes you reliable in a crisis, but it can feel rigid when the situation calls for adaptability."
+      "on_dominant": "你的星盘中水象元素占主导。你行动自如、适应力强，且懂得何时该静观其变。但风险在于，由于一切皆有可能，你往往难以对任何事情全心投入。",
+      "on_deficient": "“顺势而为”是你最稀缺的能量之一。你可能很难顺势而为——你总想在行动之前先弄清楚事情的发展方向。",
+      "on_missing": "你几乎没有顺势而为的能力。你不会随波逐流，而是主动做出决定。这让你在危机中值得信赖，但在需要灵活应变的情况下，这种特质可能会显得有些僵化。"
     }
   }
 }

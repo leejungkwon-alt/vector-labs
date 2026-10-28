@@ -1,53 +1,53 @@
 {
   "AGE_BAND_CONTENT": {
     "EARLY": {
-      "label": "Early",
-      "headline": "You are in the exploration phase.",
-      "body": "The goal right now isn't to have the right answer. It's to gather data — about what energizes you, what drains you, and what you're willing to do when no one is watching. Commitments made now are experiments, not contracts.",
+      "label": "早期",
+      "headline": "您目前处于探索阶段。",
+      "body": "眼下，目标并不是找到正确的答案，而是收集数据——了解什么能让你充满活力，什么会让你精疲力尽，以及当没人看着的时候，你愿意做些什么。此刻做出的承诺只是实验，而非契约。",
       "advice": [
-        "Try one thing this quarter that scares you a little.",
-        "Track what actually energizes you, not what looks good on paper.",
-        "Say yes to breadth. Depth comes later."
+        "本季度试着做一件让你稍微感到害怕的事情。",
+        "关注真正能让你充满活力的事情，而不是那些看起来很光鲜的东西。",
+        "先追求广度，深度留待以后。"
       ]
     },
     "MID": {
-      "label": "Building",
-      "headline": "You are in the compounding phase.",
-      "body": "What you plant now has time to grow roots. The returns feel slow because they are slow — and that's exactly why they compound. This is the season to pick the few things worth going deep on and to stop apologizing for the things you leave behind.",
+      "label": "建筑",
+      "headline": "您目前处于复利阶段。",
+      "body": "现在播下的种子，有时间生根发芽。回报看似缓慢，是因为它确实缓慢——而这正是复利效应的奥秘所在。现在正是挑选少数值得深入钻研的事物，并停止为放弃的其他事物感到内疚的时节。",
       "advice": [
-        "Pick one skill, one relationship, one asset. Go deeper, not wider.",
-        "Say no to three things that don't serve the long game.",
-        "Start something that won't pay off for five years."
+        "选一项技能、一段人际关系、一项资产。要深入，不要广撒网。",
+        "对三件不利于长远发展的事说“不”。",
+        "做一件五年内都不会有回报的事。"
       ]
     },
     "PEAK": {
-      "label": "Peak Output",
-      "headline": "You are in the output phase.",
-      "body": "The world wants what you can produce. The risk isn't laziness — it's overextension. Everyone wants a piece of you. What you do now defines your reputation for the next decade. Protect the margins that make the output sustainable.",
+      "label": "峰值输出",
+      "headline": "您目前处于输出阶段。",
+      "body": "世界需要的是你能产出的成果。真正的风险不在于懒惰，而在于力不从心。每个人都想从你身上分一杯羹。你现在的所作所为，将决定未来十年的声誉。要守护那些能让产出可持续的余地。",
       "advice": [
-        "Design your week around what only you can do.",
-        "Delegate or drop everything else.",
-        "Guard one day a week that is completely yours."
+        "围绕只有你才能做的事情来安排你的一周。",
+        "将其他事情委托给他人，或者干脆抛开。",
+        "每周留出一天，完全属于你自己。"
       ]
     },
     "SENIOR": {
-      "label": "Harvest",
-      "headline": "You are in the harvest phase.",
-      "body": "Shift from doing to directing. From output to wisdom. The value you bring now isn't in the hours you log — it's in the judgment you've earned. The people around you need your perspective more than your labor.",
+      "label": "丰收",
+      "headline": "你正处于收获阶段。",
+      "body": "从亲力亲为转向统筹指导。从产出转向智慧。你如今所创造的价值，不在于你投入了多少工时，而在于你积累的判断力。身边的人更需要你的见解，而非你的劳动。",
       "advice": [
-        "Trade one task for one mentee.",
-        "Say the long answer — people are listening now.",
-        "Let one thing go that you've been carrying for years."
+        "用一项任务换取一名受指导者。",
+        "说个长一点的答案吧——大家现在都在听呢。",
+        "放下你多年来一直背负着的一件事吧。"
       ]
     },
     "ELDER": {
-      "label": "Legacy",
-      "headline": "You are in the legacy phase.",
-      "body": "Presence matters more than productivity. What you leave behind has already been planted. The work now is in how you show up — for the people who come after, and for the parts of yourself that are still growing.",
+      "label": "传承",
+      "headline": "您目前处于传统阶段。",
+      "body": "存在感比生产力更重要。你所留下的痕迹早已扎根。现在要做的，是关注你如何展现自己——为了后人，也为了你自身那些仍在成长的部分。",
       "advice": [
-        "Write down one thing only you know.",
-        "Spend time with someone younger — as a peer, not a teacher.",
-        "Choose a small ritual to anchor your day."
+        "写下一件只有你知道的事情。",
+        "多花点时间与比自己年轻的人相处——以同龄人的身份，而不是作为老师。",
+        "选择一个小小的仪式，让它成为你一天的基石。"
       ]
     }
   }

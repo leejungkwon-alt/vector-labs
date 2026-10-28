@@ -1,29 +1,29 @@
 {
   "pillar": "戊戌",
-  "hero": "You're a mountain on dry earth — one of the pillars the tradition calls a Commander. Quiet, hard to move, slow to yield.",
+  "hero": "你是干旱大地上的山岳——传统所称的“统帅”之一。沉默寡言，难以撼动，迟迟不肯让步。",
   "narrative": [
-    "You don't announce yourself. People often register you as quiet, then realize — months later — that you were the one holding the line. That delayed recognition is part of your signature.",
+    "你不会主动彰显自己。人们往往先觉得你很沉默，然后在数月之后才意识到——原来一直坚守底线的人就是你。这种迟来的认可，正是你独有的标志。",
     "The tradition names this pillar 魁罡, one of the four Commanders. Your strength is structural: an internal standard you don't trade away. When things get ugly, you're the person others rely on not to bend. Your steadiness is not performed — it's the actual shape of you.",
-    "Your shadow is that dry earth cracks. You can hold so firmly that you stop listening, and the tension you don't show erupts as sudden anger or sudden withdrawal. You also tend to be much harsher on yourself than anyone else would ever be — the standard you refuse to impose on others, you impose on yourself without mercy.",
-    "The mature form of this pillar is command without commandeering. You keep the standard and you also keep the door open — for the people still working toward it, and for yourself. When you can loosen one rule without losing the frame, your weight stops feeling like a wall and starts feeling like a harbor."
+    "你的影子就像那干裂的土地。你有时会紧绷到不再倾听，而你未曾表露的紧张情绪，会以突如其来的愤怒或突然的疏离爆发出来。你往往对自己比任何人都苛刻得多——那些你拒绝强加于他人的标准，你却毫不留情地强加给自己。",
+    "这一支柱的成熟形态，是“发号施令而不专横”。你既要恪守标准，又要敞开大门——既为那些仍在为此努力的人，也为自己。当你能在不破坏整体框架的前提下放宽一条规则时，你的分量就不再像一道墙，而开始像一个港湾。"
   ],
   "shadows": [
-    "You hold your position so firmly that other people's different choices start to look like errors.",
-    "Unspoken tension builds until it snaps — and the people around you never see the snap coming.",
-    "You judge yourself against a standard you would never impose on another human being."
+    "你对自己的立场如此坚定，以至于别人做出的不同选择在你看来都像是错误。",
+    "无形的紧张感不断积聚，直到终于爆发——而你周围的人却完全没有预料到这一刻的到来。",
+    "你用一种自己绝不会强加给别人的标准来评判自己。"
   ],
   "advice": [
-    "When someone chooses differently than you would, ask: 'Is this wrong, or just not mine?'",
-    "Say one small frustration out loud this week, before it becomes an eruption.",
-    "Loosen one rule on purpose. Notice the world doesn't fall apart.",
-    "Once this week, say to yourself: 'This is enough.' Mean it."
+    "当有人做出了与你不同的选择时，不妨问自己：“这是错的，还是只是不适合我？”",
+    "本周，在某件小事引发情绪爆发之前，试着把它说出来。",
+    "故意放宽一条规则。你会发现，世界并没有因此而崩溃。",
+    "这周找个时间，对自己说一句：“这样就够了。”要发自内心地这么想。"
   ],
   "keywords": [
     "魁罡 resolve",
-    "dry endurance",
-    "unshakable",
-    "principled weight"
+    "干耐力",
+    "坚不可摧",
+    "原则性权重"
   ],
-  "name": "Dry Mountain",
+  "name": "干山",
   "name_traditional": ""
 }

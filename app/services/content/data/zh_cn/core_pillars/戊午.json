@@ -1,29 +1,29 @@
 {
   "pillar": "戊午",
-  "hero": "You're a mountain with a fire burning at its core. Quiet from the outside, warm — sometimes explosive — underneath.",
+  "hero": "你就像一座山，山心深处燃烧着火焰。外表平静，内心却温暖——有时甚至会爆发。",
   "narrative": [
-    "You carry enormous energy, but it doesn't leak out at random. You look calm — often the calmest person in the room — and yet there's something warm and pressurized moving just under the surface. When you choose to act, everyone feels it.",
-    "Your engine runs on conviction. Half-measures and hedging don't move you, and you have a low tolerance for people who speak without meaning it. Once you commit, you commit fully — and that intensity is what people remember about you.",
-    "Your shadow is the fire you don't regulate. Because you can hold so much in, small irritations can build into a sudden eruption that surprises everyone around you. And when you push too hard for too long, you can exhaust yourself without noticing — the mountain doesn't feel the tremors until it cracks.",
-    "The mature form of this pillar is controlled warmth. Not a fire that goes out — a fire that is deliberate. You learn when to release heat in small, steady amounts, and you learn how to share some of that heat with others. When you do, your intensity stops being a risk to manage and becomes the thing that makes you unmistakable."
+    "你身上蕴藏着巨大的能量，但这种能量并不会随意外泄。你看起来很平静——往往是房间里最平静的人——然而在表面之下，却有某种温暖而充满压力的力量在涌动。当你决定采取行动时，每个人都能感受到。",
+    "你的动力源于信念。半途而废和模棱两可无法推动你前进，你对那些言不由衷的人也难以容忍。一旦你下定决心，就会全身心投入——而这种投入的强度正是人们对你最深刻的印象。",
+    "你的阴影，就是你未能加以控制的那团火焰。正因为你总把太多情绪憋在心里，那些微小的烦躁便会逐渐累积，最终爆发成一场令周围所有人都猝不及防的剧变。而当你长期过度勉强自己时，可能会在不知不觉中耗尽心力——就像大山在裂开之前，根本感觉不到震动。",
+    "这一支柱的成熟形态是“有节制的热情”。它不是一团会熄灭的火焰，而是一团经过深思熟虑的火焰。你会学会何时以微小而稳定的量释放热量，也会学会如何将部分热量分享给他人。当你做到这一点时，你的热情就不再是需要管控的风险，反而会成为让你独一无二的特质。"
   ],
   "shadows": [
-    "You can hold so much in that the eventual release feels sudden and unfair to the people around you.",
-    "You run at full capacity without noticing fatigue, then feel betrayed by your own exhaustion.",
-    "Under pressure, you can become convinced that your read of a situation is the only correct one."
+    "你能压抑得如此之深，以至于最终的宣泄显得如此突然，让周围的人感到不公。",
+    "你全速运转却毫无疲惫之感，随后却被自身的疲惫出卖了。",
+    "在压力下，你可能会坚信自己对局势的判断是唯一正确的。"
   ],
   "advice": [
-    "Once this week, name an irritation the moment you notice it — out loud, to a person who can hear it. Don't wait until it's a fire.",
-    "Find one deliberate way to release heat every day. Not productivity — movement, breath, or something that uses your body.",
-    "When you catch yourself running at full capacity, stop one thing. Say 'I'm choosing this' out loud, so it doesn't feel like failure.",
-    "Ask one trusted person a genuinely open question. Not 'do you agree?' — 'what do you see that I don't?'"
+    "本周找一个机会，当你注意到某件令人烦心的事时，立刻说出来——大声说出来，让能听见的人听到。不要等到事情演变成大火才行动。",
+    "每天找一种有意识的方式来释放热量。不是指提高效率——而是运动、呼吸，或者任何能调动身体的活动。",
+    "当你发现自己已经全力以赴时，停下一件事。大声说出“我选择这样做”，这样就不会觉得这是失败。",
+    "向一位值得信赖的人提出一个真正开放式的问题。不要问“你同意吗？”，而是问“你看到了什么是我没有看到的？”"
   ],
   "keywords": [
-    "volcanic drive",
-    "contained intensity",
-    "protective heat",
-    "regulated fire"
+    "火山驱动力",
+    "内敛的张力",
+    "保护性热量",
+    "受控燃烧"
   ],
-  "name": "Mountain in Fire",
+  "name": "烈火山",
   "name_traditional": ""
 }

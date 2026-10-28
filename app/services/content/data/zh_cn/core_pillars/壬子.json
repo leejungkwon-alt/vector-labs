@@ -1,28 +1,28 @@
 {
-  "name": "Frozen Deep Sea",
+  "name": "冰封深海",
   "pillar": "壬子",
-  "hero": "You're a winter sea. Hard as ice on the surface, and beneath it, a current that never stops moving.",
+  "hero": "你就像一片冬日大海。表面坚如冰层，而冰层之下，却有一股永不停息的暗流。",
   "narrative": [
     "You're the purest form of 壬. 壬子 is 壬 sitting in its own 祿 (Lu) — double water, layered on itself. Your wisdom doesn't shake, your field of vision is wide, your thinking is deep. People get a strange sense in your presence: this person is different.",
-    "Your strength is depth of thought. Where others see only the surface, you see the machinery under a situation. You don't rush to conclusions, and the conclusions you arrive at after letting things settle tend to be right. So organizations end up trusting you with the biggest judgments.",
-    "Your shadow is emotion locked under the ice. The surface of a winter sea is ice, but underneath it's still moving — and so are you. You look calm, but you carry deep currents. The problem is the ice keeps them from reaching the people around you. If you've been called cold or hard to read, it's not because you don't care — it's because you carry too much too deep.",
-    "A mature Im-Ja knows how to melt their own ice. Keeping the deep wisdom, and letting some of that inner water come up. Then your depth stops being distance and becomes wisdom people want to lean on."
+    "你的优势在于思维的深度。当别人只看到表面时，你能洞察事态背后的运作机制。你不会草率下结论，而在让事情沉淀之后得出的结论往往是正确的。因此，组织最终会将最重要的决策委托给你。",
+    "你的影子，是被冰封的情感。冬日大海的表面虽是冰层，但冰下依然波涛汹涌——你也是如此。 你看起来很平静，内心却暗流涌动。问题在于，这层冰阻碍了这些情感传达到你身边的人那里。如果有人说你冷漠或难以捉摸，那并不是因为你不在乎——而是因为你内心积压了太多、太深的情感。",
+    "成熟的Im-Ja懂得如何融化自己的冰。既要保持深邃的智慧，又要让内心的水流微微涌出。这样，你的深邃就不再是疏离，而是成为人们渴望倚靠的智慧。"
   ],
   "shadows": [
-    "Holding feelings under the ice so long that people misread your temperature.",
-    "Delaying decisions long enough that the opening closes.",
-    "Your depth reads as distance, so intimacy takes a long time to build."
+    "将情感深埋在冰层之下太久，以至于人们误判了你的情绪。",
+    "拖延决策的时间足够长，以至于机会窗口已经关闭。",
+    "你表现出的深度被解读为距离感，因此建立亲密关系需要很长时间。"
   ],
   "advice": [
-    "Once this week, bring one kept feeling up. Small is fine.",
-    "Pick one decision to make by a fixed deadline. It doesn't have to be perfect.",
-    "Explain one piece of your wisdom to someone. Wisdom sharpens when shared.",
-    "Even the sea needs earth. Give your day one small ritual that doesn't move."
+    "本周找一个你一直珍藏在心里的感受分享出来。哪怕是微不足道的小事也行。",
+    "选定一项需要在规定期限内做出的决定。不必追求完美。",
+    "向某人分享你的一条智慧箴言。智慧在分享中愈发精进。",
+    "就连大海也需要大地。在你的每一天里，安排一个不会改变的小仪式吧。"
   ],
   "keywords": [
-    "deep wisdom",
-    "currents under ice",
-    "wide field of vision",
-    "long sight"
+    "深刻的智慧",
+    "冰下水流",
+    "宽广的视野",
+    "远见"
   ]
 }

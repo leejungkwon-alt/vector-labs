@@ -2,280 +2,280 @@
   "ELEMENT_CONTENT": {
     "romance": {
       "COMPLEMENTARY": {
-        "headline": "One person's surplus is the other's missing piece.",
-        "body": "Your elemental balance feeds each other's gaps. This isn't just chemistry — it's structural. You can build something durable here."
+        "headline": "对一个人来说多余的东西，对另一个人来说却是缺失的一环。",
+        "body": "你们元素间的平衡能相互弥补彼此的不足。这不仅仅是化学反应——更是结构层面的。在这里，你们可以构建出持久稳固的事物。"
       },
       "BALANCED": {
-        "headline": "Your elements settle into an easy rhythm.",
-        "body": "Neither of you overwhelms the other. There's enough overlap to feel understood, and enough difference to keep growing."
+        "headline": "你的元素逐渐融入一种轻松的节奏中。",
+        "body": "你们两人都没有压过对方。既有足够多的共同点，让人感到被理解；也有足够多的不同之处，让人能够不断成长。"
       },
       "MODERATE": {
-        "headline": "The elemental fit is workable — not automatic.",
-        "body": "You don't naturally slot together, but you don't collide either. The relationship will be built, not received."
+        "headline": "基本匹配是可行的——但并非自动实现的。",
+        "body": "你们并非天生就契合，但也不会发生冲突。这段关系需要去经营，而非唾手可得。"
       },
       "TENSION": {
-        "headline": "You share too much of the same element.",
-        "body": "Both running hot (or both cold) creates intensity without relief. You'll need someone to break the loop — routines, friends, or space."
+        "headline": "你们有太多共同点。",
+        "body": "两者都处于亢奋状态（或都处于冷淡状态）会让人感到压力重重却无处宣泄。你需要有人来打破这种循环——无论是日常习惯、朋友，还是物理空间。"
       },
       "DEFAULT": {
-        "headline": "Your elements are still learning each other.",
-        "body": "There's no obvious elemental signature here. Watch how you each recharge — that's the tell."
+        "headline": "你们的元素仍在相互了解。",
+        "body": "这里没有明显的元素特征。留意你们各自的能量恢复方式——那才是关键线索。"
       }
     },
     "business": {
       "COMPLEMENTARY": {
-        "headline": "One person's surplus is the other's missing piece.",
-        "body": "Your elemental balance feeds each other's gaps. This isn't just chemistry — it's structural. You can build something durable here."
+        "headline": "对一个人来说多余的东西，对另一个人来说却是缺失的一环。",
+        "body": "你们元素间的平衡能相互弥补彼此的不足。这不仅仅是化学反应——更是结构层面的。在这里，你们可以构建出坚固耐用的东西。"
       },
       "BALANCED": {
-        "headline": "Your elements settle into an easy rhythm.",
-        "body": "Neither of you overwhelms the other. There's enough overlap to feel understood, and enough difference to keep growing."
+        "headline": "你的元素逐渐融入一种轻松的节奏。",
+        "body": "你们两人都没有压过对方。既有足够多的共同点，让人感到被理解；也有足够多的不同之处，让人能够不断成长。"
       },
       "MODERATE": {
-        "headline": "The elemental fit is workable — not automatic.",
-        "body": "You don't naturally slot together, but you don't collide either. The relationship will be built, not received."
+        "headline": "基本匹配是可行的——但并非自动实现的。",
+        "body": "你们虽然天生并不契合，但也不会发生冲突。这段关系需要去经营，而不是凭空得来的。"
       },
       "TENSION": {
-        "headline": "You share too much of the same element.",
-        "body": "Both running hot (or both cold) creates intensity without relief. You'll need someone to break the loop — routines, friends, or space."
+        "headline": "你们有太多共同点。",
+        "body": "两者都处于亢奋状态（或都处于冷淡状态）会让人感到压力重重却无处宣泄。你需要有人来打破这种循环——无论是日常习惯、朋友，还是空间。"
       },
       "DEFAULT": {
-        "headline": "Your elements are still learning each other.",
-        "body": "There's no obvious elemental signature here. Watch how you each recharge — that's the tell."
+        "headline": "你们的元素仍在相互了解。",
+        "body": "这里没有明显的元素特征。留意你们各自的能量恢复方式——那才是关键线索。"
       }
     }
   },
   "DAY_MASTER_CONTENT": {
     "romance": {
       "STEM_UNION": {
-        "headline": "Your day masters are traditionally a pair.",
-        "body": "In classical saju, this stem combination is one of the closest. There's an intuitive 'we belong together' quality here."
+        "headline": "按照传统，你的日主通常是一对。",
+        "body": "在古典四柱命理中，这种干支组合是最为契合的之一。其中蕴含着一种直觉上的“我们天生一对”的感觉。"
       },
       "STEM_CLASH": {
-        "headline": "Your day masters push against each other.",
-        "body": "This is friction with a point — you make each other sharper. But without rest, the edges will wear you down."
+        "headline": "你的日主之间相互制衡。",
+        "body": "这是一种有意义的摩擦——你们彼此磨砺，让对方变得更锋利。但若没有休息，这些锋芒终将把你磨垮。"
       },
       "BRANCH_UNION": {
-        "headline": "Your day branches bind easily.",
-        "body": "Same rhythm, same instinct for how to be close. The bond feels familiar fast, which is beautiful — and sometimes blinding."
+        "headline": "你那天的树枝很容易就缠在一起了。",
+        "body": "同样的节奏，同样的亲密本能。这种羁绊很快就让人感到熟悉，这很美妙——但有时也会让人迷失方向。"
       },
       "BRANCH_CLASH": {
-        "headline": "Your day branches clash directly.",
-        "body": "You trigger each other — often before you notice. The work is in not taking every clash personally."
+        "headline": "你们的日支直接相冲。",
+        "body": "你们会相互触动——往往是在自己察觉之前。关键在于不要把每次冲突都往心里去。"
       },
       "TEN_GOD_FRIEND": {
-        "headline": "You see each other as peers.",
-        "body": "Equal footing is your default. You'll compete sometimes, but you don't need to be taken care of."
+        "headline": "你们彼此视作平等的伙伴。",
+        "body": "平等是你的常态。虽然有时你会与人竞争，但你并不需要别人照顾。"
       },
       "TEN_GOD_WEALTH": {
-        "headline": "One of you feels seen as valuable by the other.",
-        "body": "There's an instinct to build something concrete together — resources, a home, a future. Watch for the 'provider / receiver' dynamic getting one-sided."
+        "headline": "你们其中一人觉得自己被对方视为有价值的人。",
+        "body": "人们天生就有种想要共同创造些切实事物——无论是资源、家园还是未来——的本能。要留意“给予者/接受者”这种动态关系是否变得单方面了。"
       },
       "TEN_GOD_OFFICER": {
-        "headline": "Structure pulls one of you toward the other.",
-        "body": "One person naturally wants to lead, protect, or formalize. The other feels held — or pushed. Both are useful if spoken."
+        "headline": "这种结构会将你们两人相互吸引。",
+        "body": "一个人天生就想领导、保护或规范。另一个人则感到被呵护——或者被推着走。如果能把这些想法说出来，这两种心态都有其价值。"
       },
       "TEN_GOD_OUTPUT": {
-        "headline": "One of you feels freed by the other.",
-        "body": "There's an easy generosity here — ideas, energy, laughter. Don't let the expressive one burn out without being fed back."
+        "headline": "你们其中一人因另一人而感到解脱。",
+        "body": "这里有一种轻松的慷慨——思想、活力、欢笑。不要让那个富有表现力的人在得不到反馈的情况下耗尽心力。"
       },
       "TEN_GOD_RESOURCE": {
-        "headline": "One of you feels sustained by the other.",
-        "body": "There's a tender, almost maternal/paternal quality. Careful not to let one become the teacher and the other the student forever."
+        "headline": "你们其中一人感到得到了另一方的支持。",
+        "body": "其中蕴含着一种温柔、近乎母性或父性的特质。要小心，别让其中一人永远当老师，另一人永远当学生。"
       },
       "MIXED": {
-        "headline": "Your day masters find each other in a quieter way.",
-        "body": "No dramatic union or clash — the draw is subtle, learned over time. Trust the accumulated evidence."
+        "headline": "你的日主们以一种更含蓄的方式相互吸引。",
+        "body": "没有戏剧性的融合或冲突——这种默契是微妙的，需要随着时间的推移逐渐领悟。相信这些积累的证据。"
       }
     },
     "business": {
       "STEM_UNION": {
-        "headline": "Your day masters are traditionally a pair.",
-        "body": "In classical saju, this stem combination is one of the closest. There's an intuitive 'we belong together' quality here."
+        "headline": "按照传统，你的日主是一对。",
+        "body": "在古典四柱命理中，这种干支组合是最为契合的之一。其中蕴含着一种直觉上的“我们天生一对”的感觉。"
       },
       "STEM_CLASH": {
-        "headline": "Your day masters push against each other.",
-        "body": "This is friction with a point — you make each other sharper. But without rest, the edges will wear you down."
+        "headline": "你的日主之间相互制衡。",
+        "body": "这是一种有意义的摩擦——你们彼此磨砺，让对方变得更锋利。但若没有休息，这些锋芒终将把你磨垮。"
       },
       "BRANCH_UNION": {
-        "headline": "Your day branches bind easily.",
-        "body": "Same rhythm, same instinct for how to be close. The bond feels familiar fast, which is beautiful — and sometimes blinding."
+        "headline": "你那天的树枝很容易就缠在一起了。",
+        "body": "同样的节奏，同样的亲密本能。这种羁绊很快就让人感到熟悉，这很美妙——但有时也会让人迷失方向。"
       },
       "BRANCH_CLASH": {
-        "headline": "Your day branches clash directly.",
-        "body": "You trigger each other — often before you notice. The work is in not taking every clash personally."
+        "headline": "你们的日支直接相冲。",
+        "body": "你们会相互触动——往往是在自己察觉之前。关键在于不要把每次冲突都当作针对自己的。"
       },
       "TEN_GOD_FRIEND": {
-        "headline": "You see each other as peers.",
-        "body": "Equal footing is your default. You'll compete sometimes, but you don't need to be taken care of."
+        "headline": "你们彼此视作平等的伙伴。",
+        "body": "平等是你的常态。虽然有时你会与人竞争，但你并不需要别人照顾。"
       },
       "TEN_GOD_WEALTH": {
-        "headline": "One of you feels seen as valuable by the other.",
-        "body": "There's an instinct to build something concrete together — resources, a home, a future. Watch for the 'provider / receiver' dynamic getting one-sided."
+        "headline": "你们其中一人觉得自己被对方视为有价值的人。",
+        "body": "人们天生就有种想要共同创造些切实事物——无论是资源、家园还是未来——的本能。要留意“给予者/接受者”这种动态关系是否变得单方面了。"
       },
       "TEN_GOD_OFFICER": {
-        "headline": "Structure pulls one of you toward the other.",
-        "body": "One person naturally wants to lead, protect, or formalize. The other feels held — or pushed. Both are useful if spoken."
+        "headline": "这种结构会将你们两人相互吸引。",
+        "body": "一个人天生就想领导、保护或规范。另一个人则感到被呵护——或者被推着走。如果能把这些想法说出来，两者都有助益。"
       },
       "TEN_GOD_OUTPUT": {
-        "headline": "One of you feels freed by the other.",
-        "body": "There's an easy generosity here — ideas, energy, laughter. Don't let the expressive one burn out without being fed back."
+        "headline": "你们其中一人因另一人而感到解脱。",
+        "body": "这里有一种轻松的慷慨——思想、活力、欢笑。不要让那个富有表现力的人在得不到反馈的情况下耗尽心力。"
       },
       "TEN_GOD_RESOURCE": {
-        "headline": "One of you feels sustained by the other.",
-        "body": "There's a tender, almost maternal/paternal quality. Careful not to let one become the teacher and the other the student forever."
+        "headline": "你们其中一人感到得到了另一方的支持。",
+        "body": "其中蕴含着一种温柔、近乎母性或父性的特质。要小心，别让其中一人永远当老师，另一人永远当学生。"
       },
       "MIXED": {
-        "headline": "Your day masters find each other in a quieter way.",
-        "body": "No dramatic union or clash — the draw is subtle, learned over time. Trust the accumulated evidence."
+        "headline": "你的日主们以一种更低调的方式相互吸引。",
+        "body": "没有戏剧性的融合或冲突——这种默契是微妙的，需要随着时间的推移逐渐领悟。相信这些积累的证据。"
       }
     }
   },
   "TEN_GODS_CONTENT": {
     "romance": {
       "COMPLEMENTARY": {
-        "headline": "Your work and money styles fit.",
-        "body": "One builds the structure; the other brings the momentum. You'd make a solid team on a small project or a shared life."
+        "headline": "你们的工作方式和理财方式很契合。",
+        "body": "一个负责搭建框架，另一个则带来动力。无论是小型项目还是共同生活，你们都会是一支默契的搭档。"
       },
       "MIRROR": {
-        "headline": "You approach life the same way.",
-        "body": "It feels safe because it's familiar. But mirrored patterns don't grow — someone has to introduce something new."
+        "headline": "你对待生活的方式也是一样的。",
+        "body": "因为熟悉，所以让人感到安全。但镜像模式无法发展——必须有人引入新元素。"
       },
       "TENSION": {
-        "headline": "Your instincts on work and money pull apart.",
-        "body": "You'll each want to run things your way. That's not a dealbreaker — it's a conversation that has to happen out loud."
+        "headline": "你在工作和金钱方面的直觉相互矛盾。",
+        "body": "你们每个人都会想按自己的方式做事。这并不是一票否决的事——但这需要开诚布公地沟通。"
       },
       "NEUTRAL": {
-        "headline": "Your work and money styles are compatible, not aligned.",
-        "body": "No natural synergy and no natural clash. You'll design the rhythm together."
+        "headline": "你们的工作方式和理财方式是相容的，但并不完全一致。",
+        "body": "既没有天然的默契，也没有天然的冲突。你们将共同设计出这种节奏。"
       },
       "DEFAULT": {
-        "headline": "Your working styles have their own shape.",
-        "body": "Notice how each of you handles a small decision — that's where the pattern lives."
+        "headline": "你们的工作方式各有各的特点。",
+        "body": "留意你们每个人是如何处理一个小决定的——模式就藏在其中。"
       }
     },
     "business": {
       "COMPLEMENTARY": {
-        "headline": "Your work and money styles fit.",
-        "body": "One builds the structure; the other brings the momentum. You'd make a solid team on a small project or a shared life."
+        "headline": "你们的工作方式和理财方式很契合。",
+        "body": "一个负责搭建框架，另一个则带来动力。无论是小项目还是共同生活，你们都会是一支默契的搭档。"
       },
       "MIRROR": {
-        "headline": "You approach life the same way.",
-        "body": "It feels safe because it's familiar. But mirrored patterns don't grow — someone has to introduce something new."
+        "headline": "你对待生活的方式也是一样的。",
+        "body": "因为熟悉，所以让人感到安全。但镜像模式无法发展——必须有人引入新元素。"
       },
       "TENSION": {
-        "headline": "Your instincts on work and money pull apart.",
-        "body": "You'll each want to run things your way. That's not a dealbreaker — it's a conversation that has to happen out loud."
+        "headline": "你在工作和金钱方面的直觉相互矛盾。",
+        "body": "你们每个人都会想按自己的方式做事。这并不是一票否决的事——但这需要开诚布公地沟通。"
       },
       "NEUTRAL": {
-        "headline": "Your work and money styles are compatible, not aligned.",
-        "body": "No natural synergy and no natural clash. You'll design the rhythm together."
+        "headline": "你们的工作方式和理财方式是相容的，但并不完全一致。",
+        "body": "既没有天然的默契，也没有天然的冲突。你们将共同设计出这种节奏。"
       },
       "DEFAULT": {
-        "headline": "Your working styles have their own shape.",
-        "body": "Notice how each of you handles a small decision — that's where the pattern lives."
+        "headline": "你们的工作方式各有各的特点。",
+        "body": "请留意你们每个人是如何处理一个小决定的——模式就体现在这里。"
       }
     }
   },
   "SINSAL_CONTENT": {
     "romance": {
       "SHARED_ATTRACTION": {
-        "headline": "You both carry magnetic draw.",
-        "body": "There's chemistry between you that other people notice. That's real. It's also not enough — build something underneath it."
+        "headline": "你们俩都极具魅力。",
+        "body": "你们之间有种默契，连旁人都看出来了。这是真的。但这还不够——要在这种默契的基础上再打下基础。"
       },
       "SHARED_DEPTH": {
-        "headline": "You both live in a deep inner world.",
-        "body": "You can go where most couples don't. The risk is that you both retreat silently at the same time."
+        "headline": "你们俩都生活在一个深邃的内心世界里。",
+        "body": "你可以走到大多数情侣无法企及的地方。风险在于，你们俩可能会在同一时刻默默地退缩。"
       },
       "SHARED_WANDER": {
-        "headline": "You both have restless feet.",
-        "body": "Movement is easy between you. Staying in one place — physically or emotionally — is the actual project."
+        "headline": "你们俩都是坐不住的人。",
+        "body": "你们之间来去自如。无论是在身体上还是情感上，停留在原地才是真正的挑战。"
       },
       "SHARED_LEADERSHIP": {
-        "headline": "You both want to lead.",
-        "body": "You'll collide if you don't divide the territory. Clear domains of authority change everything."
+        "headline": "你们俩都想当领导。",
+        "body": "如果不划分地盘，你们就会发生冲突。明确的权限范围会改变一切。"
       },
       "SHARED_RESONANCE": {
-        "headline": "You share a special trait.",
-        "body": "There's an unspoken recognition here. Use it — the relationship holds more when it's built on what you both carry."
+        "headline": "你们都有一个共同的特点。",
+        "body": "这里有一种不言而喻的默契。善加利用吧——当关系建立在双方共同经历的基础上时，它才会更加牢固。"
       },
       "OPPOSITE_PULL": {
-        "headline": "Your special traits pull in different directions.",
-        "body": "You'll each bring something the other lacks. That's a gift and a strain — decide which one you treat it as."
+        "headline": "你的特质各执一词。",
+        "body": "你们各自都会为对方带来对方所缺乏的东西。这既是礼物，也是负担——由你们决定将其视为哪一种。"
       },
       "SINGLE_ANCHOR": {
-        "headline": "One of you carries a rare trait.",
-        "body": "The other is the witness — and often the anchor. Don't let the witness role become invisibility."
+        "headline": "你们当中有一人拥有一个罕见的特征。",
+        "body": "另一个是见证者——通常也是定海神针。不要让见证者的角色变得无足轻重。"
       },
       "NEITHER": {
-        "headline": "Neither of you leans on the special-trait axis.",
-        "body": "The relationship rests on other things — your choice, your effort, your time."
+        "headline": "你们俩在“特殊特质”轴上都没有偏向。",
+        "body": "这段关系建立在其他因素之上——你的选择、你的付出、你的时间。"
       },
       "DEFAULT": {
-        "headline": "Your special traits are still meeting each other.",
-        "body": "Notice what each of you reaches for when no one is watching."
+        "headline": "你们各自的独特特质仍在相互交融。",
+        "body": "注意一下，当没人注意的时候，你们每个人会伸手去拿什么。"
       }
     },
     "business": {
       "SHARED_ATTRACTION": {
-        "headline": "You both carry magnetic draw.",
-        "body": "There's chemistry between you that other people notice. That's real. It's also not enough — build something underneath it."
+        "headline": "你们俩都极具魅力。",
+        "body": "你们之间有种默契，连旁人都看出来了。这是真的。但这还不够——要在这种默契的基础上再打下基础。"
       },
       "SHARED_DEPTH": {
-        "headline": "You both live in a deep inner world.",
-        "body": "You can go where most couples don't. The risk is that you both retreat silently at the same time."
+        "headline": "你们俩都生活在一个深邃的内心世界里。",
+        "body": "你可以走到大多数情侣无法企及的地方。风险在于，你们俩可能会在同一时刻默默地退缩。"
       },
       "SHARED_WANDER": {
-        "headline": "You both have restless feet.",
-        "body": "Movement is easy between you. Staying in one place — physically or emotionally — is the actual project."
+        "headline": "你们俩都是坐不住的人。",
+        "body": "你们之间来去自如。无论是在身体上还是情感上，停留在原地才是真正的挑战。"
       },
       "SHARED_LEADERSHIP": {
-        "headline": "You both want to lead.",
-        "body": "You'll collide if you don't divide the territory. Clear domains of authority change everything."
+        "headline": "你们俩都想当领导。",
+        "body": "如果不划分地盘，你们就会发生冲突。明确的权限范围会改变一切。"
       },
       "SHARED_RESONANCE": {
-        "headline": "You share a special trait.",
-        "body": "There's an unspoken recognition here. Use it — the relationship holds more when it's built on what you both carry."
+        "headline": "你们都有一个共同的特点。",
+        "body": "这里有一种不言而喻的默契。善加利用吧——当关系建立在双方共同经历的基础上时，它才会更加牢固。"
       },
       "OPPOSITE_PULL": {
-        "headline": "Your special traits pull in different directions.",
-        "body": "You'll each bring something the other lacks. That's a gift and a strain — decide which one you treat it as."
+        "headline": "你的特质各执一词。",
+        "body": "你们各自都会为对方带来对方所缺乏的东西。这既是礼物，也是负担——由你们决定将其视为哪一种。"
       },
       "SINGLE_ANCHOR": {
-        "headline": "One of you carries a rare trait.",
-        "body": "The other is the witness — and often the anchor. Don't let the witness role become invisibility."
+        "headline": "你们当中有一人拥有一个罕见的特征。",
+        "body": "另一个是见证者——通常也是定海神针。不要让见证者的角色变得无足轻重。"
       },
       "NEITHER": {
-        "headline": "Neither of you leans on the special-trait axis.",
-        "body": "The relationship rests on other things — your choice, your effort, your time."
+        "headline": "你们俩在“特殊特质”轴上都没有偏向。",
+        "body": "这段关系建立在其他因素之上——你的选择、你的付出、你的时间。"
       },
       "DEFAULT": {
-        "headline": "Your special traits are still meeting each other.",
-        "body": "Notice what each of you reaches for when no one is watching."
+        "headline": "你们各自的独特特质仍在相互交融。",
+        "body": "注意一下，当没人注意的时候，你们每个人会伸手去拿什么。"
       }
     }
   },
   "OVERALL_CONTENT": {
     "PEAK": {
-      "headline": "Rare structural fit.",
-      "body": "This combination is unusually aligned across all four axes. It doesn't guarantee anything — but it means the relationship can hold more than most."
+      "headline": "罕见的结构契合。",
+      "body": "这种组合在所有四个维度上都呈现出不同寻常的一致性。虽然这不能保证什么——但这意味着这种关系比大多数关系更能经得起考验。"
     },
     "FAVORABLE": {
-      "headline": "A combination that can grow.",
-      "body": "Not effortless, but structurally supported. The friction you'll feel is productive friction, not destructive."
+      "headline": "一种能够共同成长的组合。",
+      "body": "并非轻而易举，而是有结构性的支撑。你所感受到的摩擦是富有成效的摩擦，而非破坏性的。"
     },
     "NEUTRAL": {
-      "headline": "A relationship you build, not receive.",
-      "body": "The chart gives you a blank canvas. What you two make of it is entirely yours."
+      "headline": "一段关系，是需要自己去经营的，而不是凭空得来的。",
+      "body": "这张图表就像是一块空白画布。你们俩如何利用它，完全取决于你们自己。"
     },
     "CAUTION": {
-      "headline": "A combination that asks a lot.",
-      "body": "There's real friction here. It's not a reason to leave — it's a reason to be honest, early, and often."
+      "headline": "这是一种要求很高的组合。",
+      "body": "这里确实存在摩擦。这并不是离开的理由——而是要坦诚相待、及早沟通、经常交流的理由。"
     },
     "CHALLENGING": {
-      "headline": "A combination that asks everything.",
-      "body": "The structure is working against you. That doesn't decide the outcome — but it does mean you must both be willing, consciously, most days."
+      "headline": "一种包罗万象的组合。",
+      "body": "这种结构对你不利。这并不决定结果——但这确实意味着你们双方都必须在大多数日子里有意识地保持这种意愿。"
     }
   },
-  "DISCLAIMER": "Note: This compatibility reading blends astronomical calculation with modern relationship frameworks. It is a symbolic, school-dependent reading — not a verdict, not a prediction, and not a substitute for honest conversation. You remain the author of this relationship."
+  "DISCLAIMER": "注：本相容性解读融合了天文计算与现代情感关系理论框架。这是一种象征性的、因人而异的解读——既非定论，亦非预言，更不能替代坦诚的沟通。你始终是这段关系的缔造者。"
 }

@@ -1,29 +1,29 @@
 {
   "pillar": "丙戌",
-  "hero": "You're a campfire on a hill. Built to burn long — a place where anyone can warm up.",
+  "hero": "你就像山坡上的一堆篝火。生来就要长久燃烧——一个任何人都能来取暖的地方。",
   "narrative": [
-    "You carry warmth and stability together. Other Bing-day people burn in their own ways; yours is anchored to the ground. That's why you aren't just hot — you're the kind of warmth people can stay in for a long time.",
-    "You have a natural talent for caring for people. Just as a campfire draws people near, people naturally gather around you. It's not because you do something special. It's because being there is enough to comfort them. That's rarer than it sounds.",
-    "The trouble is that 'everyone's warmth' can burn you out. If you keep giving warmth without stopping, your own fire eventually goes out. Even a campfire needs fuel. Ask yourself: what is my fuel, and when did I last feed it?",
-    "A mature Bing-Xu is someone who knows how to give warmth with boundaries. Open to anyone, but open in a way that doesn't burn you. Your fire was built to burn long — so how long it burns is your real worth."
+    "你身上兼具温暖与稳重。其他“冰日”出生的人各自以自己的方式炽热燃烧；而你的温暖却牢牢扎根于大地。正因如此，你不仅充满热度——更是一种让人能久久沉浸其中的温暖。",
+    "你天生就擅长关心他人。就像篝火能将人们吸引到身边一样，大家也会自然而然地围在你身边。这并不是因为你做了什么特别的事，而是因为你的存在本身就足以给他们带来安慰。这种特质比听起来要难得得多。",
+    "问题在于，“大家的温暖”可能会让你精疲力竭。如果你不停地给予温暖，自己的那团火终将熄灭。就连篝火也需要燃料。问问自己：我的燃料是什么？我上次给它添过燃料是什么时候？",
+    "成熟的“冰-徐”是懂得在保持界限的同时给予温暖的人。对任何人敞开心扉，但这种敞开心扉的方式不会让你受伤。你的火焰本就是为了长久燃烧而生的——因此，它能燃烧多久，才是你真正的价值。"
   ],
   "shadows": [
-    "You care for others and forget your own fuel.",
-    "Your warmth can tip into control.",
-    "You hold everyone up without rest, then suddenly go completely dark."
+    "你总是关心别人，却忘了给自己补充能量。",
+    "你的温暖可能会演变成控制。",
+    "你让所有人无休止地等待，然后突然彻底消失。"
   ],
   "advice": [
-    "This week, write down three things that are your fuel. If none, you can't burn long.",
-    "Ask one of the people you care for to care for you this time.",
-    "Separate the warmth you give because they want it from the warmth you give because you want to give.",
-    "Leave at least one ember for yourself before you go out completely."
+    "本周，请写下三件能给你动力、让你充满活力的事情。如果没有，你就无法持久地保持活力。",
+    "这次，请你所关心的人中的一位来照顾你吧。",
+    "要区分两种温暖：一种是因为对方想要而给予的，另一种是因为你愿意给予而给予的。",
+    "在彻底熄灭之前，至少给自己留下一簇余烬。"
   ],
   "keywords": [
-    "long fire",
-    "solid warmth",
-    "power of care",
-    "boundaries that hold"
+    "长火",
+    "沉稳的温暖",
+    "关怀的力量",
+    "维系一切的界限"
   ],
-  "name": "Hilltop Campfire",
+  "name": "山顶篝火",
   "name_traditional": ""
 }

@@ -1,85 +1,85 @@
 {
-  "BALANCE_LABEL": "balance",
-  "CHART_HERO": "Your blueprint, expressed as four faces.",
+  "BALANCE_LABEL": "平衡",
+  "CHART_HERO": "您的蓝图，通过四个面来呈现。",
   "CHART_LAYER_META": {
     "year_pillar": {
-      "label": "Childhood",
-      "role": "Your roots — how you started and family influence"
+      "label": "童年",
+      "role": "你的成长历程——你是如何起步的以及家庭的影响"
     },
     "month_pillar": {
-      "label": "Career",
-      "role": "Your social life — how you work and interact"
+      "label": "职业",
+      "role": "你的社交生活——你的工作方式和人际交往方式"
     },
     "day_pillar": {
-      "label": "Core Self",
-      "role": "Your true identity — who you are at your core"
+      "label": "核心自我",
+      "role": "你的真实身份——你内心的本质"
     },
     "hour_pillar": {
-      "label": "Future",
-      "role": "Your inner world — your dreams and later years"
+      "label": "未来",
+      "role": "你的内心世界——你的梦想与晚年"
     }
   },
   "SINSAL_POS_LABEL": {
-    "year_pillar": "Origins",
-    "month_pillar": "Career",
-    "day_pillar": "Self",
-    "hour_pillar": "Legacy"
+    "year_pillar": "起源",
+    "month_pillar": "职业",
+    "day_pillar": "自我",
+    "hour_pillar": "传承"
   },
   "SINSAL_POS_ROLE": {
-    "year_pillar": "ancestry / early environment",
-    "month_pillar": "career / public life",
-    "day_pillar": "self / partnership",
-    "hour_pillar": "inner world / legacy"
+    "year_pillar": "祖先 / 早期环境",
+    "month_pillar": "职业生涯 / 公共生活",
+    "day_pillar": "个人 / 合伙企业",
+    "hour_pillar": "内心世界 / 遗产"
   },
   "SINSAL_THEME_KEYWORD": {
-    "MAGNETIC_DRAW": "magnetism and attraction",
-    "RESTLESS_FEET": "movement and exploration",
-    "SOLITARY_DEPTH": "reflection and creativity",
-    "ALLY_MAGNET": "help and support",
-    "SCHOLAR_MIND": "study and learning",
-    "SHARP_EDGE": "drive and competition",
-    "COMMANDER": "leadership and decisiveness"
+    "MAGNETIC_DRAW": "磁性与吸引力",
+    "RESTLESS_FEET": "运动与探索",
+    "SOLITARY_DEPTH": "反思与创造力",
+    "ALLY_MAGNET": "帮助与支持",
+    "SCHOLAR_MIND": "学习与研究",
+    "SHARP_EDGE": "进取心与竞争",
+    "COMMANDER": "领导力和果断性"
   },
-  "SINSAL_NOTE_TPL": "This trait sits in your {role} — so {theme} shows up most in that area.",
-  "SINSAL_HERO_ONE": "You carry 1 special trait.",
-  "SINSAL_HERO_MANY": "You carry {n} special traits.",
+  "SINSAL_NOTE_TPL": "这一特质体现在你的{role}中——因此{theme}在该领域表现得最为明显。",
+  "SINSAL_HERO_ONE": "你拥有1项特殊特质。",
+  "SINSAL_HERO_MANY": "你拥有 {n} 项特殊特质。",
   "GRADE_LABELS": {
     "PEAK": "Peak",
-    "FAVORABLE": "Favorable",
-    "NEUTRAL": "Neutral",
-    "CAUTION": "Caution",
-    "CHALLENGING": "Challenging"
+    "FAVORABLE": "有利的",
+    "NEUTRAL": "中立",
+    "CAUTION": "注意",
+    "CHALLENGING": "具有挑战性的"
   },
-  "COMPAT_FALLBACK_HEADLINE": "A relationship you build together.",
+  "COMPAT_FALLBACK_HEADLINE": "一段你们共同建立的关系。",
   "PERSONALIZATION_BLOCK": {
-    "HEADER": "Personalized insight",
+    "HEADER": "个性化洞察",
     "BY_INTENSITY": {
-      "SELF_SOURCED": "Your strong 'self-sourced' energy makes this tendency especially pronounced and self-directed.",
-      "ENVIRONMENT_TUNED": "Your 'environment-tuned' temperament means this trait emerges most deeply depending on the people and setting around you.",
-      "BALANCED_CORE": "Your balanced 'core' energy guides this tendency in a stable and harmonious direction."
+      "SELF_SOURCED": "你那强大的“自我源生”能量使得这种倾向尤为明显且具有自主性。",
+      "ENVIRONMENT_TUNED": "你这种“受环境影响”的性格特质意味着，这一特质在何种程度上表现出来，很大程度上取决于你周围的人和环境。",
+      "BALANCED_CORE": "你平衡的“核心”能量将这种倾向引导向一个稳定而和谐的方向。"
     },
     "BY_ELEMENT": {
-      "GROWTH": "Growth (Wood) energy layers on top of this — a strong drive to keep expanding and opening new directions.",
-      "SPARK": "Spark (Fire) energy layers on top of this — a passionate, immediate force pushing this tendency forward.",
-      "GROUND": "Ground (Earth) energy layers on top of this — this tendency expresses through thoughtful, solid foundation-building.",
-      "EDGE": "Edge (Metal) energy layers on top of this — you sort through this with clear standards and sharp decisiveness.",
-      "FLOW": "Flow (Water) energy layers on top of this — this tendency gains a flexible, responsive wisdom that adapts to the moment."
+      "GROWTH": "在此基础上叠加了“成长（木）”的能量层——一种不断扩展、开拓新方向的强烈驱动力。",
+      "SPARK": "“火花（火）”能量叠加其上——一种充满激情、即刻显现的力量，推动着这种倾向向前发展。",
+      "GROUND": "在此之上是“大地”能量层——这种倾向体现在深思熟虑、扎实地打好基础上。",
+      "EDGE": "其上叠加着“边缘（金属）”能量层——你凭借明确的标准和果断的决断力来处理这一切。",
+      "FLOW": "“流动”（水）的能量层叠加其上——这种倾向由此获得了一种灵活、敏锐的智慧，能够顺应当下情境。"
     },
     "BY_MODE_SECTION": {
       "love": {
-        "THE_TWIN": "The 'Twin' mode is especially strong — you treat your partner as a lifelong colleague and an equal, not a role to play.",
-        "THE_RIVAL": "The 'Rival' mode is especially strong — you want a relationship where you both push each other and grow together.",
-        "THE_ALLY": "The 'Ally' mode is especially strong — once you commit to a bond, you stay with it and give it your full loyalty."
+        "THE_TWIN": "“双生”模式尤为强大——你将伴侣视为终身的伙伴和对等者，而非某种需要扮演的角色。",
+        "THE_RIVAL": "“竞争”模式尤其出色——你想要的是一种双方互相激励、共同成长的关系。",
+        "THE_ALLY": "“盟友”模式尤为强大——一旦建立了羁绊，你就会坚守这份羁绊，并给予它全心的忠诚。"
       },
       "career": {
-        "THE_CREATOR": "The 'Creator' mode is especially strong — you shine when you break existing molds and create original work.",
-        "THE_OFFICER": "The 'Officer' mode is especially strong — you grow into a trusted core talent inside structured organizations.",
-        "THE_CHALLENGER": "The 'Challenger' mode is especially strong — you have the instincts of a leader who solves problems and breaks through crises."
+        "THE_CREATOR": "“创作者”模式尤为出色——当你打破现有框架、创作出原创作品时，你便大放异彩。",
+        "THE_OFFICER": "“管理层”模式尤为突出——你将在结构化的组织中成长为一名值得信赖的核心人才。",
+        "THE_CHALLENGER": "“挑战者”模式尤为突出——你具备一位领导者的直觉，能够解决问题并突破危机。"
       },
       "wealth": {
-        "THE_OPERATOR": "The 'Operator' mode is especially strong — you spot opportunities others miss and grow your assets decisively.",
-        "THE_STEWARD": "The 'Steward' mode is especially strong — you protect what you have and let compound growth do its work.",
-        "THE_FLOW": "The 'Flow' mode is especially strong — you ride the current of money with flexibility and draw wealth in naturally."
+        "THE_OPERATOR": "“操作员”模式尤为强大——你能发现他人忽略的机会，并果断地让资产增值。",
+        "THE_STEWARD": "“管家”模式尤为强大——你只需守护现有资产，让复利发挥作用即可。",
+        "THE_FLOW": "“流动”模式尤为强大——你可以灵活地顺应金钱的流动，自然而然地吸引财富。"
       }
     }
   }

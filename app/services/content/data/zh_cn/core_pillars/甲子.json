@@ -1,28 +1,28 @@
 {
-  "name": "Moonlight on the Tree",
+  "name": "树上的月光",
   "pillar": "甲子",
-  "hero": "You're a tree growing under moonlight. Even in darkness, you don't lose the direction — you grow upward, quietly.",
+  "hero": "你是一棵在月光下生长的树。即使身处黑暗，你也不会迷失方向——你依然静静地向上生长。",
   "narrative": [
     "Wisdom leads your growth. 甲子 is a great tree rooted in deep water. Water feeds the tree — and your growth comes from deep thought and quiet understanding. So you're not a pioneer who just charges forward. You're the kind who knows exactly where forward is.",
-    "Your strength is precise sense of direction. While others hesitate, you already know the way. But you don't shout it — you walk it quietly. The places you've passed through carry a trail, and the people behind you follow it.",
-    "Your shadow is thinking ahead of action. Deep water is good for a tree, but if the water runs too deep, the tree forgets where to reach. You think so much that you hesitate at the moment you should move, and the opening passes.",
-    "A mature Jia-Zi knows the balance between wisdom and action. Keeping the depth of thought, and moving without hesitation when the moment arrives. Then your wisdom stops living only in your head and becomes something that actually changes the world."
+    "你的优势在于精准的方向感。当别人还在犹豫不决时，你早已知晓前路。但你不会大声宣扬——而是默默前行。你走过的地方留下了足迹，身后的人们便循着这些足迹跟随而来。",
+    "你的影子总是在行动之前先思后行。深水对树木有益，但如果水流太深，树木就会忘记该向何处伸展。你思虑过多，以至于在该行动的时刻却犹豫不决，结果错失良机。",
+    "成熟的“Jia-Zi”懂得在智慧与行动之间取得平衡。既保持思想的深度，又在时机成熟时果断行动。这样，你的智慧就不再仅仅停留在脑海中，而是真正成为能够改变世界的力量。"
   ],
   "shadows": [
-    "Thinking so much that decisions get delayed and the opening closes.",
-    "Having the direction without explaining it, which creates misunderstanding.",
-    "Walking quietly, so your contribution doesn't show up as much as it should."
+    "想得太多，导致决策一再拖延，机会就这样错过了。",
+    "没有解释就给出指示，这会导致误解。",
+    "默默前行，以致你的贡献没有得到应有的重视。"
   ],
   "advice": [
-    "Once this week, say the conclusion out loud even if it isn't fully formed.",
-    "Pick one judgment you've kept silent and explain why you see it that way.",
-    "Pick one decision and make it by a fixed deadline.",
-    "Look back at the path you've walked. People are already following it."
+    "本周至少一次，即使结论尚未完全成形，也要大声说出来。",
+    "请选出一个你一直未曾说出口的看法，并解释一下你为何会这样认为。",
+    "选定一项决定，并在规定的截止日期前做出决定。",
+    "回望你走过的路。已经有人在追随你的脚步了。"
   ],
   "keywords": [
-    "moonlit pioneer",
-    "deep wisdom",
-    "precise direction",
-    "quiet growth"
+    "月光下的开拓者",
+    "深刻的智慧",
+    "确切方向",
+    "静悄悄的成长"
   ]
 }

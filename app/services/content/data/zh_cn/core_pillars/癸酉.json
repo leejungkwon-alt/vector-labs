@@ -1,28 +1,28 @@
 {
-  "name": "Moonlit Well",
+  "name": "月光下的井",
   "pillar": "癸酉",
-  "hero": "You're a well lit by the moon. Quietly shining, and your light shows other people their own hearts.",
+  "hero": "你被月光照得通亮。静静地闪耀着，你的光芒让别人看清了自己的内心。",
   "narrative": [
     "You have precise sensitivity. 癸酉 is delicate water with crafted metal resting on it. Moonlight on a well brightens the water inside — and your sensitivity is exact like that. People feel oddly 'understood' around you.",
     "Your strength is refined wisdom. 癸's sensitivity meeting 酉's precision makes very sharp, very delicate insight. You read people's hearts accurately, and you name what they need. This is a rare gift. Your advice always hits a true spot.",
-    "Your shadow is the weight of perfect sensitivity. Precise sensitivity is beautiful, but it makes the world's messiness land very hard. You feel other people's pain as your own, and imperfect relationships stay with you a long time. And that precision also turns inward — you can't forgive yourself for not being perfect.",
-    "A mature Gye-You governs the sensitivity. Keeping the sharpness, and calibrating so it doesn't deplete you. Then your precision stops being pressure and becomes the kind of deep understanding people come to you for."
+    "你的阴影，正是极致敏感带来的负担。精准的敏感固然美好，但它让你格外真切地感受到世间的纷乱。你会将他人的痛苦视作自己的痛苦，那些不完美的关系也会在你心中萦绕许久。而这种精准也会转向内心的自我——你无法原谅自己不够完美。",
+    "成熟的“Gye-You”能够驾驭这种敏锐性。既保持敏锐，又加以调整，以免耗尽自己的精力。这样一来，你的精准就不再是压力，而是成为人们慕名而来的那种深刻洞察力。"
   ],
   "shadows": [
-    "Feeling other people's pain as your own until you're emotionally exhausted.",
-    "Staying attached to imperfect relationships, unable to release them.",
-    "Precision turned inward, unable to forgive your own imperfection."
+    "将他人的痛苦当作自己的痛苦，直到自己情绪耗尽。",
+    "执着于不完美的感情，无法放手。",
+    "将严苛的目光转向内心，无法原谅自己的不完美。"
   ],
   "advice": [
-    "Once this week, consciously step back from one person's emotion.",
-    "Pick one imperfect relationship and accept the imperfection as it is.",
-    "Create a moment this week where you say 'this is enough' to yourself.",
-    "Set up regular recovery time so your sensitivity isn't depleted."
+    "本周请至少有一次，有意识地从某人的情绪中抽身而出。",
+    "选一段不完美的感情，并坦然接受它的不完美。",
+    "本周，找个时间对自己说一句“这样就够了”。",
+    "安排定期的恢复时间，以免你的敏感度耗尽。"
   ],
   "keywords": [
-    "moonlit well",
-    "precise sensitivity",
-    "refined wisdom",
-    "deep understanding"
+    "月光下的井",
+    "精确灵敏度",
+    "深邃的智慧",
+    "深刻理解"
   ]
 }

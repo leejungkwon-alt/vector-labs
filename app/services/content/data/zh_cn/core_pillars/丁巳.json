@@ -1,29 +1,29 @@
 {
   "pillar": "丁巳",
-  "hero": "You're a double flame. The inner candle burns deeper for passing through the outer heat.",
+  "hero": "你是一盏双重火焰。内里的蜡烛因穿越外层的热浪而燃烧得更深。",
   "narrative": [
-    "You're quiet but intense. You gather heat inward more than you radiate outward, so new people read you as calm. Spend more time with you, though, and they discover how exact and persistent your gaze is.",
-    "Your strength is 'focused attention.' You catch details others miss, sharpen what's blurred, and read beneath surfaces. That's why your work tends to be dense — small in quantity, but a different quality. Not something you trained. A natural result of two flames in one body.",
-    "Your shadow is 'being too hard on yourself.' A double flame burns itself easily. You're generous with others and astonishingly severe with yourself. That standard has grown you — and it's also eating you.",
-    "A mature Ding-Si gives themselves the same accurate warmth they give others. Seeing oneself with the same precision you use on others — and allowing the tired parts the warmth they're owed. Then your dense gaze stops being pressure and becomes deep understanding."
+    "你沉默寡言，却充满张力。你将热量更多地积蓄在内心，而非向外散发，因此初次接触的人会觉得你很沉稳。不过，与你相处久了，他们就会发现你的目光是多么犀利而执着。",
+    "你的优势在于“专注力”。你能捕捉到他人忽略的细节，让模糊之处变得清晰，并洞察表象之下。正因如此，你的作品往往内容凝练——数量虽少，但品质非凡。这并非后天习得，而是两团火焰共存于一躯之中的自然结果。",
+    "你的阴影是“对自己太苛刻”。双重火焰很容易将自己烧尽。你对他人慷慨大方，对自己却严苛得惊人。正是这种标准让你成长——但也正在蚕食着你。",
+    "成熟的丁思会像对待他人那样，以同样精准的方式给予自己温暖。用看待他人的那份精准来审视自己——并让那些疲惫的部分获得应得的温暖。如此一来，你那凝重的目光便不再是压力，而是化作了深刻的理解。"
   ],
   "shadows": [
-    "Generous with others, astonishingly harsh with yourself.",
-    "When the result isn't perfect, you torment yourself for a long time.",
-    "The intensity of your focus means recovery takes longer when you're depleted."
+    "对他人慷慨大方，对自己却严苛得令人惊讶。",
+    "当结果不尽如人意时，你会为此纠结很久。",
+    "当你精疲力尽时，由于专注程度较高，恢复所需的时间会更长。"
   ],
   "advice": [
-    "This week, do 'this is enough' once — to yourself.",
-    "Take one act of generosity you'd give others and give it to yourself.",
-    "After focusing, always attach recovery. A double flame dies without it.",
-    "Change one 'why is this all I did' into 'what did I actually do.'"
+    "本周，对自己说一次“这样就够了”。",
+    "选一件你通常会为他人做出的慷慨之举，然后把它送给自己。",
+    "锁定目标后，务必附加恢复效果。否则，双重火焰会熄灭。",
+    "将“为什么我只做了这些”改为“我到底做了什么”。"
   ],
   "keywords": [
-    "focused heat",
-    "precise gaze",
-    "double flame",
-    "self-gentleness"
+    "集中热量",
+    "精准的目光",
+    "双火焰",
+    "善待自己"
   ],
-  "name": "Double Flame",
+  "name": "双焰",
   "name_traditional": ""
 }

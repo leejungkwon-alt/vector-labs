@@ -3,25 +3,25 @@
   "locked_hint_extra": {
     "love": [
       "cross_insight",
-      "timing"
+      "时机"
     ],
     "career": [
       "cross_insight",
-      "timing"
+      "时机"
     ],
     "wealth": [
       "cross_insight",
-      "timing"
+      "时机"
     ]
   },
   "labels": {
-    "cross_insight": "Cross Insight",
-    "timing": "Current Timing",
-    "body": "Body",
-    "patterns": "Patterns",
-    "compatibility": "Chemistry",
-    "actions": "Action Guide",
-    "action": "Action Guide",
-    "red_flags": "Red Flags"
+    "cross_insight": "跨领域洞察",
+    "timing": "当前时间",
+    "body": "正文",
+    "patterns": "图案",
+    "compatibility": "化学",
+    "actions": "行动指南",
+    "action": "行动指南",
+    "red_flags": "危险信号"
   }
 }

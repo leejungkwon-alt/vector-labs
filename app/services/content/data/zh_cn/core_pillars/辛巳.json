@@ -1,28 +1,28 @@
 {
-  "name": "Jewel in Heat",
+  "name": "《发情中的珍宝》",
   "pillar": "辛巳",
-  "hero": "You're a jewel forged in heat. Pressure makes you more precise, not weaker.",
+  "hero": "你是高温锻造而成的宝石。压力让你更加精炼，而非变得脆弱。",
   "narrative": [
     "You sharpen under pressure. 辛巳 is crafted metal resting on hot fire. Metal meeting fire either hardens or melts — you harden. Under difficulty, your focus actually improves and your precision comes alive.",
-    "Your strength is edge under pressure. When other people scatter, you get clearer. Important presentations, decisive moments, tight deadlines — that's where you're most yourself. This is a gift. Most people can't carry pressure. You burn it as fuel.",
-    "Your shadow is staying hot too long. Fire tempers metal, but kept hot indefinitely it melts it. You keep yourself under pressure out of habit. You feel guilty resting, and even when you rest you wonder what you should be doing. And then one day you go out completely.",
-    "A mature Xin-Si governs the heat. Keeping the pressure but putting recovery in between. Then your edge becomes sustained precision instead of exhaustion."
+    "你的优势在于能在压力下保持清醒。当别人手忙脚乱时，你反而思路更加清晰。重要的演讲、关键时刻、紧迫的截止日期——这些正是你最能展现真实自我的时刻。这是一种天赋。大多数人无法承受压力，而你却能将其转化为动力。",
+    "你的阴影也处于高温状态太久了。火能淬炼金属，但若无限期地保持高温，就会将其熔化。你习惯性地让自己处于高压之下。你觉得休息是件该内疚的事，甚至在休息时，你也会想自己本该在做什么。然后某一天，你彻底崩溃了。",
+    "成熟的新思能够驾驭这种热度。既保持压力，又在其中穿插恢复。这样，你的优势就会转化为持久的精准，而非精疲力竭。"
   ],
   "shadows": [
-    "Feeling guilty about rest until you burn out completely.",
-    "Getting listless without pressure, so you manufacture your own.",
-    "When sensitivity meets pressure, small things land very hard."
+    "因为休息而感到内疚，直到彻底精疲力竭。",
+    "没有压力就会变得无精打采，于是你便自己制造压力。",
+    "当敏感性与压力相遇时，微不足道的小事也会带来沉重的打击。"
   ],
   "advice": [
-    "Set aside at least 30 minutes a day this week with nothing productive in it. That's what restores you.",
-    "When 'what should I be doing' comes up while resting, tell yourself: 'I'm resting now.'",
-    "If there's no pressure and you feel flat, that's a recovery signal, not a failure.",
-    "When sensitivity spikes, ask: is this pressure, or am I tired?"
+    "本周每天至少留出30分钟，这段时间里什么有意义的事都别做。这才是让你恢复元气的方法。",
+    "当休息时脑海中浮现“我该做什么”这个念头时，告诉自己：“我现在正在休息。”",
+    "如果没有压力，而且你感到提不起劲，那是一种恢复的信号，而不是失败。",
+    "当情绪变得异常敏感时，试着问自己：这是压力，还是我累了？"
   ],
   "keywords": [
-    "edge under pressure",
-    "forged in heat",
-    "precise focus",
-    "recovery rhythm"
+    "压力下的优势",
+    "在烈火中淬炼而成",
+    "精准对焦",
+    "恢复节奏"
   ]
 }

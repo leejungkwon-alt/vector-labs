@@ -2,179 +2,179 @@
   "ARCHETYPE_CONTENT": {
     "THE_PIONEER": {
       "name": "先锋",
-      "tagline": "You grow upward, whether the ground is ready or not.",
+      "tagline": "无论土壤是否准备好，你都会向上生长。",
       "symbol": "↟",
       "color": "#2F7A3F",
-      "element": "Wood",
+      "element": "木材",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You're built to go first. And to keep going when no one follows.",
+          "hero": "你生来就是领头人。即使无人追随，你也会继续前行。",
           "narrative": [
-            "You have a clear inner compass. Once you decide something, it becomes obvious to you long before it's obvious to anyone else.",
-            "You don't wait for consensus. You don't wait for the map to be drawn. You just know where north is, and you move.",
-            "This makes you a founder, a builder, an originator. But it also means you spend a lot of time alone with your vision before anyone understands it.",
-            "Your independence is your greatest asset, but it can also be isolating. When you're the only one who sees the path, it's easy to forget to look back and check if anyone is still with you.",
-            "True leadership isn't just about forging ahead; it's about knowing when to slow down so others can catch up. Your vision is the seed, but collaboration is the water."
+            "你内心有一把清晰的指南针。一旦你做出决定，在其他人意识到之前，你早已了然于心。",
+            "不必等待达成共识。不必等待地图绘制完成。你只需知道北方在哪里，然后前行。",
+            "这使你成为一名创始人、一名开拓者、一名开创者。但这也意味着，在别人理解你的愿景之前，你得花大量时间独自与之相伴。",
+            "你的独立性是你最宝贵的财富，但它也可能让你感到孤立。当你成为唯一看清前路的人时，很容易忘记回头看看，确认是否还有人陪在你身边。",
+            "真正的领导力不仅在于勇往直前，更在于懂得何时放慢脚步，让他人跟上。你的远见是种子，而协作则是滋养它的水分。"
           ],
           "shadows": [
-            "Your pace feels so clearly right to you that you can accidentally bulldoze over other people's pace.",
-            "You mistake stillness for stagnation. Rest feels like a betrayal of your own ambition.",
-            "You can become rigid in your beliefs, ignoring valuable input because it doesn't align with your original plan."
+            "你觉得自己的节奏如此恰到好处，以至于会不经意间无视他人的节奏。",
+            "你把静止误认为是停滞。休息让你觉得是在背叛自己的抱负。",
+            "你的信念可能会变得僵化，从而因为某些有价值的建议与你的原定计划不符而将其忽视。"
           ],
           "advice": [
-            "Once this week, ask someone you trust how your momentum looks from the outside.",
-            "Pick one goal you've been pushing on for months. Ask: 'Would I still care about this if no one ever knew?'",
-            "Pause for 10 seconds before you say 'I've got it.' Sometimes, you don't.",
-            "Schedule a 'pause day' once a month where you do absolutely nothing related to your goals. Just to breathe."
+            "本周找一位你信任的人，问问从旁观者的角度看，你的发展势头如何。",
+            "选一个你已经为此努力了好几个月的目标。问问自己：“如果没人知道这件事，我还会不在乎吗？”",
+            "在说“我明白了”之前，先停顿10秒。有时候，你其实并没有真正明白。",
+            "每月安排一个“暂停日”，这一天你完全不要做任何与目标相关的事情。只是为了喘口气。"
           ],
           "keywords": [
-            "visionary",
-            "vertical",
-            "independent",
-            "founder"
+            "有远见的人",
+            "垂直的",
+            "独立的",
+            "创始人"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You lead without needing the spotlight to do it.",
+          "hero": "你无需站在聚光灯下，也能发挥领导作用。",
           "narrative": [
-            "You have the pioneer's instinct without the pioneer's impatience. You'll go first if you need to, but you'd rather the whole thing move forward than your name be on it.",
-            "People follow you because you're steady. You don't perform ambition — you just keep growing, quietly, in a direction that makes sense to you.",
-            "This is a rare, durable kind of leadership. It's also easy to overlook in yourself.",
-            "You are the steady hand on the rudder. You don't need to shout to be heard, and you don't need to sprint to win the race.",
-            "Your strength lies in your consistency. While others burn out chasing the next shiny thing, you are building something that will outlast the hype."
+            "你具备开拓者的直觉，却没有开拓者的急躁。如果需要，你会率先行动，但比起让自己的名字出现在上面，你更希望整个项目能够顺利推进。",
+            "人们追随你，是因为你脚踏实地。你不会刻意表现得野心勃勃——你只是默默地、朝着自己认为有意义的方向不断成长。",
+            "这是一种难得且持久的领导力。同时，人们也很容易忽视自己身上这种特质。",
+            "你是掌舵时那只稳健的手。你无需高声呐喊就能让人听见，也无需冲刺就能赢得比赛。",
+            "你的优势在于你的持之以恒。当别人在追逐下一个热门事物时精疲力尽，你却在打造一件能经受住热潮考验、历久弥新的作品。"
           ],
           "shadows": [
-            "You can end up carrying more than your share because you don't want to make it 'a thing.'",
-            "Your steadiness can look like passivity to people who mistake noise for action.",
-            "You might suppress your own needs to maintain the peace, leading to quiet resentment."
+            "你可能会承担超过自己应尽的份额，只因为你不想让这件事“闹大”。",
+            "在那些把喧嚣误认为行动的人眼里，你的沉着稳重可能会被视为消极被动。",
+            "为了维持和谐，你可能会压抑自己的需求，从而滋生出隐隐的怨气。"
           ],
           "advice": [
-            "Name one thing you want and say it out loud this week — no qualifiers.",
-            "Notice who actually follows you. Not who agrees with you — who moves with you.",
-            "Let someone else lead one thing you'd normally take.",
-            "Check in with your own energy levels. Are you being steady, or are you just avoiding conflict?"
+            "这周，请说出一件你想要的东西，并大声说出来——不要加任何限定条件。",
+            "留意谁真正追随你。不是那些赞同你的人——而是那些与你并肩前行的人。",
+            "让别人来负责你平时通常会负责的一件事。",
+            "请留意自己的能量水平。你是保持着稳定的状态，还是只是在回避冲突？"
           ],
           "keywords": [
-            "quiet leadership",
-            "growth",
-            "consistency",
-            "grounded"
+            "低调领导",
+            "增长",
+            "一致性",
+            "被禁足"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You're a tree — beautiful, but particular about your soil.",
+          "hero": "你就像一棵树——美丽，却对土壤很挑剔。",
           "narrative": [
-            "You have a strong inner direction, but it doesn't always translate into outer action. You need the right conditions before you can really start.",
-            "This isn't laziness. It's accuracy. You feel very clearly when a place, project, or person can hold what you're building.",
-            "Your growth is real, but it's not fast. It's the kind that lasts decades.",
-            "You are deeply intuitive about your environment. You know when the soil is toxic, even if everyone else says it's fine.",
-            "Stop apologizing for needing the right conditions. A seed doesn't grow in concrete. Wait for your spring, and when it comes, you'll shoot up fast."
+            "你内心有着强烈的方向感，但这并不总能转化为外在行动。你需要具备合适的条件，才能真正开始行动。",
+            "这并非懒惰，而是精准。当某个地方、某个项目或某个人能够承载你正在构建的事物时，你会非常清楚地感受到这一点。",
+            "你的成长是真实的，但并不迅速。这是一种持续数十年之久的成长。",
+            "你对周围环境有着敏锐的直觉。即使别人都说土壤没问题，你也知道它是否被污染了。",
+            "别再为需要合适的条件而道歉了。种子在水泥地上是长不出来的。静待你的春天，当它来临时，你就会迅速茁壮成长。"
           ],
           "shadows": [
-            "You wait for 'ready' longer than you should.",
-            "You stay loyal to the wrong environment past the point of no return.",
-            "You can use the 'waiting for the right conditions' as an excuse to avoid taking action."
+            "你等待“准备就绪”的时间比应该的要长。",
+            "你对一个错误的环境始终保持忠诚，直到无法挽回的地步。",
+            "你可以把“等待合适的条件”当作借口，以此来逃避采取行动。"
           ],
           "advice": [
-            "Write down the conditions you actually need. Are you in them? If not, what's one thing you can change?",
-            "Start the thing small — today, in whatever state it's in.",
-            "You're allowed to outgrow a room. Notice which one.",
-            "If a space feels draining, set a boundary. It's okay to leave early."
+            "把你真正需要的条件写下来。你现在符合这些条件吗？如果不符合，你能改变哪一点？",
+            "从小处着手——就在今天，无论现状如何。",
+            "你可以“长大”到不再适合某个房间。注意是哪一个。",
+            "如果某个场所让你感到精疲力尽，那就划清界限。提前离开也没关系。"
           ],
           "keywords": [
-            "patience",
-            "rooted",
-            "loyal",
-            "conditions"
+            "耐心",
+            "已越狱",
+            "忠诚的",
+            "条件"
           ]
         }
       }
     },
     "THE_ADAPTER": {
       "name": "适应者",
-      "tagline": "You bend, so you don't break.",
+      "tagline": "你学会了屈服，这样才不会被折断。",
       "symbol": "⟡",
       "color": "#5FAF7A",
-      "element": "Wood",
+      "element": "木材",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You survive by reading the room and moving with it.",
+          "hero": "你要靠察言观色、顺势而为才能生存下去。",
           "narrative": [
-            "You don't fight systems head-on — you find the crack in them. You've probably been underestimated more than once by people who mistake softness for weakness.",
-            "Your flexibility is a form of intelligence. You see what others are about to do, and you're already halfway there before they realize it.",
-            "This makes you a natural collaborator, negotiator, translator. It also means people don't always see how much work you're doing.",
-            "You are a master of social tai chi. You redirect energy rather than block it. This makes you incredibly effective in chaotic environments.",
-            "But constantly bending means you might eventually forget what your natural shape feels like. You have the right to be rigid when it matters."
+            "不要与体制正面交锋——要找到其中的漏洞。那些把温和误认为软弱的人，恐怕已经不止一次低估过你了。",
+            "你的灵活应变是一种智慧。你能预见他人即将采取的行动，在他们意识到之前，你已经走了一半的路程。",
+            "这使你天生具备协作、谈判和翻译的能力。这也意味着，别人并不总是能看到你付出了多少努力。",
+            "你是社交“太极”的高手。你不会阻挡能量，而是将其引导至其他方向。这使得你在混乱的环境中表现得极为出色。",
+            "但若总是勉强自己，最终可能会忘记自己原本的状态是怎样的。在关键时刻，你有权保持坚定的立场。"
           ],
           "shadows": [
-            "You can bend so far you lose track of your own shape.",
-            "You adapt to please, then resent the person you adapted for.",
-            "You might avoid necessary conflict, letting things fester until they break."
+            "你可以弯曲到连自己的形状都看不清的程度。",
+            "你为了取悦他人而改变自己，结果却对那个让你改变的人心生怨恨。",
+            "你可能会回避必要的冲突，任由问题积重难返，直到彻底爆发。"
           ],
           "advice": [
-            "Once this week, say 'no' to something small. Notice what happens.",
-            "Write down three things you actually want — not what fits the situation.",
-            "Pick one person who's never seen you be stubborn. Let them.",
-            "When you feel resentful, ask yourself: 'Did I say yes when I meant no?'"
+            "这周找个机会，对一件小事说“不”。留意会发生什么。",
+            "写下三件你真正想要的东西——而不是那些符合当前情况的东西。",
+            "选一个从未见过你固执的一面的人。就让他们看看吧。",
+            "当你感到心怀怨恨时，问问自己：“我是不是明明想说‘不’，却说成了‘好’？”"
           ],
           "keywords": [
-            "adaptive",
-            "graceful",
-            "intuitive",
-            "underestimated"
+            "自适应的",
+            "优雅的",
+            "直观的",
+            "被低估了"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You move with the current without losing the shore.",
+          "hero": "你顺流而行，却未曾远离岸边。",
           "narrative": [
-            "You can be firm or yielding as the moment calls for — and you don't make a big deal about switching between them.",
-            "This is what real social intelligence looks like. Not performance — calibration.",
-            "People trust you because you seem to know what's needed. They also sometimes take that for granted.",
-            "You know when to push and when to yield. This is a rare form of grace that most people spend their whole lives trying to learn.",
-            "You are the glue that holds groups together. You don't demand the spotlight, but you are the reason the light stays on."
+            "你可以根据当时的情况表现得坚定或通融——而且在两者之间切换时，你不会大惊小怪。",
+            "这才是真正的社交智商。不是表现——而是校准。",
+            "人们之所以信任你，是因为你似乎知道他们需要什么。不过，他们有时也会把这一点视为理所当然。",
+            "你知道何时该坚持，何时该退让。这是一种难得的风度，大多数人花了一辈子都在努力学习。",
+            "你是维系团队的纽带。你从不追求聚光灯下的关注，但正是因为有你，这盏灯才始终亮着。"
           ],
           "shadows": [
-            "You over-accommodate, then quietly withdraw.",
-            "You mistake your own flexibility for not having preferences.",
-            "You might let others make decisions that affect you deeply, just to keep the peace."
+            "你总是过度迁就，然后悄然抽身。",
+            "你把自己的灵活态度误认为是没有偏好。",
+            "为了维持和谐，你可能会让别人做出那些对你影响深远的决定。"
           ],
           "advice": [
-            "Once this week, voice a preference before someone else does.",
-            "Notice where you soften your language unnecessarily.",
-            "You're allowed to want things. Practice wanting them out loud.",
-            "Be honest with yourself about your own boundaries. Are you bending, or are you breaking?"
+            "本周至少一次，在别人开口之前先表达一下自己的偏好。",
+            "注意哪些地方你无谓地软化了措辞。",
+            "你有权渴望某些东西。试着把这些渴望大声说出来。",
+            "对自己诚实一点，认清自己的底线。你是正在妥协，还是正在突破底线？"
           ],
           "keywords": [
-            "calibrated",
-            "graceful",
-            "empathic",
-            "social"
+            "已校准",
+            "优雅的",
+            "富有同理心的",
+            "社交"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You bloom in the right light. Not every light.",
+          "hero": "只有在合适的光线下，你才会绽放。并非所有光线都能让你绽放。",
           "narrative": [
-            "You feel other people's moods before they name them. That's a gift, but it makes you susceptible to rooms that drain you.",
-            "When you're in the right place, you're lush and creative. When you're not, you go small.",
-            "You've probably learned to distrust your own sensitivity. Don't. It's the most accurate instrument you have.",
-            "You are a psychic sponge. You need to learn how to wring yourself out at the end of the day, or you'll carry everyone else's weight.",
-            "The right room won't just tolerate you; it will nourish you. Find it, and stay there as long as you can."
+            "在别人说出自己的情绪之前，你就能察觉到他们的情绪。这虽是一种天赋，但也让你容易受到那些会消耗你精力的环境的影响。",
+            "当你身处合适的环境时，你会充满活力、创意无限；反之，你就会变得平庸。",
+            "你可能已经学会了不信任自己的直觉。别这样。这是你拥有的最精准的“仪器”。",
+            "你就像一块情感海绵。你需要学会在一天结束时将自己“拧干”，否则你会背负起所有人的负担。",
+            "合适的空间不仅会接纳你，还会滋养你。找到它，并尽可能长时间地待在那里。"
           ],
           "shadows": [
-            "You absorb other people's stress as if it were your own.",
-            "You mistake peacekeeping for peace.",
-            "You might isolate yourself completely after socializing, needing days to recover."
+            "你会把别人的压力当成自己的压力来承受。",
+            "你把维和当成了和平。",
+            "在与人社交之后，你可能会完全封闭自己，需要好几天才能恢复过来。"
           ],
           "advice": [
-            "Write down one place and one person where you feel lightest. Spend more time there.",
-            "When you feel 'off' around someone, trust it once before explaining it away.",
-            "You don't need to fix anyone's mood. Not even to protect your own.",
-            "Create a 'detox ritual' after being in crowded spaces. Shower, walk, or just breathe."
+            "写下一个让你感到最轻松的地方和一个人。多花些时间待在那里。",
+            "当你和某人在一起时感到“不太对劲”，在试图解释这种感觉之前，先相信一下自己的直觉。",
+            "你不需要去哄谁开心。甚至不需要为了保护自己而这样做。",
+            "在人多的地方待过之后，不妨制定一个“排毒仪式”。冲个澡、散散步，或者只是静静地呼吸一下。"
           ],
           "keywords": [
-            "sensitive",
-            "empathic",
-            "growth",
+            "敏感的",
+            "富有同理心的",
+            "增长",
             "bloom"
           ]
         }
@@ -182,732 +182,755 @@
     },
     "THE_RADIATOR": {
       "name": "太阳",
-      "tagline": "You warm rooms by existing in them.",
+      "tagline": "你的存在本身就能让房间变得温暖。",
       "symbol": "☀",
       "color": "#E85D2F",
-      "element": "Fire",
+      "element": "四",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You run hot. Your own momentum is your fuel — and your risk.",
+          "hero": "你干劲十足。你自身的势头既是你的动力，也是你的风险。",
           "narrative": [
-            "You generate your own energy. You don't wait for permission, and you rarely need the room to agree before you move.",
-            "People feel you before they understand you. That first impression — warm, direct, bright — opens doors. But it also sets an expectation: that you're always on.",
-            "You've probably been told you're 'a lot.' That's not a flaw. It's a signal about who's in the room with you.",
-            "Your energy sets the temperature of every room you walk into. When you dim, everyone feels the drop. That's why you often push yourself past your limits just to keep the lights on.",
-            "But remember: you don't owe anyone your shine 24/7. The darkness isn't a failure. It's where you recharge."
+            "你自己创造动力。你不会等待许可，而且在采取行动之前，很少需要得到周围人的认同。",
+            "人们在理解你之前，先是感受到你。那种第一印象——温暖、直率、开朗——为你打开了大门。但这也让人产生了一种期待：认为你总是精力充沛、状态在线。",
+            "你可能曾被人说“你太过分了”。这并不是缺点，而是反映了与你共处一室的人是什么样的人。",
+            "你的能量决定了你走进的每一间房间的温度。当你情绪低落时，每个人都能感受到这种变化。这就是为什么你常常逼自己超越极限，只为让灯继续亮着。",
+            "但请记住：你没有义务时刻向任何人展现光彩。黑暗并非失败，而是你重获能量的源泉。"
           ],
           "shadows": [
-            "You can mistake motion for progress. Slowing down feels like failure, so you don't — until you crash.",
-            "You attract people who want to be lit up, then resent the warmth when it fades. Not your fault, but worth noticing.",
-            "You can become overly dependent on external validation, losing touch with what you actually want."
+            "你可能会把“行动”误认为是“进步”。放慢脚步会让人感觉像是一种失败，所以你不会这么做——直到你摔得鼻青脸肿。",
+            "你会吸引那些渴望被温暖照亮的人，而当这份温暖消退时，他们却又会心生怨恨。这并非你的错，但值得注意。",
+            "你可能会过度依赖外界的认可，从而迷失了自我，忘记了自己真正想要什么。"
           ],
           "advice": [
-            "Schedule one hour a week with nothing to output. Not rest — space.",
-            "Let one small thing go wrong this week without fixing it.",
-            "When you feel unappreciated, ask: 'Did I ask for what I need, or did I assume they'd know?'",
-            "Build your own 'charging station'. Solitude in a room with no one else is essential for you."
+            "每周安排一小时，什么都不用产出。不是休息——而是留白。",
+            "这周就让一件小事出点问题，不要去解决它。",
+            "当你感到不被重视时，不妨问问自己：“我是否明确表达过自己的需求，还是以为对方会心领神会？”",
+            "打造属于你自己的“充电站”。在一个没有其他人的房间里独处，对你来说至关重要。"
           ],
           "keywords": [
-            "warmth",
-            "momentum",
-            "presence",
-            "self-fuel"
+            "温暖",
+            "动量",
+            "存在",
+            "自供燃料"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You carry warmth that reads the room before it fills it.",
+          "hero": "你身上散发着一种温暖，这种温暖在充满整个房间之前，就已经能感知到房间里的氛围了。",
           "narrative": [
-            "Your fire is steady rather than explosive. You know when to lead and when to listen — a rarer gift than most people realize.",
-            "You radiate without demanding attention. People trust you because you seem to know the temperature of a situation without anyone telling you.",
-            "This balance is your superpower. But balanced people often feel invisible next to louder ones.",
-            "You are the campfire that everyone gathers around. You don't need to be the loudest; you just need to be the most consistent.",
-            "Don't let your calm demeanor hide your own needs. You are allowed to flicker, and you are allowed to be seen."
+            "你的热情稳健而非一触即发。你知道何时该引领，何时该倾听——这是一种比大多数人意识到的更为难得的特质。",
+            "你散发着魅力，却从不刻意吸引别人的注意。人们之所以信任你，是因为你似乎无需他人提醒，就能准确把握局势的氛围。",
+            "这种平衡就是你的超能力。但性格沉稳的人，在性格外向的人身边，往往会感到自己不被重视。",
+            "你就是那簇让 everyone 围坐其旁的篝火。你不必是最响亮的，只需是最稳定的。",
+            "不要让你的镇定掩盖了自身的需求。你有权流露情绪，也有权让别人看到真实的自己。"
           ],
           "shadows": [
-            "You may shrink your own light to keep things harmonious.",
-            "Your calm can read as distance to people who need more heat than you offer.",
-            "You might neglect your own desires to play the role of the stable one."
+            "你可以收敛自己的光芒，以保持和谐。",
+            "对于那些需要比你所能给予的更多热情的人来说，你的沉着可能会被解读为疏离。",
+            "为了扮演那个稳重可靠的人，你可能会忽视自己的愿望。"
           ],
           "advice": [
-            "Once a week, claim the space you'd normally give away.",
-            "When something lights you up, say it out loud — don't just feel it.",
-            "Notice who you dim around. That's information.",
-            "Ask someone for help. You don't always have to be the strong one."
+            "每周一次，重新夺回你平时会拱手让出的空间。",
+            "当某件事让你心潮澎湃时，请大声说出来——不要只是默默感受。",
+            "留意你对谁“降级”了关注。这本身就是一种信息。",
+            "向别人寻求帮助吧。你不必总是那个坚强的人。"
           ],
           "keywords": [
-            "calibrated",
-            "warmth",
-            "adaptability",
-            "trust"
+            "已校准",
+            "温暖",
+            "适应性",
+            "信任"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "Your fire is real — but it needs the right room to burn.",
+          "hero": "你的热情是真实的——但需要一个合适的空间来燃烧。",
           "narrative": [
-            "You have warmth inside you, but it doesn't always come out easily. The wrong environment can make you feel dim.",
-            "You're at your best when you're around people who see you clearly. When you're not, you don't fake it — you just go quiet.",
-            "This sensitivity isn't weakness. It's a filter. It tells you very fast who's good for you.",
-            "You need a space where your warmth is reflected back to you. If you give heat to an icebox, the icebox doesn't warm up — you just freeze.",
-            "Your sensitivity is a compass. It points you toward the people who will actually appreciate your light."
+            "你内心充满温暖，但这种温暖并不总是能轻易流露出来。如果环境不合适，你会感到情绪低落。",
+            "当你身处那些能看清你真实面貌的人之中时，你才能发挥出最佳状态。当周围没有这样的人时，你不会伪装自己——只是会变得沉默。",
+            "这种敏感并非软弱，而是一种筛选机制。它能让你迅速分辨出谁对你好。",
+            "你需要一个能将你的温暖反射回来的空间。如果你向冰柜里送热量，冰柜不会变暖——你只会冻僵。",
+            "你的敏感就像一艘指南针。它指引你走向那些真正懂得欣赏你光芒的人。"
           ],
           "shadows": [
-            "You wait too long for the 'perfect' moment or the 'perfect' person before you let yourself shine.",
-            "You may have internalized someone else's dim view of you.",
-            "You might dim your own light to match the energy of the room, feeling exhausted later."
+            "你总是在等待那个“完美”的时刻或“完美”的人，才肯让自己大放异彩。",
+            "你可能已经将别人对你的负面看法内化了。",
+            "你可能会为了配合房间的氛围而降低自己的光线亮度，结果后来感到精疲力尽。"
           ],
           "advice": [
-            "Write down three people or places where you feel most yourself. Spend more time there.",
-            "One small thing you've been putting off: start it today, ugly.",
-            "You don't need permission. You need a witness. Find one.",
-            "Give yourself permission to leave a room that doesn't feed your fire."
+            "写下三个让你感到最像自己的地方或人。多花些时间待在那里。",
+            "你一直拖着没做的那件小事：今天就开始吧，混蛋。",
+            "你不需要许可。你需要一个见证人。去找一个吧。",
+            "允许自己离开那个无法点燃你热情的房间。"
           ],
           "keywords": [
-            "sensitivity",
-            "loyalty",
-            "quiet fire",
-            "environment"
+            "灵敏度",
+            "忠诚",
+            "静默之火",
+            "环境"
           ]
         }
       }
     },
     "THE_KEEPER": {
       "name": "守灯人",
-      "tagline": "You're not a bonfire. You're a lantern.",
+      "tagline": "你不是篝火，而是灯笼。",
       "symbol": "✦",
       "color": "#C2461F",
-      "element": "Fire",
+      "element": "四",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You burn steady, and you burn alone — and that's not loneliness, that's craft.",
+          "hero": "你稳稳地燃烧着，独自燃烧——这并非孤独，而是匠心。",
           "narrative": [
-            "Your fire is focused, not loud. You don't need an audience to keep going, and you don't need applause to know you're on track.",
-            "You notice things other people miss — a shift in tone, a detail in a room, a pattern in someone's behavior.",
-            "This makes you excellent at things that require precision and patience. It also means you carry a lot inside.",
-            "You are the watchman in the tower. You see the storm coming before anyone else does, but sometimes you forget to warn the people below.",
-            "Your quiet intensity is a gift, but you don't have to hold the whole world in your chest. Let someone else take the watch for a while."
+            "你的热情专注而内敛。你无需观众的喝彩也能坚持下去，也不需要掌声来确认自己是否走在正轨上。",
+            "你会注意到别人忽略的细节——语调的细微变化、房间里的某个细节、某人行为中的某种规律。",
+            "这让你在需要精准和耐心的工作上表现出色。这也意味着你内心积攒了许多情绪。",
+            "你是塔楼里的守望者。你比任何人都早发现风暴将至，但有时却忘了提醒楼下的人们。",
+            "你那份沉静而深沉的专注是一种天赋，但你不必把整个世界都揽在心上。让别人来替你守望一阵子吧。"
           ],
           "shadows": [
-            "You hold stress quietly until it becomes physical.",
-            "You can confuse your own intensity with other people's expectations of you.",
-            "You might bottle up your emotions until they explode in private."
+            "你默默地承受着压力，直到它转化为身体上的不适。",
+            "你可能会把自己的投入程度与他人对你的期望混为一谈。",
+            "你可能会将情绪压抑在心底，直到它们在私下里爆发。"
           ],
           "advice": [
-            "Name one worry you've been carrying alone. Say it out loud to someone.",
-            "Move your body once this week in a way that isn't for fitness. Just for feeling.",
-            "You're allowed to be a specialist without being a workaholic.",
-            "Find a safe person to share your inner world with. You don't have to be a fortress."
+            "说出一件你一直独自承担的烦恼。把它大声说给某人听。",
+            "本周找个时间，以一种不以健身为目的的方式活动一下身体。纯粹是为了感受。",
+            "你可以成为一名专家，但不必成为工作狂。",
+            "找一个值得信赖的人，向他敞开心扉。你不必把自己变成一座堡垒。"
           ],
           "keywords": [
-            "focused",
-            "precise",
-            "perceptive",
-            "self-contained"
+            "专注的",
+            "精确的",
+            "敏锐的",
+            "自成一体的"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You light what's near you — not everything.",
+          "hero": "你照亮的是身边的事物——而不是所有事物。",
           "narrative": [
-            "You have real warmth, and you're not shy with it. But you also know the difference between lighting a room and burning yourself out for it.",
-            "People come to you with their real problems, not their small talk. That's not because you demand it — it's because you invite it without trying.",
-            "You're the kind of person others feel safe around. That's a very specific kind of power.",
-            "You are the trusted confidant. You know how to hold space for someone else's pain without getting swallowed by it.",
-            "Remember that you also need a listener. It's okay to ask for the same kind of space you so freely give."
+            "你身上有着真挚的温暖，而且毫不吝啬地展现出来。但你也明白，让整个房间充满温暖与为此耗尽自己之间的区别。",
+            "人们向你倾诉的是他们真实的问题，而不是闲聊。这并不是因为你要求他们这样做——而是因为你无需刻意，自然而然地就让他们愿意向你敞开心扉。",
+            "你就是那种让人感到安心的人。这是一种非常特别的力量。",
+            "你是值得信赖的知心人。你知道如何为他人的痛苦留出空间，同时又不被这种痛苦吞噬。",
+            "请记住，你同样需要一个倾听者。要求获得与你慷慨给予他人同样的空间，这并没有什么不妥。"
           ],
           "shadows": [
-            "You let certain people take more than they give.",
-            "You deprioritize your own heat to keep other fires going.",
-            "You might enable others by always being the one who fixes things."
+            "你让某些人拿走的比他们付出的还要多。",
+            "你为了维持其他火势，而将自己的热量放在次要位置。",
+            "如果你总是那个解决问题的人，可能会让别人变得更有能力。"
           ],
           "advice": [
-            "Notice who you give your best energy to. Is it mutual?",
-            "Ask for one thing this week without explaining why you need it.",
-            "Let one person take care of you without managing the process.",
-            "Set a boundary with someone who only takes. It's not selfish; it's survival."
+            "留意一下，你把最好的精力给了谁。这种付出是相互的吗？",
+            "本周请提出一个请求，但不要解释你为什么需要它。",
+            "让一个人来照顾你，而无需你来管理整个过程。",
+            "对那些只会索取的人，要划清界限。这并非自私，而是为了生存。"
           ],
           "keywords": [
-            "warmth",
-            "trust",
-            "selective",
-            "listener"
+            "温暖",
+            "信任",
+            "选择性的",
+            "听众"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You glow in the right company and disappear in the wrong one.",
+          "hero": "在合适的圈子里，你会光彩照人；在不合适的圈子里，你就会销声匿迹。",
           "narrative": [
-            "Your light isn't loud — it's tender. It shows up strongest when you trust the people around you.",
-            "In the wrong environment, you don't dim on purpose; you just fade. And you often don't notice until someone says 'you've been quiet.'",
-            "Your sensitivity isn't fragility. It's the reason people trust you with their own tenderness.",
-            "You need a small, trusted circle. You are not meant for the loud, crowded room; you are meant for the deep, quiet conversation.",
-            "The right people will protect your softness, not exploit it. Find them, and give them your whole heart."
+            "你的光芒并不耀眼——而是温柔的。当你信任身边的人时，这份光芒才会最耀眼。",
+            "在错误的环境中，你并非有意低调，而是会不知不觉地淡出。而且，往往直到有人说“你最近好安静啊”，你才会意识到这一点。",
+            "你的敏感并非脆弱。正因如此，人们才会向你敞开心扉，向你展现自己的柔情。",
+            "你需要一个小而值得信赖的圈子。喧闹拥挤的房间并不适合你；适合你的，是深入而安静的交谈。",
+            "合适的人会守护你的柔软，而不是利用它。找到他们，并全心全意地爱他们。"
           ],
           "shadows": [
-            "You carry other people's emotions as if they were yours.",
-            "You mistake self-protection for self-erasure.",
-            "You might isolate yourself completely to avoid getting hurt."
+            "你把别人的情绪当成自己的来承受。",
+            "你把自我保护误认为是自我抹杀。",
+            "为了避免受到伤害，你可能会完全把自己与外界隔绝。"
           ],
           "advice": [
-            "Keep a running list of who makes you feel more like yourself, not less.",
-            "Once this week, leave the room early if it doesn't feel right.",
-            "You don't owe anyone a performance of wellness.",
-            "Give yourself permission to be a 'homebody'. Your energy needs a safe harbor."
+            "列一份清单，记录那些让你感觉更像自己、而不是不像自己的人。",
+            "本周至少有一次，如果感觉不对劲，就早点离开房间。",
+            "你没有义务向任何人展示自己的健康状态。",
+            "允许自己做个“宅家族”吧。你的能量需要一个安全的港湾。"
           ],
           "keywords": [
-            "tender",
-            "intuitive",
-            "protective",
-            "quiet strength"
+            "晾晒",
+            "直观的",
+            "保护性的",
+            "沉静的力量"
           ]
         }
       }
     },
     "THE_ANCHOR": {
       "name": "锚",
-      "tagline": "You're the ground other people stand on.",
+      "tagline": "你是别人立足的根基。",
       "symbol": "▣",
       "color": "#8B6F3F",
-      "element": "Earth",
+      "element": "地球",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You don't move fast — you move last, and you're right.",
+          "hero": "你行动不快——你是最后行动的，你说得对。",
           "narrative": [
-            "You have a deep reserve of patience that most people can't fake. When everything around you is shifting, you stay where you are and watch. Eventually, everyone comes back to your position.",
-            "You don't need to be the loudest voice. You need to be the one people trust when the noise dies down.",
-            "This makes you a natural long-term player. You win things slowly, on purpose, and you keep them.",
-            "You are the immovable mountain. You don't chase trends; you build foundations. People come to you because you are the only stable thing in a chaotic world.",
-            "But even mountains weather. Don't mistake your rigidity for strength. Sometimes, bending is the only way to survive the earthquake."
+            "你拥有一种深厚的耐心，这是大多数人无法装出来的。当周围的一切都在变化时，你依然安坐原地，静观其变。最终，每个人都会回到你的立场上。",
+            "你不必成为最响亮的声音。当喧嚣平息时，你需要成为人们所信赖的那个人。",
+            "这让你天生就是一名长线玩家。你会刻意放慢节奏去赢得东西，并且能将它们牢牢把握住。",
+            "你是那座巍峨不移的大山。你不追逐潮流，而是夯实根基。人们之所以找你，是因为在这个混乱的世界里，你才是唯一稳定的存在。",
+            "但即便是山岳也会受风化作用的影响。不要把僵硬误认为是力量。有时，只有屈服才能在地震中幸存下来。"
           ],
           "shadows": [
-            "You can mistake staying put for staying safe.",
-            "Your stability becomes the reason others stop growing around you.",
-            "You can resist necessary change until it's forced upon you, causing unnecessary stress."
+            "你可能会误以为原地不动就等于安全。",
+            "你的稳定，反而成了周围人停止成长的原因。",
+            "你可以抗拒必要的改变，直到它被强加于你，从而给自己带来不必要的压力。"
           ],
           "advice": [
-            "Once this month, do something with no clear payoff. Just to see.",
-            "Notice where you're the last person holding a position that no longer serves you.",
-            "Say yes to one thing that scares you. Anchor the new thing too.",
-            "Ask a younger person for their perspective. They might see what you're missing."
+            "这个月，试着做一件没有明确回报的事情。就为了看看会怎样。",
+            "请注意，你是否是最后一个仍坚持着一个已不再适合你的立场的人。",
+            "勇敢尝试一件让你感到害怕的事情。同时也要让这件新事物扎根。",
+            "向年轻人请教一下他们的看法。他们或许能发现你忽略的地方。"
           ],
           "keywords": [
-            "steady",
-            "reliable",
-            "long-game",
-            "unshakable"
+            "稳定",
+            "可靠的",
+            "长远规划",
+            "坚如磐石"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You hold steady without holding others back.",
+          "hero": "你稳如磐石，却不会拖累他人。",
           "narrative": [
-            "You have the anchor's strength without its rigidity. You know when to stand firm and when to bend, and you don't agonize over the choice.",
-            "People lean on you because you don't ask them to. You just happen to be there, and that turns out to matter more than most people realize.",
-            "This is quiet power. It doesn't photograph well, but it lasts.",
-            "You are the pillar of the community. You don't need to be in charge, but you are the one everyone relies on when things get hard.",
-            "Make sure your foundation is solid for yourself first. You can't support others if you're crumbling from within."
+            "你拥有锚的坚韧，却没有它的僵硬。你知道何时该坚定不移，何时该灵活变通，而且不会为这个选择而纠结。",
+            "人们之所以依赖你，并不是因为你要求他们这样做。只是你恰好就在那里，而这一点的重要性，远超大多数人的想象。",
+            "这就是“静默的力量”。虽然拍照效果不佳，但它经久不衰。",
+            "你是社区的中流砥柱。你不必担任领导职务，但每当遇到困难时，大家都会依靠你。",
+            "首先，要确保自己拥有坚实的基础。如果你内心已经摇摇欲坠，就无法支撑他人。"
           ],
           "shadows": [
-            "You take on more weight than you admit because you don't want to make it a thing.",
-            "You confuse consistency with staying in a role you've outgrown.",
-            "You might let others become overly dependent on you, stunting their growth."
+            "你实际承受的压力比你承认的要大，因为你不想把它当回事。",
+            "你把“一贯性”和“继续呆在一个自己已经不适合的角色里”混为一谈了。",
+            "你可能会让别人过度依赖你，从而阻碍他们的成长。"
           ],
           "advice": [
-            "Ask for one thing this week that you'd normally just handle yourself.",
-            "Check: are you the ground, or are you the ceiling?",
-            "Give away one responsibility you've been carrying silently.",
-            "Let someone else step up. They might surprise you."
+            "这周，试着请别人帮忙做一件你平时通常会自己处理的事情。",
+            "自问一下：你是地面，还是天花板？",
+            "放下你一直默默承担的一项责任。",
+            "让别人站出来吧。他们可能会让你大吃一惊。"
           ],
           "keywords": [
-            "grounded",
-            "trustworthy",
-            "quiet strength",
-            "balance"
+            "被禁足",
+            "值得信赖的",
+            "沉静的力量",
+            "平衡"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "Your stability is real — but it depends on solid ground under you.",
+          "hero": "你的稳定是真实的——但这取决于你脚下是否站得稳。",
           "narrative": [
-            "You have the anchor's loyalty, but it needs a place to anchor to. When you find it, you're immovable. When you don't, you drift.",
-            "You feel other people's chaos more than you show. You absorb it, sit with it, and eventually it becomes yours.",
-            "Your power isn't in holding everything — it's in choosing what to hold.",
-            "You are a sponge for the energy of your environment. When the ground is shaky, you feel it in your bones.",
-            "Your first priority must be creating a stable home base. You cannot be a safe harbor for others if you are lost at sea."
+            "你拥有锚的忠诚，但它需要一个锚定之处。当你找到它时，你就坚如磐石；当你找不到时，你就会随波逐流。",
+            "你感受到的他人内心的混乱，远比你表现出来的要多。你将其吸收，与之共处，最终它便成了你自身的一部分。",
+            "你的力量不在于拥有一切，而在于选择该保留什么。",
+            "你就像一块海绵，吸收着周围环境的能量。当地面震动时，你会从骨子里感受到。",
+            "你的首要任务必须是建立一个稳定的家。如果你自己都迷失在茫茫大海中，就无法成为他人的避风港。"
           ],
           "shadows": [
-            "You stay loyal to places and people that no longer hold you.",
-            "You carry other people's weight until you forget what yours feels like.",
-            "You might resist moving on because the familiar, even if painful, feels safer."
+            "你依然对那些早已不再留住你的地方和人忠贞不渝。",
+            "你一直扛着别人的负担，直到忘记了自己的负担是什么感觉。",
+            "你可能不愿向前迈进，因为熟悉的事物——即使令人痛苦——也会让人感到更安全。"
           ],
           "advice": [
-            "Name one thing you're holding that isn't yours. Put it down this week.",
-            "Find the place where you feel most solid. Go there more.",
-            "You can be steady without being a shelter for everyone.",
-            "If a place or person makes you feel unstable, it's okay to walk away."
+            "说出一件你手里拿着但不属于你的东西。这周把它放下来。",
+            "找到让你感到最踏实的地方。多去那里。",
+            "你可以保持稳重，但不必成为所有人的避风港。",
+            "如果某个地方或某个人让你感到不安，离开也没关系。"
           ],
           "keywords": [
-            "loyal",
-            "steady",
-            "grounded",
-            "protective"
+            "忠诚的",
+            "稳定",
+            "被禁足",
+            "保护性的"
           ]
         }
       }
     },
     "THE_CULTIVATOR": {
       "name": "耕耘者",
-      "tagline": "You grow things. Quietly, patiently, for real.",
+      "tagline": "你种东西。默默地、耐心地，认认真真地。",
       "symbol": "❉",
       "color": "#A89060",
-      "element": "Earth",
+      "element": "地球",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You build things that last, by hand, without shortcuts.",
+          "hero": "你亲手打造经久耐用的作品，绝不走捷径。",
           "narrative": [
-            "You don't need grand gestures. You need steady work, close attention, and time. You're the person who actually finishes what others only started.",
-            "People underestimate you because your power doesn't announce itself. Then years pass and you're the one still standing with something real.",
-            "This is a rare gift. Most people can start things. Very few can grow them.",
-            "You are the master gardener of life. You plant seeds and nurture them with tireless patience, even when no one else can see the growth.",
-            "But don't forget to leave some water in the can for yourself. Your own garden needs tending too."
+            "你不需要大张旗鼓的举动。你需要的是踏实的工作、细致的关注和时间。你就是那个能真正完成别人只是开始的事情的人。",
+            "人们会低估你，因为你的力量不会主动彰显。然而岁月流逝，最终能真正屹立不倒、拥有真才实学的人，正是你。",
+            "这是一种难得的才能。大多数人都能开始做一件事，但能将其发扬光大的人却寥寥无几。",
+            "你是生命的园艺大师。你播下种子，并以无尽的耐心悉心照料，即使别人看不到它们的成长。",
+            "不过别忘了在水壶里给自己留点水。你自己的花园也需要照料。"
           ],
           "shadows": [
-            "You take on responsibility for everyone else's success.",
-            "You keep giving past the point where it's working.",
-            "You might feel unappreciated because your work is often invisible until it blooms."
+            "你承担起让其他人取得成功的责任。",
+            "你一直在给予，甚至超出了“有效”的限度。",
+            "你可能会觉得自己的付出不被重视，因为你的工作往往要等到开花结果时才被看到。"
           ],
           "advice": [
-            "Pick one thing you've been tending out of loyalty, not love. Let it go.",
-            "Ask yourself what you'd grow if no one needed anything from you.",
-            "You're allowed to build something just for you.",
-            "Celebrate a small win today. You worked hard for it."
+            "选一件你一直出于忠诚而非爱意而坚持做的事。放手吧。",
+            "试着问问自己，如果没有人需要你提供任何东西，你会种植什么。",
+            "你可以为自己打造一些东西。",
+            "今天庆祝一下这个小小的胜利吧。这是你努力换来的。"
           ],
           "keywords": [
-            "patient",
-            "practical",
-            "nurturing",
-            "builder"
+            "患者",
+            "实用的",
+            "培育",
+            "构建者"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You make things grow — including people.",
+          "hero": "你让万物茁壮成长——包括人。",
           "narrative": [
-            "You have a rare instinct for what a person, project, or place needs to thrive. You don't impose it — you just quietly supply what's missing.",
-            "This makes you invaluable in collaborative work. You're the reason things actually happen, even when your name isn't on them.",
-            "You also know when to step back. That's the mark of a real cultivator.",
-            "You are the soil that others grow in. You provide the nutrients, the stability, and the support so others can shine.",
-            "Remember that you also deserve to bloom. You don't have to stay in the background forever."
+            "你对一个人、一个项目或一个地方需要什么才能蓬勃发展，有着一种难得的直觉。你不会强加于人——只是默默地补足缺失的部分。",
+            "这让你在协作工作中变得不可或缺。正是因为有你，事情才能真正得以落实——即使你的名字并未出现在其中。",
+            "你也懂得何时该退一步。这才是真正修行者的标志。",
+            "你是他人茁壮成长的沃土。你提供养分、稳定性和支持，让他人得以绽放光彩。",
+            "请记住，你也值得绽放。你不必永远躲在幕后。"
           ],
           "shadows": [
-            "You over-support until the other person stops trying.",
-            "You downplay your role because the growing isn't dramatic.",
-            "You might feel resentful when others take credit for your quiet work."
+            "你会过度支持，直到对方不再努力为止。",
+            "你之所以轻描淡写地看待自己的作用，是因为这种成长并不显著。",
+            "当别人把你的默默付出据为己有时，你可能会感到不满。"
           ],
           "advice": [
-            "Once this week, name what you actually contributed to a success.",
-            "Notice where your support is being taken for granted. Adjust.",
-            "Let one person fail without stepping in. Watch what they do.",
-            "Speak up about your contribution. It's not bragging; it's the truth."
+            "本周请至少列举一次，你为某项成功做出了哪些实际贡献。",
+            "留意哪些地方你的支持被视为理所当然。做出调整。",
+            "让一个人失败，不要插手。观察他会怎么做。",
+            "大胆说出你的贡献。这并不是吹牛，而是事实。"
           ],
           "keywords": [
-            "nurturing",
-            "practical",
-            "steady",
-            "supportive"
+            "培育",
+            "实用的",
+            "稳定的",
+            "支持性的"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You bloom when someone tends to you back.",
+          "hero": "当有人悉心照料你时，你就会绽放。",
           "narrative": [
-            "You give naturally, but you're not great at receiving. People assume you're fine because you seem fine. You usually are. Usually.",
-            "Your best work happens when someone believes in you a little more than the situation warrants.",
-            "You don't need to become harder. You need to choose softer soil.",
-            "You are a mirror. When someone gives you love and attention, you reflect it back tenfold. But you need someone to give it first.",
-            "Don't wait for permission to take care of yourself. You deserve the same care you freely give to everyone else."
+            "你天生乐于给予，却不太擅长接受。别人以为你没事，因为你看起来挺好的。你通常确实没事。通常是这样。",
+            "当有人对你的信任，比实际情况所要求的还要多一点时，你才能发挥出最佳水平。",
+            "你不需要变得更坚硬，而是需要选择更松软的土壤。",
+            "你是一面镜子。当有人给予你爱和关注时，你会将这份爱和关注加倍地回馈给对方。但你需要有人先给予你这些。",
+            "不要等待别人的许可才去照顾自己。你值得获得与你无私给予他人的同等关怀。"
           ],
           "shadows": [
-            "You give more than you have and call it generosity.",
-            "You mistake over-responsibility for love.",
-            "You might burn out trying to be everything to everyone."
+            "你付出超过自己所拥有的，却称之为慷慨。",
+            "你把过度负责当成了爱。",
+            "如果你试图对每个人都面面俱到，可能会导致自己精疲力竭。"
           ],
           "advice": [
-            "Once this week, let someone take care of something for you.",
-            "Write down what you need. Not what others need from you.",
-            "You can put down a burden without putting down the person.",
-            "Surround yourself with people who nurture your growth, not just those who need your nurturing."
+            "这周找人帮你处理一件事吧。",
+            "写下你需要什么，而不是别人需要你做什么。",
+            "你可以卸下负担，却不必贬低对方。",
+            "多与那些能促进你成长的人相处，而不是只与那些需要你关照的人相处。"
           ],
           "keywords": [
-            "nurturing",
-            "sensitive",
-            "giving",
-            "patient"
+            "培育",
+            "敏感的",
+            "给予",
+            "患者"
           ]
         }
       }
     },
     "THE_BLADE": {
       "name": "刀刃",
-      "tagline": "You cut through what everyone else is avoiding.",
+      "tagline": "你直面了其他人都在回避的问题。",
       "symbol": "⚔",
       "color": "#5A6B7A",
-      "element": "Metal",
+      "element": "金属",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You call it what it is — and you'd rather be right than liked.",
+          "hero": "你直言不讳——而且你宁可说对，也不愿讨人喜欢。",
           "narrative": [
-            "You have a moral clarity that most people spend their lives trying to develop. You see what's true about a situation fast, and you don't need to soften it to make it true.",
-            "This makes you reliable in a crisis and intimidating in a meeting. Both are useful.",
-            "You're not cold. You're direct. The difference matters, and you don't always explain it.",
-            "You are the scalpel in a world of butter knives. You cut to the heart of the matter, slicing through the noise and confusion with surgical precision.",
-            "But a blade that's always drawn will eventually dull. Know when to put yourself away, to rest, and to just observe."
+            "你拥有那种道德上的明晰，而大多数人却要花上一辈子去培养。你能迅速看清事物的真相，而且无需粉饰太平就能让它成为事实。",
+            "这让你在危机中值得信赖，在会议中令人敬畏。这两点都很实用。",
+            "你并不是冷漠，而是直率。这两者之间是有区别的，而你并不总是会解释清楚。",
+            "在这个满是黄油刀的世界里，你就是那把手术刀。你直指问题的核心，以外科手术般的精准，切开喧嚣与混乱。",
+            "但一把永远出鞘的刀，终究会变钝。要懂得何时收起自己，何时休息，何时只是静静地观察。"
           ],
           "shadows": [
-            "You cut too fast. Sometimes people need a second to catch up.",
-            "You can win the argument and lose the room.",
-            "You might use your directness as a shield to avoid dealing with your own emotions."
+            "你切得太快了。有时候人们需要一秒钟来跟上。",
+            "你可能赢了争论，却失去了人心。",
+            "你可能会把自己的直率当作一面盾牌，以此来逃避面对自己的情绪。"
           ],
           "advice": [
-            "Once this week, ask a question before giving the answer.",
-            "Notice where your honesty is a weapon instead of a gift.",
-            "Being right isn't always the win. Sometimes being heard is.",
-            "Ask yourself: 'Am I speaking to be understood, or to be right?'"
+            "本周请至少一次，在给出答案之前先提出一个问题。",
+            "请留意，在哪些情况下，你的诚实会成为一种武器，而不是一份礼物。",
+            "对并不总是意味着胜利。有时，被倾听才是胜利。",
+            "问问自己：“我说话是为了让人理解，还是为了证明自己是对的？”"
           ],
           "keywords": [
-            "direct",
-            "principled",
+            "直接",
+            "有原则的",
             "sharp",
-            "decisive"
+            "决定性的"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You know when to cut and when to hold.",
+          "hero": "你知道什么时候该减仓，什么时候该持仓。",
           "narrative": [
-            "You have the blade's clarity without its edge-for-edge's-sake. You can tell the truth without making it into a fight.",
-            "People trust you because you don't lie. They also come to you with hard things because you don't flinch.",
-            "This is an unusual kind of strength — one that doesn't need to prove itself.",
-            "You are the fair judge. You listen to all sides, weigh the evidence, and deliver a verdict that is both just and compassionate.",
-            "Your integrity is your most valuable asset. Guard it fiercely, but allow yourself some grace."
+            "你拥有刀刃般的清晰，却没有那种为了锋利而锋利的执念。你可以直言不讳，却不会因此引发争执。",
+            "人们信任你，是因为你从不撒谎。他们也会向你倾诉棘手的事情，因为你从不退缩。",
+            "这是一种不同寻常的力量——一种无需证明自己的力量。",
+            "您是公正的裁判。您倾听各方意见，权衡证据，并作出既公正又充满仁慈的判决。",
+            "你的正直是你最宝贵的财富。要竭力守护它，但也要对自己宽容一些。"
           ],
           "shadows": [
-            "You can slip into being the fixer for everyone else's mess.",
-            "You confuse being needed with being wanted.",
-            "You might become overly critical of yourself when you fall short of your own high standards."
+            "你可能会不知不觉地变成那个替别人收拾烂摊子的人。",
+            "你把“被需要”和“被想要”混为一谈了。",
+            "当你达不到自己设定的高标准时，可能会对自己过于苛责。"
           ],
           "advice": [
-            "Once this week, let someone else be the one who knows.",
-            "Say what you feel, not just what you see.",
-            "Notice who you soften around. Learn from that.",
-            "Forgive yourself for a mistake you made. You're human, not a machine."
+            "这周至少一次，让别人来当那个“知情者”吧。",
+            "说出你的感受，而不仅仅是你说你所看到的。",
+            "留意自己在谁面前会变得温和。从中吸取教训。",
+            "原谅自己犯下的错误。你只是个普通人，又不是机器。"
           ],
           "keywords": [
-            "principled",
-            "clear",
-            "decisive",
-            "trusted"
+            "有原则的",
+            "清除",
+            "决定性的",
+            "值得信赖的"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "Your edge is real — it just needs to be respected, not dulled.",
+          "hero": "你的优势是真实存在的——它只需要被尊重，而不是被磨灭。",
           "narrative": [
-            "You have strong convictions, but you've probably been told to soften them. You've learned to hide your edge. That was survival, not growth.",
-            "In the right environment, your precision becomes an asset. In the wrong one, it's a liability.",
-            "You don't need to become less. You need to find people who can hold sharpness.",
-            "You are the diamond in the rough. Under pressure, you shine. But you need an environment that appreciates your hardness, not one that tries to crush it.",
-            "Don't dim your light or dull your edge for anyone. Find your people, and let your sharpness be a gift."
+            "你有着坚定的信念，但可能曾被人劝告要收敛一些。你学会了掩饰自己的锋芒。那只是为了生存，而非成长。",
+            "在合适的环境下，你的精准度会成为一种优势；在不合适的环境下，它则会成为一种负担。",
+            "你不必让自己变得平庸。你需要找到那些能保持敏锐的人。",
+            "你是未经打磨的钻石。在压力下，你才会绽放光彩。但你需要一个懂得欣赏你坚韧特质的环境，而不是一个试图摧毁这种特质的环境。",
+            "不要为了任何人而掩盖自己的光芒或磨平自己的锋芒。找到志同道合的人，让你的锐气成为一份礼物。"
           ],
           "shadows": [
-            "You've internalized other people's discomfort with your honesty.",
-            "You second-guess instincts that are usually right.",
-            "You might isolate yourself because you feel you don't fit in."
+            "你已经将别人对你坦率所感到的不适内化了。",
+            "你总是对那些通常很准确的直觉产生怀疑。",
+            "你可能会因为觉得自己格格不入而选择自我封闭。"
           ],
           "advice": [
-            "Once this week, say the thing you've been softening. Notice what happens.",
-            "Find one person who can take your real opinion. Keep them.",
-            "You're not too much. You're in the wrong room.",
-            "Trust your instincts. They are usually right. If someone can't handle your truth, they are not your people."
+            "这周找个机会，把那句你一直踌躇着没说出口的话说出来。留意会发生什么。",
+            "找一个能接受你真实想法的人。好好珍惜他。",
+            "你并没有过分。只是进错房间了。",
+            "相信你的直觉。它们通常是正确的。如果有人无法接受你的真实一面，那他们就不是你的知己。"
           ],
           "keywords": [
-            "principled",
+            "有原则的",
             "sharp",
-            "loyal",
-            "misunderstood"
+            "忠诚的",
+            "被误解"
           ]
         }
       }
     },
     "THE_GEM": {
       "name": "宝石",
-      "tagline": "You shine because you were cut with intent.",
+      "tagline": "你之所以闪耀，是因为你是被精心雕琢而成的。",
       "symbol": "◈",
       "color": "#9AACB8",
-      "element": "Metal",
+      "element": "金属",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You've spent years refining your taste — and it shows.",
+          "hero": "你花了好几年时间磨练自己的品味——这一点显而易见。",
           "narrative": [
-            "You notice quality that other people walk past. A phrase, a finish, a detail in a room — you see the difference, and you care about it.",
-            "You hold yourself to a standard that doesn't come from outside. You're not chasing approval, you're chasing the version of the thing that would make you proud to have made it.",
-            "This makes you exceptional at a certain kind of work. It also makes you difficult to satisfy — including with yourself.",
-            "You are a piece of fine art, meticulously crafted. Your eye for detail is a superpower, but it can also be a curse if you don't learn to let things go.",
-            "Remember that perfection is a horizon you can never reach. The beauty is in the pursuit, not in the arrival."
+            "你能注意到别人视而不见的品质。一句措辞、一种工艺、房间里的某个细节——你能看出其中的不同，并且对此十分重视。",
+            "你对自己的要求并非源于外界。你追求的不是他人的认可，而是那种能让你为自己的成就感到自豪的作品。",
+            "这让你在某类工作中表现得尤为出色。但也让你很难感到满足——包括对自己。",
+            "你是一件精雕细琢的艺术品。你对细节的敏锐洞察力是一种超能力，但如果你不学会放手，它也可能成为一种诅咒。",
+            "请记住，完美是一个永远无法企及的地平线。美在于追求的过程，而非抵达的终点。"
           ],
           "shadows": [
-            "You can burn a lot of energy on details no one else will notice.",
-            "You're harder on yourself than you'd ever be on someone else.",
-            "You might become paralyzed by perfectionism, unable to finish anything."
+            "你可能会在别人根本不会注意到的细节上耗费大量精力。",
+            "你对自己比对任何人都更严苛。",
+            "完美主义可能会让你陷入瘫痪，导致你什么都做不完。"
           ],
           "advice": [
-            "Once this week, ship something at 80%. Notice that no one died.",
-            "Say one kind thing to yourself out loud. Yes, out loud.",
-            "Ask: 'Is this the best I can do, or the best that's needed?'",
-            "Give yourself a break. Take a day off from being perfect."
+            "本周至少一次，以80%的完成度交付某项成果。请注意，没有人因此而“阵亡”。",
+            "大声对自己说一句暖心的话。没错，就是大声说出来。",
+            "问自己：“这是我能做到的最好，还是达到要求的最好？”",
+            "放过自己吧。暂时别再追求完美，休息一天吧。"
           ],
           "keywords": [
-            "refined",
-            "precise",
-            "perfectionist",
-            "taste"
+            "精炼的",
+            "精确的",
+            "完美主义者",
+            "口味"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You have taste without letting it run your life.",
+          "hero": "你有自己的品味，却不会让它主宰你的生活。",
           "narrative": [
-            "You know the difference between good and great, but you don't let it stop you from moving. You refine as you go, not before you start.",
-            "This is a rare balance — one that lets you actually finish things while still caring about how they're made.",
-            "People notice the quality of what you touch, even if they can't name why.",
-            "You are a polished gem, radiating elegance and refinement. You don't have to shout to be noticed; your presence speaks for itself.",
-            "But make sure your pursuit of excellence doesn't isolate you from the messy, imperfect beauty of the world."
+            "你知道“好”与“卓越”之间的区别，但你不会因此而停下脚步。你是在前进的过程中不断完善，而不是在开始之前就做好一切准备。",
+            "这是一种难得的平衡——既能让你真正把事情做完，又能让你依然关注事情的完成方式。",
+            "人们会注意到你所接触之物的品质，即使他们说不出具体原因。",
+            "你是一颗璀璨的宝石，散发着优雅与精致的气质。你无需大声呐喊就能引人注目；你的存在本身就是最好的证明。",
+            "但要确保，你对卓越的追求不会让你与这个世界那混乱而并不完美的美隔绝开来。"
           ],
           "shadows": [
-            "You can slip into editing other people's choices without being asked.",
-            "You downplay your own standards to fit into rooms that don't share them.",
-            "You might use your taste as a way to feel superior to others."
+            "你可能会在未经他人请求的情况下，擅自修改他人的选择。",
+            "你为了融入那些不认同你标准的圈子，而刻意降低自己的标准。",
+            "你可能会利用自己的品味来表现得比别人优越。"
           ],
           "advice": [
-            "Once this week, notice where your standards are a gift, and where they're a gate.",
-            "Pick one thing to do badly on purpose. See what happens.",
-            "Let someone else's version of 'good' be good enough.",
-            "Appreciate the beauty in the imperfect. Wabi-sabi is a thing."
+            "本周找一次机会，留意一下你的标准在哪些方面是种馈赠，在哪些方面又成了障碍。",
+            "故意选一件事情，把它做得一团糟。看看会发生什么。",
+            "让别人眼中的“好”就足够好了。",
+            "欣赏不完美中的美。侘寂（Wabi-sabi）确实是一种美学。"
           ],
           "keywords": [
-            "refined",
-            "balanced",
-            "tasteful",
-            "precise"
+            "精炼的",
+            "平衡的",
+            "雅致",
+            "精确的"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "Your shine depends on the light you're standing in.",
+          "hero": "你的光彩取决于你所处的光线。",
           "narrative": [
-            "You have a refined inner world, but it only comes out when the conditions are right. In the wrong place, you go quiet and small.",
-            "You've probably been told you're 'too picky' at some point. You're not. You just notice things.",
-            "The right rooms don't dim you — they reveal you.",
-            "You are a delicate crystal. You need the right lighting, the right angle, and the right company to truly sparkle.",
-            "Don't waste your light in places that can't see your value. Find the space where you are appreciated, and let yourself shine."
+            "你拥有一个细腻的内心世界，但只有在条件合适时，它才会显现出来。若身处不恰当的环境，你便会变得沉默寡言、缩成一团。",
+            "你可能曾被别人说“太挑剔”了。其实你并没有。你只是比较细心罢了。",
+            "合适的房间不会让你黯然失色——反而会让你焕发光彩。",
+            "你是一颗精致的水晶。只有在恰到好处的灯光下、从恰到好处的角度看，并且有恰到好处的陪伴，你才能真正熠熠生辉。",
+            "不要在那些无法看到你价值的地方浪费你的光芒。找到那个能欣赏你的地方，让自己的光芒绽放。"
           ],
           "shadows": [
-            "You don't speak up because you assume other people won't get it.",
-            "You over-edit yourself before anyone else even sees the work.",
-            "You might feel like an outsider, even when you're in a group."
+            "你不愿开口，是因为你以为别人不会明白。",
+            "在别人还没看到你的作品之前，你就已经对自己进行了过度修改。",
+            "即使身处群体之中，你可能也会觉得自己是个局外人。"
           ],
           "advice": [
-            "Find one person who gets your taste. Show them the real version.",
-            "Say the specific thing you noticed this week, even if no one asked.",
-            "You don't need everyone to see the detail. You need one person who does.",
-            "Speak up about your preferences. You are allowed to have high standards."
+            "找一个懂你品味的人。向他展示真实的一面。",
+            "说说你本周注意到的具体事情，即使没人问。",
+            "你不需要让每个人都注意到这些细节，你只需要有一个人能注意到。",
+            "大胆表达你的喜好。你有权提出高标准。"
           ],
           "keywords": [
-            "refined",
-            "sensitive",
-            "perceptive",
-            "quiet"
+            "精炼的",
+            "敏感的",
+            "敏锐的",
+            "安静"
           ]
         }
       }
     },
     "THE_DEEP": {
       "name": "深海",
-      "tagline": "You move like an ocean — slow on the surface, vast underneath.",
+      "tagline": "你的举止如同大海——表面平静，深处浩瀚。",
       "symbol": "≈",
       "color": "#1B3A5C",
-      "element": "Water",
+      "element": "水",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You think in systems, not moments.",
+          "hero": "你着眼于整体，而非片刻。",
           "narrative": [
-            "You have an unusual capacity to hold a lot of context at once. Where other people see a situation, you see the machinery under it.",
-            "You don't rush to conclusions. You let things settle, and your conclusions are usually right because of it.",
-            "This makes you a strategist, an advisor, someone others consult when the easy answers have failed.",
-            "You are the deep ocean. You hold mysteries and wisdom that others can only guess at. Your depth is your greatest strength.",
-            "But don't drown in your own thoughts. Sometimes, it's okay to surface and just experience the present moment."
+            "你拥有一种不同寻常的能力，能够同时把握大量背景信息。当别人只看到一种情况时，你却能看清其背后的运作机制。",
+            "你不会草率下结论。你会让事情自然发展，正因如此，你的结论通常都是正确的。",
+            "这使你成为一名战略家、一名顾问，当简单的答案行不通时，别人会向你寻求建议。",
+            "你就是那深邃的大海。你蕴藏着他人只能猜测的奥秘与智慧。你的深邃正是你最大的力量。",
+            "但不要沉溺于自己的思绪中。有时候，浮出水面，单纯地感受当下这一刻，也是可以的。"
           ],
           "shadows": [
-            "You think so long that you miss the window to act.",
-            "You stay above your own emotions because you can see them from far away.",
-            "You might use your intellect to analyze your feelings, instead of actually feeling them."
+            "你思虑太久，结果错过了采取行动的时机。",
+            "你能超脱于自己的情绪之上，是因为你能从远处观察它们。",
+            "你可能会用理智来分析自己的感受，而不是真正去体会它们。"
           ],
           "advice": [
-            "Once this week, act on a decision before you feel 'ready.'",
-            "Say what you actually feel — not what you've analyzed about what you feel.",
-            "Notice when your depth is a gift and when it's a hiding place.",
-            "Take a break from thinking. Go for a walk, listen to music, or just breathe."
+            "本周至少一次，在感到“准备好了”之前就付诸行动。",
+            "说出你真实的感受——而不是你对这种感受的分析结果。",
+            "请留意，何时你的深度是一种馈赠，何时又成为了一种藏身之处。",
+            "暂时放下思绪。去散散步、听听音乐，或者只是静静地呼吸。"
           ],
           "keywords": [
-            "strategic",
-            "philosophical",
-            "deep",
-            "adaptive"
+            "战略性的",
+            "哲学的",
+            "深",
+            "自适应的"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You adapt without losing your direction.",
+          "hero": "你既能适应环境，又不偏离自己的方向。",
           "narrative": [
-            "You can shift with circumstances and still arrive where you meant to go. That's not luck — that's a skill most people never develop.",
-            "You read situations well, and you read people better. You rarely say the wrong thing because you usually know what the right thing is.",
-            "This makes you trusted in rooms where trust is scarce.",
-            "You are the wise counselor. People come to you for your insight, knowing you will offer a perspective they haven't considered.",
-            "Trust that your intuition is a valid source of knowledge. It's not just a feeling; it's a deep knowing."
+            "你可以顺应形势的变化，最终依然能抵达预定的目的地。这并非运气——而是一种大多数人从未掌握的技能。",
+            "你善于洞察局势，更善于看透人心。你很少说错话，因为你通常知道该说什么才对。",
+            "这让你在信任稀缺的场合中赢得了信任。",
+            "您是一位睿智的顾问。人们向您寻求建议，是因为您的洞察力，他们知道您会提供他们未曾考虑过的视角。",
+            "相信你的直觉是一种可靠的知识来源。它不仅仅是一种感觉，而是一种深刻的领悟。"
           ],
           "shadows": [
-            "You can flow around conflict instead of resolving it.",
-            "You keep your real opinions in reserve so long that they stop mattering.",
-            "You might use your wisdom as an excuse to stay detached from the world."
+            "你可以绕过冲突，而不是去解决它。",
+            "你把真实的想法藏在心里太久，以至于它们不再重要了。",
+            "你可能会以自己的智慧为借口，以此与世隔绝。"
           ],
           "advice": [
-            "Once this week, take a position instead of reflecting on the positions available.",
-            "Say the true thing, not the safe thing.",
-            "Notice where you're adapting to avoid, not to build.",
-            "Speak up about your beliefs. You have valuable things to say."
+            "本周请至少做一次决定，而不是只是思考有哪些选择。",
+            "说真话，别说那些稳妥的话。",
+            "请注意，你进行调整是为了规避，而不是为了构建。",
+            "大胆表达你的信念。你有值得倾听的见解。"
           ],
           "keywords": [
-            "adaptive",
-            "wise",
-            "fluid",
-            "trusted"
+            "自适应的",
+            "明智的",
+            "流体",
+            "值得信赖的"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You need a container big enough to hold you.",
+          "hero": "你需要一个足够大的容器来容纳你自己。",
           "narrative": [
-            "You have a lot going on inside — ideas, questions, feelings — and it doesn't all fit into small spaces.",
-            "In the right environment, your depth becomes presence. In the wrong one, you go silent and start drifting.",
-            "You're not hard to know. You're hard to hold. That's different.",
-            "You are a vast, unexplored ocean. You need a space where you can be your full, complex self without feeling judged.",
-            "Don't shrink yourself to fit into small minds. Find the people who can hold your depth."
+            "你的内心波澜起伏——有想法、有疑问、有感受——而这些都无法全部容纳在狭小的空间里。",
+            "在合适的环境中，你的深度会转化为存在感；在不合适的环境中，你会陷入沉默，开始迷失方向。",
+            "你并不难懂，只是难以留住。这可不一样。",
+            "你是一片辽阔而未被探索的海洋。你需要一个空间，在那里你可以毫无顾忌地展现自己完整而复杂的本真，无需担心被评判。",
+            "不要为了迎合那些心胸狭隘的人而贬低自己。去寻找那些能理解你内心深度的人。"
           ],
           "shadows": [
-            "You retreat into your own world instead of asking for what you need.",
-            "You confuse being unknown with being unknowable.",
-            "You might feel lonely even in a crowded room."
+            "你退缩到自己的世界里，而不是提出自己的需求。",
+            "你把“不为人知”和“不可知”混为一谈了。",
+            "即使身处人声鼎沸的房间，你可能也会感到孤独。"
           ],
           "advice": [
-            "Find the one person you can say the whole thing to. Not the summary.",
-            "Give your inner world one place to live this week — a page, a song, a room.",
-            "You're not too much. You're just not in the right size container.",
-            "Reach out. You might be surprised who is willing to dive deep with you."
+            "找到那个你能向他/她倾诉全部心声的人。而不是只说个大概。",
+            "本周，给你的内心世界留一个栖身之所——一页纸、一首歌、一间房。",
+            "你并没有过分。只是装你的容器尺寸不对罢了。",
+            "主动联系吧。你可能会惊讶地发现，竟然有人愿意与你深入交流。"
           ],
           "keywords": [
-            "deep",
-            "sensitive",
-            "philosophical",
-            "adaptive"
+            "深",
+            "敏感的",
+            "哲学的",
+            "自适应的"
           ]
         }
       }
     },
     "THE_SPRING": {
       "name": "泉水",
-      "tagline": "You arrive quietly, and everything grows around you.",
+      "tagline": "你悄然到来，万物便在你周围生长。",
       "symbol": "◌",
       "color": "#4A6FA5",
-      "element": "Water",
+      "element": "水",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You know things before you can explain how.",
+          "hero": "有些事情，你明明知道，却说不清原因。",
           "narrative": [
-            "Your intuition is unusually accurate. You get a read on a person or a situation fast, and it's usually right — even when you can't articulate why.",
-            "You don't perform certainty. You just move as if you already know, because you do.",
-            "This makes you a natural in work that requires subtle judgment. It also makes you hard to argue with when you've made up your mind.",
-            "You are a clear mountain spring. Your intuition is pure and refreshing. It flows from a deep well of inner knowing.",
-            "Trust your gut. It is your most reliable guide, even when logic points in the other direction."
+            "你的直觉格外准确。你总能迅速看透一个人或一种情况，而且通常都很准确——即使你无法说清原因。",
+            "你无需表现得斩钉截铁。你只需像已经知道那样行动，因为你确实知道。",
+            "这使你在需要细致判断的工作中游刃有余。此外，一旦你下定决心，别人也很难与你争论。",
+            "你是一股清澈的山泉。你的直觉纯净而令人神清气爽。它源自内心深处的那口智慧之井。",
+            "相信你的直觉。即使逻辑指向相反的方向，它依然是你最可靠的向导。"
           ],
           "shadows": [
-            "You rely on your own read so much that you stop asking for input.",
-            "You keep your deepest insights private, which means people don't get to benefit from them.",
-            "You might become overly mysterious, keeping everyone at arm's length."
+            "你太过依赖自己的判断，以至于不再寻求他人的意见了。",
+            "你将自己最深刻的见解藏在心里，这意味着别人无法从中受益。",
+            "你可能会变得过于神秘，让所有人都与你保持距离。"
           ],
           "advice": [
-            "Once this week, say the thing you intuited — even without proof.",
-            "Let someone in on the reasoning, not just the conclusion.",
-            "You don't need to be sure to be right.",
-            "Share your wisdom. It's a gift that shouldn't be kept hidden."
+            "这周至少一次，说出你直觉到的那句话——即使没有证据。",
+            "向他人说明推理过程，而不仅仅是结论。",
+            "你不必非得确定无误才算对。",
+            "分享你的智慧吧。这是一份不应被埋没的礼物。"
           ],
           "keywords": [
-            "intuitive",
-            "subtle",
-            "strategic",
-            "quiet"
+            "直观的",
+            "微妙的",
+            "战略性的",
+            "安静"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You listen more than you talk — and you hear more than most.",
+          "hero": "你倾听多于言语——而且你听到的比大多数人都多。",
           "narrative": [
-            "You have a still, perceptive quality that makes people want to tell you things. You don't push. You just make space.",
-            "Your instincts are quiet, but they're usually on time. You know when to act and when to wait, and the difference is rarely explained to you — you just feel it.",
-            "This is a rare and durable kind of intelligence.",
-            "You are a still lake. Your surface is calm, but your depths are filled with wisdom and insight.",
-            "Remember that you also need a place to share your thoughts. You don't have to hold everything inside."
+            "你身上有一种沉静而敏锐的气质，让人很想向你倾诉。你从不强求，只是留出空间。",
+            "你的直觉虽然不显山露水，但通常都很准。你知道何时该行动、何时该等待，而这种区别很少有人向你解释——你只是凭感觉就能明白。",
+            "这是一种罕见且持久的智慧。",
+            "你就像一汪静谧的湖水。你的水面波澜不惊，但深处却蕴藏着智慧与洞见。",
+            "请记住，你还需要一个可以倾诉心声的地方。不必把所有事情都憋在心里。"
           ],
           "shadows": [
-            "You absorb other people's emotions without noticing until later.",
-            "You keep your own counsel so well that people assume you don't need anything.",
-            "You might use silence as a way to avoid confrontation."
+            "你会不自觉地吸收他人的情绪，直到后来才意识到。",
+            "你总是把自己的想法藏得那么深，以至于别人以为你什么都不需要。",
+            "你可能会用沉默来避免冲突。"
           ],
           "advice": [
-            "Once this week, tell someone what you actually need.",
-            "Notice where your stillness is a gift and where it's a wall.",
-            "You're allowed to be a source without being everyone's well.",
-            "Find a creative outlet. Painting, writing, or music can help you express what you can't say in words."
+            "这周找个机会，告诉某人你真正需要的是什么。",
+            "留意你的静心在何处是种馈赠，在何处又成了障碍。",
+            "你可以成为一个信息来源，但不必成为所有人的“万事通”。",
+            "寻找一种创意表达方式。绘画、写作或音乐都能帮助你表达那些无法用语言说出口的情感。"
           ],
           "keywords": [
-            "intuitive",
-            "gentle",
-            "perceptive",
-            "steady"
+            "直观的",
+            "温柔的",
+            "敏锐的",
+            "稳定的"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You're a well — deep, clear, and quietly essential.",
+          "hero": "你就像一口井——深邃、清澈，且默默地不可或缺。",
           "narrative": [
-            "You have real inner depth, but it doesn't always surface in public. You need the right person or the right moment for it to come out.",
-            "People often underestimate you, and you usually let them. You've learned that being seen isn't the same as being understood.",
-            "When you find someone who gets it, you open up in a way that surprises even you.",
-            "You are a hidden gem. You are not for everyone, but for those who take the time to dig, you are a treasure trove.",
-            "Be patient. The right people will know how to appreciate your quiet, subtle brilliance."
+            "你内心其实很有深度，但这并不总是在公众场合显露出来。只有遇到合适的人或合适的时机，这种深度才会显现出来。",
+            "人们常常低估你，而你通常也任由他们这样做。你已经明白，被看到并不等于被理解。",
+            "当你遇到一个真正懂你的人时，你会以一种连自己都感到惊讶的方式敞开心扉。",
+            "你是一颗被埋没的瑰宝。你并非适合所有人，但对于那些愿意花时间去发掘的人来说，你就是一座宝库。",
+            "请保持耐心。真正懂你的人，自会懂得欣赏你那内敛而精妙的才华。"
           ],
           "shadows": [
-            "You hide your depth because you've been misread before.",
-            "You wait for the perfect invitation to be yourself.",
-            "You might become so good at hiding that you lose touch with your true self."
+            "你之所以隐藏自己的深沉，是因为以前曾被人误解过。",
+            "你总在等待那个能让你做自己的完美契机。",
+            "你可能会变得如此擅长隐藏自己，以至于与真实的自我失之交臂。"
           ],
           "advice": [
-            "Stop waiting for the perfect person. Start sharing with the good ones.",
-            "Once this week, say the thing you've been holding back.",
-            "Being understood is worth the risk of being misread.",
-            "Express yourself in a way that feels safe to you. You don't have to perform to be seen."
+            "别再等待那个完美的人了。开始和那些不错的人分享吧。",
+            "这周找个机会，把那句一直憋在心里的话说出来吧。",
+            "为了被理解，冒着被误解的风险也是值得的。",
+            "以让你感到安全的方式表达自己。你不必刻意表现自己才能被看到。"
           ],
           "keywords": [
-            "deep",
-            "sensitive",
-            "intuitive",
-            "quiet power"
+            "深",
+            "敏感的",
+            "直观的",
+            "静默的力量"
           ]
         }
       }
     }
   },
   "DEFAULT_INTENSITY": {
-    "hero": "You are still becoming.",
+    "hero": "你仍在成长。",
     "narrative": [
-      "This chart is being read in a way we don't have words for yet."
+      "对这张图表的解读方式，目前我们尚无相应的词汇来描述。"
     ],
     "shadows": [],
     "advice": [],
     "keywords": []
+  },
+  "INTENSITY_OVERLAY": {
+    "SELF_SOURCED": {
+      "voice": "你的能量源于内心。你能够设定方向并采取行动，无需等待他人的认可。这种自我驱动的力量是一项巨大的优势——但当你在心中设定的标准过高时，它会悄然转变成倦怠。以下部分将具体描述这种内在引擎如何展现。",
+      "advice_addon": [
+        "本周，回顾一个你独自做出的决定。在没有外部认可的情况下，它站得住脚吗？",
+        "降低一个你对自己的要求标准。这是防止倦怠的方法。"
+      ]
+    },
+    "BALANCED_CORE": {
+      "voice": "你的能量在内外之间保持平衡。必要时你能独立行动，在需要时也能与他人同步。这种调适能力是一份罕见的礼物——但如果偏向“哪一边都不完全是”，可能会让你感觉停滞不前。以下部分将描述这种平衡在日常中如何实际运作。",
+      "advice_addon": [
+        "本周，将“我想做什么”与“此刻实际需要什么”分别思考一次。",
+        "平衡是通过重复的选择建立起来的。留意你在小决定中倾向了哪一边。"
+      ]
+    },
+    "ENVIRONMENT_TUNED": {
+      "voice": "你的能量在与环境的互动中绽放。在合适的人与条件下，你会显著地深化；在错误的环境中，你会逐渐褪色。这种敏感性并非脆弱——它是一种过滤机制。以下部分将描述你最能完全做自己的那些条件。",
+      "advice_addon": [
+        "本周，写下让你感到充满活力的三个人、地点或情况。",
+        "问问自己，当前的环境是否仍然适合你，或者你是否已经超越了它。"
+      ]
+    }
   }
 }

@@ -1,29 +1,29 @@
 {
   "pillar": "戊申",
-  "hero": "You're a mountain with rock running through it. Not a wall — a frame. Things take shape around you.",
+  "hero": "你是一座内部布满岩石的山。不是一堵墙——而是一副框架。万物在你周围成形。",
   "narrative": [
-    "You come across as clear, fair, and slightly formal. People trust your judgment before they know your history — which is unusual, and not something you consciously earn. It's just the shape of you.",
-    "Your strength is structure. You don't just hold things up — you give them edges. Plans, teams, and decisions you touch end up with a visible skeleton, and the skeleton is what makes them work when conditions shift. You're not the loudest voice; you're the one the loudest voice eventually needs.",
-    "Your shadow is a mountain too straight to bend. Your clarity can land as coldness, and your standard can become a wall others don't know how to approach. The harder problem is that you hold yourself to the same sharp standard, and it grinds you down slowly — you rarely notice until the edges start wearing inward.",
-    "The mature form of this pillar is principle that holds and bends. You keep the frame and add a door. When you learn to soften the edge without losing the shape, people trust you more, not less — because they can finally get close enough to see how solid you actually are."
+    "你给人的印象是思路清晰、公正，且略显正式。人们在了解你的过往之前就信任你的判断——这很罕见，也不是你刻意争取来的。这只是你本来的样子。",
+    "你的优势在于结构。你不仅支撑着一切，更赋予它们清晰的轮廓。经你之手制定的计划、组建的团队和做出的决策，最终都会形成一个清晰的框架，而正是这个框架，让它们在形势变化时依然能够正常运转。你并非最响亮的声音，但你却是那个最响亮的声音最终不可或缺的人。",
+    "你的影子如同一座山，笔直得无法弯曲。你的明晰有时会显得冷漠，你的标准则可能变成一道高墙，让他人不知如何靠近。更棘手的是，你对自己也同样严苛，这种高标准正慢慢将你磨蚀——直到棱角开始向内磨损，你才终于察觉。",
+    "这一支柱的成熟形态，就是既能支撑又能灵活变通的准则。你保留框架，再添上一扇门。当你学会在不失本真的前提下柔化棱角时，人们对你的信任不仅不会减少，反而会增加——因为他们终于能走近到足以看清你实际上有多么坚实。"
   ],
   "shadows": [
-    "Your clarity can land as coldness, and you rarely see it happening in the moment.",
-    "You hold yourself to a standard you would call unreasonable in anyone else.",
-    "You can build a structure so rigid that it stops accommodating the people it was built for."
+    "你的直率可能会被误解为冷漠，而你往往在当时并未察觉。",
+    "你对自己要求得如此严格，这种标准若用在别人身上，你自己都会觉得不合理。",
+    "你可以建立一种如此僵化的体制，以至于它无法再适应那些它原本为之而建的人。"
   ],
   "advice": [
-    "Once this week, ask a question before giving the answer. Let someone else frame it first.",
-    "Say one thing you feel, not just one thing you see — even in a small way.",
-    "Notice who softens you. Spend more time with them.",
-    "Forgive yourself for one mistake this week. Out loud, if you can."
+    "本周请至少一次，在给出答案之前先提出一个问题。先让别人来表述这个问题。",
+    "说出你内心的一句话，而不仅仅是你说出你看到的一件事——哪怕只是微不足道的一件事。",
+    "留意那些能让你变得温柔的人。多花点时间陪陪他们。",
+    "本周，原谅自己犯的一次错误。如果可以的话，试着大声说出来。"
   ],
   "keywords": [
-    "structured clarity",
-    "rock-hard principle",
-    "form-maker",
-    "upright strength"
+    "结构清晰",
+    "铁一般的原则",
+    "表单生成器",
+    "直立力量"
   ],
-  "name": "Rocky Mountain",
+  "name": "落基山脉",
   "name_traditional": ""
 }

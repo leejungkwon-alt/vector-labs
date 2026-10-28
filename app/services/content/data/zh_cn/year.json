@@ -1,81 +1,81 @@
 {
   "YEAR_THEME_CONTENT": {
     "TEN_GOD_FRIEND": {
-      "name": "The Mirror Year",
-      "headline": "Your environment reflects your own nature back at you.",
-      "body": "The energy this year matches yours — which sounds great, but it's actually a test. Confidence comes easily. So does stubbornness. Watch for the moment you're sure you're right — that's the tell.",
-      "watch_for": "Doubling down on a belief without checking it.",
-      "lean_into": "Solo projects. Personal brand moves. Anything with your name on it."
+      "name": "《镜年》",
+      "headline": "你的环境会将你自身的本性如实映照出来。",
+      "body": "今年的能量与你相契——听起来很棒，但实际上这是一场考验。自信来得容易，固执也是如此。留意那个你确信自己正确的时刻——那正是关键所在。",
+      "watch_for": "未经核实就对某种信念越发坚信不疑。",
+      "lean_into": "个人项目。个人品牌推广。任何带有你名字的东西。"
     },
     "TEN_GOD_ROB_WEALTH": {
-      "name": "The Compete Year",
-      "headline": "Your drive is amplified. So is your impatience.",
-      "body": "This is a high-output year. You'll want to move fast, take risks, and outwork everyone around you. That's real — but it's also a setup for burnout if you don't pace.",
-      "watch_for": "Competition with people who aren't actually your rivals.",
-      "lean_into": "Ambition that has a real target. Not just motion."
+      "name": "“竞技之年”",
+      "headline": "你的干劲更强了。你的不耐烦也更强了。",
+      "body": "今年将是高产的一年。你会想加快步伐、勇于冒险，并比周围的每个人都更努力。这是事实——但如果你不控制好节奏，这也可能导致你精疲力竭。",
+      "watch_for": "与那些实际上并非你竞争对手的人竞争。",
+      "lean_into": "有切实目标的抱负。而不仅仅是空谈。"
     },
     "TEN_GOD_EATING_GOD": {
-      "name": "The Creative Year",
-      "headline": "The energy is soft and generative.",
-      "body": "This year wants you to make things. Not to grind — to create. If you let yourself, you'll produce work that surprises even you. If you fight it with structure, you'll feel stuck.",
-      "watch_for": "Over-scheduling. This year needs whitespace.",
-      "lean_into": "Craft. Play. Anything that gets output out of your head."
+      "name": "《创意之年》",
+      "headline": "这种能量柔和而富有创造力。",
+      "body": "今年希望你能去创造。不是为了埋头苦干——而是为了创造。如果你放手一试，你将创作出连自己都感到惊讶的作品。如果你用刻板的框架去抗拒它，你就会感到陷入僵局。",
+      "watch_for": "日程安排过满。今年需要留出一些空闲时间。",
+      "lean_into": "创作。玩乐。任何能将脑海中的想法付诸实践的事情。"
     },
     "TEN_GOD_HURTING_OFFICER": {
-      "name": "The Disruption Year",
-      "headline": "You'll want to break things.",
-      "body": "This year sharpens your voice and your vision. You'll see what's broken more clearly than usual, and you'll want to say so. Used well, this is the year you change something real.",
-      "watch_for": "Saying the true thing at the wrong time. Timing is the whole game.",
-      "lean_into": "System-level change. Not just the complaint — the fix."
+      "name": "颠覆之年",
+      "headline": "你会想把东西砸烂。",
+      "body": "这一年将让你表达得更加犀利，视野也更加开阔。你会比平时更清楚地看到哪些地方出了问题，并且会想要直言不讳。如果善加利用，今年你将真正带来改变。",
+      "watch_for": "在错误的时间说出正确的话。时机就是一切。",
+      "lean_into": "系统层面的变革。不仅要解决问题，更要根治。"
     },
     "TEN_GOD_INDIRECT_WEALTH": {
-      "name": "The Horizon Year",
-      "headline": "New opportunities appear and disappear fast.",
-      "body": "This year opens doors you didn't see last year. Some are real; some are mirages. Your instinct for opportunity is sharp — but so is your instinct to chase every one.",
-      "watch_for": "Saying yes to everything because FOMO is loud.",
-      "lean_into": "One or two opportunities, done deeply."
+      "name": "“地平线之年”",
+      "headline": "新机遇转瞬即逝。",
+      "body": "今年为你打开了去年未曾察觉的大门。有些是真实的，有些则是海市蜃楼。你对机遇的敏锐直觉非常敏锐——但你追逐每一个机遇的冲动同样强烈。",
+      "watch_for": "因为“害怕错过”（FOMO）的念头太强烈，所以对什么都答应。",
+      "lean_into": "一两个机会，但要深入挖掘。"
     },
     "TEN_GOD_DIRECT_WEALTH": {
-      "name": "The Grounding Year",
-      "headline": "Slow, steady, real.",
-      "body": "This isn't a dramatic year, and that's the point. What you build this year compounds for the next decade. Predictability is your advantage, not a limitation.",
-      "watch_for": "Impatience. This year rewards patience more than ambition.",
-      "lean_into": "Routines. Systems. Boring assets. Savings. Foundations."
+      "name": "“扎根之年”",
+      "headline": "缓慢、稳健、真实。",
+      "body": "今年并非波澜起伏的一年，而这正是关键所在。今年所打下的基础，将在未来十年里产生累积效应。可预测性是你的优势，而非局限。",
+      "watch_for": "急躁。今年，耐心比野心更能带来回报。",
+      "lean_into": "日常流程。系统。乏味的资产。节省。基础。"
     },
     "TEN_GOD_SEVEN_KILLINGS": {
-      "name": "The Forge Year",
-      "headline": "Pressure, and what you become under it.",
-      "body": "This year brings weight. Not necessarily bad — often good — but heavy. You'll be tested in ways that make you stronger if you don't collapse under the load.",
-      "watch_for": "Saying yes to responsibilities that aren't yours.",
-      "lean_into": "Rest. Real rest. Boundaries. And the people who hold you steady."
+      "name": "“锻造之年”",
+      "headline": "压力，以及你在压力下会变成什么样。",
+      "body": "今年将带来沉重的负担。这未必是坏事——往往是好事——但确实很沉重。如果你能在重压下不被压垮，这些考验将使你变得更加强大。",
+      "watch_for": "对不属于自己的责任说“是”。",
+      "lean_into": "休息。真正的休息。界限。以及那些让你保持稳定的人。"
     },
     "TEN_GOD_DIRECT_OFFICER": {
-      "name": "The Milestone Year",
-      "headline": "Things fall into place.",
-      "body": "This is a year where structure helps you. Promotions, credentials, commitments — the forms of success that involve other people recognizing you — are unusually available.",
-      "watch_for": "Playing small to avoid being seen.",
-      "lean_into": "Formal commitments. Public milestones. Showing your work."
+      "name": "里程碑之年",
+      "headline": "一切都水到渠成。",
+      "body": "今年，制度框架将对你大有裨益。晋升、资质认证、承诺——这些需要他人认可才能实现的成功形式——今年尤为容易获得。",
+      "watch_for": "故意低调行事，以免引人注目。",
+      "lean_into": "正式承诺。公开里程碑。展示工作成果。"
     },
     "TEN_GOD_INDIRECT_RESOURCE": {
-      "name": "The Cave Year",
-      "headline": "Depth before output.",
-      "body": "This year pulls you inward. You'll read more, think more, want more alone time. It's not depression — it's incubation. What you plant this year becomes visible next year.",
-      "watch_for": "Forcing visibility before you're ready.",
-      "lean_into": "Reading. Research. Solitude. Skill-building that no one sees yet."
+      "name": "《洞穴之年》",
+      "headline": "先求深度，再输出。",
+      "body": "今年你会更加向内探索。你会读得更多、思考得更多，也更渴望独处的时间。这并非抑郁——而是酝酿。今年播下的种子，明年便会显现。",
+      "watch_for": "在尚未准备好的情况下强行公开。",
+      "lean_into": "阅读。研究。独处。那些目前还无人察觉的技能培养。"
     },
     "TEN_GOD_DIRECT_RESOURCE": {
-      "name": "The Sanctuary Year",
-      "headline": "You get to rest and rebuild.",
-      "body": "This year is kind. Not exciting — kind. Nourishment is available if you stop trying to force productivity. The people who support you will show up if you let them.",
-      "watch_for": "Mistaking rest for laziness.",
-      "lean_into": "Nourishment. Mentorship. Whatever refills your cup."
+      "name": "“避难之年”",
+      "headline": "你可以休息并恢复元气。",
+      "body": "今年很温和。并非刺激——而是温和。只要你不再强求效率，就能获得滋养。只要你愿意，那些支持你的人自会出现在你身边。",
+      "watch_for": "将休息误认为是懒惰。",
+      "lean_into": "滋养。指导。无论什么能让你重获能量。"
     }
   },
   "DEFAULT_YEAR_THEME": {
-    "name": "The Unfolding Year",
-    "headline": "A year still taking shape.",
-    "body": "The energy of this year is hard to pin to a single pattern. Pay attention — the theme will reveal itself as you go.",
-    "watch_for": "Assuming you already know what this year is about.",
-    "lean_into": "Staying curious about what's actually happening."
+    "name": "崭新的一年",
+    "headline": "这一年仍在逐步成形。",
+    "body": "今年的能量很难归结为一种固定模式。请多加留意——随着时间推移，主题会逐渐显现。",
+    "watch_for": "假设你已经知道今年的主旨是什么。",
+    "lean_into": "对实际发生的事情保持好奇心。"
   }
 }

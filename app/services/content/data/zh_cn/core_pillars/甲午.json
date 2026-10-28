@@ -1,28 +1,28 @@
 {
-  "name": "Tree Ablaze",
+  "name": "树上烈火熊熊",
   "pillar": "甲午",
-  "hero": "You're a tree on fire. You light the room with your heat — a person of real charisma.",
+  "hero": "你就像一棵燃烧的树。你用你的热情点亮了整个房间——真是个极具魅力的人。",
   "narrative": [
     "You're the person of passion and expression. 甲午 is a great tree sitting on hot fire. Wood meeting fire burns. Your heat is like that — it lights the room and pulls people in. People feel strange vitality when they're near you.",
-    "Your strength is fiery expression. You don't hide what you think or feel — you express it with heat. That gives you the power to move people. When you say what you love, what you want, what you believe, people are drawn to that fire. It's a rare gift.",
-    "Your shadow is burning too hot. Wood meeting fire burns — but if the fire is too hot, the wood itself burns up. You get caught up in the passion and forget your own stamina. You run without stopping, and then one day you go out completely. And the people around you are startled by your sudden silence.",
-    "A mature Jia-O tunes the fire. Keeping the heat, and controlling it so it doesn't consume you. Then your passion isn't a single flare — it becomes a lighthouse that lights people for a long time."
+    "你的优势在于充满激情的表达。你从不掩饰自己的想法和感受——而是以炽热的激情将其表达出来。这赋予了你打动他人的力量。当你表达自己所爱、所求、所信时，人们会被这份热情所吸引。这是一种难得的天赋。",
+    "你的影子燃烧得太过炽烈。木遇火会燃烧——但如果火势太猛，木头本身也会被烧尽。你沉溺于激情之中，却忘了自己的耐力。你不停地奔跑，直到某一天彻底燃尽。而你身边的人，则因你突如其来的沉默而大吃一惊。",
+    "一位成熟的贾奥正在调和火焰。既要保持热度，又要加以控制，以免被它吞噬。这样，你的激情就不再是一瞬间的闪光——而是化作一座灯塔，长久地为人们照亮前路。"
   ],
   "shadows": [
-    "Burning so hot that you forget your own stamina.",
-    "Running without rest until you go out completely.",
-    "Passion that overwhelms or exhausts other people."
+    "炽热到让你忘记了自己的耐力。",
+    "不间断地奔跑，直到彻底精疲力尽。",
+    "一种会令他人难以招架或精疲力竭的热情。"
   ],
   "advice": [
-    "Set aside at least 30 minutes a day this week with nothing productive in it.",
-    "Find one hobby or exercise that lets you discharge the heat healthily.",
-    "When 'what should I be doing' comes up while resting, tell yourself: I'm resting now.",
-    "Spend your passion on yourself before you spend it on others. That's what keeps it burning."
+    "本周每天至少留出30分钟，这段时间里什么有意义的事都别做。",
+    "找一项能让你健康地释放热量的爱好或运动。",
+    "当休息时脑海中浮现“我该做什么”这个念头时，告诉自己：我现在正在休息。",
+    "在将热情倾注于他人之前，先将它倾注于自己。这才是让热情永葆炽热之源。"
   ],
   "keywords": [
-    "hot passion",
-    "charisma",
-    "expression",
-    "tuning the fire"
+    "炽热的激情",
+    "魅力",
+    "表达式",
+    "调节火候"
   ]
 }

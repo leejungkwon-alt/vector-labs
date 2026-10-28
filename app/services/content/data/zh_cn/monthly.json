@@ -1,96 +1,96 @@
 {
   "MONTHLY_THEME_CONTENT": {
     "TEN_GOD_FRIEND": {
-      "name": "The Alignment Month",
-      "headline": "Your own energy returns.",
-      "body": "This month mirrors who you already are. Confidence comes easy — so does stubbornness. Peer dynamics surface. You'll feel like you're meeting yourself.",
-      "watch_for": "Digging into a position without checking it.",
-      "lean_into": "Solo work. Personal projects. Anything with your name on it."
+      "name": "“对齐月”",
+      "headline": "你自身的能量回来了。",
+      "body": "这个月如实反映了你本来的样子。自信信手拈来——固执也是如此。人际关系中的互动开始显现。你会感觉仿佛在与自己相遇。",
+      "watch_for": "未经确认就贸然采取某种立场。",
+      "lean_into": "个人作品。个人项目。任何署有你名字的作品。"
     },
     "TEN_GOD_ROB_WEALTH": {
-      "name": "The Push Month",
-      "headline": "Drive amplified. So is impatience.",
-      "body": "High-output month. Move fast, but pace yourself. This month rewards boldness and punishes burnout equally. Pick your one big move.",
-      "watch_for": "Competing with people who aren't your rivals.",
-      "lean_into": "One ambitious target. Move with intent, not motion."
+      "name": "“推进月”",
+      "headline": "动力倍增。不耐烦也是如此。",
+      "body": "这是一个高产的月份。行动要快，但也要量力而行。这个月既会奖励大胆之举，也会惩罚过度劳累。选定你那一步关键举措。",
+      "watch_for": "与那些并非你竞争对手的人竞争。",
+      "lean_into": "一个雄心勃勃的目标。行动要有目的，而非盲目行动。"
     },
     "TEN_GOD_EATING_GOD": {
-      "name": "The Creative Month",
-      "headline": "Softer, generative energy.",
-      "body": "Make things. Not grind — create. This month rewards play over production and gives you output that surprises even you.",
-      "watch_for": "Over-scheduling. This month needs whitespace.",
-      "lean_into": "Craft. Play. Get ideas out of your head."
+      "name": "创意月",
+      "headline": "更柔和、更具创造力的能量。",
+      "body": "动手做点东西。别只是机械地重复——要创造。这个月更看重“玩”而非“生产”，你会创作出连自己都感到惊讶的作品。",
+      "watch_for": "日程安排得太满。这个月需要留点余地。",
+      "lean_into": "动手制作。尽情玩耍。将脑海中的创意付诸实践。"
     },
     "TEN_GOD_HURTING_OFFICER": {
-      "name": "The Breakthrough Month",
-      "headline": "Sharp voice, sharp vision.",
-      "body": "You'll see what's broken more clearly this month — and want to say so. Used well, this is a month you shift something real.",
-      "watch_for": "Saying the true thing at the wrong moment.",
-      "lean_into": "System-level change. Not complaint — the fix."
+      "name": "突破之月",
+      "headline": "犀利的嗓音，敏锐的洞察力。",
+      "body": "这个月，你会更清楚地看到哪些地方出了问题——并且会想指出这些问题。如果善加利用，这个月你将真正带来一些改变。",
+      "watch_for": "在错误的时机说出了实情。",
+      "lean_into": "系统层面的变革。不是抱怨——而是解决之道。"
     },
     "TEN_GOD_INDIRECT_WEALTH": {
-      "name": "The Horizon Month",
-      "headline": "Doors open — and close fast.",
-      "body": "Opportunities appear and disappear. Your instinct is sharp; so is your urge to chase everything. Focus on one or two.",
-      "watch_for": "Saying yes because FOMO is loud.",
-      "lean_into": "One or two openings, done deeply."
+      "name": "“地平线月”",
+      "headline": "门开了——又迅速关上了。",
+      "body": "机会转瞬即逝。你的直觉很敏锐；而你想要追逐一切的冲动同样强烈。请专注于一两件事。",
+      "watch_for": "因为“害怕错过”（FOMO）的念头太强烈，所以答应了。",
+      "lean_into": "一两个切口，切得深一些。"
     },
     "TEN_GOD_DIRECT_WEALTH": {
-      "name": "The Grounding Month",
-      "headline": "Slow, steady, real.",
-      "body": "Not a dramatic month — and that's the gift. What you build now compounds quietly. Boring is the strategy.",
-      "watch_for": "Impatience. This month rewards patience, not ambition.",
-      "lean_into": "Routines. Systems. Consistent, small actions."
+      "name": "“扎根月”",
+      "headline": "缓慢、稳健、真实。",
+      "body": "这个月没什么波澜——而这正是馈赠。你现在所做的积累，正悄然产生复利效应。平淡无奇，正是策略所在。",
+      "watch_for": "急躁。这个月奖励的是耐心，而不是野心。",
+      "lean_into": "日常习惯。系统。持之以恒的微小行动。"
     },
     "TEN_GOD_SEVEN_KILLINGS": {
-      "name": "The Forge Month",
-      "headline": "Weight, and what you become under it.",
-      "body": "This month brings pressure. Not necessarily bad — often useful — but heavy. Meet it with rest, not more force.",
-      "watch_for": "Saying yes to responsibilities that aren't yours.",
-      "lean_into": "Boundaries. Rest. The people who hold you steady."
+      "name": "“锻造月”",
+      "headline": "体重，以及在它的重压下，你会变成什么样。",
+      "body": "这个月压力很大。这未必是坏事——往往还有益处——但确实很沉重。面对压力，要靠休息来缓解，而不是加倍努力。",
+      "watch_for": "对不属于自己的责任说“是”。",
+      "lean_into": "界限。休息。那些让你保持稳定的人。"
     },
     "TEN_GOD_DIRECT_OFFICER": {
-      "name": "The Milestone Month",
-      "headline": "Things align.",
-      "body": "Structure helps this month. Promotions, commitments, recognitions — the forms of success that involve other people — are unusually available.",
-      "watch_for": "Playing small to avoid being seen.",
-      "lean_into": "Formal commitments. Public milestones."
+      "name": "里程碑之月",
+      "headline": "万事皆顺。",
+      "body": "本月，有条不紊的安排会带来帮助。晋升、承诺、认可——这些涉及他人的成功形式——如今格外容易获得。",
+      "watch_for": "故意低调行事，以免引人注目。",
+      "lean_into": "正式承诺。公开里程碑。"
     },
     "TEN_GOD_INDIRECT_RESOURCE": {
-      "name": "The Cave Month",
-      "headline": "Depth before output.",
-      "body": "This month pulls you inward. You'll read more, think more, want more alone time. Not depression — incubation.",
-      "watch_for": "Forcing visibility before you're ready.",
-      "lean_into": "Reading. Research. Solitude."
+      "name": "“洞穴月”",
+      "headline": "先求深度，后求输出。",
+      "body": "这个月会让你更倾向于向内探索。你会读得更多、思考得更多，也更渴望独处的时间。这不是抑郁——而是酝酿。",
+      "watch_for": "在尚未准备好的情况下强行公开。",
+      "lean_into": "阅读。研究。独处。"
     },
     "TEN_GOD_DIRECT_RESOURCE": {
-      "name": "The Sanctuary Month",
-      "headline": "Rest and rebuild.",
-      "body": "This month is kind. Nourishment is available if you stop forcing productivity. Support shows up if you let it.",
-      "watch_for": "Mistaking rest for laziness.",
-      "lean_into": "Nourishment. Mentorship. Whatever refills your cup."
+      "name": "“圣所月”",
+      "headline": "休息并恢复元气。",
+      "body": "这个月很温柔。只要你不再强求效率，就能获得滋养；只要你敞开心扉，支持自然会到来。",
+      "watch_for": "将休息误认为是懒惰。",
+      "lean_into": "滋养。指导。无论什么能让你重获能量。"
     }
   },
   "DEFAULT_MONTHLY_THEME": {
-    "name": "The Unfolding Month",
-    "headline": "A month still taking shape.",
-    "body": "This month's energy is hard to pin to a single pattern. Pay attention — the theme will reveal itself.",
-    "watch_for": "Assuming you already know what this month is about.",
-    "lean_into": "Staying curious about what's actually happening."
+    "name": "渐展之月",
+    "headline": "这个月仍在逐步成形。",
+    "body": "本月的能量很难归结为一种固定模式。请多加留意——主题自会显现。",
+    "watch_for": "假设你已经知道本月主题是什么。",
+    "lean_into": "对实际发生的事情保持好奇心。"
   },
-  "MONTHLY_HERO_TEMPLATE": "Your {year}, twelve doors.",
+  "MONTHLY_HERO_TEMPLATE": "你的 {year}，十二扇门。",
   "GRADE_LABEL": {
     "PEAK": "Peak",
-    "FAVORABLE": "Favorable",
-    "NEUTRAL": "Neutral",
-    "CAUTION": "Caution",
-    "CHALLENGING": "Challenging"
+    "FAVORABLE": "有利的",
+    "NEUTRAL": "中立",
+    "CAUTION": "注意",
+    "CHALLENGING": "具有挑战性的"
   },
   "MONTHLY_GRADE_CONTEXT": {
     "PEAK": "Root energy (地支) is favorable this month — separate from the theme.",
-    "FAVORABLE": "Gentle tailwinds from the root energy.",
-    "NEUTRAL": "Mixed root energy — the theme carries the month.",
-    "CAUTION": "Root energy is cautious — keep the pace slow.",
-    "CHALLENGING": "Heavy root energy — protect your margins."
+    "FAVORABLE": "源自本源能量的轻柔顺风。",
+    "NEUTRAL": "混合根源能量——这一主题贯穿整个月。",
+    "CAUTION": "根之能量趋于谨慎——请放慢节奏。",
+    "CHALLENGING": "强大的根基能量——守护你的利润空间。"
   }
 }

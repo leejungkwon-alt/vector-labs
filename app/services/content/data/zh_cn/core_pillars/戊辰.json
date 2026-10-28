@@ -1,29 +1,29 @@
 {
   "pillar": "戊辰",
-  "hero": "You're a mountain with a dragon asleep inside it. Unremarkable to look at — until the moment it isn't.",
+  "hero": "你就像一座山，山里睡着一条龙。乍看之下平平无奇——直到某一刻，一切都变了。",
   "narrative": [
-    "Most days you look ordinary, maybe even underwhelming. Then a decisive moment arrives, and the room realizes it's been sitting on something much heavier than it thought. People say 'Wait — that was *them*?' a lot around you.",
+    "大多数时候，你看起来很普通，甚至有些平淡无奇。但当关键时刻来临，在场的人才会意识到，他们所面对的远比想象中要重要得多。在你身边，人们常常会惊呼：“等等——那竟然是*他们*？”",
     "Your strength is stored potential. 辰 holds water and wood inside dry earth — an aquifer under a plain. You are a long-game player: patient, quiet, arranging things until the moment it matters, and then moving with a weight that surprises everyone including people who thought they knew you.",
-    "Your shadow is a dragon that never wakes. You can spend years sketching a big picture without ever bringing it out, and after a while people stop asking what you're building. You can also wait for the perfect decisive moment so long that the ordinary moments — the ones that were actually available — pass while you're waiting.",
-    "The mature form of this pillar is a mountain that wakes the dragon on purpose. You learn to show pieces of the big picture early, in small starts, so the world can see what's forming before it's finished. When you do, the weight that used to surprise people becomes the thing they came to rely on."
+    "你的影子是一条永不苏醒的龙。你可以花上数年时间勾勒一幅宏大的蓝图，却始终不将其付诸实践；过了一段时间，人们便不再问你在构筑什么。你也可以为了等待那个完美的决定性瞬间而等待太久，以至于那些本就在眼前的平凡时刻，就在你等待的过程中悄然流逝。",
+    "这一支柱的成熟形态，是一座特意唤醒巨龙的山峰。你要学会在早期就以小步为单位，逐步展现全局的片段，让世人能在作品完成之前就看到其雏形。当你这样做时，曾经让人们感到惊讶的分量，便会成为他们逐渐依赖的东西。"
   ],
   "shadows": [
-    "You hold the plan so close that people stop believing there is one.",
-    "You wait for the perfect decisive moment, and ordinary opportunities pass while you wait.",
-    "You can sketch the big picture endlessly without shipping the small version."
+    "你把计划藏得太紧，以至于人们都不再相信它真的存在了。",
+    "你等待那个完美的决定性瞬间，而就在等待的过程中，平凡的机会却悄然溜走了。",
+    "你可以无休止地勾勒宏大蓝图，却始终无法推出其精简版。"
   ],
   "advice": [
-    "Bring one piece of the plan into action this week — small, real, and visible.",
-    "Tell one person what you're building. Kept only in your head, the dragon stays asleep.",
-    "Pick one 'small first step' from the big picture. Do it today.",
-    "Stop waiting for the decisive moment. Create one this week."
+    "本周将计划中的一项付诸行动——要小、要切实、要看得见。",
+    "告诉一个人你正在打造什么。如果只藏在脑海里，那条龙就会一直沉睡不醒。",
+    "从整体规划中选定一个“小小的第一步”。今天就付诸行动。",
+    "别再等待那个决定性的时刻了。本周就亲手创造一个吧。"
   ],
   "keywords": [
-    "dragon stillness",
-    "stored potential",
-    "big-picture patience",
-    "decisive emergence"
+    "龙之静",
+    "储存的势能",
+    "放眼全局的耐心",
+    "决定性的崛起"
   ],
-  "name": "Dragon Mountain",
+  "name": "龙山",
   "name_traditional": ""
 }

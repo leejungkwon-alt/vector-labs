@@ -1,28 +1,28 @@
 {
-  "name": "Jewel in Water's Light",
+  "name": "水光中的明珠",
   "pillar": "辛亥",
-  "hero": "You're a jewel reflected in water. Quietly shining on deep water, illuminating the truth around you.",
+  "hero": "你就像水中的宝石。静静地闪耀在深水中，照亮周围的真相。",
   "narrative": [
     "You hold wisdom and precision together. 辛亥 is crafted metal resting on deep water. Metal over water reflects — and so does your mind. You see things more exactly than most people, even when you say nothing.",
-    "Your strength is precision in feeling. You read people with unusual accuracy — what they don't say, what flickers across their face, what sits underneath their voice. When people talk to you, they end up feeling strangely understood.",
-    "Your shadow is thinking like water rippling. Deep water reflects clearly, but ripples blur everything. When emotion rises, you get caught in the ripples and delay the decision that needed to be made. Opportunities pass in that delay.",
-    "A mature Xin-Hai governs the ripples. Keeping the emotion and the wisdom, but settling the water when a decision is actually needed. Then your wisdom is deep insight rather than wavering, and your light becomes a lighthouse people steer by."
+    "你的优势在于敏锐的洞察力。你洞察人心的准确度非同寻常——无论是他们未曾言明的话语、脸上一闪而过的神情，还是语调中隐藏的意味。当人们与你交谈时，最终会感到自己被奇妙地理解了。",
+    "你的影子就像水面泛起的涟漪一样在思考。深水能清晰地映出影像，但涟漪却会让一切变得模糊。当情绪涌起时，你会被涟漪所困，从而推迟了本该做出的决定。就在这耽搁之中，机会便溜走了。",
+    "成熟的新海能驾驭波澜。既保有情感与智慧，又在真正需要做出决定时让水面归于平静。如此，你的智慧便成为深刻的洞见而非摇摆不定，你的光芒也将化作人们指引方向的灯塔。"
   ],
   "shadows": [
-    "Thinking so much that a decision gets delayed until the moment has passed.",
-    "Swept up by emotional ripples when you need to move.",
-    "Hiding your wisdom so well that people don't learn what you carry."
+    "想得太多，以至于拖延了决策，直到时机已过。",
+    "在需要搬家时，被情绪的涟漪所裹挟。",
+    "将你的智慧隐藏得如此之好，以至于人们无法领会你所蕴含的智慧。"
   ],
   "advice": [
-    "Pick one decision to make this week and make it by a fixed deadline. It doesn't have to be perfect.",
-    "When emotion rises, ask: is this information, or is this a wave pulling me under?",
-    "Share one thing you know with someone. Your wisdom gets clearer when you share it.",
-    "Water needs earth. Give your day one small ritual that doesn't move."
+    "选定本周要做的一项决定，并在规定的截止日期前做出决定。不必追求完美。",
+    "当情绪涌起时，问问自己：这是信息，还是将我卷入深渊的浪潮？",
+    "把你知道的一件事分享给别人。当你分享自己的智慧时，它会变得更加清晰。",
+    "水离不开土。在你的每一天中，安排一个不会改变的小仪式吧。"
   ],
   "keywords": [
-    "wisdom in water",
-    "precision in feeling",
-    "deep insight",
-    "clear judgment"
+    "水中的智慧",
+    "情感的精准度",
+    "深刻的洞察力",
+    "清晰的判断"
   ]
 }

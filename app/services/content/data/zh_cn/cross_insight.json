@@ -1,52 +1,52 @@
 {
   "MODE_LABELS": {
-    "THE_TWIN": "Twin",
-    "THE_RIVAL": "Rival",
-    "THE_ALLY": "Ally",
-    "THE_EMPATH": "Empath",
-    "THE_CREATOR": "Creator",
-    "THE_CHALLENGER": "Challenger",
-    "THE_OFFICER": "Officer",
-    "THE_SURVIVOR": "Survivor",
-    "THE_MYSTIC": "Mystic",
-    "THE_MENTOR": "Mentor",
-    "THE_GENERALIST": "Generalist",
-    "THE_STEWARD": "Steward",
-    "THE_OPERATOR": "Operator",
-    "THE_FLOW": "Flow"
+    "THE_TWIN": "双胞胎",
+    "THE_RIVAL": "竞争对手",
+    "THE_ALLY": "艾莉",
+    "THE_EMPATH": "共情者",
+    "THE_CREATOR": "创作者",
+    "THE_CHALLENGER": "挑战者",
+    "THE_OFFICER": "警官",
+    "THE_SURVIVOR": "幸存者",
+    "THE_MYSTIC": "神秘",
+    "THE_MENTOR": "导师",
+    "THE_GENERALIST": "通才",
+    "THE_STEWARD": "乘务员",
+    "THE_OPERATOR": "运营商",
+    "THE_FLOW": "流"
   },
   "AXES": {
     "FREEDOM_BOND": {
-      "pos": "Togetherness",
-      "neg": "Solitude"
+      "pos": "团结",
+      "neg": "孤独"
     },
     "RISK_SAFETY": {
-      "pos": "New Challenges",
-      "neg": "Stable Foundation"
+      "pos": "新的挑战",
+      "neg": "稳固的基础"
     },
     "DEPTH_BREADTH": {
-      "pos": "Deep Dive",
-      "neg": "Broad Experience"
+      "pos": "深度解析",
+      "neg": "丰富的经验"
     },
     "STRUCTURE_FLOW": {
-      "pos": "Set Rules",
-      "neg": "Impromptu Flow"
+      "pos": "设置规则",
+      "neg": "即兴流动"
     },
     "EXPRESSION_RESTRAINT": {
-      "pos": "Expression",
-      "neg": "Restraint"
+      "pos": "表达",
+      "neg": "克制"
     },
     "COMPETITION_COLLABORATION": {
-      "pos": "Compete to Win",
-      "neg": "Collaborate Together"
+      "pos": "全力以赴，争取胜利",
+      "neg": "携手合作"
     },
     "SPEED_PATIENCE": {
-      "pos": "Move Fast",
-      "neg": "Take it Slow"
+      "pos": "行动要快",
+      "neg": "慢慢来"
     },
     "SELF_OTHERS": {
-      "pos": "Focus on Self",
-      "neg": "Focus on Others"
+      "pos": "关注自我",
+      "neg": "关注他人"
     }
   },
   "MODE_AXES": {
@@ -107,67 +107,67 @@
       "FREEDOM_BOND": -0.4
     }
   },
-  "INTRO_TEMPLATE": "In relationships, you live as a '{bond_label}' leaning on each other, and at work, you live as a '{work_label}' moving toward your goals. You tend to accept money naturally as it flows rather than obsessing over it.",
+  "INTRO_TEMPLATE": "在感情中，你们以“{bond_label}”的身份相互依靠；在工作中，你们以“{work_label}”的身份朝着目标迈进。你们往往顺其自然地接受金钱的流动，而不是对金钱念念不忘。",
   "ANGLES": {
     "FREEDOM_BOND": {
-      "love": "So a relationship with 'closeness but with separate rooms' suits you well. Conversely, when this is demanded all at once (e.g., business partners dating), stating boundaries first is the secret to making it last.",
-      "career": "So you need both 'time to focus entirely alone' and 'time to sync with others'. If either is lacking, you easily get tired or lethargic.",
-      "wealth": "So in wealth, it's good to mix 'my decision' and 'shared decision'. Decide big things alone, and share execution with someone you trust."
+      "love": "因此，“亲密但分房睡”这种关系模式非常适合你。反之，当这种关系被要求“一蹴而就”（例如商业伙伴谈恋爱）时，先明确界限才是让关系长久的关键。",
+      "career": "因此，你需要既拥有“完全独处、专注的时间”，也需要“与他人同步的时间”。如果其中任何一项缺失，你很容易感到疲惫或无精打采。",
+      "wealth": "因此，在理财方面，最好将“自主决策”与“共同决策”相结合。重大决策由自己独立做出，而具体执行则与值得信赖的人共同完成。"
     },
     "RISK_SAFETY": {
-      "love": "So you are attracted to stable people, but get frustrated if it's too stable. Continuously creating small novelties (travel, new hobbies) in the relationship makes it last.",
-      "career": "So you waver between challenge and stability. Before a big decision, check 'Do I have a safety net right now?'. With a safety net, challenges become much lighter.",
-      "wealth": "So in wealth, 'frequent small experiments' suit you better than 'one big bet'. Move only within a range you can afford to lose."
+      "love": "所以，你虽然会被性格稳定的人吸引，但如果对方太过稳定，你又会感到沮丧。在恋爱关系中不断增添一些新鲜感（比如旅行、新的爱好），才能让这段感情长久。",
+      "career": "所以，你在挑战与稳定之间徘徊。在做出重大决定之前，先问问自己：“我现在有安全网吗？”。有了安全网，挑战就会轻松许多。",
+      "wealth": "因此，在理财方面，“频繁的小额尝试”比“一次大手笔押注”更适合你。行动时，请务必将风险控制在你能够承受的范围内。"
     },
     "DEPTH_BREADTH": {
-      "love": "So you waver between 'one person you know deeply' and 'many you meet lightly'. Whichever it is, check once in a while where you are putting your energy.",
-      "career": "So you must distinguish between when to dig one deep well and when to cross many fields. Ask yourself which is right for you now.",
-      "wealth": "So the balance between 'focused investment' and 'diversified investment' is important. Either way, 100% concentration on one side is dangerous."
+      "love": "所以，你一直在“一个你了解得很深的人”和“许多你只是浅交的人”之间摇摆不定。无论选择哪一种，都请时不时地审视一下，自己的精力究竟投入在了哪里。",
+      "career": "因此，你必须区分何时该深挖一口井，何时该辗转多处田野。问问自己，哪一种方式现在更适合你。",
+      "wealth": "因此，“集中投资”与“分散投资”之间的平衡至关重要。无论采取哪种方式，100%地偏向其中一方都是危险的。"
     },
     "STRUCTURE_FLOW": {
-      "love": "So you feel comfortable setting rules in a relationship, but it gets frustrating if too tight. Set 'one thing to keep, one thing to leave free'.",
-      "career": "So you are strong in structured environments, but get tired if flexibility disappears. Intentionally leave some 'spontaneity' within your routine.",
-      "wealth": "So 'structure' like automatic savings saves you. If you have a lot of impulse spending, creating structure comes first."
+      "love": "所以，你在恋爱关系中制定规则时会感到很自在，但如果规则定得太严，就会让人感到沮丧。不妨遵循“一事定规，一事放任”的原则。",
+      "career": "看来你在结构化的环境中表现得很出色，但一旦失去了灵活性，就会感到疲惫。不妨在日常安排中刻意留出一些“随性”的空间。",
+      "wealth": "因此，像“自动储蓄”这样的“机制”能帮你省钱。如果你经常冲动消费，那么建立这样的机制是首要任务。"
     },
     "EXPRESSION_RESTRAINT": {
-      "love": "So you want to express your feelings, but if you miss the timing, misunderstandings pile up. Say out loud 'what emotion I am feeling' once a day.",
-      "career": "So you have a lot you want to say. Just remember, expression can hurt relationships if too strong. 'Clear content, soft tone'.",
-      "wealth": "So in wealth, 'the urge to splurge' and 'the urge to hold back' clash. A rule to wait a day before big spending is effective."
+      "love": "所以，你想表达自己的感受，但如果错过了时机，误会就会越积越多。每天试着大声说一次“我现在有什么感受”。",
+      "career": "看来你有很多话想说。不过请记住，如果表达过于强烈，可能会伤害人际关系。“内容清晰，语气温和”。",
+      "wealth": "因此，在财富管理方面，“挥霍的冲动”与“克制的冲动”相互冲突。在进行大额消费前先等一天的规则非常有效。"
     },
     "COMPETITION_COLLABORATION": {
-      "love": "So you like relationships where you stimulate each other, but if excessive it becomes a battle of attrition. Distinguish between 'winning conversations' and 'solving conversations together'.",
-      "career": "So the balance between competition and collaboration is key. Decide clearly who to compete with and who to collaborate with to save energy.",
-      "wealth": "So in wealth, 'keeping my pace' lasts longer than 'ahead of others'. Comparison clouds judgment."
+      "love": "所以，你喜欢那种彼此激励的关系，但如果这种激励过头了，就会变成一场消耗战。要区分“赢取对话”和“共同解决问题的对话”。",
+      "career": "因此，在竞争与合作之间取得平衡至关重要。要明确决定与谁竞争、与谁合作，从而节省精力。",
+      "wealth": "因此，在财富方面，“保持自己的节奏”比“领先于他人”更能持久。比较会蒙蔽判断力。"
     },
     "SPEED_PATIENCE": {
-      "love": "So you want the relationship to deepen fast, but everyone has a different pace. Asking for your partner's pace builds trust.",
-      "career": "So you want fast results, but distinguish between work that needs to 'ripen' and work that needs to 'be released now'.",
-      "wealth": "So in wealth, 'fast returns' and 'growing slowly' clash. Mixing the two and rolling them is safest."
+      "love": "所以你想让这段关系迅速加深，但每个人的节奏都不一样。询问伴侣的节奏有助于建立信任。",
+      "career": "所以，你希望尽快看到成果，但要区分哪些工作需要“酝酿”，哪些工作需要“立即发布”。",
+      "wealth": "因此，在财富管理方面，“快速获利”与“稳步增长”存在冲突。将两者结合并同步推进是最稳妥的做法。"
     },
     "SELF_OTHERS": {
-      "love": "So you take care of your partner but lose track of your own feelings. Saying 'how I am right now' first makes the relationship last longer.",
-      "career": "So you help others but lose track of your own evaluation. Practice recording and appealing your achievements.",
-      "wealth": "So in wealth, separate 'giving expenditure' and 'saving for me'. Both must exist to last."
+      "love": "于是，你只顾着照顾伴侣，却忽略了自己的感受。先说出“我现在感觉如何”，才能让这段关系更长久。",
+      "career": "所以，你在帮助他人的同时，却忽略了对自身表现的评估。试着记录并展示你的成就。",
+      "wealth": "因此，在财富管理方面，要区分“捐赠支出”和“为自己储蓄”。两者都必须兼顾，才能长久。"
     }
   },
   "BALANCED": {
-    "intro": "In relationships, you are a '{bond_label}', at work a '{work_label}', and you treat money like a '{money_label}'.",
-    "body": "These three form a balance without major clashes. Having no strongly protruding axis means, conversely, that there is a lot of room for you to choose. Decide for yourself which axis to put more weight on now.",
+    "intro": "在感情中，你是“{bond_label}”；在工作中，你是“{work_label}”；而你对待金钱的方式就像“{money_label}”一样。",
+    "body": "这三者之间形成了平衡，没有明显的冲突。正因为没有特别突出的轴，反过来说，你就有很大的选择余地。现在请自己决定该更侧重哪条轴。",
     "angle": {
-      "love": "In relationships, just asking for your partner's rhythm once in a while makes the balance even firmer.",
-      "career": "At work, distinguish between 'what I want to do' and 'what is needed right now'.",
-      "wealth": "In wealth, organizing the ratio of saving and spending once puts your mind at ease."
+      "love": "在恋爱关系中，偶尔问一问伴侣的节奏，就能让双方的关系更加稳固。",
+      "career": "在工作中，要区分“我想做的事”和“当下需要做的事”。",
+      "wealth": "在理财方面，只要把储蓄和消费的比例安排好，心里就会踏实。"
     }
   },
-  "CLOSING_TEMPLATE": "When these three are demanded all at once (e.g., dating a business partner, family business), saying 'which axis I am standing on right now' first is the secret to making it last.",
-  "DISCLAIMER": "Note: This combination interpretation is not a deterministic prediction, but a reading of where the tendencies of the three domains meet from a coaching perspective. Life's choices are always yours.",
+  "CLOSING_TEMPLATE": "当这三方面同时被要求时（例如，与商业伙伴约会、经营家族企业），首先弄清楚“我目前所处的立场”才是让关系长久的关键。",
+  "DISCLAIMER": "注：这种综合解读并非确定性的预测，而是从教练视角出发，对三个领域趋势交汇点的解读。人生的选择始终掌握在您手中。",
   "MODE_SECTION_LABEL": {
-    "bond": "Relationship",
-    "work": "Work",
-    "money": "Money"
+    "bond": "关系",
+    "work": "工作",
+    "money": "金钱"
   },
-  "COLLISION_SENTENCE": "You are wavering between the '{a_mode_label}'s '{a_label}' and the {b_mode_label}'s '{b_label}'.",
-  "COLLISION_2_SENTENCE": "Add to that the wavering between the {a_mode_label}'s '{a_label}' and the {b_mode_label}'s '{b_label}'.",
-  "PULL_SENTENCE": "On top of that, your mind leans toward the {mode_label}'s '{label}'.",
-  "PULL_2_SENTENCE": "And it also leans toward the {mode_label}'s '{label}'."
+  "COLLISION_SENTENCE": "您正在“{a_mode_label}”的“{a_label}”和“{b_mode_label}”的“{b_label}”之间犹豫不决。",
+  "COLLISION_2_SENTENCE": "此外，还有在 {a_mode_label} 的“{a_label}”与 {b_mode_label} 的“{b_label}”之间摇摆不定的情况。",
+  "PULL_SENTENCE": "此外，你的思维倾向于{mode_label}的“{label}”。",
+  "PULL_2_SENTENCE": "此外，它还倾向于 {mode_label} 的“{label}”。"
 }

@@ -1,28 +1,28 @@
 {
-  "name": "Blade Opening the Forest",
+  "name": "利刃劈开森林",
   "pillar": "庚寅",
-  "hero": "You're a blade clearing a path through a forest. Not felling trees for the sake of it — opening the way so others can walk.",
+  "hero": "你就像一把在森林中开辟道路的利刃。并非为了砍伐而砍伐——而是为了开辟道路，让他人能够通行。",
   "narrative": [
-    "You move before you've finished thinking. When an opening appears, you take it. Your decisions come fast, and 'start first, refine later' is already wired into you. That puts you miles ahead of most people at the beginning of things.",
-    "Your strength is momentum. Metal cuts wood — you don't negotiate with a mess. You clear it. Long meetings without conclusions, people circling the same point, projects that won't move: a few sentences from you and they're done. People feel the project move because of you.",
-    "Your shadow is cutting too fast. You're so focused on the forward line that you leave behind people, hurt feelings, and seeds that hadn't sprouted yet. Pioneers always get called 'the one who does it alone.' It's not your intention — it's your speed.",
-    "A mature Geng-In knows the difference between what to cut and what to grow. Someone who lets things take their time, and uses that waiting window to work on something else. Then your momentum pulls people in, and the place you passed through has a road in it."
+    "你往往还没想清楚就先行动了。一旦出现机会，你就会抓住。你的决策迅速果断，而且“先行动，后完善”的思维方式早已深入骨髓。这让你在事情刚开始时就比大多数人领先了不知多少。",
+    "你的优势在于势头。金属能切开木头——面对一团乱麻，你不会去周旋，而是直接清理干净。那些没有结论的冗长会议、人们在同一个问题上兜圈子、停滞不前的项目：你只需说几句话，一切就解决了。人们能感受到，正是因为有你，项目才得以推进。",
+    "你的身影掠过得太快了。你太专注于前方的道路，以至于将人、受伤的情感，以及尚未发芽的种子都抛在了身后。开拓者总是被称作“独行者”。这并非你的本意——而是你的速度使然。",
+    "一个成熟的Geng-In懂得该舍弃什么、该培育什么。这样的人懂得顺其自然，并利用这段等待的时间去处理其他事情。随后，你的势头会吸引人们加入，而你曾路过的地方，便会自然形成一条道路。"
   ],
   "shadows": [
-    "Fast decisions sometimes ignore the preparation time others need.",
-    "Moving ahead alone can isolate you from the very team you're leading.",
-    "You're so used to speed that you abandon slow processes halfway through."
+    "仓促的决定有时会忽略他人所需的准备时间。",
+    "如果独自前进，反而会让你与自己所领导的团队疏远。",
+    "你已经太习惯了快节奏，以至于在进行缓慢的过程时，往往半途而废。"
   ],
   "advice": [
-    "Before deciding something, ask one relevant person this week: 'How do you see it?'",
-    "Pick one thing you've set in motion and deliberately leave it unfinished this week. Let it grow.",
-    "When someone moves slowly, ask once why. Usually there's a reason you didn't see.",
-    "Build one part of your project that runs without you. That's real leadership."
+    "本周在做出决定之前，不妨向一位相关人士询问：“你怎么看？”",
+    "选一件你本周已经着手做但故意没有完成的事情。让它自然发展。",
+    "当有人行动缓慢时，不妨问一次原因。通常都有你没注意到的情况。",
+    "打造项目中那个无需你亲自操心也能运行的部分。这才是真正的领导力。"
   ],
   "keywords": [
-    "pioneering",
-    "speed",
-    "opening paths",
-    "momentum"
+    "开创性的",
+    "速度",
+    "开辟道路",
+    "动量"
   ]
 }

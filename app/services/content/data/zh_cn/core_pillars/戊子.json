@@ -1,29 +1,29 @@
 {
   "pillar": "戊子",
-  "hero": "You're a mountain with a spring running underneath. Solid on the surface — deep, clear water beneath.",
+  "hero": "你就像一座山，山底流淌着清泉。表面坚实——地下则是深邃而清澈的泉水。",
   "narrative": [
-    "You come across as steady, unremarkable, easy to overlook. People underestimate you — until the moment a room needs someone who can actually think clearly, and you're the only one who does.",
-    "Your strength is quiet insight. You read situations before they're explained, and the best decisions you make almost never come out of a meeting — they come out of silence. What looks like passivity is usually you watching the whole board before moving one piece.",
-    "Your shadow is thinking past the moment. Because the water runs deep, you can keep processing until the window to act has quietly closed. And when you're uncertain, you go silent — and to everyone else, silence looks exactly like distance.",
-    "The mature form of this pillar is a spring that actually flows. Insight that arrives, is spoken, and then moves on. You learn to trust the water without drowning in it — to see, to say, to act, in that order, before the tide changes."
+    "你给人的印象是沉稳、平淡无奇、容易被忽视。人们往往低估了你——直到某个场合需要有人能真正头脑清醒地思考，而你却是唯一能做到这一点的人。",
+    "你的优势在于沉静的洞察力。你总能在事情被说明之前就看透局势，而你做出的最佳决策几乎从未出自会议——它们源于沉默。那种看似被动的表现，其实往往是你正在审视全局，才决定如何移动棋子。",
+    "你的影子总在思考当下之外的事。正因为水流深沉，你才能不断思量，直到行动的窗口悄然关闭。而当你感到不确定时，你会保持沉默——在别人眼里，这种沉默看起来就和疏远一模一样。",
+    "这一支柱的成熟形态是一股真正流淌的泉水。洞见降临，被道出，然后便继续前行。你要学会信任这水，却不被它淹没——在潮水转向之前，先看清、再说出、再行动，依此顺序。"
   ],
   "shadows": [
-    "You keep thinking past the moment when a decision was still yours to make.",
-    "You go quiet when you're uncertain, and people read the silence as distance.",
-    "You doubt your own insight because it doesn't arrive with proof attached."
+    "你总是在那个本该由你自己做决定的时刻之后，还在继续思考。",
+    "当你感到不确定时，你会沉默下来，而别人会把这种沉默解读为疏远。",
+    "你之所以怀疑自己的洞见，是因为它并没有附带证据。"
   ],
   "advice": [
-    "Once this week, act on a decision before you feel 'ready.' Notice what actually happens.",
-    "Say the observation out loud even if you can't yet explain it. Let people hear the water.",
-    "When you go quiet, tell one person 'I'm thinking.' Don't make them guess.",
-    "Put one open question down for a day. Water settles on its own."
+    "本周至少一次，在感到“准备好了”之前就付诸行动。观察实际会发生什么。",
+    "即使你还无法解释，也要把观察结果大声说出来。让人们听见水声。",
+    "当你沉默时，对某个人说一句“我在思考”。别让他们去猜。",
+    "每天放下一个未解决的问题。水自然会沉淀下来。"
   ],
   "keywords": [
-    "hidden depth",
-    "still waters",
-    "quiet insight",
-    "mountain calm"
+    "隐藏的深度",
+    "静水",
+    "静默的洞察",
+    "山间宁静"
   ],
-  "name": "Mountain Spring",
+  "name": "山泉",
   "name_traditional": ""
 }

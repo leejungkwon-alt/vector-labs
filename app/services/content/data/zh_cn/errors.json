@@ -1,4 +1,4 @@
 {
-  "DST_AMBIGUOUS": "This clock time is ambiguous: {clock} occurs twice in {tz}. Re-request with dst_fold=0 (offset {off0}) or dst_fold=1 (offset {off1}).",
-  "DST_GAP": "This clock time does not exist: {clock} is skipped by DST in {tz}."
+  "DST_AMBIGUOUS": "该时钟时间存在歧义：{clock} 在 {tz} 中出现了两次。请使用 dst_fold=0（偏移量 {off0}）或 dst_fold=1（偏移量 {off1}）重新发送请求。",
+  "DST_GAP": "该时间不存在：在 {tz} 时区中，{tz} 被夏令时跳过了。"
 }

@@ -1,28 +1,28 @@
 {
-  "name": "Blade in the Deep Lake",
+  "name": "深湖中的刀刃",
   "pillar": "庚子",
-  "hero": "You're a blade resting at the bottom of a deep lake. You don't flash above the surface — you simply know, from below, exactly where the cut belongs.",
+  "hero": "你是一把静卧在深湖底部的刀刃。你不会在水面闪现——你只是从水底准确地知道，该在哪里划开。",
   "narrative": [
-    "You think deeper than you speak. In a meeting, you can sit in silence while everyone else talks over each other, and still see the whole board before anyone else does. You're not quiet because you have nothing to say. You're quiet because you're already weighing which voice in the room is actually true.",
-    "Your strength is precision. Metal flowing into water — the blade doesn't shout, it seeps. You say one thing, and weeks later people realize it was the thing that mattered. Your words land because you don't waste them.",
-    "Your shadow is sinking too deep. When the thinking gets heavier and the feelings only flow inward, people around you can't tell what's happening inside you. If you've ever been called cold or hard to read, it's not because you don't care — it's because you care so far down the current doesn't reach the surface.",
-    "A mature Geng-Ja is sharp without being cold. The same edge, but aimed at the problem instead of the person. When you get there, your depth stops being distance and becomes the kind of wisdom people want to lean on."
+    "你的思考比言语更深入。在会议中，当其他人争先恐后地发言时，你可能静静地坐着，却比任何人都更早看清全局。你之所以沉默，并非因为无话可说，而是因为你已经在权衡，房间里哪一种声音才是真实的。",
+    "你的优势在于精准。金属如水般流淌——刀锋不喧哗，而是悄然渗入。你说一句话，几周后人们才意识到，那才是真正重要的。你的话语直击人心，因为你从不浪费言辞。",
+    "你的阴影沉得太深了。当思绪变得沉重，情感只向内流淌时，周围的人就无法察觉你内心的变化。 如果你曾被人说冷漠或难以捉摸，那并不是因为你不关心——而是因为你的关心埋得太深，深到情感的流淌无法触及表面。",
+    "成熟的“Geng-Ja”锋利却不冷酷。同样的锋芒，却指向问题而非人。当你达到这种境界时，你的深度就不再是疏离，而是成为人们愿意倚靠的那种智慧。"
   ],
   "shadows": [
-    "Thinking so deeply that you don't speak when speaking is what the moment needed.",
-    "Holding emotions in until people around you can't read your care.",
-    "Deciding alone out of habit, so it takes longer than it should for others to trust you."
+    "思考得如此深入，以至于在说话时却一言不发——这正是那一刻所需要的。",
+    "将情绪压在心里，直到周围的人都看不出你对他们的关心。",
+    "出于习惯总是独自做决定，因此别人需要比正常情况更长的时间才能信任你。"
   ],
   "advice": [
-    "Once this week, say the thing out loud even if it isn't fully formed. Timing matters more than polish.",
-    "Pick one judgment you've kept silent. Explain to someone why you see it the way you do.",
-    "Keep your solitude, but add a practice of emptying — not analyzing. Just letting the water settle.",
-    "Tell someone close, 'I think a lot before I speak.' That one sentence clears up years of misreading."
+    "本周至少一次，把想说的话大声说出来，即使想法还不成熟也没关系。时机比表达是否完美更重要。",
+    "选出一个你一直未曾说出口的评判。向某人解释一下，你为何会这样看待它。",
+    "保持你的独处，但要养成一种“放空”的习惯——而不是分析。只是让水自然沉淀。",
+    "对亲近的人说一句：“我说话前都会三思而后行。”这一句话就能消除多年来对我的误解。"
   ],
   "keywords": [
-    "deep insight",
-    "precise words",
-    "quiet judgment",
-    "cool clarity"
+    "深刻的洞察力",
+    "精确的措辞",
+    "静默判决",
+    "清凉通透"
   ]
 }

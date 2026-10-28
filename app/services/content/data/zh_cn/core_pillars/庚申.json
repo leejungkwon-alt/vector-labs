@@ -1,27 +1,27 @@
 {
-  "name": "Twice-Forged Steel",
+  "name": "双重锻造钢",
   "pillar": "庚申",
-  "hero": "You're steel forged twice. You were made not to break — to be the one steady line in a world that won't hold still.",
+  "hero": "你是经过两次淬炼的钢铁。你生来就不易折断——在这个永不停歇的世界里，你要成为那条永不摇摆的稳固线。",
   "narrative": [
     "You're the purest form of Geng. Geng-Shin is Geng sitting on its own 祿 (Lu) — double metal, layered on itself. So your standard doesn't shift, your judgment is clean, and your stance is steel. Not because you're trying to be — because that's the shape you were made in.",
-    "You see right and wrong with unusual accuracy. Ambiguity bothers you, and injustice is something you cannot just walk past. This sharpness makes you the person an organization trusts to call the hard thing, and people bring you the decisions they can't make alone.",
-    "Your shadow is a blade that cuts everything. A right word at the wrong moment becomes a wound. Firmness taken too far reads as cold. And the blade also turns inward — you hold yourself to a standard you'd never demand of another human being, and you don't forgive yourself when you fall short."
+    "你对是非对错的判断异常精准。模棱两可让你感到困扰，而面对不公，你绝不会视而不见。正是这种敏锐，让你成为组织中值得信赖、敢于直言棘手问题的人，人们也会将自己无法独自做出的决定交由你来处理。",
+    "你的影子是一把能割裂一切的利刃。恰当的话语若说在错误的时刻，便会化作伤口。过于坚定的态度会被视为冷漠。而这把利刃也会转向内——你对自己要求极高，却绝不会对他人提出同样的要求；一旦未能达到标准，你便无法原谅自己。"
   ],
   "shadows": [
-    "Accurate criticism sometimes lands as a wound. Being right and being kind are different jobs.",
-    "Holding yourself to a standard you'd never impose on anyone else.",
-    "People around you get tense, or start hiding their mistakes, in your presence."
+    "中肯的批评有时会像伤口一样刺痛人心。说得对和待人友善是两码事。",
+    "对自己要求苛刻，却从不将这种标准强加于他人。",
+    "在你身边的人，在你面前会变得紧张，或者开始掩饰自己的错误。"
   ],
   "advice": [
-    "Before correcting someone, ask once: will this be medicine for them right now, or a blade?",
-    "Once this week, say to yourself, 'This is enough.' Whatever the result is.",
-    "Tell one person you respect a place where you're not strong. Let steel be human for a moment.",
-    "When you judge something, ask both: 'Is this right?' and 'Is this useful right now?' The two questions sharpen the edge."
+    "在指正别人之前，先问自己一句：这对他来说，此刻是良药，还是利刃？",
+    "这周找个时间，对自己说一句：“这样就够了。”无论结果如何。",
+    "向一位你敬重的人坦承，你也有不擅长的地方。让钢铁也展现一下人性的一面吧。",
+    "当你对某事做出判断时，请同时问自己两个问题：“这是对的吗？”和“这在当下有用吗？”这两个问题能让你思路更加清晰。"
   ],
   "keywords": [
-    "pure steel",
-    "clear standard",
-    "unshakeable",
-    "precise edge"
+    "纯钢",
+    "明确的标准",
+    "坚如磐石",
+    "精准边缘"
   ]
 }

@@ -1,28 +1,28 @@
 {
-  "name": "Misty Lake",
+  "name": "迷雾湖",
   "pillar": "癸巳",
-  "hero": "You're a misty lake. Blurry on the surface, with hot water running underneath.",
+  "hero": "你是一片雾气蒙蒙的湖。湖面朦胧，湖底却流淌着热流。",
   "narrative": [
     "You hold feeling and heat together. 癸巳 is delicate water with hot fire resting on it. You look gentle on the surface while a hot current runs inside. People remember you as warm — and then are surprised by the intensity you can show.",
     "Your strength is combining feeling with practicality. 癸 is sensitivity, 巳 is practical execution. You can feel something and put it into real action. People find you warm and precise at once. That combination is rare.",
-    "Your shadow is getting stuck in the mist. A misty lake is beautiful, but it's easy to lose direction. Feelings and thoughts tangle together, and at the moment a decision is needed you can't see clearly. And the heat that piles up inside eventually bursts out suddenly, surprising everyone who knew you as calm.",
-    "A mature Gye-Si clears their own mist. Keeping the feeling and the heat, and seeing clearly when a decision is actually required. Then your duality stops being a shake and becomes the kind of deep warmth people want to lean on."
+    "你的影子被困在了雾中。雾气缭绕的湖泊固然美丽，却也容易让人迷失方向。情感与思绪交织缠绕，就在需要做出决定的时候，你却无法看清全局。而积压在心底的热浪最终会突然爆发，让那些一直认为你沉着冷静的人大吃一惊。",
+    "成熟的“Gye-Si”能够驱散自身的迷雾。既能保留那份感受与热度，又能清晰地辨别何时真正需要做出决定。如此一来，你的两面性便不再令人动摇，反而会化作一种让人想要倚靠的深沉温暖。"
   ],
   "shadows": [
-    "Feelings and thoughts tangled at the moment a decision is needed.",
-    "Suppressed heat that eventually bursts out.",
-    "The gap between surface and interior makes people misread you."
+    "在需要做出决定的那一刻，情感与思绪交织纠缠。",
+    "被压抑的热量最终会爆发出来。",
+    "表面与内在之间的差距会让别人误解你。"
   ],
   "advice": [
-    "Pick one decision to make this week and clear the mist before you make it.",
-    "Say one of your hot feelings out loud. What you love, what you want.",
-    "When emotion rises, ask: is this the moment to express it, or to give it more shape?",
-    "Tell someone close, 'I look quiet but I run hot inside.' It clears years of misreading."
+    "选定本周要做的一项决定，并在做出决定前理清思路。",
+    "把你内心最炽热的情感说出来。你所爱的事物，你所渴望的事物。",
+    "当情绪涌起时，不妨问问自己：现在是该表达出来，还是该让它更成熟一些？",
+    "对亲近的人说一句：“我看起来很安静，但内心其实很热情。”这能消除多年来对他人的误解。"
   ],
   "keywords": [
-    "misty lake",
-    "feeling and practice",
-    "hidden heat",
-    "clear judgment"
+    "迷雾湖",
+    "感受与实践",
+    "潜热",
+    "清晰的判断"
   ]
 }

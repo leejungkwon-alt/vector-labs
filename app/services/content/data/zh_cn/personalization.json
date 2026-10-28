@@ -1,38 +1,38 @@
 {
   "ELEMENT_DOMINANT": {
-    "GROWTH": "Your dominant Growth energy gives you an unstoppable drive to start new things, but it can leave you restless.",
-    "SPARK": "Your intense Spark energy makes you highly visible and magnetic, though it risks burning you out.",
-    "GROUND": "Your heavy Ground energy makes you the reliable anchor for others, but you may carry too much weight.",
-    "EDGE": "Your sharp Edge energy gives you surgical clarity, but you must be careful not to cut too deep.",
-    "FLOW": "Your deep Flow energy grants you profound adaptability and wisdom, but you might struggle to commit."
+    "GROWTH": "你身上主导的“成长”能量赋予了你一种不可阻挡的动力，促使你不断尝试新事物，但这也可能让你感到坐立不安。",
+    "SPARK": "你那强烈的“火花”能量让你备受瞩目且极具魅力，但这也可能让你精疲力尽。",
+    "GROUND": "你强烈的“大地”能量让你成为他人值得信赖的支柱，但你可能承担了过多的负担。",
+    "EDGE": "你那锋利的“边缘”能量赋予你手术般的清晰度，但你必须小心，别切得太深。",
+    "FLOW": "你深层的“流动”能量赋予了你非凡的适应力和智慧，但你可能在做出承诺时感到困难。"
   },
   "ELEMENT_DEFICIENT": {
-    "GROWTH": "Your lack of Growth means you often struggle to start things without a clear push.",
-    "SPARK": "Your scarce Spark means you don't naturally perform enthusiasm, preferring quiet warmth.",
-    "GROUND": "Your missing Ground means you can feel unmoored, finding stability through movement.",
-    "EDGE": "Your lack of Edge means you naturally avoid conflict and soften your boundaries.",
-    "FLOW": "Your scarce Flow means you prefer to know exactly where you're going before you move."
+    "GROWTH": "你缺乏成长意识，这意味着如果没有明确的推动，你往往很难着手去做事情。",
+    "SPARK": "你“火花”的匮乏意味着你天生不善于表现热情，更倾向于内敛的温暖。",
+    "GROUND": "你失去了“根基”，这意味着你会感到无所依凭，只能通过运动来寻找稳定感。",
+    "EDGE": "你缺乏“锋芒”，这意味着你会自然而然地回避冲突，并放宽自己的界限。",
+    "FLOW": "你“流动”状态较少，说明你更倾向于在行动之前先明确自己的去向。"
   },
   "GYEOKGUK": {
-    "STABILIZER": "With a Stabilizer structure, you thrive in building and maintaining systems.",
-    "WARRIOR": "With a Warrior structure, you are built to face conflict and break through obstacles.",
-    "CUSTODIAN": "With a Custodian structure, you find deep meaning in managing resources and protecting others.",
-    "DEALMAKER": "With a Dealmaker structure, you spot opportunities where others see noise.",
-    "EXPRESSER": "With an Expresser structure, you turn abstract ideas into tangible value.",
-    "DISRUPTOR": "With a Disruptor structure, you constantly question the status quo.",
-    "MENTOR": "With a Mentor structure, you find purpose in guiding others and sharing knowledge.",
-    "INTUITIVE": "With an Intuitive structure, your mind works laterally, seeing connections others miss.",
-    "EDGE_WALKER": "With an Edge Walker structure, you tread the line between order and chaos.",
-    "COOPERATOR": "With a Cooperator structure, you find strength in peer alliances.",
-    "SELF_MADE": "With a Self-Made structure, you rely on your own hard work above all else."
+    "STABILIZER": "凭借“稳定者”型人格，你在构建和维护系统方面表现出色。",
+    "WARRIOR": "拥有“战士”型特质，你天生就具备应对冲突、突破障碍的能力。",
+    "CUSTODIAN": "在“守护者”人格结构中，你会从管理资源和保护他人中找到深刻的意义。",
+    "DEALMAKER": "借助“交易撮合者”的思维模式，你能在他人眼中只是杂音的地方发现商机。",
+    "EXPRESSER": "借助 Expresser 架构，您可以将抽象的概念转化为切实的价值。",
+    "DISRUPTOR": "拥有“颠覆者”的思维模式，你会不断质疑现状。",
+    "MENTOR": "在导师制下，你会从指导他人和分享知识中找到人生意义。",
+    "INTUITIVE": "凭借直观的思维结构，你的思维会进行发散性思考，从而发现他人忽略的联系。",
+    "EDGE_WALKER": "拥有“边缘行者”的构造，你便行走在秩序与混沌的界线上。",
+    "COOPERATOR": "采用“合作者”模式，您将从同侪联盟中获得力量。",
+    "SELF_MADE": "在“白手起家”的模式下，你最依赖的莫过于自己的辛勤努力。"
   },
   "SINSAL": {
-    "MAGNETIC_DRAW": "Your Magnetic Draw means people notice you before you even speak.",
-    "RESTLESS_FEET": "Your Restless Feet mean you are wired for movement and exploration.",
-    "SOLITARY_DEPTH": "Your Solitary Depth gives you a rich inner world that few get to see.",
-    "ALLY_MAGNET": "Your Ally Magnet means you naturally attract mentors and supporters.",
-    "SCHOLAR_MIND": "Your Scholar Mind gives you a natural hunger for deep knowledge.",
-    "SHARP_EDGE": "Your Sharp Edge means you have a competitive, unyielding drive.",
-    "COMMANDER": "Your Commander trait makes you a natural leader with a strong moral compass."
+    "MAGNETIC_DRAW": "你那股迷人的魅力，让人们在你开口之前就注意到了你。",
+    "RESTLESS_FEET": "你那不安分的双脚表明，你天生就热爱运动和探索。",
+    "SOLITARY_DEPTH": "你那份独处的深度，赋予了你一个鲜为人知的丰富内心世界。",
+    "ALLY_MAGNET": "“盟友磁石”意味着你会自然而然地吸引导师和支持者。",
+    "SCHOLAR_MIND": "你那求知若渴的学者气质，让你对深奥的知识有着与生俱来的渴望。",
+    "SHARP_EDGE": "你的“锐气”意味着你拥有极强的竞争力与坚韧不拔的进取心。",
+    "COMMANDER": "你的“指挥官”特质使你成为一位天生的领导者，拥有坚定的道德准则。"
   }
 }

@@ -1,28 +1,28 @@
 {
-  "name": "Blooming Flowerbed",
+  "name": "盛开的花坛",
   "pillar": "乙巳",
-  "hero": "You're a flowerbed in bloom. You color everything around you in many shades — a person of creativity.",
+  "hero": "你就像一片盛开的花坛。你用丰富多彩的色调装点着周围的一切——你是一个富有创造力的人。",
   "narrative": [
     "You're about expression and creativity. 乙巳 is soft vine sitting on hot fire. Wood meeting fire blooms. That's your creativity — past quiet growth, into multicolored expression. People sense in your presence: this person has something else.",
-    "Your strength is multicolored expression. You express your feelings and thoughts in many ways — drawing, writing, speech, action. Whatever form it takes, your expression has color. And the color draws people in. That's rare. Many people fear expression, but for you it's natural.",
-    "Your shadow is getting caught up in expression. A blooming flowerbed is beautiful, but if you only bloom, you forget the root. You focus on expression and miss your own stamina and foundation. And when expression isn't recognized, you're hurt for a long time.",
-    "A mature Yi-Si knows both expression and foundation. Blooming, and honoring the root and soil that hold the bloom. Then your creativity isn't a one-time flower — it becomes a garden that blooms every year."
+    "你的优势在于丰富多彩的表达方式。你会通过多种方式表达自己的感受和想法——绘画、写作、言语、行动。无论采取何种形式，你的表达都充满色彩。而这种色彩能吸引人们。这很罕见。许多人害怕表达，但对你来说，这却是很自然的事情。",
+    "你的影子正被“表达”所困。盛开的花坛固然美丽，但若只顾绽放，便会忘记根基。你专注于表达，却忽视了自己的韧性和根基。而当你的表达得不到认可时，你会因此受伤很久。",
+    "成熟的“易思”既懂得表达，也深谙根基。它既能绽放，又能珍视孕育这朵花朵的根基与土壤。如此一来，你的创造力就不再是一朵昙花一现的花——而是会变成一座年年绽放的花园。"
   ],
   "shadows": [
-    "Focusing on expression while missing the foundation.",
-    "Getting hurt for a long time when expression isn't recognized.",
-    "Expressing so diversely that people can't grasp your real intent."
+    "只注重表现形式，却忽略了基础。",
+    "当表达不被认可时，会长期感到受伤。",
+    "表达方式如此多样，以至于人们无法理解你的真实意图。"
   ],
   "advice": [
-    "Set aside time this week for your foundation — no expression in it.",
-    "Give yourself permission: expression has value even without recognition.",
-    "Pick one piece of expression and explain its underlying truth to someone.",
-    "Find someone to share your creativity with. A garden blooms more beautifully together."
+    "本周请留出时间打好基础——这里没有特殊含义。",
+    "允许自己去表达：即使得不到认可，表达本身也有价值。",
+    "选一句表达，并向某人解释其背后的真谛。",
+    "找个人一起分享你的创意吧。有伴的花园会开得更美。"
   ],
   "keywords": [
-    "multicolored expression",
-    "creativity",
-    "blooming flowerbed",
-    "expression and foundation"
+    "多彩的表情",
+    "创造力",
+    "盛开的花坛",
+    "表达与基础"
   ]
 }

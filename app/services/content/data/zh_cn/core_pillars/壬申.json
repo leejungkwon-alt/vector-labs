@@ -1,28 +1,28 @@
 {
-  "name": "Water Piercing Stone",
+  "name": "穿水石",
   "pillar": "壬申",
-  "hero": "You're water that pierces stone. Gentle to look at, and, given time, impossible to stop.",
+  "hero": "你就像那能穿透岩石的水。外表温和，但只要给它时间，就无人能挡。",
   "narrative": [
     "You hold sharpness and wisdom together. 壬申 is metal giving birth to water. Sharp metal meeting deep water makes water extremely precise and persistent. Your wisdom is like that. It looks soft, but give it time and it gets through anything.",
-    "Your strength is persistent drive. Where other people quit, you keep flowing. But not by pushing like a hammer — by finding the exact spot and continuing to flow into it. So difficult projects do get finished by you. That's why organizations say, 'If this person takes it, it somehow gets done.'",
-    "Your shadow is pushing too long. Water is gentle, but if it keeps flowing in one spot, it cuts through. Your persistence is a weapon that sometimes becomes stubbornness. You lose flexibility, can't admit you're tired, and keep holding something that should have ended. And the people around you can't stop you.",
-    "A mature Im-Shin knows the difference between flowing and piercing. Sometimes changing direction, sometimes stopping, instead of always pushing. Then your persistence becomes sustained drive instead of exhaustion."
+    "你的优势在于持之以恒的动力。当别人放弃时，你依然能保持势头。但这并非像锤子一样蛮干，而是找到精准的切入点，并持续向其发力。因此，那些棘手的项目最终都能由你完成。这就是为什么各组织都会说：“只要由这个人来负责，事情总能搞定。”",
+    "你的阴影投得过长了。水虽温柔，但若一直流淌在同一个地方，终会冲穿一切。你的执着是一把武器，有时却会变成固执。你失去了灵活性，不肯承认自己已经疲惫，还一直紧抓着本该结束的事情不放。而周围的人却无法阻止你。",
+    "成熟的“Im-Shin”懂得“流动”与“穿透”之间的区别。有时改变方向，有时停下脚步，而不是一味地向前推进。这样，你的坚持就会转化为持久的动力，而不是精疲力竭。"
   ],
   "shadows": [
-    "Persistence taken so far that you keep holding onto something already finished.",
-    "Losing flexibility, pushing the same direction when a turn was needed.",
-    "Unable to admit exhaustion until your body forces you to stop."
+    "一种将坚持推向极致的状态，即对已经完成的事情仍不肯放手。",
+    "失去了灵活性，本该转弯时却仍朝同一方向前进。",
+    "直到身体迫使你停下来，才不得不承认自己已经筋疲力尽。"
   ],
   "advice": [
-    "List three things you're holding this week. One of them can be put down.",
-    "Before pushing, ask once: is this direction still right?",
-    "Give yourself regular recovery. Water that never rests runs dry.",
-    "Share one piece of wisdom you've been carrying for a long time. It opens a new channel."
+    "列出本周你正在握着的三样东西。其中一样可以放下来。",
+    "在推进之前，先问自己一次：这个方向还对吗？",
+    "要定期给自己留出恢复的时间。永不停歇的流水终将干涸。",
+    "分享一条你长久以来一直珍视的智慧箴言。它将开启一条新的途径。"
   ],
   "keywords": [
-    "piercing persistence",
-    "sharp wisdom",
-    "relentless drive",
-    "strength of flow"
+    "刺骨的执着",
+    "敏锐的智慧",
+    "不懈的进取心",
+    "流速"
   ]
 }

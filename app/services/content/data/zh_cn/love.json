@@ -1,277 +1,277 @@
 {
-  "SECTION_TITLE": "Love & Marriage",
+  "SECTION_TITLE": "爱情与婚姻",
   "CONTENT": {
     "THE_PIONEER": {
-      "headline": "You want to set the direction of the relationship yourself.",
-      "body": "You are skilled at drawing the big picture of the relationship. You are comfortable leading your partner and mapping out the way forward.\n\nHowever, this initiative can sometimes overwhelm your partner. If you move forward without asking for their pace or opinion, they will feel like they are just 'following' rather than 'walking together'.\n\nYour real gift is opening the way. When you share that gift with your partner, the relationship becomes richer.",
+      "headline": "你想自己决定这段关系的走向。",
+      "body": "你擅长把握关系的整体格局。你很擅长引领伴侣，并规划前进的方向。\n\n然而，这种主动性有时会让伴侣感到难以招架。如果你在未询问对方的步调或意见的情况下就贸然前进，对方会觉得自己只是在“跟随”，而非“并肩前行”。\n\n你真正的天赋在于开辟道路。当你与伴侣分享这份天赋时，你们的关系会变得更加丰富。",
       "patterns": [
-        "You decide quickly and expect your partner to follow.",
-        "You are good at designing the big direction of the relationship.",
-        "You sometimes feel frustrated by your partner's slower pace."
+        "你做决定很快，并希望伴侣能顺从你的决定。",
+        "你很擅长规划这段关系的总体方向。",
+        "有时你会因为伴侣的节奏较慢而感到沮丧。"
       ],
       "best_match": [
-        "Keeper",
-        "Anchor"
+        "守门员",
+        "锚"
       ],
-      "best_reason": "Someone who quietly supports you and keeps you centered when you waver.",
+      "best_reason": "一个默默支持你的人，在你动摇时能让你保持内心的平静。",
       "challenging_match": [
-        "Pioneer",
-        "Blade"
+        "先锋",
+        "叶片"
       ],
-      "challenging_reason": "If both want to lead, it can turn into a power struggle.",
+      "challenging_reason": "如果双方都想当领导，就可能会演变成一场权力斗争。",
       "actions": [
-        "Before an important decision, ask yourself, 'Am I asking my partner's pace?'",
-        "This week, ask what your partner wants to do first.",
-        "Share your direction verbally and wait for their reaction."
+        "在做出重要决定之前，问问自己：“我是否考虑到了伴侣的节奏？”",
+        "本周，先问问你的伴侣想先做什么。",
+        "口头说明你的指示，然后等待对方的反应。"
       ],
       "red_flags": [
-        "Check if you only see your partner as 'part of my plan'.",
-        "Are you taking it for granted that they are accommodating you?"
+        "检查一下，你是否只是把伴侣视为“我计划中的一部分”。",
+        "你是不是理所当然地认为他们是在迁就你？"
       ]
     },
     "THE_ADAPTER": {
-      "headline": "You smoothly lead the relationship by adapting to your partner.",
-      "body": "You are good at going with the flow of the relationship. You have an excellent ability to read your partner's emotions and melt away conflict in advance.\n\nHowever, if this flexibility is excessive, your own feelings disappear. If you keep putting off saying 'I want this', your disappointment might explode at some point.\n\nYour partner thinks you are always fine. So they have no chance to know your true feelings. Sometimes you need to reveal your discomfort to keep the relationship healthy.",
+      "headline": "你通过适应伴侣，从容地维系着这段关系。",
+      "body": "你很擅长顺应感情发展的自然节奏。你非常擅长察觉伴侣的情绪，并能提前化解矛盾。\n\n然而，如果这种灵活度过头了，你的真实感受就会被淹没。如果你总是拖延着不去说“我想要这个”，你的失望情绪迟早会爆发。\n\n伴侣总以为你一切安好，因此他们根本无从知晓你的真实感受。有时，为了维持一段健康的感情，你需要坦诚表达自己的不适。",
       "patterns": [
-        "You prioritize reading your partner's mood and react to it.",
-        "You yield your opinions to avoid conflict.",
-        "You hold onto disappointment for a long time and explode all at once."
+        "你会优先察觉伴侣的情绪，并据此做出反应。",
+        "你为了避免冲突而放弃自己的观点。",
+        "你会把失望积攒很久，然后一下子爆发出来。"
       ],
       "best_match": [
-        "Blade",
-        "Anchor"
+        "叶片",
+        "锚"
       ],
-      "best_reason": "Someone with honesty and stability will bring out your true feelings.",
+      "best_reason": "一个诚实且稳重的人，会唤醒你内心的真情。",
       "challenging_match": [
-        "Adapter"
+        "改编"
       ],
-      "challenging_reason": "If both only accommodate, real conflict will never surface.",
+      "challenging_reason": "如果双方都只知迁就，真正的冲突就永远不会浮出水面。",
       "actions": [
-        "Once a day, speak your preference first.",
-        "If you feel disappointed, say it within 24 hours.",
-        "Express 'I like this right now' often to your partner."
+        "每天一次，请先说出你的选择。",
+        "如果你感到失望，请在24小时内说出来。",
+        "经常对伴侣表达“我现在就喜欢这样”。"
       ],
       "red_flags": [
-        "Are you putting off your feelings thinking 'I'll just adjust'?",
-        "Does your partner not know your preferences at all?"
+        "你是否一边想着“我只要适应一下就行了”，一边压抑着自己的感受？",
+        "你的伴侣完全不知道你的喜好吗？"
       ]
     },
     "THE_RADIATOR": {
-      "headline": "You have a passionate romance with clear expression.",
-      "body": "You can't hide your love. Your emotions show on your face, and you pour all your energy into expressing them to the person you like.\n\nThis heat makes your partner bright, but your mood swings can be misunderstood. Your explosive power when angry is just as big.\n\nThe key is the direction of your passion. If you pour your hot energy only into your partner, it won't last. You need to create space to cool your heat with time alone.",
+      "headline": "你拥有一段充满激情且表达真挚的恋情。",
+      "body": "你无法隐藏自己的爱意。你的情绪表现在脸上，你会倾注全部精力向心仪的人表达这份情感。\n\n这份热情让你的伴侣光彩照人，但你情绪的起伏却可能招致误解。你生气时的爆发力同样惊人。\n\n关键在于你将这份热情倾注的方向。如果你只将这股炽热的能量倾注在伴侣身上，这份热情是无法持久的。你需要留出独处的时间，为自己创造空间，让热情逐渐冷却。",
       "patterns": [
-        "You fall in love fast and cool down fast.",
-        "You repeat the cycle of idealizing your partner and being disappointed.",
-        "You can't hide your emotions but may not consider your partner's pace."
+        "你坠入爱河很快，但感情冷却得也很快。",
+        "你不断重复着将伴侣理想化又感到失望的循环。",
+        "你无法掩饰自己的情绪，但可能没有考虑到伴侣的节奏。"
       ],
       "best_match": [
-        "Keeper",
-        "Anchor"
+        "守门员",
+        "锚"
       ],
-      "best_reason": "Someone with a quiet and stable nature will contain your heat.",
+      "best_reason": "一个性格沉稳、沉静的人会帮你平息内心的躁动。",
       "challenging_match": [
-        "Radiator"
+        "散热器"
       ],
-      "challenging_reason": "Two same fires can burn each other out.",
+      "challenging_reason": "两团相同的火焰可以相互熄灭。",
       "actions": [
-        "Even if angry, wait a day before speaking.",
-        "Observe your partner's way of expressing love. It might differ from yours.",
-        "Intentionally secure time alone."
+        "即使生气，也要等一天再开口。",
+        "观察一下你的伴侣表达爱意的方式。这可能与你不同。",
+        "有意识地留出独处的时间。"
       ],
       "red_flags": [
-        "Check if you are overly dependent on your partner.",
-        "Look back to see if you said hurtful words when you exploded."
+        "检查一下你是否过度依赖伴侣。",
+        "回想一下，当你情绪失控时，是否说过伤人的话。"
       ]
     },
     "THE_KEEPER": {
-      "headline": "You dedicate yourself deeply to one person.",
-      "body": "You don't open your heart easily. You choose people carefully, and once you give your heart, you try to take responsibility to the end.\n\nThis dedication builds deep trust, but if your partner takes it for granted, disappointment builds. Also, if your focus is too intense, your partner may feel suffocated.\n\nYour love is quiet but strong. You need the wisdom to step back sometimes so your partner can handle its intensity.",
+      "headline": "你全心全意地爱着一个人。",
+      "body": "你不会轻易敞开心扉。你会谨慎选择对象，一旦倾注了真心，就会努力承担责任直到最后。\n\n这种全心投入能建立起深厚的信任，但如果伴侣将其视为理所当然，失望便会逐渐积累。此外，如果你的专注过于强烈，伴侣可能会感到窒息。\n\n你的爱是静默而坚定的。你需要有智慧，有时适时退后一步，让伴侣能够承受这份强烈的爱。",
       "patterns": [
-        "You focus all your energy on one person.",
-        "You sensitively notice small changes in your partner.",
-        "You tend to put your own needs behind your partner's."
+        "你把全部精力都倾注在一个人身上。",
+        "你能敏锐地察觉到伴侣身上细微的变化。",
+        "你往往会把自己的需求放在伴侣之后。"
       ],
       "best_match": [
-        "Radiator",
-        "Cultivator"
+        "散热器",
+        "耕作机"
       ],
-      "best_reason": "Someone who warmly receives and returns your dedication.",
+      "best_reason": "一个能热情地接受并回应你这份心意的人。",
       "challenging_match": [
-        "Deep",
-        "Gem"
+        "深",
+        "宝石"
       ],
-      "challenging_reason": "With someone who hides their feelings, your dedication can feel lonely.",
+      "challenging_reason": "面对一个隐藏自己真实情感的人，你的付出可能会让人感到孤独。",
       "actions": [
-        "Once a month, directly request what you want to receive.",
-        "Don't solve your partner's problems for them; watch them instead.",
-        "Share your emotions with your partner too."
+        "每月一次，直接提出您希望收到什么。",
+        "不要替伴侣解决问题；而是要观察他们。",
+        "也要和伴侣分享你的情绪。"
       ],
       "red_flags": [
-        "Are you accommodating your partner excessively?",
-        "Is your dedication making your partner helpless?"
+        "你是否对伴侣过于迁就了？",
+        "你的全心投入是否让伴侣感到无助？"
       ]
     },
     "THE_ANCHOR": {
-      "headline": "You are a stable and reliable partner.",
-      "body": "You provide an unwavering center in the relationship. You give dependability rather than fluttering excitement, and you are someone your partner can lean on.\n\nHowever, stability is sometimes read as boredom. Your partner might appreciate your reliability but look for 'excitement' elsewhere.\n\nYour strength is continuity. If you add small events and changes on top of it, the relationship will have both stability and excitement.",
+      "headline": "您是一位稳重可靠的合作伙伴。",
+      "body": "你在这段关系中扮演着坚定不移的核心角色。你带来的不是昙花一现的兴奋，而是值得信赖的依靠，是伴侣可以倚赖的人。\n\n然而，稳定性有时会被误解为乏味。你的伴侣虽然欣赏你的可靠性，却可能在别处寻求“刺激”。\n\n你的优势在于持之以恒。若在此基础上增添一些小事件和变化，这段关系将兼具稳定与激情。",
       "patterns": [
-        "You show love through actions rather than emotional expression.",
-        "When conflict arises, you tend to take time in silence.",
-        "You may notice your partner's emotional changes late."
+        "你通过行动而非情感表达来展现爱意。",
+        "一旦发生冲突，你往往会静静地花些时间思考。",
+        "你可能会较晚才注意到伴侣情绪上的变化。"
       ],
       "best_match": [
-        "Radiator",
-        "Adapter"
+        "散热器",
+        "调整"
       ],
-      "best_reason": "Someone expressive adds excitement on top of your stability.",
+      "best_reason": "一个富有表现力的人，会在你的稳定生活中增添一份激情。",
       "challenging_match": [
-        "Anchor"
+        "锚"
       ],
-      "challenging_reason": "If both are passive to change, the relationship can stagnate.",
+      "challenging_reason": "如果双方对改变都持消极态度，这段关系就会陷入停滞。",
       "actions": [
-        "Once a month, plan a small event your partner will like.",
-        "Once a day, express your emotions in words.",
-        "Pay attention to your partner's emotional changes."
+        "每月安排一次你伴侣会喜欢的小活动。",
+        "每天一次，用语言表达你的情感。",
+        "请留意伴侣的情绪变化。"
       ],
       "red_flags": [
-        "Are you stopping your efforts thinking 'this is enough'?",
-        "Are you failing to notice your partner's changes?"
+        "你是否因为觉得“这样就够了”而停止了努力？",
+        "你是否没有注意到伴侣的变化？"
       ]
     },
     "THE_CULTIVATOR": {
-      "headline": "You have a romance where you carefully care for your partner.",
-      "body": "You read your partner's needs sensitively. You have deep consideration and are skilled at creating an environment where your partner feels comfortable.\n\nHowever, if this care is excessive, your partner becomes helpless. The attitude of 'I'll do everything for you' can take away their chance to grow.\n\nYour love is like gardening. Giving only water and light so the plant grows on its own lasts longer than making it grow.",
+      "headline": "你正经历一段爱情，在这段感情中，你会悉心呵护你的伴侣。",
+      "body": "你能敏锐地察觉伴侣的需求。你体贴入微，善于营造让伴侣感到舒适的环境。\n\n然而，如果这种关怀过头了，伴侣就会变得无所适从。“我来为你打理一切”这种态度可能会剥夺他们成长的机会。\n\n你的爱就像园艺。仅仅提供水分和光照，让植物自生自长，比强行让它生长更能长久。",
       "patterns": [
-        "You take care of your partner before they need it.",
-        "You try to solve your partner's problems for them.",
-        "You feel disappointed when your partner lacks gratitude."
+        "在伴侣需要照顾之前，你就先照顾好他/她。",
+        "你会试图替伴侣解决问题。",
+        "当伴侣缺乏感恩之心时，你会感到失望。"
       ],
       "best_match": [
-        "Cultivator",
-        "Anchor"
+        "耕作机",
+        "锚"
       ],
-      "best_reason": "You understand each other's way of caring and feel comfortable in it.",
+      "best_reason": "你们彼此理解对方表达关怀的方式，并感到很自在。",
       "challenging_match": [
-        "Radiator"
+        "散热器"
       ],
-      "challenging_reason": "With someone with flashy expressions, your quiet dedication might not be seen well.",
+      "challenging_reason": "面对一个表达方式很张扬的人，你那默默的奉献可能不会得到应有的认可。",
       "actions": [
-        "Even if your partner fails, don't intervene once; watch.",
-        "Practice providing your care only when requested.",
-        "Secure time for yourself."
+        "即使你的伴侣失败了，也别插手；先观察一下。",
+        "请养成只在被要求时才提供护理的习惯。",
+        "为自己留出时间。"
       ],
       "red_flags": [
-        "Are you blocking your partner's independence with over-care?",
-        "Is your partner taking your dedication for granted?"
+        "你是否因过度关心而阻碍了伴侣的独立性？",
+        "你的伴侣是否把你的付出视为理所当然？"
       ]
     },
     "THE_BLADE": {
-      "headline": "You have an honest and straightforward romance.",
-      "body": "You hate lies. You prefer clear emotions over ambiguous relationships or superficial expressions.\n\nThis straightforwardness gives trust, but sometimes it hurts your partner's feelings. Even the right words become wounds if the timing and method are wrong.\n\nYour true strength is 'saying exactly what is needed when your partner needs it'. If you wrap this power with warmth, the relationship becomes much deeper.",
+      "headline": "你们之间的爱情真诚而坦率。",
+      "body": "你讨厌谎言。比起模棱两可的关系或肤浅的表达，你更喜欢直率的情感。\n\n这种直率虽能赢得信任，但有时也会伤害伴侣的感情。即便是恰当的话语，如果时机和方式不当，也会成为伤痛。\n\n你的真正优势在于“在伴侣需要的时候，精准地说出他们真正需要的话”。如果你能用温暖来包裹这种力量，你们的关系将会变得更加深厚。",
       "patterns": [
-        "You point out problems and try to solve them right away.",
-        "You can't stand ambiguity.",
-        "You lead conversations with logic rather than emotion."
+        "你会指出问题，并立即设法解决。",
+        "你无法忍受模棱两可。",
+        "你在对话中更倾向于运用逻辑而非情感。"
       ],
       "best_match": [
-        "Adapter",
-        "Keeper"
+        "改编",
+        "守门员"
       ],
-      "best_reason": "Someone who softly wraps your honesty and reads the emotions you miss.",
+      "best_reason": "一个能温柔地呵护你的真诚，并读懂你未曾察觉的情感的人。",
       "challenging_match": [
-        "Blade",
-        "Challenger"
+        "叶片",
+        "挑战者"
       ],
-      "challenging_reason": "If both push strongly, conversation turns into a fight.",
+      "challenging_reason": "如果双方都强硬地坚持己见，谈话就会演变成争吵。",
       "actions": [
-        "Before pointing out, ask for your partner's perspective first.",
-        "Ask a question before giving an answer.",
-        "Try expressing your emotions in words too."
+        "在指出问题之前，先询问一下伴侣的看法。",
+        "在回答问题之前，先提个问题。",
+        "不妨也试着用语言来表达你的情感。"
       ],
       "red_flags": [
-        "Are you pushing your partner because you are right?",
-        "Is your directness felt as a threat to your partner?"
+        "你是因为自己是对的，才在逼迫伴侣吗？",
+        "你的直率会让伴侣感到受到威胁吗？"
       ]
     },
     "THE_GEM": {
-      "headline": "You have high ideals and a fastidious romance.",
-      "body": "You don't compromise easily. You carefully observe your partner's taste, way of speaking, and attitude one by one.\n\nThis meticulousness raises the quality of the relationship, but it can be a burden to your partner. If they feel 'why am I always lacking?', love becomes heavy.\n\nYour standards are a gift. But when you don't force them on your partner, the relationship grows into something for both of you.",
+      "headline": "你怀揣着崇高的理想，对爱情也格外挑剔。",
+      "body": "你不会轻易妥协。你会仔细观察伴侣的品味、说话方式和态度，一点一点地细细斟酌。\n\n这种细致入微的态度虽然提升了感情的质量，但对伴侣来说可能是一种负担。如果对方觉得“我为什么总是不够好？”，爱情就会变得沉重。\n\n你的标准是一种馈赠。但当你不强加给伴侣时，这段感情才会真正成长为属于你们两人的东西。",
       "patterns": [
-        "You remember your partner's minor flaws for a long time.",
-        "You miss the timing waiting for the perfect moment.",
-        "You frequently check the perfection of the relationship."
+        "你会长久地记得伴侣那些微不足道的缺点。",
+        "你总是在等待那个完美时刻，结果却错过了时机。",
+        "你经常检查这段关系是否完美。"
       ],
       "best_match": [
-        "Deep",
-        "Cultivator"
+        "深",
+        "耕作机"
       ],
-      "best_reason": "Someone with depth and patience receives your standards without burden.",
+      "best_reason": "一个有深度且有耐心的人，会毫无负担地接受你的标准。",
       "challenging_match": [
-        "Gem"
+        "宝石"
       ],
-      "challenging_reason": "If both seek perfection, nothing will ever be enough.",
+      "challenging_reason": "如果双方都追求完美，那么无论做什么都永远不够。",
       "actions": [
-        "If you are 80% satisfied, say 'it's enough'.",
-        "Acknowledge and let go of one of your partner's flaws each week.",
-        "Be generous to yourself too."
+        "如果你感到80%满意，就说“够了”。",
+        "每周承认并放下伴侣的一个缺点。",
+        "也要对自己宽容一些。"
       ],
       "red_flags": [
-        "Can you not say 'this is enough'?",
-        "Is your partner nervous around you?"
+        "你难道不能说一句“够了”吗？",
+        "你的伴侣在你面前会感到紧张吗？"
       ]
     },
     "THE_DEEP": {
-      "headline": "You have a deep and cautious romance.",
-      "body": "You don't reveal your emotions easily. You observe your partner enough and dig deep once you make up your mind.\n\nThis cautiousness looks like mature love, but it's hard for your partner to know your true feelings. The question 'does this person like me?' pushes the relationship away.\n\nYour love is like the ocean. The surface is calm, but you need to come up to the surface sometimes and let your partner know 'I am here'.",
+      "headline": "你们之间有着一段深沉而谨慎的恋情。",
+      "body": "你不会轻易流露情感。你会充分观察伴侣，一旦下定决心，就会深入探究。\n\n这种谨慎看似是成熟的爱，但伴侣很难了解你的真实感受。“这个人喜欢我吗？”这样的疑问会让关系渐行渐远。\n\n你的爱如同大海。海面看似平静，但你有时也需要浮出水面，让伴侣知道“我在这里”。",
       "patterns": [
-        "You express after analyzing and organizing your emotions.",
-        "You observe your partner for a long time and approach slowly.",
-        "You reveal your true feelings late, frustrating your partner."
+        "你在分析并梳理好自己的情绪后才表达出来。",
+        "你长时间观察着你的伴侣，然后慢慢走近。",
+        "你总是迟迟不愿表露真实心意，这让伴侣感到沮丧。"
       ],
       "best_match": [
-        "Gem",
-        "Keeper"
+        "宝石",
+        "守门员"
       ],
-      "best_reason": "Someone who understands depth waits for your slow love.",
+      "best_reason": "懂得深意的人，会静待你那份从容的爱。",
       "challenging_match": [
-        "Radiator"
+        "散热器"
       ],
-      "challenging_reason": "With someone who wants fast emotional expression, the pace might not match.",
+      "challenging_reason": "对于希望快速表达情感的人来说，这种节奏可能不太合适。",
       "actions": [
-        "Don't analyze your feelings; just say them.",
-        "Express your heart in one sentence once a day.",
-        "Make your partner understand your pace."
+        "不要分析自己的感受，直接说出来就好。",
+        "每天用一句话表达你的心声。",
+        "让你的伴侣理解你的节奏。"
       ],
       "red_flags": [
-        "Are you missing the timing while analyzing?",
-        "Are you giving your partner a chance to know your heart?"
+        "你在分析时是否错过了时机？",
+        "你是否给伴侣一个了解你内心的机会？"
       ]
     },
     "THE_SPRING": {
-      "headline": "You have a quiet and affectionate romance.",
-      "body": "You have the power to make your partner comfortable. Without exaggeration, you naturally seep into their day.\n\nHowever, if this quietness is excessive, your partner will find it hard to know your feelings. The question 'does this person like me?' delays the relationship.\n\nYour affection is strong. But when you express that affection in clear words once in a while, the relationship deepens.",
+      "headline": "你们之间有一段安静而充满爱意的恋情。",
+      "body": "你有让伴侣感到舒适的能力。毫不夸张地说，你自然而然地融入了他们的日常生活。\n\n然而，如果这种沉默过于强烈，伴侣就会难以揣摩你的心意。“这个人喜欢我吗？”这样的疑问会拖慢关系的进展。\n\n你的爱意很深。但如果你偶尔能用明确的言语表达这份爱意，你们的关系就会更加深厚。",
       "patterns": [
-        "You convey love through atmosphere rather than words.",
-        "You adapt well to your partner's mood.",
-        "Your emotional expression is late, and you might miss opportunities."
+        "你通过营造氛围来表达爱意，而不是靠言语。",
+        "你能很好地适应伴侣的情绪。",
+        "你的情感表达有些迟缓，可能会错失良机。"
       ],
       "best_match": [
-        "Blade",
-        "Pioneer"
+        "叶片",
+        "先锋"
       ],
-      "best_reason": "Someone clear pulls out your quiet heart.",
+      "best_reason": "有人将你那颗沉静的心彻底掏了出来。",
       "challenging_match": [
-        "Deep"
+        "深"
       ],
-      "challenging_reason": "If both are quiet, feelings might never be revealed.",
+      "challenging_reason": "如果双方都保持沉默，这份感情或许永远不会被揭示出来。",
       "actions": [
-        "Say directly that you like them.",
-        "Express how you feel about your partner once a week.",
-        "Tell your partner your pace."
+        "直接告诉对方你喜欢他/她。",
+        "每周向伴侣表达一次你的感受。",
+        "把你的节奏告诉你的伴侣。"
       ],
       "red_flags": [
-        "Are you putting it off thinking 'they will know someday'?",
-        "Is your partner doubting your feelings?"
+        "你是不是一边想着“总有一天他们会知道的”，一边把这件事一拖再拖？",
+        "你的伴侣是否对你的感情产生了怀疑？"
       ]
     }
   }

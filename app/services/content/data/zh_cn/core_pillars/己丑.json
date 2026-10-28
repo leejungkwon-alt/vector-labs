@@ -1,28 +1,28 @@
 {
-  "name": "Frozen Field",
+  "name": "冰封之野",
   "pillar": "己丑",
-  "hero": "You're a field holding spring underground. Cold and solid on the surface, with an unfreed life force still asleep beneath.",
+  "hero": "你是一片地下蕴藏着春天的原野。表面冰冷坚硬，而地下却仍沉睡着尚未苏醒的生命力。",
   "narrative": [
     "You don't show yourself easily. 己丑 is damp winter earth layered on itself. Your emotions stay inside, and the temperature people see is much cooler than the temperature you actually feel. People remember you as composed, or even bland. It's not because you don't feel — it's because you store what you feel rather than spending it.",
     "Your strength is the instinct to save. 己丑 is soil that buries seeds. You don't spend money, emotion, trust, or time carelessly. You hold them for the right moment and then release them with precision. That's why you're stronger in a crisis than most people. When everyone else is empty, your storehouse still has something in it.",
     "Your shadow is staying frozen too long. 己丑 stores spring, but if you never open the storehouse, the soil itself hardens. If you don't let out what you've been holding, people can't read your heart even when they're standing next to you. 'Always fine' gets written on you, and beneath that label your private fatigue quietly stacks up.",
-    "A mature Ji-Chou knows how to release the stored spring. Opening the kept emotion, the banked trust, the buried gift at the right moment. Then your coolness stops being distance and becomes deep stability, and the people around you get to experience actual spring."
+    "一个成熟的“己丑”人懂得如何释放积蓄已久的春意。在恰当的时刻，释放那深藏的情感、积蓄的信任和埋藏的恩赐。那时，你的从容便不再是疏离，而是化作深沉的安定，周围的人也将真切地感受到春天的气息。"
   ],
   "shadows": [
-    "Keeping feelings inside so long that people misread your temperature entirely.",
-    "Conserving trust so tightly that you don't ask for help when you need it.",
-    "The saving instinct taken so far it makes you stingy with yourself."
+    "把情绪憋在心里太久，以至于别人完全误判了你的情绪状态。",
+    "因过度珍视信任，以至于在需要帮助时也不敢开口求助。",
+    "节俭的本能若发展到这种地步，就会让你对自己也变得吝啬。"
   ],
   "advice": [
-    "Once this week, take out one feeling you've been keeping. Small is fine.",
-    "Pick one thing you're solving alone and ask for help before you need it.",
-    "Ask yourself, 'Why am I holding this in right now?' Of the answers, one can be let out.",
-    "Set up a regular spend on yourself — money or time — so the storehouse doesn't overflow."
+    "本周找一个你一直压在心底的情绪，把它释放出来。哪怕只是微不足道的情绪也没关系。",
+    "选一件你正在独自解决的事情，在真正需要帮助之前就主动寻求帮助。",
+    "问问自己：“我为什么现在要把这件事憋在心里？”在这些答案中，总有一个可以释放出来。",
+    "定期为自己安排一些开销——无论是金钱还是时间——以免“储藏室”被塞得满满当当。"
   ],
   "keywords": [
-    "winter earth",
-    "deep storage",
-    "patient strength",
-    "stored spring"
+    "冬日大地",
+    "深层存储",
+    "患者体力",
+    "储能弹簧"
   ]
 }

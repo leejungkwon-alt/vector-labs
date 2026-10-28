@@ -1,29 +1,29 @@
 {
   "pillar": "戊寅",
-  "hero": "You're a mountain with a forest growing on it. What looks like solid ground is actually a place where things can root.",
+  "hero": "你是一座长满森林的山。看似坚实的地面，其实是万物扎根的地方。",
   "narrative": [
-    "You read as dependable, warm, and hard to rattle. People bring problems to you before they bring them to anyone else — not because you ask them to, but because being near you makes the problem feel more tractable.",
-    "Your strength is generous ground. You don't just support people — you give them the conditions to grow on their own. Teams you've led keep their culture after you leave. Projects you've started keep going after you've stepped back. That's rare, and it doesn't happen by accident.",
-    "Your shadow is giving so much ground that your own foundation erodes. You say yes to the next person who needs a foothold, then quietly resent how little you have left. What feels like generosity can become a habit of staying needed — and staying needed is not the same as being loved.",
-    "The mature form of this pillar is a mountain that holds the forest and still keeps its own rock. Generosity with boundaries. The forest actually grows better when the mountain is intact — and so does everyone who relies on you."
+    "在别人眼里，你是个值得信赖、热情且沉着冷静的人。人们在向其他人倾诉之前，总会先向你倾诉——这并非因为你要求他们这样做，而是因为在你身边，问题似乎变得更容易解决。",
+    "你的优势在于能为他人提供广阔的成长空间。你不仅支持他人，更赋予他们自主成长的条件。你曾带领的团队，在你离开后依然保持着原有的文化；你曾启动的项目，在你退居二线后依然持续推进。这实属难得，绝非偶然。",
+    "你的阴影不断退让，以至于你自己的根基都在被侵蚀。你对每一个需要立足点的人都点头应允，随后却又默默怨恨自己所剩无几。这种看似慷慨的行为，可能会演变成一种“保持被需要”的习惯——而“保持被需要”并不等同于“被爱”。",
+    "这一支柱的成熟形态是一座山，它既孕育着森林，又保有自身的岩石。这是一种有度的慷慨。当山体完好无损时，森林反而能生长得更好——依赖你的人也是如此。"
   ],
   "shadows": [
-    "You say yes to more than you can actually hold, then quietly resent the weight.",
-    "You can confuse being needed with being loved.",
-    "You stay available to everyone, and no one notices you're depleted."
+    "你答应的事情超出了自己实际能承担的范围，随后却又默默地为这沉重的负担心生怨怼。",
+    "你可能会把“被需要”和“被爱”混为一谈。",
+    "你总是对每个人都随叫随到，却没人注意到你已经精疲力尽了。"
   ],
   "advice": [
-    "Pick one thing you're supporting out of habit rather than choice. Let it go this week.",
-    "Before you say yes to a request, ask yourself: 'Is this mine to carry?'",
-    "Say out loud, once this week, 'I need something back.' Let someone hear it.",
-    "Spend an hour on something that grows you, not someone else."
+    "选出一件你出于习惯而非主动选择而坚持做的事情。这周就放手吧。",
+    "在答应某项请求之前，先问问自己：“这该由我来承担吗？”",
+    "本周找个机会，大声说一句：“我需要得到一些回报。”让别人听到这句话。",
+    "花一个小时去做能让你成长的事，而不是为了别人。"
   ],
   "keywords": [
-    "generous ground",
-    "lively stability",
-    "growth enabler",
-    "shared rooting"
+    "广袤的土地",
+    "充满活力的稳定性",
+    "增长推动力",
+    "共享根目录"
   ],
-  "name": "Forested Mountain",
+  "name": "林木葱郁的山",
   "name_traditional": ""
 }

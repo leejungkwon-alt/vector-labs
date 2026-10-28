@@ -1,28 +1,28 @@
 {
-  "name": "Precise Flowerbed",
+  "name": "精准花坛",
   "pillar": "己酉",
-  "hero": "You're a carefully tended flowerbed. A person with a delicate hand, always looking for beauty that actually serves.",
+  "hero": "你就像一片精心照料的花坛。你有着一双细腻的手，总是寻找真正能带来益处的美。",
   "narrative": [
     "You hold precision and practicality at the same time. 己酉 is soft earth with a sharp metal edge on top. So you want beauty, but you want that beauty to do something useful. You prefer the modest and finished over the showy and empty.",
-    "Your strength is craftsmanship. Whatever you touch has visible care in it. You work every detail into place and keep the whole thing from falling out of tune. What you make and what you choose carries a signature — 'this passed through that person's hands.'",
+    "你的优势在于精湛的工艺。无论你经手什么，都能看出其中倾注的用心。你将每个细节都处理得恰到好处，确保整体和谐统一。你制作和选择的每一件作品都带有独特的印记——“这是经由那个人之手完成的”。",
     "Your shadow is perfectionism. The precision of 己酉 is beautiful, but pushed too far it starts to close in on you. Hours on a detail no one will notice. Long disappointment over results that weren't quite right. And you apply the same standard to other people, which can hurt them without meaning to. Your bar is natural to you — but to others it can be a wall.",
-    "A mature Ji-You uses the standard with generosity. Keeping the quality bar, and understanding people who can't reach it yet. Then your precision stops being pressure and becomes the kind of beauty people want to learn."
+    "成熟的吉优会宽容地运用这一标准。既坚持质量标准，又理解那些尚未达到这一标准的人。这样一来，你的严谨就不再是压力，而是成为人们渴望学习的那种美。"
   ],
   "shadows": [
-    "Stuck on imperfect results long enough that you can't move on to the next thing.",
-    "Applying your bar to other people and hurting them without meaning to.",
-    "Burning energy on details no one will see, and missing the thing that mattered."
+    "因为过分纠结于不尽如人意的结果，以至于无法继续进行下一件事。",
+    "将自己的标准强加于他人，并在无意中伤害了他们。",
+    "把精力浪费在没人会注意的细节上，却忽略了真正重要的事情。"
   ],
   "advice": [
-    "Once this week, practice stopping at 80%. Any result.",
-    "When you look at someone else's work, remind yourself first: this is their bar, not mine.",
-    "Turn one 'why is it only this good?' into 'what did I actually make?'",
-    "Notice when the perfectionism peaks. It's usually when you're tired."
+    "本周找个时间，试着在完成80%时停下来。结果如何都行。",
+    "当你审视他人的作品时，首先要提醒自己：这是他们的标准，而不是我的。",
+    "把“为什么只有这么好？”变成“我到底做了什么？”",
+    "留意完美主义达到顶峰的时候。通常是在你感到疲惫的时候。"
   ],
   "keywords": [
-    "delicate hand",
-    "aesthetic sense",
-    "useful beauty",
-    "craftsmanship"
+    "纤细的手",
+    "审美情趣",
+    "实用之美",
+    "工艺"
   ]
 }

@@ -1,29 +1,29 @@
 {
   "pillar": "丁未",
-  "hero": "You're a candle on dry earth. Swaying but not going out — a fire that burns firm.",
+  "hero": "你就像干涸大地上的蜡烛。摇曳却不熄灭——是一团燃烧得坚定的火焰。",
   "narrative": [
-    "You don't go out easily. Bad conditions, restless surroundings — your flame keeps burning. At first you look quiet, but over time you leave the impression: this person doesn't break easily. That impression is accurate.",
-    "You're a person of endurance. Under difficulty your focus actually increases, and you can face the problem directly. That's rare. Most people scatter under pressure. You get sharper as things get harder.",
-    "Your shadow is making endurance into a virtue. Keep enduring long enough, and you start enduring where endurance isn't needed. Bad environments, wrong relationships, projects already finished — you hold on because 'letting go feels like losing.' That's not endurance. That's clinging.",
-    "A mature Ding-Wei can tell what to endure from what to release. Your resistance is a weapon — but you have to choose where to use it. Enduring and releasing are both your powers."
+    "你不会轻易屈服。无论环境恶劣，还是周遭动荡不安——你的热情始终不灭。起初你看起来很沉稳，但随着时间推移，你会给人留下这样的印象：这个人绝不会轻易屈服。这种印象是准确的。",
+    "你是个坚韧不拔的人。面对困难时，你的专注力反而会增强，能够直面问题。这很难得。大多数人在压力下都会心神不宁。而你却越是困难，表现得越是敏锐。",
+    "你的阴影正将“坚持”塑造成一种美德。只要坚持得足够久，你就会在根本不需要坚持的地方也开始坚持。糟糕的环境、错误的人际关系、早已结束的项目——你之所以紧抓不放，是因为“放手就意味着失去”。那不是坚持，而是执着。",
+    "成熟的丁伟能够分辨出该忍耐什么、该放手什么。你的抗拒是一种武器——但你必须选择在何时何地使用它。忍耐与放手都是你的力量。"
   ],
   "shadows": [
-    "You keep enduring bad situations until you've burned out.",
-    "Giving up feels like losing, so you keep holding on to things already over.",
-    "Your resilience makes others assume you're always fine."
+    "你一直忍受着糟糕的处境，直到精疲力竭。",
+    "放弃的感觉就像是失败，所以你一直执着于那些早已结束的事情。",
+    "你的坚韧让别人以为你总是很好。"
   ],
   "advice": [
-    "This week, list three things you're enduring. One of them you can put down.",
-    "Remind yourself: letting go isn't failure, it's the choice to move on.",
-    "Catch one moment you're pretending to be fine — and say you're not.",
-    "Your resistance is a weapon — but weapons only work when you choose where to swing."
+    "本周，列出三件你正在忍受的事情。其中一件你可以从清单中划掉。",
+    "请记住：放手并非失败，而是选择继续前行。",
+    "抓住那个你假装一切都好的瞬间——然后坦白说你其实并不好。",
+    "你的抵抗就是一种武器——但武器只有在你选择挥向何处时才有效。"
   ],
   "keywords": [
-    "firm ember",
-    "power to resist",
-    "not easily extinguished",
-    "courage to release"
+    "炽热的余烬",
+    "抵抗的力量",
+    "难以熄灭",
+    "释放的勇气"
   ],
-  "name": "Candle on Dry Earth",
+  "name": "干地上的一支蜡烛",
   "name_traditional": ""
 }

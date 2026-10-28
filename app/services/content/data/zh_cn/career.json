@@ -1,274 +1,274 @@
 {
-  "SECTION_TITLE": "Career & Transition",
+  "SECTION_TITLE": "职业与转型",
   "CONTENT": {
     "THE_PIONEER": {
-      "headline": "Suited for entrepreneurship, new ventures, and planning with a pioneer spirit.",
-      "body": "You gain energy when creating new paths. You are stronger at pioneering unknown territory than following a set manual.\n\nThis trait shines in new business teams, new projects, and startups within an organization. Conversely, you feel frustrated in stagnant organizations.\n\nYour risk is 'deciding too fast alone'. For important decisions, always seek verification from trusted colleagues.",
+      "headline": "适合创业、新项目以及怀揣开拓精神进行规划。",
+      "body": "在开辟新道路时，你会获得能量。与照本宣科相比，你在开拓未知领域方面更游刃有余。\n\n这一特质在新组建的业务团队、新项目以及组织内的初创团队中尤为突出。相反，在停滞不前的组织中，你会感到沮丧。\n\n你需要警惕的风险是“独自做出过快决定”。对于重要决策，务必向值得信赖的同事寻求确认。",
       "patterns": [
-        "You proactively start new projects.",
-        "You suggest directions in meetings.",
-        "You can't stand stagnant situations."
+        "你会主动启动新项目。",
+        "你在会议上提出建议。",
+        "你受不了停滞不前的局面。"
       ],
       "best_match": [
-        "Anchor",
-        "Operator"
+        "锚",
+        "运营商"
       ],
-      "best_reason": "A partner who can reliably execute your vision.",
+      "best_reason": "一位能够可靠地将您的愿景付诸实践的合作伙伴。",
       "challenging_match": [
-        "Officer"
+        "警官"
       ],
-      "challenging_reason": "You often clash with bosses/colleagues who value rules and procedures.",
+      "challenging_reason": "你经常与那些重视规章制度的上司或同事发生冲突。",
       "actions": [
-        "Before deciding, ask yourself 'Who verified this?'",
-        "Propose one new project this quarter.",
-        "Delegate execution details to stable colleagues."
+        "在做出决定之前，请问自己：“这是由谁核实的？”",
+        "本季度提出一个新项目。",
+        "将执行细节委托给可靠的同事。"
       ],
       "red_flags": [
-        "Are you pushing alone without verification?",
-        "Are team members unable to keep up with your pace?"
+        "你是在未经核实的情况下单方面推进吗？",
+        "团队成员跟不上你的节奏吗？"
       ]
     },
     "THE_ADAPTER": {
-      "headline": "You survive in any organization with flexible adaptability.",
-      "body": "You learn the language of the organization quickly. You are skilled at mediating conflicts and making the team feel smooth.\n\nThis flexibility is a strength, but there is a risk of your expertise blurring. A 'person who is good at everything' is easily replaced.\n\nWhat you need is one solid spike. Create one clear expertise where people say 'this is the person for this field'.",
+      "headline": "只要具备灵活的适应能力，你就能在任何组织中立足。",
+      "body": "你能迅速掌握组织的“语言”。你擅长调解冲突，让团队运作顺畅。\n\n这种灵活性虽是一大优势，但也存在专业领域界限模糊的风险。一个“样样通但样样松”的人很容易被取代。\n\n你需要的是一个扎实的专长。打造一项清晰的专业能力，让人们一提到该领域就说：“这人就是这方面的专家”。",
       "patterns": [
-        "You volunteer as the lubricant in the team.",
-        "You flexibly change your stance according to the situation.",
-        "You earn trust through relationships rather than expertise."
+        "你自愿在团队中充当“润滑剂”的角色。",
+        "你会根据具体情况灵活调整自己的立场。",
+        "信任是通过人际关系而非专业知识赢得的。"
       ],
       "best_match": [
-        "Blade",
-        "Officer"
+        "叶片",
+        "警官"
       ],
-      "best_reason": "Someone with clear standards elevates your expertise.",
+      "best_reason": "拥有明确标准的人能提升你的专业水平。",
       "challenging_match": [
-        "Pioneer"
+        "先锋"
       ],
-      "challenging_reason": "You may clash with someone who wants fast decisions and strong initiative.",
+      "challenging_reason": "你可能会与某人发生冲突，此人希望决策迅速且能主动出击。",
       "actions": [
-        "Invest in one skill this quarter.",
-        "Clearly appeal your expertise to your boss.",
-        "Don't solve every conflict; let one go."
+        "本季度专注于培养一项技能。",
+        "向你的上司明确展示你的专业能力。",
+        "不要试图解决每一个冲突；有些就放一放吧。"
       ],
       "red_flags": [
-        "Are you remaining as 'a person who does anything'?",
-        "Does no one know your achievements?"
+        "你是否依然是个“什么都干的人”？",
+        "难道没人知道你的成就吗？"
       ]
     },
     "THE_RADIATOR": {
-      "headline": "You shine on stage — in sales, marketing, and presentations.",
-      "body": "You gain energy from dealing with people. You have a natural talent for persuading, inspiring, and leading the atmosphere.\n\nThis strength shines in sales, marketing, branding, and lecturing. However, you get bored quickly if given only desk/analysis work.\n\nYour risk is burnout. You don't recognize your own fatigue while trying to stay bright. You need a regular recovery routine.",
+      "headline": "你在舞台上大放异彩——无论是销售、市场营销还是演讲。",
+      "body": "与人打交道能让你充满活力。你天生擅长说服他人、激励他人以及营造氛围。\n\n这种优势在销售、市场营销、品牌推广和演讲中尤为突出。然而，如果只让你做文书工作或分析性工作，你会很快感到厌倦。\n\n你需要警惕的是职业倦怠。在努力保持活力时，你往往意识不到自己的疲惫。你需要建立一套定期的恢复计划。",
       "patterns": [
-        "You achieve results at touchpoints with people.",
-        "You take the initiative in presentations/meetings.",
-        "You get tired when there is a lot of analysis/desk work."
+        "您是在与人的接触点上取得成果的。",
+        "你在演示和会议中能主动出击。",
+        "当需要进行大量分析或文书工作时，你会感到疲惫。"
       ],
       "best_match": [
-        "Anchor",
-        "Cultivator"
+        "锚",
+        "耕作机"
       ],
-      "best_reason": "Someone who stably supports your energy.",
+      "best_reason": "一个能稳定支持你能量的人。",
       "challenging_match": [
-        "Deep"
+        "深"
       ],
-      "challenging_reason": "You feel frustrated when the pace doesn't match with quiet people.",
+      "challenging_reason": "当节奏与性格内向的人不一致时，你会感到沮丧。",
       "actions": [
-        "Set one day a week as a 'no-meeting day'.",
-        "Summarize your achievements in numbers once a month.",
-        "Always keep one long-term project going."
+        "每周选定一天作为“无会议日”。",
+        "每月用数字总结一下你的成就。",
+        "要始终保持一个长期项目的进行。"
       ],
       "red_flags": [
-        "Are you ignoring burnout signals?",
-        "Are you only chasing short-term results?"
+        "你是否在忽视倦怠的信号？",
+        "你是否只追求短期成果？"
       ]
     },
     "THE_KEEPER": {
-      "headline": "You become a master in professional, research, or technical fields.",
-      "body": "You are the type to succeed by digging one deep well. Your value increases as you dig deeper and accumulate expertise.\n\nThis trait shines in fields requiring precision, such as research, development, design, medical, and legal. Conversely, frequent job changes and changes blur your assets.\n\nThe most important criterion is whether your current organization can nurture your expertise. If so, becoming a master in your current position is better than changing jobs.",
+      "headline": "你将在专业、研究或技术领域成为专家。",
+      "body": "你是那种通过在某个领域深耕细作来取得成功的人。随着你深入钻研并积累专业知识，你的价值也会随之提升。\n\n这一特质在需要精确性的领域中尤为突出，例如研究、开发、设计、医疗和法律。相反，频繁跳槽和频繁的岗位变动会削弱你的核心竞争力。\n\n最重要的标准是，你所在的组织能否培养你的专业能力。如果可以，那么在现职岗位上精益求精，成为该领域的专家，要比频繁跳槽更好。",
       "patterns": [
-        "You are deeply immersed in one field.",
-        "You have strong pride in your expertise.",
-        "You hate organizational politics and chores."
+        "你对某个领域有着深入的钻研。",
+        "你对自己所掌握的专业知识深感自豪。",
+        "你讨厌组织内部的政治斗争和琐事。"
       ],
       "best_match": [
-        "Mentor",
-        "Deep"
+        "导师",
+        "深"
       ],
-      "best_reason": "Someone who understands depth and acknowledges your expertise.",
+      "best_reason": "一个懂得深层含义并认可你专业能力的人。",
       "challenging_match": [
-        "Radiator"
+        "散热器"
       ],
-      "challenging_reason": "Energy is consumed with people who communicate superficially.",
+      "challenging_reason": "与那些只进行肤浅交流的人打交道，会消耗精力。",
       "actions": [
-        "Set an 'expertise goal for this year' every year.",
-        "Create one channel to publicize your expertise externally.",
-        "Boldly reject chores."
+        "每年都要为自己设定一个“今年的专长目标”。",
+        "建立一个渠道，向外界展示您的专业知识。",
+        "大胆地拒绝家务。"
       ],
       "red_flags": [
-        "Are chores taking away time from your expertise?",
-        "Does the organization support your growth?"
+        "家务是否占用了你本该用于专业领域的时间？",
+        "该组织是否支持你的成长？"
       ]
     },
     "THE_ANCHOR": {
-      "headline": "Excellent at management, administration, and system building.",
-      "body": "You are good at laying the foundation of an organization. You are strong at creating processes and operating them stably.\n\nThis strength shines in organizations where structure is important, such as large corporations, public institutions, and manufacturing. Conversely, extremely fast startups can be frustrating.\n\nYour risk is becoming insensitive to change. You must consciously learn trends so you don't get alienated in the organization.",
+      "headline": "在管理、行政和系统建设方面表现出色。",
+      "body": "你擅长为组织打下基础。你擅长制定流程并确保其稳定运行。\n\n这一优势在重视组织架构的机构中尤为突出，例如大型企业、公共机构和制造业。相反，发展速度极快的初创企业可能会让你感到沮丧。\n\n你需要警惕的是对变化变得迟钝。必须有意识地关注行业趋势，以免在组织中被边缘化。",
       "patterns": [
-        "You are strong at creating and maintaining processes.",
-        "You build trust over a long time.",
-        "You feel resistance to rapid changes."
+        "你在制定和维护流程方面很在行。",
+        "信任是长期积累而成的。",
+        "你对快速的变化感到抗拒。"
       ],
       "best_match": [
-        "Pioneer",
-        "Challenger"
+        "先锋",
+        "挑战者"
       ],
-      "best_reason": "Someone who adds change on top of your stability.",
+      "best_reason": "一个能在你的稳定生活中增添些许变化的人。",
       "challenging_match": [
-        "Anchor"
+        "锚"
       ],
-      "challenging_reason": "If both are passive to change, the organization stagnates.",
+      "challenging_reason": "如果双方都对变革持消极态度，组织就会停滞不前。",
       "actions": [
-        "Learn one new trend every quarter.",
-        "Find a way to automate your process.",
-        "Intentionally ask for young colleagues' opinions."
+        "每季度学习一项新趋势。",
+        "设法实现流程自动化。",
+        "主动征求年轻同事的意见。"
       ],
       "red_flags": [
-        "Are you often saying 'we've always done it this way'?",
-        "Are you falling behind on new tools?"
+        "你是不是经常说“我们一直都是这么做的”？",
+        "你在新工具方面是否落后了？"
       ]
     },
     "THE_CULTIVATOR": {
-      "headline": "Suited for growing people — in education, planning, and HR.",
-      "body": "You are excellent at recognizing and nurturing people's potential. Roles like developing juniors or coordinating projects suit you.\n\nThis trait shines in education, HR, consulting, and planning. Conversely, you get tired in cold organizations that only demand results.\n\nYour risk is yielding results to others. Clearly record and appeal your contributions.",
+      "headline": "适合正在成长的人——无论是在教育、规划还是人力资源领域。",
+      "body": "你非常擅长发掘和培养他人的潜力。培养新人或协调项目等工作非常适合你。\n\n这一特质在教育、人力资源、咨询和规划等领域尤为突出。相反，在那些只追求结果、缺乏人情味的组织中，你会感到疲惫。\n\n你需要警惕的是将成果归功于他人。请明确记录并充分展示你的贡献。",
       "patterns": [
-        "You have a lot of interest in the growth of juniors/colleagues.",
-        "You soften the team atmosphere.",
-        "You undervalue your own achievements."
+        "你非常关注年轻员工/同事的成长。",
+        "你让团队氛围变得更加融洽。",
+        "你低估了自己的成就。"
       ],
       "best_match": [
-        "Mentor",
-        "Officer"
+        "导师",
+        "警官"
       ],
-      "best_reason": "Someone who acknowledges your contribution and grows together.",
+      "best_reason": "一个既能认可你的贡献，又能与你共同成长的人。",
       "challenging_match": [
-        "Survivor"
+        "幸存者"
       ],
-      "challenging_reason": "Value clashes occur with result-oriented people.",
+      "challenging_reason": "与注重结果的人之间会产生价值观冲突。",
       "actions": [
-        "Document your contributions once a month.",
-        "Clearly state your career goals to your boss.",
-        "Consciously mentor one person."
+        "每月记录一次你的贡献。",
+        "向你的上司明确表达你的职业目标。",
+        "有意识地指导一个人。"
       ],
       "red_flags": [
-        "Are others taking your achievements?",
-        "Are you postponing your own growth?"
+        "别人的功劳被抢走了吗？",
+        "你是否在拖延自己的成长？"
       ]
     },
     "THE_BLADE": {
-      "headline": "Fits places where principles matter, such as law, finance, military/police, and engineering.",
-      "body": "You are logical and quick to decide. You achieve the best results in environments with clear standards and principles.\n\nThis strength shines in law, finance, military/police, engineering, and medical fields. Conversely, you feel frustrated in organizations with ambiguous standards.\n\nYour risk is putting principles before people. The result may be right, but relationships can be damaged. Soft communication is needed.",
+      "headline": "适用于原则至关重要的领域，例如法律、金融、军事/警察和工程。",
+      "body": "你思维缜密，决策果断。在标准和原则明确的环境中，你能取得最佳成果。\n\n这一优势在法律、金融、军事/警务、工程和医疗等领域尤为突出。相反，在标准模糊的组织中，你会感到沮丧。\n\n你的风险在于将原则置于人之上。结果或许正确，但人际关系可能会因此受损。需要采取柔和的沟通方式。",
       "patterns": [
-        "You draw conclusions quickly.",
-        "You are good at finding logical loopholes.",
-        "You find emotional communication difficult."
+        "你下结论太快了。",
+        "你很擅长找出逻辑漏洞。",
+        "你觉得情感交流很困难。"
       ],
       "best_match": [
-        "Adapter",
-        "Keeper"
+        "调整",
+        "守门员"
       ],
-      "best_reason": "Someone who softly wraps your sharpness.",
+      "best_reason": "一个能温柔地包裹你锋芒的人。",
       "challenging_match": [
-        "Challenger"
+        "挑战者"
       ],
-      "challenging_reason": "Strong confrontations repeat, tiring the team.",
+      "challenging_reason": "激烈的对抗一再上演，让球队疲惫不堪。",
       "actions": [
-        "Check emotions once before concluding.",
-        "Have informal conversations with bosses/colleagues once a month.",
-        "Practice expressing your judgments softly."
+        "得出结论前，先冷静一下。",
+        "每月与上司/同事进行一次非正式交谈。",
+        "试着温和地表达你的看法。"
       ],
       "red_flags": [
-        "Is your conviction of 'I am right' hurting relationships?",
-        "Are colleagues reluctant to talk to you?"
+        "你那种“我才是对的”的信念是否正在损害人际关系？",
+        "同事们是否不愿与你交谈？"
       ]
     },
     "THE_GEM": {
-      "headline": "You stand out in design, art, and precision technology fields.",
-      "body": "You pursue perfection. Your obsession with detail creates your expertise.\n\nThis trait shines in design, art, editing, precision machining, and premium services. Conversely, you get tired in organizations that demand 'fast and sloppy'.\n\nYour risk is not finishing due to perfectionism. You need to practice releasing at 80%.",
+      "headline": "你在设计、艺术和精密技术领域表现突出。",
+      "body": "你追求完美。对细节的执着造就了你的专业素养。\n\n这一特质在设计、艺术、编辑、精密加工和高端服务领域中尤为突出。相反，在那些要求“快而马虎”的组织中，你会感到疲惫。\n\n你的风险在于因完美主义而无法完成任务。你需要练习在达到80%时就放手。",
       "patterns": [
-        "You obsess over details.",
-        "You can't release unless it's perfect.",
-        "You stress over low-quality results."
+        "你对细节非常执着。",
+        "除非做到完美，否则不能发布。",
+        "你为质量低下的结果而烦恼。"
       ],
       "best_match": [
-        "Deep",
-        "Mentor"
+        "深",
+        "导师"
       ],
-      "best_reason": "Someone who understands your perfectionism and is patient.",
+      "best_reason": "一个能理解你的完美主义，并且很有耐心的人。",
       "challenging_match": [
-        "Radiator"
+        "散热器"
       ],
-      "challenging_reason": "Methods clash head-on with speed-first people.",
+      "challenging_reason": "这些方法与“速度至上”的人产生了直接冲突。",
       "actions": [
-        "Practice 'this is good enough'.",
-        "Pick one perfect project and release it at 80%.",
-        "Agree on your standards with your boss in advance."
+        "践行“这样就够好了”的原则。",
+        "选一个完美的项目，以80%的完成度发布。",
+        "请提前与上司就标准达成一致。"
       ],
       "red_flags": [
-        "Are you missing schedules due to perfection?",
-        "Are you forcing your standards on the team?"
+        "你是否因为追求完美而错过了日程安排？",
+        "你是在强行将自己的标准强加给团队吗？"
       ]
     },
     "THE_DEEP": {
-      "headline": "Outstanding in strategic planning, analysis, and research fields.",
-      "body": "You have an excellent ability to draw the big picture. You have the power to see the structure beneath the surface.\n\nThis trait shines in strategic planning, research, consulting, and data analysis. Conversely, you feel frustrated in positions that only demand execution.\n\nYour risk is delayed execution due to falling into analysis. Teaming up with a strong execution partner maximizes synergy.",
+      "headline": "在战略规划、分析和研究领域表现突出。",
+      "body": "你具备出色的全局观，能够洞察表象之下的内在结构。\n\n这一特质在战略规划、研究、咨询和数据分析领域尤为突出。相反，在仅需执行工作的岗位上，你会感到沮丧。\n\n你的风险在于因过度分析而导致执行延迟。与一位执行力强的合作伙伴携手，能最大限度地发挥协同效应。",
       "patterns": [
-        "You draw the big picture first.",
-        "You spend time analyzing before executing.",
-        "You hate superficial tasks."
+        "先勾勒出整体框架。",
+        "你在执行之前会花时间进行分析。",
+        "你讨厌那些肤浅的工作。"
       ],
       "best_match": [
-        "Pioneer",
-        "Operator"
+        "先锋",
+        "运营商"
       ],
-      "best_reason": "Someone who turns your strategy into execution.",
+      "best_reason": "能将你的战略转化为行动的人。",
       "challenging_match": [
-        "Survivor"
+        "幸存者"
       ],
-      "challenging_reason": "You may clash with people demanding fast execution.",
+      "challenging_reason": "你可能会与那些要求迅速执行的人发生冲突。",
       "actions": [
-        "Start the first execution within 3 days after strategizing.",
-        "Find an execution-strong partner.",
-        "Set a 30% time limit on analysis."
+        "在制定策略后的3天内启动首次执行。",
+        "寻找一位执行力强的合作伙伴。",
+        "将分析时间限制在30%。"
       ],
       "red_flags": [
-        "Are you only analyzing and delaying execution?",
-        "Are you missing decision timing?"
+        "你是不是只顾分析，却一再拖延执行？",
+        "你是否错过了决策的时机？"
       ]
     },
     "THE_SPRING": {
-      "headline": "You quietly support the team and build trust.",
-      "body": "You are an essential core talent, though not flashy. You melt team conflicts and quietly solve problems.\n\nThis strength shines in operations, HR, customer support, and project management. Conversely, you are undervalued in sales organizations where self-PR is important.\n\nThe risk is not being recognized for your achievements. You need to practice actively appealing your contributions.",
+      "headline": "你默默支持团队，并建立信任。",
+      "body": "你是一位不可或缺的核心人才，尽管并不张扬。你能化解团队冲突，并默默解决问题。\n\n这一优势在运营、人力资源、客户支持和项目管理领域尤为突出。相反，在重视自我宣传的销售团队中，你的价值往往被低估。\n\n面临的风险是你的成就得不到认可。你需要主动展示自己的贡献。",
       "patterns": [
-        "You are the quiet problem solver of the team.",
-        "You don't show off your achievements well.",
-        "You are skilled at mediating conflicts."
+        "你是团队中那位默默无闻的难题解决者。",
+        "你不太会展示自己的成就。",
+        "你擅长调解冲突。"
       ],
       "best_match": [
-        "Pioneer",
-        "Blade"
+        "先锋",
+        "叶片"
       ],
-      "best_reason": "Someone who acknowledges and elevates your quiet support.",
+      "best_reason": "一个能认可并珍视你默默支持的人。",
       "challenging_match": [
-        "Radiator"
+        "散热器"
       ],
-      "challenging_reason": "In organizations that only notice flashy results, your presence disappears.",
+      "challenging_reason": "在那些只关注耀眼成果的组织里，你的存在感就会消失。",
       "actions": [
-        "Document your achievements once a month.",
-        "Speak up about your contributions once in a meeting.",
-        "Find a boss who recognizes you."
+        "每月记录一次你的成就。",
+        "在会议中，请主动谈谈你的贡献。",
+        "找一位能认可你的上司。"
       ],
       "red_flags": [
-        "Are your achievements being recorded as someone else's?",
-        "Are you being ignored for being quiet?"
+        "你的成就是否被记在了别人名下？",
+        "你是因为沉默而被忽视了吗？"
       ]
     }
   }

@@ -1,28 +1,28 @@
 {
-  "name": "Sword in the Dragon's Lair",
+  "name": "龙穴中的剑",
   "pillar": "庚辰",
-  "hero": "You're a sword kept in a dragon's lair. Hidden under solid earth most of the time — drawn only when the world needs a blade.",
+  "hero": "你是一把藏在龙穴里的剑。大部分时间都深埋在坚实的土地之下——只有当世界需要一把利剑时，才会被拔出。",
   "narrative": [
     "Your power doesn't announce itself. You can look unremarkable at a glance, and then at one decisive moment your weight shows. People say later, 'Wait — that person was that person?' In classical Saju, Geng-Jin is one of the four 魁罡 (Commander) pillars — among the strongest in the system.",
-    "You have clear principles, and you don't bend them easily. That firmness builds enormous trust in organizations — when everyone else is wavering, you aren't. You hold the center, quietly and unmistakably.",
-    "Your shadow is enduring too much, too long. A sword that stays sheathed for too long either explodes out when it shouldn't, or fails to draw when it should. People assume you're the one who's always fine — and then your sudden firmness catches them off guard.",
-    "A mature Geng-Jin knows when to sheath and when to draw. Generous most of the time, precise when it counts. Then your presence stops feeling intimidating and becomes the thing people rely on."
+    "你有着明确的原则，且不会轻易动摇。这种坚定在组织中赢得了极大的信任——当其他人都在动摇时，你却始终如一。你稳稳地守住核心，既沉稳又坚定。",
+    "你的阴影承受了太多，也持续得太久。一把太久未出鞘的剑，要么在不该出鞘时猛然出鞘，要么在该出鞘时却无法拔出。人们总以为你永远都很好——而你突然表现出的坚定，却让他们猝不及防。",
+    "成熟的“耿进”懂得何时收刀、何时出刀。平日里宽厚大度，关键时刻却精准果断。这样一来，你的存在就不再令人望而生畏，反而会成为人们所依赖的依靠。"
   ],
   "shadows": [
-    "Holding feelings in so long that your sudden decisiveness catches others off guard.",
-    "Following principles so closely that rules seem to matter more than people.",
-    "Forcing yourself to seem fine, and losing track of your own fatigue."
+    "将情感压抑了太久，以至于你突然表现出的果断让他人猝不及防。",
+    "对原则的遵循如此严格，以至于规则似乎比人更重要。",
+    "强迫自己表现得若无其事，却忽略了自己的疲惫。"
   ],
   "advice": [
-    "Once this week, say a small irritation out loud before it grows into a blow-up.",
-    "Before a hard call, ask: is this the principle talking, or is this me being tired?",
-    "Hand off one thing you usually solve yourself. Watch it run without you.",
-    "Tell one trusted person, 'It's been heavy lately.' That sentence sharpens the blade again."
+    "这周找个机会，在某件小事演变成大争执之前，试着把它说出来。",
+    "在做出艰难决定之前，先问问自己：这是原则在起作用，还是因为我太累了？",
+    "把一件你通常自己处理的事情交给别人。看着它在你不在场时照常运转。",
+    "对一位值得信赖的人说：“最近感觉压力很大。”这句话会让刀刃再次锋利起来。"
   ],
   "keywords": [
     "魁罡",
-    "hidden strength",
-    "principled center",
-    "decisive weight"
+    "隐藏的力量",
+    "坚持原则的中间派",
+    "决定性因素"
   ]
 }

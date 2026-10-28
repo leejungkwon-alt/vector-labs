@@ -1,29 +1,29 @@
 {
   "pillar": "丁亥",
-  "hero": "You're a candle floating on water. Swaying but never going out — a person of delicate balance.",
+  "hero": "你就像一支漂浮在水面上的蜡烛。随波摇曳却永不熄灭——是一个保持着微妙平衡的人。",
   "narrative": [
-    "You carry sensitivity and wisdom together. A candle on water always sways, but even in that swaying, it doesn't go out. Your sensitivity works the same way. You're easily moved, and that very movement is your depth.",
-    "You feel other people's emotions as if they were your own. You read someone's state without being told, notice the moment a room changes. That's rare. It's also exhausting. If you absorb every wave, your own stillness disappears.",
-    "Your shadow is being swept up by other people's tides. When their emotion is strong, you go with it — and sometimes you can't tell whether the feeling is yours or theirs. Standing on that wave, ask yourself once: 'Is this my wave, or theirs?'",
-    "A mature Ding-Hai keeps their own wave intact. Retain the sensitivity — but build a boundary so it doesn't all flow into someone else's sea. Then your light becomes a very particular kind: swaying, and never out."
+    "你兼具敏感与智慧。水上的蜡烛总是摇曳不定，但即便在摇曳中，它也不会熄灭。你的敏感也是如此。你很容易被触动，而这种触动本身，正是你的深度所在。",
+    "你会将他人的情绪感同身受，仿佛那些情绪就是你自己的。你无需他人告知就能读懂对方的心境，也能察觉房间氛围发生变化的瞬间。这种能力实属罕见，但也令人筋疲力尽。如果你吸收了每一股情绪的波动，你内心的宁静便会消失殆尽。",
+    "你的影子正被他人的情绪浪潮卷走。当他们的情绪高涨时，你便随波逐流——有时甚至分不清这种感受究竟是你的，还是他们的。站在那道浪潮之上，试着问自己一次：“这是我的浪潮，还是他们的？”",
+    "成熟的“丁海”会保持自己波浪的完整。保持这份敏锐——但要建立一道界限，以免一切都流向他人的海洋。这样，你的光便会成为一种非常独特的光：摇曳生姿，永不熄灭。"
   ],
   "shadows": [
-    "You can't tell other people's emotions from your own, so you carry both.",
-    "Sensitivity accumulates as fatigue until you stop feeling anything.",
-    "Without enough solitude, you lose your own color."
+    "你无法将他人的情绪与自己的区分开来，因此你同时怀揣着这两种情绪。",
+    "敏感性会像疲劳一样逐渐累积，直到你再也感觉不到任何东西。",
+    "如果缺乏足够的独处时光，你就会失去自己的本色。"
   ],
   "advice": [
-    "When emotions sway, ask once: 'Is this my wave, or theirs?'",
-    "This week, secure at least one full hour of complete solitude. That's your recovery.",
-    "Give yourself permission not to absorb every emotion around you.",
-    "Sensitivity is a gift — and keeping it means regularly emptying yourself."
+    "当情绪波动时，试着问自己一次：“这是我的情绪波动，还是别人的？”",
+    "本周，请确保至少有一整小时完全独处的时间。这就是你的恢复时间。",
+    "允许自己不必吸收周围的每一种情绪。",
+    "敏感是一种天赋——要保持这种天赋，就必须定期将内心清空。"
   ],
   "keywords": [
-    "delicate balance",
-    "light on water",
-    "sensitive wisdom",
-    "own wave"
+    "微妙的平衡",
+    "水面上的光",
+    "敏锐的智慧",
+    "自己的浪潮"
   ],
-  "name": "Candle on Water",
+  "name": "水上的蜡烛",
   "name_traditional": ""
 }

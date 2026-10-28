@@ -1,28 +1,28 @@
 {
-  "name": "Vine on Dry Meadow",
+  "name": "干草地上的藤蔓",
   "pillar": "乙未",
-  "hero": "You're a vine spreading across a dry meadow. Even on barren ground, you survive — a person of remarkable vitality.",
+  "hero": "你就像一株蔓延在干涸草地上的藤蔓。即使在贫瘠的土地上，你也能生存下来——你是一个充满生命力的人。",
   "narrative": [
     "You're the person of endurance and life force. 乙未 is soft vine on dry summer earth. A vine on a dry meadow — the ground is poor, but the vine survives. Your life force is like that. It doesn't die completely in any environment. It puts down roots and grows again.",
-    "Your strength is persistent life force. You don't give up in hard situations. Even when others fall over in exhaustion, you slowly grow again. And it's not simple patience — it's flexibility. A vine goes around a rock, and in a drought roots deeper. So do you: you find the way to survive that fits the situation.",
-    "Your shadow is enduring too long. A vine on dry meadow survives, but if the environment lasts too long, it eventually wears out. You tell yourself 'a bit longer will be fine' in bad situations and keep enduring. And your own growth is paused the whole time.",
-    "A mature Yi-Wei knows the difference between enduring and moving. Enduring hard environments, and moving on when the environment is killing you. Then your life force isn't just patience — it's wise survival."
+    "你的力量源于永不言弃的生命力。面对困境，你绝不放弃。即使当他人因精疲力竭而倒下时，你依然能缓慢地重新生长。这不仅仅是简单的耐心——更是灵活应变。藤蔓会绕过岩石，在干旱时将根系扎得更深。你也是如此：你会根据具体情况，找到适合自己的生存之道。",
+    "你的忍耐持续得太久了。干涸草地上的藤蔓虽能存活，但如果这种环境持续太久，它终究会耗尽生命力。每当身处困境时，你总告诉自己“再坚持一会儿就好了”，于是继续忍耐。而在此期间，你自身的成长却一直处于停滞状态。",
+    "一个成熟的易维懂得“坚持”与“离开”的区别。在艰难的环境中坚持，而在环境正在摧毁你时果断离开。这样，你的生命力就不仅仅是耐心——而是明智的生存之道。"
   ],
   "shadows": [
-    "Telling yourself 'a bit longer' in bad environments and enduring too long.",
-    "Such strong life force that you can't admit you're tired.",
-    "Staying put in an environment you could change, out of familiarity."
+    "在恶劣的环境中告诉自己“再坚持一会儿”，从而坚持得太久。",
+    "生命力如此旺盛，以至于你无法承认自己累了。",
+    "仅仅因为习惯，就固守在一个本可以改变的环境中。"
   ],
   "advice": [
-    "Ask this week: does the environment I'm in give me life, or take it?",
-    "Acknowledge your fatigue. Enduring takes energy too.",
-    "Check whether there's an environment you could change but haven't.",
-    "Spend your vitality on your own growth, not only on others."
+    "本周思考：我所处的环境是赋予我生命，还是剥夺我的生命？",
+    "承认自己的疲惫。坚持下去同样需要精力。",
+    "检查一下是否有某个环境变量可以修改但尚未修改。",
+    "把你的精力花在自身的成长上，而不仅仅是花在别人身上。"
   ],
   "keywords": [
-    "dry meadow",
-    "persistent life force",
-    "flexible endurance",
-    "changing environments"
+    "干草地",
+    "持久的生命力",
+    "灵活的耐力",
+    "不断变化的环境"
   ]
 }
