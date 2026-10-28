@@ -120,9 +120,14 @@ def _protect(text, modes, sent):
 
 
 def _restore(text, sent):
-    rev = {v: k.split(":", 1)[1] for k, v in sent.items()}
-    return SENTINEL_RE.sub(lambda m: rev.get(m.group(0), m.group(0)), text)
-
+    def _sub(m):
+        tok = m.group(0)
+        for k, v in sent.items():
+            if v == tok:
+                prefix, val = k.split(":", 1)
+                return f"{{{val}}}" if prefix == "ph" else val
+        return tok
+    return SENTINEL_RE.sub(_sub, text)
 
 def _lint(en, es, path):
     w = []

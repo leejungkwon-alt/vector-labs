@@ -1,69 +1,69 @@
 {
   "TIMING": {
     "ten_god_labels": {
-      "TEN_GOD_FRIEND": "Energy of Companionship",
-      "TEN_GOD_ROB_WEALTH": "Competitive Energy",
-      "TEN_GOD_EATING_GOD": "Energy of Enjoyment",
-      "TEN_GOD_HURTING_OFFICER": "Expressive Energy",
-      "TEN_GOD_INDIRECT_WEALTH": "Opportunity-Seizing Energy",
-      "TEN_GOD_DIRECT_WEALTH": "Managing Energy",
+      "TEN_GOD_FRIEND": "La energía de la compañía",
+      "TEN_GOD_ROB_WEALTH": "Energía competitiva",
+      "TEN_GOD_EATING_GOD": "La energía del disfrute",
+      "TEN_GOD_HURTING_OFFICER": "Energía expresiva",
+      "TEN_GOD_INDIRECT_WEALTH": "La energía para aprovechar las oportunidades",
+      "TEN_GOD_DIRECT_WEALTH": "Gestión de la energía",
       "TEN_GOD_SEVEN_KILLINGS": "Breakthrough Energy",
-      "TEN_GOD_DIRECT_OFFICER": "Energy of Order",
-      "TEN_GOD_INDIRECT_RESOURCE": "Intuitive Energy",
-      "TEN_GOD_DIRECT_RESOURCE": "Energy of Learning"
+      "TEN_GOD_DIRECT_OFFICER": "Energía del orden",
+      "TEN_GOD_INDIRECT_RESOURCE": "Energía intuitiva",
+      "TEN_GOD_DIRECT_RESOURCE": "La energía del aprendizaje"
     },
     "grade_labels": {
       "PEAK": "Peak",
       "FAVORABLE": "Favorable",
-      "NEUTRAL": "Neutral",
-      "CAUTION": "Caution",
-      "CHALLENGING": "Challenging"
+      "NEUTRAL": "Neutro",
+      "CAUTION": "Precaución",
+      "CHALLENGING": "Exigente"
     },
     "daewoon_narratives": {
-      "favorable": "You are currently in a major life chapter ruled by {pillar}, from age {start_age} to {end_age}. This period carries a strong tailwind that amplifies your natural rhythm. {section_angle}",
-      "neutral": "You are currently in a major life chapter ruled by {pillar}, from age {start_age} to {end_age}. This period mixes tailwinds and headwinds, so the same situation can feel very different depending on your choices. {section_angle}",
-      "caution": "You are currently in a major life chapter ruled by {pillar}, from age {start_age} to {end_age}. This is a period when you need to take especially careful care of yourself. {section_angle}"
+      "favorable": "Actualmente te encuentras en una etapa importante de tu vida regida por {pillar}, desde los {start_age} hasta los {end_age}. Este periodo te proporciona un fuerte impulso que potencia tu ritmo natural. {section_angle}",
+      "neutral": "Actualmente te encuentras en una etapa importante de tu vida regida por {pillar}, desde los {start_age} hasta los {end_age}. Este periodo combina momentos favorables y adversos, por lo que una misma situación puede percibirse de forma muy diferente en función de tus decisiones. {section_angle}",
+      "caution": "Actualmente te encuentras en una etapa importante de tu vida regida por {pillar}, desde los {start_age} hasta los {end_age}. Se trata de un periodo en el que debes cuidarte con especial atención. {section_angle}"
     },
     "section_daewoon_angle": {
       "love": {
-        "favorable": "In relationships, your heart opens naturally, and it's easy to match the rhythm with your partner. The better the flow, the more you should ask for your partner's pace first. That ease makes the relationship deeper.",
-        "neutral": "In relationships, the balance between approaching and stepping back is important. When differences surface, ask yourself what you want to confirm in that scene.",
-        "caution": "In relationships, the same signal is easily interpreted differently. Take a breath before important conversations, and choose 'confirmation' over 'conviction'."
+        "favorable": "En las relaciones, el corazón se abre de forma natural y resulta fácil sincronizarse con tu pareja. Cuanto mejor sea la química, más debes tener en cuenta el ritmo de tu pareja. Esa naturalidad hace que la relación sea más profunda.",
+        "neutral": "En las relaciones, es importante encontrar el equilibrio entre acercarse y dar un paso atrás. Cuando surjan diferencias, pregúntate qué es lo que quieres aclarar en esa situación.",
+        "caution": "En las relaciones, una misma señal puede interpretarse de formas muy diferentes. Respira hondo antes de las conversaciones importantes y opta por la «confirmación» en lugar de la «convicción»."
       },
       "career": {
-        "favorable": "At work, your judgment operates relatively clearly. It's a good flow to bring out postponed proposals or responsibilities.",
-        "neutral": "At work, it's a flow asking for a balance between expansion and maintenance. Decide for yourself whether to put more time into new attempts or existing routines.",
-        "caution": "At work, energy easily scatters, so rushing decisions increases fatigue. In this period, it's more effective to decide 'what not to do' first."
+        "favorable": "En el trabajo, tu capacidad de juicio funciona con relativa claridad. Es un buen momento para sacar adelante propuestas o responsabilidades que habías pospuesto.",
+        "neutral": "En el trabajo, se trata de un proceso que exige un equilibrio entre la expansión y el mantenimiento. Decide por ti mismo si dedicas más tiempo a nuevos proyectos o a las rutinas ya establecidas.",
+        "caution": "En el trabajo, la energía se dispersa con facilidad, por lo que tomar decisiones precipitadas aumenta el cansancio. En este periodo, resulta más eficaz decidir primero «qué no hay que hacer»."
       },
       "wealth": {
-        "favorable": "In wealth, growing what you already have suits you well. The accuracy of management creates results rather than big adventures.",
-        "neutral": "In wealth, the rhythm of income and expenditure easily fluctuates together. The habit of checking once more before big spending makes a difference.",
-        "caution": "In wealth, there may be moments when judgment blurs. Avoid impulsive decisions and leave a day's margin before paying."
+        "favorable": "En lo que respecta a la riqueza, te conviene más hacer crecer lo que ya tienes. La precisión en la gestión es lo que da resultados, más que las grandes aventuras.",
+        "neutral": "En lo que respecta al patrimonio, los ingresos y los gastos tienden a fluctuar al unísono. El hábito de pensárselo dos veces antes de realizar un gasto importante marca la diferencia.",
+        "caution": "En cuestiones de dinero, puede haber momentos en los que el juicio se vea nublado. Evita las decisiones impulsivas y deja un margen de un día antes de pagar."
       }
     },
-    "year_narrative": "The big energy of this year ({target_year}) is '{ten_god_label}'. Look at how this energy manifests in your {domain_kr} along with the flow below.",
+    "year_narrative": "La gran energía de este año ({target_year}) es «{ten_god_label}». Observa cómo se manifiesta esta energía en tu {domain_kr} junto con el flujo que se muestra a continuación.",
     "domain_labels": {
-      "love": "relationships",
-      "career": "work",
-      "wealth": "wealth"
+      "love": "relaciones",
+      "career": "trabajo",
+      "wealth": "riqueza"
     },
-    "month_opportunity_narrative": "{month} ({pillar}) is a month where a relatively natural door opens for you among this year's flow. {section_angle}",
-    "month_caution_narrative": "{month} ({pillar}) is a month where judgment requires special caution among this year's flow. {section_angle}",
+    "month_opportunity_narrative": "{month} ({pillar}) es un mes en el que se te abre una puerta relativamente natural en el contexto de la dinámica de este año. {section_angle}",
+    "month_caution_narrative": "{month} ({pillar}) es un mes en el que hay que actuar con especial cautela a la hora de tomar decisiones, dentro del contexto de este año. {section_angle}",
     "section_month_angle": {
       "love": {
-        "opportunity": "Scenes where hearts connect in relationships may increase. The better the flow, the more the practice of listening to your partner to the end creates depth.",
-        "caution": "It's a month where misunderstandings easily pile up in relationships. Check your partner's intention once more before deciding."
+        "opportunity": "Pueden aumentar las situaciones en las que los corazones se conectan en las relaciones. Cuanto mejor sea la comunicación, más profundidad aportará el hecho de escuchar a tu pareja hasta el final.",
+        "caution": "Es un mes en el que los malentendidos se acumulan fácilmente en las relaciones. Comprueba una vez más las intenciones de tu pareja antes de tomar una decisión."
       },
       "career": {
-        "opportunity": "It's a month suitable for attempts like proposals, collaborations, and interviews at work.",
-        "caution": "It's a month where emotional exhaustion can grow at work. Postpone important decisions to a day when you are in good condition."
+        "opportunity": "Es un mes ideal para iniciativas como propuestas, colaboraciones y entrevistas de trabajo.",
+        "caution": "Es un mes en el que el agotamiento emocional puede ir en aumento en el trabajo. Deja las decisiones importantes para un día en el que te encuentres en plena forma."
       },
       "wealth": {
-        "opportunity": "It's a month favorable for management, organization, and contracts in wealth. It's good to put already planned tasks into action.",
-        "caution": "It's a month where you are easily shaken by impulsive judgment in wealth. Postpone big spending by a day."
+        "opportunity": "Es un mes propicio para la gestión, la organización y los contratos relacionados con el patrimonio. Es recomendable poner en práctica las tareas ya planificadas.",
+        "caution": "Es un mes en el que te dejas llevar fácilmente por decisiones impulsivas en lo que respecta al dinero. Aplaza un día cualquier gasto importante."
       }
     },
-    "no_daewoon": "Your major life chapter is still taking shape, so this reading focuses on this year's momentum and this month's energy.",
-    "disclaimer": "Note: This timing interpretation is not a deterministic prediction, but a coaching perspective to read the current flow. Life's choices are always yours."
+    "no_daewoon": "La etapa más importante de tu vida aún se está definiendo, por lo que esta lectura se centra en el impulso de este año y en la energía de este mes.",
+    "disclaimer": "Nota: Esta interpretación temporal no es una predicción determinista, sino una perspectiva de orientación para interpretar la corriente actual. Las decisiones en la vida siempre son tuyas."
   }
 }

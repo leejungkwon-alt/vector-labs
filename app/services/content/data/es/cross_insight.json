@@ -17,36 +17,36 @@
   },
   "AXES": {
     "FREEDOM_BOND": {
-      "pos": "Togetherness",
-      "neg": "Solitude"
+      "pos": "Unidad",
+      "neg": "Soledad"
     },
     "RISK_SAFETY": {
-      "pos": "New Challenges",
-      "neg": "Stable Foundation"
+      "pos": "Nuevos retos",
+      "neg": "Una base sólida"
     },
     "DEPTH_BREADTH": {
-      "pos": "Deep Dive",
-      "neg": "Broad Experience"
+      "pos": "Deep Buceo",
+      "neg": "Amplia experiencia"
     },
     "STRUCTURE_FLOW": {
-      "pos": "Set Rules",
+      "pos": "Establecer normas",
       "neg": "Impromptu Flow"
     },
     "EXPRESSION_RESTRAINT": {
-      "pos": "Expression",
-      "neg": "Restraint"
+      "pos": "Expresión",
+      "neg": "Moderación"
     },
     "COMPETITION_COLLABORATION": {
-      "pos": "Compete to Win",
-      "neg": "Collaborate Together"
+      "pos": "Compite para ganar",
+      "neg": "Colaboremos juntos"
     },
     "SPEED_PATIENCE": {
-      "pos": "Move Fast",
-      "neg": "Take it Slow"
+      "pos": "Actúa con rapidez",
+      "neg": "Tómatelo con calma"
     },
     "SELF_OTHERS": {
-      "pos": "Focus on Self",
-      "neg": "Focus on Others"
+      "pos": "Centrarse en uno mismo",
+      "neg": "Centrarse en los demás"
     }
   },
   "MODE_AXES": {
@@ -107,67 +107,67 @@
       "FREEDOM_BOND": -0.4
     }
   },
-  "INTRO_TEMPLATE": "In relationships, you live as a '{bond_label}' leaning on each other, and at work, you live as a '{work_label}' moving toward your goals. You tend to accept money naturally as it flows rather than obsessing over it.",
+  "INTRO_TEMPLATE": "En las relaciones, vivís como un «{bond_label}», apoyándoos mutuamente, y en el trabajo, vivís como un «{work_label}», avanzando hacia vuestros objetivos. Tended a aceptar el dinero con naturalidad, tal y como fluye, en lugar de obsesionaros con él.",
   "ANGLES": {
     "FREEDOM_BOND": {
-      "love": "So a relationship with 'closeness but with separate rooms' suits you well. Conversely, when this is demanded all at once (e.g., business partners dating), stating boundaries first is the secret to making it last.",
-      "career": "So you need both 'time to focus entirely alone' and 'time to sync with others'. If either is lacking, you easily get tired or lethargic.",
-      "wealth": "So in wealth, it's good to mix 'my decision' and 'shared decision'. Decide big things alone, and share execution with someone you trust."
+      "love": "Así pues, una relación «cercana, pero con habitaciones separadas» te viene muy bien. Por el contrario, cuando esto se exige de golpe (por ejemplo, cuando dos socios de trabajo salen juntos), establecer los límites desde el principio es el secreto para que la relación dure.",
+      "career": "Así que necesitas tanto «tiempo para concentrarte por tu cuenta» como «tiempo para conectar con los demás». Si te falta alguno de los dos, te cansas o te sientes apático con facilidad.",
+      "wealth": "Por eso, en lo que respecta a la gestión del patrimonio, es recomendable combinar «mis decisiones» con «decisiones compartidas». Decide las cuestiones importantes por tu cuenta y comparte la ejecución con alguien en quien confíes."
     },
     "RISK_SAFETY": {
-      "love": "So you are attracted to stable people, but get frustrated if it's too stable. Continuously creating small novelties (travel, new hobbies) in the relationship makes it last.",
-      "career": "So you waver between challenge and stability. Before a big decision, check 'Do I have a safety net right now?'. With a safety net, challenges become much lighter.",
-      "wealth": "So in wealth, 'frequent small experiments' suit you better than 'one big bet'. Move only within a range you can afford to lose."
+      "love": "Así que te atraen las personas estables, pero te frustra que sean demasiado estables. Introducir continuamente pequeñas novedades (viajes, nuevas aficiones) en la relación hace que esta perdure.",
+      "career": "Así que te debates entre el reto y la estabilidad. Antes de tomar una decisión importante, pregúntate: «¿Tengo una red de seguridad en este momento?». Con una red de seguridad, los retos se vuelven mucho más llevaderos.",
+      "wealth": "Por lo tanto, en lo que respecta al patrimonio, te conviene más realizar «pequeños experimentos frecuentes» que «una gran apuesta». Muévete solo dentro de un margen que puedas permitirte perder."
     },
     "DEPTH_BREADTH": {
-      "love": "So you waver between 'one person you know deeply' and 'many you meet lightly'. Whichever it is, check once in a while where you are putting your energy.",
-      "career": "So you must distinguish between when to dig one deep well and when to cross many fields. Ask yourself which is right for you now.",
-      "wealth": "So the balance between 'focused investment' and 'diversified investment' is important. Either way, 100% concentration on one side is dangerous."
+      "love": "Así que te debates entre «una persona a la que conoces a fondo» y «muchas personas con las que tienes un contacto superficial». Sea cual sea el caso, comprueba de vez en cuando en qué estás invirtiendo tu energía.",
+      "career": "Así que debes distinguir entre cuándo cavar un pozo profundo y cuándo atravesar muchos campos. Pregúntate qué es lo más adecuado para ti en este momento.",
+      "wealth": "Por eso es importante encontrar el equilibrio entre la «inversión centrada» y la «inversión diversificada». En cualquier caso, concentrarse al 100 % en una sola opción es peligroso."
     },
     "STRUCTURE_FLOW": {
-      "love": "So you feel comfortable setting rules in a relationship, but it gets frustrating if too tight. Set 'one thing to keep, one thing to leave free'.",
-      "career": "So you are strong in structured environments, but get tired if flexibility disappears. Intentionally leave some 'spontaneity' within your routine.",
-      "wealth": "So 'structure' like automatic savings saves you. If you have a lot of impulse spending, creating structure comes first."
+      "love": "Así que te sientes cómodo estableciendo normas en una relación, pero te resulta frustrante si son demasiado estrictas. Establece la regla de «una cosa que hay que mantener y otra que hay que dejar libre».",
+      "career": "Así que te desenvuelves bien en entornos estructurados, pero te cansas si desaparece la flexibilidad. Deja intencionadamente un poco de «espontaneidad» en tu rutina.",
+      "wealth": "Así pues, una «estructura» como el ahorro automático te ayuda a ahorrar. Si sueles hacer muchos gastos impulsivos, lo primero es crear una estructura."
     },
     "EXPRESSION_RESTRAINT": {
-      "love": "So you want to express your feelings, but if you miss the timing, misunderstandings pile up. Say out loud 'what emotion I am feeling' once a day.",
-      "career": "So you have a lot you want to say. Just remember, expression can hurt relationships if too strong. 'Clear content, soft tone'.",
-      "wealth": "So in wealth, 'the urge to splurge' and 'the urge to hold back' clash. A rule to wait a day before big spending is effective."
+      "love": "Así que quieres expresar tus sentimientos, pero si no lo haces en el momento adecuado, se acumulan los malentendidos. Di en voz alta «qué emoción estoy sintiendo» una vez al día.",
+      "career": "Así que tienes muchas cosas que decir. Solo recuerda que, si te expresas con demasiada intensidad, puedes dañar las relaciones. «Contenido claro, tono suave».",
+      "wealth": "Así pues, en lo que respecta a la riqueza, «las ganas de derrochar» y «las ganas de contenerse» entran en conflicto. Una regla eficaz es esperar un día antes de realizar un gasto importante."
     },
     "COMPETITION_COLLABORATION": {
-      "love": "So you like relationships where you stimulate each other, but if excessive it becomes a battle of attrition. Distinguish between 'winning conversations' and 'solving conversations together'.",
-      "career": "So the balance between competition and collaboration is key. Decide clearly who to compete with and who to collaborate with to save energy.",
-      "wealth": "So in wealth, 'keeping my pace' lasts longer than 'ahead of others'. Comparison clouds judgment."
+      "love": "Así que te gustan las relaciones en las que os estimuláis mutuamente, pero si se lleva al extremo, se convierte en una guerra de desgaste. Distingue entre «conversaciones para ganar» y «conversaciones para resolver juntos».",
+      "career": "Por eso, el equilibrio entre la competencia y la colaboración es fundamental. Hay que decidir claramente con quién competir y con quién colaborar para ahorrar energía.",
+      "wealth": "Así pues, en lo que respecta a la riqueza, «mantener mi ritmo» dura más que «adelantarme a los demás». Las comparaciones nublan el juicio."
     },
     "SPEED_PATIENCE": {
-      "love": "So you want the relationship to deepen fast, but everyone has a different pace. Asking for your partner's pace builds trust.",
-      "career": "So you want fast results, but distinguish between work that needs to 'ripen' and work that needs to 'be released now'.",
-      "wealth": "So in wealth, 'fast returns' and 'growing slowly' clash. Mixing the two and rolling them is safest."
+      "love": "Así que quieres que la relación se consolide rápidamente, pero cada uno tiene su propio ritmo. Preguntarle a tu pareja cuál es su ritmo fomenta la confianza.",
+      "career": "Así que quieres resultados rápidos, pero distingues entre el trabajo que necesita «madurar» y el que hay que «publicar ya».",
+      "wealth": "Así pues, en materia de patrimonio, los «rendimientos rápidos» y el «crecimiento lento» entran en conflicto. Lo más seguro es combinar ambos enfoques y alternarlos."
     },
     "SELF_OTHERS": {
-      "love": "So you take care of your partner but lose track of your own feelings. Saying 'how I am right now' first makes the relationship last longer.",
-      "career": "So you help others but lose track of your own evaluation. Practice recording and appealing your achievements.",
-      "wealth": "So in wealth, separate 'giving expenditure' and 'saving for me'. Both must exist to last."
+      "love": "Así que te preocupas por tu pareja, pero te olvidas de tus propios sentimientos. Decir primero «cómo me siento ahora mismo» hace que la relación dure más tiempo.",
+      "career": "Así que ayudas a los demás, pero pierdes de vista tu propia valoración. Intenta anotar y destacar tus logros.",
+      "wealth": "Por eso, en lo que respecta al patrimonio, hay que diferenciar entre «gastos destinados a donaciones» y «ahorro para mí». Ambos deben coexistir para que el patrimonio perdure."
     }
   },
   "BALANCED": {
-    "intro": "In relationships, you are a '{bond_label}', at work a '{work_label}', and you treat money like a '{money_label}'.",
-    "body": "These three form a balance without major clashes. Having no strongly protruding axis means, conversely, that there is a lot of room for you to choose. Decide for yourself which axis to put more weight on now.",
+    "intro": "En las relaciones, eres un «{bond_label}», en el trabajo un «{work_label}» y gestionas el dinero como un «{money_label}».",
+    "body": "Estos tres elementos crean un equilibrio sin grandes contrastes. El hecho de que no haya ningún eje que destaque especialmente significa, por el contrario, que tienes mucho margen para elegir. Decide por ti mismo a qué eje quieres dar más importancia ahora.",
     "angle": {
-      "love": "In relationships, just asking for your partner's rhythm once in a while makes the balance even firmer.",
-      "career": "At work, distinguish between 'what I want to do' and 'what is needed right now'.",
-      "wealth": "In wealth, organizing the ratio of saving and spending once puts your mind at ease."
+      "love": "En las relaciones, el simple hecho de preguntar de vez en cuando por el ritmo de tu pareja hace que el equilibrio sea aún más sólido.",
+      "career": "En el trabajo, distingue entre «lo que quiero hacer» y «lo que hace falta hacer ahora mismo».",
+      "wealth": "En lo que respecta a la gestión del patrimonio, definir de una vez por todas la proporción entre ahorro y gasto te da tranquilidad."
     }
   },
-  "CLOSING_TEMPLATE": "When these three are demanded all at once (e.g., dating a business partner, family business), saying 'which axis I am standing on right now' first is the secret to making it last.",
-  "DISCLAIMER": "Note: This combination interpretation is not a deterministic prediction, but a reading of where the tendencies of the three domains meet from a coaching perspective. Life's choices are always yours.",
+  "CLOSING_TEMPLATE": "Cuando se exigen estas tres cosas a la vez (por ejemplo, salir con un socio de negocios o en el caso de una empresa familiar), la clave para que la relación dure es decir primero «en qué eje me encuentro ahora mismo».",
+  "DISCLAIMER": "Nota: Esta interpretación combinada no es una predicción determinista, sino una lectura de cómo se entrecruzan las tendencias de los tres ámbitos desde una perspectiva de coaching. Las decisiones sobre tu vida siempre te corresponden a ti.",
   "MODE_SECTION_LABEL": {
-    "bond": "Relationship",
-    "work": "Work",
-    "money": "Money"
+    "bond": "Relación",
+    "work": "Trabajo",
+    "money": "Dinero"
   },
-  "COLLISION_SENTENCE": "You are wavering between the '{a_mode_label}'s '{a_label}' and the {b_mode_label}'s '{b_label}'.",
-  "COLLISION_2_SENTENCE": "Add to that the wavering between the {a_mode_label}'s '{a_label}' and the {b_mode_label}'s '{b_label}'.",
-  "PULL_SENTENCE": "On top of that, your mind leans toward the {mode_label}'s '{label}'.",
-  "PULL_2_SENTENCE": "And it also leans toward the {mode_label}'s '{label}'."
+  "COLLISION_SENTENCE": "Estás dudando entre los modelos «{a_mode_label}» y «{a_label}», y los modelos «{b_mode_label}» y «{b_label}».",
+  "COLLISION_2_SENTENCE": "A esto hay que añadir la indecisión entre el «{a_label}» del {a_mode_label} y el «{b_label}» del {b_mode_label}.",
+  "PULL_SENTENCE": "Además, te inclinas más por el «{label}» que por el «{mode_label}».",
+  "PULL_2_SENTENCE": "Y también se inclina hacia el «{label}» del {mode_label}."
 }

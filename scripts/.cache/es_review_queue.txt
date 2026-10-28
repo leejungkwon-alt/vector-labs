@@ -124,3 +124,15 @@ ES: ¿Te has perdido alguna oportunidad mientras realizabas el análisis?
 EN: Have you suffered losses from friends' tricks?
 ES: ¿Has sufrido pérdidas por las travesuras de tus amigos?
 
+
+=== daily.json ===
+[DAILY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[2].body]
+EN: Focusing on simple, tangible responsibilities will help you feel anchored and accomplished today. Review your priorities methodically and clear away minor pending obligations before starting new ones.
+ES: Centrarte en responsabilidades sencillas y concretas te ayudará a sentirte seguro y a sentir que has logrado algo hoy. Revisa tus prioridades de forma metódica y resuelve las pequeñas obligaciones pen
+
+
+=== monthly.json ===
+[MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[0].headline]
+EN: Build long-term equity through rigorous monthly discipline.
+ES: Genera patrimonio a largo plazo mediante una rigurosa disciplina mensual.
+
