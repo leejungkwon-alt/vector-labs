@@ -32,7 +32,7 @@ def _years_months_from_days(delta_days: float) -> tuple[int, int, float]:
     return years_int, months_int, raw_years
 
 
-def calculate_daewoon(utc_instant, gender, year_stem, solar_year, month_branch_idx):
+def calculate_daewoon(utc_instant, gender, year_stem, solar_year, month_branch_idx, lang="ko"):
     utc_instant = _normalize_utc(utc_instant)
 
     # 화이트리스트: 스키마를 우회하는 호출(스크립트, telegram, 시각화)에서
@@ -81,10 +81,17 @@ def calculate_daewoon(utc_instant, gender, year_stem, solar_year, month_branch_i
             "pillar": pillar,
         })
 
-    # 표시 문자열: 언어 중립 데이터(data/{lang}/daewoon.json). 기본 "ko".
-    try:
-        _daewoon_pack = load_pack("ko", "daewoon")
-    except KeyError:
+    # 표시 문자열: 언어 중립 데이터(data/{lang}/daewoon.json). 폴백 체인: lang → en → ko → dict.
+    _daewoon_pack = None
+    for _lang in (lang, "en", "ko"):
+        if not _lang:
+            continue
+        try:
+            _daewoon_pack = load_pack(_lang, "daewoon")
+            break
+        except KeyError:
+            continue
+    if _daewoon_pack is None:
         _daewoon_pack = {
             "DISPLAY_TPL": "{years}y {months}m",
             "CORRECTION_TPL": " (corrected to start age {start_age})",
