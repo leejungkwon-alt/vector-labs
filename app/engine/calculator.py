@@ -23,8 +23,7 @@ def calculate_saju(
     target_year=None,
     dst_fold=None,
     birth_location=None,
-    use_current_solar_year=False,
-):
+    use_current_solar_year=False, lang="ko"):
     # ---- 연령 확인 ----
     validate_age(birth_date)
 
@@ -82,6 +81,7 @@ def calculate_saju(
         year_stem=year_pillar[0],
         solar_year=solar_year,
         month_branch_idx=month_branch_idx,
+        lang=lang,
     )
 
     day_stem = day_pillar[0]
