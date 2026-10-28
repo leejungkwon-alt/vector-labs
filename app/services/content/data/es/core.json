@@ -185,7 +185,7 @@
       "tagline": "Las habitaciones se calientan con tu sola presencia.",
       "symbol": "☀",
       "color": "#E85D2F",
-      "element": "Cuatro",
+      "element": "Fuego",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "Tienes la energía de un protagonista, pero también albergas un fuego interior inquieto.",
@@ -273,7 +273,7 @@
       "tagline": "No eres una hoguera. Eres una linterna.",
       "symbol": "✦",
       "color": "#C2461F",
-      "element": "Cuatro",
+      "element": "Fuego",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "Ardes con constancia y ardes en soledad; y eso no es soledad, es arte.",

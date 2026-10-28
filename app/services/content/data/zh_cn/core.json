@@ -5,7 +5,7 @@
       "tagline": "无论土壤是否准备好，你都会向上生长。",
       "symbol": "↟",
       "color": "#2F7A3F",
-      "element": "木材",
+      "element": "木",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "你生来就是领头人。即使无人追随，你也会继续前行。",
@@ -95,7 +95,7 @@
       "tagline": "你学会了屈服，这样才不会被折断。",
       "symbol": "⟡",
       "color": "#5FAF7A",
-      "element": "木材",
+      "element": "木",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "你要靠察言观色、顺势而为才能生存下去。",
@@ -185,7 +185,7 @@
       "tagline": "你的存在本身就能让房间变得温暖。",
       "symbol": "☀",
       "color": "#E85D2F",
-      "element": "四",
+      "element": "火",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "你干劲十足。你自身的势头既是你的动力，也是你的风险。",
@@ -275,7 +275,7 @@
       "tagline": "你不是篝火，而是灯笼。",
       "symbol": "✦",
       "color": "#C2461F",
-      "element": "四",
+      "element": "火",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "你稳稳地燃烧着，独自燃烧——这并非孤独，而是匠心。",
@@ -365,7 +365,7 @@
       "tagline": "你是别人立足的根基。",
       "symbol": "▣",
       "color": "#8B6F3F",
-      "element": "地球",
+      "element": "土",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "你行动不快——你是最后行动的，你说得对。",
@@ -455,7 +455,7 @@
       "tagline": "你种东西。默默地、耐心地，认认真真地。",
       "symbol": "❉",
       "color": "#A89060",
-      "element": "地球",
+      "element": "土",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "你亲手打造经久耐用的作品，绝不走捷径。",
@@ -545,7 +545,7 @@
       "tagline": "你直面了其他人都在回避的问题。",
       "symbol": "⚔",
       "color": "#5A6B7A",
-      "element": "金属",
+      "element": "金",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "你直言不讳——而且你宁可说对，也不愿讨人喜欢。",
@@ -635,7 +635,7 @@
       "tagline": "你之所以闪耀，是因为你是被精心雕琢而成的。",
       "symbol": "◈",
       "color": "#9AACB8",
-      "element": "金属",
+      "element": "金",
       "intensities": {
         "SELF_SOURCED": {
           "hero": "你花了好几年时间磨练自己的品味——这一点显而易见。",
