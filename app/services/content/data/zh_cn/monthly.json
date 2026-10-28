@@ -80,14 +80,14 @@
   },
   "MONTHLY_HERO_TEMPLATE": "你的 {year}，十二扇门。",
   "GRADE_LABEL": {
-    "PEAK": "Peak",
+    "PEAK": "顶峰",
     "FAVORABLE": "有利的",
     "NEUTRAL": "中立",
     "CAUTION": "注意",
     "CHALLENGING": "具有挑战性的"
   },
   "MONTHLY_GRADE_CONTEXT": {
-    "PEAK": "Root energy (地支) is favorable this month — separate from the theme.",
+    "PEAK": "本月底气（地支）顺畅，与主题无关。",
     "FAVORABLE": "源自本源能量的轻柔顺风。",
     "NEUTRAL": "混合根源能量——这一主题贯穿整个月。",
     "CAUTION": "根之能量趋于谨慎——请放慢节奏。",

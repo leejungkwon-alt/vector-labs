@@ -76,3 +76,12 @@
 - [ ] `birth_location` raw key(`seoul`, `new_york`) 표시 → 도시 display name 매핑
 - [ ] `frontend/app/index.tsx` 스플래시 — "결" 브랜드 표기 정책
 - [ ] 백엔드 `en/cross_insight.json`, `en/free_gating.json`, `en/premium_insights.json` 누락
+
+
+## ⚠️ 파일 편집 인코딩 규칙
+- ❌ PowerShell `Add-Content` / `>` / `>>` (PS 5.x 기본 cp949)
+- ❌ 인라인 `python -c "..."` (따옴표·경로 이스케이프 취약)
+- ✅ VS Code에서 편집 + Ctrl+S (UTF-8)
+- ✅ Python `Path.write_text(encoding='utf-8')`
+- ✅ 검증/패치는 반드시 `.py` 파일로
+- 검증: `python scripts/verify_i18n.py` → `i18n OK` 필수

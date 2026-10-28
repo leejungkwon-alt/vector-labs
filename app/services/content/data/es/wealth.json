@@ -10,12 +10,12 @@
         "No se te da bien la gestión constante."
       ],
       "best_match": [
-        "Steward",
-        "Anchor"
+        "Administrador",
+        "Ancla"
       ],
       "best_reason": "Alguien que protege el dinero que ganas.",
       "challenging_match": [
-        "Operator"
+        "Operador"
       ],
       "challenging_reason": "Si a ambos les gusta el riesgo, resulta difícil recuperarse de una crisis.",
       "actions": [
@@ -37,12 +37,12 @@
         "Es difícil concentrarse en un solo lugar."
       ],
       "best_match": [
-        "Steward",
-        "Anchor"
+        "Administrador",
+        "Ancla"
       ],
       "best_reason": "Alguien que se encarga de reunir tus ingresos dispersos.",
       "challenging_match": [
-        "Adapter"
+        "Adaptador"
       ],
       "challenging_reason": "Si ambos se dispersan, la gestión financiera se vuelve imposible.",
       "actions": [
@@ -64,12 +64,12 @@
         "Compras impulsivas frecuentes."
       ],
       "best_match": [
-        "Steward",
-        "Cultivator"
+        "Administrador",
+        "Cultivador"
       ],
       "best_reason": "Alguien que controle tus gastos.",
       "challenging_match": [
-        "Radiator"
+        "Radiador"
       ],
       "challenging_reason": "Si ambos gastan mucho, acabarán en quiebra.",
       "actions": [
@@ -91,12 +91,12 @@
         "Ahorras de forma constante."
       ],
       "best_match": [
-        "Operator",
-        "Pioneer"
+        "Operador",
+        "Pionero"
       ],
       "best_reason": "Alguien que te ofrece una rentabilidad adicional a la de tus activos seguros.",
       "challenging_match": [
-        "Radiator"
+        "Radiador"
       ],
       "challenging_reason": "Las tendencias de riesgo son diametralmente opuestas, lo que provoca conflictos financieros.",
       "actions": [
@@ -118,12 +118,12 @@
         "No se te da bien aprovechar las oportunidades que surgen rápidamente."
       ],
       "best_match": [
-        "Operator",
-        "Steward"
+        "Operador",
+        "Administrador"
       ],
       "best_reason": "Alguien que se encargue de gestionar tus activos seguros.",
       "challenging_match": [
-        "Pioneer"
+        "Pionero"
       ],
       "challenging_reason": "Conflictos con personas que quieren apuestas rápidas.",
       "actions": [
@@ -145,12 +145,12 @@
         "No sabes decir que no a las peticiones de tus conocidos."
       ],
       "best_match": [
-        "Steward",
-        "Keeper"
+        "Administrador",
+        "Linterna"
       ],
       "best_reason": "Alguien que comprenda tu fidelidad y crezca a tu lado.",
       "challenging_match": [
-        "Operator"
+        "Operador"
       ],
       "challenging_reason": "Conflictos con personas que buscan beneficios rápidos.",
       "actions": [
@@ -172,12 +172,12 @@
         "Tienes una gran confianza en tu criterio."
       ],
       "best_match": [
-        "Steward",
-        "Keeper"
+        "Administrador",
+        "Linterna"
       ],
       "best_reason": "Alguien que controle tu riesgo.",
       "challenging_match": [
-        "Survivor"
+        "Superviviente"
       ],
       "challenging_reason": "Si ambos son agresivos, la recuperación tras una crisis resulta difícil.",
       "actions": [
@@ -199,12 +199,12 @@
         "Gastos impulsivos por motivos emocionales."
       ],
       "best_match": [
-        "Steward",
-        "Deep"
+        "Administrador",
+        "Profundo"
       ],
       "best_reason": "Alguien que conozca tus gustos y se encargue de gestionar tus finanzas.",
       "challenging_match": [
-        "Radiator"
+        "Radiador"
       ],
       "challenging_reason": "Si ambos tienen un gasto compulsivo grave, la quiebra.",
       "actions": [
@@ -226,12 +226,12 @@
         "Me cuesta mucho decidirme."
       ],
       "best_match": [
-        "Pioneer",
-        "Operator"
+        "Pionero",
+        "Operador"
       ],
       "best_reason": "Alguien que ponga en práctica tu análisis.",
       "challenging_match": [
-        "Deep"
+        "Profundo"
       ],
       "challenging_reason": "Si solo te dedicas a analizar, te pierdes oportunidades.",
       "actions": [
@@ -253,12 +253,12 @@
         "Eres vulnerable a las artimañas de quienes te rodean."
       ],
       "best_match": [
-        "Steward",
-        "Anchor"
+        "Administrador",
+        "Ancla"
       ],
       "best_reason": "Alguien que confirme tu intuición.",
       "challenging_match": [
-        "Operator"
+        "Operador"
       ],
       "challenging_reason": "Si los dos sois impulsivos, acabáis por derrumbaros ante una crisis.",
       "actions": [

@@ -10,12 +10,12 @@
         "No soportas las situaciones estancadas."
       ],
       "best_match": [
-        "Anchor",
-        "Operator"
+        "Ancla",
+        "Operador"
       ],
       "best_reason": "Un socio capaz de hacer realidad tu visión de forma fiable.",
       "challenging_match": [
-        "Officer"
+        "Guardián"
       ],
       "challenging_reason": "A menudo tienes roces con jefes o compañeros de trabajo que dan mucha importancia a las normas y los procedimientos.",
       "actions": [
@@ -37,12 +37,12 @@
         "La confianza se gana a través de las relaciones, más que por los conocimientos especializados."
       ],
       "best_match": [
-        "Blade",
-        "Officer"
+        "Filo",
+        "Guardián"
       ],
       "best_reason": "Una persona con criterios claros realza tu experiencia.",
       "challenging_match": [
-        "Pioneer"
+        "Pionero"
       ],
       "challenging_reason": "Es posible que tengas roces con alguien que quiera decisiones rápidas y una gran iniciativa.",
       "actions": [
@@ -64,12 +64,12 @@
         "Te cansas cuando hay mucho trabajo de análisis o de oficina."
       ],
       "best_match": [
-        "Anchor",
-        "Cultivator"
+        "Ancla",
+        "Cultivador"
       ],
       "best_reason": "Alguien que te apoye de forma constante en tu energía.",
       "challenging_match": [
-        "Deep"
+        "Profundo"
       ],
       "challenging_reason": "Te sientes frustrado cuando el ritmo no coincide con el de las personas tranquilas.",
       "actions": [
@@ -92,11 +92,11 @@
       ],
       "best_match": [
         "Mentor",
-        "Deep"
+        "Profundo"
       ],
       "best_reason": "Alguien que comprenda la profundidad del tema y reconozca tu experiencia.",
       "challenging_match": [
-        "Radiator"
+        "Radiador"
       ],
       "challenging_reason": "Las personas que se comunican de forma superficial consumen energía.",
       "actions": [
@@ -118,12 +118,12 @@
         "Sientes cierta reticencia ante los cambios rápidos."
       ],
       "best_match": [
-        "Pioneer",
-        "Challenger"
+        "Pionero",
+        "Desafiante"
       ],
       "best_reason": "Alguien que aporta un toque de cambio a tu estabilidad.",
       "challenging_match": [
-        "Anchor"
+        "Ancla"
       ],
       "challenging_reason": "Si ambos se muestran pasivos ante el cambio, la organización se estanca.",
       "actions": [
@@ -146,11 +146,11 @@
       ],
       "best_match": [
         "Mentor",
-        "Officer"
+        "Guardián"
       ],
       "best_reason": "Alguien que valore tu aportación y crezca contigo.",
       "challenging_match": [
-        "Survivor"
+        "Superviviente"
       ],
       "challenging_reason": "Los conflictos de valores surgen con las personas orientadas a los resultados.",
       "actions": [
@@ -172,12 +172,12 @@
         "Te cuesta comunicarte a nivel emocional."
       ],
       "best_match": [
-        "Adapter",
-        "Keeper"
+        "Adaptador",
+        "Linterna"
       ],
       "best_reason": "Alguien que envuelve con delicadeza tu carácter afilado.",
       "challenging_match": [
-        "Challenger"
+        "Desafiante"
       ],
       "challenging_reason": "Se repiten los fuertes enfrentamientos, lo que agota al equipo.",
       "actions": [
@@ -199,12 +199,12 @@
         "Te preocupa que los resultados sean de baja calidad."
       ],
       "best_match": [
-        "Deep",
+        "Profundo",
         "Mentor"
       ],
       "best_reason": "Alguien que comprenda tu perfeccionismo y sea paciente.",
       "challenging_match": [
-        "Radiator"
+        "Radiador"
       ],
       "challenging_reason": "Estos métodos chocan frontalmente con las personas que anteponen la rapidez a todo lo demás.",
       "actions": [
@@ -226,12 +226,12 @@
         "Odias las tareas superficiales."
       ],
       "best_match": [
-        "Pioneer",
-        "Operator"
+        "Pionero",
+        "Operador"
       ],
       "best_reason": "Alguien que se encarga de poner en práctica tu estrategia.",
       "challenging_match": [
-        "Survivor"
+        "Superviviente"
       ],
       "challenging_reason": "Es posible que tengas desacuerdos con personas que exijan una ejecución rápida.",
       "actions": [
@@ -253,12 +253,12 @@
         "Se te da muy bien mediar en conflictos."
       ],
       "best_match": [
-        "Pioneer",
-        "Blade"
+        "Pionero",
+        "Filo"
       ],
       "best_reason": "Alguien que valore y reconozca tu apoyo silencioso.",
       "challenging_match": [
-        "Radiator"
+        "Radiador"
       ],
       "challenging_reason": "En las organizaciones que solo se fijan en los resultados llamativos, tu presencia pasa desapercibida.",
       "actions": [

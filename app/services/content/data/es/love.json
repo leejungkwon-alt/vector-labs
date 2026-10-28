@@ -10,13 +10,13 @@
         "A veces te sientes frustrado porque tu pareja va más despacio."
       ],
       "best_match": [
-        "Keeper",
-        "Anchor"
+        "Linterna",
+        "Ancla"
       ],
       "best_reason": "Alguien que te apoya en silencio y te ayuda a mantener el equilibrio cuando te tambaleas.",
       "challenging_match": [
-        "Pioneer",
-        "Blade"
+        "Pionero",
+        "Filo"
       ],
       "challenging_reason": "Si los dos quieren llevar la voz cantante, la situación puede convertirse en una lucha de poder.",
       "actions": [
@@ -38,12 +38,12 @@
         "Te guardas la decepción durante mucho tiempo y luego estallas de golpe."
       ],
       "best_match": [
-        "Blade",
-        "Anchor"
+        "Filo",
+        "Ancla"
       ],
       "best_reason": "Una persona honesta y estable sacará a relucir tus verdaderos sentimientos.",
       "challenging_match": [
-        "Adapter"
+        "Adaptador"
       ],
       "challenging_reason": "Si ambos se limitan a ceder, el conflicto real nunca saldrá a la luz.",
       "actions": [
@@ -65,12 +65,12 @@
         "No puedes ocultar tus emociones, pero quizá no tengas en cuenta el ritmo de tu pareja."
       ],
       "best_match": [
-        "Keeper",
-        "Anchor"
+        "Linterna",
+        "Ancla"
       ],
       "best_reason": "Alguien con un carácter tranquilo y estable te ayudará a controlar tu temperamento.",
       "challenging_match": [
-        "Radiator"
+        "Radiador"
       ],
       "challenging_reason": "Dos fuegos iguales pueden apagarse mutuamente.",
       "actions": [
@@ -92,13 +92,13 @@
         "Sueles anteponer las necesidades de tu pareja a las tuyas."
       ],
       "best_match": [
-        "Radiator",
-        "Cultivator"
+        "Radiador",
+        "Cultivador"
       ],
       "best_reason": "Alguien que acoge con cariño tu dedicación y te la devuelve.",
       "challenging_match": [
-        "Deep",
-        "Gem"
+        "Profundo",
+        "Gema"
       ],
       "challenging_reason": "Con alguien que oculta sus sentimientos, tu entrega puede hacerte sentir solo.",
       "actions": [
@@ -120,12 +120,12 @@
         "Es posible que te des cuenta tarde de los cambios emocionales de tu pareja."
       ],
       "best_match": [
-        "Radiator",
-        "Adapter"
+        "Radiador",
+        "Adaptador"
       ],
       "best_reason": "Una persona expresiva aporta emoción a tu estabilidad.",
       "challenging_match": [
-        "Anchor"
+        "Ancla"
       ],
       "challenging_reason": "Si ambos se muestran pasivos ante el cambio, la relación puede estancarse.",
       "actions": [
@@ -147,12 +147,12 @@
         "Te sientes decepcionado cuando tu pareja no muestra gratitud."
       ],
       "best_match": [
-        "Cultivator",
-        "Anchor"
+        "Cultivador",
+        "Ancla"
       ],
       "best_reason": "Entendéis la forma de cuidar que tiene cada uno y os sentís a gusto con ella.",
       "challenging_match": [
-        "Radiator"
+        "Radiador"
       ],
       "challenging_reason": "Si estás con alguien que se expresa de forma llamativa, es posible que tu discreta dedicación no se valore lo suficiente.",
       "actions": [
@@ -174,13 +174,13 @@
         "Diriges las conversaciones basándote en la lógica, más que en la emoción."
       ],
       "best_match": [
-        "Adapter",
-        "Keeper"
+        "Adaptador",
+        "Linterna"
       ],
       "best_reason": "Alguien que envuelve con delicadeza tu sinceridad y percibe las emociones que a ti se te escapan.",
       "challenging_match": [
-        "Blade",
-        "Challenger"
+        "Filo",
+        "Desafiante"
       ],
       "challenging_reason": "Si ambos se empeñan mucho, la conversación acaba convirtiéndose en una discusión.",
       "actions": [
@@ -202,12 +202,12 @@
         "Compruebas con frecuencia si la relación es perfecta."
       ],
       "best_match": [
-        "Deep",
-        "Cultivator"
+        "Profundo",
+        "Cultivador"
       ],
       "best_reason": "Una persona con profundidad y paciencia acepta tus normas sin que le suponga una carga.",
       "challenging_match": [
-        "Gem"
+        "Gema"
       ],
       "challenging_reason": "Si ambos buscan la perfección, nada será nunca suficiente.",
       "actions": [
@@ -229,12 +229,12 @@
         "No revelas tus verdaderos sentimientos hasta muy tarde, lo que frustra a tu pareja."
       ],
       "best_match": [
-        "Gem",
-        "Keeper"
+        "Gema",
+        "Linterna"
       ],
       "best_reason": "Alguien que comprende la profundidad espera tu amor pausado.",
       "challenging_match": [
-        "Radiator"
+        "Radiador"
       ],
       "challenging_reason": "Con alguien a quien le gusta expresarse emocionalmente con rapidez, es posible que el ritmo no coincida.",
       "actions": [
@@ -256,12 +256,12 @@
         "Tu expresión emocional llega tarde, y podrías perder oportunidades."
       ],
       "best_match": [
-        "Blade",
-        "Pioneer"
+        "Filo",
+        "Pionero"
       ],
       "best_reason": "Alguien te arranca claramente tu corazón tranquilo.",
       "challenging_match": [
-        "Deep"
+        "Profundo"
       ],
       "challenging_reason": "Si ambos guardan silencio, es posible que esos sentimientos nunca salgan a la luz.",
       "actions": [

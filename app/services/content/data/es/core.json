@@ -538,7 +538,7 @@
       }
     },
     "THE_BLADE": {
-      "name": "El Blade",
+      "name": "El Filo",
       "tagline": "Vas al grano, mientras que todos los demás lo evitan.",
       "symbol": "⚔",
       "color": "#5A6B7A",
@@ -718,7 +718,7 @@
       }
     },
     "THE_DEEP": {
-      "name": "El Deep",
+      "name": "El Profundo",
       "tagline": "Te mueves como el océano: lento en la superficie, inmenso en las profundidades.",
       "symbol": "≈",
       "color": "#1B3A5C",

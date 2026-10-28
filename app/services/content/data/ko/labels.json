@@ -1,6 +1,6 @@
 {
   "BALANCE_LABEL": "균형",
-  "CHART_HERO": "당신의 청사진, 네 가지 얼굴.",
+  "CHART_HERO": "청사진, 네 가지 얼굴.",
   "CHART_LAYER_META": {
     "year_pillar": {
       "label": "어린 시절 (년주)",
@@ -41,8 +41,8 @@
     "COMMANDER": "결단과 카리스마"
   },
   "SINSAL_NOTE_TPL": "{role}에 자리해, 그 영역에서 {theme}의 기운이 두드러집니다.",
-  "SINSAL_HERO_ONE": "당신에게는 1개의 특별한 기질이 있습니다.",
-  "SINSAL_HERO_MANY": "당신에게는 {n}개의 특별한 기질이 있습니다.",
+  "SINSAL_HERO_ONE": "1개의 특별한 기질이 있습니다.",
+  "SINSAL_HERO_MANY": "{n}개의 특별한 기질이 있습니다.",
   "GRADE_LABELS": {
     "PEAK": "최상",
     "FAVORABLE": "좋음",
@@ -52,11 +52,11 @@
   },
   "COMPAT_FALLBACK_HEADLINE": "관계는 두 사람이 함께 만들어갑니다.",
   "PERSONALIZATION_BLOCK": {
-    "HEADER": "당신의 사주를 깊이 읽은 맞춤 인사이트",
+    "HEADER": "사주를 깊이 읽은 맞춤 인사이트",
     "BY_INTENSITY": {
-      "SELF_SOURCED": "당신의 강한 '자기충전형' 에너지가 이 성향을 더욱 뚜렷하고 주도적으로 만듭니다.",
-      "ENVIRONMENT_TUNED": "당신의 '환경반응형' 기질로 인해, 주변 환경과 만나는 사람에 따라 이 성향이 깊게 발현됩니다.",
-      "BALANCED_CORE": "당신의 균형 잡힌 '중심' 에너지가 이 성향을 안정적이고 조화롭게 이끕니다."
+      "SELF_SOURCED": "강한 '자기충전형' 에너지가 이 성향을 더욱 뚜렷하고 주도적으로 만듭니다.",
+      "ENVIRONMENT_TUNED": "'환경반응형' 기질로 인해, 주변 환경과 만나는 사람에 따라 이 성향이 깊게 발현됩니다.",
+      "BALANCED_CORE": "균형 잡힌 '중심' 에너지가 이 성향을 안정적이고 조화롭게 이끕니다."
     },
     "BY_ELEMENT": {
       "GROWTH": "여기에 성장(木)의 기운이 더해져, 끊임없이 확장하고 새로운 방향을 개척하려는 욕구가 강하게 작용합니다.",
