@@ -74,8 +74,11 @@ frontend/*.apk
 __pycache__/
 scripts/__pycache__/
 
-# 콘텐츠 팩은 git에 포함
+# Content pack is included in git
 !app/services/content/data/
 
 # Dev script cache
 scripts/.cache/
+
+scripts/_todo_*.json
+scripts/_todo_*.txt
