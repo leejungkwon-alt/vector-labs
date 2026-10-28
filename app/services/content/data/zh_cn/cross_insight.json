@@ -1,19 +1,19 @@
 {
   "MODE_LABELS": {
-    "THE_TWIN": "双胞胎",
+    "THE_TWIN": "同伴者",
     "THE_RIVAL": "竞争对手",
-    "THE_ALLY": "艾莉",
+    "THE_ALLY": "盟友",
     "THE_EMPATH": "共情者",
     "THE_CREATOR": "创作者",
     "THE_CHALLENGER": "挑战者",
-    "THE_OFFICER": "警官",
+    "THE_OFFICER": "管理者",
     "THE_SURVIVOR": "幸存者",
-    "THE_MYSTIC": "神秘",
+    "THE_MYSTIC": "神秘主义者",
     "THE_MENTOR": "导师",
     "THE_GENERALIST": "通才",
-    "THE_STEWARD": "乘务员",
-    "THE_OPERATOR": "运营商",
-    "THE_FLOW": "流"
+    "THE_STEWARD": "管家",
+    "THE_OPERATOR": "运营者",
+    "THE_FLOW": "流动型"
   },
   "AXES": {
     "FREEDOM_BOND": {

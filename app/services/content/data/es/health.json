@@ -1,10 +1,10 @@
 {
   "HEALTH_DISPLAY": {
     "GROWTH": "Crecimiento",
-    "SPARK": "Patada",
-    "GROUND": "Suelo",
-    "EDGE": "Borde",
-    "FLOW": "Flow"
+    "SPARK": "Chispa",
+    "GROUND": "Tierra",
+    "EDGE": "Filo",
+    "FLOW": "Flujo"
   },
   "HEALTH_CONTENT": {
     "GROWTH": {

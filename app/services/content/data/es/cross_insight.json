@@ -1,52 +1,52 @@
 {
   "MODE_LABELS": {
-    "THE_TWIN": "Twin",
+    "THE_TWIN": "Compañero",
     "THE_RIVAL": "Rival",
-    "THE_ALLY": "Ally",
-    "THE_EMPATH": "Empath",
-    "THE_CREATOR": "Creator",
-    "THE_CHALLENGER": "Challenger",
-    "THE_OFFICER": "Officer",
-    "THE_SURVIVOR": "Survivor",
-    "THE_MYSTIC": "Mystic",
+    "THE_ALLY": "Aliado",
+    "THE_EMPATH": "Empático",
+    "THE_CREATOR": "Creador",
+    "THE_CHALLENGER": "Desafiante",
+    "THE_OFFICER": "Guardián",
+    "THE_SURVIVOR": "Superviviente",
+    "THE_MYSTIC": "Místico",
     "THE_MENTOR": "Mentor",
-    "THE_GENERALIST": "Generalist",
-    "THE_STEWARD": "Steward",
-    "THE_OPERATOR": "Operator",
-    "THE_FLOW": "Flow"
+    "THE_GENERALIST": "Generalista",
+    "THE_STEWARD": "Administrador",
+    "THE_OPERATOR": "Operador",
+    "THE_FLOW": "Fluidez"
   },
   "AXES": {
     "FREEDOM_BOND": {
-      "pos": "Unidad",
+      "pos": "Unión",
       "neg": "Soledad"
     },
     "RISK_SAFETY": {
-      "pos": "Nuevos retos",
-      "neg": "Una base sólida"
+      "pos": "Nuevos desafíos",
+      "neg": "Base estable"
     },
     "DEPTH_BREADTH": {
-      "pos": "Deep Buceo",
+      "pos": "Buceo profundo",
       "neg": "Amplia experiencia"
     },
     "STRUCTURE_FLOW": {
-      "pos": "Establecer normas",
-      "neg": "Impromptu Flow"
+      "pos": "Reglas fijas",
+      "neg": "Flujo improvisado"
     },
     "EXPRESSION_RESTRAINT": {
       "pos": "Expresión",
-      "neg": "Moderación"
+      "neg": "Contención"
     },
     "COMPETITION_COLLABORATION": {
-      "pos": "Compite para ganar",
-      "neg": "Colaboremos juntos"
+      "pos": "Competir",
+      "neg": "Colaborar"
     },
     "SPEED_PATIENCE": {
-      "pos": "Actúa con rapidez",
-      "neg": "Tómatelo con calma"
+      "pos": "Rapidez",
+      "neg": "Paciencia"
     },
     "SELF_OTHERS": {
-      "pos": "Centrarse en uno mismo",
-      "neg": "Centrarse en los demás"
+      "pos": "Yo primero",
+      "neg": "Los demás primero"
     }
   },
   "MODE_AXES": {
