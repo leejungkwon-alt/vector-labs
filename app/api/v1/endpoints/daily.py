@@ -64,6 +64,7 @@ def api_daily(
             correction_mode=payload.correction_mode,
             jasi_boundary=payload.jasi_boundary,
             gender=payload.gender,
+            lang=payload.lang,
             dst_fold=payload.dst_fold,
             birth_location=payload.birth_location,
         )

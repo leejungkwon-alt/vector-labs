@@ -8,6 +8,8 @@ SUPPORTED_LANGS = ("en", "ko", "ja", "zh_cn", "es")
 
 
 class SajuRequest(BaseModel):
+    lang: str = "ko"
+
     model_config = ConfigDict(extra="forbid")
 
     birth_date: str = Field(
