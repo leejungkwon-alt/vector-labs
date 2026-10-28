@@ -14,6 +14,13 @@ def validate_age(birth_date_str: str) -> None:
         raise ValueError("birth_date must be in YYYY-MM-DD format")
 
     today = date.today()
+
+    # 미래 생년월일은 별도 에러로 거부 (age 음수 → '14세 미만' 오탐 방지)
+    if b_date > today:
+        raise ValueError(
+            f"birth_date must not be in the future (got {birth_date_str}, today is {today.isoformat()})."
+        )
+
     age = today.year - b_date.year - ((today.month, today.day) < (b_date.month, b_date.day))
 
     if age < MIN_AGE:
