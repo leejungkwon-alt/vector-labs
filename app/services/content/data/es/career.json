@@ -1,274 +1,274 @@
 {
-  "SECTION_TITLE": "Career & Transition",
+  "SECTION_TITLE": "Carrera profesional y transición",
   "CONTENT": {
     "THE_PIONEER": {
-      "headline": "Suited for entrepreneurship, new ventures, and planning with a pioneer spirit.",
-      "body": "You gain energy when creating new paths. You are stronger at pioneering unknown territory than following a set manual.\n\nThis trait shines in new business teams, new projects, and startups within an organization. Conversely, you feel frustrated in stagnant organizations.\n\nYour risk is 'deciding too fast alone'. For important decisions, always seek verification from trusted colleagues.",
+      "headline": "Ideal para el emprendimiento, las nuevas iniciativas y la planificación con espíritu pionero.",
+      "body": "Ganas energía cuando abres nuevos caminos. Se te da mejor explorar territorios desconocidos que seguir un manual establecido.\n\nEsta cualidad destaca en equipos de nuevos negocios, nuevos proyectos y startups dentro de una organización. Por el contrario, te sientes frustrado en organizaciones estancadas.\n\nTu riesgo es «decidir demasiado rápido por tu cuenta». Para las decisiones importantes, busca siempre la opinión de compañeros de confianza.",
       "patterns": [
-        "You proactively start new projects.",
-        "You suggest directions in meetings.",
-        "You can't stand stagnant situations."
+        "Inicias nuevos proyectos de forma proactiva.",
+        "En las reuniones, propones orientaciones.",
+        "No soportas las situaciones estancadas."
       ],
       "best_match": [
         "Anchor",
         "Operator"
       ],
-      "best_reason": "A partner who can reliably execute your vision.",
+      "best_reason": "Un socio capaz de hacer realidad tu visión de forma fiable.",
       "challenging_match": [
         "Officer"
       ],
-      "challenging_reason": "You often clash with bosses/colleagues who value rules and procedures.",
+      "challenging_reason": "A menudo tienes roces con jefes o compañeros de trabajo que dan mucha importancia a las normas y los procedimientos.",
       "actions": [
-        "Before deciding, ask yourself 'Who verified this?'",
-        "Propose one new project this quarter.",
-        "Delegate execution details to stable colleagues."
+        "Antes de decidirte, pregúntate: «¿Quién ha verificado esto?».",
+        "Propón un nuevo proyecto este trimestre.",
+        "Delega los detalles de la ejecución a compañeros de confianza."
       ],
       "red_flags": [
-        "Are you pushing alone without verification?",
-        "Are team members unable to keep up with your pace?"
+        "¿Estás publicando sin que nadie lo verifique?",
+        "¿Los miembros del equipo no consiguen seguir tu ritmo?"
       ]
     },
     "THE_ADAPTER": {
-      "headline": "You survive in any organization with flexible adaptability.",
-      "body": "You learn the language of the organization quickly. You are skilled at mediating conflicts and making the team feel smooth.\n\nThis flexibility is a strength, but there is a risk of your expertise blurring. A 'person who is good at everything' is easily replaced.\n\nWhat you need is one solid spike. Create one clear expertise where people say 'this is the person for this field'.",
+      "headline": "Para sobrevivir en cualquier organización, hay que ser capaz de adaptarse con flexibilidad.",
+      "body": "Aprendes rápidamente el lenguaje de la organización. Se te da bien mediar en conflictos y hacer que el equipo funcione sin problemas.\n\nEsta flexibilidad es una fortaleza, pero existe el riesgo de que tu especialización se diluya. A una «persona que se le da bien todo» se la puede sustituir fácilmente.\n\nLo que necesitas es una especialidad sólida. Desarrolla una área de especialización clara en la que la gente diga: «Esta es la persona indicada para este campo».",
       "patterns": [
-        "You volunteer as the lubricant in the team.",
-        "You flexibly change your stance according to the situation.",
-        "You earn trust through relationships rather than expertise."
+        "Te ofreces voluntario para hacer de mediador en el equipo.",
+        "Adapta tu postura con flexibilidad según la situación.",
+        "La confianza se gana a través de las relaciones, más que por los conocimientos especializados."
       ],
       "best_match": [
         "Blade",
         "Officer"
       ],
-      "best_reason": "Someone with clear standards elevates your expertise.",
+      "best_reason": "Una persona con criterios claros realza tu experiencia.",
       "challenging_match": [
         "Pioneer"
       ],
-      "challenging_reason": "You may clash with someone who wants fast decisions and strong initiative.",
+      "challenging_reason": "Es posible que tengas roces con alguien que quiera decisiones rápidas y una gran iniciativa.",
       "actions": [
-        "Invest in one skill this quarter.",
-        "Clearly appeal your expertise to your boss.",
-        "Don't solve every conflict; let one go."
+        "Invierte en una habilidad este trimestre.",
+        "Demuestra claramente tu experiencia a tu jefe.",
+        "No resuelvas todos los conflictos; deja que alguno se resuelva por sí solo."
       ],
       "red_flags": [
-        "Are you remaining as 'a person who does anything'?",
-        "Does no one know your achievements?"
+        "¿Sigues siendo «una persona que hace de todo»?",
+        "¿Es que nadie conoce tus logros?"
       ]
     },
     "THE_RADIATOR": {
-      "headline": "You shine on stage — in sales, marketing, and presentations.",
-      "body": "You gain energy from dealing with people. You have a natural talent for persuading, inspiring, and leading the atmosphere.\n\nThis strength shines in sales, marketing, branding, and lecturing. However, you get bored quickly if given only desk/analysis work.\n\nYour risk is burnout. You don't recognize your own fatigue while trying to stay bright. You need a regular recovery routine.",
+      "headline": "Destacas en el escenario: en ventas, marketing y presentaciones.",
+      "body": "Te llena de energía tratar con la gente. Tienes un talento natural para persuadir, inspirar y marcar el tono.\n\nEsta fortaleza destaca en ventas, marketing, gestión de marca y conferencias. Sin embargo, te aburres rápidamente si solo te asignan trabajo de oficina o de análisis.\n\nTu riesgo es el agotamiento. No te das cuenta de tu propio cansancio mientras intentas mantenerte activo. Necesitas una rutina de recuperación regular.",
       "patterns": [
-        "You achieve results at touchpoints with people.",
-        "You take the initiative in presentations/meetings.",
-        "You get tired when there is a lot of analysis/desk work."
+        "Los resultados se consiguen en los puntos de contacto con las personas.",
+        "Tomas la iniciativa en las presentaciones y reuniones.",
+        "Te cansas cuando hay mucho trabajo de análisis o de oficina."
       ],
       "best_match": [
         "Anchor",
         "Cultivator"
       ],
-      "best_reason": "Someone who stably supports your energy.",
+      "best_reason": "Alguien que te apoye de forma constante en tu energía.",
       "challenging_match": [
         "Deep"
       ],
-      "challenging_reason": "You feel frustrated when the pace doesn't match with quiet people.",
+      "challenging_reason": "Te sientes frustrado cuando el ritmo no coincide con el de las personas tranquilas.",
       "actions": [
-        "Set one day a week as a 'no-meeting day'.",
-        "Summarize your achievements in numbers once a month.",
-        "Always keep one long-term project going."
+        "Establece un día a la semana como «día sin reuniones».",
+        "Resume tus logros en cifras una vez al mes.",
+        "Mantén siempre en marcha un proyecto a largo plazo."
       ],
       "red_flags": [
-        "Are you ignoring burnout signals?",
-        "Are you only chasing short-term results?"
+        "¿Estás ignorando las señales de agotamiento?",
+        "¿Solo buscas resultados a corto plazo?"
       ]
     },
     "THE_KEEPER": {
-      "headline": "You become a master in professional, research, or technical fields.",
-      "body": "You are the type to succeed by digging one deep well. Your value increases as you dig deeper and accumulate expertise.\n\nThis trait shines in fields requiring precision, such as research, development, design, medical, and legal. Conversely, frequent job changes and changes blur your assets.\n\nThe most important criterion is whether your current organization can nurture your expertise. If so, becoming a master in your current position is better than changing jobs.",
+      "headline": "Te conviertes en un experto en ámbitos profesionales, de investigación o técnicos.",
+      "body": "Eres de los que triunfan profundizando en un solo campo. Tu valor aumenta a medida que profundizas y acumulas experiencia.\n\nEsta cualidad destaca en campos que requieren precisión, como la investigación, el desarrollo, el diseño, la medicina y el ámbito jurídico. Por el contrario, los cambios frecuentes de trabajo difuminan tus puntos fuertes.\n\nEl criterio más importante es si tu organización actual puede potenciar tu experiencia. Si es así, convertirte en un experto en tu puesto actual es mejor que cambiar de trabajo.",
       "patterns": [
-        "You are deeply immersed in one field.",
-        "You have strong pride in your expertise.",
-        "You hate organizational politics and chores."
+        "Estás muy metido en un campo concreto.",
+        "Te sientes muy orgulloso de tu experiencia.",
+        "Odias las intrigas de la empresa y las tareas rutinarias."
       ],
       "best_match": [
         "Mentor",
         "Deep"
       ],
-      "best_reason": "Someone who understands depth and acknowledges your expertise.",
+      "best_reason": "Alguien que comprenda la profundidad del tema y reconozca tu experiencia.",
       "challenging_match": [
         "Radiator"
       ],
-      "challenging_reason": "Energy is consumed with people who communicate superficially.",
+      "challenging_reason": "Las personas que se comunican de forma superficial consumen energía.",
       "actions": [
-        "Set an 'expertise goal for this year' every year.",
-        "Create one channel to publicize your expertise externally.",
-        "Boldly reject chores."
+        "Fíjate cada año un «objetivo de especialización para este año».",
+        "Crea un canal para dar a conocer tu experiencia al público en general.",
+        "Rechaza con valentía las tareas domésticas."
       ],
       "red_flags": [
-        "Are chores taking away time from your expertise?",
-        "Does the organization support your growth?"
+        "¿Las tareas domésticas te quitan tiempo para dedicarte a lo que mejor sabes hacer?",
+        "¿Te apoya la organización en tu desarrollo profesional?"
       ]
     },
     "THE_ANCHOR": {
-      "headline": "Excellent at management, administration, and system building.",
-      "body": "You are good at laying the foundation of an organization. You are strong at creating processes and operating them stably.\n\nThis strength shines in organizations where structure is important, such as large corporations, public institutions, and manufacturing. Conversely, extremely fast startups can be frustrating.\n\nYour risk is becoming insensitive to change. You must consciously learn trends so you don't get alienated in the organization.",
+      "headline": "Destaca en gestión, administración y desarrollo de sistemas.",
+      "body": "Se te da bien sentar las bases de una organización. Destacas en la creación de procesos y en su gestión estable.\n\nEsta fortaleza destaca en organizaciones donde la estructura es importante, como las grandes empresas, las instituciones públicas y el sector manufacturero. Por el contrario, las startups que evolucionan a un ritmo extremadamente rápido pueden resultar frustrantes.\n\nTu riesgo es volverte insensible al cambio. Debes informarte conscientemente sobre las tendencias para no quedarte desfasado dentro de la organización.",
       "patterns": [
-        "You are strong at creating and maintaining processes.",
-        "You build trust over a long time.",
-        "You feel resistance to rapid changes."
+        "Se te da muy bien crear y mantener procesos.",
+        "La confianza se gana con el tiempo.",
+        "Sientes cierta reticencia ante los cambios rápidos."
       ],
       "best_match": [
         "Pioneer",
         "Challenger"
       ],
-      "best_reason": "Someone who adds change on top of your stability.",
+      "best_reason": "Alguien que aporta un toque de cambio a tu estabilidad.",
       "challenging_match": [
         "Anchor"
       ],
-      "challenging_reason": "If both are passive to change, the organization stagnates.",
+      "challenging_reason": "Si ambos se muestran pasivos ante el cambio, la organización se estanca.",
       "actions": [
-        "Learn one new trend every quarter.",
-        "Find a way to automate your process.",
-        "Intentionally ask for young colleagues' opinions."
+        "Aprende una nueva tendencia cada trimestre.",
+        "Busca una forma de automatizar tu proceso.",
+        "Pide expresamente la opinión de tus compañeros más jóvenes."
       ],
       "red_flags": [
-        "Are you often saying 'we've always done it this way'?",
-        "Are you falling behind on new tools?"
+        "¿Sueles decir «siempre lo hemos hecho así»?",
+        "¿Te estás quedando atrás en cuanto a las nuevas herramientas?"
       ]
     },
     "THE_CULTIVATOR": {
-      "headline": "Suited for growing people — in education, planning, and HR.",
-      "body": "You are excellent at recognizing and nurturing people's potential. Roles like developing juniors or coordinating projects suit you.\n\nThis trait shines in education, HR, consulting, and planning. Conversely, you get tired in cold organizations that only demand results.\n\nYour risk is yielding results to others. Clearly record and appeal your contributions.",
+      "headline": "Ideal para personas en proceso de formación: en el ámbito de la educación, la planificación y los recursos humanos.",
+      "body": "Se te da muy bien reconocer y potenciar el potencial de las personas. Te convienen puestos como el desarrollo de personal junior o la coordinación de proyectos.\n\nEsta cualidad destaca en los ámbitos de la educación, los recursos humanos, la consultoría y la planificación. Por el contrario, te agotas en organizaciones frías que solo exigen resultados.\n\nTu riesgo es ceder el mérito a otros. Deja constancia clara de tus aportaciones y hazlas valer.",
       "patterns": [
-        "You have a lot of interest in the growth of juniors/colleagues.",
-        "You soften the team atmosphere.",
-        "You undervalue your own achievements."
+        "Te interesa mucho el desarrollo profesional de los jóvenes y tus compañeros de trabajo.",
+        "Haces que el ambiente del equipo sea más distendido.",
+        "Subestimas tus propios logros."
       ],
       "best_match": [
         "Mentor",
         "Officer"
       ],
-      "best_reason": "Someone who acknowledges your contribution and grows together.",
+      "best_reason": "Alguien que valore tu aportación y crezca contigo.",
       "challenging_match": [
         "Survivor"
       ],
-      "challenging_reason": "Value clashes occur with result-oriented people.",
+      "challenging_reason": "Los conflictos de valores surgen con las personas orientadas a los resultados.",
       "actions": [
-        "Document your contributions once a month.",
-        "Clearly state your career goals to your boss.",
-        "Consciously mentor one person."
+        "Registra tus aportaciones una vez al mes.",
+        "Explica con claridad tus objetivos profesionales a tu jefe.",
+        "Haz de mentor de una persona de forma consciente."
       ],
       "red_flags": [
-        "Are others taking your achievements?",
-        "Are you postponing your own growth?"
+        "¿Hay gente que se está atribuyendo tus logros?",
+        "¿Estás posponiendo tu propio crecimiento?"
       ]
     },
     "THE_BLADE": {
-      "headline": "Fits places where principles matter, such as law, finance, military/police, and engineering.",
-      "body": "You are logical and quick to decide. You achieve the best results in environments with clear standards and principles.\n\nThis strength shines in law, finance, military/police, engineering, and medical fields. Conversely, you feel frustrated in organizations with ambiguous standards.\n\nYour risk is putting principles before people. The result may be right, but relationships can be damaged. Soft communication is needed.",
+      "headline": "Es ideal para ámbitos en los que los principios son fundamentales, como el derecho, las finanzas, el ejército y la policía, y la ingeniería.",
+      "body": "Eres una persona lógica y rápida a la hora de tomar decisiones. Obtienes los mejores resultados en entornos con normas y principios claros.\n\nEsta fortaleza destaca en los ámbitos jurídico, financiero, militar y policial, de la ingeniería y de la medicina. Por el contrario, te sientes frustrado en organizaciones con normas ambiguas.\n\nTu riesgo es anteponer los principios a las personas. El resultado puede ser correcto, pero las relaciones pueden verse perjudicadas. Es necesario comunicar con tacto.",
       "patterns": [
-        "You draw conclusions quickly.",
-        "You are good at finding logical loopholes.",
-        "You find emotional communication difficult."
+        "Sacas conclusiones demasiado rápido.",
+        "Se te da bien encontrar lagunas lógicas.",
+        "Te cuesta comunicarte a nivel emocional."
       ],
       "best_match": [
         "Adapter",
         "Keeper"
       ],
-      "best_reason": "Someone who softly wraps your sharpness.",
+      "best_reason": "Alguien que envuelve con delicadeza tu carácter afilado.",
       "challenging_match": [
         "Challenger"
       ],
-      "challenging_reason": "Strong confrontations repeat, tiring the team.",
+      "challenging_reason": "Se repiten los fuertes enfrentamientos, lo que agota al equipo.",
       "actions": [
-        "Check emotions once before concluding.",
-        "Have informal conversations with bosses/colleagues once a month.",
-        "Practice expressing your judgments softly."
+        "Reflexiona sobre tus emociones antes de sacar conclusiones.",
+        "Mantén conversaciones informales con tus jefes y compañeros de trabajo una vez al mes.",
+        "Practica expresar tus opiniones con delicadeza."
       ],
       "red_flags": [
-        "Is your conviction of 'I am right' hurting relationships?",
-        "Are colleagues reluctant to talk to you?"
+        "¿Tu convicción de que «tengo razón» está perjudicando tus relaciones?",
+        "¿Tus compañeros de trabajo se muestran reacios a hablar contigo?"
       ]
     },
     "THE_GEM": {
-      "headline": "You stand out in design, art, and precision technology fields.",
-      "body": "You pursue perfection. Your obsession with detail creates your expertise.\n\nThis trait shines in design, art, editing, precision machining, and premium services. Conversely, you get tired in organizations that demand 'fast and sloppy'.\n\nYour risk is not finishing due to perfectionism. You need to practice releasing at 80%.",
+      "headline": "Destacas en los ámbitos del diseño, el arte y la tecnología de precisión.",
+      "body": "Buscas la perfección. Tu obsesión por los detalles es lo que te convierte en un experto.\n\nEsta cualidad destaca en el diseño, el arte, la edición, el mecanizado de precisión y los servicios de alta gama. Por el contrario, te agotas en organizaciones que exigen «rapidez y descuido».\n\nTu riesgo es no terminar nada debido a tu perfeccionismo. Tienes que practicar el saber dar por terminado un trabajo al 80 %.",
       "patterns": [
-        "You obsess over details.",
-        "You can't release unless it's perfect.",
-        "You stress over low-quality results."
+        "Te obsesionas con los detalles.",
+        "No puedes publicarlo a menos que esté perfecto.",
+        "Te preocupa que los resultados sean de baja calidad."
       ],
       "best_match": [
         "Deep",
         "Mentor"
       ],
-      "best_reason": "Someone who understands your perfectionism and is patient.",
+      "best_reason": "Alguien que comprenda tu perfeccionismo y sea paciente.",
       "challenging_match": [
         "Radiator"
       ],
-      "challenging_reason": "Methods clash head-on with speed-first people.",
+      "challenging_reason": "Estos métodos chocan frontalmente con las personas que anteponen la rapidez a todo lo demás.",
       "actions": [
-        "Practice 'this is good enough'.",
-        "Pick one perfect project and release it at 80%.",
-        "Agree on your standards with your boss in advance."
+        "Practica el «esto ya está bien».",
+        "Elige un proyecto perfecto y lánzalo cuando esté al 80 % de su desarrollo.",
+        "Acuerda tus criterios con tu jefe con antelación."
       ],
       "red_flags": [
-        "Are you missing schedules due to perfection?",
-        "Are you forcing your standards on the team?"
+        "¿Te estás saltando los horarios por querer que todo salga perfecto?",
+        "¿Estás imponiendo tus criterios al equipo?"
       ]
     },
     "THE_DEEP": {
-      "headline": "Outstanding in strategic planning, analysis, and research fields.",
-      "body": "You have an excellent ability to draw the big picture. You have the power to see the structure beneath the surface.\n\nThis trait shines in strategic planning, research, consulting, and data analysis. Conversely, you feel frustrated in positions that only demand execution.\n\nYour risk is delayed execution due to falling into analysis. Teaming up with a strong execution partner maximizes synergy.",
+      "headline": "Destaca en los ámbitos de la planificación estratégica, el análisis y la investigación.",
+      "body": "Tienes una excelente capacidad para ver el panorama general. Eres capaz de percibir la estructura que se esconde bajo la superficie.\n\nEsta cualidad destaca en la planificación estratégica, la investigación, la consultoría y el análisis de datos. Por el contrario, te sientes frustrado en puestos que solo exigen ejecución.\n\nTu riesgo es retrasar la ejecución por perderte en el análisis. Colaborar con un compañero con gran capacidad de ejecución maximiza la sinergia.",
       "patterns": [
-        "You draw the big picture first.",
-        "You spend time analyzing before executing.",
-        "You hate superficial tasks."
+        "Primero hay que trazar el panorama general.",
+        "Dedicas tiempo a analizar la situación antes de actuar.",
+        "Odias las tareas superficiales."
       ],
       "best_match": [
         "Pioneer",
         "Operator"
       ],
-      "best_reason": "Someone who turns your strategy into execution.",
+      "best_reason": "Alguien que se encarga de poner en práctica tu estrategia.",
       "challenging_match": [
         "Survivor"
       ],
-      "challenging_reason": "You may clash with people demanding fast execution.",
+      "challenging_reason": "Es posible que tengas desacuerdos con personas que exijan una ejecución rápida.",
       "actions": [
-        "Start the first execution within 3 days after strategizing.",
-        "Find an execution-strong partner.",
-        "Set a 30% time limit on analysis."
+        "Inicia la primera ejecución en un plazo de tres días tras la elaboración de la estrategia.",
+        "Busca un socio con gran capacidad de ejecución.",
+        "Establece un límite de tiempo del 30 % para el análisis."
       ],
       "red_flags": [
-        "Are you only analyzing and delaying execution?",
-        "Are you missing decision timing?"
+        "¿Te limitas a analizar y a posponer la ejecución?",
+        "¿Te estás perdiendo el momento adecuado para tomar decisiones?"
       ]
     },
     "THE_SPRING": {
-      "headline": "You quietly support the team and build trust.",
-      "body": "You are an essential core talent, though not flashy. You melt team conflicts and quietly solve problems.\n\nThis strength shines in operations, HR, customer support, and project management. Conversely, you are undervalued in sales organizations where self-PR is important.\n\nThe risk is not being recognized for your achievements. You need to practice actively appealing your contributions.",
+      "headline": "Apoyas discretamente al equipo y generas confianza.",
+      "body": "Eres un talento fundamental, aunque no llamativo. Resuelves los conflictos del equipo y solucionas los problemas con discreción.\n\nEsta fortaleza destaca en operaciones, recursos humanos, atención al cliente y gestión de proyectos. Por el contrario, se te infravalora en las organizaciones de ventas, donde es importante la autopromoción.\n\nEl riesgo es que no se reconozcan tus logros. Tienes que practicar cómo destacar activamente tus aportaciones.",
       "patterns": [
-        "You are the quiet problem solver of the team.",
-        "You don't show off your achievements well.",
-        "You are skilled at mediating conflicts."
+        "Eres el que resuelve los problemas en silencio dentro del equipo.",
+        "No sabes presumir bien de tus logros.",
+        "Se te da muy bien mediar en conflictos."
       ],
       "best_match": [
         "Pioneer",
         "Blade"
       ],
-      "best_reason": "Someone who acknowledges and elevates your quiet support.",
+      "best_reason": "Alguien que valore y reconozca tu apoyo silencioso.",
       "challenging_match": [
         "Radiator"
       ],
-      "challenging_reason": "In organizations that only notice flashy results, your presence disappears.",
+      "challenging_reason": "En las organizaciones que solo se fijan en los resultados llamativos, tu presencia pasa desapercibida.",
       "actions": [
-        "Document your achievements once a month.",
-        "Speak up about your contributions once in a meeting.",
-        "Find a boss who recognizes you."
+        "Anota tus logros una vez al mes.",
+        "Menciona tus aportaciones al menos una vez durante la reunión.",
+        "Busca un jefe que te valore."
       ],
       "red_flags": [
-        "Are your achievements being recorded as someone else's?",
-        "Are you being ignored for being quiet?"
+        "¿Se están atribuyendo a otra persona tus logros?",
+        "¿Te ignoran por ser callado?"
       ]
     }
   }

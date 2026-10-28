@@ -1,0 +1,126 @@
+
+=== age_band.json ===
+[AGE_BAND_CONTENT.SENIOR.body]
+EN: Shift from doing to directing. From output to wisdom. The value you bring now isn't in the hours you log — it's in the judgment you've earned. The people around you need your perspective more than you
+ES: Pasa de hacer a dirigir. De los resultados a la sabiduría. El valor que aportas ahora no reside en las horas que dedicas, sino en la capacidad de juicio que te has ganado. Las personas que te rodean n
+
+
+=== career.json ===
+[CONTENT.THE_ANCHOR.actions[1]]
+EN: Find a way to automate your process.
+ES: Busca una forma de automatizar tu proceso.
+
+
+=== core.json ===
+[ARCHETYPE_CONTENT.THE_RADIATOR.intensities.BALANCED_CORE.advice[1]]
+EN: When something lights you up, say it out loud — don't just feel it.
+ES: Cuando algo te ilumine, dilo en voz alta; no te limites a sentirlo.
+
+[ARCHETYPE_CONTENT.THE_ANCHOR.intensities.BALANCED_CORE.advice[2]]
+EN: Give away one responsibility you've been carrying silently.
+ES: Deshazte de una responsabilidad que has estado cargando en silencio.
+
+[ARCHETYPE_CONTENT.THE_CULTIVATOR.intensities.SELF_SOURCED.advice[3]]
+EN: Celebrate a small win today. You worked hard for it.
+ES: Celebra hoy un pequeño logro. Te has esforzado mucho para conseguirlo.
+
+[ARCHETYPE_CONTENT.THE_CULTIVATOR.intensities.BALANCED_CORE.advice[0]]
+EN: Once this week, name what you actually contributed to a success.
+ES: Una vez esta semana, menciona en qué has contribuido realmente a un éxito.
+
+[ARCHETYPE_CONTENT.THE_BLADE.intensities.BALANCED_CORE.advice[3]]
+EN: Forgive yourself for a mistake you made. You're human, not a machine.
+ES: Perdónate por el error que has cometido. Eres humano, no una máquina.
+
+[ARCHETYPE_CONTENT.THE_BLADE.intensities.ENVIRONMENT_TUNED.narrative[0]]
+EN: You have strong convictions, but you've probably been told to soften them. You've learned to hide your edge. That was survival, not growth.
+ES: Tienes convicciones firmes, pero probablemente te hayan dicho que las suavices. Has aprendido a ocultar tu lado más marcado. Eso era una cuestión de supervivencia, no de crecimiento.
+
+[ARCHETYPE_CONTENT.THE_BLADE.intensities.ENVIRONMENT_TUNED.shadows[0]]
+EN: You've internalized other people's discomfort with your honesty.
+ES: Te has hecho eco del malestar que tu sinceridad provoca en los demás.
+
+[ARCHETYPE_CONTENT.THE_BLADE.intensities.ENVIRONMENT_TUNED.advice[0]]
+EN: Once this week, say the thing you've been softening. Notice what happens.
+ES: Una vez esta semana, di aquello que has estado evitando decir. Fíjate en lo que pasa.
+
+[ARCHETYPE_CONTENT.THE_GEM.intensities.SELF_SOURCED.narrative[1]]
+EN: You hold yourself to a standard that doesn't come from outside. You're not chasing approval, you're chasing the version of the thing that would make you proud to have made it.
+ES: Te exiges un nivel que no viene de fuera. No buscas la aprobación de los demás, sino esa versión de lo que has hecho que te haga sentir orgulloso de haberlo creado.
+
+[ARCHETYPE_CONTENT.THE_DEEP.intensities.SELF_SOURCED.advice[1]]
+EN: Say what you actually feel — not what you've analyzed about what you feel.
+ES: Di lo que realmente sientes, no lo que has analizado sobre lo que sientes.
+
+[ARCHETYPE_CONTENT.THE_SPRING.intensities.SELF_SOURCED.narrative[2]]
+EN: This makes you a natural in work that requires subtle judgment. It also makes you hard to argue with when you've made up your mind.
+ES: Esto hace que se te dé muy bien cualquier trabajo que requiera un criterio sutil. Además, cuando te has decidido, es difícil llevar la contraria.
+
+[ARCHETYPE_CONTENT.THE_SPRING.intensities.ENVIRONMENT_TUNED.narrative[1]]
+EN: People often underestimate you, and you usually let them. You've learned that being seen isn't the same as being understood.
+ES: La gente suele subestimarte, y tú normalmente se lo permites. Has aprendido que que te vean no es lo mismo que que te entiendan.
+
+[ARCHETYPE_CONTENT.THE_SPRING.intensities.ENVIRONMENT_TUNED.advice[1]]
+EN: Once this week, say the thing you've been holding back.
+ES: Al menos una vez esta semana, di lo que te has estado callando.
+
+[INTENSITY_OVERLAY.SELF_SOURCED.advice_addon[1]]
+EN: Lower one standard you hold yourself to. That's how you prevent burnout.
+ES: Baja un poco el listón que te has fijado. Así es como se evita el agotamiento.
+
+[INTENSITY_OVERLAY.BALANCED_CORE.advice_addon[1]]
+EN: Balance is built through repeated choices. Note which side you leaned into in your small decisions.
+ES: El equilibrio se construye a través de decisiones repetidas. Fíjate hacia qué lado te has inclinado en tus pequeñas decisiones.
+
+[INTENSITY_OVERLAY.ENVIRONMENT_TUNED.advice_addon[1]]
+EN: Ask yourself whether your current environment still fits you, or whether you've already outgrown it.
+ES: Pregúntate si tu entorno actual sigue siendo adecuado para ti o si ya lo has superado.
+
+
+=== love.json ===
+[CONTENT.THE_DEEP.body]
+EN: You don't reveal your emotions easily. You observe your partner enough and dig deep once you make up your mind.
+
+This cautiousness looks like mature love, but it's hard for your partner to know your t
+ES: No muestras tus emociones con facilidad. Observas bien a tu pareja y profundizas en la relación una vez que te has decidido.
+
+Esta cautela parece un amor maduro, pero a tu pareja le cuesta conocer tus
+
+
+=== pillar_names.json ===
+[庚午.name]
+EN: Blade in the Forge
+ES: Blade en The Forge
+
+
+=== sections.json ===
+[WORK_CONTENT.THE_CREATOR.best_match[1]]
+EN: THE_MENTOR
+ES: eXtreme Multi-Domain 5X
+
+[WORK_CONTENT.THE_SURVIVOR.best_match[0]]
+EN: THE_MENTOR
+ES: eXtreme Multi-Domain 5X
+
+
+=== wealth.json ===
+[CONTENT.THE_PIONEER.red_flags[0]]
+EN: Do you not know where your earned money went?
+ES: ¿No sabes dónde se ha ido el dinero que has ganado?
+
+[CONTENT.THE_CULTIVATOR.red_flags[0]]
+EN: Have you lent money to acquaintances and not gotten it back?
+ES: ¿Alguna vez has prestado dinero a conocidos y no te lo han devuelto?
+
+[CONTENT.THE_BLADE.red_flags[0]]
+EN: Have you suffered big losses from debt investment?
+ES: ¿Has sufrido grandes pérdidas por invertir en deuda?
+
+[CONTENT.THE_DEEP.red_flags[0]]
+EN: Have you missed opportunities while analyzing?
+ES: ¿Te has perdido alguna oportunidad mientras realizabas el análisis?
+
+[CONTENT.THE_SPRING.red_flags[0]]
+EN: Have you suffered losses from friends' tricks?
+ES: ¿Has sufrido pérdidas por las travesuras de tus amigos?
+

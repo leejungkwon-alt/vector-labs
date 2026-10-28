@@ -1,907 +1,907 @@
 {
   "ARCHETYPE_CONTENT": {
     "THE_PIONEER": {
-      "name": "The Pioneer",
-      "tagline": "You grow upward, whether the ground is ready or not.",
+      "name": "El Pioneer",
+      "tagline": "Cresces hacia arriba, esté o no preparado el suelo.",
       "symbol": "↟",
       "color": "#2F7A3F",
-      "element": "Wood",
+      "element": "Madera",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You're built to go first. And to keep going when no one follows.",
+          "hero": "Estás hecho para ser el primero. Y para seguir adelante cuando nadie te sigue.",
           "narrative": [
-            "You have a clear inner compass. Once you decide something, it becomes obvious to you long before it's obvious to anyone else.",
-            "You don't wait for consensus. You don't wait for the map to be drawn. You just know where north is, and you move.",
-            "This makes you a founder, a builder, an originator. But it also means you spend a lot of time alone with your vision before anyone understands it.",
-            "Your independence is your greatest asset, but it can also be isolating. When you're the only one who sees the path, it's easy to forget to look back and check if anyone is still with you.",
-            "True leadership isn't just about forging ahead; it's about knowing when to slow down so others can catch up. Your vision is the seed, but collaboration is the water."
+            "Tienes una brújula interior muy clara. Una vez que decides algo, te resulta obvio mucho antes de que se le haga evidente a cualquier otra persona.",
+            "No esperas a que haya consenso. No esperas a que se trace el mapa. Simplemente sabes dónde está el norte y te pones en marcha.",
+            "Esto te convierte en un fundador, un creador, un pionero. Pero también significa que pasas mucho tiempo a solas con tu visión antes de que nadie la comprenda.",
+            "Tu independencia es tu mayor baza, pero también puede hacer que te sientas aislado. Cuando eres el único que ve el camino, es fácil olvidarse de mirar atrás y comprobar si alguien sigue contigo.",
+            "El verdadero liderazgo no consiste solo en seguir adelante; consiste en saber cuándo reducir el ritmo para que los demás puedan ponerse a tu nivel. Tu visión es la semilla, pero la colaboración es el agua."
           ],
           "shadows": [
-            "Your pace feels so clearly right to you that you can accidentally bulldoze over other people's pace.",
-            "You mistake stillness for stagnation. Rest feels like a betrayal of your own ambition.",
-            "You can become rigid in your beliefs, ignoring valuable input because it doesn't align with your original plan."
+            "Tu ritmo te parece tan adecuado que, sin darte cuenta, puedes llegar a arrollar el ritmo de los demás.",
+            "Confundes la quietud con el estancamiento. El descanso te parece una traición a tu propia ambición.",
+            "Puedes volverte inflexible en tus creencias e ignorar aportaciones valiosas porque no se ajustan a tu plan original."
           ],
           "advice": [
-            "Once this week, ask someone you trust how your momentum looks from the outside.",
-            "Pick one goal you've been pushing on for months. Ask: 'Would I still care about this if no one ever knew?'",
-            "Pause for 10 seconds before you say 'I've got it.' Sometimes, you don't.",
-            "Schedule a 'pause day' once a month where you do absolutely nothing related to your goals. Just to breathe."
+            "Esta semana, pregúntale a alguien en quien confíes cómo se ve tu impulso desde fuera.",
+            "Elige un objetivo por el que llevas meses esforzándote. Pregúntate: «¿Seguiría importándome esto si nadie se enterara nunca?».",
+            "Espera 10 segundos antes de decir «Ya lo tengo». A veces, no es así.",
+            "Programa un «día de descanso» una vez al mes en el que no hagas absolutamente nada relacionado con tus objetivos. Solo para respirar."
           ],
           "keywords": [
-            "visionary",
+            "visionario",
             "vertical",
-            "independent",
-            "founder"
+            "independiente",
+            "fundador"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You lead without needing the spotlight to do it.",
+          "hero": "Lideras sin necesidad de ser el centro de atención.",
           "narrative": [
-            "You have the pioneer's instinct without the pioneer's impatience. You'll go first if you need to, but you'd rather the whole thing move forward than your name be on it.",
-            "People follow you because you're steady. You don't perform ambition — you just keep growing, quietly, in a direction that makes sense to you.",
-            "This is a rare, durable kind of leadership. It's also easy to overlook in yourself.",
-            "You are the steady hand on the rudder. You don't need to shout to be heard, and you don't need to sprint to win the race.",
-            "Your strength lies in your consistency. While others burn out chasing the next shiny thing, you are building something that will outlast the hype."
+            "Tienes el instinto de un pionero, pero sin su impaciencia. Serás el primero en dar el paso si es necesario, pero prefieres que todo el proyecto salga adelante a que tu nombre figure en él.",
+            "La gente te sigue porque eres constante. No haces alarde de tu ambición, simplemente sigues creciendo, discretamente, en una dirección que para ti tiene sentido.",
+            "Se trata de un tipo de liderazgo poco común y duradero. Además, es fácil pasarlo por alto en uno mismo.",
+            "Tú eres la mano firme que sujeta el timón. No necesitas gritar para que te escuchen, ni correr a toda velocidad para ganar la carrera.",
+            "Tu punto fuerte es tu constancia. Mientras otros se agotan persiguiendo la última novedad, tú estás construyendo algo que perdurará más allá de las modas pasajeras."
           ],
           "shadows": [
-            "You can end up carrying more than your share because you don't want to make it 'a thing.'",
-            "Your steadiness can look like passivity to people who mistake noise for action.",
-            "You might suppress your own needs to maintain the peace, leading to quiet resentment."
+            "Puedes acabar cargando con más de lo que te corresponde porque no quieres que se convierta en «un problema».",
+            "Tu serenidad puede parecer pasividad a quienes confunden el ruido con la acción.",
+            "Es posible que reprimas tus propias necesidades para mantener la paz, lo que puede dar lugar a un resentimiento silencioso."
           ],
           "advice": [
-            "Name one thing you want and say it out loud this week — no qualifiers.",
-            "Notice who actually follows you. Not who agrees with you — who moves with you.",
-            "Let someone else lead one thing you'd normally take.",
-            "Check in with your own energy levels. Are you being steady, or are you just avoiding conflict?"
+            "Nombra una cosa que desees y dilo en voz alta esta semana, sin matizaciones.",
+            "Fíjate en quién te sigue de verdad. No en quién está de acuerdo contigo, sino en quién camina a tu lado.",
+            "Deja que otra persona dirija una de las cosas de las que normalmente te encargarías.",
+            "Evalúa cómo te sientes. ¿Te mantienes firme o simplemente estás evitando el conflicto?"
           ],
           "keywords": [
-            "quiet leadership",
-            "growth",
-            "consistency",
-            "grounded"
+            "liderazgo discreto",
+            "crecimiento",
+            "coherencia",
+            "con los pies en la tierra"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You're a tree — beautiful, but particular about your soil.",
+          "hero": "Eres un árbol: precioso, pero exigente con el suelo.",
           "narrative": [
-            "You have a strong inner direction, but it doesn't always translate into outer action. You need the right conditions before you can really start.",
-            "This isn't laziness. It's accuracy. You feel very clearly when a place, project, or person can hold what you're building.",
-            "Your growth is real, but it's not fast. It's the kind that lasts decades.",
-            "You are deeply intuitive about your environment. You know when the soil is toxic, even if everyone else says it's fine.",
-            "Stop apologizing for needing the right conditions. A seed doesn't grow in concrete. Wait for your spring, and when it comes, you'll shoot up fast."
+            "Tienes una fuerte orientación interior, pero eso no siempre se traduce en acciones externas. Necesitas que se den las condiciones adecuadas antes de poder ponerte realmente en marcha.",
+            "Esto no es pereza. Es precisión. Uno percibe con total claridad cuándo un lugar, un proyecto o una persona pueden albergar lo que estás construyendo.",
+            "Tu crecimiento es real, pero no es rápido. Es de esos que duran décadas.",
+            "Tienes una gran intuición respecto a tu entorno. Sabes cuándo el suelo es tóxico, aunque todos los demás digan que está bien.",
+            "Deja de disculparte por necesitar las condiciones adecuadas. Una semilla no crece en el hormigón. Espera a que llegue tu primavera y, cuando llegue, crecerás a toda velocidad."
           ],
           "shadows": [
-            "You wait for 'ready' longer than you should.",
-            "You stay loyal to the wrong environment past the point of no return.",
-            "You can use the 'waiting for the right conditions' as an excuse to avoid taking action."
+            "Esperas a que te digan «listo» más tiempo del que deberías.",
+            "Te mantienes fiel a un entorno equivocado hasta llegar a un punto sin retorno.",
+            "Puedes utilizar la excusa de «esperar a que se den las condiciones adecuadas» para evitar pasar a la acción."
           ],
           "advice": [
-            "Write down the conditions you actually need. Are you in them? If not, what's one thing you can change?",
-            "Start the thing small — today, in whatever state it's in.",
-            "You're allowed to outgrow a room. Notice which one.",
-            "If a space feels draining, set a boundary. It's okay to leave early."
+            "Anota las condiciones que realmente necesitas. ¿Las cumples? Si no es así, ¿qué es lo primero que puedes cambiar?",
+            "Empieza poco a poco: hoy mismo, tal y como esté.",
+            "Está bien que una habitación te quede pequeña. Fíjate en cuál es.",
+            "Si un lugar te agota, marca tus límites. No pasa nada por marcharte antes de tiempo."
           ],
           "keywords": [
-            "patience",
-            "rooted",
-            "loyal",
-            "conditions"
+            "paciencia",
+            "arraigado",
+            "leal",
+            "condiciones"
           ]
         }
       }
     },
     "THE_ADAPTER": {
-      "name": "The Adapter",
-      "tagline": "You bend, so you don't break.",
+      "name": "El Adapter",
+      "tagline": "Te adaptas para no romperte.",
       "symbol": "⟡",
       "color": "#5FAF7A",
-      "element": "Wood",
+      "element": "Madera",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You survive by reading the room and moving with it.",
+          "hero": "Para salir adelante, hay que saber leer el ambiente y adaptarse a él.",
           "narrative": [
-            "You don't fight systems head-on — you find the crack in them. You've probably been underestimated more than once by people who mistake softness for weakness.",
-            "Your flexibility is a form of intelligence. You see what others are about to do, and you're already halfway there before they realize it.",
-            "This makes you a natural collaborator, negotiator, translator. It also means people don't always see how much work you're doing.",
-            "You are a master of social tai chi. You redirect energy rather than block it. This makes you incredibly effective in chaotic environments.",
-            "But constantly bending means you might eventually forget what your natural shape feels like. You have the right to be rigid when it matters."
+            "No hay que enfrentarse a los sistemas de frente, sino encontrar sus puntos débiles. Probablemente te hayan subestimado más de una vez personas que confunden la amabilidad con la debilidad.",
+            "Tu flexibilidad es una forma de inteligencia. Ves lo que los demás están a punto de hacer y ya vas por medio camino antes de que se den cuenta.",
+            "Esto te convierte en una persona con un talento natural para colaborar, negociar y traducir. También significa que la gente no siempre se da cuenta de todo el trabajo que estás haciendo.",
+            "Eres un maestro del «tai chi social». En lugar de bloquear la energía, la rediriges. Esto te hace increíblemente eficaz en entornos caóticos.",
+            "Pero doblarte constantemente puede hacer que, con el tiempo, acabes olvidando cómo es tu forma natural. Tienes derecho a mantenerte firme cuando sea necesario."
           ],
           "shadows": [
-            "You can bend so far you lose track of your own shape.",
-            "You adapt to please, then resent the person you adapted for.",
-            "You might avoid necessary conflict, letting things fester until they break."
+            "Puedes doblarte tanto que llegues a perder la noción de tu propia forma.",
+            "Te adaptas para complacer a alguien y luego acabas resentido con esa persona por la que te adaptaste.",
+            "Es posible que evites conflictos necesarios, dejando que las cosas se agraven hasta que acaben por estallar."
           ],
           "advice": [
-            "Once this week, say 'no' to something small. Notice what happens.",
-            "Write down three things you actually want — not what fits the situation.",
-            "Pick one person who's never seen you be stubborn. Let them.",
-            "When you feel resentful, ask yourself: 'Did I say yes when I meant no?'"
+            "Al menos una vez esta semana, di «no» a algo sin importancia. Fíjate en lo que pasa.",
+            "Escribe tres cosas que realmente quieras, no lo que se ajuste a la situación.",
+            "Elige a una persona que nunca te haya visto ser terco. Deja que lo vea.",
+            "Cuando sientas resentimiento, pregúntate: «¿He dicho que sí cuando en realidad quería decir que no?»."
           ],
           "keywords": [
-            "adaptive",
-            "graceful",
-            "intuitive",
-            "underestimated"
+            "adaptativo",
+            "elegante",
+            "intuitivo",
+            "subestimado"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You move with the current without losing the shore.",
+          "hero": "Te dejas llevar por la corriente sin perder de vista la orilla.",
           "narrative": [
-            "You can be firm or yielding as the moment calls for — and you don't make a big deal about switching between them.",
-            "This is what real social intelligence looks like. Not performance — calibration.",
-            "People trust you because you seem to know what's needed. They also sometimes take that for granted.",
-            "You know when to push and when to yield. This is a rare form of grace that most people spend their whole lives trying to learn.",
-            "You are the glue that holds groups together. You don't demand the spotlight, but you are the reason the light stays on."
+            "Puedes mostrarte firme o flexible según lo requiera el momento, y no le das mayor importancia al hecho de alternar entre ambas actitudes.",
+            "Así es como se manifiesta la verdadera inteligencia social. No se trata de rendimiento, sino de calibración.",
+            "La gente confía en ti porque parece que sabes lo que hace falta. A veces, además, lo dan por sentado.",
+            "Sabes cuándo insistir y cuándo ceder. Se trata de una cualidad excepcional que la mayoría de la gente se pasa toda la vida intentando aprender.",
+            "Eres el pegamento que mantiene unidos a los grupos. No buscas ser el centro de atención, pero eres la razón por la que la luz sigue encendida."
           ],
           "shadows": [
-            "You over-accommodate, then quietly withdraw.",
-            "You mistake your own flexibility for not having preferences.",
-            "You might let others make decisions that affect you deeply, just to keep the peace."
+            "Te adaptas en exceso y luego te retiras discretamente.",
+            "Confundes tu propia flexibilidad con el hecho de no tener preferencias.",
+            "Es posible que dejes que otros tomen decisiones que te afectan profundamente, solo para mantener la paz."
           ],
           "advice": [
-            "Once this week, voice a preference before someone else does.",
-            "Notice where you soften your language unnecessarily.",
-            "You're allowed to want things. Practice wanting them out loud.",
-            "Be honest with yourself about your own boundaries. Are you bending, or are you breaking?"
+            "Al menos una vez esta semana, expresa tu preferencia antes de que lo haga otra persona.",
+            "Fíjate en los casos en los que suavizas tu lenguaje sin necesidad.",
+            "Está bien que quieras cosas. Practica expresarlo en voz alta.",
+            "Sé sincero contigo mismo respecto a tus propios límites. ¿Te estás adaptando o los estás traspasando?"
           ],
           "keywords": [
-            "calibrated",
-            "graceful",
-            "empathic",
+            "calibrado",
+            "elegante",
+            "empático",
             "social"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You bloom in the right light. Not every light.",
+          "hero": "Floreces con la luz adecuada. No con cualquier luz.",
           "narrative": [
-            "You feel other people's moods before they name them. That's a gift, but it makes you susceptible to rooms that drain you.",
-            "When you're in the right place, you're lush and creative. When you're not, you go small.",
-            "You've probably learned to distrust your own sensitivity. Don't. It's the most accurate instrument you have.",
-            "You are a psychic sponge. You need to learn how to wring yourself out at the end of the day, or you'll carry everyone else's weight.",
-            "The right room won't just tolerate you; it will nourish you. Find it, and stay there as long as you can."
+            "Percibes el estado de ánimo de los demás antes de que lo expresen. Eso es un don, pero te hace vulnerable a los ambientes que te agotan.",
+            "Cuando estás en el lugar adecuado, te sientes pleno y creativo. Cuando no lo estás, te sientes limitado.",
+            "Probablemente hayas aprendido a desconfiar de tu propia sensibilidad. No lo hagas. Es el instrumento más preciso que tienes.",
+            "Eres una esponja emocional. Tienes que aprender a «escurrirte» al final del día, o acabarás cargando con el peso de todos los demás.",
+            "El lugar adecuado no solo te aceptará; te nutrirá. Encuéntralo y quédate allí todo el tiempo que puedas."
           ],
           "shadows": [
-            "You absorb other people's stress as if it were your own.",
-            "You mistake peacekeeping for peace.",
-            "You might isolate yourself completely after socializing, needing days to recover."
+            "Te haces cargo del estrés de los demás como si fuera el tuyo propio.",
+            "Confundes el mantenimiento de la paz con la paz.",
+            "Es posible que te aísles por completo después de salir con gente y que necesites varios días para recuperarte."
           ],
           "advice": [
-            "Write down one place and one person where you feel lightest. Spend more time there.",
-            "When you feel 'off' around someone, trust it once before explaining it away.",
-            "You don't need to fix anyone's mood. Not even to protect your own.",
-            "Create a 'detox ritual' after being in crowded spaces. Shower, walk, or just breathe."
+            "Anota un lugar y una persona con los que te sientas más a gusto. Pasa más tiempo allí.",
+            "Cuando te sientas «raro» con alguien, confía en esa sensación al menos una vez antes de buscarle una explicación.",
+            "No tienes por qué animar a nadie. Ni siquiera para proteger tu propio estado de ánimo.",
+            "Crea un «ritual de desintoxicación» después de estar en lugares concurridos. Date una ducha, sal a dar un paseo o simplemente respira."
           ],
           "keywords": [
-            "sensitive",
-            "empathic",
-            "growth",
-            "bloom"
+            "delicado",
+            "empático",
+            "crecimiento",
+            "florecer"
           ]
         }
       }
     },
     "THE_RADIATOR": {
-      "name": "The Radiator",
-      "tagline": "You warm rooms by existing in them.",
+      "name": "El Radiator",
+      "tagline": "Las habitaciones se calientan con tu sola presencia.",
       "symbol": "☀",
       "color": "#E85D2F",
-      "element": "Fire",
+      "element": "Cuatro",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You have main-character energy, but you also carry a restless inner fire.",
+          "hero": "Tienes la energía de un protagonista, pero también albergas un fuego interior inquieto.",
           "narrative": [
-            "You command attention the moment you enter a room. People are drawn to your passion, warmth, and undeniable presence.",
-            "However, beneath the surface, there's a constant craving for 'more.' You struggle to settle for a mundane routine, and this restlessness drives you forward.",
-            "Your light is bright, but you often pour everything into others while neglecting your own emotional needs. You feel most alive when you're chasing new experiences and pushing boundaries.",
-            "Instead of forcing yourself into a 'stable' box, embrace your dynamic nature. Your challenge isn't finding peace, but finding your center amidst constant change."
+            "Capas de llamar la atención nada más entrar en una habitación. Tu pasión, tu calidez y tu innegable presencia atraen a la gente.",
+            "Sin embargo, en el fondo, hay un deseo constante de «más». Te cuesta conformarte con una rutina cotidiana, y esa inquietud te impulsa a seguir adelante.",
+            "Tu luz brilla con intensidad, pero a menudo lo das todo por los demás y descuidas tus propias necesidades emocionales. Te sientes más vivo cuando buscas nuevas experiencias y superas tus límites.",
+            "En lugar de encasillarte en un molde «estable», acepta tu naturaleza dinámica. Tu reto no es encontrar la paz, sino encontrar tu equilibrio en medio del cambio constante."
           ],
           "shadows": [
-            "You burn out easily trying to meet everyone's expectations.",
-            "You sometimes over-perform to mask your inner anxiety.",
-            "You can be incredibly stubborn, and when you snap, it's explosive."
+            "Te agotas fácilmente al intentar cumplir con las expectativas de todo el mundo.",
+            "A veces te esfuerzas demasiado para ocultar tu ansiedad interior.",
+            "Puedes ser increíblemente terco, y cuando pierdes los estribos, es algo explosivo."
           ],
           "advice": [
-            "Take time alone to cool down your inner fire.",
-            "Don't stay in one place. Travel, start a new project, and channel your energy outward.",
-            "Fill your own cup first before pouring into others."
+            "Tómate un rato a solas para calmar tu fuego interior.",
+            "No te quedes en un mismo sitio. Viaja, emprende un nuevo proyecto y canaliza tu energía hacia el exterior.",
+            "Llena primero tu propia taza antes de servir a los demás."
           ],
           "keywords": [
-            "Main Character",
-            "Passion",
-            "Inner Fire",
-            "Change"
+            "Personaje principal",
+            "Pasión",
+            "Fuego interior",
+            "Cambiar"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You carry warmth that reads the room before it fills it.",
+          "hero": "Desprendes una calidez que capta el ambiente antes incluso de que lo llene.",
           "narrative": [
-            "Your fire is steady rather than explosive. You know when to lead and when to listen — a rarer gift than most people realize.",
-            "You radiate without demanding attention. People trust you because you seem to know the temperature of a situation without anyone telling you.",
-            "This balance is your superpower. But balanced people often feel invisible next to louder ones.",
-            "You are the campfire that everyone gathers around. You don't need to be the loudest; you just need to be the most consistent.",
-            "Don't let your calm demeanor hide your own needs. You are allowed to flicker, and you are allowed to be seen."
+            "Tu pasión es constante, más que explosiva. Sabes cuándo liderar y cuándo escuchar, un don más escaso de lo que la mayoría de la gente cree.",
+            "Irradias seguridad sin llamar la atención. La gente confía en ti porque pareces captar el ambiente de una situación sin que nadie te lo diga.",
+            "Este equilibrio es tu superpoder. Pero las personas equilibradas suelen sentirse invisibles al lado de otras más extrovertidas.",
+            "Eres la hoguera alrededor de la cual se reúnen todos. No hace falta que seas el que más se hace oír; solo tienes que ser el más constante.",
+            "No dejes que tu actitud serena oculte tus propias necesidades. Tienes derecho a mostrar tus emociones y a que te vean tal y como eres."
           ],
           "shadows": [
-            "You may shrink your own light to keep things harmonious.",
-            "Your calm can read as distance to people who need more heat than you offer.",
-            "You might neglect your own desires to play the role of the stable one."
+            "Puedes reducir tu propia luz para mantener la armonía.",
+            "Tu serenidad puede interpretarse como frialdad por parte de quienes necesitan más calidez de la que tú les ofreces.",
+            "Es posible que descuides tus propios deseos para desempeñar el papel de la persona estable."
           ],
           "advice": [
-            "Once a week, claim the space you'd normally give away.",
-            "When something lights you up, say it out loud — don't just feel it.",
-            "Notice who you dim around. That's information.",
-            "Ask someone for help. You don't always have to be the strong one."
+            "Una vez a la semana, reclama el espacio que normalmente cederías.",
+            "Cuando algo te ilumine, dilo en voz alta; no te limites a sentirlo.",
+            "Fíjate en a quién le bajas el volumen. Eso es información.",
+            "Pide ayuda a alguien. No siempre tienes que ser tú el que se mantenga fuerte."
           ],
           "keywords": [
-            "calibrated",
-            "warmth",
-            "adaptability",
-            "trust"
+            "calibrado",
+            "calidez",
+            "capacidad de adaptación",
+            "confianza"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "Your fire is real — but it needs the right room to burn.",
+          "hero": "Tu pasión es real, pero necesita el espacio adecuado para arder.",
           "narrative": [
-            "You have warmth inside you, but it doesn't always come out easily. The wrong environment can make you feel dim.",
-            "You're at your best when you're around people who see you clearly. When you're not, you don't fake it — you just go quiet.",
-            "This sensitivity isn't weakness. It's a filter. It tells you very fast who's good for you.",
-            "You need a space where your warmth is reflected back to you. If you give heat to an icebox, the icebox doesn't warm up — you just freeze.",
-            "Your sensitivity is a compass. It points you toward the people who will actually appreciate your light."
+            "Llevas calidez dentro de ti, pero no siempre te resulta fácil mostrarla. Un entorno inadecuado puede hacer que te sientas apagado.",
+            "Das lo mejor de ti cuando estás rodeado de gente que te ve tal y como eres. Cuando no es así, no finges: simplemente te callas.",
+            "Esta sensibilidad no es una debilidad. Es un filtro. Te permite saber muy rápido quién te conviene.",
+            "Necesitas un espacio en el que tu calidez te sea devuelta. Si le das calor a una nevera, la nevera no se calienta, sino que tú te congelas.",
+            "Tu sensibilidad es como una brújula. Te guía hacia las personas que realmente sabrán apreciar tu luz."
           ],
           "shadows": [
-            "You wait too long for the 'perfect' moment or the 'perfect' person before you let yourself shine.",
-            "You may have internalized someone else's dim view of you.",
-            "You might dim your own light to match the energy of the room, feeling exhausted later."
+            "Esperas demasiado tiempo a que llegue el momento «perfecto» o la persona «perfecta» antes de atreverte a brillar.",
+            "Es posible que hayas interiorizado la opinión negativa que otra persona tiene de ti.",
+            "Es posible que atenúes tu propia luz para adaptarte a la energía de la habitación y que luego te sientas agotado."
           ],
           "advice": [
-            "Write down three people or places where you feel most yourself. Spend more time there.",
-            "One small thing you've been putting off: start it today, ugly.",
-            "You don't need permission. You need a witness. Find one.",
-            "Give yourself permission to leave a room that doesn't feed your fire."
+            "Anota tres personas o lugares en los que te sientas más tú mismo. Pasa más tiempo allí.",
+            "Una cosita que llevas posponiendo: ponte con ella hoy mismo, feo.",
+            "No necesitas permiso. Necesitas un testigo. Busca uno.",
+            "Date permiso para salir de un lugar que no te motive."
           ],
           "keywords": [
-            "sensitivity",
-            "loyalty",
-            "quiet fire",
-            "environment"
+            "sensibilidad",
+            "lealtad",
+            "fuego silencioso",
+            "medio ambiente"
           ]
         }
       }
     },
     "THE_KEEPER": {
-      "name": "The Keeper",
-      "tagline": "You're not a bonfire. You're a lantern.",
+      "name": "El Keeper",
+      "tagline": "No eres una hoguera. Eres una linterna.",
       "symbol": "✦",
       "color": "#C2461F",
-      "element": "Fire",
+      "element": "Cuatro",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You burn steady, and you burn alone — and that's not loneliness, that's craft.",
+          "hero": "Ardes con constancia y ardes en soledad; y eso no es soledad, es arte.",
           "narrative": [
-            "Your fire is focused, not loud. You don't need an audience to keep going, and you don't need applause to know you're on track.",
-            "You notice things other people miss — a shift in tone, a detail in a room, a pattern in someone's behavior.",
-            "This makes you excellent at things that require precision and patience. It also means you carry a lot inside.",
-            "You are the watchman in the tower. You see the storm coming before anyone else does, but sometimes you forget to warn the people below.",
-            "Your quiet intensity is a gift, but you don't have to hold the whole world in your chest. Let someone else take the watch for a while."
+            "Tu pasión es intensa, pero discreta. No necesitas público para seguir adelante, ni aplausos para saber que vas por buen camino.",
+            "Te fijas en cosas que a los demás se les pasan por alto: un cambio de tono, un detalle en una habitación, un patrón en el comportamiento de alguien.",
+            "Esto hace que se te den muy bien las cosas que requieren precisión y paciencia. También significa que te guardas muchas cosas para ti.",
+            "Eres el centinela de la torre. Ves venir la tormenta antes que nadie, pero a veces te olvidas de avisar a la gente que está abajo.",
+            "Tu intensidad silenciosa es un don, pero no tienes por qué llevar todo el peso del mundo sobre tus hombros. Deja que otra persona se haga cargo por un rato."
           ],
           "shadows": [
-            "You hold stress quietly until it becomes physical.",
-            "You can confuse your own intensity with other people's expectations of you.",
-            "You might bottle up your emotions until they explode in private."
+            "Acumulas el estrés en silencio hasta que se manifiesta físicamente.",
+            "Puedes confundir tu propia intensidad con las expectativas que los demás tienen de ti.",
+            "Es posible que te guardes tus emociones hasta que acaben estallando en privado."
           ],
           "advice": [
-            "Name one worry you've been carrying alone. Say it out loud to someone.",
-            "Move your body once this week in a way that isn't for fitness. Just for feeling.",
-            "You're allowed to be a specialist without being a workaholic.",
-            "Find a safe person to share your inner world with. You don't have to be a fortress."
+            "Nombra una preocupación que hayas estado cargando tú solo. Díselo en voz alta a alguien.",
+            "Esta semana, haz algún tipo de actividad física que no tenga como objetivo ponerte en forma. Solo por el placer de hacerlo.",
+            "Se puede ser un especialista sin ser un adicto al trabajo.",
+            "Busca a alguien de confianza con quien compartir tu mundo interior. No tienes por qué ser una fortaleza."
           ],
           "keywords": [
-            "focused",
-            "precise",
-            "perceptive",
-            "self-contained"
+            "centrado",
+            "preciso",
+            "perspicaz",
+            "autónomo"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You light what's near you — not everything.",
+          "hero": "Iluminas lo que tienes cerca, no todo.",
           "narrative": [
-            "You have real warmth, and you're not shy with it. But you also know the difference between lighting a room and burning yourself out for it.",
-            "People come to you with their real problems, not their small talk. That's not because you demand it — it's because you invite it without trying.",
-            "You're the kind of person others feel safe around. That's a very specific kind of power.",
-            "You are the trusted confidant. You know how to hold space for someone else's pain without getting swallowed by it.",
-            "Remember that you also need a listener. It's okay to ask for the same kind of space you so freely give."
+            "Tienes una calidez auténtica y no te cuesta mostrarla. Pero también sabes distinguir entre iluminar un ambiente y agotarte por ello.",
+            "La gente acude a ti con sus problemas de verdad, no con charlas triviales. Y eso no es porque tú lo exijas, sino porque lo fomentas sin darte cuenta.",
+            "Eres el tipo de persona con la que los demás se sienten seguros. Eso es un tipo de poder muy concreto.",
+            "Eres la persona de confianza. Sabes cómo dar cabida al dolor de otra persona sin que este te abrume.",
+            "Recuerda que tú también necesitas a alguien que te escuche. No pasa nada por pedir el mismo tipo de espacio que tú ofreces tan generosamente."
           ],
           "shadows": [
-            "You let certain people take more than they give.",
-            "You deprioritize your own heat to keep other fires going.",
-            "You might enable others by always being the one who fixes things."
+            "Dejas que ciertas personas reciban más de lo que aportan.",
+            "Dejas de lado tus propias necesidades para mantener vivos otros fuegos.",
+            "Puede que animes a los demás siendo siempre quien arregla las cosas."
           ],
           "advice": [
-            "Notice who you give your best energy to. Is it mutual?",
-            "Ask for one thing this week without explaining why you need it.",
-            "Let one person take care of you without managing the process.",
-            "Set a boundary with someone who only takes. It's not selfish; it's survival."
+            "Fíjate en quiénes son las personas a las que dedicas tu mejor energía. ¿Es algo recíproco?",
+            "Pide una cosa esta semana sin explicar por qué la necesitas.",
+            "Deja que una persona se ocupe de ti sin que tengas que gestionar el proceso.",
+            "Establece unos límites con alguien que solo se aprovecha de ti. No es egoísmo; es una cuestión de supervivencia."
           ],
           "keywords": [
-            "warmth",
-            "trust",
-            "selective",
-            "listener"
+            "calidez",
+            "confianza",
+            "selectivo",
+            "oyente"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You glow in the right company and disappear in the wrong one.",
+          "hero": "Brillas cuando estás con la gente adecuada y pasas desapercibido cuando estás con la gente equivocada.",
           "narrative": [
-            "Your light isn't loud — it's tender. It shows up strongest when you trust the people around you.",
-            "In the wrong environment, you don't dim on purpose; you just fade. And you often don't notice until someone says 'you've been quiet.'",
-            "Your sensitivity isn't fragility. It's the reason people trust you with their own tenderness.",
-            "You need a small, trusted circle. You are not meant for the loud, crowded room; you are meant for the deep, quiet conversation.",
-            "The right people will protect your softness, not exploit it. Find them, and give them your whole heart."
+            "Tu luz no es estridente, sino tierna. Se manifiesta con mayor intensidad cuando confías en las personas que te rodean.",
+            "En un entorno inadecuado, no te retraes a propósito; simplemente te vas apagando poco a poco. Y, a menudo, no te das cuenta hasta que alguien te dice: «Llevas un rato callado».",
+            "Tu sensibilidad no es fragilidad. Es la razón por la que la gente te confía su propia ternura.",
+            "Necesitas un círculo pequeño y de confianza. No estás hecho para las salas ruidosas y abarrotadas; estás hecho para las conversaciones profundas y tranquilas.",
+            "Las personas adecuadas protegerán tu sensibilidad, no se aprovecharán de ella. Encuéntralas y entreguéles todo tu corazón."
           ],
           "shadows": [
-            "You carry other people's emotions as if they were yours.",
-            "You mistake self-protection for self-erasure.",
-            "You might isolate yourself completely to avoid getting hurt."
+            "Te haces cargo de las emociones de los demás como si fueran tuyas.",
+            "Confundes la autoprotección con la autodestrucción.",
+            "Es posible que te aísles por completo para evitar que te hagan daño."
           ],
           "advice": [
-            "Keep a running list of who makes you feel more like yourself, not less.",
-            "Once this week, leave the room early if it doesn't feel right.",
-            "You don't owe anyone a performance of wellness.",
-            "Give yourself permission to be a 'homebody'. Your energy needs a safe harbor."
+            "Haz una lista en la que vayas anotando a las personas que te hacen sentir más tú mismo, y no menos.",
+            "Al menos una vez esta semana, sal de la sala antes de tiempo si no te sientes a gusto.",
+            "No le debes a nadie que te muestres en plena forma.",
+            "Date permiso para ser una persona «casera». Tu energía necesita un refugio seguro."
           ],
           "keywords": [
             "tender",
-            "intuitive",
-            "protective",
-            "quiet strength"
+            "intuitivo",
+            "protector",
+            "fuerza silenciosa"
           ]
         }
       }
     },
     "THE_ANCHOR": {
-      "name": "The Anchor",
-      "tagline": "You're the ground other people stand on.",
+      "name": "El Anchor",
+      "tagline": "Tú eres el suelo sobre el que se apoyan los demás.",
       "symbol": "▣",
       "color": "#8B6F3F",
-      "element": "Earth",
+      "element": "Tierra",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You are an immovable mountain and a master strategist.",
+          "hero": "Eres una montaña inamovible y un maestro de la estrategia.",
           "narrative": [
-            "You are the anchor—reliable, deeply grounded, and profoundly responsible. Once you commit to something, you see it through with unwavering determination.",
-            "Beneath your calm exterior lies a fierce ambition and a powerful drive for control. You are naturally built to lead organizations or build your own empire.",
-            "Your mind is constantly mapping out solutions for complex problems. You shine the brightest when you're architecting a plan and taking ownership of the outcome.",
-            "However, beware of your tendency to control everything and the immense pressure you put on yourself. Sometimes, letting go and allowing things to flow will make you an even stronger leader."
+            "Eres el pilar: fiable, con los pies bien puestos en la tierra y profundamente responsable. Una vez que te comprometes con algo, lo llevas a cabo con una determinación inquebrantable.",
+            "Tras tu apariencia tranquila se esconde una ambición feroz y un poderoso afán de control. Tienes un talento innato para dirigir organizaciones o construir tu propio imperio.",
+            "Tu mente está constantemente buscando soluciones a problemas complejos. Es cuando más destacas cuando elaboras un plan y te haces responsable del resultado.",
+            "Sin embargo, ten cuidado con tu tendencia a controlarlo todo y con la enorme presión a la que te sometes. A veces, soltar las riendas y dejar que las cosas sigan su curso te convertirá en un líder aún más fuerte."
           ],
           "shadows": [
-            "Your intensity can make others feel overwhelmed or pressured.",
-            "When things go off-plan, you can become stubborn or prone to frustration.",
-            "You try to carry the weight of the world on your shoulders, leading to severe burnout."
+            "Tu intensidad puede hacer que los demás se sientan abrumados o presionados.",
+            "Cuando las cosas no salen según lo previsto, puedes volverte obstinado o propenso a la frustración.",
+            "Intentas cargar con el peso del mundo sobre tus hombros, lo que te lleva a un agotamiento extremo."
           ],
           "advice": [
-            "Stop trying to control everything. Learn the art of delegation.",
-            "Use your ambition not just for yourself, but to elevate those around you.",
-            "Rest is not a sign of weakness. It's how you prepare for the next climb."
+            "Deja de intentar controlarlo todo. Aprende el arte de delegar.",
+            "Aprovecha tu ambición no solo para ti mismo, sino también para ayudar a crecer a quienes te rodean.",
+            "El descanso no es un signo de debilidad. Es la forma de prepararse para la próxima subida."
           ],
           "keywords": [
-            "Mountain",
-            "Strategist",
-            "Leadership",
-            "Responsibility",
-            "Ambition"
+            "Montaña",
+            "Estratega",
+            "Liderazgo",
+            "Responsabilidad",
+            "Ambición"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You hold steady without holding others back.",
+          "hero": "Te mantienes firme sin frenar a los demás.",
           "narrative": [
-            "You have the anchor's strength without its rigidity. You know when to stand firm and when to bend, and you don't agonize over the choice.",
-            "People lean on you because you don't ask them to. You just happen to be there, and that turns out to matter more than most people realize.",
-            "This is quiet power. It doesn't photograph well, but it lasts.",
-            "You are the pillar of the community. You don't need to be in charge, but you are the one everyone relies on when things get hard.",
-            "Make sure your foundation is solid for yourself first. You can't support others if you're crumbling from within."
+            "Tienes la fuerza de un ancla sin su rigidez. Sabes cuándo mantenerte firme y cuándo ceder, y no te atormentas a la hora de tomar esa decisión.",
+            "La gente confía en ti porque no se lo pides. Simplemente estás ahí, y eso resulta ser más importante de lo que la mayoría de la gente cree.",
+            "Esto es poder silencioso. No queda bien en las fotos, pero dura mucho.",
+            "Eres el pilar de la comunidad. No hace falta que estés al mando, pero eres en quien todos confían cuando las cosas se ponen difíciles.",
+            "Asegúrate primero de que tus cimientos sean sólidos para ti mismo. No puedes apoyar a los demás si te estás desmoronando por dentro."
           ],
           "shadows": [
-            "You take on more weight than you admit because you don't want to make it a thing.",
-            "You confuse consistency with staying in a role you've outgrown.",
-            "You might let others become overly dependent on you, stunting their growth."
+            "Engordas más de lo que reconoces porque no quieres darle importancia.",
+            "Confundes la coherencia con quedarte en un puesto que ya te queda pequeño.",
+            "Es posible que permitas que los demás se vuelvan demasiado dependientes de ti, lo que frenaría su desarrollo."
           ],
           "advice": [
-            "Ask for one thing this week that you'd normally just handle yourself.",
-            "Check: are you the ground, or are you the ceiling?",
-            "Give away one responsibility you've been carrying silently.",
-            "Let someone else step up. They might surprise you."
+            "Esta semana, pide que te ayuden con algo que, normalmente, harías tú mismo.",
+            "Piénsalo: ¿eres el suelo o eres el techo?",
+            "Deshazte de una responsabilidad que has estado cargando en silencio.",
+            "Deja que sea otra persona la que dé un paso al frente. Quizá te sorprenda."
           ],
           "keywords": [
-            "grounded",
-            "trustworthy",
-            "quiet strength",
-            "balance"
+            "con los pies en la tierra",
+            "de fiar",
+            "fuerza silenciosa",
+            "saldo"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "Your stability is real — but it depends on solid ground under you.",
+          "hero": "Tu estabilidad es real, pero depende de que haya un suelo firme bajo tus pies.",
           "narrative": [
-            "You have the anchor's loyalty, but it needs a place to anchor to. When you find it, you're immovable. When you don't, you drift.",
-            "You feel other people's chaos more than you show. You absorb it, sit with it, and eventually it becomes yours.",
-            "Your power isn't in holding everything — it's in choosing what to hold.",
-            "You are a sponge for the energy of your environment. When the ground is shaky, you feel it in your bones.",
-            "Your first priority must be creating a stable home base. You cannot be a safe harbor for others if you are lost at sea."
+            "Cuentas con la lealtad del ancla, pero esta necesita un lugar donde fondear. Cuando lo encuentras, nada puede hacerte tambalear. Cuando no lo encuentras, vas a la deriva.",
+            "Sientes el caos de los demás más de lo que demuestras. Lo absorbes, lo asimilas y, al final, acaba convirtiéndose en algo tuyo.",
+            "Tu fuerza no reside en quedarte con todo, sino en elegir con qué quedarte.",
+            "Absorbes como una esponja la energía de tu entorno. Cuando el suelo tiembla, lo sientes en los huesos.",
+            "Tu prioridad principal debe ser crear un hogar estable. No puedes ser un refugio seguro para los demás si tú mismo estás perdido en el mar."
           ],
           "shadows": [
-            "You stay loyal to places and people that no longer hold you.",
-            "You carry other people's weight until you forget what yours feels like.",
-            "You might resist moving on because the familiar, even if painful, feels safer."
+            "Sigues siendo fiel a lugares y personas que ya no te retienen.",
+            "Llevas el peso de los demás hasta que olvidas cómo se siente el tuyo.",
+            "Quizá te resistas a seguir adelante porque lo conocido, aunque sea doloroso, te da más seguridad."
           ],
           "advice": [
-            "Name one thing you're holding that isn't yours. Put it down this week.",
-            "Find the place where you feel most solid. Go there more.",
-            "You can be steady without being a shelter for everyone.",
-            "If a place or person makes you feel unstable, it's okay to walk away."
+            "Nombra una cosa que tengas en tus manos y que no sea tuya. Déjala esta semana.",
+            "Encuentra el lugar donde te sientas más seguro. Ve allí más a menudo.",
+            "Puedes ser una persona estable sin tener que servir de refugio para todo el mundo.",
+            "Si un lugar o una persona te hacen sentir inseguro, no pasa nada por alejarte."
           ],
           "keywords": [
-            "loyal",
-            "steady",
-            "grounded",
-            "protective"
+            "leal",
+            "constante",
+            "con los pies en la tierra",
+            "protector"
           ]
         }
       }
     },
     "THE_CULTIVATOR": {
-      "name": "The Cultivator",
-      "tagline": "You grow things. Quietly, patiently, for real.",
+      "name": "El Cultivator",
+      "tagline": "Cultivas cosas. En silencio, con paciencia, de verdad.",
       "symbol": "❉",
       "color": "#A89060",
-      "element": "Earth",
+      "element": "Tierra",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You build things that last, by hand, without shortcuts.",
+          "hero": "Construyes cosas que perduran, a mano y sin atajos.",
           "narrative": [
-            "You don't need grand gestures. You need steady work, close attention, and time. You're the person who actually finishes what others only started.",
-            "People underestimate you because your power doesn't announce itself. Then years pass and you're the one still standing with something real.",
-            "This is a rare gift. Most people can start things. Very few can grow them.",
-            "You are the master gardener of life. You plant seeds and nurture them with tireless patience, even when no one else can see the growth.",
-            "But don't forget to leave some water in the can for yourself. Your own garden needs tending too."
+            "No hacen falta grandes gestos. Lo que hace falta es trabajo constante, mucha atención y tiempo. Tú eres la persona que realmente termina lo que otros solo han empezado.",
+            "La gente te subestima porque tu poder no se hace notar. Luego pasan los años y tú eres el único que sigue en pie con algo auténtico.",
+            "Es un don poco común. La mayoría de la gente es capaz de empezar cosas. Muy pocos son capaces de hacerlas crecer.",
+            "Eres el maestro jardinero de la vida. Plantas semillas y las cuidas con una paciencia incansable, incluso cuando nadie más puede ver cómo crecen.",
+            "Pero no te olvides de dejar un poco de agua en el cubo para ti. Tu propio jardín también necesita cuidados."
           ],
           "shadows": [
-            "You take on responsibility for everyone else's success.",
-            "You keep giving past the point where it's working.",
-            "You might feel unappreciated because your work is often invisible until it blooms."
+            "Te haces responsable del éxito de todos los demás.",
+            "Sigues dando más allá del punto en el que ya funciona.",
+            "Quizá te sientas poco valorado porque tu trabajo suele pasar desapercibido hasta que da sus frutos."
           ],
           "advice": [
-            "Pick one thing you've been tending out of loyalty, not love. Let it go.",
-            "Ask yourself what you'd grow if no one needed anything from you.",
-            "You're allowed to build something just for you.",
-            "Celebrate a small win today. You worked hard for it."
+            "Elige una cosa a la que hayas estado dedicando tiempo por lealtad, no por amor. Déjala ir.",
+            "Pregúntate qué cultivarías si nadie necesitara nada de ti.",
+            "Tienes permiso para crear algo solo para ti.",
+            "Celebra hoy un pequeño logro. Te has esforzado mucho para conseguirlo."
           ],
           "keywords": [
-            "patient",
-            "practical",
-            "nurturing",
-            "builder"
+            "paciente",
+            "práctico",
+            "cuidador",
+            "constructor"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You make things grow — including people.",
+          "hero": "Haces que las cosas crezcan, incluidas las personas.",
           "narrative": [
-            "You have a rare instinct for what a person, project, or place needs to thrive. You don't impose it — you just quietly supply what's missing.",
-            "This makes you invaluable in collaborative work. You're the reason things actually happen, even when your name isn't on them.",
-            "You also know when to step back. That's the mark of a real cultivator.",
-            "You are the soil that others grow in. You provide the nutrients, the stability, and the support so others can shine.",
-            "Remember that you also deserve to bloom. You don't have to stay in the background forever."
+            "Tienes un instinto excepcional para saber qué necesita una persona, un proyecto o un lugar para prosperar. No lo impones, simplemente aportas discretamente lo que falta.",
+            "Esto te convierte en una pieza clave en el trabajo en equipo. Tú eres la razón por la que las cosas realmente se llevan a cabo, incluso cuando tu nombre no aparece en ellas.",
+            "También sabes cuándo dar un paso atrás. Esa es la seña de identidad de un verdadero cultivador.",
+            "Tú eres el suelo en el que crecen los demás. Aportas los nutrientes, la estabilidad y el apoyo necesarios para que los demás puedan brillar.",
+            "Recuerda que tú también te mereces brillar. No tienes por qué quedarte en un segundo plano para siempre."
           ],
           "shadows": [
-            "You over-support until the other person stops trying.",
-            "You downplay your role because the growing isn't dramatic.",
-            "You might feel resentful when others take credit for your quiet work."
+            "Apoyas en exceso hasta que la otra persona deja de esforzarse.",
+            "Minimizas tu papel porque el crecimiento no es espectacular.",
+            "Es posible que te sientas resentido cuando otros se atribuyen el mérito de tu trabajo discreto."
           ],
           "advice": [
-            "Once this week, name what you actually contributed to a success.",
-            "Notice where your support is being taken for granted. Adjust.",
-            "Let one person fail without stepping in. Watch what they do.",
-            "Speak up about your contribution. It's not bragging; it's the truth."
+            "Una vez esta semana, menciona en qué has contribuido realmente a un éxito.",
+            "Fíjate en los ámbitos en los que se da por sentado tu apoyo. Adáptate.",
+            "Deja que una persona fracase sin intervenir. Observa lo que hace.",
+            "Habla abiertamente de tu contribución. No es presumir; es la verdad."
           ],
           "keywords": [
-            "nurturing",
-            "practical",
-            "steady",
-            "supportive"
+            "cuidador",
+            "práctico",
+            "constante",
+            "solidario"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You bloom when someone tends to you back.",
+          "hero": "Floreces cuando alguien te cuida a su vez.",
           "narrative": [
-            "You give naturally, but you're not great at receiving. People assume you're fine because you seem fine. You usually are. Usually.",
-            "Your best work happens when someone believes in you a little more than the situation warrants.",
-            "You don't need to become harder. You need to choose softer soil.",
-            "You are a mirror. When someone gives you love and attention, you reflect it back tenfold. But you need someone to give it first.",
-            "Don't wait for permission to take care of yourself. You deserve the same care you freely give to everyone else."
+            "Das con naturalidad, pero no se te da muy bien recibir. La gente da por hecho que estás bien porque pareces estarlo. Y normalmente lo estás. Normalmente.",
+            "Das lo mejor de ti cuando alguien cree en ti un poco más de lo que la situación justifica.",
+            "No hace falta que te vuelvas más duro. Lo que tienes que hacer es elegir un suelo más blando.",
+            "Eres como un espejo. Cuando alguien te da amor y atención, se lo devuelves multiplicado por diez. Pero necesitas que alguien te lo dé primero.",
+            "No esperes a que te den permiso para cuidarte. Te mereces el mismo cuidado que ofreces generosamente a los demás."
           ],
           "shadows": [
-            "You give more than you have and call it generosity.",
-            "You mistake over-responsibility for love.",
-            "You might burn out trying to be everything to everyone."
+            "Das más de lo que tienes y lo llamas generosidad.",
+            "Confundes el exceso de responsabilidad con el amor.",
+            "Podrías acabar agotado si intentas serlo todo para todo el mundo."
           ],
           "advice": [
-            "Once this week, let someone take care of something for you.",
-            "Write down what you need. Not what others need from you.",
-            "You can put down a burden without putting down the person.",
-            "Surround yourself with people who nurture your growth, not just those who need your nurturing."
+            "Al menos una vez esta semana, deja que alguien se ocupe de algo por ti.",
+            "Anota lo que tú necesitas. No lo que los demás necesitan de ti.",
+            "Puedes aliviar una carga sin menospreciar a la persona.",
+            "Rodéate de personas que fomenten tu crecimiento, no solo de aquellas que necesitan que tú las apoyes."
           ],
           "keywords": [
-            "nurturing",
-            "sensitive",
-            "giving",
-            "patient"
+            "cuidador",
+            "delicado",
+            "dar",
+            "paciente"
           ]
         }
       }
     },
     "THE_BLADE": {
-      "name": "The Blade",
-      "tagline": "You cut through what everyone else is avoiding.",
+      "name": "El Blade",
+      "tagline": "Vas al grano, mientras que todos los demás lo evitan.",
       "symbol": "⚔",
       "color": "#5A6B7A",
       "element": "Metal",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You call it what it is — and you'd rather be right than liked.",
+          "hero": "Llamas a las cosas por su nombre, y prefieres tener razón a caer bien.",
           "narrative": [
-            "You have a moral clarity that most people spend their lives trying to develop. You see what's true about a situation fast, and you don't need to soften it to make it true.",
-            "This makes you reliable in a crisis and intimidating in a meeting. Both are useful.",
-            "You're not cold. You're direct. The difference matters, and you don't always explain it.",
-            "You are the scalpel in a world of butter knives. You cut to the heart of the matter, slicing through the noise and confusion with surgical precision.",
-            "But a blade that's always drawn will eventually dull. Know when to put yourself away, to rest, and to just observe."
+            "Tienes una claridad moral que la mayoría de la gente se pasa toda la vida intentando desarrollar. Detectas rápidamente la verdad de una situación y no necesitas suavizarla para que sea cierta.",
+            "Esto te convierte en una persona de confianza en situaciones de crisis y en alguien que inspira respeto en las reuniones. Ambas cosas son útiles.",
+            "No es que seas frío. Es que eres directo. La diferencia es importante, y no siempre la explicas.",
+            "Eres el bisturí en un mundo de cuchillos de mantequilla. Vas directo al meollo de la cuestión, atravesando el ruido y la confusión con precisión quirúrgica.",
+            "Pero una espada que siempre está desenvainada acaba por perder el filo. Hay que saber cuándo guardarla, descansar y limitarse a observar."
           ],
           "shadows": [
-            "You cut too fast. Sometimes people need a second to catch up.",
-            "You can win the argument and lose the room.",
-            "You might use your directness as a shield to avoid dealing with your own emotions."
+            "Vas demasiado rápido. A veces la gente necesita un segundo para seguirte el ritmo.",
+            "Puedes ganar la discusión y perder el apoyo de los demás.",
+            "Es posible que utilices tu franqueza como escudo para evitar enfrentarte a tus propias emociones."
           ],
           "advice": [
-            "Once this week, ask a question before giving the answer.",
-            "Notice where your honesty is a weapon instead of a gift.",
-            "Being right isn't always the win. Sometimes being heard is.",
-            "Ask yourself: 'Am I speaking to be understood, or to be right?'"
+            "Al menos una vez esta semana, haz una pregunta antes de dar la respuesta.",
+            "Fíjate en aquellas situaciones en las que tu honestidad es un arma en lugar de un don.",
+            "Tener razón no siempre significa ganar. A veces, lo que cuenta es que te escuchen.",
+            "Pregúntate: «¿Hablo para que me entiendan o para tener razón?»."
           ],
           "keywords": [
-            "direct",
-            "principled",
-            "sharp",
-            "decisive"
+            "directamente",
+            "de principios",
+            "afilado",
+            "decisivo"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You know when to cut and when to hold.",
+          "hero": "Sabes cuándo vender y cuándo mantener.",
           "narrative": [
-            "You have the blade's clarity without its edge-for-edge's-sake. You can tell the truth without making it into a fight.",
-            "People trust you because you don't lie. They also come to you with hard things because you don't flinch.",
-            "This is an unusual kind of strength — one that doesn't need to prove itself.",
-            "You are the fair judge. You listen to all sides, weigh the evidence, and deliver a verdict that is both just and compassionate.",
-            "Your integrity is your most valuable asset. Guard it fiercely, but allow yourself some grace."
+            "Tienes la claridad de la espada sin esa agresividad que busca el enfrentamiento por el simple hecho de enfrentarse. Puedes decir la verdad sin que eso se convierta en una pelea.",
+            "La gente confía en ti porque no mientes. Además, acuden a ti con asuntos difíciles porque no te echas atrás.",
+            "Se trata de un tipo de fortaleza poco común, una que no necesita demostrar su valía.",
+            "Tú eres el juez imparcial. Escuchas a todas las partes, evalúas las pruebas y dictas un veredicto que es a la vez justo y compasivo.",
+            "Tu integridad es tu bien más preciado. Defiéndela con firmeza, pero sé indulgente contigo mismo."
           ],
           "shadows": [
-            "You can slip into being the fixer for everyone else's mess.",
-            "You confuse being needed with being wanted.",
-            "You might become overly critical of yourself when you fall short of your own high standards."
+            "Puedes acabar convirtiéndote en el que tiene que arreglar los líos de los demás.",
+            "Confundes el hecho de que te necesiten con el de que te quieran.",
+            "Es posible que te vuelvas demasiado crítico contigo mismo cuando no consigas cumplir tus propios estándares, que son muy exigentes."
           ],
           "advice": [
-            "Once this week, let someone else be the one who knows.",
-            "Say what you feel, not just what you see.",
-            "Notice who you soften around. Learn from that.",
-            "Forgive yourself for a mistake you made. You're human, not a machine."
+            "Al menos una vez esta semana, deja que sea otra persona la que lo sepa.",
+            "Di lo que sientes, no solo lo que ves.",
+            "Fíjate en las personas con las que te muestras más amable. Aprende de ello.",
+            "Perdónate por el error que has cometido. Eres humano, no una máquina."
           ],
           "keywords": [
-            "principled",
-            "clear",
-            "decisive",
-            "trusted"
+            "de principios",
+            "claro",
+            "decisivo",
+            "de confianza"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "Your edge is real — it just needs to be respected, not dulled.",
+          "hero": "Tu ventaja es real: solo hay que respetarla, no restarle importancia.",
           "narrative": [
-            "You have strong convictions, but you've probably been told to soften them. You've learned to hide your edge. That was survival, not growth.",
-            "In the right environment, your precision becomes an asset. In the wrong one, it's a liability.",
-            "You don't need to become less. You need to find people who can hold sharpness.",
-            "You are the diamond in the rough. Under pressure, you shine. But you need an environment that appreciates your hardness, not one that tries to crush it.",
-            "Don't dim your light or dull your edge for anyone. Find your people, and let your sharpness be a gift."
+            "Tienes convicciones firmes, pero probablemente te hayan dicho que las suavices. Has aprendido a ocultar tu lado más marcado. Eso era una cuestión de supervivencia, no de crecimiento.",
+            "En el entorno adecuado, tu precisión se convierte en una ventaja. En el entorno equivocado, es un inconveniente.",
+            "No hace falta que te rebajes. Tienes que encontrar a gente que sepa mantener la agudeza.",
+            "Eres un diamante en bruto. Bajo presión, brillas. Pero necesitas un entorno que valore tu dureza, no uno que intente aplastarla.",
+            "No apagues tu luz ni pierdas tu agudeza por nadie. Encuentra a tu gente y deja que tu agudeza sea un regalo."
           ],
           "shadows": [
-            "You've internalized other people's discomfort with your honesty.",
-            "You second-guess instincts that are usually right.",
-            "You might isolate yourself because you feel you don't fit in."
+            "Te has hecho eco del malestar que tu sinceridad provoca en los demás.",
+            "Te pones a cuestionar tus instintos, que normalmente aciertan.",
+            "Es posible que te aísles porque sientes que no encajas."
           ],
           "advice": [
-            "Once this week, say the thing you've been softening. Notice what happens.",
-            "Find one person who can take your real opinion. Keep them.",
-            "You're not too much. You're in the wrong room.",
-            "Trust your instincts. They are usually right. If someone can't handle your truth, they are not your people."
+            "Una vez esta semana, di aquello que has estado evitando decir. Fíjate en lo que pasa.",
+            "Busca a alguien que pueda aceptar tu opinión sincera. No lo pierdas de vista.",
+            "No es que seas demasiado. Es que estás en la habitación equivocada.",
+            "Confía en tus instintos. Normalmente aciertan. Si alguien no es capaz de aceptar tu verdad, es que no es de los tuyos."
           ],
           "keywords": [
-            "principled",
-            "sharp",
-            "loyal",
-            "misunderstood"
+            "de principios",
+            "afilado",
+            "leal",
+            "incomprendido"
           ]
         }
       }
     },
     "THE_GEM": {
-      "name": "The Gem",
-      "tagline": "You shine because you were cut with intent.",
+      "name": "El Gem",
+      "tagline": "Brillas porque fuiste creado con un propósito.",
       "symbol": "◈",
       "color": "#9AACB8",
       "element": "Metal",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You've spent years refining your taste — and it shows.",
+          "hero": "Llevas años perfeccionando tu gusto, y eso se nota.",
           "narrative": [
-            "You notice quality that other people walk past. A phrase, a finish, a detail in a room — you see the difference, and you care about it.",
-            "You hold yourself to a standard that doesn't come from outside. You're not chasing approval, you're chasing the version of the thing that would make you proud to have made it.",
-            "This makes you exceptional at a certain kind of work. It also makes you difficult to satisfy — including with yourself.",
-            "You are a piece of fine art, meticulously crafted. Your eye for detail is a superpower, but it can also be a curse if you don't learn to let things go.",
-            "Remember that perfection is a horizon you can never reach. The beauty is in the pursuit, not in the arrival."
+            "Te fijas en detalles de calidad que a los demás se les pasan por alto. Una frase, un acabado, un detalle en una habitación… Tú ves la diferencia y te importa.",
+            "Te exiges un nivel que no viene de fuera. No buscas la aprobación de los demás, sino esa versión de lo que has hecho que te haga sentir orgulloso de haberlo creado.",
+            "Esto te convierte en alguien excepcional en un determinado tipo de trabajo. También hace que seas difícil de contentar, incluso contigo mismo.",
+            "Eres una obra de arte, creada con gran esmero. Tu atención al detalle es un superpoder, pero también puede convertirse en una maldición si no aprendes a dejar pasar las cosas.",
+            "Recuerda que la perfección es un horizonte al que nunca podrás llegar. La belleza está en el camino, no en la meta."
           ],
           "shadows": [
-            "You can burn a lot of energy on details no one else will notice.",
-            "You're harder on yourself than you'd ever be on someone else.",
-            "You might become paralyzed by perfectionism, unable to finish anything."
+            "Puedes gastar mucha energía en detalles que nadie más notará.",
+            "Eres más exigente contigo mismo de lo que jamás lo serías con otra persona.",
+            "El perfeccionismo puede llegar a paralizarte, hasta el punto de que seas incapaz de terminar nada."
           ],
           "advice": [
-            "Once this week, ship something at 80%. Notice that no one died.",
-            "Say one kind thing to yourself out loud. Yes, out loud.",
-            "Ask: 'Is this the best I can do, or the best that's needed?'",
-            "Give yourself a break. Take a day off from being perfect."
+            "Esta semana, envía algo al 80 %. Fíjate en que nadie ha muerto.",
+            "Dite algo amable a ti mismo en voz alta. Sí, en voz alta.",
+            "Pregúntate: «¿Es esto lo mejor que puedo hacer, o lo mejor que se necesita?»",
+            "Date un respiro. Tómate un día libre de intentar ser perfecto."
           ],
           "keywords": [
-            "refined",
-            "precise",
-            "perfectionist",
-            "taste"
+            "refinado",
+            "preciso",
+            "perfeccionista",
+            "sabor"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You have taste without letting it run your life.",
+          "hero": "Tienes buen gusto sin dejar que eso te domine la vida.",
           "narrative": [
-            "You know the difference between good and great, but you don't let it stop you from moving. You refine as you go, not before you start.",
-            "This is a rare balance — one that lets you actually finish things while still caring about how they're made.",
-            "People notice the quality of what you touch, even if they can't name why.",
-            "You are a polished gem, radiating elegance and refinement. You don't have to shout to be noticed; your presence speaks for itself.",
-            "But make sure your pursuit of excellence doesn't isolate you from the messy, imperfect beauty of the world."
+            "Sabes cuál es la diferencia entre lo bueno y lo excelente, pero no dejas que eso te impida seguir adelante. Vas perfeccionando sobre la marcha, no antes de empezar.",
+            "Se trata de un equilibrio poco común, uno que te permite llevar las cosas a buen término sin dejar de preocuparte por cómo se hacen.",
+            "La gente percibe la calidad de lo que tocas, aunque no sepa explicar por qué.",
+            "Eres una gema pulida que irradia elegancia y refinamiento. No necesitas alzar la voz para que te vean; tu presencia habla por sí sola.",
+            "Pero asegúrate de que tu búsqueda de la excelencia no te aleje de la belleza caótica e imperfecta del mundo."
           ],
           "shadows": [
-            "You can slip into editing other people's choices without being asked.",
-            "You downplay your own standards to fit into rooms that don't share them.",
-            "You might use your taste as a way to feel superior to others."
+            "Puedes acabar modificando las elecciones de otras personas sin que te lo hayan pedido.",
+            "Minimizas tus propios criterios para encajar en entornos que no los comparten.",
+            "Es posible que utilices tus gustos para sentirte superior a los demás."
           ],
           "advice": [
-            "Once this week, notice where your standards are a gift, and where they're a gate.",
-            "Pick one thing to do badly on purpose. See what happens.",
-            "Let someone else's version of 'good' be good enough.",
-            "Appreciate the beauty in the imperfect. Wabi-sabi is a thing."
+            "Al menos una vez esta semana, fíjate en qué aspectos tus normas son un regalo y en cuáles son un obstáculo.",
+            "Elige una cosa que quieras hacer mal a propósito. A ver qué pasa.",
+            "Deja que la versión de «bueno» de otra persona sea suficiente.",
+            "Aprecia la belleza de lo imperfecto. El wabi-sabi es algo real."
           ],
           "keywords": [
-            "refined",
-            "balanced",
-            "tasteful",
-            "precise"
+            "refinado",
+            "equilibrado",
+            "de buen gusto",
+            "preciso"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "Your shine depends on the light you're standing in.",
+          "hero": "Tu brillo depende de la luz bajo la que te encuentres.",
           "narrative": [
-            "You have a refined inner world, but it only comes out when the conditions are right. In the wrong place, you go quiet and small.",
-            "You've probably been told you're 'too picky' at some point. You're not. You just notice things.",
-            "The right rooms don't dim you — they reveal you.",
-            "You are a delicate crystal. You need the right lighting, the right angle, and the right company to truly sparkle.",
-            "Don't waste your light in places that can't see your value. Find the space where you are appreciated, and let yourself shine."
+            "Tienes un mundo interior muy refinado, pero solo sale a la luz cuando las condiciones son las adecuadas. En un lugar que no te conviene, te vuelves callado y te retraes.",
+            "Seguramente te habrán dicho alguna vez que eres «demasiado exigente». No lo eres. Simplemente te fijas en las cosas.",
+            "Los espacios adecuados no te eclipsan, sino que te revelan tal y como eres.",
+            "Eres un cristal delicado. Necesitas la luz adecuada, el ángulo adecuado y la compañía adecuada para brillar de verdad.",
+            "No desperdicies tu luz en lugares donde no saben apreciar tu valor. Encuentra el lugar donde te valoren y déjate brillar."
           ],
           "shadows": [
-            "You don't speak up because you assume other people won't get it.",
-            "You over-edit yourself before anyone else even sees the work.",
-            "You might feel like an outsider, even when you're in a group."
+            "No te atreves a hablar porque das por hecho que los demás no lo entenderán.",
+            "Te dedicas a revisar el texto en exceso antes incluso de que nadie más lo vea.",
+            "Puede que te sientas como un extraño, incluso cuando estás en un grupo."
           ],
           "advice": [
-            "Find one person who gets your taste. Show them the real version.",
-            "Say the specific thing you noticed this week, even if no one asked.",
-            "You don't need everyone to see the detail. You need one person who does.",
-            "Speak up about your preferences. You are allowed to have high standards."
+            "Busca a alguien que comparta tus gustos. Muéstrale la versión auténtica.",
+            "Di algo concreto que te haya llamado la atención esta semana, aunque nadie te lo haya preguntado.",
+            "No hace falta que todo el mundo vea los detalles. Solo hace falta que los vea una persona.",
+            "No dudes en expresar tus preferencias. Tienes todo el derecho a ser exigente."
           ],
           "keywords": [
-            "refined",
-            "sensitive",
-            "perceptive",
-            "quiet"
+            "refinado",
+            "delicado",
+            "perspicaz",
+            "tranquilo"
           ]
         }
       }
     },
     "THE_DEEP": {
-      "name": "The Deep",
-      "tagline": "You move like an ocean — slow on the surface, vast underneath.",
+      "name": "El Deep",
+      "tagline": "Te mueves como el océano: lento en la superficie, inmenso en las profundidades.",
       "symbol": "≈",
       "color": "#1B3A5C",
-      "element": "Water",
+      "element": "Agua",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You think in systems, not moments.",
+          "hero": "Piensas en términos de sistemas, no de momentos.",
           "narrative": [
-            "You have an unusual capacity to hold a lot of context at once. Where other people see a situation, you see the machinery under it.",
-            "You don't rush to conclusions. You let things settle, and your conclusions are usually right because of it.",
-            "This makes you a strategist, an advisor, someone others consult when the easy answers have failed.",
-            "You are the deep ocean. You hold mysteries and wisdom that others can only guess at. Your depth is your greatest strength.",
-            "But don't drown in your own thoughts. Sometimes, it's okay to surface and just experience the present moment."
+            "Tienes una capacidad extraordinaria para asimilar mucha información contextual a la vez. Mientras que los demás solo ven una situación, tú ves el mecanismo que hay detrás.",
+            "No sacas conclusiones precipitadas. Dejas que las cosas se asienten y, gracias a ello, tus conclusiones suelen ser acertadas.",
+            "Esto te convierte en un estratega, un asesor, alguien a quien los demás acuden cuando las respuestas fáciles han fallado.",
+            "Eres como el océano profundo. En ti se esconden misterios y sabiduría que los demás solo pueden intuir. Tu profundidad es tu mayor fortaleza.",
+            "Pero no te dejes llevar por tus propios pensamientos. A veces, está bien salir a la superficie y simplemente disfrutar del momento presente."
           ],
           "shadows": [
-            "You think so long that you miss the window to act.",
-            "You stay above your own emotions because you can see them from far away.",
-            "You might use your intellect to analyze your feelings, instead of actually feeling them."
+            "Te lo piensas tanto que acabas perdiendo la oportunidad de actuar.",
+            "Te mantienes por encima de tus propias emociones porque puedes verlas desde lejos.",
+            "Es posible que utilices tu intelecto para analizar tus sentimientos, en lugar de vivirlos de verdad."
           ],
           "advice": [
-            "Once this week, act on a decision before you feel 'ready.'",
-            "Say what you actually feel — not what you've analyzed about what you feel.",
-            "Notice when your depth is a gift and when it's a hiding place.",
-            "Take a break from thinking. Go for a walk, listen to music, or just breathe."
+            "Al menos una vez esta semana, pon en práctica una decisión antes de sentirte «preparado».",
+            "Di lo que realmente sientes, no lo que has analizado sobre lo que sientes.",
+            "Fíjate en cuándo tu profundidad es un don y cuándo es un escondite.",
+            "Tómate un respiro y deja de pensar. Sal a dar un paseo, escucha música o simplemente respira."
           ],
           "keywords": [
-            "strategic",
-            "philosophical",
-            "deep",
-            "adaptive"
+            "estratégico",
+            "filosófico",
+            "profundo",
+            "adaptativo"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You adapt without losing your direction.",
+          "hero": "Te adaptas sin perder el rumbo.",
           "narrative": [
-            "You can shift with circumstances and still arrive where you meant to go. That's not luck — that's a skill most people never develop.",
-            "You read situations well, and you read people better. You rarely say the wrong thing because you usually know what the right thing is.",
-            "This makes you trusted in rooms where trust is scarce.",
-            "You are the wise counselor. People come to you for your insight, knowing you will offer a perspective they haven't considered.",
-            "Trust that your intuition is a valid source of knowledge. It's not just a feeling; it's a deep knowing."
+            "Puedes adaptarte a las circunstancias y, aun así, llegar a donde tenías pensado. Eso no es suerte, es una habilidad que la mayoría de la gente nunca llega a desarrollar.",
+            "Sabes interpretar bien las situaciones y, sobre todo, sabes leer a las personas. Rara vez dices algo inapropiado, porque normalmente sabes cuál es la respuesta adecuada.",
+            "Esto hace que te ganes la confianza en entornos donde la confianza escasea.",
+            "Eres un consejero sabio. La gente acude a ti en busca de tu perspicacia, sabiendo que les ofrecerás un punto de vista que no habían tenido en cuenta.",
+            "Confía en que tu intuición es una fuente válida de conocimiento. No es solo una sensación; es un conocimiento profundo."
           ],
           "shadows": [
-            "You can flow around conflict instead of resolving it.",
-            "You keep your real opinions in reserve so long that they stop mattering.",
-            "You might use your wisdom as an excuse to stay detached from the world."
+            "Puedes eludir el conflicto en lugar de resolverlo.",
+            "Te guardas tus opiniones reales durante tanto tiempo que acaban por dejar de importar.",
+            "Podrías utilizar tu sabiduría como excusa para mantenerte al margen del mundo."
           ],
           "advice": [
-            "Once this week, take a position instead of reflecting on the positions available.",
-            "Say the true thing, not the safe thing.",
-            "Notice where you're adapting to avoid, not to build.",
-            "Speak up about your beliefs. You have valuable things to say."
+            "Al menos una vez esta semana, toma una decisión en lugar de quedarte pensando en las opciones disponibles.",
+            "Di lo que es cierto, no lo que es más seguro.",
+            "Fíjate en los aspectos en los que te estás adaptando para evitar algo, no para construirlo.",
+            "Expresa abiertamente tus convicciones. Tienes cosas valiosas que decir."
           ],
           "keywords": [
-            "adaptive",
-            "wise",
-            "fluid",
-            "trusted"
+            "adaptativo",
+            "sensato",
+            "fluido",
+            "de confianza"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You need a container big enough to hold you.",
+          "hero": "Necesitas un recipiente lo suficientemente grande como para que quepas tú.",
           "narrative": [
-            "You have a lot going on inside — ideas, questions, feelings — and it doesn't all fit into small spaces.",
-            "In the right environment, your depth becomes presence. In the wrong one, you go silent and start drifting.",
-            "You're not hard to know. You're hard to hold. That's different.",
-            "You are a vast, unexplored ocean. You need a space where you can be your full, complex self without feeling judged.",
-            "Don't shrink yourself to fit into small minds. Find the people who can hold your depth."
+            "Tienes muchas cosas en la cabeza —ideas, preguntas, sentimientos— y no todo cabe en espacios reducidos.",
+            "En el entorno adecuado, tu profundidad se convierte en presencia. En el inadecuado, te quedas en silencio y empiezas a perder el rumbo.",
+            "No es difícil conocerte. Es difícil retenerte. Eso es diferente.",
+            "Eres un océano inmenso y inexplorado. Necesitas un espacio en el que puedas ser tú mismo, en toda tu complejidad, sin sentirte juzgado.",
+            "No te rebajes para encajar en mentes estrechas. Busca a personas que sean capaces de comprender tu profundidad."
           ],
           "shadows": [
-            "You retreat into your own world instead of asking for what you need.",
-            "You confuse being unknown with being unknowable.",
-            "You might feel lonely even in a crowded room."
+            "Te refugias en tu propio mundo en lugar de pedir lo que necesitas.",
+            "Confundes el hecho de ser desconocido con el de ser incognoscible.",
+            "Es posible que te sientas solo incluso en una habitación llena de gente."
           ],
           "advice": [
-            "Find the one person you can say the whole thing to. Not the summary.",
-            "Give your inner world one place to live this week — a page, a song, a room.",
-            "You're not too much. You're just not in the right size container.",
-            "Reach out. You might be surprised who is willing to dive deep with you."
+            "Busca a esa persona a la que puedas contárselo todo. No solo un resumen.",
+            "Esta semana, dale a tu mundo interior un lugar donde habitar: una página, una canción, una habitación.",
+            "No es que seas demasiado. Es solo que no estás en el recipiente del tamaño adecuado.",
+            "Da el paso. Quizás te sorprenda saber quién está dispuesto a profundizar contigo."
           ],
           "keywords": [
-            "deep",
-            "sensitive",
-            "philosophical",
-            "adaptive"
+            "profundo",
+            "delicado",
+            "filosófico",
+            "adaptativo"
           ]
         }
       }
     },
     "THE_SPRING": {
-      "name": "The Spring",
-      "tagline": "You arrive quietly, and everything grows around you.",
+      "name": "El Spring",
+      "tagline": "Llegas en silencio y todo crece a tu alrededor.",
       "symbol": "◌",
       "color": "#4A6FA5",
-      "element": "Water",
+      "element": "Agua",
       "intensities": {
         "SELF_SOURCED": {
-          "hero": "You know things before you can explain how.",
+          "hero": "Hay cosas que sabes antes de poder explicar cómo.",
           "narrative": [
-            "Your intuition is unusually accurate. You get a read on a person or a situation fast, and it's usually right — even when you can't articulate why.",
-            "You don't perform certainty. You just move as if you already know, because you do.",
-            "This makes you a natural in work that requires subtle judgment. It also makes you hard to argue with when you've made up your mind.",
-            "You are a clear mountain spring. Your intuition is pure and refreshing. It flows from a deep well of inner knowing.",
-            "Trust your gut. It is your most reliable guide, even when logic points in the other direction."
+            "Tu intuición es extraordinariamente acertada. Te haces una idea de una persona o una situación rápidamente, y normalmente aciertas, incluso cuando no sabes explicar por qué.",
+            "No actúas con certeza. Simplemente te mueves como si ya lo supieras, porque lo sabes.",
+            "Esto hace que se te dé muy bien cualquier trabajo que requiera un criterio sutil. Además, cuando te has decidido, es difícil llevar la contraria.",
+            "Eres como un manantial de montaña cristalino. Tu intuición es pura y refrescante. Brota de un pozo profundo de sabiduría interior.",
+            "Confía en tu instinto. Es tu guía más fiable, incluso cuando la lógica apunta en otra dirección."
           ],
           "shadows": [
-            "You rely on your own read so much that you stop asking for input.",
-            "You keep your deepest insights private, which means people don't get to benefit from them.",
-            "You might become overly mysterious, keeping everyone at arm's length."
+            "Confías tanto en tu propia interpretación que dejas de pedir opiniones.",
+            "Mantienes en secreto tus ideas más profundas, lo que significa que los demás no pueden beneficiarse de ellas.",
+            "Podrías volverte demasiado misterioso y mantener a todo el mundo a distancia."
           ],
           "advice": [
-            "Once this week, say the thing you intuited — even without proof.",
-            "Let someone in on the reasoning, not just the conclusion.",
-            "You don't need to be sure to be right.",
-            "Share your wisdom. It's a gift that shouldn't be kept hidden."
+            "Al menos una vez esta semana, di lo que intuyes, aunque no tengas pruebas.",
+            "Explica a los demás el razonamiento, no solo la conclusión.",
+            "No hace falta estar seguro para tener razón.",
+            "Comparte tu sabiduría. Es un don que no debe permanecer oculto."
           ],
           "keywords": [
-            "intuitive",
-            "subtle",
-            "strategic",
-            "quiet"
+            "intuitivo",
+            "sutil",
+            "estratégico",
+            "tranquilo"
           ]
         },
         "BALANCED_CORE": {
-          "hero": "You listen more than you talk — and you hear more than most.",
+          "hero": "Escuchas más de lo que hablas, y oyes más que la mayoría.",
           "narrative": [
-            "You have a still, perceptive quality that makes people want to tell you things. You don't push. You just make space.",
-            "Your instincts are quiet, but they're usually on time. You know when to act and when to wait, and the difference is rarely explained to you — you just feel it.",
-            "This is a rare and durable kind of intelligence.",
-            "You are a still lake. Your surface is calm, but your depths are filled with wisdom and insight.",
-            "Remember that you also need a place to share your thoughts. You don't have to hold everything inside."
+            "Tienes una forma de ser tranquila y perspicaz que hace que la gente quiera contarte cosas. No presionas. Simplemente dejas espacio.",
+            "Tu instinto pasa desapercibido, pero suele acertar. Sabes cuándo actuar y cuándo esperar, y rara vez te explican la diferencia: simplemente lo sientes.",
+            "Se trata de un tipo de inteligencia poco común y duradera.",
+            "Eres como un lago en calma. Tu superficie está tranquila, pero tus profundidades están llenas de sabiduría y perspicacia.",
+            "Recuerda que también necesitas un lugar donde compartir tus pensamientos. No tienes por qué guardártelo todo para ti."
           ],
           "shadows": [
-            "You absorb other people's emotions without noticing until later.",
-            "You keep your own counsel so well that people assume you don't need anything.",
-            "You might use silence as a way to avoid confrontation."
+            "Absorbes las emociones de los demás sin darte cuenta hasta más tarde.",
+            "Te guardas tanto tus pensamientos que la gente da por hecho que no necesitas nada.",
+            "Es posible que utilices el silencio como forma de evitar la confrontación."
           ],
           "advice": [
-            "Once this week, tell someone what you actually need.",
-            "Notice where your stillness is a gift and where it's a wall.",
-            "You're allowed to be a source without being everyone's well.",
-            "Find a creative outlet. Painting, writing, or music can help you express what you can't say in words."
+            "Al menos una vez esta semana, dile a alguien lo que realmente necesitas.",
+            "Fíjate en qué casos tu tranquilidad es un regalo y en cuáles es un obstáculo.",
+            "Puedes ser una fuente sin tener que ser el pozo de todos.",
+            "Busca una forma de expresar tu creatividad. La pintura, la escritura o la música pueden ayudarte a expresar lo que no puedes decir con palabras."
           ],
           "keywords": [
-            "intuitive",
-            "gentle",
-            "perceptive",
-            "steady"
+            "intuitivo",
+            "suave",
+            "perspicaz",
+            "constante"
           ]
         },
         "ENVIRONMENT_TUNED": {
-          "hero": "You're a well — deep, clear, and quietly essential.",
+          "hero": "Eres como un pozo: profundo, cristalino y silenciosamente imprescindible.",
           "narrative": [
-            "You have real inner depth, but it doesn't always surface in public. You need the right person or the right moment for it to come out.",
-            "People often underestimate you, and you usually let them. You've learned that being seen isn't the same as being understood.",
-            "When you find someone who gets it, you open up in a way that surprises even you.",
-            "You are a hidden gem. You are not for everyone, but for those who take the time to dig, you are a treasure trove.",
-            "Be patient. The right people will know how to appreciate your quiet, subtle brilliance."
+            "Tienes una gran profundidad interior, pero no siempre se nota en público. Necesitas a la persona adecuada o el momento adecuado para que salga a la luz.",
+            "La gente suele subestimarte, y tú normalmente se lo permites. Has aprendido que que te vean no es lo mismo que que te entiendan.",
+            "Cuando encuentras a alguien que te entiende, te abres de una forma que hasta a ti mismo te sorprende.",
+            "Eres una joya oculta. No eres para todo el mundo, pero para aquellos que se toman el tiempo de indagar, eres un auténtico tesoro.",
+            "Ten paciencia. Las personas adecuadas sabrán apreciar tu brillantez discreta y sutil."
           ],
           "shadows": [
-            "You hide your depth because you've been misread before.",
-            "You wait for the perfect invitation to be yourself.",
-            "You might become so good at hiding that you lose touch with your true self."
+            "Ocultas tu profundidad porque ya te han malinterpretado otras veces.",
+            "Esperas a que llegue la invitación perfecta para ser tú mismo.",
+            "Puede que llegues a ser tan bueno ocultándote que pierdas el contacto con tu verdadero yo."
           ],
           "advice": [
-            "Stop waiting for the perfect person. Start sharing with the good ones.",
-            "Once this week, say the thing you've been holding back.",
-            "Being understood is worth the risk of being misread.",
-            "Express yourself in a way that feels safe to you. You don't have to perform to be seen."
+            "Deja de esperar a la persona perfecta. Empieza a compartir tu vida con las personas que realmente valen la pena.",
+            "Al menos una vez esta semana, di lo que te has estado callando.",
+            "Merece la pena correr el riesgo de que me malinterpreten con tal de que me entiendan.",
+            "Exprésate de la forma que te haga sentir más seguro. No tienes que hacer un espectáculo para que te vean."
           ],
           "keywords": [
-            "deep",
-            "sensitive",
-            "intuitive",
-            "quiet power"
+            "profundo",
+            "delicado",
+            "intuitivo",
+            "poder silencioso"
           ]
         }
       }
     }
   },
   "DEFAULT_INTENSITY": {
-    "hero": "You are still becoming.",
+    "hero": "Todavía estás en proceso de convertirte en quien eres.",
     "narrative": [
-      "This chart is being read in a way we don't have words for yet."
+      "Este gráfico se interpreta de una forma para la que aún no tenemos palabras."
     ],
     "shadows": [],
     "advice": [],
@@ -909,24 +909,24 @@
   },
   "INTENSITY_OVERLAY": {
     "SELF_SOURCED": {
-      "voice": "Your energy rises from within. You can set a direction and move on it without waiting for someone else's approval. This self-sourced drive is a major strength — but when the bar you set for yourself climbs too high, it quietly turns into burnout. The sections below describe how that internal engine shows up in concrete ways.",
+      "voice": "Tu energía surge de tu interior. Puedes marcar un rumbo y avanzar por él sin esperar la aprobación de nadie. Este impulso propio es una gran fortaleza, pero cuando el listón que te pones es demasiado alto, se convierte silenciosamente en agotamiento. En los apartados siguientes se describe cómo se manifiesta ese motor interno de forma concreta.",
       "advice_addon": [
-        "This week, look back at one decision you made on your own. Did it hold up without external approval?",
-        "Lower one standard you hold yourself to. That's how you prevent burnout."
+        "Esta semana, reflexiona sobre una decisión que hayas tomado por tu cuenta. ¿Se ha mantenido firme sin necesidad de aprobación externa?",
+        "Baja un poco el listón que te has fijado. Así es como se evita el agotamiento."
       ]
     },
     "BALANCED_CORE": {
-      "voice": "Your energy balances between inside and out. You move on your own when needed, and you sync with others when the moment calls for it. That calibration is a rare gift — but when it drifts into 'neither side fully,' it can feel like standing still. The sections below describe how that balance actually works day to day.",
+      "voice": "Tu energía se equilibra entre tu interior y tu exterior. Actúas por tu cuenta cuando es necesario y te sincronizas con los demás cuando la situación lo requiere. Ese equilibrio es un don poco común, pero cuando se desvía hacia «ninguno de los dos lados por completo», puede dar la sensación de estar estancado. En los apartados siguientes se describe cómo funciona realmente ese equilibrio en el día a día.",
       "advice_addon": [
-        "This week, separate 'what I want to do' from 'what this moment actually needs' — once each.",
-        "Balance is built through repeated choices. Note which side you leaned into in your small decisions."
+        "Esta semana, distingue entre «lo que quiero hacer» y «lo que realmente se necesita en este momento», una vez cada uno.",
+        "El equilibrio se construye a través de decisiones repetidas. Fíjate hacia qué lado te has inclinado en tus pequeñas decisiones."
       ]
     },
     "ENVIRONMENT_TUNED": {
-      "voice": "Your energy blooms in relationship with your environment. Around the right people and conditions, you deepen remarkably; in the wrong ones, you slowly fade. That sensitivity isn't fragility — it's a filter. The sections below describe the conditions where you are most fully yourself.",
+      "voice": "Tu energía florece en relación con tu entorno. Rodeado de las personas y las condiciones adecuadas, creces de forma notable; en las contrarias, te vas apagando poco a poco. Esa sensibilidad no es fragilidad, es un filtro. En los apartados siguientes se describen las condiciones en las que te sientes más tú mismo.",
       "advice_addon": [
-        "This week, write down three people, places, or situations that make you feel alive.",
-        "Ask yourself whether your current environment still fits you, or whether you've already outgrown it."
+        "Esta semana, escribe tres personas, lugares o situaciones que te hagan sentir vivo.",
+        "Pregúntate si tu entorno actual sigue siendo adecuado para ti o si ya lo has superado."
       ]
     }
   }

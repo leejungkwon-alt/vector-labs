@@ -1,52 +1,52 @@
 {
   "SINSAL_CONTENT": {
     "MAGNETIC_DRAW": {
-      "name": "Magnetic Draw",
-      "headline": "People notice you — often before you've said a word.",
-      "body": "You carry a natural charisma that draws others in. This isn't performative; it's a quiet gravity. People remember you, and they want to be around you.",
-      "advice": "Use this pull responsibly. Let people in, but don't collect them. Depth beats volume.",
+      "name": "Atracción magnética",
+      "headline": "La gente se fija en ti, a menudo antes incluso de que hayas dicho una sola palabra.",
+      "body": "Tienes un carisma natural que atrae a los demás. No se trata de una actitud fingida, sino de una presencia serena. La gente te recuerda y quiere estar a tu lado.",
+      "advice": "Utiliza esta función con responsabilidad. Deja que la gente entre, pero no los acumules. La profundidad es más importante que el volumen.",
       "name_traditional": ""
     },
     "RESTLESS_FEET": {
-      "name": "Restless Feet",
-      "headline": "You are wired for movement.",
-      "body": "Staying in one place — physically or mentally — wears you down. You thrive when you're traveling, exploring, or constantly learning something new.",
-      "advice": "Build movement into your life intentionally. If you can't travel, change your routine.",
+      "name": "Pies inquietos",
+      "headline": "Estás hecho para moverte.",
+      "body": "Quedarse en un mismo sitio —ya sea física o mentalmente— te agota. Te sientes en tu mejor momento cuando viajas, exploras o aprendes constantemente cosas nuevas.",
+      "advice": "Incorpora el ejercicio físico a tu vida de forma consciente. Si no puedes viajar, cambia tu rutina.",
       "name_traditional": ""
     },
     "SOLITARY_DEPTH": {
-      "name": "Solitary Depth",
-      "headline": "You have a rich inner world that few get to see.",
-      "body": "You are drawn to quiet, introspection, and solitary pursuits. Your creativity and insight come from this deep well. It's not loneliness — it's space.",
-      "advice": "Protect your alone time. It's not a luxury; it's your source of power.",
+      "name": "Profundidad solitaria",
+      "headline": "Tienes un mundo interior muy rico que pocos llegan a conocer.",
+      "body": "Te atraen la tranquilidad, la introspección y las actividades en solitario. Tu creatividad y tu perspicacia brotan de esta fuente profunda. No es soledad, es espacio.",
+      "advice": "Protege tu tiempo a solas. No es un lujo; es tu fuente de energía.",
       "name_traditional": ""
     },
     "ALLY_MAGNET": {
-      "name": "Ally Magnet",
-      "headline": "You attract people who want to help you.",
-      "body": "You naturally draw in mentors, allies, and supporters. When you're in trouble, help arrives from unexpected places. This is a rare and valuable gift.",
-      "advice": "Accept help gracefully. You don't have to do everything alone.",
+      "name": "Imán Ally",
+      "headline": "Atraes a personas que quieren ayudarte.",
+      "body": "De forma natural, atraes a mentores, aliados y personas que te apoyan. Cuando tienes problemas, la ayuda llega de donde menos te lo esperas. Se trata de un don excepcional y valioso.",
+      "advice": "Acepta la ayuda con elegancia. No tienes por qué hacerlo todo tú solo.",
       "name_traditional": ""
     },
     "SCHOLAR_MIND": {
-      "name": "Scholar Mind",
-      "headline": "You have a natural hunger for knowledge.",
-      "body": "You process information deeply and love learning for its own sake. You are at your best when you're studying, writing, or teaching others.",
-      "advice": "Never stop learning. Your mind is your greatest asset.",
+      "name": "Mente académica",
+      "headline": "Tienes una sed natural de conocimiento.",
+      "body": "Analizas la información en profundidad y te encanta aprender por el simple hecho de aprender. Das lo mejor de ti mismo cuando estudias, escribes o enseñas a los demás.",
+      "advice": "Nunca dejes de aprender. Tu mente es tu mayor activo.",
       "name_traditional": ""
     },
     "SHARP_EDGE": {
-      "name": "Sharp Edge",
-      "headline": "You have a competitive, unyielding drive.",
-      "body": "You are ambitious, competitive, and fiercely independent. When you decide to win, you don't stop. This is a double-edged sword — it can burn you out if you don't pace yourself.",
-      "advice": "Direct your intensity toward your goals, not against yourself.",
+      "name": "Borde afilado",
+      "headline": "Tienes un espíritu competitivo e inquebrantable.",
+      "body": "Eres ambicioso, competitivo y tremendamente independiente. Cuando te propones ganar, no te detienes. Esto es un arma de doble filo: puede acabar agotándote si no te dosificas las fuerzas.",
+      "advice": "Dirige tu intensidad hacia tus objetivos, no contra ti mismo.",
       "name_traditional": ""
     },
     "COMMANDER": {
-      "name": "Commander",
-      "headline": "You are a natural leader with a strong moral compass.",
-      "body": "You take charge when others hesitate. You have a strong sense of justice and aren't afraid to make tough decisions. People look to you when things get hard.",
-      "advice": "Lead with empathy. Strength without kindness becomes isolation.",
+      "name": "Comandante",
+      "headline": "Eres un líder nato con un sólido sentido de la ética.",
+      "body": "Tomas las riendas cuando los demás dudan. Tienes un fuerte sentido de la justicia y no te da miedo tomar decisiones difíciles. La gente recurre a ti cuando las cosas se ponen difíciles.",
+      "advice": "Dirige con empatía. La fuerza sin amabilidad se convierte en aislamiento.",
       "name_traditional": ""
     }
   }

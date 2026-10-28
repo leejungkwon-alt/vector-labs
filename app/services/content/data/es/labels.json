@@ -46,40 +46,40 @@
   "GRADE_LABELS": {
     "PEAK": "Cúspide",
     "FAVORABLE": "Favorable",
-    "NEUTRAL": "Neutral",
+    "NEUTRAL": "Neutro",
     "CAUTION": "Precaución",
     "CHALLENGING": "Desafiante"
   },
   "COMPAT_FALLBACK_HEADLINE": "Una relación que construyen juntos.",
   "PERSONALIZATION_BLOCK": {
-    "HEADER": "Personalized insight",
+    "HEADER": "Información personalizada",
     "BY_INTENSITY": {
-      "SELF_SOURCED": "Your strong 'self-sourced' energy makes this tendency especially pronounced and self-directed.",
-      "ENVIRONMENT_TUNED": "Your 'environment-tuned' temperament means this trait emerges most deeply depending on the people and setting around you.",
-      "BALANCED_CORE": "Your balanced 'core' energy guides this tendency in a stable and harmonious direction."
+      "SELF_SOURCED": "Tu fuerte energía «autogenerada» hace que esta tendencia sea especialmente marcada y autónoma.",
+      "ENVIRONMENT_TUNED": "Tu temperamento «adaptado al entorno» hace que este rasgo se manifieste con mayor intensidad en función de las personas y el entorno que te rodean.",
+      "BALANCED_CORE": "Tu energía «central» equilibrada orienta esta tendencia hacia una dirección estable y armoniosa."
     },
     "BY_ELEMENT": {
-      "GROWTH": "Growth (Wood) energy layers on top of this — a strong drive to keep expanding and opening new directions.",
-      "SPARK": "Spark (Fire) energy layers on top of this — a passionate, immediate force pushing this tendency forward.",
-      "GROUND": "Ground (Earth) energy layers on top of this — this tendency expresses through thoughtful, solid foundation-building.",
-      "EDGE": "Edge (Metal) energy layers on top of this — you sort through this with clear standards and sharp decisiveness.",
-      "FLOW": "Flow (Water) energy layers on top of this — this tendency gains a flexible, responsive wisdom that adapts to the moment."
+      "GROWTH": "La energía del Crecimiento (Madera) se superpone a todo esto: un fuerte impulso para seguir expandiéndose y abriendo nuevos caminos.",
+      "SPARK": "A esto se suma la energía de la Chispa (Fuego): una fuerza apasionada e inmediata que impulsa esta tendencia.",
+      "GROUND": "Las capas de energía de la tierra (tierra) que se superponen a esto: esta tendencia se manifiesta a través de la construcción de cimientos sólidos y bien pensados.",
+      "EDGE": "Las capas de energía «Edge» (Metal) se superponen a esto: lo abordas con criterios claros y una gran determinación.",
+      "FLOW": "Las capas de energía Flow (Agua) se superponen a esto, lo que confiere a esta tendencia una sabiduría flexible y receptiva que se adapta al momento."
     },
     "BY_MODE_SECTION": {
       "love": {
-        "THE_TWIN": "The 'Twin' mode is especially strong — you treat your partner as a lifelong colleague and an equal, not a role to play.",
-        "THE_RIVAL": "The 'Rival' mode is especially strong — you want a relationship where you both push each other and grow together.",
-        "THE_ALLY": "The 'Ally' mode is especially strong — once you commit to a bond, you stay with it and give it your full loyalty."
+        "THE_TWIN": "El modo «Twin» es especialmente eficaz: tratas a tu pareja como a un compañero de toda la vida y como a un igual, no como un papel que interpretar.",
+        "THE_RIVAL": "El modo «Rival» es especialmente intenso: lo que buscas es una relación en la que ambos os motivéis mutuamente y crezcáis juntos.",
+        "THE_ALLY": "El modo «Ally» es especialmente intenso: una vez que te comprometes con un vínculo, te mantienes fiel a él y le dedicas toda tu lealtad."
       },
       "career": {
-        "THE_CREATOR": "The 'Creator' mode is especially strong — you shine when you break existing molds and create original work.",
-        "THE_OFFICER": "The 'Officer' mode is especially strong — you grow into a trusted core talent inside structured organizations.",
-        "THE_CHALLENGER": "The 'Challenger' mode is especially strong — you have the instincts of a leader who solves problems and breaks through crises."
+        "THE_CREATOR": "El modo «Creator» es especialmente potente: destacas cuando rompes los moldes establecidos y creas obras originales.",
+        "THE_OFFICER": "El modo «Officer» es especialmente eficaz: te convierte en un talento clave de confianza dentro de organizaciones estructuradas.",
+        "THE_CHALLENGER": "El modo «Challenger» es especialmente potente: tienes el instinto de un líder capaz de resolver problemas y superar crisis."
       },
       "wealth": {
-        "THE_OPERATOR": "The 'Operator' mode is especially strong — you spot opportunities others miss and grow your assets decisively.",
-        "THE_STEWARD": "The 'Steward' mode is especially strong — you protect what you have and let compound growth do its work.",
-        "THE_FLOW": "The 'Flow' mode is especially strong — you ride the current of money with flexibility and draw wealth in naturally."
+        "THE_OPERATOR": "El modo «Operator» es especialmente eficaz: detectas oportunidades que otros pasan por alto y haces crecer tus activos de forma contundente.",
+        "THE_STEWARD": "El modo «Steward» es especialmente eficaz: proteges lo que tienes y dejas que el crecimiento compuesto haga su trabajo.",
+        "THE_FLOW": "El modo «Flow» es especialmente potente: te dejas llevar por la corriente del dinero con flexibilidad y atraes la riqueza de forma natural."
       }
     }
   }

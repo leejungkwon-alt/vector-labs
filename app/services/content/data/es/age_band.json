@@ -1,53 +1,53 @@
 {
   "AGE_BAND_CONTENT": {
     "EARLY": {
-      "label": "Early",
-      "headline": "You are in the exploration phase.",
-      "body": "The goal right now isn't to have the right answer. It's to gather data — about what energizes you, what drains you, and what you're willing to do when no one is watching. Commitments made now are experiments, not contracts.",
+      "label": "Temprano",
+      "headline": "Te encuentras en la fase de exploración.",
+      "body": "El objetivo ahora mismo no es dar con la respuesta correcta. Se trata de recopilar datos: sobre lo que te da energía, lo que te agota y lo que estás dispuesto a hacer cuando nadie te ve. Los compromisos que adquieras ahora son experimentos, no contratos.",
       "advice": [
-        "Try one thing this quarter that scares you a little.",
-        "Track what actually energizes you, not what looks good on paper.",
-        "Say yes to breadth. Depth comes later."
+        "Intenta hacer algo este trimestre que te dé un poco de miedo.",
+        "Presta atención a lo que realmente te da energía, no a lo que queda bien sobre el papel.",
+        "Apuesta por la amplitud. La profundidad ya vendrá después."
       ]
     },
     "MID": {
-      "label": "Building",
-      "headline": "You are in the compounding phase.",
-      "body": "What you plant now has time to grow roots. The returns feel slow because they are slow — and that's exactly why they compound. This is the season to pick the few things worth going deep on and to stop apologizing for the things you leave behind.",
+      "label": "Edificio",
+      "headline": "Te encuentras en la fase de capitalización.",
+      "body": "Lo que siembres ahora tendrá tiempo para echar raíces. Los resultados parecen tardar en llegar porque, de hecho, tardan —y precisamente por eso se acumulan. Esta es la época para elegir aquellas pocas cosas en las que merece la pena profundizar y dejar de disculparte por lo que dejas atrás.",
       "advice": [
-        "Pick one skill, one relationship, one asset. Go deeper, not wider.",
-        "Say no to three things that don't serve the long game.",
-        "Start something that won't pay off for five years."
+        "Elige una habilidad, una relación, un activo. Profundiza, no te disperses.",
+        "Di «no» a tres cosas que no contribuyen a tus objetivos a largo plazo.",
+        "Empieza algo que no te reportará beneficios hasta dentro de cinco años."
       ]
     },
     "PEAK": {
-      "label": "Peak Output",
-      "headline": "You are in the output phase.",
-      "body": "The world wants what you can produce. The risk isn't laziness — it's overextension. Everyone wants a piece of you. What you do now defines your reputation for the next decade. Protect the margins that make the output sustainable.",
+      "label": "Potencia máxima",
+      "headline": "Te encuentras en la fase de producción.",
+      "body": "El mundo quiere lo que tú puedes producir. El riesgo no es la pereza, sino el exceso de trabajo. Todo el mundo quiere algo de ti. Lo que hagas ahora definirá tu reputación durante la próxima década. Protege los márgenes que hacen que tu producción sea sostenible.",
       "advice": [
-        "Design your week around what only you can do.",
-        "Delegate or drop everything else.",
-        "Guard one day a week that is completely yours."
+        "Organiza tu semana en función de lo que solo tú puedes hacer.",
+        "Delega o deja todo lo demás a un lado.",
+        "Resérvate un día a la semana que sea solo para ti."
       ]
     },
     "SENIOR": {
-      "label": "Harvest",
-      "headline": "You are in the harvest phase.",
-      "body": "Shift from doing to directing. From output to wisdom. The value you bring now isn't in the hours you log — it's in the judgment you've earned. The people around you need your perspective more than your labor.",
+      "label": "Cosecha",
+      "headline": "Te encuentras en la fase de cosecha.",
+      "body": "Pasa de hacer a dirigir. De los resultados a la sabiduría. El valor que aportas ahora no reside en las horas que dedicas, sino en la capacidad de juicio que te has ganado. Las personas que te rodean necesitan más tu punto de vista que tu trabajo.",
       "advice": [
-        "Trade one task for one mentee.",
-        "Say the long answer — people are listening now.",
-        "Let one thing go that you've been carrying for years."
+        "Cambia una tarea por un alumno.",
+        "Da la respuesta larga: ahora la gente te está escuchando.",
+        "Deja atrás algo que llevas años arrastrando."
       ]
     },
     "ELDER": {
-      "label": "Legacy",
-      "headline": "You are in the legacy phase.",
-      "body": "Presence matters more than productivity. What you leave behind has already been planted. The work now is in how you show up — for the people who come after, and for the parts of yourself that are still growing.",
+      "label": "Legado",
+      "headline": "Te encuentras en la fase de transición.",
+      "body": "La presencia importa más que la productividad. Lo que dejas atrás ya está sembrado. Ahora lo importante es cómo te muestras: para quienes vendrán después y para aquellas partes de ti mismo que aún están creciendo.",
       "advice": [
-        "Write down one thing only you know.",
-        "Spend time with someone younger — as a peer, not a teacher.",
-        "Choose a small ritual to anchor your day."
+        "Escribe una cosa que solo tú sepas.",
+        "Pasa tiempo con alguien más joven, como un compañero, no como un profesor.",
+        "Elige un pequeño ritual que te ayude a centrarte en el día."
       ]
     }
   }

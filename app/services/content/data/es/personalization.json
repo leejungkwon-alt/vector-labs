@@ -1,46 +1,46 @@
 {
   "ELEMENT_DOMINANT": {
-    "GROWTH": "Your dominant Growth energy gives you an unstoppable drive to start new things, but it can leave you restless.",
-    "SPARK": "Your intense Spark energy makes you highly visible and magnetic, though it risks burning you out.",
-    "GROUND": "Your heavy Ground energy makes you the reliable anchor for others, but you may carry too much weight.",
-    "EDGE": "Your sharp Edge energy gives you surgical clarity, but you must be careful not to cut too deep.",
-    "FLOW": "Your deep Flow energy grants you profound adaptability and wisdom, but you might struggle to commit."
+    "GROWTH": "Tu energía dominante de «Crecimiento» te da un impulso imparable para emprender cosas nuevas, pero puede hacerte sentir inquieto.",
+    "SPARK": "Tu intensa energía «Spark» te hace muy llamativo y magnético, aunque corre el riesgo de agotarte.",
+    "GROUND": "Tu intensa energía de la Tierra te convierte en un punto de apoyo fiable para los demás, pero es posible que acabes cargando con demasiado peso.",
+    "EDGE": "Tu energía «Edge», tan aguda, te aporta una claridad milimétrica, pero debes tener cuidado de no cortar demasiado profundo.",
+    "FLOW": "Tu energía Flow te confiere una gran capacidad de adaptación y sabiduría, pero es posible que te cueste comprometerte."
   },
   "ELEMENT_DEFICIENT": {
-    "GROWTH": "Your lack of Growth means you often struggle to start things without a clear push.",
-    "SPARK": "Your scarce Spark means you don't naturally perform enthusiasm, preferring quiet warmth.",
-    "GROUND": "Your missing Ground means you can feel unmoored, finding stability through movement.",
-    "EDGE": "Your lack of Edge means you naturally avoid conflict and soften your boundaries.",
-    "FLOW": "Your scarce Flow means you prefer to know exactly where you're going before you move."
+    "GROWTH": "Tu falta de iniciativa hace que a menudo te cueste poner en marcha cosas sin un impulso claro.",
+    "SPARK": "Tu escasa «Chispa» hace que no te salga de forma natural mostrar entusiasmo, y prefieres una calidez discreta.",
+    "GROUND": "El hecho de que te falte el contacto con la tierra hace que te sientas a la deriva y que encuentres estabilidad a través del movimiento.",
+    "EDGE": "Tu falta de «Edge» hace que, de forma natural, evites los conflictos y suavices tus límites.",
+    "FLOW": "Tu escaso Flow indica que prefieres saber exactamente adónde vas antes de ponerte en marcha."
   },
   "GYEOKGUK": {
-    "STABILIZER": "With a Stabilizer structure, you thrive in building and maintaining systems.",
-    "WARRIOR": "With a Warrior structure, you are built to face conflict and break through obstacles.",
-    "CUSTODIAN": "With a Custodian structure, you find deep meaning in managing resources and protecting others.",
-    "DEALMAKER": "With a Dealmaker structure, you spot opportunities where others see noise.",
-    "EXPRESSER": "With an Expresser structure, you turn abstract ideas into tangible value.",
-    "DISRUPTOR": "With a Disruptor structure, you constantly question the status quo.",
-    "MENTOR": "With a Mentor structure, you find purpose in guiding others and sharing knowledge.",
-    "INTUITIVE": "With an Intuitive structure, your mind works laterally, seeing connections others miss.",
-    "EDGE_WALKER": "With an Edge Walker structure, you tread the line between order and chaos.",
-    "COOPERATOR": "With a Cooperator structure, you find strength in peer alliances.",
-    "SELF_MADE": "With a Self-Made structure, you rely on your own hard work above all else."
+    "STABILIZER": "Con una estructura de tipo «Estabilizador», te destaca en la creación y el mantenimiento de sistemas.",
+    "WARRIOR": "Con una estructura de guerrero, estás hecho para afrontar los conflictos y superar los obstáculos.",
+    "CUSTODIAN": "Con una estructura de «Custodio», encuentras un profundo sentido en la gestión de los recursos y en la protección de los demás.",
+    "DEALMAKER": "Con una estructura «Dealmaker», detectas oportunidades donde otros solo ven ruido.",
+    "EXPRESSER": "Con una estructura Expresser, conviertes las ideas abstractas en valor tangible.",
+    "DISRUPTOR": "Con una estructura disruptiva, te cuestionas constantemente el statu quo.",
+    "MENTOR": "Si tienes una estructura Mentor, encuentras tu razón de ser en orientar a los demás y compartir conocimientos.",
+    "INTUITIVE": "Con una estructura intuitiva, tu mente piensa de forma lateral y detecta conexiones que otros pasan por alto.",
+    "EDGE_WALKER": "Con una estructura «Edge Walker», te mueves en la delgada línea que separa el orden del caos.",
+    "COOPERATOR": "Con una estructura cooperativa, la fuerza reside en las alianzas entre iguales.",
+    "SELF_MADE": "Con una estructura de «Self-Made», te basas, ante todo, en tu propio esfuerzo."
   },
   "SINSAL": {
-    "MAGNETIC_DRAW": "Your Magnetic Draw means people notice you before you even speak.",
-    "RESTLESS_FEET": "Your Restless Feet mean you are wired for movement and exploration.",
-    "SOLITARY_DEPTH": "Your Solitary Depth gives you a rich inner world that few get to see.",
-    "ALLY_MAGNET": "Your Ally Magnet means you naturally attract mentors and supporters.",
-    "SCHOLAR_MIND": "Your Scholar Mind gives you a natural hunger for deep knowledge.",
-    "SHARP_EDGE": "Your Sharp Edge means you have a competitive, unyielding drive.",
-    "COMMANDER": "Your Commander trait makes you a natural leader with a strong moral compass."
+    "MAGNETIC_DRAW": "Tu carisma hace que la gente se fije en ti incluso antes de que hables.",
+    "RESTLESS_FEET": "Tu inquietud por viajar significa que estás hecho para moverte y explorar.",
+    "SOLITARY_DEPTH": "Tu profundidad interior te proporciona un rico mundo interior que pocos llegan a conocer.",
+    "ALLY_MAGNET": "Tu imán Ally significa que atraes de forma natural a mentores y personas que te apoyan.",
+    "SCHOLAR_MIND": "Tu mentalidad académica te infunde un deseo natural por el conocimiento profundo.",
+    "SHARP_EDGE": "Tu «Sharp Edge» significa que tienes un espíritu competitivo e inquebrantable.",
+    "COMMANDER": "Tu rasgo «Comandante» te convierte en un líder nato con un sólido sentido de la ética."
   },
   "RELATIONS": {
-    "day_chong": "You have an inner restlessness that craves constant change. You thrive when you're moving, exploring, or challenging the status quo. In relationships, you need space and novelty to stay engaged.",
-    "has_chong": "Your life is driven by unpredictable changes and challenges. It might feel exhausting at times, but this is exactly what makes you highly adaptable, resilient, and uniquely creative."
+    "day_chong": "Tienes una inquietud interior que te impulsa a buscar cambios constantes. Te sientes realizado cuando estás en movimiento, explorando o cuestionando el statu quo. En las relaciones, necesitas espacio y novedad para mantener el interés.",
+    "has_chong": "Tu vida está marcada por cambios y retos impredecibles. A veces puede resultar agotador, pero eso es precisamente lo que te hace una persona muy adaptable, resiliente y con una creatividad única."
   },
   "SPECIAL_CONDITIONS": {
-    "RESTLESS_FEET": "You are a born 'wanderer'. You gain energy and grow through new experiences, travel, or career shifts. Being stuck in a rigid routine is your worst nightmare.",
-    "seven_killings": "You possess strong 'Boss' energy. You excel at taking control, strategizing, and leading the pack. You actually get stronger under pressure and crisis."
+    "RESTLESS_FEET": "Eres un «viajero» nato. Las nuevas experiencias, los viajes o los cambios profesionales te dan energía y te hacen crecer. Quedarte estancado en una rutina rígida es tu peor pesadilla.",
+    "seven_killings": "Tienes una gran energía de «líder». Destacas por tomar las riendas, trazar estrategias y liderar al grupo. De hecho, te vuelves más fuerte ante la presión y en situaciones de crisis."
   }
 }

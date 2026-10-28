@@ -1,58 +1,58 @@
 {
   "HEALTH_DISPLAY": {
-    "GROWTH": "Growth",
-    "SPARK": "Spark",
-    "GROUND": "Ground",
-    "EDGE": "Edge",
+    "GROWTH": "Crecimiento",
+    "SPARK": "Patada",
+    "GROUND": "Suelo",
+    "EDGE": "Borde",
     "FLOW": "Flow"
   },
   "HEALTH_CONTENT": {
     "GROWTH": {
-      "over_pattern": "When growth energy is dominant, you run on forward motion. The challenge isn't starting — it's stopping. Rest can feel like a betrayal of your own ambition, and stillness can look like stagnation.",
-      "under_pattern": "When growth energy is scarce, you may struggle to begin — mentally and physically. Getting started can feel like pushing through concrete.",
+      "over_pattern": "Cuando predomina la energía del crecimiento, te mueves hacia adelante. El reto no es empezar, sino parar. El descanso puede parecer una traición a tu propia ambición, y la quietud puede parecer estancamiento.",
+      "under_pattern": "Cuando la energía para crecer escasea, puede que te cueste empezar, tanto mental como físicamente. Dar el primer paso puede parecer como si tuvieras que abrirte paso a través del hormigón.",
       "practices": [
-        "Take a 10-minute walk with no goal. Just movement, not exercise.",
-        "Say 'no' to one small thing this week. Notice how it feels.",
-        "Try a slow, aimless stretch before bed. Just feeling, not fixing."
+        "Da un paseo de 10 minutos sin ningún objetivo. Solo muévete, no hagas ejercicio.",
+        "Esta semana, di «no» a algo pequeño. Fíjate en cómo te sientes.",
+        "Prueba a hacer unos estiramientos lentos y sin un objetivo concreto antes de acostarte. Solo se trata de sentir, no de corregir."
       ]
     },
     "SPARK": {
-      "over_pattern": "When spark energy dominates, you run hot. Ideas, emotions, and enthusiasm arrive at full volume. The risk is pouring so much outward that little remains for you.",
-      "under_pattern": "When spark energy is scarce, motivation can feel distant. You don't perform enthusiasm — your warmth is quieter than most.",
+      "over_pattern": "Cuando predomina la energía chispeante, te sientes muy animado. Las ideas, las emociones y el entusiasmo brotan con toda su intensidad. El riesgo es que te des tanto al exterior que te quede muy poco para ti mismo.",
+      "under_pattern": "Cuando la energía y el entusiasmo escasean, la motivación puede parecer algo lejano. No finges entusiasmo: tu calidez es más discreta que la de la mayoría.",
       "practices": [
-        "Ten quiet minutes before checking your phone in the morning.",
-        "Notice one small pleasure today. Say it out loud.",
-        "Skip scheduling anything after 9pm for one week. Just try it."
+        "Diez minutos de tranquilidad antes de mirar el móvil por la mañana.",
+        "Fíjate hoy en un pequeño placer. Dilo en voz alta.",
+        "No programes nada después de las 21:00 durante una semana. Pruébalo, a ver qué tal."
       ]
     },
     "GROUND": {
-      "over_pattern": "When ground energy dominates, you become the person others lean on. The risk: carrying so much for so long that you forget what your own weight feels like.",
-      "under_pattern": "When ground energy is scarce, you may feel unmoored — always slightly off balance, even when everything looks fine from outside.",
+      "over_pattern": "Cuando predomina la energía de la tierra, te conviertes en la persona en la que los demás se apoyan. El riesgo: cargar con tanto peso durante tanto tiempo que acabas olvidando cómo se siente tu propio peso.",
+      "under_pattern": "Cuando te falta conexión con la tierra, puedes sentirte desorientado: siempre un poco desequilibrado, aunque desde fuera todo parezca ir bien.",
       "practices": [
-        "Eat one meal a day slowly, sitting down, no screen.",
-        "Stand barefoot on real ground for 5 minutes.",
-        "Eat at the same time for three days in a row."
+        "Come una vez al día, sin prisas, sentado y sin pantallas.",
+        "Quédate de pie, descalzo, sobre suelo natural durante 5 minutos.",
+        "Come a la misma hora durante tres días seguidos."
       ]
     },
     "EDGE": {
-      "over_pattern": "When edge energy dominates, you cut through the noise. The risk: winning the point and losing the room — or turning that sharpness inward.",
-      "under_pattern": "When edge energy is scarce, you may avoid conflict even when it's the right call. Boundaries can feel harder to set than they should.",
+      "over_pattern": "Cuando la energía de vanguardia predomina, logras abrirte paso entre el ruido. El riesgo: ganar el punto y perder el apoyo de los demás, o bien volcar esa agudeza hacia tu interior.",
+      "under_pattern": "Cuando la energía emocional es escasa, es posible que evites el conflicto incluso cuando sea lo más acertado. Establecer límites puede resultar más difícil de lo que debería.",
       "practices": [
-        "Three slow, deep breaths before opening email.",
-        "Clear one small surface today — a desk, a drawer, a list.",
-        "Spend 10 minutes outside, even if it's cold."
+        "Tres respiraciones lentas y profundas antes de abrir el correo electrónico.",
+        "Hoy ordena una superficie pequeña: un escritorio, un cajón, una lista.",
+        "Pasa 10 minutos al aire libre, aunque haga frío."
       ]
     },
     "FLOW": {
-      "over_pattern": "When flow energy dominates, you adapt easily. The risk: never quite committing — because everything is still possible.",
-      "under_pattern": "When flow energy is scarce, you want to know where things are going before you move. That caution is useful — until it becomes a cage.",
+      "over_pattern": "Cuando predomina la energía del flujo, te adaptas con facilidad. El riesgo: no comprometerte del todo, porque todo sigue siendo posible.",
+      "under_pattern": "Cuando la energía del flujo escasea, uno quiere saber adónde van las cosas antes de actuar. Esa precaución es útil… hasta que se convierte en una jaula.",
       "practices": [
-        "Drink a full glass of water before every meal.",
-        "Take one full rest day this month with no output.",
-        "Sit quietly with an unresolved question for 5 minutes. No answer needed."
+        "Bebe un vaso lleno de agua antes de cada comida.",
+        "Este mes, tómate un día completo de descanso sin hacer nada.",
+        "Quédate en silencio durante 5 minutos con una pregunta sin resolver. No hace falta responder."
       ]
     }
   },
-  "HEALTH_DISCLAIMER": "This section offers lifestyle reflections inspired by traditional Five Elements philosophy. It is not medical advice, diagnosis, or treatment. If you have a health concern, please consult a qualified healthcare professional.",
-  "HEALTH_FRAMEWORK_NOTE": "Framework: Five Elements (Five Elements) philosophy — a traditional lens for self-reflection and personal insight. Not clinical guidance. Individual interpretations vary across traditions."
+  "HEALTH_DISCLAIMER": "Esta sección ofrece reflexiones sobre el estilo de vida inspiradas en la filosofía tradicional de los Cinco Elementos. No constituye un consejo médico, un diagnóstico ni un tratamiento. Si tienes algún problema de salud, consulta a un profesional sanitario cualificado.",
+  "HEALTH_FRAMEWORK_NOTE": "Marco conceptual: La filosofía de los Cinco Elementos (Cinco Elementos): una perspectiva tradicional para la autorreflexión y el autoconocimiento. No constituye una orientación clínica. Las interpretaciones individuales varían según las tradiciones."
 }

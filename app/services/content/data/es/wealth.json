@@ -1,274 +1,274 @@
 {
-  "SECTION_TITLE": "Wealth & Investment",
+  "SECTION_TITLE": "Patrimonio e inversiones",
   "CONTENT": {
     "THE_PIONEER": {
-      "headline": "Asset growth through business suits you.",
-      "body": "You have the ability to make money with your own ideas. It's better to create the board yourself than to invest in a system someone else made.\n\nThis trait shines in startups, new businesses, and personal brands. Conversely, simple day trading doesn't fit your personality.\n\nYour risk is the impulse to bet everything at once. Create a steady cash flow before making big bets.",
+      "headline": "El crecimiento del patrimonio a través de los negocios te conviene.",
+      "body": "Tienes la capacidad de ganar dinero con tus propias ideas. Es mejor crear el sistema tú mismo que invertir en uno creado por otra persona.\n\nEsta cualidad destaca en las startups, los nuevos negocios y las marcas personales. Por el contrario, el simple day trading no encaja con tu personalidad.\n\nTu riesgo es el impulso de apostarlo todo de golpe. Genera un flujo de caja estable antes de hacer grandes apuestas.",
       "patterns": [
-        "You make money with ideas.",
-        "You enjoy big bets.",
-        "You are weak at steady management."
+        "Con las ideas se gana dinero.",
+        "Te gustan las apuestas grandes.",
+        "No se te da bien la gestión constante."
       ],
       "best_match": [
         "Steward",
         "Anchor"
       ],
-      "best_reason": "Someone who protects the money you earn.",
+      "best_reason": "Alguien que protege el dinero que ganas.",
       "challenging_match": [
         "Operator"
       ],
-      "challenging_reason": "If both enjoy risk, recovery in a crisis is difficult.",
+      "challenging_reason": "Si a ambos les gusta el riesgo, resulta difícil recuperarse de una crisis.",
       "actions": [
-        "Fix 30% of income as automatic savings.",
-        "Invest in installments over 3 months instead of one big bet.",
-        "Have a financial manager."
+        "Destina el 30 % de tus ingresos al ahorro automático.",
+        "Invierte a plazos durante 3 meses en lugar de hacer una gran apuesta de una sola vez.",
+        "Cuenta con un gestor financiero."
       ],
       "red_flags": [
-        "Do you not know where your earned money went?",
-        "Is your living expense account empty?"
+        "¿No sabes dónde se ha ido el dinero que has ganado?",
+        "¿Se te ha acabado el dinero de la cuenta para gastos de manutención?"
       ]
     },
     "THE_ADAPTER": {
-      "headline": "Wealth luck opens when you have various income sources.",
-      "body": "Putting everything in one place increases risk for you. Digging multiple wells is your wealth strategy.\n\nThis trait suits side jobs, freelancing, multiple income sources, and small investments. Conversely, betting all assets on one company/asset is dangerous.\n\nThe risk is earning a lot but not saving. Just make sure to do one automatic saving.",
+      "headline": "La suerte en los asuntos económicos llega cuando se dispone de diversas fuentes de ingresos.",
+      "body": "Ponerlo todo en un solo sitio aumenta el riesgo para ti. La clave es diversificar: esa es tu estrategia para generar riqueza.\n\nEsta característica es ideal para trabajos secundarios, el trabajo autónomo, las múltiples fuentes de ingresos y las pequeñas inversiones. Por el contrario, apostar todos tus activos por una sola empresa o activo es peligroso.\n\nEl riesgo es ganar mucho dinero pero no ahorrar. Solo tienes que asegurarte de realizar un ahorro automático.",
       "patterns": [
-        "You are skilled at creating multiple income sources.",
-        "Spending is also flexible.",
-        "It's hard to focus on one place."
+        "Se te da muy bien crear múltiples fuentes de ingresos.",
+        "El gasto también es flexible.",
+        "Es difícil concentrarse en un solo lugar."
       ],
       "best_match": [
         "Steward",
         "Anchor"
       ],
-      "best_reason": "Someone who gathers your scattered income.",
+      "best_reason": "Alguien que se encarga de reunir tus ingresos dispersos.",
       "challenging_match": [
         "Adapter"
       ],
-      "challenging_reason": "If both scatter, financial management becomes impossible.",
+      "challenging_reason": "Si ambos se dispersan, la gestión financiera se vuelve imposible.",
       "actions": [
-        "Create one automatic savings account.",
-        "Write a monthly income-expense table.",
-        "Add expertise to one main income source."
+        "Crea una cuenta de ahorro automática.",
+        "Elabora una tabla mensual de ingresos y gastos.",
+        "Añade tu experiencia a una fuente de ingresos principal."
       ],
       "red_flags": [
-        "Is income high but savings zero?",
-        "Is your energy scattered across multiple sources?"
+        "¿Tienes unos ingresos elevados pero no tienes ahorros?",
+        "¿Tu energía se dispersa entre varias fuentes?"
       ]
     },
     "THE_RADIATOR": {
-      "headline": "You are the type where honor and wealth come together.",
-      "body": "You make money through people. Connections, reputation, and brand are your assets.\n\nThis trait shines in business, sales, and entertainment. Conversely, you are weak at solitary analytical investing.\n\nThe risk is spending big when you spend. Automatic savings and spending limits are essential.",
+      "headline": "Eres de esas personas en las que el honor y la riqueza van de la mano.",
+      "body": "Ganas dinero gracias a las personas. Tus contactos, tu reputación y tu marca son tus activos.\n\nEsta cualidad destaca en los negocios, las ventas y el mundo del entretenimiento. Por el contrario, no se te da bien la inversión analítica en solitario.\n\nEl riesgo es gastar mucho cuando gastas. Es fundamental contar con un sistema de ahorro automático y límites de gasto.",
       "patterns": [
-        "You gain opportunities through people.",
-        "You spend big when you spend.",
-        "Frequent impulse buying."
+        "Las oportunidades surgen gracias a las personas.",
+        "Cuando gastas, gastas mucho.",
+        "Compras impulsivas frecuentes."
       ],
       "best_match": [
         "Steward",
         "Cultivator"
       ],
-      "best_reason": "Someone who moderates your spending.",
+      "best_reason": "Alguien que controle tus gastos.",
       "challenging_match": [
         "Radiator"
       ],
-      "challenging_reason": "If both spend big, bankruptcy.",
+      "challenging_reason": "Si ambos gastan mucho, acabarán en quiebra.",
       "actions": [
-        "Automatically save 20% of income.",
-        "Set a monthly spending limit.",
-        "Decide on big purchases after 24 hours."
+        "Ahorra automáticamente el 20 % de tus ingresos.",
+        "Establece un límite de gasto mensual.",
+        "Toma la decisión sobre las compras importantes al cabo de 24 horas."
       ],
       "red_flags": [
-        "Is your card bill exceeding your income?",
-        "Do you often regret impulse purchases?"
+        "¿La factura de tu tarjeta supera tus ingresos?",
+        "¿Te arrepientes a menudo de las compras impulsivas?"
       ]
     },
     "THE_KEEPER": {
-      "headline": "Excellent at protecting and growing assets.",
-      "body": "You hate risk extremely. You prefer safe assets and can't stand losing principal.\n\nThis trait shines in savings, bonds, and real estate. Conversely, never touch day trading or crypto.\n\nYour risk is not beating inflation. An appropriate level of inflation-hedge investment is necessary.",
+      "headline": "Excelente a la hora de proteger y hacer crecer los activos.",
+      "body": "Odias el riesgo profundamente. Prefieres los activos seguros y no soportas perder el capital invertido.\n\nEsta característica se refleja especialmente en los planes de ahorro, los bonos y el sector inmobiliario. Por el contrario, no te acerques nunca al day trading ni a las criptomonedas.\n\nTu riesgo es no superar la inflación. Es necesario contar con un nivel adecuado de inversión que sirva de cobertura frente a la inflación.",
       "patterns": [
-        "You prefer safe assets.",
-        "You are sensitive to principal loss.",
-        "You save steadily."
+        "Prefieres los activos seguros.",
+        "Eres sensible a la pérdida de capital.",
+        "Ahorras de forma constante."
       ],
       "best_match": [
         "Operator",
         "Pioneer"
       ],
-      "best_reason": "Someone who adds returns on top of your safe assets.",
+      "best_reason": "Alguien que te ofrece una rentabilidad adicional a la de tus activos seguros.",
       "challenging_match": [
         "Radiator"
       ],
-      "challenging_reason": "Risk tendencies are exactly opposite, causing financial conflicts.",
+      "challenging_reason": "Las tendencias de riesgo son diametralmente opuestas, lo que provoca conflictos financieros.",
       "actions": [
-        "Invest only 10% of assets in index funds.",
-        "Compare inflation rates and deposit rates.",
-        "Do a financial checkup once a year."
+        "Invierte solo el 10 % de tus activos en fondos indexados.",
+        "Compara las tasas de inflación y los tipos de interés de los depósitos.",
+        "Haz un balance financiero una vez al año."
       ],
       "red_flags": [
-        "Is all your wealth in deposits?",
-        "Are you failing to keep up with inflation?"
+        "¿Tienes todo tu patrimonio en depósitos?",
+        "¿No consigues mantenerte al día con la inflación?"
       ]
     },
     "THE_ANCHOR": {
-      "headline": "You find wealth luck in real assets like real estate.",
-      "body": "You are strong in visible real assets. Wealth luck opens in real estate, gold, and savings.\n\nThis trait suits long-term investment, real estate, and real assets. Conversely, it doesn't fit coins or derivatives.\n\nThe risk is missing opportunities. If you only seek safety, assets won't grow.",
+      "headline": "La suerte en lo económico la encontrarás en activos reales, como los inmuebles.",
+      "body": "Tienes fortaleza en los activos reales tangibles. La suerte en materia de riqueza se abre en el sector inmobiliario, el oro y los ahorros.\n\nEsta característica se adapta bien a la inversión a largo plazo, al sector inmobiliario y a los activos reales. Por el contrario, no encaja con las monedas ni con los derivados.\n\nEl riesgo es perder oportunidades. Si solo buscas seguridad, tus activos no crecerán.",
       "patterns": [
-        "You prefer real assets.",
-        "You are strong in long-term investment.",
-        "You are weak at capturing fast opportunities."
+        "Prefieres los activos reales.",
+        "Se te da bien la inversión a largo plazo.",
+        "No se te da bien aprovechar las oportunidades que surgen rápidamente."
       ],
       "best_match": [
         "Operator",
         "Steward"
       ],
-      "best_reason": "Someone who coordinates your safe assets.",
+      "best_reason": "Alguien que se encargue de gestionar tus activos seguros.",
       "challenging_match": [
         "Pioneer"
       ],
-      "challenging_reason": "Conflicts with people who want fast bets.",
+      "challenging_reason": "Conflictos con personas que quieren apuestas rápidas.",
       "actions": [
-        "Allocate 20% of assets to growth assets.",
-        "Study alternative investments besides real estate.",
-        "Rebalance your portfolio once a year."
+        "Asigna el 20 % de los activos a activos de crecimiento.",
+        "Infórmate sobre inversiones alternativas, además de los inmuebles.",
+        "Reequilibra tu cartera una vez al año."
       ],
       "red_flags": [
-        "Are all your assets concentrated in real estate?",
-        "Are you ignoring new investment opportunities?"
+        "¿Tienes todo tu patrimonio invertido en inmuebles?",
+        "¿Estás pasando por alto nuevas oportunidades de inversión?"
       ]
     },
     "THE_CULTIVATOR": {
-      "headline": "Honest labor and steady accumulation create wealth.",
-      "body": "You don't believe in luck. You believe in faithful savings and the power of compounding.\n\nThis trait shines in installment investments, pensions, and long-term deposits. Conversely, never touch speculative investments.\n\nThe risk is lending money to acquaintances. Lending money loses both money and relationships.",
+      "headline": "El trabajo honrado y la acumulación constante generan riqueza.",
+      "body": "No crees en la suerte. Crees en el ahorro constante y en el poder del interés compuesto.\n\nEsta cualidad se pone de manifiesto en las inversiones a plazos, las pensiones y los depósitos a largo plazo. Por el contrario, nunca te acerques a las inversiones especulativas.\n\nEl riesgo está en prestar dinero a conocidos. Al prestar dinero, se pierde tanto el dinero como las relaciones.",
       "patterns": [
-        "You save steadily.",
-        "You believe in the power of compounding.",
-        "You are weak to acquaintances' requests."
+        "Ahorras de forma constante.",
+        "Crees en el poder del interés compuesto.",
+        "No sabes decir que no a las peticiones de tus conocidos."
       ],
       "best_match": [
         "Steward",
         "Keeper"
       ],
-      "best_reason": "Someone who understands your faithfulness and grows together.",
+      "best_reason": "Alguien que comprenda tu fidelidad y crezca a tu lado.",
       "challenging_match": [
         "Operator"
       ],
-      "challenging_reason": "Conflicts with people who want fast returns.",
+      "challenging_reason": "Conflictos con personas que buscan beneficios rápidos.",
       "actions": [
-        "Invest in installments via automatic transfer every month.",
-        "Don't lend money to acquaintances.",
-        "Sign up for a pension savings account."
+        "Invierte a plazos mediante domiciliación bancaria cada mes.",
+        "No prestes dinero a conocidos.",
+        "Abre una cuenta de ahorro para la jubilación."
       ],
       "red_flags": [
-        "Have you lent money to acquaintances and not gotten it back?",
-        "Are you postponing installment investments?"
+        "¿Alguna vez has prestado dinero a conocidos y no te lo han devuelto?",
+        "¿Estás posponiendo tus inversiones a plazos?"
       ]
     },
     "THE_BLADE": {
-      "headline": "You make profits with decisive investments.",
-      "body": "Your cut-loss and take-profit are fast. You logically analyze market trends and make decisions.\n\nThis trait shines in stocks, futures, and trading. Conversely, it's dangerous for emotional investing or coins.\n\nThe risk is leverage (debt investment). Big losses follow big profits. Never use leverage.",
+      "headline": "Las inversiones acertadas te permiten obtener beneficios.",
+      "body": "Tus niveles de corte de pérdidas y de recogida de beneficios son rápidos. Analizas las tendencias del mercado de forma lógica y tomas decisiones.\n\nEsta cualidad destaca en el mercado de valores, los futuros y el trading. Por el contrario, resulta peligrosa para la inversión emocional o las criptomonedas.\n\nEl riesgo radica en el apalancamiento (inversión con deuda). A las grandes ganancias les siguen grandes pérdidas. Nunca utilices el apalancamiento.",
       "patterns": [
-        "Cut-loss and take-profit are fast.",
-        "You logically analyze the market.",
-        "You have strong conviction in your judgment."
+        "Las órdenes de corte de pérdidas y de cierre de ganancias son rápidas.",
+        "Analizas el mercado de forma lógica.",
+        "Tienes una gran confianza en tu criterio."
       ],
       "best_match": [
         "Steward",
         "Keeper"
       ],
-      "best_reason": "Someone who controls your risk.",
+      "best_reason": "Alguien que controle tu riesgo.",
       "challenging_match": [
         "Survivor"
       ],
-      "challenging_reason": "If both are aggressive, recovery in a crisis is hard.",
+      "challenging_reason": "Si ambos son agresivos, la recuperación tras una crisis resulta difícil.",
       "actions": [
-        "Never use leverage.",
-        "Keep 70% of your portfolio in safe assets.",
-        "Write a trading journal."
+        "Nunca utilices el apalancamiento.",
+        "Mantén el 70 % de tu cartera en activos seguros.",
+        "Lleva un diario de operaciones."
       ],
       "red_flags": [
-        "Have you suffered big losses from debt investment?",
-        "Are you making emotional trades?"
+        "¿Has sufrido grandes pérdidas por invertir en deuda?",
+        "¿Estás realizando operaciones basadas en tus emociones?"
       ]
     },
     "THE_GEM": {
-      "headline": "Invest in valuable objects and scarce assets.",
-      "body": "You have an excellent sense of beauty and scarcity. Wealth luck opens in luxury goods, art, and premium real estate.\n\nThis trait suits art, watches, wine, and premium real estate investment. Conversely, it doesn't fit low-priced day trading.\n\nThe risk is confusing hobbies and investments. Separate emotional consumption and investment.",
+      "headline": "Invierte en objetos de valor y activos escasos.",
+      "body": "Tienes un excelente sentido de la belleza y la exclusividad. La suerte en materia de riqueza se abre paso en los artículos de lujo, el arte y los inmuebles de alta gama.\n\nEsta característica se adapta bien a la inversión en arte, relojes, vino e inmuebles de alta gama. Por el contrario, no encaja con el day trading de bajo coste.\n\nEl riesgo radica en confundir las aficiones con las inversiones. Separa el consumo emocional de la inversión.",
       "patterns": [
-        "You invest in beauty.",
-        "You are sensitive to scarcity.",
-        "Frequent emotional spending."
+        "Invertís en belleza.",
+        "Eres sensible a la escasez.",
+        "Gastos impulsivos por motivos emocionales."
       ],
       "best_match": [
         "Steward",
         "Deep"
       ],
-      "best_reason": "Someone who understands your taste and manages your finances.",
+      "best_reason": "Alguien que conozca tus gustos y se encargue de gestionar tus finanzas.",
       "challenging_match": [
         "Radiator"
       ],
-      "challenging_reason": "If both have severe emotional spending, bankruptcy.",
+      "challenging_reason": "Si ambos tienen un gasto compulsivo grave, la quiebra.",
       "actions": [
-        "Separate hobby and investment budgets.",
-        "Get expert appraisal for art/watches.",
-        "Decide emotional spending after 24 hours."
+        "Separa los presupuestos destinados a aficiones y a inversiones.",
+        "Consigue una tasación realizada por expertos en arte y relojes.",
+        "Decide si vas a realizar ese gasto impulsivo tras 24 horas."
       ],
       "red_flags": [
-        "Are you consuming while saying 'this is investment'?",
-        "Are you buying and selling based on emotion?"
+        "¿Estás consumiendo mientras dices «esto es una inversión»?",
+        "¿Compras y vendes dejándote llevar por las emociones?"
       ]
     },
     "THE_DEEP": {
-      "headline": "You are a strategist who buys when others don't know and sells when they do.",
-      "body": "You analyze the structure of the market. You quietly move when the crowd is excited and boldly when the crowd is in fear.\n\nThis trait shines in value investing, long-term investing, unlisted stocks, and real estate.\n\nThe risk is missing the timing due to falling into analysis. Set a decision deadline.",
+      "headline": "Eres un estratega que compra cuando los demás no lo saben y vende cuando lo saben.",
+      "body": "Analizas la estructura del mercado. Actúas con discreción cuando la multitud está entusiasmada y con audacia cuando la multitud tiene miedo.\n\nEsta cualidad destaca en la inversión en valor, la inversión a largo plazo, las acciones no cotizadas y el sector inmobiliario.\n\nEl riesgo es perder el momento oportuno por caer en el exceso de análisis. Fija un plazo para tomar la decisión.",
       "patterns": [
-        "You analyze the market structure.",
-        "You prefer contrarian investing.",
-        "It takes a long time to decide."
+        "Analizas la estructura del mercado.",
+        "Prefieres la inversión contrarian.",
+        "Me cuesta mucho decidirme."
       ],
       "best_match": [
         "Pioneer",
         "Operator"
       ],
-      "best_reason": "Someone who puts your analysis into action.",
+      "best_reason": "Alguien que ponga en práctica tu análisis.",
       "challenging_match": [
         "Deep"
       ],
-      "challenging_reason": "If both only analyze, you miss opportunities.",
+      "challenging_reason": "Si solo te dedicas a analizar, te pierdes oportunidades.",
       "actions": [
-        "Set a decision deadline.",
-        "Finish analysis within 3 days.",
-        "Find an execution partner."
+        "Fija una fecha límite para tomar una decisión.",
+        "Finalizar el análisis en un plazo de 3 días.",
+        "Busca un socio para la ejecución."
       ],
       "red_flags": [
-        "Have you missed opportunities while analyzing?",
-        "Are you continuously postponing decisions?"
+        "¿Te has perdido alguna oportunidad mientras realizabas el análisis?",
+        "¿Estás posponiendo constantemente las decisiones?"
       ]
     },
     "THE_SPRING": {
-      "headline": "You trust your intuition and respond flexibly.",
-      "body": "You instinctively read the flow of money. You have the power to sense opportunities others can't see.\n\nThis trait shines in short-term investing, trading, and capturing business opportunities.\n\nThe risk is falling for the tricks of people around you. If you are not sure, firmly refuse.",
+      "headline": "Confías en tu intuición y reaccionas con flexibilidad.",
+      "body": "Intuitivamente, sabes interpretar el flujo de dinero. Tienes la capacidad de detectar oportunidades que otros no ven.\n\nEsta cualidad destaca en la inversión a corto plazo, el trading y el aprovechamiento de oportunidades de negocio.\n\nEl riesgo es caer en las artimañas de quienes te rodean. Si no estás seguro, recházalo con firmeza.",
       "patterns": [
-        "You capture opportunities with intuition.",
-        "You respond flexibly.",
-        "You are weak to the tricks of those around you."
+        "Aprovechas las oportunidades gracias a tu intuición.",
+        "Respondes con flexibilidad.",
+        "Eres vulnerable a las artimañas de quienes te rodean."
       ],
       "best_match": [
         "Steward",
         "Anchor"
       ],
-      "best_reason": "Someone who verifies your intuition.",
+      "best_reason": "Alguien que confirme tu intuición.",
       "challenging_match": [
         "Operator"
       ],
-      "challenging_reason": "If both are impulsive, you collapse in a crisis.",
+      "challenging_reason": "Si los dos sois impulsivos, acabáis por derrumbaros ante una crisis.",
       "actions": [
-        "Always get expert verification before big investments.",
-        "Decide on friends' investment advice after 3 days.",
-        "Automatically save 10% of income."
+        "Antes de realizar inversiones importantes, pide siempre la opinión de un experto.",
+        "Decide qué hacer con los consejos de inversión de tus amigos al cabo de tres días.",
+        "Ahorra automáticamente el 10 % de tus ingresos."
       ],
       "red_flags": [
-        "Have you suffered losses from friends' tricks?",
-        "Are you skipping verification trusting only intuition?"
+        "¿Has sufrido pérdidas por las travesuras de tus amigos?",
+        "¿Te estás saltando la verificación y te fías solo de tu intuición?"
       ]
     }
   }

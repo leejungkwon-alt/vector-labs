@@ -1,14 +1,14 @@
 {
   "LUCKY_CODE_CONTENT": {
     "GROWTH": {
-      "element": "Wood",
+      "element": "Madera",
       "keywords": [
-        "expansion",
-        "direction",
-        "initiative"
+        "expansión",
+        "dirección",
+        "iniciativa"
       ],
       "colors": [
-        "Forest green",
+        "Verde bosque",
         "Jade",
         "Olive"
       ],
@@ -17,37 +17,37 @@
         8
       ],
       "directions": [
-        "East",
-        "Southeast"
+        "Este",
+        "Sureste"
       ],
       "activities": [
-        "Morning walks",
-        "Hiking",
-        "Gardening",
-        "Reading",
-        "Starting something small"
+        "Paseos matutinos",
+        "Senderismo",
+        "Jardinería",
+        "Lectura",
+        "Empezar con algo pequeño"
       ],
       "foods": [
-        "Leafy greens",
-        "Sour foods",
-        "Fresh herbs"
+        "Verduras de hoja verde",
+        "Alimentos ácidos",
+        "Hierbas frescas"
       ],
       "practices": [
-        "Start one thing this week without a full plan.",
-        "Spend 20 minutes in nature — not as fitness, just as presence.",
-        "Write one direction you're moving toward, and one you're not."
+        "Empieza algo esta semana sin tener un plan completo.",
+        "Pasa 20 minutos en la naturaleza, no como ejercicio físico, sino simplemente para estar ahí.",
+        "Escribe una dirección hacia la que te estás moviendo y otra hacia la que no."
       ]
     },
     "SPARK": {
-      "element": "Fire",
+      "element": "Cuatro",
       "keywords": [
-        "expression",
-        "warmth",
-        "visibility"
+        "expresión",
+        "calidez",
+        "visibilidad"
       ],
       "colors": [
         "Red",
-        "Orange",
+        "Naranja",
         "Magenta"
       ],
       "numbers": [
@@ -55,199 +55,199 @@
         7
       ],
       "directions": [
-        "South"
+        "Sur"
       ],
       "activities": [
-        "Social gatherings",
-        "Live music",
-        "Performance",
-        "High-intensity training"
+        "Reuniones sociales",
+        "Música en directo",
+        "Rendimiento",
+        "Entrenamiento de alta intensidad"
       ],
       "foods": [
-        "Bitter greens",
-        "Warm spices",
-        "Coffee or tea"
+        "Verduras amargas",
+        "Especias cálidas",
+        "Café o té"
       ],
       "practices": [
-        "Say one thing out loud this week you've been feeling quietly.",
-        "Do something visible — post, present, perform. Even small.",
-        "Put yourself in a room with warm people."
+        "Esta semana, di en voz alta algo que hayas estado sintiendo en silencio.",
+        "Haz algo que se vea: publica algo, haz una presentación, actúa. Aunque sea algo pequeño.",
+        "Rodéate de gente acogedora."
       ]
     },
     "GROUND": {
-      "element": "Earth",
+      "element": "Tierra",
       "keywords": [
-        "stability",
-        "trust",
-        "patience"
+        "estabilidad",
+        "confianza",
+        "paciencia"
       ],
       "colors": [
-        "Yellow",
-        "Brown",
+        "Amarillo",
+        "Marrón",
         "Beige",
-        "Ochre"
+        "Ocre"
       ],
       "numbers": [
         5,
         10
       ],
       "directions": [
-        "Southwest",
-        "Northeast",
-        "Center"
+        "Suroeste",
+        "Noreste",
+        "Centro"
       ],
       "activities": [
-        "Cooking",
-        "Pottery",
-        "Slow walks",
-        "Journaling",
-        "Grounding"
+        "Cocina",
+        "Cerámica",
+        "Paseos tranquilos",
+        "Escribir un diario",
+        "Puesta a tierra"
       ],
       "foods": [
-        "Root vegetables",
-        "Whole grains",
-        "Sweet foods in moderation"
+        "Tubérculos",
+        "Cereales integrales",
+        "Los alimentos dulces con moderación"
       ],
       "practices": [
-        "Eat one meal a week with no screen.",
-        "Keep one physical object near you that reminds you of home.",
-        "Do one thing this week with your hands, not your mind."
+        "Come una vez a la semana sin pantallas.",
+        "Ten a mano algún objeto que te recuerde a tu hogar.",
+        "Esta semana, haz algo con las manos, no con la mente."
       ]
     },
     "EDGE": {
       "element": "Metal",
       "keywords": [
-        "clarity",
-        "structure",
-        "precision"
+        "claridad",
+        "estructura",
+        "precisión"
       ],
       "colors": [
-        "White",
-        "Silver",
-        "Metallic gold"
+        "Blanco",
+        "Plata",
+        "Dorado metalizado"
       ],
       "numbers": [
         4,
         9
       ],
       "directions": [
-        "West",
-        "Northwest"
+        "Oeste",
+        "Noroeste"
       ],
       "activities": [
-        "Strength training",
-        "Decluttering",
-        "Learning an instrument",
-        "Editing something"
+        "Entrenamiento de fuerza",
+        "Ordenar y deshacerse de lo innecesario",
+        "Aprender a tocar un instrumento",
+        "Editar algo"
       ],
       "foods": [
-        "Pungent spices",
-        "Nuts and seeds",
-        "White fish"
+        "Especias picantes",
+        "Frutos secos y semillas",
+        "Pescado blanco"
       ],
       "practices": [
-        "Declutter one drawer, one inbox, one list.",
-        "Say the direct thing this week — without softening it.",
-        "Ask one question before giving the answer."
+        "Ordena un cajón, una bandeja de entrada y una lista.",
+        "Esta semana, di las cosas sin rodeos, sin suavizarlas.",
+        "Haz una pregunta antes de dar la respuesta."
       ]
     },
     "FLOW": {
-      "element": "Water",
+      "element": "Agua",
       "keywords": [
-        "adaptability",
-        "wisdom",
-        "depth"
+        "capacidad de adaptación",
+        "sabiduría",
+        "profundidad"
       ],
       "colors": [
-        "Black",
-        "Navy",
-        "Deep gray"
+        "Negro",
+        "Marina",
+        "Deep gris"
       ],
       "numbers": [
         1,
         6
       ],
       "directions": [
-        "North"
+        "Norte"
       ],
       "activities": [
-        "Swimming",
-        "Meditation",
-        "Journaling",
-        "Music",
-        "Long conversations"
+        "Natación",
+        "Meditación",
+        "Escribir un diario",
+        "Música",
+        "Conversaciones largas"
       ],
       "foods": [
-        "Sea vegetables",
-        "Black beans",
-        "Salty foods in moderation"
+        "Algas marinas",
+        "Alubias negras",
+        "Alimentos salados con moderación"
       ],
       "practices": [
-        "Sit with one unresolved question without forcing an answer.",
-        "Write a page of stream-of-consciousness this week.",
-        "Say yes to one thing that has no clear plan."
+        "Reflexiona sobre una pregunta sin resolver sin forzar una respuesta.",
+        "Escribe esta semana una página de «flujo de la conciencia».",
+        "Di «sí» a algo para lo que no haya un plan claro."
       ]
     }
   },
   "LUCKY_CODE_DOMAINS": {
     "GROWTH": {
-      "career": "Teaching, publishing, gardening, fashion, planning, education — roles where you grow people or projects.",
-      "wealth": "Tending what you already have, rather than chasing what's new. Long-term thinking suits you — trust the compounding.",
-      "relationships": "Peer relationships that push you forward. Find people who grow alongside you, not toward you.",
-      "learning": "Deep study over fast skimming. One topic for a year beats ten for a month.",
-      "everyday": "Start things small and often. Forward motion is your medicine.",
+      "career": "La docencia, la edición, la jardinería, la moda, la planificación, la educación… Funciones en las que se fomenta el desarrollo de personas o proyectos.",
+      "wealth": "Cuida lo que ya tienes, en lugar de perseguir lo nuevo. Te conviene pensar a largo plazo: confía en el efecto de los intereses compuestos.",
+      "relationships": "Relaciones con tus compañeros que te impulsen a seguir adelante. Busca a personas que crezcan a tu lado, no a tu costa.",
+      "learning": "Estudio Deep sobre la lectura rápida por encima de las líneas. Es mejor profundizar en un tema durante un año que en diez durante un mes.",
+      "everyday": "Empieza poco a poco y con frecuencia. El avance es tu medicina.",
       "avoid": [
-        "Waiting for perfect conditions",
-        "Perfectionist paralysis",
-        "Sitting still for too long"
+        "A la espera de las condiciones perfectas",
+        "Parálisis por perfeccionismo",
+        "Estar sentado sin moverse durante demasiado tiempo"
       ]
     },
     "SPARK": {
-      "career": "Marketing, media, IT, energy, hospitality, entertainment — anything that needs visibility and heat.",
-      "wealth": "Opportunity often finds you through people. Watch for the urge to say yes to everything — focus is your real multiplier.",
-      "relationships": "Warm, expressive people who don't need you to be quiet. Small talk is not your enemy.",
-      "learning": "Learn out loud. Teach what you're learning before you master it.",
-      "everyday": "One visibly warm gesture a day. Text, call, thank someone.",
+      "career": "Marketing, medios de comunicación, tecnologías de la información, energía, hostelería, entretenimiento… cualquier sector que necesite visibilidad y dinamismo.",
+      "wealth": "Las oportunidades suelen llegar a través de las personas. Ten cuidado con la tentación de decir que sí a todo: la concentración es lo que realmente te ayuda a sacar el máximo partido.",
+      "relationships": "Gente cálida y expresiva a la que no le molesta que hables. La charla trivial no es tu enemigo.",
+      "learning": "Aprende en voz alta. Enseña lo que estás aprendiendo antes de dominarlo.",
+      "everyday": "Un gesto cariñoso al día. Envía un mensaje, llama o da las gracias a alguien.",
       "avoid": [
-        "Being the only light in a dark room",
-        "Saying yes to every invitation",
-        "Running on empty"
+        "Ser la única luz en una habitación a oscuras",
+        "Decir que sí a todas las invitaciones",
+        "Sin combustible"
       ]
     },
     "GROUND": {
-      "career": "Real estate, construction, education, brokerage, agriculture — anything with a foundation under it.",
-      "wealth": "Steady is your advantage. Respect the power of the same small choice repeated. Boring, done well, compounds.",
-      "relationships": "Few, deep, steady. Loyalty over novelty. Quality time beats quality words.",
-      "learning": "Structured programs. Teachers with credentials. Certifications over inspiration.",
-      "everyday": "Same wake time. Same meal time. Rhythm is the whole game.",
+      "career": "Inmobiliaria, construcción, educación, corretaje, agricultura… cualquier cosa que tenga una base sólida.",
+      "wealth": "La constancia es tu ventaja. Respeta el poder de una misma pequeña decisión repetida una y otra vez. Lo aburrido, si se hace bien, da sus frutos.",
+      "relationships": "Pocas, profundas, constantes. La lealtad por encima de la novedad. El tiempo de calidad es mejor que las palabras bonitas.",
+      "learning": "Programas estructurados. Profesores titulados. Las titulaciones por encima de la inspiración.",
+      "everyday": "A la misma hora de levantarse. A la misma hora de comer. La clave está en el ritmo.",
       "avoid": [
-        "Chasing the new thing every quarter",
-        "Speed for its own sake",
-        "Change without reason"
+        "Buscar novedades cada trimestre",
+        "La velocidad por sí misma",
+        "Cambio sin motivo"
       ]
     },
     "EDGE": {
-      "career": "Finance, law, military, police, medicine, engineering — work with rules, precision, and consequence.",
-      "wealth": "Clarity is your currency. You'd rather understand than chase. Check you're not mistaking caution for avoidance.",
-      "relationships": "Directness is your love language. People who can take your real opinion. Nothing performative.",
-      "learning": "Formal training. Apprenticeships. Systems and frameworks over inspiration.",
-      "everyday": "One thing cleaned, one thing said, one line drawn.",
+      "career": "Las finanzas, el derecho, el ejército, la policía, la medicina, la ingeniería… son ámbitos en los que se trabaja con normas, precisión y responsabilidad.",
+      "wealth": "La claridad es tu moneda de cambio. Prefieres comprender antes que perseguir. Asegúrate de que no estás confundiendo la precaución con la evasión.",
+      "relationships": "La franqueza es tu lenguaje del amor. Gente que sepa aceptar tu opinión sincera. Nada de fingimientos.",
+      "learning": "Formación reglada. Programas de formación en prácticas. Sistemas y marcos de referencia por encima de la inspiración.",
+      "everyday": "Una cosa limpia, una cosa dicha, una línea trazada.",
       "avoid": [
-        "Winning the argument at all costs",
-        "Emotional coldness masked as honesty",
-        "Over-structuring your life"
+        "Ganar la discusión a toda costa",
+        "Frialdad emocional disfrazada de sinceridad",
+        "Estructurar en exceso tu vida"
       ]
     },
     "FLOW": {
-      "career": "Trading, logistics, travel, consulting, research, anything that moves or connects.",
-      "wealth": "Your relationship with resources moves with the seasons. Trust the rhythm — but build one steady habit to anchor you.",
-      "relationships": "Deep, quiet, unhurried. People you can think with, not just talk to.",
-      "learning": "Slow, immersive study. You learn by absorbing, not by drilling.",
-      "everyday": "Say yes to one unplanned thing a week. Keep the current moving.",
+      "career": "Comercio, logística, viajes, consultoría, investigación… cualquier cosa que se mueva o conecte.",
+      "wealth": "Tu relación con los recursos cambia con el paso de las estaciones. Confía en ese ritmo, pero crea un hábito constante que te sirva de apoyo.",
+      "relationships": "Deep, tranquilo, sin prisas. Gente con la que puedes reflexionar, no solo charlar.",
+      "learning": "Un aprendizaje pausado y envolvente. Se aprende asimilando, no repitiendo mecánicamente.",
+      "everyday": "Di «sí» a una cosa imprevista a la semana. Mantén el impulso.",
       "avoid": [
-        "Committing too early",
-        "Over-analyzing instead of acting",
-        "Scattering focus"
+        "Comprometerse demasiado pronto",
+        "Analizar en exceso en lugar de actuar",
+        "Enfoque por dispersión"
       ]
     }
   }

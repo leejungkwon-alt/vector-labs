@@ -3,25 +3,25 @@
   "locked_hint_extra": {
     "love": [
       "cross_insight",
-      "timing"
+      "sincronización"
     ],
     "career": [
       "cross_insight",
-      "timing"
+      "sincronización"
     ],
     "wealth": [
       "cross_insight",
-      "timing"
+      "sincronización"
     ]
   },
   "labels": {
-    "cross_insight": "Cross Insight",
-    "timing": "Current Timing",
-    "body": "Body",
-    "patterns": "Patterns",
-    "compatibility": "Chemistry",
-    "actions": "Action Guide",
-    "action": "Action Guide",
-    "red_flags": "Red Flags"
+    "cross_insight": "Perspectiva transversal",
+    "timing": "Tiempo actual",
+    "body": "Cuerpo",
+    "patterns": "Patrones",
+    "compatibility": "Química",
+    "actions": "Guía práctica",
+    "action": "Guía práctica",
+    "red_flags": "Señales de alerta"
   }
 }
