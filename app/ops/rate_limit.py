@@ -4,12 +4,39 @@ IP 기반 슬라이딩 윈도우 rate limit (인메모리, 단일 프로세스�
 
 SAJU_RATE_LIMIT_MAX=0 이면 비활성화.
 """
+import os
 from collections import defaultdict, deque
 from time import monotonic
 
 from fastapi import Request
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.responses import JSONResponse
+
+
+
+
+_TRUTHY = ("1", "true", "yes", "on")
+
+
+def _trust_proxy() -> bool:
+    """SAJU_TRUST_PROXY=1/true/yes/on 일 때만 프록시 헤더 신뢰."""
+    return os.environ.get("SAJU_TRUST_PROXY", "").strip().lower() in _TRUTHY
+
+
+def _client_ip(request: Request) -> str:
+    """클라이언트 IP 반환.
+
+    - SAJU_TRUST_PROXY 활성 + X-Forwarded-For 존재:
+      leftmost(원 클라이언트) IP 사용. Cloud Run/Vercel 등 프록시 뒤 배포용.
+    - 그 외: request.client.host (기존 동작 유지, 스푸핑 방지).
+    """
+    if _trust_proxy():
+        xff = request.headers.get("x-forwarded-for", "").strip()
+        if xff:
+            first = xff.split(",")[0].strip()
+            if first:
+                return first
+    return request.client.host if request.client else "unknown"
 
 
 class RateLimitMiddleware(BaseHTTPMiddleware):
@@ -30,7 +57,7 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
         if path in self.EXEMPT_PATHS or request.method == "OPTIONS":
             return await call_next(request)
 
-        ip = request.client.host if request.client else "unknown"
+        ip = _client_ip(request)
         now = monotonic()
         bucket = self._hits[ip]
         cutoff = now - self.window
