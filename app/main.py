@@ -5,6 +5,7 @@ FastAPI 진입점 — 운영 계층 포함.
 import os
 import logging
 
+from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -18,10 +19,18 @@ from app.ops.rate_limit import RateLimitMiddleware
 configure_logging()
 
 
+@asynccontextmanager
+async def _lifespan(_app: FastAPI):
+    """앱 부팅 시 프로덕션 필수 환경변수 검증 (fail-closed)."""
+    validate_startup()
+    yield
+
+
 app = FastAPI(
     title="Gyeol API",
     version="1.0.0",
     description="Deterministic Four Pillars engine for Gyeol (Read the grain of your life).",
+    lifespan=_lifespan,
 )
 
 # Starlette: 마지막에 추가된 미들웨어가 outermost
