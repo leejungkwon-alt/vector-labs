@@ -1,0 +1,3 @@
+[es/english-leak] year.json :: YEAR_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[2].body
+    match: "how"
+    text: Este año es un año pacífico para regresar al santuario interior, curar el alma cansada y compilar el know-how acumulado 

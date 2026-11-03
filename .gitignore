@@ -107,3 +107,14 @@ tma/assets/
 /verify_translations.py
 # --- Legacy TMA (Vercel은 frontend/dist만 배포) ---
 tma/
+# content backup artifacts
+app/services/content/data/_bak_quarantine/
+*.bak
+
+
+*.pre_autofix*
+
+
+*.pre_autofix*
+*.pre_v2
+
