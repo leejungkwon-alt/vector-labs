@@ -1,7 +1,7 @@
 {
   "ARCHETYPE_CONTENT": {
     "THE_PIONEER": {
-      "name": "El Pioneer",
+      "name": "El Pionero",
       "tagline": "Cresces hacia arriba, esté o no preparado el suelo.",
       "symbol": "↟",
       "color": "#2F7A3F",
@@ -91,7 +91,7 @@
       }
     },
     "THE_ADAPTER": {
-      "name": "El Adapter",
+      "name": "El Adaptador",
       "tagline": "Te adaptas para no romperte.",
       "symbol": "⟡",
       "color": "#5FAF7A",
@@ -181,7 +181,7 @@
       }
     },
     "THE_RADIATOR": {
-      "name": "El Radiator",
+      "name": "El Radiador",
       "tagline": "Las habitaciones se calientan con tu sola presencia.",
       "symbol": "☀",
       "color": "#E85D2F",
@@ -269,7 +269,7 @@
       }
     },
     "THE_KEEPER": {
-      "name": "El Keeper",
+      "name": "El Guardián",
       "tagline": "No eres una hoguera. Eres una linterna.",
       "symbol": "✦",
       "color": "#C2461F",
@@ -359,7 +359,7 @@
       }
     },
     "THE_ANCHOR": {
-      "name": "El Anchor",
+      "name": "El Ancla",
       "tagline": "Tú eres el suelo sobre el que se apoyan los demás.",
       "symbol": "▣",
       "color": "#8B6F3F",
@@ -448,7 +448,7 @@
       }
     },
     "THE_CULTIVATOR": {
-      "name": "El Cultivator",
+      "name": "El Cultivador",
       "tagline": "Cultivas cosas. En silencio, con paciencia, de verdad.",
       "symbol": "❉",
       "color": "#A89060",
@@ -628,7 +628,7 @@
       }
     },
     "THE_GEM": {
-      "name": "El Gem",
+      "name": "La Gema",
       "tagline": "Brillas porque fuiste creado con un propósito.",
       "symbol": "◈",
       "color": "#9AACB8",
@@ -808,7 +808,7 @@
       }
     },
     "THE_SPRING": {
-      "name": "El Spring",
+      "name": "El Manantial",
       "tagline": "Llegas en silencio y todo crece a tu alrededor.",
       "symbol": "◌",
       "color": "#4A6FA5",

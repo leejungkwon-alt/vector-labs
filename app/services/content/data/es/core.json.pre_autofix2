@@ -1,0 +1,933 @@
+{
+  "ARCHETYPE_CONTENT": {
+    "THE_PIONEER": {
+      "name": "El Pionero",
+      "tagline": "Cresces hacia arriba, esté o no preparado el suelo.",
+      "symbol": "↟",
+      "color": "#2F7A3F",
+      "element": "Madera",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "Estás hecho para ser el primero. Y para seguir adelante cuando nadie te sigue.",
+          "narrative": [
+            "Tienes una brújula interior muy clara. Una vez que decides algo, te resulta obvio mucho antes de que se le haga evidente a cualquier otra persona.",
+            "No esperas a que haya consenso. No esperas a que se trace el mapa. Simplemente sabes dónde está el norte y te pones en marcha.",
+            "Esto te convierte en un fundador, un creador, un pionero. Pero también significa que pasas mucho tiempo a solas con tu visión antes de que nadie la comprenda.",
+            "Tu independencia es tu mayor baza, pero también puede hacer que te sientas aislado. Cuando eres el único que ve el camino, es fácil olvidarse de mirar atrás y comprobar si alguien sigue contigo.",
+            "El verdadero liderazgo no consiste solo en seguir adelante; consiste en saber cuándo reducir el ritmo para que los demás puedan ponerse a tu nivel. Tu visión es la semilla, pero la colaboración es el agua."
+          ],
+          "shadows": [
+            "Tu ritmo te parece tan adecuado que, sin darte cuenta, puedes llegar a arrollar el ritmo de los demás.",
+            "Confundes la quietud con el estancamiento. El descanso te parece una traición a tu propia ambición.",
+            "Puedes volverte inflexible en tus creencias e ignorar aportaciones valiosas porque no se ajustan a tu plan original."
+          ],
+          "advice": [
+            "Esta semana, pregúntale a alguien en quien confíes cómo se ve tu impulso desde fuera.",
+            "Elige un objetivo por el que llevas meses esforzándote. Pregúntate: «¿Seguiría importándome esto si nadie se enterara nunca?».",
+            "Espera 10 segundos antes de decir «Ya lo tengo». A veces, no es así.",
+            "Programa un «día de descanso» una vez al mes en el que no hagas absolutamente nada relacionado con tus objetivos. Solo para respirar."
+          ],
+          "keywords": [
+            "visionario",
+            "vertical",
+            "independiente",
+            "fundador"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "Lideras sin necesidad de ser el centro de atención.",
+          "narrative": [
+            "Tienes el instinto de un pionero, pero sin su impaciencia. Serás el primero en dar el paso si es necesario, pero prefieres que todo el proyecto salga adelante a que tu nombre figure en él.",
+            "La gente te sigue porque eres constante. No haces alarde de tu ambición, simplemente sigues creciendo, discretamente, en una dirección que para ti tiene sentido.",
+            "Se trata de un tipo de liderazgo poco común y duradero. Además, es fácil pasarlo por alto en uno mismo.",
+            "Tú eres la mano firme que sujeta el timón. No necesitas gritar para que te escuchen, ni correr a toda velocidad para ganar la carrera.",
+            "Tu punto fuerte es tu constancia. Mientras otros se agotan persiguiendo la última novedad, tú estás construyendo algo que perdurará más allá de las modas pasajeras."
+          ],
+          "shadows": [
+            "Puedes acabar cargando con más de lo que te corresponde porque no quieres que se convierta en «un problema».",
+            "Tu serenidad puede parecer pasividad a quienes confunden el ruido con la acción.",
+            "Es posible que reprimas tus propias necesidades para mantener la paz, lo que puede dar lugar a un resentimiento silencioso."
+          ],
+          "advice": [
+            "Nombra una cosa que desees y dilo en voz alta esta semana, sin matizaciones.",
+            "Fíjate en quién te sigue de verdad. No en quién está de acuerdo contigo, sino en quién camina a tu lado.",
+            "Deja que otra persona dirija una de las cosas de las que normalmente te encargarías.",
+            "Evalúa cómo te sientes. ¿Te mantienes firme o simplemente estás evitando el conflicto?"
+          ],
+          "keywords": [
+            "liderazgo discreto",
+            "crecimiento",
+            "coherencia",
+            "con los pies en la tierra"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "Eres un árbol: precioso, pero exigente con el suelo.",
+          "narrative": [
+            "Tienes una fuerte orientación interior, pero eso no siempre se traduce en acciones externas. Necesitas que se den las condiciones adecuadas antes de poder ponerte realmente en marcha.",
+            "Esto no es pereza. Es precisión. Uno percibe con total claridad cuándo un lugar, un proyecto o una persona pueden albergar lo que estás construyendo.",
+            "Tu crecimiento es real, pero no es rápido. Es de esos que duran décadas.",
+            "Tienes una gran intuición respecto a tu entorno. Sabes cuándo el suelo es tóxico, aunque todos los demás digan que está bien.",
+            "Deja de disculparte por necesitar las condiciones adecuadas. Una semilla no crece en el hormigón. Espera a que llegue tu primavera y, cuando llegue, crecerás a toda velocidad."
+          ],
+          "shadows": [
+            "Esperas a que te digan «listo» más tiempo del que deberías.",
+            "Te mantienes fiel a un entorno equivocado hasta llegar a un punto sin retorno.",
+            "Puedes utilizar la excusa de «esperar a que se den las condiciones adecuadas» para evitar pasar a la acción."
+          ],
+          "advice": [
+            "Anota las condiciones que realmente necesitas. ¿Las cumples? Si no es así, ¿qué es lo primero que puedes cambiar?",
+            "Empieza poco a poco: hoy mismo, tal y como esté.",
+            "Está bien que una habitación te quede pequeña. Fíjate en cuál es.",
+            "Si un lugar te agota, marca tus límites. No pasa nada por marcharte antes de tiempo."
+          ],
+          "keywords": [
+            "paciencia",
+            "arraigado",
+            "leal",
+            "condiciones"
+          ]
+        }
+      }
+    },
+    "THE_ADAPTER": {
+      "name": "El Adapter",
+      "tagline": "Te adaptas para no romperte.",
+      "symbol": "⟡",
+      "color": "#5FAF7A",
+      "element": "Madera",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "Para salir adelante, hay que saber leer el ambiente y adaptarse a él.",
+          "narrative": [
+            "No hay que enfrentarse a los sistemas de frente, sino encontrar sus puntos débiles. Probablemente te hayan subestimado más de una vez personas que confunden la amabilidad con la debilidad.",
+            "Tu flexibilidad es una forma de inteligencia. Ves lo que los demás están a punto de hacer y ya vas por medio camino antes de que se den cuenta.",
+            "Esto te convierte en una persona con un talento natural para colaborar, negociar y traducir. También significa que la gente no siempre se da cuenta de todo el trabajo que estás haciendo.",
+            "Eres un maestro del «tai chi social». En lugar de bloquear la energía, la rediriges. Esto te hace increíblemente eficaz en entornos caóticos.",
+            "Pero doblarte constantemente puede hacer que, con el tiempo, acabes olvidando cómo es tu forma natural. Tienes derecho a mantenerte firme cuando sea necesario."
+          ],
+          "shadows": [
+            "Puedes doblarte tanto que llegues a perder la noción de tu propia forma.",
+            "Te adaptas para complacer a alguien y luego acabas resentido con esa persona por la que te adaptaste.",
+            "Es posible que evites conflictos necesarios, dejando que las cosas se agraven hasta que acaben por estallar."
+          ],
+          "advice": [
+            "Al menos una vez esta semana, di «no» a algo sin importancia. Fíjate en lo que pasa.",
+            "Escribe tres cosas que realmente quieras, no lo que se ajuste a la situación.",
+            "Elige a una persona que nunca te haya visto ser terco. Deja que lo vea.",
+            "Cuando sientas resentimiento, pregúntate: «¿He dicho que sí cuando en realidad quería decir que no?»."
+          ],
+          "keywords": [
+            "adaptativo",
+            "elegante",
+            "intuitivo",
+            "subestimado"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "Te dejas llevar por la corriente sin perder de vista la orilla.",
+          "narrative": [
+            "Puedes mostrarte firme o flexible según lo requiera el momento, y no le das mayor importancia al hecho de alternar entre ambas actitudes.",
+            "Así es como se manifiesta la verdadera inteligencia social. No se trata de rendimiento, sino de calibración.",
+            "La gente confía en ti porque parece que sabes lo que hace falta. A veces, además, lo dan por sentado.",
+            "Sabes cuándo insistir y cuándo ceder. Se trata de una cualidad excepcional que la mayoría de la gente se pasa toda la vida intentando aprender.",
+            "Eres el pegamento que mantiene unidos a los grupos. No buscas ser el centro de atención, pero eres la razón por la que la luz sigue encendida."
+          ],
+          "shadows": [
+            "Te adaptas en exceso y luego te retiras discretamente.",
+            "Confundes tu propia flexibilidad con el hecho de no tener preferencias.",
+            "Es posible que dejes que otros tomen decisiones que te afectan profundamente, solo para mantener la paz."
+          ],
+          "advice": [
+            "Al menos una vez esta semana, expresa tu preferencia antes de que lo haga otra persona.",
+            "Fíjate en los casos en los que suavizas tu lenguaje sin necesidad.",
+            "Está bien que quieras cosas. Practica expresarlo en voz alta.",
+            "Sé sincero contigo mismo respecto a tus propios límites. ¿Te estás adaptando o los estás traspasando?"
+          ],
+          "keywords": [
+            "calibrado",
+            "elegante",
+            "empático",
+            "social"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "Floreces con la luz adecuada. No con cualquier luz.",
+          "narrative": [
+            "Percibes el estado de ánimo de los demás antes de que lo expresen. Eso es un don, pero te hace vulnerable a los ambientes que te agotan.",
+            "Cuando estás en el lugar adecuado, te sientes pleno y creativo. Cuando no lo estás, te sientes limitado.",
+            "Probablemente hayas aprendido a desconfiar de tu propia sensibilidad. No lo hagas. Es el instrumento más preciso que tienes.",
+            "Eres una esponja emocional. Tienes que aprender a «escurrirte» al final del día, o acabarás cargando con el peso de todos los demás.",
+            "El lugar adecuado no solo te aceptará; te nutrirá. Encuéntralo y quédate allí todo el tiempo que puedas."
+          ],
+          "shadows": [
+            "Te haces cargo del estrés de los demás como si fuera el tuyo propio.",
+            "Confundes el mantenimiento de la paz con la paz.",
+            "Es posible que te aísles por completo después de salir con gente y que necesites varios días para recuperarte."
+          ],
+          "advice": [
+            "Anota un lugar y una persona con los que te sientas más a gusto. Pasa más tiempo allí.",
+            "Cuando te sientas «raro» con alguien, confía en esa sensación al menos una vez antes de buscarle una explicación.",
+            "No tienes por qué animar a nadie. Ni siquiera para proteger tu propio estado de ánimo.",
+            "Crea un «ritual de desintoxicación» después de estar en lugares concurridos. Date una ducha, sal a dar un paseo o simplemente respira."
+          ],
+          "keywords": [
+            "delicado",
+            "empático",
+            "crecimiento",
+            "florecer"
+          ]
+        }
+      }
+    },
+    "THE_RADIATOR": {
+      "name": "El Radiator",
+      "tagline": "Las habitaciones se calientan con tu sola presencia.",
+      "symbol": "☀",
+      "color": "#E85D2F",
+      "element": "Fuego",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "Tienes la energía de un protagonista, pero también albergas un fuego interior inquieto.",
+          "narrative": [
+            "Capas de llamar la atención nada más entrar en una habitación. Tu pasión, tu calidez y tu innegable presencia atraen a la gente.",
+            "Sin embargo, en el fondo, hay un deseo constante de «más». Te cuesta conformarte con una rutina cotidiana, y esa inquietud te impulsa a seguir adelante.",
+            "Tu luz brilla con intensidad, pero a menudo lo das todo por los demás y descuidas tus propias necesidades emocionales. Te sientes más vivo cuando buscas nuevas experiencias y superas tus límites.",
+            "En lugar de encasillarte en un molde «estable», acepta tu naturaleza dinámica. Tu reto no es encontrar la paz, sino encontrar tu equilibrio en medio del cambio constante."
+          ],
+          "shadows": [
+            "Te agotas fácilmente al intentar cumplir con las expectativas de todo el mundo.",
+            "A veces te esfuerzas demasiado para ocultar tu ansiedad interior.",
+            "Puedes ser increíblemente terco, y cuando pierdes los estribos, es algo explosivo."
+          ],
+          "advice": [
+            "Tómate un rato a solas para calmar tu fuego interior.",
+            "No te quedes en un mismo sitio. Viaja, emprende un nuevo proyecto y canaliza tu energía hacia el exterior.",
+            "Llena primero tu propia taza antes de servir a los demás."
+          ],
+          "keywords": [
+            "Personaje principal",
+            "Pasión",
+            "Fuego interior",
+            "Cambiar"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "Desprendes una calidez que capta el ambiente antes incluso de que lo llene.",
+          "narrative": [
+            "Tu pasión es constante, más que explosiva. Sabes cuándo liderar y cuándo escuchar, un don más escaso de lo que la mayoría de la gente cree.",
+            "Irradias seguridad sin llamar la atención. La gente confía en ti porque pareces captar el ambiente de una situación sin que nadie te lo diga.",
+            "Este equilibrio es tu superpoder. Pero las personas equilibradas suelen sentirse invisibles al lado de otras más extrovertidas.",
+            "Eres la hoguera alrededor de la cual se reúnen todos. No hace falta que seas el que más se hace oír; solo tienes que ser el más constante.",
+            "No dejes que tu actitud serena oculte tus propias necesidades. Tienes derecho a mostrar tus emociones y a que te vean tal y como eres."
+          ],
+          "shadows": [
+            "Puedes reducir tu propia luz para mantener la armonía.",
+            "Tu serenidad puede interpretarse como frialdad por parte de quienes necesitan más calidez de la que tú les ofreces.",
+            "Es posible que descuides tus propios deseos para desempeñar el papel de la persona estable."
+          ],
+          "advice": [
+            "Una vez a la semana, reclama el espacio que normalmente cederías.",
+            "Cuando algo te ilumine, dilo en voz alta; no te limites a sentirlo.",
+            "Fíjate en a quién le bajas el volumen. Eso es información.",
+            "Pide ayuda a alguien. No siempre tienes que ser tú el que se mantenga fuerte."
+          ],
+          "keywords": [
+            "calibrado",
+            "calidez",
+            "capacidad de adaptación",
+            "confianza"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "Tu pasión es real, pero necesita el espacio adecuado para arder.",
+          "narrative": [
+            "Llevas calidez dentro de ti, pero no siempre te resulta fácil mostrarla. Un entorno inadecuado puede hacer que te sientas apagado.",
+            "Das lo mejor de ti cuando estás rodeado de gente que te ve tal y como eres. Cuando no es así, no finges: simplemente te callas.",
+            "Esta sensibilidad no es una debilidad. Es un filtro. Te permite saber muy rápido quién te conviene.",
+            "Necesitas un espacio en el que tu calidez te sea devuelta. Si le das calor a una nevera, la nevera no se calienta, sino que tú te congelas.",
+            "Tu sensibilidad es como una brújula. Te guía hacia las personas que realmente sabrán apreciar tu luz."
+          ],
+          "shadows": [
+            "Esperas demasiado tiempo a que llegue el momento «perfecto» o la persona «perfecta» antes de atreverte a brillar.",
+            "Es posible que hayas interiorizado la opinión negativa que otra persona tiene de ti.",
+            "Es posible que atenúes tu propia luz para adaptarte a la energía de la habitación y que luego te sientas agotado."
+          ],
+          "advice": [
+            "Anota tres personas o lugares en los que te sientas más tú mismo. Pasa más tiempo allí.",
+            "Una cosita que llevas posponiendo: ponte con ella hoy mismo, feo.",
+            "No necesitas permiso. Necesitas un testigo. Busca uno.",
+            "Date permiso para salir de un lugar que no te motive."
+          ],
+          "keywords": [
+            "sensibilidad",
+            "lealtad",
+            "fuego silencioso",
+            "medio ambiente"
+          ]
+        }
+      }
+    },
+    "THE_KEEPER": {
+      "name": "El Keeper",
+      "tagline": "No eres una hoguera. Eres una linterna.",
+      "symbol": "✦",
+      "color": "#C2461F",
+      "element": "Fuego",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "Ardes con constancia y ardes en soledad; y eso no es soledad, es arte.",
+          "narrative": [
+            "Tu pasión es intensa, pero discreta. No necesitas público para seguir adelante, ni aplausos para saber que vas por buen camino.",
+            "Te fijas en cosas que a los demás se les pasan por alto: un cambio de tono, un detalle en una habitación, un patrón en el comportamiento de alguien.",
+            "Esto hace que se te den muy bien las cosas que requieren precisión y paciencia. También significa que te guardas muchas cosas para ti.",
+            "Eres el centinela de la torre. Ves venir la tormenta antes que nadie, pero a veces te olvidas de avisar a la gente que está abajo.",
+            "Tu intensidad silenciosa es un don, pero no tienes por qué llevar todo el peso del mundo sobre tus hombros. Deja que otra persona se haga cargo por un rato."
+          ],
+          "shadows": [
+            "Acumulas el estrés en silencio hasta que se manifiesta físicamente.",
+            "Puedes confundir tu propia intensidad con las expectativas que los demás tienen de ti.",
+            "Es posible que te guardes tus emociones hasta que acaben estallando en privado."
+          ],
+          "advice": [
+            "Nombra una preocupación que hayas estado cargando tú solo. Díselo en voz alta a alguien.",
+            "Esta semana, haz algún tipo de actividad física que no tenga como objetivo ponerte en forma. Solo por el placer de hacerlo.",
+            "Se puede ser un especialista sin ser un adicto al trabajo.",
+            "Busca a alguien de confianza con quien compartir tu mundo interior. No tienes por qué ser una fortaleza."
+          ],
+          "keywords": [
+            "centrado",
+            "preciso",
+            "perspicaz",
+            "autónomo"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "Iluminas lo que tienes cerca, no todo.",
+          "narrative": [
+            "Tienes una calidez auténtica y no te cuesta mostrarla. Pero también sabes distinguir entre iluminar un ambiente y agotarte por ello.",
+            "La gente acude a ti con sus problemas de verdad, no con charlas triviales. Y eso no es porque tú lo exijas, sino porque lo fomentas sin darte cuenta.",
+            "Eres el tipo de persona con la que los demás se sienten seguros. Eso es un tipo de poder muy concreto.",
+            "Eres la persona de confianza. Sabes cómo dar cabida al dolor de otra persona sin que este te abrume.",
+            "Recuerda que tú también necesitas a alguien que te escuche. No pasa nada por pedir el mismo tipo de espacio que tú ofreces tan generosamente."
+          ],
+          "shadows": [
+            "Dejas que ciertas personas reciban más de lo que aportan.",
+            "Dejas de lado tus propias necesidades para mantener vivos otros fuegos.",
+            "Puede que animes a los demás siendo siempre quien arregla las cosas."
+          ],
+          "advice": [
+            "Fíjate en quiénes son las personas a las que dedicas tu mejor energía. ¿Es algo recíproco?",
+            "Pide una cosa esta semana sin explicar por qué la necesitas.",
+            "Deja que una persona se ocupe de ti sin que tengas que gestionar el proceso.",
+            "Establece unos límites con alguien que solo se aprovecha de ti. No es egoísmo; es una cuestión de supervivencia."
+          ],
+          "keywords": [
+            "calidez",
+            "confianza",
+            "selectivo",
+            "oyente"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "Brillas cuando estás con la gente adecuada y pasas desapercibido cuando estás con la gente equivocada.",
+          "narrative": [
+            "Tu luz no es estridente, sino tierna. Se manifiesta con mayor intensidad cuando confías en las personas que te rodean.",
+            "En un entorno inadecuado, no te retraes a propósito; simplemente te vas apagando poco a poco. Y, a menudo, no te das cuenta hasta que alguien te dice: «Llevas un rato callado».",
+            "Tu sensibilidad no es fragilidad. Es la razón por la que la gente te confía su propia ternura.",
+            "Necesitas un círculo pequeño y de confianza. No estás hecho para las salas ruidosas y abarrotadas; estás hecho para las conversaciones profundas y tranquilas.",
+            "Las personas adecuadas protegerán tu sensibilidad, no se aprovecharán de ella. Encuéntralas y entreguéles todo tu corazón."
+          ],
+          "shadows": [
+            "Te haces cargo de las emociones de los demás como si fueran tuyas.",
+            "Confundes la autoprotección con la autodestrucción.",
+            "Es posible que te aísles por completo para evitar que te hagan daño."
+          ],
+          "advice": [
+            "Haz una lista en la que vayas anotando a las personas que te hacen sentir más tú mismo, y no menos.",
+            "Al menos una vez esta semana, sal de la sala antes de tiempo si no te sientes a gusto.",
+            "No le debes a nadie que te muestres en plena forma.",
+            "Date permiso para ser una persona «casera». Tu energía necesita un refugio seguro."
+          ],
+          "keywords": [
+            "tender",
+            "intuitivo",
+            "protector",
+            "fuerza silenciosa"
+          ]
+        }
+      }
+    },
+    "THE_ANCHOR": {
+      "name": "El Anchor",
+      "tagline": "Tú eres el suelo sobre el que se apoyan los demás.",
+      "symbol": "▣",
+      "color": "#8B6F3F",
+      "element": "Tierra",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "Eres una montaña inamovible y un maestro de la estrategia.",
+          "narrative": [
+            "Eres el pilar: fiable, con los pies bien puestos en la tierra y profundamente responsable. Una vez que te comprometes con algo, lo llevas a cabo con una determinación inquebrantable.",
+            "Tras tu apariencia tranquila se esconde una ambición feroz y un poderoso afán de control. Tienes un talento innato para dirigir organizaciones o construir tu propio imperio.",
+            "Tu mente está constantemente buscando soluciones a problemas complejos. Es cuando más destacas cuando elaboras un plan y te haces responsable del resultado.",
+            "Sin embargo, ten cuidado con tu tendencia a controlarlo todo y con la enorme presión a la que te sometes. A veces, soltar las riendas y dejar que las cosas sigan su curso te convertirá en un líder aún más fuerte."
+          ],
+          "shadows": [
+            "Tu intensidad puede hacer que los demás se sientan abrumados o presionados.",
+            "Cuando las cosas no salen según lo previsto, puedes volverte obstinado o propenso a la frustración.",
+            "Intentas cargar con el peso del mundo sobre tus hombros, lo que te lleva a un agotamiento extremo."
+          ],
+          "advice": [
+            "Deja de intentar controlarlo todo. Aprende el arte de delegar.",
+            "Aprovecha tu ambición no solo para ti mismo, sino también para ayudar a crecer a quienes te rodean.",
+            "El descanso no es un signo de debilidad. Es la forma de prepararse para la próxima subida."
+          ],
+          "keywords": [
+            "Montaña",
+            "Estratega",
+            "Liderazgo",
+            "Responsabilidad",
+            "Ambición"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "Te mantienes firme sin frenar a los demás.",
+          "narrative": [
+            "Tienes la fuerza de un ancla sin su rigidez. Sabes cuándo mantenerte firme y cuándo ceder, y no te atormentas a la hora de tomar esa decisión.",
+            "La gente confía en ti porque no se lo pides. Simplemente estás ahí, y eso resulta ser más importante de lo que la mayoría de la gente cree.",
+            "Esto es poder silencioso. No queda bien en las fotos, pero dura mucho.",
+            "Eres el pilar de la comunidad. No hace falta que estés al mando, pero eres en quien todos confían cuando las cosas se ponen difíciles.",
+            "Asegúrate primero de que tus cimientos sean sólidos para ti mismo. No puedes apoyar a los demás si te estás desmoronando por dentro."
+          ],
+          "shadows": [
+            "Engordas más de lo que reconoces porque no quieres darle importancia.",
+            "Confundes la coherencia con quedarte en un puesto que ya te queda pequeño.",
+            "Es posible que permitas que los demás se vuelvan demasiado dependientes de ti, lo que frenaría su desarrollo."
+          ],
+          "advice": [
+            "Esta semana, pide que te ayuden con algo que, normalmente, harías tú mismo.",
+            "Piénsalo: ¿eres el suelo o eres el techo?",
+            "Deshazte de una responsabilidad que has estado cargando en silencio.",
+            "Deja que sea otra persona la que dé un paso al frente. Quizá te sorprenda."
+          ],
+          "keywords": [
+            "con los pies en la tierra",
+            "de fiar",
+            "fuerza silenciosa",
+            "saldo"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "Tu estabilidad es real, pero depende de que haya un suelo firme bajo tus pies.",
+          "narrative": [
+            "Cuentas con la lealtad del ancla, pero esta necesita un lugar donde fondear. Cuando lo encuentras, nada puede hacerte tambalear. Cuando no lo encuentras, vas a la deriva.",
+            "Sientes el caos de los demás más de lo que demuestras. Lo absorbes, lo asimilas y, al final, acaba convirtiéndose en algo tuyo.",
+            "Tu fuerza no reside en quedarte con todo, sino en elegir con qué quedarte.",
+            "Absorbes como una esponja la energía de tu entorno. Cuando el suelo tiembla, lo sientes en los huesos.",
+            "Tu prioridad principal debe ser crear un hogar estable. No puedes ser un refugio seguro para los demás si tú mismo estás perdido en el mar."
+          ],
+          "shadows": [
+            "Sigues siendo fiel a lugares y personas que ya no te retienen.",
+            "Llevas el peso de los demás hasta que olvidas cómo se siente el tuyo.",
+            "Quizá te resistas a seguir adelante porque lo conocido, aunque sea doloroso, te da más seguridad."
+          ],
+          "advice": [
+            "Nombra una cosa que tengas en tus manos y que no sea tuya. Déjala esta semana.",
+            "Encuentra el lugar donde te sientas más seguro. Ve allí más a menudo.",
+            "Puedes ser una persona estable sin tener que servir de refugio para todo el mundo.",
+            "Si un lugar o una persona te hacen sentir inseguro, no pasa nada por alejarte."
+          ],
+          "keywords": [
+            "leal",
+            "constante",
+            "con los pies en la tierra",
+            "protector"
+          ]
+        }
+      }
+    },
+    "THE_CULTIVATOR": {
+      "name": "El Cultivator",
+      "tagline": "Cultivas cosas. En silencio, con paciencia, de verdad.",
+      "symbol": "❉",
+      "color": "#A89060",
+      "element": "Tierra",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "Construyes cosas que perduran, a mano y sin atajos.",
+          "narrative": [
+            "No hacen falta grandes gestos. Lo que hace falta es trabajo constante, mucha atención y tiempo. Tú eres la persona que realmente termina lo que otros solo han empezado.",
+            "La gente te subestima porque tu poder no se hace notar. Luego pasan los años y tú eres el único que sigue en pie con algo auténtico.",
+            "Es un don poco común. La mayoría de la gente es capaz de empezar cosas. Muy pocos son capaces de hacerlas crecer.",
+            "Eres el maestro jardinero de la vida. Plantas semillas y las cuidas con una paciencia incansable, incluso cuando nadie más puede ver cómo crecen.",
+            "Pero no te olvides de dejar un poco de agua en el cubo para ti. Tu propio jardín también necesita cuidados."
+          ],
+          "shadows": [
+            "Te haces responsable del éxito de todos los demás.",
+            "Sigues dando más allá del punto en el que ya funciona.",
+            "Quizá te sientas poco valorado porque tu trabajo suele pasar desapercibido hasta que da sus frutos."
+          ],
+          "advice": [
+            "Elige una cosa a la que hayas estado dedicando tiempo por lealtad, no por amor. Déjala ir.",
+            "Pregúntate qué cultivarías si nadie necesitara nada de ti.",
+            "Tienes permiso para crear algo solo para ti.",
+            "Celebra hoy un pequeño logro. Te has esforzado mucho para conseguirlo."
+          ],
+          "keywords": [
+            "paciente",
+            "práctico",
+            "cuidador",
+            "constructor"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "Haces que las cosas crezcan, incluidas las personas.",
+          "narrative": [
+            "Tienes un instinto excepcional para saber qué necesita una persona, un proyecto o un lugar para prosperar. No lo impones, simplemente aportas discretamente lo que falta.",
+            "Esto te convierte en una pieza clave en el trabajo en equipo. Tú eres la razón por la que las cosas realmente se llevan a cabo, incluso cuando tu nombre no aparece en ellas.",
+            "También sabes cuándo dar un paso atrás. Esa es la seña de identidad de un verdadero cultivador.",
+            "Tú eres el suelo en el que crecen los demás. Aportas los nutrientes, la estabilidad y el apoyo necesarios para que los demás puedan brillar.",
+            "Recuerda que tú también te mereces brillar. No tienes por qué quedarte en un segundo plano para siempre."
+          ],
+          "shadows": [
+            "Apoyas en exceso hasta que la otra persona deja de esforzarse.",
+            "Minimizas tu papel porque el crecimiento no es espectacular.",
+            "Es posible que te sientas resentido cuando otros se atribuyen el mérito de tu trabajo discreto."
+          ],
+          "advice": [
+            "Una vez esta semana, menciona en qué has contribuido realmente a un éxito.",
+            "Fíjate en los ámbitos en los que se da por sentado tu apoyo. Adáptate.",
+            "Deja que una persona fracase sin intervenir. Observa lo que hace.",
+            "Habla abiertamente de tu contribución. No es presumir; es la verdad."
+          ],
+          "keywords": [
+            "cuidador",
+            "práctico",
+            "constante",
+            "solidario"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "Floreces cuando alguien te cuida a su vez.",
+          "narrative": [
+            "Das con naturalidad, pero no se te da muy bien recibir. La gente da por hecho que estás bien porque pareces estarlo. Y normalmente lo estás. Normalmente.",
+            "Das lo mejor de ti cuando alguien cree en ti un poco más de lo que la situación justifica.",
+            "No hace falta que te vuelvas más duro. Lo que tienes que hacer es elegir un suelo más blando.",
+            "Eres como un espejo. Cuando alguien te da amor y atención, se lo devuelves multiplicado por diez. Pero necesitas que alguien te lo dé primero.",
+            "No esperes a que te den permiso para cuidarte. Te mereces el mismo cuidado que ofreces generosamente a los demás."
+          ],
+          "shadows": [
+            "Das más de lo que tienes y lo llamas generosidad.",
+            "Confundes el exceso de responsabilidad con el amor.",
+            "Podrías acabar agotado si intentas serlo todo para todo el mundo."
+          ],
+          "advice": [
+            "Al menos una vez esta semana, deja que alguien se ocupe de algo por ti.",
+            "Anota lo que tú necesitas. No lo que los demás necesitan de ti.",
+            "Puedes aliviar una carga sin menospreciar a la persona.",
+            "Rodéate de personas que fomenten tu crecimiento, no solo de aquellas que necesitan que tú las apoyes."
+          ],
+          "keywords": [
+            "cuidador",
+            "delicado",
+            "dar",
+            "paciente"
+          ]
+        }
+      }
+    },
+    "THE_BLADE": {
+      "name": "El Filo",
+      "tagline": "Vas al grano, mientras que todos los demás lo evitan.",
+      "symbol": "⚔",
+      "color": "#5A6B7A",
+      "element": "Metal",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "Llamas a las cosas por su nombre, y prefieres tener razón a caer bien.",
+          "narrative": [
+            "Tienes una claridad moral que la mayoría de la gente se pasa toda la vida intentando desarrollar. Detectas rápidamente la verdad de una situación y no necesitas suavizarla para que sea cierta.",
+            "Esto te convierte en una persona de confianza en situaciones de crisis y en alguien que inspira respeto en las reuniones. Ambas cosas son útiles.",
+            "No es que seas frío. Es que eres directo. La diferencia es importante, y no siempre la explicas.",
+            "Eres el bisturí en un mundo de cuchillos de mantequilla. Vas directo al meollo de la cuestión, atravesando el ruido y la confusión con precisión quirúrgica.",
+            "Pero una espada que siempre está desenvainada acaba por perder el filo. Hay que saber cuándo guardarla, descansar y limitarse a observar."
+          ],
+          "shadows": [
+            "Vas demasiado rápido. A veces la gente necesita un segundo para seguirte el ritmo.",
+            "Puedes ganar la discusión y perder el apoyo de los demás.",
+            "Es posible que utilices tu franqueza como escudo para evitar enfrentarte a tus propias emociones."
+          ],
+          "advice": [
+            "Al menos una vez esta semana, haz una pregunta antes de dar la respuesta.",
+            "Fíjate en aquellas situaciones en las que tu honestidad es un arma en lugar de un don.",
+            "Tener razón no siempre significa ganar. A veces, lo que cuenta es que te escuchen.",
+            "Pregúntate: «¿Hablo para que me entiendan o para tener razón?»."
+          ],
+          "keywords": [
+            "directamente",
+            "de principios",
+            "afilado",
+            "decisivo"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "Sabes cuándo vender y cuándo mantener.",
+          "narrative": [
+            "Tienes la claridad de la espada sin esa agresividad que busca el enfrentamiento por el simple hecho de enfrentarse. Puedes decir la verdad sin que eso se convierta en una pelea.",
+            "La gente confía en ti porque no mientes. Además, acuden a ti con asuntos difíciles porque no te echas atrás.",
+            "Se trata de un tipo de fortaleza poco común, una que no necesita demostrar su valía.",
+            "Tú eres el juez imparcial. Escuchas a todas las partes, evalúas las pruebas y dictas un veredicto que es a la vez justo y compasivo.",
+            "Tu integridad es tu bien más preciado. Defiéndela con firmeza, pero sé indulgente contigo mismo."
+          ],
+          "shadows": [
+            "Puedes acabar convirtiéndote en el que tiene que arreglar los líos de los demás.",
+            "Confundes el hecho de que te necesiten con el de que te quieran.",
+            "Es posible que te vuelvas demasiado crítico contigo mismo cuando no consigas cumplir tus propios estándares, que son muy exigentes."
+          ],
+          "advice": [
+            "Al menos una vez esta semana, deja que sea otra persona la que lo sepa.",
+            "Di lo que sientes, no solo lo que ves.",
+            "Fíjate en las personas con las que te muestras más amable. Aprende de ello.",
+            "Perdónate por el error que has cometido. Eres humano, no una máquina."
+          ],
+          "keywords": [
+            "de principios",
+            "claro",
+            "decisivo",
+            "de confianza"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "Tu ventaja es real: solo hay que respetarla, no restarle importancia.",
+          "narrative": [
+            "Tienes convicciones firmes, pero probablemente te hayan dicho que las suavices. Has aprendido a ocultar tu lado más marcado. Eso era una cuestión de supervivencia, no de crecimiento.",
+            "En el entorno adecuado, tu precisión se convierte en una ventaja. En el entorno equivocado, es un inconveniente.",
+            "No hace falta que te rebajes. Tienes que encontrar a gente que sepa mantener la agudeza.",
+            "Eres un diamante en bruto. Bajo presión, brillas. Pero necesitas un entorno que valore tu dureza, no uno que intente aplastarla.",
+            "No apagues tu luz ni pierdas tu agudeza por nadie. Encuentra a tu gente y deja que tu agudeza sea un regalo."
+          ],
+          "shadows": [
+            "Te has hecho eco del malestar que tu sinceridad provoca en los demás.",
+            "Te pones a cuestionar tus instintos, que normalmente aciertan.",
+            "Es posible que te aísles porque sientes que no encajas."
+          ],
+          "advice": [
+            "Una vez esta semana, di aquello que has estado evitando decir. Fíjate en lo que pasa.",
+            "Busca a alguien que pueda aceptar tu opinión sincera. No lo pierdas de vista.",
+            "No es que seas demasiado. Es que estás en la habitación equivocada.",
+            "Confía en tus instintos. Normalmente aciertan. Si alguien no es capaz de aceptar tu verdad, es que no es de los tuyos."
+          ],
+          "keywords": [
+            "de principios",
+            "afilado",
+            "leal",
+            "incomprendido"
+          ]
+        }
+      }
+    },
+    "THE_GEM": {
+      "name": "El Gem",
+      "tagline": "Brillas porque fuiste creado con un propósito.",
+      "symbol": "◈",
+      "color": "#9AACB8",
+      "element": "Metal",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "Llevas años perfeccionando tu gusto, y eso se nota.",
+          "narrative": [
+            "Te fijas en detalles de calidad que a los demás se les pasan por alto. Una frase, un acabado, un detalle en una habitación… Tú ves la diferencia y te importa.",
+            "Te exiges un nivel que no viene de fuera. No buscas la aprobación de los demás, sino esa versión de lo que has hecho que te haga sentir orgulloso de haberlo creado.",
+            "Esto te convierte en alguien excepcional en un determinado tipo de trabajo. También hace que seas difícil de contentar, incluso contigo mismo.",
+            "Eres una obra de arte, creada con gran esmero. Tu atención al detalle es un superpoder, pero también puede convertirse en una maldición si no aprendes a dejar pasar las cosas.",
+            "Recuerda que la perfección es un horizonte al que nunca podrás llegar. La belleza está en el camino, no en la meta."
+          ],
+          "shadows": [
+            "Puedes gastar mucha energía en detalles que nadie más notará.",
+            "Eres más exigente contigo mismo de lo que jamás lo serías con otra persona.",
+            "El perfeccionismo puede llegar a paralizarte, hasta el punto de que seas incapaz de terminar nada."
+          ],
+          "advice": [
+            "Esta semana, envía algo al 80 %. Fíjate en que nadie ha muerto.",
+            "Dite algo amable a ti mismo en voz alta. Sí, en voz alta.",
+            "Pregúntate: «¿Es esto lo mejor que puedo hacer, o lo mejor que se necesita?»",
+            "Date un respiro. Tómate un día libre de intentar ser perfecto."
+          ],
+          "keywords": [
+            "refinado",
+            "preciso",
+            "perfeccionista",
+            "sabor"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "Tienes buen gusto sin dejar que eso te domine la vida.",
+          "narrative": [
+            "Sabes cuál es la diferencia entre lo bueno y lo excelente, pero no dejas que eso te impida seguir adelante. Vas perfeccionando sobre la marcha, no antes de empezar.",
+            "Se trata de un equilibrio poco común, uno que te permite llevar las cosas a buen término sin dejar de preocuparte por cómo se hacen.",
+            "La gente percibe la calidad de lo que tocas, aunque no sepa explicar por qué.",
+            "Eres una gema pulida que irradia elegancia y refinamiento. No necesitas alzar la voz para que te vean; tu presencia habla por sí sola.",
+            "Pero asegúrate de que tu búsqueda de la excelencia no te aleje de la belleza caótica e imperfecta del mundo."
+          ],
+          "shadows": [
+            "Puedes acabar modificando las elecciones de otras personas sin que te lo hayan pedido.",
+            "Minimizas tus propios criterios para encajar en entornos que no los comparten.",
+            "Es posible que utilices tus gustos para sentirte superior a los demás."
+          ],
+          "advice": [
+            "Al menos una vez esta semana, fíjate en qué aspectos tus normas son un regalo y en cuáles son un obstáculo.",
+            "Elige una cosa que quieras hacer mal a propósito. A ver qué pasa.",
+            "Deja que la versión de «bueno» de otra persona sea suficiente.",
+            "Aprecia la belleza de lo imperfecto. El wabi-sabi es algo real."
+          ],
+          "keywords": [
+            "refinado",
+            "equilibrado",
+            "de buen gusto",
+            "preciso"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "Tu brillo depende de la luz bajo la que te encuentres.",
+          "narrative": [
+            "Tienes un mundo interior muy refinado, pero solo sale a la luz cuando las condiciones son las adecuadas. En un lugar que no te conviene, te vuelves callado y te retraes.",
+            "Seguramente te habrán dicho alguna vez que eres «demasiado exigente». No lo eres. Simplemente te fijas en las cosas.",
+            "Los espacios adecuados no te eclipsan, sino que te revelan tal y como eres.",
+            "Eres un cristal delicado. Necesitas la luz adecuada, el ángulo adecuado y la compañía adecuada para brillar de verdad.",
+            "No desperdicies tu luz en lugares donde no saben apreciar tu valor. Encuentra el lugar donde te valoren y déjate brillar."
+          ],
+          "shadows": [
+            "No te atreves a hablar porque das por hecho que los demás no lo entenderán.",
+            "Te dedicas a revisar el texto en exceso antes incluso de que nadie más lo vea.",
+            "Puede que te sientas como un extraño, incluso cuando estás en un grupo."
+          ],
+          "advice": [
+            "Busca a alguien que comparta tus gustos. Muéstrale la versión auténtica.",
+            "Di algo concreto que te haya llamado la atención esta semana, aunque nadie te lo haya preguntado.",
+            "No hace falta que todo el mundo vea los detalles. Solo hace falta que los vea una persona.",
+            "No dudes en expresar tus preferencias. Tienes todo el derecho a ser exigente."
+          ],
+          "keywords": [
+            "refinado",
+            "delicado",
+            "perspicaz",
+            "tranquilo"
+          ]
+        }
+      }
+    },
+    "THE_DEEP": {
+      "name": "El Profundo",
+      "tagline": "Te mueves como el océano: lento en la superficie, inmenso en las profundidades.",
+      "symbol": "≈",
+      "color": "#1B3A5C",
+      "element": "Agua",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "Piensas en términos de sistemas, no de momentos.",
+          "narrative": [
+            "Tienes una capacidad extraordinaria para asimilar mucha información contextual a la vez. Mientras que los demás solo ven una situación, tú ves el mecanismo que hay detrás.",
+            "No sacas conclusiones precipitadas. Dejas que las cosas se asienten y, gracias a ello, tus conclusiones suelen ser acertadas.",
+            "Esto te convierte en un estratega, un asesor, alguien a quien los demás acuden cuando las respuestas fáciles han fallado.",
+            "Eres como el océano profundo. En ti se esconden misterios y sabiduría que los demás solo pueden intuir. Tu profundidad es tu mayor fortaleza.",
+            "Pero no te dejes llevar por tus propios pensamientos. A veces, está bien salir a la superficie y simplemente disfrutar del momento presente."
+          ],
+          "shadows": [
+            "Te lo piensas tanto que acabas perdiendo la oportunidad de actuar.",
+            "Te mantienes por encima de tus propias emociones porque puedes verlas desde lejos.",
+            "Es posible que utilices tu intelecto para analizar tus sentimientos, en lugar de vivirlos de verdad."
+          ],
+          "advice": [
+            "Al menos una vez esta semana, pon en práctica una decisión antes de sentirte «preparado».",
+            "Di lo que realmente sientes, no lo que has analizado sobre lo que sientes.",
+            "Fíjate en cuándo tu profundidad es un don y cuándo es un escondite.",
+            "Tómate un respiro y deja de pensar. Sal a dar un paseo, escucha música o simplemente respira."
+          ],
+          "keywords": [
+            "estratégico",
+            "filosófico",
+            "profundo",
+            "adaptativo"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "Te adaptas sin perder el rumbo.",
+          "narrative": [
+            "Puedes adaptarte a las circunstancias y, aun así, llegar a donde tenías pensado. Eso no es suerte, es una habilidad que la mayoría de la gente nunca llega a desarrollar.",
+            "Sabes interpretar bien las situaciones y, sobre todo, sabes leer a las personas. Rara vez dices algo inapropiado, porque normalmente sabes cuál es la respuesta adecuada.",
+            "Esto hace que te ganes la confianza en entornos donde la confianza escasea.",
+            "Eres un consejero sabio. La gente acude a ti en busca de tu perspicacia, sabiendo que les ofrecerás un punto de vista que no habían tenido en cuenta.",
+            "Confía en que tu intuición es una fuente válida de conocimiento. No es solo una sensación; es un conocimiento profundo."
+          ],
+          "shadows": [
+            "Puedes eludir el conflicto en lugar de resolverlo.",
+            "Te guardas tus opiniones reales durante tanto tiempo que acaban por dejar de importar.",
+            "Podrías utilizar tu sabiduría como excusa para mantenerte al margen del mundo."
+          ],
+          "advice": [
+            "Al menos una vez esta semana, toma una decisión en lugar de quedarte pensando en las opciones disponibles.",
+            "Di lo que es cierto, no lo que es más seguro.",
+            "Fíjate en los aspectos en los que te estás adaptando para evitar algo, no para construirlo.",
+            "Expresa abiertamente tus convicciones. Tienes cosas valiosas que decir."
+          ],
+          "keywords": [
+            "adaptativo",
+            "sensato",
+            "fluido",
+            "de confianza"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "Necesitas un recipiente lo suficientemente grande como para que quepas tú.",
+          "narrative": [
+            "Tienes muchas cosas en la cabeza —ideas, preguntas, sentimientos— y no todo cabe en espacios reducidos.",
+            "En el entorno adecuado, tu profundidad se convierte en presencia. En el inadecuado, te quedas en silencio y empiezas a perder el rumbo.",
+            "No es difícil conocerte. Es difícil retenerte. Eso es diferente.",
+            "Eres un océano inmenso y inexplorado. Necesitas un espacio en el que puedas ser tú mismo, en toda tu complejidad, sin sentirte juzgado.",
+            "No te rebajes para encajar en mentes estrechas. Busca a personas que sean capaces de comprender tu profundidad."
+          ],
+          "shadows": [
+            "Te refugias en tu propio mundo en lugar de pedir lo que necesitas.",
+            "Confundes el hecho de ser desconocido con el de ser incognoscible.",
+            "Es posible que te sientas solo incluso en una habitación llena de gente."
+          ],
+          "advice": [
+            "Busca a esa persona a la que puedas contárselo todo. No solo un resumen.",
+            "Esta semana, dale a tu mundo interior un lugar donde habitar: una página, una canción, una habitación.",
+            "No es que seas demasiado. Es solo que no estás en el recipiente del tamaño adecuado.",
+            "Da el paso. Quizás te sorprenda saber quién está dispuesto a profundizar contigo."
+          ],
+          "keywords": [
+            "profundo",
+            "delicado",
+            "filosófico",
+            "adaptativo"
+          ]
+        }
+      }
+    },
+    "THE_SPRING": {
+      "name": "El Spring",
+      "tagline": "Llegas en silencio y todo crece a tu alrededor.",
+      "symbol": "◌",
+      "color": "#4A6FA5",
+      "element": "Agua",
+      "intensities": {
+        "SELF_SOURCED": {
+          "hero": "Hay cosas que sabes antes de poder explicar cómo.",
+          "narrative": [
+            "Tu intuición es extraordinariamente acertada. Te haces una idea de una persona o una situación rápidamente, y normalmente aciertas, incluso cuando no sabes explicar por qué.",
+            "No actúas con certeza. Simplemente te mueves como si ya lo supieras, porque lo sabes.",
+            "Esto hace que se te dé muy bien cualquier trabajo que requiera un criterio sutil. Además, cuando te has decidido, es difícil llevar la contraria.",
+            "Eres como un manantial de montaña cristalino. Tu intuición es pura y refrescante. Brota de un pozo profundo de sabiduría interior.",
+            "Confía en tu instinto. Es tu guía más fiable, incluso cuando la lógica apunta en otra dirección."
+          ],
+          "shadows": [
+            "Confías tanto en tu propia interpretación que dejas de pedir opiniones.",
+            "Mantienes en secreto tus ideas más profundas, lo que significa que los demás no pueden beneficiarse de ellas.",
+            "Podrías volverte demasiado misterioso y mantener a todo el mundo a distancia."
+          ],
+          "advice": [
+            "Al menos una vez esta semana, di lo que intuyes, aunque no tengas pruebas.",
+            "Explica a los demás el razonamiento, no solo la conclusión.",
+            "No hace falta estar seguro para tener razón.",
+            "Comparte tu sabiduría. Es un don que no debe permanecer oculto."
+          ],
+          "keywords": [
+            "intuitivo",
+            "sutil",
+            "estratégico",
+            "tranquilo"
+          ]
+        },
+        "BALANCED_CORE": {
+          "hero": "Escuchas más de lo que hablas, y oyes más que la mayoría.",
+          "narrative": [
+            "Tienes una forma de ser tranquila y perspicaz que hace que la gente quiera contarte cosas. No presionas. Simplemente dejas espacio.",
+            "Tu instinto pasa desapercibido, pero suele acertar. Sabes cuándo actuar y cuándo esperar, y rara vez te explican la diferencia: simplemente lo sientes.",
+            "Se trata de un tipo de inteligencia poco común y duradera.",
+            "Eres como un lago en calma. Tu superficie está tranquila, pero tus profundidades están llenas de sabiduría y perspicacia.",
+            "Recuerda que también necesitas un lugar donde compartir tus pensamientos. No tienes por qué guardártelo todo para ti."
+          ],
+          "shadows": [
+            "Absorbes las emociones de los demás sin darte cuenta hasta más tarde.",
+            "Te guardas tanto tus pensamientos que la gente da por hecho que no necesitas nada.",
+            "Es posible que utilices el silencio como forma de evitar la confrontación."
+          ],
+          "advice": [
+            "Al menos una vez esta semana, dile a alguien lo que realmente necesitas.",
+            "Fíjate en qué casos tu tranquilidad es un regalo y en cuáles es un obstáculo.",
+            "Puedes ser una fuente sin tener que ser el pozo de todos.",
+            "Busca una forma de expresar tu creatividad. La pintura, la escritura o la música pueden ayudarte a expresar lo que no puedes decir con palabras."
+          ],
+          "keywords": [
+            "intuitivo",
+            "suave",
+            "perspicaz",
+            "constante"
+          ]
+        },
+        "ENVIRONMENT_TUNED": {
+          "hero": "Eres como un pozo: profundo, cristalino y silenciosamente imprescindible.",
+          "narrative": [
+            "Tienes una gran profundidad interior, pero no siempre se nota en público. Necesitas a la persona adecuada o el momento adecuado para que salga a la luz.",
+            "La gente suele subestimarte, y tú normalmente se lo permites. Has aprendido que que te vean no es lo mismo que que te entiendan.",
+            "Cuando encuentras a alguien que te entiende, te abres de una forma que hasta a ti mismo te sorprende.",
+            "Eres una joya oculta. No eres para todo el mundo, pero para aquellos que se toman el tiempo de indagar, eres un auténtico tesoro.",
+            "Ten paciencia. Las personas adecuadas sabrán apreciar tu brillantez discreta y sutil."
+          ],
+          "shadows": [
+            "Ocultas tu profundidad porque ya te han malinterpretado otras veces.",
+            "Esperas a que llegue la invitación perfecta para ser tú mismo.",
+            "Puede que llegues a ser tan bueno ocultándote que pierdas el contacto con tu verdadero yo."
+          ],
+          "advice": [
+            "Deja de esperar a la persona perfecta. Empieza a compartir tu vida con las personas que realmente valen la pena.",
+            "Al menos una vez esta semana, di lo que te has estado callando.",
+            "Merece la pena correr el riesgo de que me malinterpreten con tal de que me entiendan.",
+            "Exprésate de la forma que te haga sentir más seguro. No tienes que hacer un espectáculo para que te vean."
+          ],
+          "keywords": [
+            "profundo",
+            "delicado",
+            "intuitivo",
+            "poder silencioso"
+          ]
+        }
+      }
+    }
+  },
+  "DEFAULT_INTENSITY": {
+    "hero": "Todavía estás en proceso de convertirte en quien eres.",
+    "narrative": [
+      "Este gráfico se interpreta de una forma para la que aún no tenemos palabras."
+    ],
+    "shadows": [],
+    "advice": [],
+    "keywords": []
+  },
+  "INTENSITY_OVERLAY": {
+    "SELF_SOURCED": {
+      "voice": "Tu energía surge de tu interior. Puedes marcar un rumbo y avanzar por él sin esperar la aprobación de nadie. Este impulso propio es una gran fortaleza, pero cuando el listónn que te pones es demasiado alto, se convierte silenciosamente en agotamiento. En los apartados siguientes se describe cómo se manifiesta ese motor interno de forma concreta.",
+      "advice_addon": [
+        "Esta semana, reflexiona sobre una decisión que hayas tomado por tu cuenta. ¿Se ha mantenido firme sin necesidad de aprobación externa?",
+        "Baja un poco el listónn que te has fijado. Así es como se evita el agotamiento."
+      ]
+    },
+    "BALANCED_CORE": {
+      "voice": "Tu energía se equilibra entre tu interior y tu exterior. Actúas por tu cuenta cuando es necesario y te sincronizas con los demás cuando la situación lo requiere. Ese equilibrio es un don poco común, pero cuando se desvía hacia «ninguno de los dos lados por completo», puede dar la sensación de estar estancado. En los apartados siguientes se describe cómo funciona realmente ese equilibrio en el día a día.",
+      "advice_addon": [
+        "Esta semana, distingue entre «lo que quiero hacer» y «lo que realmente se necesita en este momento», una vez cada uno.",
+        "El equilibrio se construye a través de decisiones repetidas. Fíjate hacia qué lado te has inclinado en tus pequeñas decisiones."
+      ]
+    },
+    "ENVIRONMENT_TUNED": {
+      "voice": "Tu energía florece en relación con tu entorno. Rodeado de las personas y las condiciones adecuadas, creces de forma notable; en las contrarias, te vas apagando poco a poco. Esa sensibilidad no es fragilidad, es un filtro. En los apartados siguientes se describen las condiciones en las que te sientes más tú mismo.",
+      "advice_addon": [
+        "Esta semana, escribe tres personas, lugares o situaciones que te hagan sentir vivo.",
+        "Pregúntate si tu entorno actual sigue siendo adecuado para ti o si ya lo has superado."
+      ]
+    }
+  }
+}
