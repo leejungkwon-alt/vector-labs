@@ -47,7 +47,7 @@ def test_calculate_requires_auth_when_enabled(monkeypatch):
 
 # ---- mock: 토큰 프로덕션 가드 ----
 def test_mock_token_works_in_development(monkeypatch):
-    monkeypatch.delenv("SAJU_ENV", raising=False)
+    monkeypatch.setenv("SAJU_ENV", "development")
     from app.auth.providers import verify_provider_token
     identity = verify_provider_token("apple", "mock:dev-user-1")
     assert identity["subject"] == "dev-user-1"
@@ -62,7 +62,7 @@ def test_mock_token_rejected_in_production(monkeypatch):
 
 # ---- JWT 시크릿 프로덕션 가드 ----
 def test_jwt_default_secret_works_in_dev(monkeypatch):
-    monkeypatch.delenv("SAJU_ENV", raising=False)
+    monkeypatch.setenv("SAJU_ENV", "development")
     monkeypatch.delenv("SAJU_JWT_SECRET", raising=False)
     from app.auth.jwt_utils import _secret
     s = _secret()
@@ -86,7 +86,7 @@ def test_jwt_explicit_secret_works_in_production(monkeypatch):
 
 # ---- IAP mock 영수증 프로덕션 가드 ----
 def test_iap_mock_receipt_works_in_dev(monkeypatch, tmp_path):
-    monkeypatch.delenv("SAJU_ENV", raising=False)
+    monkeypatch.setenv("SAJU_ENV", "development")
     monkeypatch.setenv("SAJU_AUTH_DB_PATH", str(tmp_path / "auth.db"))
     from app.auth.repository import reset_repository
     reset_repository()
@@ -136,7 +136,7 @@ def test_jwt_exactly_min_length_ok_in_production(monkeypatch):
 
 def test_jwt_short_secret_ok_in_development(monkeypatch):
     """dev는 짧은 커스텀 시크릿 허용 (기존 동작 보존)."""
-    monkeypatch.delenv("SAJU_ENV", raising=False)
+    monkeypatch.setenv("SAJU_ENV", "development")
     monkeypatch.setenv("SAJU_JWT_SECRET", "short-dev")
     from app.auth.jwt_utils import _secret
     assert _secret() == "short-dev"

@@ -38,7 +38,7 @@ def apple_setup(monkeypatch):
     jwk["use"] = "sig"
 
     monkeypatch.setenv("SAJU_APPLE_CLIENT_ID", AUD)
-    monkeypatch.delenv("SAJU_ENV", raising=False)
+    monkeypatch.setenv("SAJU_ENV", "development")
 
     prov._JWKS_CACHE.clear()
 
@@ -145,7 +145,7 @@ def google_setup(monkeypatch):
     jwk["use"] = "sig"
 
     monkeypatch.setenv("SAJU_GOOGLE_CLIENT_ID", GOOGLE_AUD)
-    monkeypatch.delenv("SAJU_ENV", raising=False)
+    monkeypatch.setenv("SAJU_ENV", "development")
 
     prov._JWKS_CACHE.clear()
 
@@ -234,7 +234,7 @@ def _fake_kakao_get(resp):
 @pytest.fixture
 def kakao_env(monkeypatch):
     monkeypatch.setenv("SAJU_KAKAO_APP_KEY", "test-kakao-key")
-    monkeypatch.delenv("SAJU_ENV", raising=False)
+    monkeypatch.setenv("SAJU_ENV", "development")
     yield
 
 
@@ -367,7 +367,7 @@ def test_jwks_kid_rotation_retry(monkeypatch):
     new_jwk["alg"] = "RS256"
 
     monkeypatch.setenv("SAJU_APPLE_CLIENT_ID", AUD)
-    monkeypatch.delenv("SAJU_ENV", raising=False)
+    monkeypatch.setenv("SAJU_ENV", "development")
     prov._JWKS_CACHE.clear()
 
     calls = {"n": 0}
@@ -508,6 +508,6 @@ def test_mock_token_accepted_in_dev(monkeypatch):
     """SAJU_ENV != production 이면 mock:<subject> 가 정상 통과해야 한다."""
     import app.auth.providers as prov
 
-    monkeypatch.delenv("SAJU_ENV", raising=False)
+    monkeypatch.setenv("SAJU_ENV", "development")
     out = prov.verify_provider_token("google", "mock:bob")
     assert out == {"provider": "google", "subject": "bob"}

@@ -23,7 +23,7 @@ def env(tmp_path, monkeypatch):
     monkeypatch.setenv("SAJU_AUTH_DB_PATH", str(tmp_path / "auth.db"))
     monkeypatch.setenv("SAJU_TELEGRAM_BOT_TOKEN", BOT)
     monkeypatch.setenv("SAJU_CRON_SECRET", CRON)
-    monkeypatch.delenv("SAJU_ENV", raising=False)
+    monkeypatch.setenv("SAJU_ENV", "development")
     from app.auth.repository import reset_repository
 
     reset_repository()

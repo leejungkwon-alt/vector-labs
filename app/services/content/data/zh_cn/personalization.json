@@ -36,11 +36,11 @@
     "COMMANDER": "你的“指挥官”特质使你成为一位天生的领导者，拥有坚定的道德准则。"
   },
   "RELATIONS": {
-    "day_chong": "You have an inner restlessness that craves constant change. You thrive when you're moving, exploring, or challenging the status quo. In relationships, you need space and novelty to stay engaged.",
-    "has_chong": "Your life is driven by unpredictable changes and challenges. It might feel exhausting at times, but this is exactly what makes you highly adaptable, resilient, and uniquely creative."
+    "day_chong": "你内心深处有一种躁动，渴望不断的变化。当你处于行动中、探索中或挑战现状时，你会感到如鱼得水。在人际关系中，你需要空间和新意才能保持投入。",
+    "has_chong": "你的生活充满了难以预料的变化和挑战。虽然有时会感到筋疲力尽，但正是这些让你具备了极强的适应能力、韧性和独特的创造力。"
   },
   "SPECIAL_CONDITIONS": {
-    "RESTLESS_FEET": "You are a born 'wanderer'. You gain energy and grow through new experiences, travel, or career shifts. Being stuck in a rigid routine is your worst nightmare.",
-    "seven_killings": "You possess strong 'Boss' energy. You excel at taking control, strategizing, and leading the pack. You actually get stronger under pressure and crisis."
+    "RESTLESS_FEET": "你天生就是个“漂泊者”。通过新的经历、旅行或职业转变，你能获得能量并不断成长。被困在刻板的日常中，对你来说是最可怕的噩梦。",
+    "seven_killings": "你身上散发着强烈的“领导者”气场。你擅长掌控全局、制定策略并带领团队。在压力和危机面前，你反而会表现得更加从容自若。"
   }
 }

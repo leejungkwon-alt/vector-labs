@@ -57,7 +57,7 @@ def test_asset_base_url_explicit_used_in_production(monkeypatch):
 
 
 def test_asset_base_url_dev_falls_back(monkeypatch):
-    monkeypatch.delenv("SAJU_ENV", raising=False)
+    monkeypatch.setenv("SAJU_ENV", "development")
     monkeypatch.delenv("SAJU_ASSET_BASE_URL", raising=False)
     from app.services.visual_generator import _resolve_asset_base_url
     assert "mock-cdn.vectorlabs.app" in _resolve_asset_base_url()

@@ -166,8 +166,8 @@
     "work": "Trabajo",
     "money": "Dinero"
   },
-  "COLLISION_SENTENCE": "Estás dudando entre los modelos «{a_mode_label}» y «{a_label}», y los modelos «{b_mode_label}» y «{b_label}».",
+  "COLLISION_SENTENCE": "Estás dudando entre «{a_label}» de {a_mode_label} y «{b_label}» de {b_mode_label}.",
   "COLLISION_2_SENTENCE": "A esto hay que añadir la indecisión entre el «{a_label}» del {a_mode_label} y el «{b_label}» del {b_mode_label}.",
-  "PULL_SENTENCE": "Además, te inclinas más por el «{label}» que por el «{mode_label}».",
+  "PULL_SENTENCE": "Además, tu corazón se inclina hacia «{label}» de {mode_label}.",
   "PULL_2_SENTENCE": "Y también se inclina hacia el «{label}» del {mode_label}."
 }
