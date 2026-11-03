@@ -47,31 +47,26 @@ frontend/.env.*
 # --- Backups & Temporary Files ---
 *.bak
 *.bak_*
+*.bak.*
+*.broken.*
 prompts/
 
 # --- Large files ---
 *.apk
+frontend/*.apk
 saju_full.txt
 saju_dump.txt
 *.dump.txt
 
-# auto-fix backups
-*.bak.*
-*.broken.*
-
 # --- Temp artifacts ---
 token.txt
 *.jwt
-*.bak_*
-report_*.json
 review.txt
 saju_complete_code*.txt
 all_code.txt
 saju_p0_patch.diff
-frontend/*.apk
 
 # SAJU patch backups & temp
-__pycache__/
 scripts/__pycache__/
 
 # Content pack is included in git
@@ -79,6 +74,36 @@ scripts/__pycache__/
 
 # Dev script cache
 scripts/.cache/
-
 scripts/_todo_*.json
 scripts/_todo_*.txt
+.vercel
+
+# ============================================================
+# 2026-11 추가 — 코드 덤프 / 백업 / 일회성 스크립트
+# ============================================================
+
+# --- Code dump (dump_code.py가 매번 재생성) ---
+code_dump.txt
+*_complete_code*.txt
+*_dump.txt
+report_*.json
+
+# --- i18n 작업 백업 / 임시 번역 ---
+backups/
+translations_p*.json
+
+# --- Expo web 빌드 산출물 (tma는 README만 유지) ---
+tma/_expo/
+tma/assets/
+
+# --- 루트에 남은 일회성 스크립트 (scripts/archive로 이동했음) ---
+/apply_*.py
+/cleanup_*.py
+/convert_tma_to_expo.py
+/dump_code.py
+/final_fix_*.py
+/fix_*.py
+/translate_content.py
+/verify_translations.py
+# --- Legacy TMA (Vercel은 frontend/dist만 배포) ---
+tma/

@@ -1,0 +1,48 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, sans-serif; background: #0b0c10; color: #fff; }
+.app-container { display: flex; flex-direction: column; height: 100vh; }
+.main-content { flex: 1; overflow: hidden; }
+.tab-pane { height: 100%; overflow-y: auto; padding-bottom: 80px; }
+.scroll { padding: 20px; }
+.center-msg { display: flex; align-items: center; justify-content: center; height: 100vh; color: #888; text-align: center; padding: 20px; }
+
+/* 온보딩 */
+.onboarding { display: flex; align-items: center; justify-content: center; height: 100vh; padding: 20px; background: radial-gradient(circle at top, #2b2b36, #0b0c10); }
+.onboarding-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; width: 100%; max-width: 360px; }
+.onboarding-card h1 { font-size: 24px; margin-bottom: 10px; }
+.onboarding-card p { color: #aaa; font-size: 14px; margin-bottom: 20px; line-height: 1.5; }
+.onboarding-card form { display: flex; flex-direction: column; gap: 15px; }
+.onboarding-card label { font-size: 13px; color: #ccc; display: flex; flex-direction: column; gap: 5px; }
+.onboarding-card input, .onboarding-card select { padding: 12px; background: #1a1b23; border: 1px solid #333; border-radius: 8px; color: #fff; }
+.primary-btn { background: #e85d2f; color: white; border: none; padding: 14px; border-radius: 10px; font-weight: bold; margin-top: 10px; }
+.secondary-btn { background: transparent; border: 1px solid #e85d2f; color: #e85d2f; padding: 10px; border-radius: 8px; width: 100%; margin-top: 10px; }
+
+/* 홈(리포트) */
+.cover { height: 35vh; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; border-bottom: 1px solid #222; position: relative; }
+.cover::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent, #0b0c10); z-index: 0; }
+.cover h1, .cover p { position: relative; z-index: 1; }
+.cover h1 { font-size: 26px; margin-bottom: 5px; }
+.cover p { color: #aaa; font-size: 14px; }
+
+.accordions { padding: 15px; display: flex; flex-direction: column; gap: 10px; }
+.accordion { background: #13141b; border: 1px solid #232533; border-radius: 12px; overflow: hidden; }
+.acc-header { width: 100%; padding: 16px; background: none; border: none; display: flex; justify-content: space-between; color: #fff; font-size: 16px; font-weight: 600; cursor: pointer; }
+.acc-content { padding: 0 16px 16px 16px; font-size: 14px; color: #ccc; line-height: 1.6; }
+.item { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #232533; }
+.item:last-child { border-bottom: none; }
+.item strong { color: #e85d2f; display: block; margin-bottom: 5px; }
+.item-row { display: flex; justify-content: space-between; padding: 5px 0; }
+.locked-box { background: rgba(232, 93, 47, 0.1); border: 1px dashed #e85d2f; padding: 12px; text-align: center; border-radius: 8px; color: #e85d2f; font-size: 13px; margin-top: 10px; }
+
+/* 일운 / 케미 카드 */
+.card { background: #13141b; border: 1px solid #232533; border-radius: 12px; padding: 16px; margin-bottom: 15px; }
+.card-head { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 10px; color: #888; }
+.card h3 { font-size: 18px; margin-bottom: 8px; }
+.tip { background: #1a1b23; padding: 12px; border-radius: 8px; font-size: 13px; color: #aaa; margin-top: 10px; }
+.tip p { margin-bottom: 5px; }
+
+/* 하단 탭 */
+.bottom-nav { display: flex; background: #0d0e12; border-top: 1px solid #222; padding: 10px 0 25px 0; }
+.bottom-nav button { flex: 1; background: none; border: none; color: #666; display: flex; flex-direction: column; align-items: center; gap: 5px; font-size: 11px; }
+.bottom-nav button span { font-size: 20px; }
+.bottom-nav button.active { color: #e85d2f; }

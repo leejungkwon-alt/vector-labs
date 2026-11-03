@@ -1,0 +1,1396 @@
+{
+  "ja/daily.json": [
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_FRIEND[0].headline",
+      "preview": "Connect with your inner circle to refuel your momentum."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_FRIEND[0].body",
+      "preview": "Today brings a grounding energy that reminds you of the stre"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_FRIEND[1].body",
+      "preview": "You do not have to carry every project or responsibility on "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_FRIEND[2].body",
+      "preview": "Your sense of self is anchored best today when you interact "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_FRIEND[2].lean_into",
+      "preview": "Having an open and equal conversation with a friend."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[0].headline",
+      "preview": "Channel restless drive into your own self-improvement."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[0].body",
+      "preview": "A surge of competitive energy may make you feel eager to pro"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[1].headline",
+      "preview": "Protect your energy while striving for individual excellence"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[1].body",
+      "preview": "Today encourages you to recognize where your personal space "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[2].body",
+      "preview": "When dynamic environment challenges arise, treat them as inv"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_EATING_GOD[0].body",
+      "preview": "Your natural creative energy is flowing smoothly today, invi"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_EATING_GOD[1].body",
+      "preview": "Today calls for stepping back from heavy analytical work to "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_EATING_GOD[2].body",
+      "preview": "You will find immense satisfaction today in sharing your gen"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[0].headline",
+      "preview": "Voice your original ideas with clarity and mindfulness."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[0].body",
+      "preview": "Your intellect is exceptionally sharp today, making it a gre"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[1].body",
+      "preview": "You may feel a strong urge to challenge the status quo and i"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[2].body",
+      "preview": "Your ability to articulate complex thoughts is heightened to"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[2].watch_for",
+      "preview": "Dismissing rules purely for the sake of reform."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[0].body",
+      "preview": "An open and flexible mindset will reveal hidden opportunitie"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[1].headline",
+      "preview": "Maximize your options by staying practical and open."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[1].body",
+      "preview": "Today favors dynamic thinking and practical resourcefulness "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[2].body",
+      "preview": "Your intuition for spotting value is working exceptionally w"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[0].body",
+      "preview": "Today is tailor-made for restoring order and tending to prac"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[0].watch_for",
+      "preview": "Rigidity when unexpected minor tweaks are needed."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[1].body",
+      "preview": "The energy today rewards patient diligence and steady execut"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[2].body",
+      "preview": "Focusing on simple, tangible responsibilities will help you "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[0].body",
+      "preview": "High-intensity energy is surrounding you today, offering the"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[0].lean_into",
+      "preview": "Tackling your hardest task first with bold resolve."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[1].body",
+      "preview": "You have the mental fortitude today to eliminate distraction"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[2].body",
+      "preview": "Today gives you the inner strength to confront complex probl"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[2].watch_for",
+      "preview": "Becoming impatient with people moving slower than you."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[0].headline",
+      "preview": "Align with clear principles to build trust and calm."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[0].body",
+      "preview": "Order, clarity, and personal integrity are your best allies "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[0].lean_into",
+      "preview": "Honoring your commitments with steady consistency."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[1].body",
+      "preview": "Today invites you to create harmony through organized habits"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[1].lean_into",
+      "preview": "Creating a clean schedule for your day ahead."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[2].body",
+      "preview": "Your natural reliability shines today, making it an ideal ti"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[2].lean_into",
+      "preview": "Executing your regular duties with high integrity."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[0].body",
+      "preview": "Your quiet intuition is exceptionally keen today, offering f"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[1].body",
+      "preview": "Today encourages you to look beyond surface-level facts and "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[2].body",
+      "preview": "You will benefit greatly from quiet contemplation today rath"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[2].lean_into",
+      "preview": "Journaling your subtle impressions and insights."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[0].headline",
+      "preview": "Refuel your mind and body with comforting care."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[0].body",
+      "preview": "Today emphasizes gentle restoration, self-care, and absorbin"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[1].headline",
+      "preview": "Absorb wisdom and accept warm guidance from others."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[1].body",
+      "preview": "The atmosphere today supports learning, quiet study, and rec"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[2].body",
+      "preview": "A calm, receptive approach will yield the best emotional ene"
+    }
+  ],
+  "ja/monthly.json": [
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_FRIEND[0].headline",
+      "preview": "Expand your core network over the next 30 days."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_FRIEND[0].body",
+      "preview": "This month opens up a sustained monthly theme centered on bu"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_FRIEND[0].watch_for",
+      "preview": "Over-identifying with peer opinions at the expense of your o"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_FRIEND[1].headline",
+      "preview": "Leverage shared resources to scale your projects this month."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_FRIEND[1].body",
+      "preview": "A monthly wave of collaborative synergy creates the ideal ba"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_FRIEND[2].body",
+      "preview": "This four-week window highlights opportunities to step forwa"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[0].body",
+      "preview": "A high-octane monthly cycle activates your competitive insti"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[1].headline",
+      "preview": "Fortify your strategic assets and personal boundaries this m"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[1].body",
+      "preview": "Throughout this four-week theme, heightened external demands"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[2].body",
+      "preview": "This monthly window presents a tactical opportunity to pivot"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_EATING_GOD[0].body",
+      "preview": "A fertile monthly cycle opens broad horizons for creative de"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_EATING_GOD[1].body",
+      "preview": "Throughout these coming four weeks, focusing on well-being a"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_EATING_GOD[1].watch_for",
+      "preview": "Drifting into complacency when structure is reduced."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_EATING_GOD[2].headline",
+      "preview": "Invest in the long-term health of your creative assets."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_EATING_GOD[2].body",
+      "preview": "This monthly theme emphasizes cultivating content, products,"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[0].body",
+      "preview": "This month brings a powerful strategic opening for breaking "
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[1].body",
+      "preview": "The coming four-week theme puts your unique voice and persua"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[1].watch_for",
+      "preview": "Rejecting established protocols simply for the sake of rebel"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[2].body",
+      "preview": "Throughout this month, you possess the critical clarity nece"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[0].body",
+      "preview": "A dynamic 30-day window unfolds, filled with tactical opport"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[1].body",
+      "preview": "This four-week theme highlights agility, resourcefulness, an"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[2].body",
+      "preview": "Over the next 30 days, stepping outside your customary opera"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[0].body",
+      "preview": "This month establishes a highly grounded theme focused on op"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[1].body",
+      "preview": "Throughout this 30-day window, meticulous attention to struc"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[2].body",
+      "preview": "A four-week cycle of predictable progress invites you to sol"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[2].lean_into",
+      "preview": "Establishing clear, measurable monthly KPI benchmarks for yo"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[0].body",
+      "preview": "A intense 30-day monthly cycle equips you with the grit requ"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[1].body",
+      "preview": "This four-week period provides the tactical resolve necessar"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[2].body",
+      "preview": "Throughout the coming month, external challenges serve as th"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[0].headline",
+      "preview": "Elevate your authority through flawless compliance and gover"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[0].body",
+      "preview": "This month highlights a theme of organizational alignment, r"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[1].body",
+      "preview": "Over the coming four weeks, adhering to high ethical standar"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[2].body",
+      "preview": "Throughout this 30-day period, creating order out of operati"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[0].body",
+      "preview": "A reflective and deeply insightful 30-day theme encourages l"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[1].body",
+      "preview": "This monthly cycle opens a rich portal for tapping into intu"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[1].watch_for",
+      "preview": "Detaching from practical operational realities for too long."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[2].headline",
+      "preview": "Master specialized skills that elevate your long-term value."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[2].body",
+      "preview": "Throughout this month, dedicating significant hours to deep "
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[0].headline",
+      "preview": "Replenish intellectual and structural capital for future gro"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[0].body",
+      "preview": "This four-week theme centers on foundational renewal, mentor"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[1].headline",
+      "preview": "Invest in training and organizational health this month."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[1].body",
+      "preview": "Throughout the coming four weeks, focusing on internal welln"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[2].headline",
+      "preview": "Consolidate wisdom to prepare for your next major expansion."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[2].body",
+      "preview": "A supportive monthly energy invites you to absorb knowledge,"
+    }
+  ],
+  "zh_cn/daily.json": [
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_FRIEND[0].headline",
+      "preview": "Connect with your inner circle to refuel your momentum."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_FRIEND[0].body",
+      "preview": "Today brings a grounding energy that reminds you of the stre"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_FRIEND[1].body",
+      "preview": "You do not have to carry every project or responsibility on "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_FRIEND[2].body",
+      "preview": "Your sense of self is anchored best today when you interact "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_FRIEND[2].lean_into",
+      "preview": "Having an open and equal conversation with a friend."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[0].headline",
+      "preview": "Channel restless drive into your own self-improvement."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[0].body",
+      "preview": "A surge of competitive energy may make you feel eager to pro"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[1].headline",
+      "preview": "Protect your energy while striving for individual excellence"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[1].body",
+      "preview": "Today encourages you to recognize where your personal space "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[2].body",
+      "preview": "When dynamic environment challenges arise, treat them as inv"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_EATING_GOD[0].body",
+      "preview": "Your natural creative energy is flowing smoothly today, invi"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_EATING_GOD[1].body",
+      "preview": "Today calls for stepping back from heavy analytical work to "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_EATING_GOD[2].body",
+      "preview": "You will find immense satisfaction today in sharing your gen"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[0].headline",
+      "preview": "Voice your original ideas with clarity and mindfulness."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[0].body",
+      "preview": "Your intellect is exceptionally sharp today, making it a gre"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[1].body",
+      "preview": "You may feel a strong urge to challenge the status quo and i"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[2].body",
+      "preview": "Your ability to articulate complex thoughts is heightened to"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[2].watch_for",
+      "preview": "Dismissing rules purely for the sake of reform."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[0].body",
+      "preview": "An open and flexible mindset will reveal hidden opportunitie"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[1].headline",
+      "preview": "Maximize your options by staying practical and open."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[1].body",
+      "preview": "Today favors dynamic thinking and practical resourcefulness "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[2].body",
+      "preview": "Your intuition for spotting value is working exceptionally w"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[0].body",
+      "preview": "Today is tailor-made for restoring order and tending to prac"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[0].watch_for",
+      "preview": "Rigidity when unexpected minor tweaks are needed."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[1].body",
+      "preview": "The energy today rewards patient diligence and steady execut"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[2].body",
+      "preview": "Focusing on simple, tangible responsibilities will help you "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[0].body",
+      "preview": "High-intensity energy is surrounding you today, offering the"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[0].lean_into",
+      "preview": "Tackling your hardest task first with bold resolve."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[1].body",
+      "preview": "You have the mental fortitude today to eliminate distraction"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[2].body",
+      "preview": "Today gives you the inner strength to confront complex probl"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[2].watch_for",
+      "preview": "Becoming impatient with people moving slower than you."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[0].headline",
+      "preview": "Align with clear principles to build trust and calm."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[0].body",
+      "preview": "Order, clarity, and personal integrity are your best allies "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[0].lean_into",
+      "preview": "Honoring your commitments with steady consistency."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[1].body",
+      "preview": "Today invites you to create harmony through organized habits"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[1].lean_into",
+      "preview": "Creating a clean schedule for your day ahead."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[2].body",
+      "preview": "Your natural reliability shines today, making it an ideal ti"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[2].lean_into",
+      "preview": "Executing your regular duties with high integrity."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[0].body",
+      "preview": "Your quiet intuition is exceptionally keen today, offering f"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[1].body",
+      "preview": "Today encourages you to look beyond surface-level facts and "
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[2].body",
+      "preview": "You will benefit greatly from quiet contemplation today rath"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[2].lean_into",
+      "preview": "Journaling your subtle impressions and insights."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[0].headline",
+      "preview": "Refuel your mind and body with comforting care."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[0].body",
+      "preview": "Today emphasizes gentle restoration, self-care, and absorbin"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[1].headline",
+      "preview": "Absorb wisdom and accept warm guidance from others."
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[1].body",
+      "preview": "The atmosphere today supports learning, quiet study, and rec"
+    },
+    {
+      "path": "DAILY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[2].body",
+      "preview": "A calm, receptive approach will yield the best emotional ene"
+    }
+  ],
+  "zh_cn/monthly.json": [
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_FRIEND[0].headline",
+      "preview": "Expand your core network over the next 30 days."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_FRIEND[0].body",
+      "preview": "This month opens up a sustained monthly theme centered on bu"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_FRIEND[0].watch_for",
+      "preview": "Over-identifying with peer opinions at the expense of your o"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_FRIEND[1].headline",
+      "preview": "Leverage shared resources to scale your projects this month."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_FRIEND[1].body",
+      "preview": "A monthly wave of collaborative synergy creates the ideal ba"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_FRIEND[2].body",
+      "preview": "This four-week window highlights opportunities to step forwa"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[0].body",
+      "preview": "A high-octane monthly cycle activates your competitive insti"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[1].headline",
+      "preview": "Fortify your strategic assets and personal boundaries this m"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[1].body",
+      "preview": "Throughout this four-week theme, heightened external demands"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_ROB_WEALTH[2].body",
+      "preview": "This monthly window presents a tactical opportunity to pivot"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_EATING_GOD[0].body",
+      "preview": "A fertile monthly cycle opens broad horizons for creative de"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_EATING_GOD[1].body",
+      "preview": "Throughout these coming four weeks, focusing on well-being a"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_EATING_GOD[1].watch_for",
+      "preview": "Drifting into complacency when structure is reduced."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_EATING_GOD[2].headline",
+      "preview": "Invest in the long-term health of your creative assets."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_EATING_GOD[2].body",
+      "preview": "This monthly theme emphasizes cultivating content, products,"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[0].body",
+      "preview": "This month brings a powerful strategic opening for breaking "
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[1].body",
+      "preview": "The coming four-week theme puts your unique voice and persua"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[1].watch_for",
+      "preview": "Rejecting established protocols simply for the sake of rebel"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[2].body",
+      "preview": "Throughout this month, you possess the critical clarity nece"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[0].body",
+      "preview": "A dynamic 30-day window unfolds, filled with tactical opport"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[1].body",
+      "preview": "This four-week theme highlights agility, resourcefulness, an"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[2].body",
+      "preview": "Over the next 30 days, stepping outside your customary opera"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[0].body",
+      "preview": "This month establishes a highly grounded theme focused on op"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[1].body",
+      "preview": "Throughout this 30-day window, meticulous attention to struc"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[2].body",
+      "preview": "A four-week cycle of predictable progress invites you to sol"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[2].lean_into",
+      "preview": "Establishing clear, measurable monthly KPI benchmarks for yo"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[0].body",
+      "preview": "A intense 30-day monthly cycle equips you with the grit requ"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[1].body",
+      "preview": "This four-week period provides the tactical resolve necessar"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[2].body",
+      "preview": "Throughout the coming month, external challenges serve as th"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[0].headline",
+      "preview": "Elevate your authority through flawless compliance and gover"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[0].body",
+      "preview": "This month highlights a theme of organizational alignment, r"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[1].body",
+      "preview": "Over the coming four weeks, adhering to high ethical standar"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[2].body",
+      "preview": "Throughout this 30-day period, creating order out of operati"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[0].body",
+      "preview": "A reflective and deeply insightful 30-day theme encourages l"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[1].body",
+      "preview": "This monthly cycle opens a rich portal for tapping into intu"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[1].watch_for",
+      "preview": "Detaching from practical operational realities for too long."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[2].headline",
+      "preview": "Master specialized skills that elevate your long-term value."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[2].body",
+      "preview": "Throughout this month, dedicating significant hours to deep "
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[0].headline",
+      "preview": "Replenish intellectual and structural capital for future gro"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[0].body",
+      "preview": "This four-week theme centers on foundational renewal, mentor"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[1].headline",
+      "preview": "Invest in training and organizational health this month."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[1].body",
+      "preview": "Throughout the coming four weeks, focusing on internal welln"
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[2].headline",
+      "preview": "Consolidate wisdom to prepare for your next major expansion."
+    },
+    {
+      "path": "MONTHLY_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[2].body",
+      "preview": "A supportive monthly energy invites you to absorb knowledge,"
+    }
+  ],
+  "zh_cn/year.json": [
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_FRIEND[0].name",
+      "preview": "The Narrative of Solidarity and Equality"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_FRIEND[0].headline",
+      "preview": "This year, you will grow into someone who builds a solid com"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_FRIEND[0].body",
+      "preview": "The core narrative running through your year is not a lonely"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_FRIEND[0].watch_for",
+      "preview": "Losing your unique color and subjectivity by being swept awa"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_FRIEND[1].headline",
+      "preview": "This year, you will become a leader of solidarity who expand"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_FRIEND[1].body",
+      "preview": "This is the year to set a massive milestone with companions "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_FRIEND[1].watch_for",
+      "preview": "Compromising your core values too easily to avoid friction w"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_FRIEND[1].lean_into",
+      "preview": "Pursuing long-term collaborative projects with people who sh"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_FRIEND[2].headline",
+      "preview": "Throughout this year, you will become the center of horizont"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_FRIEND[2].body",
+      "preview": "This is the year when a healthy and equal network of relatio"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_FRIEND[2].watch_for",
+      "preview": "Feeling needlessly impatient by comparing your growth speed "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_FRIEND[2].lean_into",
+      "preview": "Investing deeply in equal and honest relationships that insp"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_ROB_WEALTH[0].headline",
+      "preview": "This year, you will be trained into an overwhelming master o"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_ROB_WEALTH[0].body",
+      "preview": "This year becomes a powerful training ground where fierce co"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_ROB_WEALTH[0].lean_into",
+      "preview": "Converting external competitive stimuli solely into the driv"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_ROB_WEALTH[1].headline",
+      "preview": "This year, you will be reborn as a subjective leader who per"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_ROB_WEALTH[1].body",
+      "preview": "The long-term theme running through this year is to firmly e"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_ROB_WEALTH[1].lean_into",
+      "preview": "Setting clear and firm boundaries to protect your energy and"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_ROB_WEALTH[2].headline",
+      "preview": "Throughout this year, you will become a pioneer who boldly b"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_ROB_WEALTH[2].body",
+      "preview": "This year is a groundbreaking year of growth where you rever"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_ROB_WEALTH[2].lean_into",
+      "preview": "Setting high goals and boldly putting your inner drive into "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_EATING_GOD[0].headline",
+      "preview": "This year, you will become a craftsman who creates freely ac"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_EATING_GOD[0].body",
+      "preview": "Throughout this year, your life will be filled with creative"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_EATING_GOD[0].lean_into",
+      "preview": "Concretizing your unique ideas and values into long-term pro"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_EATING_GOD[1].headline",
+      "preview": "This year, you will become someone who discovers the true va"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_EATING_GOD[1].body",
+      "preview": "This year is a journey of breaking away from others' evaluat"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_EATING_GOD[1].watch_for",
+      "preview": "An attitude of postponing long-term goals by being drawn to "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_EATING_GOD[1].lean_into",
+      "preview": "Building a lifestyle where sustainable rest and pure creatio"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_EATING_GOD[2].headline",
+      "preview": "Throughout this year, you will become the subject who bright"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_EATING_GOD[2].body",
+      "preview": "This year is a beautiful year where your warm sensitivity an"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_EATING_GOD[2].watch_for",
+      "preview": "Neglecting minimal promises and systems under the guise of f"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_EATING_GOD[2].lean_into",
+      "preview": "Leaving your unique perspective and expression as continuous"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[0].name",
+      "preview": "The Icon of Innovation and Reform"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[0].headline",
+      "preview": "This year, you will grow into an innovator who breaks the st"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[0].body",
+      "preview": "This year is a year to boldly break the frustrating old fram"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[0].watch_for",
+      "preview": "Making enemies of your allies with excessively sharp and blu"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[1].headline",
+      "preview": "This year, you will become a star who captivates the public'"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[1].body",
+      "preview": "This year is a dynamic time when your sparkling aesthetic se"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[2].name",
+      "preview": "The Architect Who Sets a New Board"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[2].headline",
+      "preview": "Throughout this year, you will become someone who shakes off"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[2].body",
+      "preview": "This year unfolds a long-term narrative where you constructi"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[2].watch_for",
+      "preview": "Showing impatient anger toward people who are slow or conser"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_HURTING_OFFICER[2].lean_into",
+      "preview": "Redesigning anachronistic procedures into modern and flexibl"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[0].headline",
+      "preview": "This year, you will be reborn as a dynamic planner who captu"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[0].body",
+      "preview": "Throughout this year, you will be reborn as someone who flex"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[0].lean_into",
+      "preview": "Expanding your territory by opening your mind to various pos"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[1].headline",
+      "preview": "This year, you will become a challenger who goes beyond exis"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[1].body",
+      "preview": "This year is a time of three-dimensional growth, breaking ou"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[2].headline",
+      "preview": "Throughout this year, you will become a tactician who maximi"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[2].body",
+      "preview": "This year unfolds a narrative of reconnecting stagnant asset"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[2].watch_for",
+      "preview": "Being blinded by short-term profits and neglecting long-term"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_WEALTH[2].lean_into",
+      "preview": "Diversifying new value creation channels with a flexible and"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[0].headline",
+      "preview": "This year, you will become someone who accumulates irreplace"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[0].body",
+      "preview": "The narrative running through this year is the faithfulness "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[1].headline",
+      "preview": "This year, you will become a figure who perfectly fulfills y"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[1].body",
+      "preview": "This year is a time when the noble power of honesty and cons"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[1].lean_into",
+      "preview": "Precisely organizing the substance of life and accumulating "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[2].headline",
+      "preview": "Throughout this year, you will achieve silent but overwhelmi"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[2].body",
+      "preview": "This year is a year to correct the disorder of daily life an"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_WEALTH[2].lean_into",
+      "preview": "Building healthy habits and practical foundations that are s"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[0].headline",
+      "preview": "This year, you will become a leader who passes through harsh"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[0].body",
+      "preview": "The long-term narrative running through this year is a hero'"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[0].watch_for",
+      "preview": "Overworking your mind and body or pushing others by obsessin"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[1].headline",
+      "preview": "This year, you will be reborn as an inner master by using ha"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[1].body",
+      "preview": "This year is a year of boldness to burn away your weaknesses"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[1].lean_into",
+      "preview": "Reversing the most difficult challenges into the best steppi"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[2].name",
+      "preview": "The Decision That Changes the Board"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[2].headline",
+      "preview": "Throughout this year, you will completely resolve long-cheri"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[2].body",
+      "preview": "This year is a year to cut away long-stagnant problems with "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_SEVEN_KILLINGS[2].lean_into",
+      "preview": "Boldly organizing unnecessary tasks and focusing on the most"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[0].headline",
+      "preview": "This year, you will become someone who rises to a honorable "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[0].body",
+      "preview": "Throughout this year, you will establish official authority "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[0].watch_for",
+      "preview": "Being excessively tied to others' gazes or social evaluation"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[1].headline",
+      "preview": "This year, you will establish yourself as an indispensable s"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[1].body",
+      "preview": "This year is a time to establish organized order and clear s"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[1].watch_for",
+      "preview": "Suffering from excessive stress trapped in the framework of "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[2].headline",
+      "preview": "Throughout this year, you will lead solid peace and success "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[2].body",
+      "preview": "This year is a year to meticulously organize ambiguous roles"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_OFFICER[2].lean_into",
+      "preview": "Laying the foundation for receiving clear recognition, such "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[0].headline",
+      "preview": "This year, you will become a sage who penetrates the truth h"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[0].body",
+      "preview": "Throughout this year, you will take a step back from the noi"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[1].name",
+      "preview": "The Fusion of Intuition and Wisdom"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[1].headline",
+      "preview": "This year, you will trust your sharp inner intuition and blo"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[1].body",
+      "preview": "This year is a year when accumulated experience and deep int"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[1].watch_for",
+      "preview": "A tendency to cut off communication with others and isolate "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[1].lean_into",
+      "preview": "Securing your own original expertise through deep research a"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[2].name",
+      "preview": "The Strategist Who Reads the Future"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[2].headline",
+      "preview": "Throughout this year, you will become someone who opens new "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[2].body",
+      "preview": "This year is a deep year to broaden the horizon of knowledge"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_INDIRECT_RESOURCE[2].lean_into",
+      "preview": "Accumulating wisdom that penetrates the times through profes"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[0].headline",
+      "preview": "This year, you will become someone who completes powerful in"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[0].body",
+      "preview": "The long-term narrative running through this year is to reco"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[0].watch_for",
+      "preview": "Losing the will to lead and execute on your own by settling "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[0].lean_into",
+      "preview": "Humbly learning the mentor's wisdom and focusing on perfect "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[1].headline",
+      "preview": "This year, you will achieve complete rest and growth with th"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[1].body",
+      "preview": "This year is a cozy time to humbly accept the precious help "
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[1].lean_into",
+      "preview": "Building an optimal learning environment and a solid recover"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[2].headline",
+      "preview": "Throughout this year, you will be reborn as a wise teacher w"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[2].body",
+      "preview": "This year is a peaceful year to return to the inner sanctuar"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[2].watch_for",
+      "preview": "Complacency that keeps postponing actual challenges under th"
+    },
+    {
+      "path": "YEAR_THEME_CONTENT.TEN_GOD_DIRECT_RESOURCE[2].lean_into",
+      "preview": "Systematically organizing knowledge into manuals and assets "
+    },
+    {
+      "path": "SOLAR_CALENDAR_NOTE",
+      "preview": "The year above follows the solar-term calendar (Lichun to Li"
+    }
+  ],
+  "zh_cn/compatibility.json": [
+    {
+      "path": "ELEMENT_CONTENT.family.COMPLEMENTARY.body",
+      "preview": "Your essential energies flow together to create a deeply com"
+    },
+    {
+      "path": "ELEMENT_CONTENT.family.BALANCED.body",
+      "preview": "Sharing a similar foundational rhythm creates an easy, calm "
+    },
+    {
+      "path": "ELEMENT_CONTENT.family.MODERATE.headline",
+      "preview": "A adaptable family bond that thrives when individual differe"
+    },
+    {
+      "path": "ELEMENT_CONTENT.family.MODERATE.body",
+      "preview": "Your family unit balances comforting familiarity with health"
+    },
+    {
+      "path": "ELEMENT_CONTENT.family.TENSION.body",
+      "preview": "Distinct personal viewpoints can occasionally cause emotiona"
+    },
+    {
+      "path": "ELEMENT_CONTENT.family.DEFAULT.body",
+      "preview": "Your connection serves as a reliable harbor where every fami"
+    },
+    {
+      "path": "ELEMENT_CONTENT.friend.COMPLEMENTARY.headline",
+      "preview": "A dynamic friendship where your strengths effortlessly fill "
+    },
+    {
+      "path": "ELEMENT_CONTENT.friend.COMPLEMENTARY.body",
+      "preview": "Your distinct personal energies flow together naturally, all"
+    },
+    {
+      "path": "ELEMENT_CONTENT.friend.BALANCED.body",
+      "preview": "Because you process life through a similar lens, spending ti"
+    },
+    {
+      "path": "ELEMENT_CONTENT.friend.MODERATE.headline",
+      "preview": "A versatile connection that thrives when you cultivate share"
+    },
+    {
+      "path": "ELEMENT_CONTENT.friend.MODERATE.body",
+      "preview": "Your friendship possesses a healthy blend of common ground a"
+    },
+    {
+      "path": "ELEMENT_CONTENT.friend.TENSION.body",
+      "preview": "Your contrasting styles may occasionally spark lively debate"
+    },
+    {
+      "path": "ELEMENT_CONTENT.friend.DEFAULT.body",
+      "preview": "Your relationship offers a fresh playground where both of yo"
+    },
+    {
+      "path": "DAY_MASTER_CONTENT.family.COMPLEMENTARY.headline",
+      "preview": "A deeply supportive core connection that fortifies your fami"
+    },
+    {
+      "path": "DAY_MASTER_CONTENT.family.COMPLEMENTARY.body",
+      "preview": "Your underlying spirits reinforce each other, providing imme"
+    },
+    {
+      "path": "DAY_MASTER_CONTENT.family.BALANCED.body",
+      "preview": "Your core identities resonate on a deep, instinctual level, "
+    },
+    {
+      "path": "DAY_MASTER_CONTENT.family.MODERATE.body",
+      "preview": "Your fundamental traits bring a healthy diversity of thought"
+    },
+    {
+      "path": "DAY_MASTER_CONTENT.family.TENSION.headline",
+      "preview": "A powerful familial mirror that encourages deep empathy and "
+    },
+    {
+      "path": "DAY_MASTER_CONTENT.family.TENSION.body",
+      "preview": "Differing core outlooks may occasionally challenge your fami"
+    },
+    {
+      "path": "DAY_MASTER_CONTENT.family.DEFAULT.body",
+      "preview": "Your bond transcends temporary disagreements, anchored firml"
+    },
+    {
+      "path": "DAY_MASTER_CONTENT.friend.COMPLEMENTARY.body",
+      "preview": "Your fundamental drives align in a way that fuels individual"
+    },
+    {
+      "path": "DAY_MASTER_CONTENT.friend.BALANCED.body",
+      "preview": "You walk at a remarkably similar pace, making your shared jo"
+    },
+    {
+      "path": "DAY_MASTER_CONTENT.friend.MODERATE.body",
+      "preview": "Your core identities offer just enough difference to keep yo"
+    },
+    {
+      "path": "DAY_MASTER_CONTENT.friend.TENSION.headline",
+      "preview": "A transformative peer dynamic that challenges you to expand "
+    },
+    {
+      "path": "DAY_MASTER_CONTENT.friend.TENSION.body",
+      "preview": "Your core approaches to life occasionally clash, forcing bot"
+    },
+    {
+      "path": "DAY_MASTER_CONTENT.friend.DEFAULT.body",
+      "preview": "You meet each other on equal footing, bringing your true sel"
+    },
+    {
+      "path": "TEN_GODS_CONTENT.family.COMPLEMENTARY.body",
+      "preview": "The way you handle responsibilities and home life perfectly "
+    },
+    {
+      "path": "TEN_GODS_CONTENT.family.BALANCED.headline",
+      "preview": "A predictable domestic dynamic that simplifies household lif"
+    },
+    {
+      "path": "TEN_GODS_CONTENT.family.BALANCED.body",
+      "preview": "You share similar approaches to family duties, making decisi"
+    },
+    {
+      "path": "TEN_GODS_CONTENT.family.MODERATE.body",
+      "preview": "Your household benefits from a rich mix of practical skills,"
+    },
+    {
+      "path": "TEN_GODS_CONTENT.family.TENSION.headline",
+      "preview": "A dynamic home atmosphere that thrives on mutual flexibility"
+    },
+    {
+      "path": "TEN_GODS_CONTENT.family.TENSION.body",
+      "preview": "Vast differences in how you approach responsibilities can so"
+    },
+    {
+      "path": "TEN_GODS_CONTENT.family.DEFAULT.headline",
+      "preview": "A loving family structure where every member feels valued an"
+    },
+    {
+      "path": "TEN_GODS_CONTENT.family.DEFAULT.body",
+      "preview": "You maintain a gentle, accommodating structure that gives ev"
+    },
+    {
+      "path": "TEN_GODS_CONTENT.friend.COMPLEMENTARY.headline",
+      "preview": "A highly productive alliance where your behavioral styles ac"
+    },
+    {
+      "path": "TEN_GODS_CONTENT.friend.COMPLEMENTARY.body",
+      "preview": "The way you navigate daily tasks and social dynamics natural"
+    },
+    {
+      "path": "TEN_GODS_CONTENT.friend.BALANCED.body",
+      "preview": "Your action styles and daily habits mirror each other, creat"
+    },
+    {
+      "path": "TEN_GODS_CONTENT.friend.MODERATE.body",
+      "preview": "You combine different behavioral tendencies that give your f"
+    },
+    {
+      "path": "TEN_GODS_CONTENT.friend.TENSION.headline",
+      "preview": "A high-energy friendship that sparks growth when managed wit"
+    },
+    {
+      "path": "TEN_GODS_CONTENT.friend.TENSION.body",
+      "preview": "Your contrasting ways of handling goals and social situation"
+    },
+    {
+      "path": "TEN_GODS_CONTENT.friend.DEFAULT.body",
+      "preview": "You give each other the space needed to express personal tal"
+    },
+    {
+      "path": "SINSAL_CONTENT.family.COMPLEMENTARY.headline",
+      "preview": "A vibrant family connection filled with warmth, laughter, an"
+    },
+    {
+      "path": "SINSAL_CONTENT.family.COMPLEMENTARY.body",
+      "preview": "A bright, joyful energy permeates your relationship, bringin"
+    },
+    {
+      "path": "SINSAL_CONTENT.family.BALANCED.body",
+      "preview": "Your relationship acts as a comforting anchor, shielding fam"
+    },
+    {
+      "path": "SINSAL_CONTENT.family.MODERATE.headline",
+      "preview": "An evolving kinship that grows richer through shared milesto"
+    },
+    {
+      "path": "SINSAL_CONTENT.family.MODERATE.body",
+      "preview": "Your family connection continuously deepens as you honor tra"
+    },
+    {
+      "path": "SINSAL_CONTENT.family.TENSION.body",
+      "preview": "High emotional sensitivity in your connection means family t"
+    },
+    {
+      "path": "SINSAL_CONTENT.family.DEFAULT.body",
+      "preview": "Your family connection is built on a quiet, enduring promise"
+    },
+    {
+      "path": "SINSAL_CONTENT.friend.COMPLEMENTARY.body",
+      "preview": "There is a natural charm in your connection that turns ordin"
+    },
+    {
+      "path": "SINSAL_CONTENT.friend.BALANCED.body",
+      "preview": "Your connection offers a calming sanctuary from the busyness"
+    },
+    {
+      "path": "SINSAL_CONTENT.friend.MODERATE.body",
+      "preview": "Your bond naturally adapts as both of you navigate different"
+    },
+    {
+      "path": "SINSAL_CONTENT.friend.TENSION.headline",
+      "preview": "A intense connection that calls for clear boundaries and con"
+    },
+    {
+      "path": "SINSAL_CONTENT.friend.TENSION.body",
+      "preview": "Strong emotional currents run through your relationship, mak"
+    },
+    {
+      "path": "SINSAL_CONTENT.friend.DEFAULT.body",
+      "preview": "Your friendship develops naturally through quiet consistency"
+    },
+    {
+      "path": "RELATIONSHIP_CONTENT.romance.tip",
+      "preview": "Focus on your emotional exchange. Understanding each other's"
+    },
+    {
+      "path": "RELATIONSHIP_CONTENT.business.tip",
+      "preview": "Acknowledge differences in work styles and decision-making. "
+    },
+    {
+      "path": "RELATIONSHIP_CONTENT.friend.tip",
+      "preview": "Focus on shared experiences and mutual respect. Keep the bal"
+    }
+  ],
+  "zh_cn/personalization.json": [
+    {
+      "path": "RELATIONS.day_chong",
+      "preview": "You have an inner restlessness that craves constant change. "
+    },
+    {
+      "path": "RELATIONS.has_chong",
+      "preview": "Your life is driven by unpredictable changes and challenges."
+    },
+    {
+      "path": "SPECIAL_CONDITIONS.RESTLESS_FEET",
+      "preview": "You are a born 'wanderer'. You gain energy and grow through "
+    },
+    {
+      "path": "SPECIAL_CONDITIONS.seven_killings",
+      "preview": "You possess strong 'Boss' energy. You excel at taking contro"
+    }
+  ]
+}
