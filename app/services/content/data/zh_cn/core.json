@@ -1,7 +1,7 @@
 {
   "ARCHETYPE_CONTENT": {
     "THE_PIONEER": {
-      "name": "先锋",
+      "name": "巨木",
       "tagline": "无论土壤是否准备好，你都会向上生长。",
       "symbol": "↟",
       "color": "#2F7A3F",
@@ -91,7 +91,7 @@
       }
     },
     "THE_ADAPTER": {
-      "name": "适应者",
+      "name": "藤蔓",
       "tagline": "你学会了屈服，这样才不会被折断。",
       "symbol": "⟡",
       "color": "#5FAF7A",
@@ -271,7 +271,7 @@
       }
     },
     "THE_KEEPER": {
-      "name": "守灯人",
+      "name": "灯火",
       "tagline": "你不是篝火，而是灯笼。",
       "symbol": "✦",
       "color": "#C2461F",
@@ -361,7 +361,7 @@
       }
     },
     "THE_ANCHOR": {
-      "name": "锚",
+      "name": "山",
       "tagline": "你是别人立足的根基。",
       "symbol": "▣",
       "color": "#8B6F3F",
@@ -452,7 +452,7 @@
       }
     },
     "THE_CULTIVATOR": {
-      "name": "耕耘者",
+      "name": "花园",
       "tagline": "你种东西。默默地、耐心地，认认真真地。",
       "symbol": "❉",
       "color": "#A89060",
@@ -722,7 +722,7 @@
       }
     },
     "THE_DEEP": {
-      "name": "深海",
+      "name": "大海",
       "tagline": "你的举止如同大海——表面平静，深处浩瀚。",
       "symbol": "≈",
       "color": "#1B3A5C",

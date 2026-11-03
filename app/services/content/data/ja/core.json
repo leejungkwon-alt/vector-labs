@@ -1,7 +1,7 @@
 {
   "ARCHETYPE_CONTENT": {
     "THE_PIONEER": {
-      "name": "パイオニア",
+      "name": "大木",
       "tagline": "地面が整っていようといまいと、あなたは上へと伸びていく。",
       "symbol": "↟",
       "color": "#2F7A3F",
@@ -91,7 +91,7 @@
       }
     },
     "THE_ADAPTER": {
-      "name": "アダプター",
+      "name": "蔦",
       "tagline": "しなやかに曲がるから、折れない。",
       "symbol": "⟡",
       "color": "#5FAF7A",
@@ -269,7 +269,7 @@
       }
     },
     "THE_KEEPER": {
-      "name": "灯台守",
+      "name": "灯火",
       "tagline": "焚き火ではなく、灯籠です。",
       "symbol": "✦",
       "color": "#C2461F",
@@ -359,7 +359,7 @@
       }
     },
     "THE_ANCHOR": {
-      "name": "錨",
+      "name": "山",
       "tagline": "他の人が立つ地面そのものです。",
       "symbol": "▣",
       "color": "#8B6F3F",
@@ -450,7 +450,7 @@
       }
     },
     "THE_CULTIVATOR": {
-      "name": "耕作者",
+      "name": "庭",
       "tagline": "静かに、忍耐強く、本物を育てる人です。",
       "symbol": "❉",
       "color": "#A89060",
@@ -720,7 +720,7 @@
       }
     },
     "THE_DEEP": {
-      "name": "深海",
+      "name": "海",
       "tagline": "海のように動きます。表面はゆっくり、けれどその下は広大です。",
       "symbol": "≈",
       "color": "#1B3A5C",
