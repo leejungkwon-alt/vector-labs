@@ -1,4 +1,4 @@
-﻿export const CITY_LIST = [
+export const CITY_LIST = [
   // Korea
   { key: "seoul", label: "서울 (Seoul)", label_en: "Seoul" },
   { key: "busan", label: "부산 (Busan)", label_en: "Busan" },

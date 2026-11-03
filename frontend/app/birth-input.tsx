@@ -1,11 +1,11 @@
-﻿import { useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Switch, Alert } from "react-native";
+import { useEffect, useRef, useState } from "react";
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Switch, Alert, Platform } from "react-native";
 import { router } from "expo-router";
-import DateTimePicker, { DateTimePickerEvent } from "@react-native-community/datetimepicker";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useProfileStore } from "@/store/profileStore";
 import { useLanguageStore } from "@/store/languageStore";
 import { useT, formatPickerDate, formatPickerTime } from "@/i18n";
+import { DateTimeField } from "@/components/DateTimeField";
 import { CityPickerModal, CUSTOM_CITY_KEY } from "@/components/CityPickerModal";
 import { TimezonePickerModal } from "@/components/TimezonePickerModal"; // 👈 추가
 import { CITY_LIST } from "@/constants/cities";
@@ -15,13 +15,12 @@ import { colors, spacing, radius } from "@/theme";
 export default function BirthInput() {
   const insets = useSafeAreaInsets();
   const saveProfile = useProfileStore((s) => s.saveProfile);
+  const profile = useProfileStore((s) => s.profile);
   const lang = useLanguageStore((s) => s.lang);
   const t = useT();
   
   const [birthDate, setBirthDate] = useState(new Date(1990, 0, 1));
-  const [showDatePicker, setShowDatePicker] = useState(false);
   const [birthTime, setBirthTime] = useState(new Date(2000, 0, 1, 12, 0));
-  const [showTimePicker, setShowTimePicker] = useState(false);
   const [unknownTime, setUnknownTime] = useState(false);
   
   const [city, setCity] = useState("seoul");
@@ -35,6 +34,36 @@ export default function BirthInput() {
   const cityLabel = isCustomCity ? t("birthInput.customCity") : (CITY_LIST.find(c => c.key === city)?.label || "서울 (Seoul)");
   const tzLabel = TIMEZONE_LIST.find(t => t.key === customTimezone)?.label || customTimezone;
 
+  // 저장된 프로필이 있으면(= 설정에서 "생년월일 수정"으로 들어온 경우) 그 값으로 입력칸을 채운다.
+  const hydrated = useRef(false);
+  useEffect(() => {
+    if (hydrated.current || !profile) return;
+    hydrated.current = true;
+    try {
+      if (profile.birth_date) {
+        const [y, m, d] = String(profile.birth_date).split("-").map(Number);
+        if (y && m && d) setBirthDate(new Date(y, m - 1, d));
+      }
+      if (profile.birth_time_mode === "noon" || !profile.birth_time) {
+        setUnknownTime(true);
+      } else {
+        const [hh, mm] = String(profile.birth_time).split(":").map(Number);
+        if (!Number.isNaN(hh) && !Number.isNaN(mm)) setBirthTime(new Date(2000, 0, 1, hh, mm));
+        setUnknownTime(false);
+      }
+      if (profile.gender === "M" || profile.gender === "F") setGender(profile.gender);
+      if (profile.birth_location) {
+        setIsCustomCity(false);
+        setCity(profile.birth_location);
+      } else if (profile.timezone_str) {
+        setIsCustomCity(true);
+        setCustomTimezone(profile.timezone_str);
+      }
+    } catch {
+      /* 프로필 형식이 예상과 달라도 기본값으로 진행 */
+    }
+  }, [profile]);
+
   const onSelectCity = (key: string) => {
     if (key === CUSTOM_CITY_KEY) {
       setIsCustomCity(true);
@@ -42,16 +71,6 @@ export default function BirthInput() {
       setIsCustomCity(false);
       setCity(key);
     }
-  };
-
-  const onChangeDate = (event: DateTimePickerEvent, date?: Date) => {
-    setShowDatePicker(false);
-    if (event.type === "set" && date) setBirthDate(date);
-  };
-
-  const onChangeTime = (event: DateTimePickerEvent, time?: Date) => {
-    setShowTimePicker(false);
-    if (event.type === "set" && time) setBirthTime(time);
   };
 
   const handleNext = async () => {
@@ -68,7 +87,7 @@ export default function BirthInput() {
       }
       
       const offsetHours = new Date().getTimezoneOffset() / -60; 
-      const fallbackLongitude = 0 /* FIX-22: backend handles timezone */;
+      const fallbackLongitude = 0 ;
 
       const profile = {
         birth_date: `${yyyy}-${mm}-${dd}`,
@@ -83,7 +102,8 @@ export default function BirthInput() {
       await saveProfile(profile);
       router.replace("/(tabs)/home");
     } catch (error) {
-      Alert.alert(t("common.notice"), t("birthInput.saveFailed"));
+      if (Platform.OS === "web") alert(t("birthInput.saveFailed"));
+      else Alert.alert(t("common.notice"), t("birthInput.saveFailed"));
     }
   };
 
@@ -92,10 +112,14 @@ export default function BirthInput() {
       <Text style={styles.title}>{t("birthInput.title")}</Text>
       
       <Text style={styles.label}>{t("birthInput.birthDate")}</Text>
-      <TouchableOpacity style={styles.inputBtn} onPress={() => setShowDatePicker(true)}>
-        <Text style={styles.inputText}>{formatPickerDate(birthDate, lang)}</Text>
-      </TouchableOpacity>
-      {showDatePicker && <DateTimePicker value={birthDate} mode="date" display="spinner" onChange={onChangeDate} />}
+      <DateTimeField
+        mode="date"
+        value={birthDate}
+        onChange={setBirthDate}
+        displayText={formatPickerDate(birthDate, lang)}
+        style={styles.inputBtn}
+        textStyle={styles.inputText}
+      />
 
       <View style={styles.rowBetween}>
         <Text style={styles.label}>{t("birthInput.birthTime")}</Text>
@@ -105,12 +129,15 @@ export default function BirthInput() {
         </View>
       </View>
 
-      <TouchableOpacity style={[styles.inputBtn, unknownTime && { opacity: 0.4 }]} onPress={() => { if(!unknownTime) setShowTimePicker(true); }} disabled={unknownTime}>
-        <Text style={styles.inputText}>
-          {unknownTime ? t("birthInput.timeUnknown") : formatPickerTime(birthTime)}
-        </Text>
-      </TouchableOpacity>
-      {showTimePicker && <DateTimePicker value={birthTime} mode="time" display="spinner" onChange={onChangeTime} />}
+      <DateTimeField
+        mode="time"
+        value={birthTime}
+        onChange={setBirthTime}
+        disabled={unknownTime}
+        displayText={unknownTime ? t("birthInput.timeUnknown") : formatPickerTime(birthTime)}
+        style={styles.inputBtn}
+        textStyle={styles.inputText}
+      />
 
       <Text style={styles.label}>{t("birthInput.birthCity")}</Text>
       <TouchableOpacity style={styles.inputBtn} onPress={() => setShowCityModal(true)}>

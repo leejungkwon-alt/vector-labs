@@ -17,7 +17,7 @@
   "tabs": {
     "home": "Inicio",
     "daily": "Diario",
-    "compatibility": "Afinidad",
+    "compatibility": "Química",
     "settings": "Ajustes"
   },
   "home": {
@@ -38,7 +38,7 @@
     "upgrade": "Actualizar a Premium",
     "errorTitle": "Algo salió mal",
     "heroSub": "Tu energía para los próximos 7 días.",
-    "focus": "Enfócate",
+    "focus": "Enfoque",
     "watch": "Atención"
   },
   "compatibility": {
@@ -93,9 +93,9 @@
     "upgradeBody": "Suscríbete para desbloquear la Energía Diaria de 7 días y el análisis de Química.",
     "upgradeCta": "Suscribirse a Premium",
     "paymentHistory": "Recibos",
-    "productSubMonthly": "Suscripción Mensual",
-    "productCompatAddon": "Complemento de Compatibilidad",
-    "productDeepReport": "Informe Profundo",
+    "productSubMonthly": "Suscripción mensual",
+    "productCompatAddon": "Complemento de compatibilidad",
+    "productDeepReport": "Informe profundo",
     "editBirthInfo": "Editar datos de nacimiento",
     "deleteAccount": "Eliminar cuenta permanentemente",
     "deleteAccountConfirm": "¿Estás seguro de que quieres eliminar tu cuenta permanentemente? Esta acción no se puede deshacer.",
@@ -152,14 +152,14 @@
   "payment": {
     "title": "Gyeol Premium",
     "description": "Elige el plan que se adapte a tu viaje.",
-    "successTitle": "Pago Exitoso",
+    "successTitle": "Pago completado",
     "successBody": "El contenido bloqueado ha sido desbloqueado.",
-    "failTitle": "Pago Fallido",
+    "failTitle": "Pago fallido",
     "failRetry": "Por favor, inténtalo de nuevo.",
-    "subMonthlyTitle": "Suscripción Mensual",
-    "subMonthlyDetail": "Informes Diarios, Mensuales y Profundos",
+    "subMonthlyTitle": "Suscripción mensual",
+    "subMonthlyDetail": "Informes diarios, mensuales y profundos",
     "subMonthlyPrice": "$2.99 / mes (Cancela cuando quieras)",
-    "deepReportTitle": "Informe Profundo",
+    "deepReportTitle": "Informe profundo",
     "deepReportDetail": "Patrones de Amor, Carrera y Riqueza (Conservar para siempre)",
     "deepReportPrice": "$0.99 (Desbloqueo de por vida)",
     "compatTitle": "Compatibilidad Premium",
@@ -195,7 +195,7 @@
     "energy": "Energía",
     "distribution": "Distribución",
     "practices": "Prácticas",
-    "focus": "Enfócate",
+    "focus": "Enfoque",
     "watch": "Atención",
     "lockedContent": "Contenido bloqueado",
     "current": "Actual",
@@ -222,7 +222,19 @@
     "fire": "Fuego",
     "earth": "Tierra",
     "metal": "Metal",
-    "water": "Agua"
+    "water": "Agua",
+    "ageBandMeta": "{label} · {age} años · Año base {year}",
+    "lockedContentCount": "Contenido bloqueado ({count})",
+    "lockedLabels": {
+      "cross_insight": "Perspectiva transversal",
+      "timing": "Tiempo actual",
+      "body": "Cuerpo",
+      "patterns": "Patrones",
+      "compatibility": "Química",
+      "actions": "Guía práctica",
+      "action": "Guía práctica",
+      "red_flags": "Señales de alerta"
+    }
   },
   "api": {
     "timeout": "El servidor agotó el tiempo de espera. Por favor, revisa tu red."

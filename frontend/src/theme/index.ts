@@ -1,4 +1,4 @@
-﻿// frontend/src/theme/index.ts
+// frontend/src/theme/index.ts
 
 export const colors = {
   // ---- Base surfaces ----

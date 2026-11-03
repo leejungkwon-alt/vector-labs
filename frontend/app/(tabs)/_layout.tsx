@@ -1,58 +1,29 @@
-﻿import { Tabs } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
+import { Tabs } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { colors } from "@/theme";
 import { useT } from "@/i18n";
 
 export default function TabsLayout() {
   const t = useT();
+  const insets = useSafeAreaInsets();
+  const tg = typeof window !== "undefined" ? (window as any).Telegram?.WebApp : null;
+  const tgBottom = (tg?.safeAreaInset?.bottom ?? 0) + (tg?.contentSafeAreaInset?.bottom ?? 0);
+  const bottom = Math.max(insets.bottom, tgBottom, 8);
 
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: colors.primary,
-        tabBarInactiveTintColor: colors.textMuted,
-        tabBarStyle: { backgroundColor: colors.surface, borderTopColor: colors.border },
-        headerShown: true,
-        headerStyle: { backgroundColor: colors.surface },
-        headerTitleStyle: { color: colors.text },
-      }}
-    >
-      <Tabs.Screen
-        name="home"
-        options={{
-          title: t("tabs.home"),
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="sunny-outline" size={24} color={(color as string | undefined) || "#7A6A5C"} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="daily"
-        options={{
-          title: t("tabs.daily"),
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="calendar-outline" size={24} color={(color as string | undefined) || "#7A6A5C"} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="compatibility"
-        options={{
-          title: t("tabs.compatibility"),
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="heart-outline" size={24} color={(color as string | undefined) || "#7A6A5C"} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="settings"
-        options={{
-          title: t("tabs.settings"),
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="settings-outline" size={24} color={(color as string | undefined) || "#7A6A5C"} />
-          ),
-        }}
-      />
+    <Tabs screenOptions={{
+      tabBarActiveTintColor: colors.primary,
+      tabBarInactiveTintColor: colors.textMuted,
+      tabBarLabelStyle: { fontSize: 14, fontWeight: "700" },
+      tabBarIconStyle: { display: "none" },
+      tabBarItemStyle: { justifyContent: "center" },
+      tabBarStyle: { height: 52 + bottom, paddingTop: 6, paddingBottom: bottom },
+      headerShown: true,
+    }}>
+      <Tabs.Screen name="home" options={{ title: t("tabs.home"), tabBarIcon: () => null }} />
+      <Tabs.Screen name="daily" options={{ title: t("tabs.daily"), tabBarIcon: () => null }} />
+      <Tabs.Screen name="compatibility" options={{ title: t("tabs.compatibility"), tabBarIcon: () => null }} />
+      <Tabs.Screen name="settings" options={{ title: t("tabs.settings"), tabBarIcon: () => null }} />
     </Tabs>
   );
 }

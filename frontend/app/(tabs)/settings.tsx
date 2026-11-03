@@ -36,9 +36,9 @@ export default function SettingsScreen() {
     }
   };
 
-  const handleReset = async () => {
-    await clearProfile();
-    router.replace("/birth-input");
+  // 프로필을 지우지 않고 입력 화면으로 이동 → 저장된 값이 채워진 상태에서 수정
+  const handleReset = () => {
+    router.push("/birth-input");
   };
 
   const handleDeleteAccount = () => {
@@ -94,7 +94,7 @@ export default function SettingsScreen() {
     }
     
     if (profile.birth_location) {
-      // 도시 키값(seoul, new_york)을 보기 좋게 표시
+      // 임시 키값(seoul, new_york)을 보기 좋게 표시
       info += ` · ${profile.birth_location}`;
     }
     return info;

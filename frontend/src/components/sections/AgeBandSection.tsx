@@ -1,13 +1,15 @@
 // frontend/src/components/sections/AgeBandSection.tsx
 import { View, Text } from "react-native";
 import { ss } from "./shared";
+import { useT } from "@/i18n";
 import type { AgeBandSection } from "../../../types";
 
 export function AgeBandSectionView({ section }: { section: AgeBandSection }) {
+  const t = useT();
   return (
     <View>
       <Text style={ss.metaText}>
-        {section.label} · 만 {section.age}세 · 기준 {section.target_year}년
+        {t("sections.ageBandMeta", { label: section.label, age: section.age, year: section.target_year })}
       </Text>
       <Text style={ss.coreHero}>{section.headline}</Text>
       <Text style={ss.paragraph}>{section.body}</Text>

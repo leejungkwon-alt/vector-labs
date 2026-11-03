@@ -1,4 +1,4 @@
-﻿import type {
+import type {
   AuthResponse,
   SajuRequest,
   SajuResponse,
@@ -10,7 +10,7 @@
   PushTokenRequest,
 } from "../../types";
 
-// FIX-23: env-based (dev: localhost, prod: EXPO_PUBLIC_API_BASE_URL)
+
 const BASE_URL: string = (() => {
   const fromEnv = process.env.EXPO_PUBLIC_API_BASE_URL;
   if (fromEnv) return fromEnv;

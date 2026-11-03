@@ -222,7 +222,19 @@
     "fire": "Fire",
     "earth": "Earth",
     "metal": "Metal",
-    "water": "Water"
+    "water": "Water",
+    "ageBandMeta": "{label} · Age {age} · Base {year}",
+    "lockedContentCount": "Locked content ({count})",
+    "lockedLabels": {
+      "cross_insight": "Cross Insight",
+      "timing": "Current Life Flow",
+      "body": "Body",
+      "patterns": "Patterns",
+      "compatibility": "Chemistry",
+      "actions": "Action Guide",
+      "action": "Action Guide",
+      "red_flags": "Red Flags"
+    }
   },
   "api": {
     "timeout": "Server timed out. Please check your network."

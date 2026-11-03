@@ -4,7 +4,6 @@ import { useT } from "@/i18n";
 import { useQuery } from "@tanstack/react-query";
 import { View, Text, ScrollView, ActivityIndicator, StyleSheet, TouchableOpacity } from "react-native";
 import { router } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
 import { api } from "@/api/client";
 import { colors, spacing, radius, gradeColors } from "@/theme";
 import { useAuthStore } from "@/store/authStore";
@@ -59,21 +58,25 @@ export default function DailyScreen() {
   }
 
   if (error) {
-    const isForbidden = (error as any)?.status === 403;
-    if (isForbidden) {
+    const status = (error as any)?.status;
+    if (status === 401 || status === 403) {
+      const isAuthError = status === 401;
       return (
         <View style={styles.center}>
           <View style={{ backgroundColor: colors.surface, padding: 24, borderRadius: radius.lg, alignItems: "center", borderWidth: 1, borderColor: colors.border }}>
-            <Ionicons name="lock-closed" size={48} color={colors.primary} style={{ marginBottom: 16 }} />
-            <Text style={{ fontSize: 20, fontWeight: "700", color: colors.text, marginBottom: 8 }}>{t("daily.subscriberOnlyTitle")}</Text>
-            <Text style={{ fontSize: 15, color: colors.textMuted, textAlign: "center", lineHeight: 22, marginBottom: 24 }}>
-              {t("daily.subscriberOnlyBody")}
+            <Text style={{ fontSize: 20, fontWeight: "700", color: colors.text, marginBottom: 8 }}>
+              {isAuthError ? "세션이 만료되었습니다" : t("daily.subscriberOnlyTitle")}
             </Text>
-            <TouchableOpacity style={{ backgroundColor: colors.primary, paddingHorizontal: 24, paddingVertical: 14, borderRadius: radius.md, width: "100%", alignItems: "center" }} onPress={() => setShowPayment(true)}>
-              <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>{t("daily.upgrade")}</Text>
+            <Text style={{ fontSize: 15, color: colors.textMuted, textAlign: "center", lineHeight: 22, marginBottom: 24 }}>
+              {isAuthError ? "다시 로그인하거나 앱을 새로고침해 주세요." : t("daily.subscriberOnlyBody")}
+            </Text>
+            <TouchableOpacity style={{ backgroundColor: colors.primary, paddingHorizontal: 24, paddingVertical: 14, borderRadius: radius.md, width: "100%", alignItems: "center" }} onPress={() => isAuthError ? router.replace("/") : setShowPayment(true)}>
+              <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>
+                {isAuthError ? "돌아가기" : t("daily.upgrade")}
+              </Text>
             </TouchableOpacity>
           </View>
-          <PaymentModal visible={showPayment} onClose={() => setShowPayment(false)} />
+          {!isAuthError && <PaymentModal visible={showPayment} onClose={() => setShowPayment(false)} />}
         </View>
       );
     }
@@ -86,7 +89,14 @@ export default function DailyScreen() {
   }
 
   const dailyData = data?.daily as DailyResponse["daily"];
-  if (!dailyData || !dailyData.items) return null;
+  if (!dailyData || !dailyData.items) {
+    return (
+      <View style={styles.center}>
+        <Text style={styles.errorText}>{t("common.error")}</Text>
+        <Text style={styles.errorDetail}>데이터를 불러올 수 없습니다. 잠시 후 다시 시도해 주세요.</Text>
+      </View>
+    );
+  }
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 100 }}>

@@ -1,5 +1,4 @@
 // frontend/src/components/sections/PremiumSection.tsx
-// P0-1: '지금 내 인생의 흐름' timing 블록 포함.
 import { View, Text } from "react-native";
 import { colors, radius, spacing } from "@/theme";
 import { ss, CompatBox, RedFlagsBox } from "./shared";
@@ -7,19 +6,20 @@ import { useT } from "@/i18n";
 import type { PremiumSection, TimingBlock, TimingMonth, CrossInsightBlock } from "../../../types";
 
 const LOCKED_LABELS: Record<string, string> = {
-  cross_insight: "크로스 인사이트",
-  timing: "지금 내 인생의 흐름",
-  body: "본문",
-  patterns: "패턴",
-  compatibility: "궁합",
-  actions: "실천 가이드",
-  action: "실천 가이드",
-  red_flags: "주의 신호",
+  cross_insight: "sections.lockedLabels.cross_insight",
+  timing: "sections.lockedLabels.timing",
+  body: "sections.lockedLabels.body",
+  patterns: "sections.lockedLabels.patterns",
+  compatibility: "sections.lockedLabels.compatibility",
+  actions: "sections.lockedLabels.actions",
+  action: "sections.lockedLabels.action",
+  red_flags: "sections.lockedLabels.red_flags",
 };
 
 function LockedFieldsList({ fields }: { fields: string[] }) {
+  const t = useT();
   if (!fields || fields.length === 0) return null;
-  const labels = fields.map((f) => LOCKED_LABELS[f] ?? f);
+  const labels = fields.map((f) => LOCKED_LABELS[f] ? t(LOCKED_LABELS[f]) : f);
   return (
     <View
       style={{
@@ -32,7 +32,7 @@ function LockedFieldsList({ fields }: { fields: string[] }) {
       }}
     >
       <Text style={{ fontSize: 12, fontWeight: "700", color: colors.textMuted }}>
-        🔒 잠긴 콘텐츠 ({fields.length})
+        🔒 {t("sections.lockedContentCount", { count: fields.length })}
       </Text>
       <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 4, lineHeight: 18 }}>
         {labels.join(" · ")}
@@ -42,10 +42,11 @@ function LockedFieldsList({ fields }: { fields: string[] }) {
 }
 
 function MonthChip({ item, kind }: { item: TimingMonth; kind: "opportunity" | "caution" }) {
+  const t = useT();
   const isOpp = kind === "opportunity";
   const tone = isOpp ? colors.success : colors.danger;
   const bg = isOpp ? colors.successSoft : colors.dangerSoft;
-  const label = isOpp ? "문이 열리는 달" : "주의가 필요한 달";
+  const label = isOpp ? t("sections.opportunityMonth") : t("sections.cautionMonth");
   return (
     <View style={{ backgroundColor: bg, borderRadius: radius.md, padding: spacing.md, marginTop: spacing.sm, borderWidth: 1, borderColor: tone + "40" }}>
       <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 4, flexWrap: "wrap", gap: 4 }}>
@@ -58,17 +59,18 @@ function MonthChip({ item, kind }: { item: TimingMonth; kind: "opportunity" | "c
 }
 
 function TimingBlockView({ timing }: { timing: TimingBlock }) {
+  const t = useT();
   const dw = timing.daewoon;
   const yr = timing.year;
   return (
     <View style={{ backgroundColor: colors.bgElevated, borderRadius: radius.md, padding: spacing.md, marginTop: spacing.md, borderWidth: 1, borderColor: colors.border }}>
       <Text style={{ fontSize: 12, fontWeight: "700", color: colors.primary, letterSpacing: 1, marginBottom: spacing.sm }}>
-        지금 내 인생의 흐름
+        {t("sections.currentLifeFlow")}
       </Text>
 
       <View style={{ marginBottom: yr ? spacing.md : 0 }}>
         <View style={{ flexDirection: "row", alignItems: "center", gap: 6, marginBottom: 4, flexWrap: "wrap" }}>
-          <Text style={{ fontSize: 13, fontWeight: "700", color: colors.text }}>현재 인생의 큰 흐름</Text>
+          <Text style={{ fontSize: 13, fontWeight: "700", color: colors.text }}>{t("sections.currentDecade")}</Text>
           {dw.pillar ? (
             <Text style={{ fontSize: 12, color: colors.textMuted }}>
               {dw.ages?.[0]}–{dw.ages?.[1]}세 · {dw.pillar}{dw.grade_label ? ` · ${dw.grade_label}` : ""}
@@ -81,7 +83,7 @@ function TimingBlockView({ timing }: { timing: TimingBlock }) {
       {yr ? (
         <View style={{ marginBottom: timing.opportunity_month || timing.caution_month ? spacing.md : 0 }}>
           <View style={{ flexDirection: "row", alignItems: "center", gap: 6, marginBottom: 4, flexWrap: "wrap" }}>
-            <Text style={{ fontSize: 13, fontWeight: "700", color: colors.text }}>올해</Text>
+            <Text style={{ fontSize: 13, fontWeight: "700", color: colors.text }}>{t("sections.thisYear")}</Text>
             <Text style={{ fontSize: 12, color: colors.textMuted }}>{yr.target_year} · {yr.ten_god_label}</Text>
           </View>
           <Text style={{ fontSize: 14, color: colors.text, lineHeight: 22 }}>{yr.narrative}</Text>
@@ -99,7 +101,6 @@ function TimingBlockView({ timing }: { timing: TimingBlock }) {
     </View>
   );
 }
-
 
 function CrossInsightBlockView({ block }: { block: CrossInsightBlock }) {
   return (
@@ -122,7 +123,7 @@ function CrossInsightBlockView({ block }: { block: CrossInsightBlock }) {
           marginBottom: spacing.sm,
         }}
       >
-        당신의 숨겨진 세 가지 얼굴
+        {"숨겨진 얼굴들"}
       </Text>
       <Text style={{ fontSize: 14, color: colors.text, lineHeight: 22, marginBottom: 6 }}>
         {block.intro}

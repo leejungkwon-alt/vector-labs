@@ -1,10 +1,10 @@
-import { useLanguageStore } from "@/store/languageStore"; // SAJU-PATCH:api-lang
-import { formatPickerDate } from "@/i18n";
+import { useLanguageStore } from "@/store/languageStore";
+import { formatPickerDate, formatPickerTime } from "@/i18n";
 import { useT } from "@/i18n";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet, ActivityIndicator, Switch } from "react-native";
-import DateTimePicker, { DateTimePickerEvent } from "@react-native-community/datetimepicker";
+import { DateTimeField } from "@/components/DateTimeField";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { router } from "expo-router";
 import { api, ApiError } from "@/api/client";
@@ -17,7 +17,7 @@ import { CITY_LIST } from "@/constants/cities";
 import { TIMEZONE_LIST } from "@/constants/timezones";
 
 export default function CompatibilityScreen() {
-  const lang = useLanguageStore((s) => s.lang); // SAJU-PATCH:lang-decl
+  const lang = useLanguageStore((s) => s.lang);
   const t = useT();
   const insets = useSafeAreaInsets();
   const myProfile = useProfileStore((s) => s.profile);
@@ -26,9 +26,7 @@ export default function CompatibilityScreen() {
   const [showPayment, setShowPayment] = useState(false);
 
   const [partnerDate, setPartnerDate] = useState(new Date(1995, 9, 24));
-  const [showDatePicker, setShowDatePicker] = useState(false);
   const [partnerTime, setPartnerTime] = useState(new Date(2000, 0, 1, 12, 0));
-  const [showTimePicker, setShowTimePicker] = useState(false);
   const [unknownTime, setUnknownTime] = useState(true);
   
   const [city, setCity] = useState("seoul");
@@ -52,16 +50,6 @@ export default function CompatibilityScreen() {
     }
   };
 
-  const onChangeDate = (event: DateTimePickerEvent, date?: Date) => {
-    setShowDatePicker(false);
-    if (event.type === "set" && date) setPartnerDate(date);
-  };
-
-  const onChangeTime = (event: DateTimePickerEvent, time?: Date) => {
-    setShowTimePicker(false);
-    if (event.type === "set" && time) setPartnerTime(time);
-  };
-
   const { data, isLoading, error, refetch } = useQuery({
     queryKey: ["compatibility", relationshipType, lang],
     queryFn: async () => {
@@ -79,7 +67,7 @@ export default function CompatibilityScreen() {
       }
 
       const offsetHours = new Date().getTimezoneOffset() / -60; 
-      const fallbackLongitude = 0 /* FIX-22: backend handles timezone */;
+      const fallbackLongitude = 0 ;
 
       return api.compatibility({
         person_a: myProfile,
@@ -110,20 +98,26 @@ export default function CompatibilityScreen() {
     if (error) {
       const msg = error instanceof ApiError ? error.detail : (error as Error).message;
       
-      // 👇 403 에러(궁합 결제 필요)일 때 예쁜 결제 유도 화면 노출
-      if (error instanceof ApiError && error.status === 403) {
+      // 👇 401(세션 만료) 또는 403(구독/결제 필요) 에러 핸들링
+      const status = error instanceof ApiError ? error.status : 500;
+      if (status === 401 || status === 403) {
+        const isAuthError = status === 401;
         return (
           <View style={{ marginTop: 30, padding: 24, backgroundColor: colors.primary + "10", borderRadius: radius.lg, alignItems: "center", borderWidth: 1, borderColor: colors.primary + "30" }}>
-            <Text style={{ fontSize: 40, marginBottom: 12 }}>💎</Text>
-            <Text style={{ fontSize: 20, fontWeight: "800", color: colors.text, marginBottom: 8 }}>{t("compatibility.paywallTitle")}</Text>
+            <Text style={{ fontSize: 40, marginBottom: 12 }}>{isAuthError ? "🔒" : "💎"}</Text>
+            <Text style={{ fontSize: 20, fontWeight: "800", color: colors.text, marginBottom: 8 }}>
+              {isAuthError ? "세션이 만료되었습니다" : t("compatibility.paywallTitle")}
+            </Text>
             <Text style={{ fontSize: 15, color: colors.textMuted, textAlign: "center", marginBottom: 24, lineHeight: 22 }}>
-              {t("compatibility.paywallBody")}
+              {isAuthError ? "앱을 다시 시작하거나 새로고침해 주세요." : t("compatibility.paywallBody")}
             </Text>
             <TouchableOpacity 
               style={{ backgroundColor: colors.primary, paddingHorizontal: 24, paddingVertical: 16, borderRadius: radius.md, width: "100%", alignItems: "center" }} 
-              onPress={() => setShowPayment(true)}
+              onPress={() => isAuthError ? router.replace("/") : setShowPayment(true)}
             >
-              <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>{t("compatibility.paywallCta")}</Text>
+              <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>
+                {isAuthError ? "돌아가기" : t("compatibility.paywallCta")}
+              </Text>
             </TouchableOpacity>
           </View>
         );
@@ -220,10 +214,14 @@ export default function CompatibilityScreen() {
       </ScrollView>
 
       <Text style={styles.label}>{t("compatibility.partnerDate")}</Text>
-      <TouchableOpacity style={styles.inputBtn} onPress={() => setShowDatePicker(true)}>
-        <Text style={styles.inputText}>{formatPickerDate(partnerDate, lang)}</Text>
-      </TouchableOpacity>
-      {showDatePicker && <DateTimePicker value={partnerDate} mode="date" display="spinner" onChange={onChangeDate} />}
+      <DateTimeField
+        mode="date"
+        value={partnerDate}
+        onChange={setPartnerDate}
+        displayText={formatPickerDate(partnerDate, lang)}
+        style={styles.inputBtn}
+        textStyle={styles.inputText}
+      />
 
       <View style={styles.rowBetween}>
         <Text style={styles.label}>{t("compatibility.partnerTime")}</Text>
@@ -233,12 +231,15 @@ export default function CompatibilityScreen() {
         </View>
       </View>
 
-      <TouchableOpacity style={[styles.inputBtn, unknownTime && { opacity: 0.4, backgroundColor: colors.bgMuted }]} onPress={() => { if(!unknownTime) setShowTimePicker(true); }} disabled={unknownTime}>
-        <Text style={styles.inputText}>
-          {unknownTime ? t("compatibility.timeUnknown") : `${String(partnerTime.getHours()).padStart(2, "0")}:${String(partnerTime.getMinutes()).padStart(2, "0")}`}
-        </Text>
-      </TouchableOpacity>
-      {showTimePicker && <DateTimePicker value={partnerTime} mode="time" display="spinner" onChange={onChangeTime} />}
+      <DateTimeField
+        mode="time"
+        value={partnerTime}
+        onChange={setPartnerTime}
+        disabled={unknownTime}
+        displayText={unknownTime ? t("compatibility.timeUnknown") : formatPickerTime(partnerTime)}
+        style={[styles.inputBtn, unknownTime && { backgroundColor: colors.bgMuted }]}
+        textStyle={styles.inputText}
+      />
 
       <Text style={styles.label}>{t("compatibility.partnerCity")}</Text>
       <TouchableOpacity style={styles.inputBtn} onPress={() => setShowCityModal(true)}>

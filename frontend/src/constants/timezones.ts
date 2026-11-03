@@ -1,4 +1,4 @@
-﻿export const TIMEZONE_LIST = [
+export const TIMEZONE_LIST = [
   { key: "Asia/Seoul", label: "서울 (Asia/Seoul)" },
   { key: "Asia/Tokyo", label: "도쿄 (Asia/Tokyo)" },
   { key: "Asia/Shanghai", label: "베이징/상하이 (Asia/Shanghai)" },

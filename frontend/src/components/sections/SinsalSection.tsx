@@ -15,7 +15,7 @@ export function SinsalSectionView({ section }: { section: SinsalSection }) {
 
           </Text>
           <Text style={ss.metaText}>
-            {item.position_label} · {item.position}
+            {item.position_label}
           </Text>
           <Text style={{ fontSize: 15, fontWeight: "600", color: colors.text, marginBottom: 4 }}>
             {item.headline}

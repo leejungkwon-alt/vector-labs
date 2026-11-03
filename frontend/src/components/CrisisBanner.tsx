@@ -1,5 +1,5 @@
 // frontend/src/components/CrisisBanner.tsx
-// SAJU-COMPLIANCE: 자살예방/위기 리소스 배너. App Store 5.1.1 / Play 정책 대응.
+
 import { View, Text, TouchableOpacity, Linking, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { colors, spacing, radius } from "@/theme";
