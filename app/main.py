@@ -12,9 +12,11 @@ from app.api.v1.endpoints import saju, report, compatibility, daily, telegram
 from app.auth.router import router as auth_router
 from app.ops.logging_config import configure_logging
 from app.ops.middleware import RequestContextMiddleware
+from app.ops.env import is_production, validate_startup
 from app.ops.rate_limit import RateLimitMiddleware
 
 configure_logging()
+
 
 app = FastAPI(
     title="Gyeol API",
@@ -34,7 +36,7 @@ _cors_origins = [
     for o in os.getenv("SAJU_CORS_ORIGINS", "*").split(",")
     if o.strip()
 ]
-if "*" in _cors_origins and os.getenv("SAJU_ENV", "").lower() == "production":
+if "*" in _cors_origins and is_production():
     logging.getLogger("saju.security").warning(
         "SAJU_CORS_ORIGINS=* in production. Set explicit origins."
     )

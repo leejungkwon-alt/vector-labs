@@ -3,20 +3,11 @@
 import os
 
 from app.auth.repository import get_repository
+from app.ops.env import is_production
+
 
 class IAPVerificationError(ValueError):
     pass
-
-
-
-def _pytest_env_mode() -> str:
-    """SAJU_ENV 를 반환. pytest 실행 중 SAJU_ENV 미설정이면 'test' 로 폴백."""
-    env = os.environ.get("SAJU_ENV", "").strip().lower()
-    if env:
-        return env
-    if os.environ.get("PYTEST_CURRENT_TEST"):
-        return "test"
-    return ""
 
 
 def verify_and_grant(user_id: str, platform: str, receipt: str, product_id: str) -> dict:
@@ -25,29 +16,27 @@ def verify_and_grant(user_id: str, platform: str, receipt: str, product_id: str)
     현재는 테스트용으로 특정 영수증일 때만 성공하도록 구현합니다.
     """
     # Fail-Closed: development, test 가 명시된 경우에만 mock 영수증 허용
-    env = _pytest_env_mode()
-    is_dev_or_test = env in ("development", "test")
-    
-    if receipt == "mock_valid_receipt":
-        if not is_dev_or_test:
+    if "mock" in str(receipt).lower() or receipt == "mock_valid_receipt":
+        if is_production():
             raise IAPVerificationError(
                 "Mock receipts are strictly forbidden outside of development/test. "
                 "SAJU_ENV must be explicitly set to 'development' or 'test' to use mocks."
             )
-        repo = get_repository()
-        if product_id == "sub_monthly_299":
-            repo.set_tier(user_id, "subscription")
-            repo.log_purchase(user_id, product_id, platform)
-            return {"status": "success", "tier": "subscription"}
-        elif product_id == "addon_compat_199":
-            repo.grant_addon(user_id, "compatibility")
-            repo.log_purchase(user_id, product_id, platform)
-            return {"status": "success", "addon": "compatibility"}
-        elif product_id == "addon_deep_099":
-            repo.grant_addon(user_id, "deep_report")
-            repo.log_purchase(user_id, product_id, platform)
-            return {"status": "success", "addon": "deep_report"}
-        else:
-            raise IAPVerificationError(f"Unknown product_id: {product_id}")
+        if receipt == "mock_valid_receipt":
+            repo = get_repository()
+            if product_id == "sub_monthly_299":
+                repo.set_tier(user_id, "subscription")
+                repo.log_purchase(user_id, product_id, platform)
+                return {"status": "success", "tier": "subscription"}
+            elif product_id == "addon_compat_199":
+                repo.grant_addon(user_id, "compatibility")
+                repo.log_purchase(user_id, product_id, platform)
+                return {"status": "success", "addon": "compatibility"}
+            elif product_id == "addon_deep_099":
+                repo.grant_addon(user_id, "deep_report")
+                repo.log_purchase(user_id, product_id, platform)
+                return {"status": "success", "addon": "deep_report"}
+            else:
+                raise IAPVerificationError(f"Unknown product_id: {product_id}")
 
     raise IAPVerificationError("Invalid or expired receipt.")

@@ -38,7 +38,8 @@ def _resolve_asset_base_url() -> str:
     SAJU_JWT_SECRET / SAJU_DATABASE_URL 과 동일한 lazy fail 패턴을 따른다.
     """
     base_url = os.environ.get("SAJU_ASSET_BASE_URL", "").strip()
-    is_prod = os.environ.get("SAJU_ENV", "").lower() == "production"
+    from app.ops.env import is_production
+    is_prod = is_production()
 
     if not base_url:
         if is_prod:

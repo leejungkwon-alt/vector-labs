@@ -434,7 +434,8 @@ def _build_repository() -> _BaseRepository:
     url = os.environ.get("SAJU_DATABASE_URL", "").strip()
     if url:
         return PostgresRepository(url)
-    is_prod = os.environ.get("SAJU_ENV", "").lower() == "production"
+    from app.ops.env import is_production
+    is_prod = is_production()
     if is_prod and not os.environ.get("SAJU_AUTH_DB_PATH"):
         raise RuntimeError(
             "SAJU_ENV=production 인데 SAJU_DATABASE_URL 이 없고 SAJU_AUTH_DB_PATH 도 "

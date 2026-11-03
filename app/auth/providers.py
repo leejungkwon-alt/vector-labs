@@ -51,7 +51,8 @@ class ProviderTokenError(ValueError):
 
 
 def _is_production() -> bool:
-    return os.environ.get("SAJU_ENV", "").lower() == "production"
+    from app.ops.env import is_production
+    return is_production()
 
 
 def _env(name: str):
