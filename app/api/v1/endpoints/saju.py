@@ -47,7 +47,7 @@ def api_calculate_saju(
             birth_location=payload.birth_location, 
         )
     except (DSTAmbiguousError, DSTGapError) as e:
-        raise HTTPException(status_code=400, detail=format_dst_error("en", e))
+        raise HTTPException(status_code=400, detail=format_dst_error(payload.lang, e))
     except (ValueError, TypeError) as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception:

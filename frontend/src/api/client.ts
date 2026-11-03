@@ -15,8 +15,9 @@ const BASE_URL: string = (() => {
   const fromEnv = process.env.EXPO_PUBLIC_API_BASE_URL;
   if (fromEnv) return fromEnv;
   if (typeof __DEV__ !== "undefined" && __DEV__) return "http://localhost:8000/api/v1";
-  if (typeof console !== "undefined") console.warn("[client] EXPO_PUBLIC_API_BASE_URL not set");
-  return "";
+  throw new Error(
+    "[client] EXPO_PUBLIC_API_BASE_URL is not set. Set it in the build environment before bundling.",
+  );
 })();
 
 export class ApiError extends Error {

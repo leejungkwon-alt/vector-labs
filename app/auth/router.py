@@ -158,12 +158,13 @@ def unregister_push_token(
 class PurchaseRequest(BaseModel):
     product_id: str
     receipt: str = "mock_valid_receipt"
+    platform: str
 
 @router.post("/me/purchase")
 def purchase(body: PurchaseRequest, user: dict = Depends(get_current_user)):
     from app.services.iap import verify_and_grant, IAPVerificationError
     try:
-        return verify_and_grant(user["id"], "ios", body.receipt, body.product_id)
+        return verify_and_grant(user["id"], body.platform, body.receipt, body.product_id)
     except IAPVerificationError as e:
         raise HTTPException(status_code=400, detail=str(e))
 
