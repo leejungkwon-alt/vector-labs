@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#6B7280"/>
+  <circle cx="540" cy="960" r="400" fill="#F3F4F6" opacity="0.1"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" 
+        font-family="serif" font-size="400" fill="#F3F4F6" opacity="0.3">金</text>
+</svg>

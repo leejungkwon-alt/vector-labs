@@ -20,9 +20,7 @@ function tt(lang: string | undefined, ko: string, en: string): string {
 }
 
 export function PoemFlipCard({
-  poem,
-  lang,
-  onSubscribePress,
+  poem, lang, onSubscribePress,
 }: {
   poem: PoemCard;
   lang?: string;
@@ -33,9 +31,7 @@ export function PoemFlipCard({
 
   const flip = () => {
     Animated.timing(anim, {
-      toValue: flipped ? 0 : 1,
-      duration: 420,
-      useNativeDriver: USE_NATIVE,
+      toValue: flipped ? 0 : 1, duration: 420, useNativeDriver: USE_NATIVE,
     }).start();
     setFlipped(!flipped);
   };
@@ -47,16 +43,19 @@ export function PoemFlipCard({
 
   const isWallpaperLocked = (poem.locked_fields || []).includes("wallpaper_image");
 
-  const onSaveWallpaper = () => {
+  const handleSaveWallpaper = () => {
     if (isWallpaperLocked) { onSubscribePress?.(); return; }
-    Alert.alert(
-      tt(lang, "배경화면 저장", "Save wallpaper"),
-      tt(lang, "배경화면 저장은 곧 지원됩니다.", "Wallpaper saving is coming soon."),
-    );
+    
+    const url = `/assets/poems/${poem.id}_wallpaper.svg`;
+    if (Platform.OS === "web") {
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${poem.id}_wallpaper.svg`;
+      a.click();
+    } else {
+      Alert.alert("알림", "모바일 앱에서는 곧 지원될 예정입니다.");
+    }
   };
-
-  // 임시 이미지 URL (실제 이미지 에셋이 준비되면 poem.calligraphy_image 사용)
-  const imgUrl = "https://placehold.co/600x300/F5EBD8/B8860B.png?text=Calligraphy+Image";
 
   return (
     <View style={{ marginVertical: 16 }}>
@@ -71,14 +70,12 @@ export function PoemFlipCard({
             style={[StyleSheet.absoluteFillObject, styles.face,
                     { opacity: frontOpacity, transform: [{ perspective: 900 }, { rotateY: frontRotate }] }]}
           >
-            <Image source={{ uri: imgUrl }} style={styles.image} resizeMode="cover" />
+            <Image source={{ uri: `/assets/poems/${poem.id}_calligraphy.svg` }} style={styles.image} resizeMode="cover" />
             <Text style={styles.elementBadge}>{poem.element}</Text>
             <Text style={styles.sijoText}>{poem.sijo_ko}</Text>
             {poem.keywords && poem.keywords.length > 0 && (
               <View style={styles.keywordRow}>
-                {poem.keywords.map((k, i) => (
-                  <Text key={i} style={styles.keyword}>#{k}</Text>
-                ))}
+                {poem.keywords.map((k, i) => <Text key={i} style={styles.keyword}>#{k}</Text>)}
               </View>
             )}
             <Text style={styles.tapHint}>{tt(lang, "탭하여 뒤집기 →", "Tap to flip →")}</Text>
@@ -99,7 +96,7 @@ export function PoemFlipCard({
                 <Text style={styles.practiceText}>{poem.practice}</Text>
               </View>
             ) : null}
-            <Pressable onPress={onSaveWallpaper} style={styles.saveButton}>
+            <Pressable onPress={handleSaveWallpaper} style={styles.saveButton}>
               <Text style={styles.saveButtonText}>
                 {isWallpaperLocked ? tt(lang, "배경화면 · 프리미엄", "Wallpaper · Premium") : tt(lang, "배경화면 저장", "Save wallpaper")}
               </Text>
@@ -115,7 +112,7 @@ export function PoemFlipCard({
 const styles = StyleSheet.create({
   caption: { fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: C.muted, textAlign: "center", marginBottom: 8 },
   face: { backgroundColor: C.bg, borderRadius: 20, padding: 24, borderWidth: 1, borderColor: C.border, justifyContent: "center", shadowColor: "#000", shadowOpacity: 0.08, shadowRadius: 12, shadowOffset: { width: 0, height: 4 } },
-  image: { width: "100%", height: 120, borderRadius: 12, marginBottom: 16, opacity: 0.9 },
+  image: { width: "100%", height: 130, borderRadius: 12, marginBottom: 16, backgroundColor: C.accentSoft },
   elementBadge: { fontSize: 36, textAlign: "center", marginBottom: 12, color: C.accent, fontWeight: "200" },
   sijoText: { fontSize: 20, lineHeight: 34, textAlign: "center", color: C.text, marginBottom: 20, fontWeight: "300" },
   keywordRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 6, marginBottom: 16 },
