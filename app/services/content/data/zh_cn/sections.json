@@ -89,9 +89,9 @@
       "body": "与其冒险走捷径，你更愿意用心呵护某件事。对你而言，资源——时间、关注、人际关系——只要耐心管理，其价值便会倍增。\n\n你珍视那些经得起时间考验的事物。当别人在追逐下一个闪亮的新事物时，你却默默地巩固着已有的成果。这是一种难得的自律。\n\n风险在于，“谨慎”可能会变成一种关闭机会之门的习惯。过于保守地行事同样要付出代价。",
       "action": "选一件你已经拥有的东西，问问自己：它是否仍在为我服务，还是我只是出于习惯才一直保留着它？",
       "patterns": [
-        "Your cash and savings allocation is very high.",
+        "现金和定期存款占比较高。",
         "Fear of loss makes you delay decisions.",
-        "You believe in compounding and prefer long holds."
+        "相信复利的力量，偏好长期持有。"
       ],
       "best_match": [
         "THE_OPERATOR",
@@ -101,15 +101,15 @@
       "challenging_match": [
         "THE_STEWARD"
       ],
-      "challenging_reason": "If both of you only play it safe, your assets lose to inflation.",
+      "challenging_reason": "如果双方都一味求稳，资产增长可能赶不上通货膨胀。",
       "actions": [
         "Diversify 10% of your assets into an index fund.",
         "Once a year, compare your savings rate against inflation.",
         "Start automatic dollar-cost averaging."
       ],
       "red_flags": [
-        "Is everything you own locked in savings accounts?",
-        "Have you lent money to friends and never got it back?"
+        "是否将所有资产都锁在了储蓄账户中？",
+        "是否有过借钱给熟人却无法收回的情况？"
       ]
     },
     "THE_OPERATOR": {
@@ -125,19 +125,19 @@
         "THE_STEWARD",
         "THE_ANCHOR"
       ],
-      "best_reason": "A partner who anchors the assets you scatter.",
+      "best_reason": "能为你分散的资产提供坚实后盾与守护的伙伴。",
       "challenging_match": [
         "THE_OPERATOR"
       ],
-      "challenging_reason": "If both of you love risk, recovery in a crisis is hard.",
+      "challenging_reason": "如果双方都热衷冒险，遭遇危机时将难以恢复。",
       "actions": [
         "Lock 30% of income into automatic savings.",
         "Impose a 3-day cooling-off period before any new investment.",
         "Use a debit card instead of credit to control spending."
       ],
       "red_flags": [
-        "Is income high but nothing ever stays in the account?",
-        "Are you borrowing to invest?"
+        "收入虽然很高，但银行账户里却总是留不下钱？",
+        "是否正在通过借贷来进行投资？"
       ]
     },
     "THE_FLOW": {
@@ -145,15 +145,15 @@
       "body": "你对金钱没有固定的态度。当你的生活步入正轨时，资源往往会主动找上门；反之，无论付出多少努力，似乎都收效甚微。\n\n你对“什么最重要”的判断是凭直觉的，而非循规蹈矩。比起任何既定的计划，你更在意今天自己的注意力集中在哪里。\n\n其中的风险在于，这种灵活性可能会沦为逃避承诺的借口。哪怕只有一个稳定的习惯，也能为其他习惯奠定基础。",
       "action": "请写下你本月的三项最大开支。它们是否反映了你目前的状况？",
       "patterns": [
-        "Your income and spending swing widely.",
+        "收入与支出的波动较大。",
         "Wealth opportunities arrive through people.",
-        "You spend as you go rather than budgeting."
+        "与其制定预算，不如随性消费。"
       ],
       "best_match": [
         "THE_STEWARD",
         "THE_ANCHOR"
       ],
-      "best_reason": "Someone who keeps you centered so your life has fewer swings.",
+      "best_reason": "能帮你稳住阵脚、减少生活起伏波动的人。",
       "challenging_match": [
         "THE_OPERATOR"
       ],
@@ -164,8 +164,8 @@
         "Save 10% of every month's income, unconditionally."
       ],
       "red_flags": [
-        "Are you juggling credit-card debt from month to month?",
-        "Have you been talked into an investment by a friend and lost money?"
+        "是否每个月都在拆东墙补西墙地偿还信用卡？",
+        "是否曾听信熟人建议投资而遭受损失？"
       ]
     }
   },
@@ -176,26 +176,26 @@
       "action": "本周请预留90分钟，专心进行创作，绝不被任何事情打断。",
       "patterns": [
         "Autonomy matters more to you than rules.",
-        "You have the execution muscle to make ideas real.",
+        "拥有将创意转化为现实的强大执行力。",
         "You react sharply to criticism."
       ],
       "best_match": [
         "THE_OFFICER",
         "THE_MENTOR"
       ],
-      "best_reason": "Someone who can systemize and champion your creativity.",
+      "best_reason": "能将你的创意系统化并给予强力支持的人。",
       "challenging_match": [
         "THE_OFFICER"
       ],
-      "challenging_reason": "You clash head-on with bosses who demand only compliance.",
+      "challenging_reason": "会与只强调规则的直属上司发生正面冲突。",
       "actions": [
         "Carve out 5 hours a week of deep creative focus.",
         "Ship output at 80% instead of 100%.",
         "Reframe criticism as feedback, not attack."
       ],
       "red_flags": [
-        "Is perfectionism making you miss deadlines?",
-        "Are you ignoring every instruction from a boss?"
+        "是否因为追求完美主义而频繁错过截止日期？",
+        "是否在无条件地无视上司的所有指示？"
       ]
     },
     "THE_CHALLENGER": {
@@ -215,15 +215,15 @@
       "challenging_match": [
         "THE_OFFICER"
       ],
-      "challenging_reason": "You collide with people who insist on the rules.",
+      "challenging_reason": "容易与高度重视既有规则的人产生摩擦。",
       "actions": [
         "Always pair complaints with alternatives.",
-        "Learn to save face for the boss in conversations.",
+        "请学会顾及上司颜面的沟通技巧。",
         "Practice listening to a colleague all the way through."
       ],
       "red_flags": [
-        "Are you opposing for the sake of opposing?",
-        "Is your presence making teammates shrink?"
+        "是否为了反对而反对？",
+        "团队成员是否因你的存在而感到畏缩？"
       ]
     },
     "THE_OFFICER": {
@@ -231,8 +231,8 @@
       "body": "你需要的是合情合理的规则。在合适的团队里，你是中流砥柱；在不合适的团队里，你只会筋疲力尽。\n\n你重视原则和公平。你有能力建立并维护让他人能够安全工作的体系。你凭借强烈的责任感和可靠性赢得了信任。\n\n但过于拘泥于规则可能会让你显得缺乏灵活性。请记住，有时人比流程更重要。",
       "action": "请写下三项你认为工作应体现的价值观。你目前所在的工作环境是否与这些价值观一致？",
       "patterns": [
-        "You finish what you're given, no matter what.",
-        "You value hierarchy and clear reporting lines.",
+        "对于交代的工作，一定会保质保量完成。",
+        "非常看重等级秩序与汇报体系。",
         "You're excellent at pre-empting risk."
       ],
       "best_match": [
@@ -243,15 +243,15 @@
       "challenging_match": [
         "THE_CHALLENGER"
       ],
-      "challenging_reason": "You clash with people who constantly break the rules.",
+      "challenging_reason": "与总是试图破坏规则的人容易发生摩擦。",
       "actions": [
-        "Learn a new tool and automate part of your workflow.",
-        "When a directive is unfair, persuade with data.",
+        "学习新的工作工具，实现业务流程自动化。",
+        "当上司指示不合理时，请用数据说话劝服对方。",
         "Practice welcoming ideas from younger colleagues."
       ],
       "red_flags": [
-        "Do you say 'we've always done it this way' too often?",
-        "Are you falling behind by resisting change?"
+        "是否总把“以前一直都是这么做的”挂在嘴边？",
+        "是否因抗拒改变而正在被时代所淘汰？"
       ]
     },
     "THE_SURVIVOR": {
@@ -260,8 +260,8 @@
       "action": "回想一下，上一次你为了自己而放弃赶截止日期的时候。回想一下，你当时为什么这么做。",
       "patterns": [
         "You stay calm under crisis.",
-        "Your obsession with the goal is intense.",
-        "You're clumsy with emotional expression."
+        "对既定目标有着极其强烈的执念。",
+        "不善于表达自身的情绪。"
       ],
       "best_match": [
         "THE_MENTOR",
@@ -271,15 +271,15 @@
       "challenging_match": [
         "THE_SURVIVOR"
       ],
-      "challenging_reason": "Two aggressives and the team gets scorched.",
+      "challenging_reason": "如果双方都很具攻击性，团队将会大受波及。",
       "actions": [
         "Set one full day off each week.",
         "Approach a colleague first with thanks.",
         "Use exercise or a hobby to discharge stress."
       ],
       "red_flags": [
-        "Are you running through burnout signals?",
-        "Are teammates afraid of you?"
+        "是否忽视了倦怠信号，仍在过度硬撑？",
+        "同事们是否正在对你产生畏惧心理？"
       ]
     },
     "THE_MYSTIC": {
@@ -288,7 +288,7 @@
       "action": "本周给自己留出一小时，不要安排任何计划。顺着任何吸引你的线索走，无需设定目标。",
       "patterns": [
         "You analyze heavily before acting.",
-        "Your intuitive insight is outstanding.",
+        "具备极为出色的直觉洞察力。",
         "Surface-level work bores you."
       ],
       "best_match": [
@@ -299,15 +299,15 @@
       "challenging_match": [
         "THE_GENERALIST"
       ],
-      "challenging_reason": "You can't connect with people who skim the surface.",
+      "challenging_reason": "无法与缺乏深度的人进行深入沟通。",
       "actions": [
         "Force yourself to take the first step within 3 days of analysis.",
-        "Visualize and share your analysis with the team.",
+        "将你的分析可视化，并分享给团队成员。",
         "Find a partner with strong execution."
       ],
       "red_flags": [
-        "Are you analyzing while opportunities slip by?",
-        "Are you too deep inside your own head?"
+        "是否因过度分析而频繁错失良机？",
+        "是否过于沉溺在自己的个人世界中？"
       ]
     },
     "THE_MENTOR": {
@@ -316,26 +316,26 @@
       "action": "联系一位你曾帮助过的人，告诉他你在他身上看到了怎样的潜力。",
       "patterns": [
         "You listen well to juniors' struggles.",
-        "You love sharing what you know.",
-        "You tend to put your own results last."
+        "乐于分享知识与经验。",
+        "往往会将自己的成果与利益推后。"
       ],
       "best_match": [
         "THE_SURVIVOR",
         "THE_CREATOR"
       ],
-      "best_reason": "People who take your warm advice and pay it back with results.",
+      "best_reason": "能虚心接受你的温暖建议并用良好业绩回报的人。",
       "challenging_match": [
         "THE_SURVIVOR"
       ],
-      "challenging_reason": "Lone-wolf styles may not mesh with yours.",
+      "challenging_reason": "可能与独来独往的“单打独斗型”风格不太合拍。",
       "actions": [
         "Define your own career goals clearly.",
         "Build expertise of your own beyond mentoring.",
-        "Show juniors that you're still learning from them."
+        "也请向下属展示虚心向他们学习的态度。"
       ],
       "red_flags": [
-        "Are you caring for juniors while your own review sinks?",
-        "Are you resting on teaching alone?"
+        "是否光顾着照顾下属，反而导致自己的绩效评价偏低？",
+        "是否安于现状，仅仅满足于教导他人？"
       ]
     },
     "THE_GENERALIST": {
@@ -343,8 +343,8 @@
       "body": "你并非某个领域的专家，而这恰恰是你的优势。你能将不同领域的项目有机地串联起来。正是在这些衔接之处，才最需要你。\n\n与深入钻研一件事相比，你更倾向于积累广泛的经验。实际上，你正是那种能够连接不同领域、创造新价值的“T型”人才。\n\n或许有人会说你缺乏深度。但要想让你的广度真正成为优势，你需要打造至少一项“尖端专长”——一个无人能及的领域。",
       "action": "选出两项你通常分开使用的技能，然后找一个需要同时运用这两项技能的项目。",
       "patterns": [
-        "You're curious and love learning.",
-        "You adapt roles fluidly to the moment.",
+        "好奇心强，非常享受学习新事物。",
+        "能根据具体情况灵活转变自身角色。",
         "Your focus sometimes scatters."
       ],
       "best_match": [
@@ -357,13 +357,13 @@
       ],
       "challenging_reason": "People who insist on one rule frustrate you.",
       "actions": [
-        "Pick the single expertise you'll concentrate on this year.",
+        "请选择一个今年要集中攻克的专业领域。",
         "Use your broad network to create collaboration opportunities.",
         "Turn your experience into content."
       ],
       "red_flags": [
-        "Are you starting a lot and finishing nothing?",
-        "Are you actually working to become an expert at something?"
+        "是否铺张了太多事情，却总是无法善始善终？",
+        "为了成为真正的专家，是否真的付出了足够的努力？"
       ]
     }
   },
@@ -381,7 +381,7 @@
         "THE_ALLY",
         "THE_EMPATH"
       ],
-      "best_reason": "Someone who respects your autonomy and approaches softly.",
+      "best_reason": "尊重你的自主性，并能温柔亲近你的人。",
       "challenging_match": [
         "THE_TWIN"
       ],
@@ -392,8 +392,8 @@
         "Create one shared hobby."
       ],
       "red_flags": [
-        "Are you so detached that your partner feels hurt?",
-        "Are you hiding feelings to avoid conflict?"
+        "是否因过于冷漠淡然，导致对方感到受伤害？",
+        "是否为了避免争吵而选择隐藏自身真实感受？"
       ]
     },
     "THE_RIVAL": {
@@ -402,14 +402,14 @@
       "action": "联系一位与你之间曾有过良性摩擦的人，并请他/她坦率地表达真实看法。",
       "patterns": [
         "You don't fear disagreement.",
-        "Your humor and competitive streak run deep.",
-        "You argue with logic more than emotion."
+        "幽默感与胜负欲都很强。",
+        "比起感性，更倾向于用逻辑进行沟通。"
       ],
       "best_match": [
         "THE_EMPATH",
         "THE_ALLY"
       ],
-      "best_reason": "People who soften your edge and arbitrate gently.",
+      "best_reason": "能够温柔中和并包容你锋芒的人。",
       "challenging_match": [
         "THE_RIVAL"
       ],
@@ -420,8 +420,8 @@
         "Practice listening without countering."
       ],
       "red_flags": [
-        "Are you saying hurtful things to win?",
-        "Are you arguing logic while your partner is exhausted?"
+        "是否为了赢下争论而说出伤人的话？",
+        "在对方已经很疲惫的情况下，是否依然在讲逻辑大道理？"
       ]
     },
     "THE_ALLY": {
@@ -430,26 +430,26 @@
       "action": "主动联系一下你一直想找的人。不是因为你必须这么做，而是因为你想这么做。",
       "patterns": [
         "You place enormous value on loyalty.",
-        "You can't look away when a friend is in trouble.",
-        "You're endlessly generous to your inner circle."
+        "无法对身处困境的朋友袖手旁观。",
+        "对自己圈子里的内部人员无比包容。"
       ],
       "best_match": [
         "THE_TWIN",
         "THE_PIONEER"
       ],
-      "best_reason": "People who treasure your steady support and grow with it.",
+      "best_reason": "珍惜你稳固的支持并愿意共同成长的人。",
       "challenging_match": [
         "THE_OPERATOR"
       ],
-      "challenging_reason": "People who exploit your loyalty hurt you.",
+      "challenging_reason": "可能会被试图利用你忠诚度的人所伤害。",
       "actions": [
         "Drop the compulsion to solve everything yourself.",
         "Help only when asked.",
-        "Cut relationships that drain you."
+        "请果断清理那些让你感到消耗与疲惫的关系。"
       ],
       "red_flags": [
-        "Is your life falling apart because you're upholding loyalty?",
-        "Are you being used by takers?"
+        "是否为了讲义气而导致自己的生活陷入混乱？",
+        "是否正在被只知索取的人所摆布？"
       ]
     },
     "THE_EMPATH": {
@@ -458,14 +458,14 @@
       "action": "本周请至少自问一次：“这种情绪是我的，还是我背负了别人的？”",
       "patterns": [
         "You read facial shifts well.",
-        "You're excellent at empathy and comfort.",
+        "非常擅长共情与给予他人慰藉。",
         "You try to carry everyone's feelings alone."
       ],
       "best_match": [
         "THE_RIVAL",
         "THE_BLADE"
       ],
-      "best_reason": "People who stay grounded and don't get swept up in your emotions.",
+      "best_reason": "不会被情绪所左右，能够稳住阵脚的人。",
       "challenging_match": [
         "THE_EMPATH"
       ],
@@ -476,8 +476,8 @@
         "Protect enough alone time."
       ],
       "red_flags": [
-        "Are you drowning in others' sadness?",
-        "Are you postponing your own feelings?"
+        "是否过于深陷在他人的悲伤情绪中？",
+        "是否总是把自己的真实情绪推后？"
       ]
     }
   }
