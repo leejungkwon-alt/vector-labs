@@ -238,5 +238,10 @@
   },
   "api": {
     "timeout": "Server timed out. Please check your network."
+  },
+  "poem": {
+    "viewCollection": "View My Collection",
+    "collection": "Poem Collection",
+    "back": "Back"
   }
 }

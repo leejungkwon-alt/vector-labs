@@ -2,6 +2,7 @@ import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from "react-nati
 import { colors, spacing } from "@/theme";
 import { router } from "expo-router";
 import { usePoemStore } from "@/store/poemStore";
+import { useT } from "@/i18n";
 import { useAuthStore } from "@/store/authStore";
 import { getRelationLabel } from "@/utils/poemRelations";
 import { useLanguageStore } from "@/store/languageStore";
@@ -9,6 +10,7 @@ import { useLanguageStore } from "@/store/languageStore";
 export default function CollectionScreen() {
   const user = useAuthStore((s) => s.user);
   const { collection, currentPoem } = usePoemStore();
+  const t = useT();
   const lang = useLanguageStore((s) => s.lang);
   const isPremium = user?.tier === "premium" || user?.tier === "subscription";
 
@@ -16,9 +18,9 @@ export default function CollectionScreen() {
     <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
-          <Text style={styles.backText}>← Back</Text>
+          <Text style={styles.backText}>← {t("poem.back")}</Text>
         </TouchableOpacity>
-        <Text style={styles.title}>Poem Collection</Text>
+        <Text style={styles.title}>{t("poem.collection")}</Text>
         <Text style={styles.subtitle}>{collection[0]?.element || ""} x {collection.length}</Text>
       </View>
       <ScrollView contentContainerStyle={styles.grid}>
@@ -43,7 +45,7 @@ export default function CollectionScreen() {
       </ScrollView>
       {!isPremium && (
         <View style={styles.footer}>
-          <Text style={styles.footerText}>Upgrade to see all 25 poems</Text>
+          <Text style={styles.footerText}>{t("common.upgradeToSeeAll", "Upgrade to see all 25 poems")}</Text>
         </View>
       )}
     </View>

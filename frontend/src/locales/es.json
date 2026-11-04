@@ -238,5 +238,10 @@
   },
   "api": {
     "timeout": "El servidor agotó el tiempo de espera. Por favor, revisa tu red."
+  },
+  "poem": {
+    "viewCollection": "Ver mi colección",
+    "collection": "Colección de poemas",
+    "back": "Volver"
   }
 }
