@@ -118,3 +118,35 @@ app/services/content/data/_bak_quarantine/
 *.pre_autofix*
 *.pre_v2
 
+
+*.pre_autofix*
+*.pre_align
+
+
+*.pre_align2
+*.pre_align3
+
+
+review_export/
+
+
+# Review backups (local only)
+.review_backups/
+review_export_old_*/
+
+# Test outputs (local only)
+test_stevejobs_*.json
+test_*.py
+verify_*.py
+manual_*.py
+
+# Diagnostic scripts (local only)
+align_*.py
+audit_*.py
+autofix_*.py
+export_review_package.py
+apply_review_fixes.py
+
+# Generated reports (local only)
+backtrans_review.txt
+i18n_audit_report.txt
