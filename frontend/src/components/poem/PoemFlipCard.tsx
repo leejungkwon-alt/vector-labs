@@ -17,8 +17,38 @@ const C = {
   accentSoft: (colors as any).accentSoft || (colors as any).primarySoft || "#F5EBD8",
 };
 
+const LANG_MAP: Record<string, Record<string, string>> = {
+  es: {
+    "오늘의 시조": "Poema del Día",
+    "탭하여 뒤집기 →": "Toca para voltear →",
+    "← 탭하여 돌아가기": "← Toca para volver",
+    "오늘의 실천": "Práctica de Hoy",
+    "배경화면 · 프리미엄": "Fondo de pantalla · Premium",
+    "배경화면 저장": "Guardar fondo"
+  },
+  ja: {
+    "오늘의 시조": "今日の詩",
+    "탭하여 뒤집기 →": "タップして裏返す →",
+    "← 탭하여 돌아가기": "← タップして戻る",
+    "오늘의 실천": "今日の実践",
+    "배경화면 · 프리미엄": "壁紙 · プレミアム",
+    "배경화면 저장": "壁紙を保存"
+  },
+  zh_cn: {
+    "오늘의 시조": "今日诗歌",
+    "탭하여 뒤집기 →": "点击翻转 →",
+    "← 탭하여 돌아가기": "← 点击返回",
+    "오늘의 실천": "今日实践",
+    "배경화면 · 프리미엄": "壁纸 · 高级",
+    "배경화면 저장": "保存壁纸"
+  }
+};
+
 function tt(lang: string | undefined, ko: string, en: string): string {
-  return lang === "ko" ? ko : en;
+  const l = lang || "en";
+  if (l === "ko") return ko;
+  if (l === "en") return en;
+  return LANG_MAP[l]?.[ko] || en;
 }
 
 export function PoemFlipCard({
