@@ -44,7 +44,6 @@ export function LockedHint({ onPress }: { onPress: () => void }) {
     <View style={sharedStyles.lockedCard}>
       <BlurView intensity={30} tint="light" style={StyleSheet.absoluteFill} />
       <View style={sharedStyles.lockedContent}>
-        <Ionicons name="sparkles" size={20} color={colors.primary} />
         <Text style={sharedStyles.lockedText}>
           {t("home.unlockHint")}
         </Text>
@@ -124,7 +123,7 @@ export function RedFlagsBox({ flags }: { flags?: string[] }) {
     <View style={{ marginTop: 12, padding: 12, backgroundColor: colors.dangerSoft, borderRadius: radius.md }}>
       <Text style={[ss.blockTitle, { color: colors.danger }]}>{t("sections.redFlags")}</Text>
       {flags.map((r, i) => (
-        <Text key={i} style={ss.paragraph}>⚠ {r}</Text>
+        <Text key={i} style={ss.paragraph}> {r}</Text>
       ))}
     </View>
   );

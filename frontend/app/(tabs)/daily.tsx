@@ -122,8 +122,8 @@ export default function DailyScreen() {
             <Text style={styles.body}>{item.body}</Text>
             
             <View style={styles.tipBox}>
-              <Text style={styles.tipText}>💡 <Text style={{fontWeight: "700"}}>{t("daily.focus")}:</Text> {item.lean_into}</Text>
-              <Text style={styles.tipText}>⚠️ <Text style={{fontWeight: "700"}}>{t("daily.watch")}:</Text> {item.watch_for}</Text>
+              <Text style={styles.tipText}> <Text style={{fontWeight: "700"}}>{t("daily.focus")}:</Text> {item.lean_into}</Text>
+              <Text style={styles.tipText}>️ <Text style={{fontWeight: "700"}}>{t("daily.watch")}:</Text> {item.watch_for}</Text>
             </View>
           </View>
         ))}

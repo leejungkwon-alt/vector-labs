@@ -16,7 +16,7 @@ export function AgeBandSectionView({ section }: { section: AgeBandSection }) {
       {section.advice.length > 0 && (
         <View style={{ marginTop: 8 }}>
           {section.advice.map((a, i) => (
-            <Text key={i} style={ss.paragraph}>💡 {a}</Text>
+            <Text key={i} style={ss.paragraph}> {a}</Text>
           ))}
         </View>
       )}

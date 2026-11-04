@@ -20,10 +20,10 @@ export function YearSectionView({ section }: { section: YearSection }) {
       <Text style={[ss.paragraph, { fontWeight: "600" }]}>{section.headline}</Text>
       {section.body ? <Text style={ss.paragraph}>{section.body}</Text> : null}
       {section.watch_for ? (
-        <Text style={ss.metaText}>⚠️ {t("sections.watch")}: {section.watch_for}</Text>
+        <Text style={ss.metaText}>️ {t("sections.watch")}: {section.watch_for}</Text>
       ) : null}
       {section.lean_into ? (
-        <Text style={ss.metaText}>💡 {t("sections.focus")}: {section.lean_into}</Text>
+        <Text style={ss.metaText}> {t("sections.focus")}: {section.lean_into}</Text>
       ) : null}
       {section.life_stage_context ? (
         <View style={[ss.blockBox, { marginTop: 8 }]}>

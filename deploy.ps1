@@ -1,5 +1,4 @@
-# deploy.ps1
-# 한글 콘솔 인코딩 강제 (UTF-8)
+﻿# deploy.ps1
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 [Console]::InputEncoding  = [System.Text.Encoding]::UTF8
 $OutputEncoding           = [System.Text.Encoding]::UTF8
@@ -12,19 +11,21 @@ $SERVICE = "saju-backend"
 $IMAGE   = "asia-northeast3-docker.pkg.dev/$PROJECT/cloud-run-source-deploy/$SERVICE"
 $TAG     = Get-Date -Format "yyyyMMdd_HHmmss"
 
-Write-Host "`n=== 1. 테스트 실행 ===" -ForegroundColor Cyan
+Write-Host "`n=== 1. ?뚯뒪???ㅽ뻾 ===" -ForegroundColor Cyan
 python -m pytest tests/ -q
-if ($LASTEXITCODE -ne 0) { Write-Host "❌ 테스트 실패. 배포를 중단합니다." -ForegroundColor Red; exit 1 }
+if ($LASTEXITCODE -ne 0) { Write-Host "?뚯뒪???ㅽ뙣. 諛고룷瑜?以묐떒?⑸땲??" -ForegroundColor Red; exit 1 }
 
-Write-Host "`n=== 2. 이미지 빌드 ($TAG) ===" -ForegroundColor Cyan
+Write-Host "`n=== 2. ?대?吏 鍮뚮뱶 ($TAG) ===" -ForegroundColor Cyan
 gcloud builds submit --tag "${IMAGE}:${TAG}" --project $PROJECT --region $REGION
-if ($LASTEXITCODE -ne 0) { Write-Host "❌ 빌드 실패. 배포를 중단합니다." -ForegroundColor Red; exit 1 }
+if ($LASTEXITCODE -ne 0) { Write-Host "鍮뚮뱶 ?ㅽ뙣. 諛고룷瑜?以묐떒?⑸땲??" -ForegroundColor Red; exit 1 }
 
-Write-Host "`n=== 3. Cloud Run 배포 ===" -ForegroundColor Cyan
-gcloud run deploy $SERVICE --image "${IMAGE}:${TAG}" --region $REGION --platform managed --project $PROJECT --port 8080 --memory 512Mi --timeout 300 --allow-unauthenticated --quiet --update-env-vars="SAJU_DB_PATH=/tmp/auth.db"
-if ($LASTEXITCODE -ne 0) { Write-Host "❌ 배포 실패." -ForegroundColor Red; exit 1 }
+Write-Host "`n=== 3. Cloud Run 諛고룷 ===" -ForegroundColor Cyan
+# ?먮옒 Secret(saju-database-url-supabase) 李몄“ ?좎? + SAJU_ASSET_BASE_URL 異붽?
+gcloud run deploy $SERVICE --image "${IMAGE}:${TAG}" --region $REGION --platform managed --project $PROJECT --port 8080 --memory 512Mi --timeout 300 --allow-unauthenticated --quiet --update-env-vars="SAJU_ASSET_BASE_URL=https://placeholder.example.com"  --set-secrets="SAJU_DATABASE_URL=saju-database-url:latest"
+if ($LASTEXITCODE -ne 0) { Write-Host "諛고룷 ?ㅽ뙣." -ForegroundColor Red; exit 1 }
 
-Write-Host "`n✅ 배포 성공!" -ForegroundColor Green
+Write-Host "`n諛고룷 ?깃났!" -ForegroundColor Green
 Write-Host "URL: https://saju-backend-787049663118.asia-northeast3.run.app" -ForegroundColor Green
-Write-Host "Health check 실행 중..." -ForegroundColor Yellow
+Write-Host "Health check ?ㅽ뻾 以?.." -ForegroundColor Yellow
 curl.exe https://saju-backend-787049663118.asia-northeast3.run.app/health
+

@@ -24,7 +24,7 @@ export function SinsalSectionView({ section }: { section: SinsalSection }) {
           {item.position_note && (
             <Text style={[ss.metaText, { fontStyle: "italic" }]}>{item.position_note}</Text>
           )}
-          <Text style={[ss.adviceText, { color: colors.primary }]}>👉 {item.advice}</Text>
+          <Text style={[ss.adviceText, { color: colors.primary }]}> {item.advice}</Text>
         </View>
       ))}
     </View>

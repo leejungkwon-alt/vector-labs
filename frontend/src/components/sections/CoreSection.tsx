@@ -24,7 +24,7 @@ export function CoreSectionView({ section }: { section: CoreSection }) {
         <View style={{ marginTop: 8 }}>
           <Text style={ss.blockTitle}>{t("sections.personalizedInsights")}</Text>
           {(section.personalized_insights || []).map((p, i) => (
-            <Text key={`pi${i}`} style={ss.paragraph}>✦ {p}</Text>
+            <Text key={`pi${i}`} style={ss.paragraph}> {p}</Text>
           ))}
         </View>
       )}
@@ -42,7 +42,7 @@ export function CoreSectionView({ section }: { section: CoreSection }) {
         <View style={{ marginTop: 8 }}>
           <Text style={ss.blockTitle}>{t("sections.advice")}</Text>
           {(section.advice || []).map((a, i) => (
-            <Text key={`a${i}`} style={[ss.paragraph, { fontWeight: "600" }]}>💡 {a}</Text>
+            <Text key={`a${i}`} style={[ss.paragraph, { fontWeight: "600" }]}> {a}</Text>
           ))}
         </View>
       )}

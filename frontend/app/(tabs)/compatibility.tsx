@@ -98,13 +98,13 @@ export default function CompatibilityScreen() {
     if (error) {
       const msg = error instanceof ApiError ? error.detail : (error as Error).message;
       
-      // 👇 401(세션 만료) 또는 403(구독/결제 필요) 에러 핸들링
+      //  401(세션 만료) 또는 403(구독/결제 필요) 에러 핸들링
       const status = error instanceof ApiError ? error.status : 500;
       if (status === 401 || status === 403) {
         const isAuthError = status === 401;
         return (
           <View style={{ marginTop: 30, padding: 24, backgroundColor: colors.primary + "10", borderRadius: radius.lg, alignItems: "center", borderWidth: 1, borderColor: colors.primary + "30" }}>
-            <Text style={{ fontSize: 40, marginBottom: 12 }}>{isAuthError ? "🔒" : "💎"}</Text>
+            <Text style={{ fontSize: 40, marginBottom: 12 }}>{isAuthError ? "" : ""}</Text>
             <Text style={{ fontSize: 20, fontWeight: "800", color: colors.text, marginBottom: 8 }}>
               {isAuthError ? "세션이 만료되었습니다" : t("compatibility.paywallTitle")}
             </Text>
@@ -129,7 +129,7 @@ export default function CompatibilityScreen() {
     if (!data?.compatibility) return null;
     const compat = data.compatibility;
     
-    // 👇 -1.0 ~ 1.0 점수를 0 ~ 100점으로 직관적 변환
+    //  -1.0 ~ 1.0 점수를 0 ~ 100점으로 직관적 변환
     const rawScore = compat.overall.score;
     const displayScore = Math.round((rawScore + 1) * 50);
     
@@ -144,7 +144,7 @@ export default function CompatibilityScreen() {
              relationshipType === "friend" ? t("compatibility.resultFriend") : t("compatibility.resultFamily")}
           </Text>
           
-          {/* 👇 100점 만점 점수 표시 및 게이지 바 */}
+          {/*  100점 만점 점수 표시 및 게이지 바 */}
           <View style={{ flexDirection: "row", alignItems: "flex-end", marginBottom: 8 }}>
             <Text style={[styles.overallScore, { color }]}>{displayScore}</Text>
             <Text style={{ fontSize: 20, fontWeight: "700", color: colors.textMuted, marginBottom: 10 }}> / 100 {t("compatibility.scoreUnit")}</Text>
@@ -309,7 +309,7 @@ const styles = StyleSheet.create({
   resultCard: { backgroundColor: colors.surface, padding: spacing.xl, borderRadius: radius.lg, borderWidth: 1, borderColor: colors.border, alignItems: "center" },
   resultLabel: { fontSize: 14, fontWeight: "700", color: colors.textMuted, marginBottom: 8 },
   
-  // 👇 100점 만점 스타일
+  //  100점 만점 스타일
   overallScore: { fontSize: 56, fontWeight: "800" },
   gaugeBg: { width: "100%", height: 8, backgroundColor: colors.bgMuted, borderRadius: 4, marginBottom: 16, overflow: "hidden" },
   gaugeFill: { height: "100%", borderRadius: 4 },

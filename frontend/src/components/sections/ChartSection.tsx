@@ -43,7 +43,7 @@ export function ChartSectionView({ section }: { section: ChartSection }) {
       ))}
       {section.notes.map((n, i) => (
         <Text key={i} style={[ss.paragraph, { fontStyle: "italic" }]}>
-          📌 {n}
+           {n}
         </Text>
       ))}
     </View>

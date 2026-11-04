@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Modal, View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context"; // 👈 경고를 없애기 위해 import 경로 변경
+import { SafeAreaView } from "react-native-safe-area-context"; //  경고를 없애기 위해 import 경로 변경
 import { colors, spacing, radius } from "@/theme";
 import { CITY_LIST } from "@/constants/cities";
 import { useT } from "@/i18n";

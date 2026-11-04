@@ -14,7 +14,7 @@ export function ModeSectionView({ section }: { section: ModeSection }) {
     <View>
       <Text style={ss.coreHero}>{section.headline}</Text>
       <Text style={ss.paragraph}>{section.body}</Text>
-      {featured && <Text style={ss.adviceText}>💡 {featured}</Text>}
+      {featured && <Text style={ss.adviceText}> {featured}</Text>}
 
       {section.patterns && section.patterns.length > 0 && (
         <View style={{ marginTop: 12 }}>

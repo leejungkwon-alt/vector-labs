@@ -125,7 +125,7 @@ export function RedFlagsBox({ flags }: { flags?: string[] }) {
     <View style={{ marginTop: 12, padding: 12, backgroundColor: colors.dangerSoft, borderRadius: radius.md }}>
       <Text style={[ss.blockTitle, { color: colors.danger }]}>{t("sections.redFlags")}</Text>
       {flags.map((r, i) => (
-        <Text key={i} style={ss.paragraph}>⚠ {r}</Text>
+        <Text key={i} style={ss.paragraph}> {r}</Text>
       ))}
     </View>
   );

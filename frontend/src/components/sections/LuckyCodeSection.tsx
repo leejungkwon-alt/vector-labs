@@ -24,25 +24,25 @@ export function LuckyCodeSectionView({ section }: { section: LuckyCodeSection })
         onPress={() => router.push("/collection")}
         style={{ marginTop: 16, padding: 12, backgroundColor: colors.surface, borderRadius: 12, borderWidth: 1, borderColor: colors.primary, alignItems: "center" }}
       >
-        <Text style={{ color: colors.primary, fontWeight: "700" }}>내 시조 모아보기 (25편)</Text>
+        <Text style={{ color: colors.primary, fontWeight: "700" }}>{t("poem.viewCollection")} (25)</Text>
       </TouchableOpacity>
 
       <View style={ss.blockBox}>
         <Text style={ss.blockTitle}>{t("sections.powerElement")} · {p.element}</Text>
         {p.colors && p.colors.length > 0 && (
-          <Text style={ss.paragraph}>🎨 {t("sections.colors")}: {p.colors.join(", ")}</Text>
+          <Text style={ss.paragraph}> {t("sections.colors")}: {p.colors.join(", ")}</Text>
         )}
         {p.numbers && p.numbers.length > 0 && (
-          <Text style={ss.paragraph}>🔢 {t("sections.numbers")}: {p.numbers.join(", ")}</Text>
+          <Text style={ss.paragraph}> {t("sections.numbers")}: {p.numbers.join(", ")}</Text>
         )}
         {p.directions && p.directions.length > 0 && (
-          <Text style={ss.paragraph}>🧭 {t("sections.directions")}: {p.directions.join(", ")}</Text>
+          <Text style={ss.paragraph}> {t("sections.directions")}: {p.directions.join(", ")}</Text>
         )}
         {p.activities && p.activities.length > 0 && (
-          <Text style={ss.paragraph}>🏃 {t("sections.activities")}: {p.activities.join(", ")}</Text>
+          <Text style={ss.paragraph}> {t("sections.activities")}: {p.activities.join(", ")}</Text>
         )}
         {p.foods && p.foods.length > 0 && (
-          <Text style={ss.paragraph}>🍃 {t("sections.foods")}: {p.foods.join(", ")}</Text>
+          <Text style={ss.paragraph}> {t("sections.foods")}: {p.foods.join(", ")}</Text>
         )}
         {p.practices && p.practices.length > 0 && (
           <View style={{ marginTop: 6 }}>
@@ -65,13 +65,13 @@ export function LuckyCodeSectionView({ section }: { section: LuckyCodeSection })
         <View style={ss.blockBox}>
           <Text style={ss.blockTitle}>{t("sections.supportElement")} · {s.element}</Text>
           {s.colors && s.colors.length > 0 && (
-            <Text style={ss.paragraph}>🎨 {s.colors.join(", ")}</Text>
+            <Text style={ss.paragraph}> {s.colors.join(", ")}</Text>
           )}
           {s.numbers && s.numbers.length > 0 && (
-            <Text style={ss.paragraph}>🔢 {s.numbers.join(", ")}</Text>
+            <Text style={ss.paragraph}> {s.numbers.join(", ")}</Text>
           )}
           {s.directions && s.directions.length > 0 && (
-            <Text style={ss.paragraph}>🧭 {s.directions.join(", ")}</Text>
+            <Text style={ss.paragraph}> {s.directions.join(", ")}</Text>
           )}
         </View>
       )}

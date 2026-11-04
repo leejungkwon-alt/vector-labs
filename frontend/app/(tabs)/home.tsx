@@ -93,7 +93,7 @@ export default function HomeScreen() {
             <View key={idx} style={[styles.summaryCard, card.locked && styles.summaryCardLocked]}>
               <Text style={styles.cardLabel}>{card.label}</Text>
               <Text style={styles.cardHeadline}>{card.headline}</Text>
-              {card.locked && <View style={styles.miniLock}><Text style={{ fontSize: 12 }}>🔒</Text></View>}
+              {card.locked && <View style={styles.miniLock}><Text style={{ fontSize: 12 }}></Text></View>}
             </View>
           ))}
         </ScrollView>

@@ -32,7 +32,7 @@ function LockedFieldsList({ fields }: { fields: string[] }) {
       }}
     >
       <Text style={{ fontSize: 12, fontWeight: "700", color: colors.textMuted }}>
-        🔒 {t("sections.lockedContentCount", { count: fields.length })}
+         {t("sections.lockedContentCount", { count: fields.length })}
       </Text>
       <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 4, lineHeight: 18 }}>
         {labels.join(" · ")}

@@ -74,7 +74,7 @@ export function CrisisBanner({ crisis }: { crisis?: CrisisResource }) {
   return (
     <View style={styles.box}>
       <View style={styles.header}>
-        <Ionicons name="heart-circle" size={20} color="#8B1E1E" />
+        
         <Text style={styles.title}>{title}</Text>
       </View>
       <Text style={styles.body}>{bodyText}</Text>
@@ -83,7 +83,7 @@ export function CrisisBanner({ crisis }: { crisis?: CrisisResource }) {
           style={styles.callButton}
           onPress={() => Linking.openURL(`tel:${phone}`)}
         >
-          <Ionicons name="call" size={16} color="#FFFFFF" />
+          
           <Text style={styles.callButtonText}>{phone}</Text>
         </TouchableOpacity>
       ) : null}

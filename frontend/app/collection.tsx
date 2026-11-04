@@ -36,7 +36,7 @@ export default function CollectionScreen() {
               <Text style={styles.cardRelation}>{getRelationLabel(poem.relation, lang)}</Text>
               {locked && (
                 <View style={styles.lockOverlay}>
-                  <Text style={styles.lockText}>🔒 Premium</Text>
+                  <Text style={styles.lockText}> Premium</Text>
                 </View>
               )}
             </View>
