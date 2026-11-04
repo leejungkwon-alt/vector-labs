@@ -136,10 +136,38 @@ export interface LuckyCodePower {
   domains?: Record<string, any>;
 }
 
+// ---- Phase 2: 시조 카드 ----
+export type PoemRelation =
+  | "same"
+  | "generates_me"
+  | "i_generate"
+  | "i_control"
+  | "controls_me";
+
+export interface PoemCard {
+  id: string;
+  element: string;
+  element_idx: number;
+  relation: PoemRelation;
+  relation_kr: string;
+  title: string;
+  sijo_ko: string;
+  romanization: string;
+  interpretation: string;
+  practice: string;
+  calligraphy_image: string;
+  wallpaper_image: string | null;
+  keywords: string[];
+  tier: "free" | "premium";
+  locked_fields?: string[];
+  collection?: PoemCard[];
+}
+
 export interface LuckyCodeSection extends ReportSectionBase {
   id: "lucky_code";
   hero: string;
   power: LuckyCodePower;
+  poem?: PoemCard;
   support?: {
     signature: string;
     element: string;

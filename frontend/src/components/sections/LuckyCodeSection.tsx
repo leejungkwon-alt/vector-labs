@@ -4,6 +4,7 @@ import { colors } from "@/theme";
 import { ss } from "./shared";
 import { useT } from "@/i18n";
 import type { LuckyCodeSection } from "../../../types";
+import { PoemFlipCard } from "../poem/PoemFlipCard";
 
 export function LuckyCodeSectionView({ section }: { section: LuckyCodeSection }) {
   const t = useT();
@@ -14,6 +15,8 @@ export function LuckyCodeSectionView({ section }: { section: LuckyCodeSection })
   return (
     <View>
       <Text style={ss.coreHero}>{section.hero}</Text>
+
+      {section.poem && <PoemFlipCard poem={section.poem} />}
 
       <View style={ss.blockBox}>
         <Text style={ss.blockTitle}>{t("sections.powerElement")} · {p.element}</Text>

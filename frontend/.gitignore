@@ -44,3 +44,5 @@ yarn-error.*
 # Expo env files (keep example)
 .env.*
 !.env.example
+.vercel
+.env*

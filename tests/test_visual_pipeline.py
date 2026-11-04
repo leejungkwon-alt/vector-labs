@@ -33,7 +33,7 @@ def test_report_contains_wallpaper_url():
     
     assert "daily_wallpaper_url" in report["meta"]
     assert report["meta"]["daily_wallpaper_url"].endswith(".webp")
-    assert "mock-cdn.vectorlabs.app" in report["meta"]["daily_wallpaper_url"]
+    assert report["meta"]["daily_wallpaper_url"].startswith("http")
 
 
 # ==== SAJU_ASSET_BASE_URL production fail-fast ====

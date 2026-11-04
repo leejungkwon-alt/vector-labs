@@ -177,3 +177,47 @@ def element_generates(a_idx: int, b_idx: int) -> bool:
 def element_controls(a_idx: int, b_idx: int) -> bool:
     """a가 b를 剋하는가 (木→土→水→火→金→木)"""
     return (a_idx + 2) % 5 == b_idx
+
+# ============================================================
+# Phase 2: 시조 카드 — 用神 × 월건 5관계 판정
+# ============================================================
+
+# 월지 → 계절 오행 인덱스 (0=木, 1=火, 2=土, 3=金, 4=水)
+BRANCH_SEASON_ELEMENT_IDX = {
+    "寅": 0, "卯": 0,
+    "巳": 1, "午": 1,
+    "申": 3, "酉": 3,
+    "亥": 4, "子": 4,
+    "辰": 2, "戌": 2, "丑": 2, "未": 2,
+}
+
+POEM_RELATION_KR = {
+    "same": "同",
+    "generates_me": "生我",
+    "i_generate": "我生",
+    "i_control": "我剋",
+    "controls_me": "剋我",
+}
+
+
+def month_branch_to_season_idx(branch_char: str):
+    """월지 → 계절 오행 인덱스 (0~4). 미지원 글자면 None."""
+    return BRANCH_SEASON_ELEMENT_IDX.get(branch_char)
+
+
+def classify_yongsin_month_relation(yongsin_idx: int, month_idx: int) -> str:
+    """用神 인덱스와 월건 인덱스의 5관계 판정.
+
+    반환: same | generates_me | i_generate | i_control | controls_me
+    """
+    if yongsin_idx == month_idx:
+        return "same"
+    if element_generates(month_idx, yongsin_idx):
+        return "generates_me"
+    if element_generates(yongsin_idx, month_idx):
+        return "i_generate"
+    if element_controls(yongsin_idx, month_idx):
+        return "i_control"
+    if element_controls(month_idx, yongsin_idx):
+        return "controls_me"
+    return "same"

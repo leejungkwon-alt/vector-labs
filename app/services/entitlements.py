@@ -52,13 +52,17 @@ FREE_SECTION_RULES = {
 
     # ---- Lucky Code: power 최소 필드만 ----
     "lucky_code": {
-        "keep": {"id", "title", "hero"},
+        "keep": {"id", "title", "hero", "poem"},
         "include_power_minimal": True,   # power에서 signature/element/keywords만 노출
+        "poem_gate": {
+            "locked_fields": {"wallpaper_image", "collection"},
+        },
         "locked_hint": [
             "support", "watch_out",
             "power.colors", "power.numbers", "power.directions",
             "power.activities", "power.foods", "power.practices",
             "power.domains",
+            "poem.wallpaper_image", "poem.collection",
         ],
     },
 
@@ -289,5 +293,15 @@ def _apply_teaser_rule(section: dict, rule: dict) -> tuple:
             {k: v for k, v in it.items() if k in item_keep}
             for it in teaser["items"]
         ]
+
+
+    # 6) poem 게이팅 (free: wallpaper/collection 잠금)
+    if "poem_gate" in rule and isinstance(teaser.get("poem"), dict):
+        locked_poem = rule["poem_gate"]["locked_fields"]
+        teaser["poem"] = {
+            k: (None if k in locked_poem else v)
+            for k, v in teaser["poem"].items()
+        }
+        teaser["poem"]["locked_fields"] = sorted(locked_poem)
 
     return teaser, locked

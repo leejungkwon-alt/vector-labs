@@ -291,6 +291,7 @@ def write_lucky_code_section(profile: dict, lang: str = "en") -> dict:
             "directions": support.get("directions", []),
         },
         "watch_out": watch_out,
+        "poem": _resolve_poem(profile, lang, power_sig, content_map),
     }
 
 
@@ -1040,3 +1041,125 @@ def _get_pillar_display(pillar: str, lang: str) -> dict:
         "traditional": entry.get("traditional", pillar),
     }
 
+
+
+# ============================================================
+# Phase 2: 시조 카드 해석 (Poem Card)
+# ============================================================
+import json as _poem_json
+from functools import lru_cache as _poem_lru
+from pathlib import Path as _PoemPath
+
+_POEM_JSON_PATH = _PoemPath(__file__).resolve().parents[2] / "data" / "poems.json"
+
+
+@_poem_lru(maxsize=1)
+def _load_poems() -> list:
+    if not _POEM_JSON_PATH.exists():
+        return []
+    try:
+        with open(_POEM_JSON_PATH, "r", encoding="utf-8") as f:
+            return _poem_json.load(f).get("poems", [])
+    except Exception:
+        return []
+
+
+
+def _sig_to_yong_elem(power_sig: str, content_map: dict):
+    """用神 시그니처(예: FLOW) → 한자 오행(木/火/土/金/水). 실패 시 None."""
+    from app.engine.elements import ELEMENT_NAMES
+    import re
+
+    raw = (content_map.get(power_sig) or {}).get("element", "") or ""
+
+    # 1) "흐름(Water)" → Water → 水
+    m = re.search(r"\(([A-Za-z]+)\)", raw)
+    if m:
+        eng_map = {"wood": "木", "fire": "火", "earth": "土",
+                   "metal": "金", "water": "水"}
+        elem = eng_map.get(m.group(1).lower())
+        if elem in ELEMENT_NAMES:
+            return elem
+
+    # 2) ELEMENT_SIGNATURES 역매핑
+    try:
+        from app.semantic.tags import ELEMENT_SIGNATURES
+        for elem, sig in ELEMENT_SIGNATURES.items():
+            if sig == power_sig and elem in ELEMENT_NAMES:
+                return elem
+    except Exception:
+        pass
+
+    # 3) raw가 직접 한자
+    if raw in ELEMENT_NAMES:
+        return raw
+
+    # 4) fuzzy (한글/영문)
+    low = raw.lower()
+    for kw, elem in [
+        ("water", "水"), ("flow", "水"), ("흐름", "水"), ("수", "水"),
+        ("wood", "木"), ("growth", "木"), ("성장", "木"), ("목", "木"),
+        ("fire", "火"), ("blaze", "火"), ("불꽃", "火"), ("화", "火"),
+        ("earth", "土"), ("대지", "土"), ("토", "土"),
+        ("metal", "金"), ("예리", "金"), ("금", "金"),
+    ]:
+        if kw in low:
+            return elem
+    return None
+
+def _resolve_poem(profile: dict, lang: str, power_sig: str, content_map: dict):
+    """用神 × 월건 5관계 → poems.json 매칭."""
+    from app.engine.elements import (
+        ELEMENT_NAMES,
+        month_branch_to_season_idx,
+        classify_yongsin_month_relation,
+        POEM_RELATION_KR,
+    )
+
+    yong_elem = _sig_to_yong_elem(power_sig, content_map)
+    if yong_elem not in ELEMENT_NAMES:
+        return None
+    yong_idx = ELEMENT_NAMES.index(yong_elem)
+
+    month_pillar = (profile.get("pillars") or {}).get("month_pillar", "")
+    if not isinstance(month_pillar, str) or len(month_pillar) != 2:
+        return None
+    month_idx = month_branch_to_season_idx(month_pillar[1])
+    if month_idx is None:
+        return None
+
+    relation = classify_yongsin_month_relation(yong_idx, month_idx)
+
+    poems = _load_poems()
+    match = next(
+        (p for p in poems
+         if p.get("element_idx") == yong_idx and p.get("relation") == relation),
+        None,
+    )
+    if not match:
+        return None
+
+    tr_all = match.get("translations", {})
+    fallback_lang = "ko" if lang == "ko" else "en"
+    tr = (tr_all.get(lang) or tr_all.get(fallback_lang)
+          or tr_all.get("ko") or {})
+    title_map = match.get("title", {})
+    title = (title_map.get(lang) or title_map.get(fallback_lang)
+             or title_map.get("ko") or match.get("id", ""))
+
+    return {
+        "id": match["id"],
+        "element": match["element"],
+        "element_idx": yong_idx,
+        "relation": relation,
+        "relation_kr": POEM_RELATION_KR[relation],
+        "title": title,
+        "sijo_ko": match.get("sijo_ko", ""),
+        "romanization": match.get("romanization", ""),
+        "interpretation": tr.get("interpretation", ""),
+        "practice": tr.get("practice", ""),
+        "calligraphy_image": match.get("calligraphy_image", ""),
+        "wallpaper_image": match.get("wallpaper_image", ""),
+        "keywords": match.get("keywords", []),
+        "tier": match.get("tier", "premium"),
+    }
