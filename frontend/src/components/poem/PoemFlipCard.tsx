@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { View, Text, Pressable, Animated, StyleSheet, Alert, Platform, Image } from "react-native";
 import { colors } from "@/theme";
+import { useLanguageStore } from "@/store/languageStore";
 import type { PoemCard } from "../../../types";
 import { getRelationLabel } from "@/utils/poemRelations";
 
@@ -27,6 +28,24 @@ export function PoemFlipCard({
   lang?: string;
   onSubscribePress?: () => void;
 }) {
+  const storeLang = useLanguageStore((s) => s.lang);
+  const currentLang = lang || storeLang || "en";
+
+  const getPoetName = (poet: string | undefined) => {
+    if (!poet) return "";
+    if (poet === "작자 미상" || poet === "미상" || poet === "Anonymous") {
+      const map: Record<string, string> = {
+        ko: "작자 미상",
+        en: "Anonymous",
+        ja: "作者不明",
+        zh_cn: "佚名",
+        es: "Anónimo"
+      };
+      return map[currentLang] || "Anonymous";
+    }
+    return poet;
+  };
+
   const [flipped, setFlipped] = useState(false);
   const anim = useRef(new Animated.Value(0)).current;
 
@@ -61,7 +80,7 @@ export function PoemFlipCard({
   return (
     <View style={{ marginVertical: 16 }}>
       <Text style={styles.caption}>
-        {tt(lang, "오늘의 시조", "Poem of the Day")} · {getRelationLabel(poem.relation, lang || "en")}
+        {tt(currentLang, "오늘의 시조", "Poem of the Day")} · {getRelationLabel(poem.relation, currentLang)}
       </Text>
 
       <Pressable onPress={flip} accessibilityRole="button">
@@ -79,7 +98,7 @@ export function PoemFlipCard({
                 {poem.keywords.map((k, i) => <Text key={i} style={styles.keyword}>#{k}</Text>)}
               </View>
             )}
-            <Text style={styles.tapHint}>{tt(lang, "탭하여 뒤집기 →", "Tap to flip →")}</Text>
+            <Text style={styles.tapHint}>{tt(currentLang, "탭하여 뒤집기 →", "Tap to flip →")}</Text>
           </Animated.View>
 
           <Animated.View
@@ -88,7 +107,7 @@ export function PoemFlipCard({
                     { opacity: backOpacity, transform: [{ perspective: 900 }, { rotateY: backRotate }] }]}
           >
             <Text style={styles.title}>{poem.title}</Text>
-            {poem.poet && <Text style={styles.poet}>- {poem.poet} -</Text>}
+            {poem.poet && <Text style={styles.poet}>- {getPoetName(poem.poet)} -</Text>}
             <Text style={styles.romanization}>{poem.romanization}</Text>
             <View style={styles.divider} />
             {poem.commentary ? <Text style={styles.commentary}>{poem.commentary}</Text> : null}
@@ -96,16 +115,16 @@ export function PoemFlipCard({
             <Text style={styles.interpretation}>{poem.interpretation}</Text>
             {poem.practice ? (
               <View style={styles.practiceBox}>
-                <Text style={styles.practiceLabel}>{tt(lang, "오늘의 실천", "Today's Practice")}</Text>
+                <Text style={styles.practiceLabel}>{tt(currentLang, "오늘의 실천", "Today's Practice")}</Text>
                 <Text style={styles.practiceText}>{poem.practice}</Text>
               </View>
             ) : null}
             <Pressable onPress={handleSaveWallpaper} style={styles.saveButton}>
               <Text style={styles.saveButtonText}>
-                {isWallpaperLocked ? tt(lang, "배경화면 · 프리미엄", "Wallpaper · Premium") : tt(lang, "배경화면 저장", "Save wallpaper")}
+                {isWallpaperLocked ? tt(currentLang, "배경화면 · 프리미엄", "Wallpaper · Premium") : tt(currentLang, "배경화면 저장", "Save wallpaper")}
               </Text>
             </Pressable>
-            <Text style={styles.tapHint}>{tt(lang, "← 탭하여 돌아가기", "← Tap to flip back")}</Text>
+            <Text style={styles.tapHint}>{tt(currentLang, "← 탭하여 돌아가기", "← Tap to flip back")}</Text>
           </Animated.View>
         </View>
       </Pressable>
