@@ -1,11 +1,9 @@
-{
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "framework": "vite",
+﻿{
+  "installCommand": "cd frontend && npm install",
+  "buildCommand": "cd frontend && npx expo export --platform web",
+  "outputDirectory": "frontend/dist",
+  "cleanUrls": true,
   "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "https://vector-labs-api-787049663118.asia-northeast3.run.app/api/:path*"
-    }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

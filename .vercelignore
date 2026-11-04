@@ -1,3 +1,48 @@
-*
-!frontend/dist
-!frontend/dist/**
+﻿# Vercel 자동 빌드를 위해 소스 코드는 포함, 불필요한 것만 제외
+
+# 의존성/캐시
+node_modules
+**/node_modules
+__pycache__
+**/__pycache__
+*.pyc
+.pytest_cache
+
+# 빌드 산출물 (Vercel이 새로 만듦)
+frontend/dist
+**/dist
+
+# 로컬 환경/인증
+.env.local
+.env.staging
+.vercel
+.vercelignore
+
+# 백엔드/운영 (Vercel에서 안 씀)
+app/
+scripts/
+tests/
+data/
+docs/
+prompts/
+review_export/
+backups/
+migrations/
+tma/
+Dockerfile
+docker-compose.yml
+.gcloudignore
+deploy.ps1
+*.ps1
+conftest.py
+
+# dump/대용량 텍스트 (빌드에 불필요)
+*.txt
+*.md
+!frontend/package.json
+!frontend/app.json
+
+# 임시/백업
+*.bak
+*.bak_*
+*.broken
