@@ -3,10 +3,13 @@ import { colors, spacing } from "@/theme";
 import { router } from "expo-router";
 import { usePoemStore } from "@/store/poemStore";
 import { useAuthStore } from "@/store/authStore";
+import { getRelationLabel } from "@/utils/poemRelations";
+import { useLanguageStore } from "@/store/languageStore";
 
 export default function CollectionScreen() {
   const user = useAuthStore((s) => s.user);
   const { collection, currentPoem } = usePoemStore();
+  const lang = useLanguageStore((s) => s.lang);
   const isPremium = user?.tier === "premium" || user?.tier === "subscription";
 
   return (
@@ -28,7 +31,7 @@ export default function CollectionScreen() {
                 <Text style={styles.cardElement}>{poem.element}</Text>
               </View>
               <Text style={styles.cardTitle}>{poem.title}</Text>
-              <Text style={styles.cardRelation}>{poem.relation_kr}</Text>
+              <Text style={styles.cardRelation}>{getRelationLabel(poem.relation, lang)}</Text>
               {locked && (
                 <View style={styles.lockOverlay}>
                   <Text style={styles.lockText}>🔒 Premium</Text>

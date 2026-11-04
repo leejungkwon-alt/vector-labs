@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { View, Text, Pressable, Animated, StyleSheet, Alert, Platform, Image } from "react-native";
 import { colors } from "@/theme";
 import type { PoemCard } from "../../../types";
+import { getRelationLabel } from "@/utils/poemRelations";
 
 const FACE_HEIGHT = 560;
 const USE_NATIVE = Platform.OS !== "web";
@@ -60,7 +61,7 @@ export function PoemFlipCard({
   return (
     <View style={{ marginVertical: 16 }}>
       <Text style={styles.caption}>
-        {tt(lang, "오늘의 시조", "Poem of the Day")} · {poem.relation_kr}
+        {tt(lang, "오늘의 시조", "Poem of the Day")} · {getRelationLabel(poem.relation, lang || "en")}
       </Text>
 
       <Pressable onPress={flip} accessibilityRole="button">
