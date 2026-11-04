@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
-import { View, Text, Pressable, Animated, StyleSheet, Alert, Platform } from "react-native";
+import { View, Text, Pressable, Animated, StyleSheet, Alert, Platform, Image } from "react-native";
 import { colors } from "@/theme";
 import type { PoemCard } from "../../../types";
 
-const FACE_HEIGHT = 420;
+const FACE_HEIGHT = 480;
 const USE_NATIVE = Platform.OS !== "web";
 
 const C = {
@@ -55,21 +55,23 @@ export function PoemFlipCard({
     );
   };
 
+  // 임시 이미지 URL (실제 이미지 에셋이 준비되면 poem.calligraphy_image 사용)
+  const imgUrl = "https://placehold.co/600x300/F5EBD8/B8860B.png?text=Calligraphy+Image";
+
   return (
     <View style={{ marginVertical: 16 }}>
       <Text style={styles.caption}>
         {tt(lang, "오늘의 시조", "Poem of the Day")} · {poem.relation_kr}
       </Text>
 
-      <Pressable onPress={flip} accessibilityRole="button"
-                 accessibilityLabel={tt(lang, "시조 카드 뒤집기", "Flip poem card")}>
+      <Pressable onPress={flip} accessibilityRole="button">
         <View style={{ height: FACE_HEIGHT, position: "relative" }}>
           <Animated.View
             pointerEvents={flipped ? "none" : "auto"}
             style={[StyleSheet.absoluteFillObject, styles.face,
-                    { opacity: frontOpacity,
-                      transform: [{ perspective: 900 }, { rotateY: frontRotate }] }]}
+                    { opacity: frontOpacity, transform: [{ perspective: 900 }, { rotateY: frontRotate }] }]}
           >
+            <Image source={{ uri: imgUrl }} style={styles.image} resizeMode="cover" />
             <Text style={styles.elementBadge}>{poem.element}</Text>
             <Text style={styles.sijoText}>{poem.sijo_ko}</Text>
             {poem.keywords && poem.keywords.length > 0 && (
@@ -85,8 +87,7 @@ export function PoemFlipCard({
           <Animated.View
             pointerEvents={flipped ? "auto" : "none"}
             style={[StyleSheet.absoluteFillObject, styles.face,
-                    { opacity: backOpacity,
-                      transform: [{ perspective: 900 }, { rotateY: backRotate }] }]}
+                    { opacity: backOpacity, transform: [{ perspective: 900 }, { rotateY: backRotate }] }]}
           >
             <Text style={styles.title}>{poem.title}</Text>
             <Text style={styles.romanization}>{poem.romanization}</Text>
@@ -94,17 +95,13 @@ export function PoemFlipCard({
             <Text style={styles.interpretation}>{poem.interpretation}</Text>
             {poem.practice ? (
               <View style={styles.practiceBox}>
-                <Text style={styles.practiceLabel}>
-                  {tt(lang, "오늘의 실천", "Today's Practice")}
-                </Text>
+                <Text style={styles.practiceLabel}>{tt(lang, "오늘의 실천", "Today's Practice")}</Text>
                 <Text style={styles.practiceText}>{poem.practice}</Text>
               </View>
             ) : null}
             <Pressable onPress={onSaveWallpaper} style={styles.saveButton}>
               <Text style={styles.saveButtonText}>
-                {isWallpaperLocked
-                  ? tt(lang, "배경화면 · 프리미엄", "Wallpaper · Premium")
-                  : tt(lang, "배경화면 저장", "Save wallpaper")}
+                {isWallpaperLocked ? tt(lang, "배경화면 · 프리미엄", "Wallpaper · Premium") : tt(lang, "배경화면 저장", "Save wallpaper")}
               </Text>
             </Pressable>
             <Text style={styles.tapHint}>{tt(lang, "← 탭하여 돌아가기", "← Tap to flip back")}</Text>
@@ -116,34 +113,13 @@ export function PoemFlipCard({
 }
 
 const styles = StyleSheet.create({
-  caption: {
-    fontSize: 11, letterSpacing: 2, textTransform: "uppercase",
-    color: C.muted, textAlign: "center", marginBottom: 8,
-  },
-  face: {
-    backgroundColor: C.bg, borderRadius: 20, padding: 24,
-    borderWidth: 1, borderColor: C.border,
-    justifyContent: "center",
-    shadowColor: "#000", shadowOpacity: 0.08, shadowRadius: 12,
-    shadowOffset: { width: 0, height: 4 },
-  },
-  elementBadge: {
-    fontSize: 44, textAlign: "center", marginBottom: 20,
-    color: C.accent, fontWeight: "200",
-  },
-  sijoText: {
-    fontSize: 20, lineHeight: 34, textAlign: "center",
-    color: C.text, marginBottom: 20, fontWeight: "300",
-  },
-  keywordRow: {
-    flexDirection: "row", flexWrap: "wrap",
-    justifyContent: "center", gap: 6, marginBottom: 16,
-  },
-  keyword: {
-    fontSize: 12, color: C.muted,
-    paddingHorizontal: 8, paddingVertical: 4,
-    borderWidth: 1, borderColor: C.border, borderRadius: 999,
-  },
+  caption: { fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: C.muted, textAlign: "center", marginBottom: 8 },
+  face: { backgroundColor: C.bg, borderRadius: 20, padding: 24, borderWidth: 1, borderColor: C.border, justifyContent: "center", shadowColor: "#000", shadowOpacity: 0.08, shadowRadius: 12, shadowOffset: { width: 0, height: 4 } },
+  image: { width: "100%", height: 120, borderRadius: 12, marginBottom: 16, opacity: 0.9 },
+  elementBadge: { fontSize: 36, textAlign: "center", marginBottom: 12, color: C.accent, fontWeight: "200" },
+  sijoText: { fontSize: 20, lineHeight: 34, textAlign: "center", color: C.text, marginBottom: 20, fontWeight: "300" },
+  keywordRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 6, marginBottom: 16 },
+  keyword: { fontSize: 12, color: C.muted, paddingHorizontal: 8, paddingVertical: 4, borderWidth: 1, borderColor: C.border, borderRadius: 999 },
   title: { fontSize: 22, fontWeight: "600", textAlign: "center", color: C.text, marginBottom: 8 },
   romanization: { fontSize: 12, fontStyle: "italic", textAlign: "center", color: C.muted, marginBottom: 12 },
   divider: { height: 1, backgroundColor: C.border, marginVertical: 12 },
@@ -151,10 +127,7 @@ const styles = StyleSheet.create({
   practiceBox: { backgroundColor: C.accentSoft, padding: 12, borderRadius: 12, marginBottom: 16 },
   practiceLabel: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: C.muted, marginBottom: 4 },
   practiceText: { fontSize: 14, lineHeight: 22, color: C.text },
-  saveButton: {
-    borderWidth: 1, borderColor: C.accent, borderRadius: 999,
-    paddingVertical: 10, alignItems: "center", marginBottom: 8,
-  },
+  saveButton: { borderWidth: 1, borderColor: C.accent, borderRadius: 999, paddingVertical: 10, alignItems: "center", marginBottom: 8 },
   saveButtonText: { color: C.accent, fontWeight: "600", fontSize: 14 },
   tapHint: { fontSize: 11, color: C.muted, textAlign: "center", letterSpacing: 0.5 },
 });

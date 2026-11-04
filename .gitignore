@@ -151,3 +151,6 @@ apply_review_fixes.py
 backtrans_review.txt
 i18n_audit_report.txt
 .env*
+frontend/dist/
+.vercel
+
