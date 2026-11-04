@@ -1147,6 +1147,29 @@ def _resolve_poem(profile: dict, lang: str, power_sig: str, content_map: dict):
     title = (title_map.get(lang) or title_map.get(fallback_lang)
              or title_map.get("ko") or match.get("id", ""))
 
+    collection = []
+    for _p in poems:
+        if _p.get("element_idx") == yong_idx:
+            tr_p = _p.get("translations", {}).get(lang) or _p.get("translations", {}).get("ko") or {}
+            title_map_p = _p.get("title", {})
+            collection.append({
+                "id": _p["id"],
+                "element": _p["element"],
+                "element_idx": yong_idx,
+                "relation": _p.get("relation"),
+                "relation_kr": POEM_RELATION_KR.get(_p.get("relation"), ""),
+                "title": title_map_p.get(lang) or title_map_p.get("ko") or _p["id"],
+                "sijo_ko": _p.get("sijo_ko", ""),
+                "romanization": _p.get("romanization", ""),
+                "commentary": tr_p.get("commentary", ""),
+                "interpretation": tr_p.get("interpretation", ""),
+                "practice": tr_p.get("practice", ""),
+                "keywords": _p.get("keywords", []),
+                "tier": _p.get("tier", "premium"),
+                "calligraphy_image": _p.get("calligraphy_image", ""),
+                "wallpaper_image": _p.get("wallpaper_image", ""),
+            })
+
     return {
         "id": match["id"],
         "element": match["element"],
@@ -1164,4 +1187,5 @@ def _resolve_poem(profile: dict, lang: str, power_sig: str, content_map: dict):
         "wallpaper_image": match.get("wallpaper_image", ""),
         "keywords": match.get("keywords", []),
         "tier": match.get("tier", "premium"),
+        "collection": collection,
     }

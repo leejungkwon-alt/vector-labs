@@ -55,7 +55,7 @@ FREE_SECTION_RULES = {
         "keep": {"id", "title", "hero", "poem"},
         "include_power_minimal": True,   # power에서 signature/element/keywords만 노출
         "poem_gate": {
-            "locked_fields": {"wallpaper_image", "collection"},
+            "locked_fields": {"wallpaper_image"},
         },
         "locked_hint": [
             "support", "watch_out",

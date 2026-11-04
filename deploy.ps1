@@ -21,7 +21,7 @@ gcloud builds submit --tag "${IMAGE}:${TAG}" --project $PROJECT --region $REGION
 if ($LASTEXITCODE -ne 0) { Write-Host "❌ 빌드 실패. 배포를 중단합니다." -ForegroundColor Red; exit 1 }
 
 Write-Host "`n=== 3. Cloud Run 배포 ===" -ForegroundColor Cyan
-gcloud run deploy $SERVICE --image "${IMAGE}:${TAG}" --region $REGION --platform managed --project $PROJECT --port 8080 --memory 512Mi --timeout 300 --allow-unauthenticated --quiet
+gcloud run deploy $SERVICE --image "${IMAGE}:${TAG}" --region $REGION --platform managed --project $PROJECT --port 8080 --memory 512Mi --timeout 300 --allow-unauthenticated --quiet --update-env-vars="SAJU_DB_PATH=/tmp/auth.db"
 if ($LASTEXITCODE -ne 0) { Write-Host "❌ 배포 실패." -ForegroundColor Red; exit 1 }
 
 Write-Host "`n✅ 배포 성공!" -ForegroundColor Green

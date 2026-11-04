@@ -8,6 +8,7 @@ import { api, ApiError } from "@/api/client";
 import { colors, spacing, radius } from "@/theme";
 import { useAuthStore } from "@/store/authStore";
 import { useProfileStore } from "@/store/profileStore";
+import { usePoemStore } from "@/store/poemStore";
 import { CrisisBanner } from "@/components/CrisisBanner";
 import type { ReportResponse } from "../../types";
 import {
@@ -41,6 +42,7 @@ export default function HomeScreen() {
   const profileReady = useProfileStore((s) => s.ready);
   const ready = useAuthStore((s) => s.ready);
   const [expanded, setExpanded] = useState<Record<string, boolean>>({ core: true });
+  const setCurrentPoem = usePoemStore((s) => s.setCurrentPoem);
 
   useEffect(() => {
     if (profileReady && !profile) {
@@ -54,6 +56,16 @@ export default function HomeScreen() {
     enabled: !!profile && profileReady && ready,
     retry: false,
   });
+
+
+
+  useEffect(() => {
+    if (data?.report?.sections?.lucky_code?.poem) {
+      const poem = data.report.sections.lucky_code.poem;
+      const collection = (poem as any).collection && (poem as any).collection.length > 0 ? (poem as any).collection : [poem];
+      setCurrentPoem(poem, collection);
+    }
+  }, [data, setCurrentPoem]);
 
   const toggleSection = (id: string) => setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
   const goToUpgrade = () => router.push("/(tabs)/settings");
