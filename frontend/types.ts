@@ -151,8 +151,10 @@ export interface PoemCard {
   relation: PoemRelation;
   relation_kr: string;
   title: string;
+  poet?: string;
   sijo_ko: string;
   romanization: string;
+  commentary?: string;
   interpretation: string;
   practice: string;
   calligraphy_image: string;

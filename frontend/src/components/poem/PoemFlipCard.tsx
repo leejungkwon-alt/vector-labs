@@ -3,7 +3,7 @@ import { View, Text, Pressable, Animated, StyleSheet, Alert, Platform, Image } f
 import { colors } from "@/theme";
 import type { PoemCard } from "../../../types";
 
-const FACE_HEIGHT = 480;
+const FACE_HEIGHT = 560;
 const USE_NATIVE = Platform.OS !== "web";
 
 const C = {
@@ -87,7 +87,10 @@ export function PoemFlipCard({
                     { opacity: backOpacity, transform: [{ perspective: 900 }, { rotateY: backRotate }] }]}
           >
             <Text style={styles.title}>{poem.title}</Text>
+            {poem.poet && <Text style={styles.poet}>- {poem.poet} -</Text>}
             <Text style={styles.romanization}>{poem.romanization}</Text>
+            <View style={styles.divider} />
+            {poem.commentary ? <Text style={styles.commentary}>{poem.commentary}</Text> : null}
             <View style={styles.divider} />
             <Text style={styles.interpretation}>{poem.interpretation}</Text>
             {poem.practice ? (
@@ -117,7 +120,9 @@ const styles = StyleSheet.create({
   sijoText: { fontSize: 20, lineHeight: 34, textAlign: "center", color: C.text, marginBottom: 20, fontWeight: "300" },
   keywordRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 6, marginBottom: 16 },
   keyword: { fontSize: 12, color: C.muted, paddingHorizontal: 8, paddingVertical: 4, borderWidth: 1, borderColor: C.border, borderRadius: 999 },
-  title: { fontSize: 22, fontWeight: "600", textAlign: "center", color: C.text, marginBottom: 8 },
+  title: { fontSize: 22, fontWeight: "600", textAlign: "center", color: C.text, marginBottom: 4 },
+  poet: { fontSize: 14, textAlign: "center", color: C.accent, marginBottom: 8, fontStyle: "italic" },
+  commentary: { fontSize: 14, lineHeight: 22, color: C.text, fontStyle: "italic", marginBottom: 8 },
   romanization: { fontSize: 12, fontStyle: "italic", textAlign: "center", color: C.muted, marginBottom: 12 },
   divider: { height: 1, backgroundColor: C.border, marginVertical: 12 },
   interpretation: { fontSize: 15, lineHeight: 24, color: C.text, marginBottom: 16 },
