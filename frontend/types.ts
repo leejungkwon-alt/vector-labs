@@ -153,6 +153,7 @@ export interface PoemCard {
   title: string;
   poet?: string;
   sijo_ko: string;
+  sijo?: string;
   romanization: string;
   commentary?: string;
   interpretation: string;

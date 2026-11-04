@@ -1179,6 +1179,7 @@ def _resolve_poem(profile: dict, lang: str, power_sig: str, content_map: dict):
         "title": title,
         "poet": match.get("poet", "미상"),
         "sijo_ko": match.get("sijo_ko", ""),
+        "sijo": tr.get("sijo", match.get("sijo_ko", "")),
         "romanization": match.get("romanization", ""),
         "commentary": tr.get("commentary", ""),
         "interpretation": tr.get("interpretation", ""),

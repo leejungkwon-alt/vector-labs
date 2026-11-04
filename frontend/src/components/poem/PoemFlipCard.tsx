@@ -122,7 +122,7 @@ export function PoemFlipCard({
           >
             <Image source={{ uri: `/assets/poems/${poem.id}_calligraphy.svg` }} style={styles.image} resizeMode="cover" />
             <Text style={styles.elementBadge}>{poem.element}</Text>
-            <Text style={styles.sijoText}>{poem.sijo_ko}</Text>
+            <Text style={styles.sijoText}>{poem.sijo || poem.sijo_ko}</Text>
             {poem.keywords && poem.keywords.length > 0 && (
               <View style={styles.keywordRow}>
                 {poem.keywords.map((k, i) => <Text key={i} style={styles.keyword}>#{k}</Text>)}
