@@ -82,11 +82,11 @@
     "hour_pillar": "A medida que envejeces y miras hacia adentro, emerge la energía de '{archetype}'."
   },
   "CHART_NOTE_TEMPLATE": "Tu {a} y tu {b} comparten la misma energía '{archetype}'. Esto significa que, ya sea trabajando o a solas, tu presencia es exactamente la misma. Como 'quién eres en el trabajo' y 'el verdadero tú' no están separados, siempre eres sincero y consistente. Sin embargo, el límite entre el trabajo y la vida diaria puede difuminarse, haciendo que sea fácil que te agotes.",
-  "DISCLAIMER": "Nota: Este informe combina cálculos astronómicos con marcos modernos de coaching para la percepción personal y el entretenimiento. No es consejo médico, financiero ni psicológico. El análisis tradicional de Cuatro Pilares depende de la escuela — distintas líneas pueden llegar a conclusiones diferentes a partir de la misma carta, del mismo modo que distintos terapeutas pueden describir a la misma persona de forma diferente. Trátalo como una lectura reflexiva, no como un veredicto. Tus decisiones siguen siendo tuyas. Si estás en crisis, contacta a los servicios de emergencia locales o a una línea de prevención del suicidio. Si estás fuera de EE. UU., consulta https://findahelpline.com/.",
+  "DISCLAIMER": "Nota: Este informe combina cálculos astronómicos con el coaching psicológico moderno con fines de autoconocimiento y entretenimiento. No constituye asesoramiento médico, financiero ni psicológico. La interpretación del Saju (los Cuatro Pilares) puede llegar a conclusiones distintas según la escuela; por ejemplo, una escuela da prioridad a reponer la energía que hoy te falta, mientras que otra da más peso al equilibrio estacional. Ninguna está equivocada. Te recomendamos tomar este informe como una perspectiva más y tomar tú mismo las decisiones de tu vida. Si estás en una situación de crisis, contacta con los servicios de emergencia locales o con una línea de prevención del suicidio. Puedes consultar las líneas de ayuda de tu zona en https://findahelpline.com/.",
   "MONEY_CONTENT": {
     "THE_STEWARD": {
-      "headline": "Construyes lentamente — y esa es tu fortaleza.",
-      "body": "Prefieres cuidar algo con esmero antes que apostar por un atajo. Para ti, los recursos —el tiempo, la atención, las relaciones— valen más cuando se administran con paciencia.\n\nValoras lo que perdura. Mientras otros persiguen la próxima novedad, tú fortaleces en silencio lo que ya es tuyo. Es una disciplina poco común.\n\nEl riesgo es que 'tener cuidado' se convierta en un hábito que cierre puertas. Jugar demasiado a lo seguro también tiene un costo.",
+      "headline": "Proteges tus activos con seguridad y los haces crecer con el interés compuesto.",
+      "body": "Detestas el riesgo y no soportas perder el capital. Antepones la estabilidad a largo plazo a las ganancias rápidas.\n\nEso te inclina hacia los activos seguros: ahorros, bonos, inmuebles. Mientras otros se entusiasman con las criptomonedas o el trading de acciones, tú proteges y haces crecer en silencio lo que ya tienes.\n\nPero ser demasiado conservador puede hacerte perder frente a la inflación. Conviene diversificar una parte en activos de crecimiento.",
       "patterns": [
         "Tu asignación a efectivo y ahorros es muy alta.",
         "El miedo a perder hace que retrases las decisiones.",
@@ -112,8 +112,8 @@
       ]
     },
     "THE_OPERATOR": {
-      "headline": "Te ves como energía que necesita moverse.",
-      "body": "Detectas oportunidades donde otros ven ruido. Tu instinto para el intercambio —de ideas, de atención, de recursos— es agudo.\n\nRara vez te conformas con dejar las cosas quietas. Disfrutas de la energía dinámica de construir, conectar y hacer avanzar las cosas.\n\nPero cuando todo fluye rápido, las fugas pueden ser tan grandes como los flujos. Lo que te equilibra no es la velocidad, sino la pequeña cantidad de cosas a las que realmente te comprometes.",
+      "headline": "Destacas moviendo capital y aprovechando oportunidades.",
+      "body": "Disfrutas viendo el dinero en movimiento. En lugar de dejar el capital parado, sabes detectar oportunidades y ponerlo a trabajar.\n\nNegocios paralelos, pequeñas empresas, inversiones a corto plazo: tienes un olfato real para generar ingresos en muchos frentes. Tu rapidez para decidir te permite apostar con valentía cuando otros dudan, y a veces ganas a lo grande.\n\nPero cuando todo fluye rápido, las fugas también se agrandan. Si no creas una red de seguridad mientras el flujo de caja va bien, serás vulnerable en una crisis.",
       "patterns": [
         "Intentas crear múltiples fuentes de ingresos.",
         "Asumes riesgos pero los distribuyes.",
@@ -169,7 +169,7 @@
   "WORK_CONTENT": {
     "THE_CREATOR": {
       "headline": "Prosperas cuando puedes ver tu propia marca en el trabajo.",
-      "body": "Eres alérgico al trabajo inútil sin sentido. Necesitas construir algo desde cero o añadir tu voz única.\n\nTu mente siempre está dando vueltas con ideas. Sientes el mayor sentido de logro cuando las traes al mundo e inspiras a otros. Brillas en entornos autónomos donde puedes expresar tu creatividad.\n\nPero también debes aceptar el dolor de ser creador. Te hieren fácilmente cuando tus ideas se agotan o tu trabajo es infravalorado. Aprende a desvincularte del resultado y disfrutar del proceso en sí.",
+      "body": "Odias seguir el manual. Te sientes más realizado cuando planeas y creas algo tú mismo y le imprimes tu propio color.\n\nRindes al máximo en los campos que exigen creatividad (planificación, diseño, marketing, contenidos), sobre todo en entornos que te dan autonomía.\n\nPero ser creador tiene un precio. Te hieren con facilidad las sequías de ideas y que se infravalore tu trabajo. Practicar el disfrute del proceso, y no solo del resultado, es esencial.",
       "patterns": [
         "La autonomía te importa más que las reglas.",
         "Tienes el músculo de ejecución para hacer realidad las ideas.",
@@ -195,8 +195,8 @@
       ]
     },
     "THE_CHALLENGER": {
-      "headline": "Estás en tu mejor momento cuando las cosas están rotas y necesitan arreglo.",
-      "body": "No necesitas un sistema perfecto; necesitas un problema real. Ves lo que no funciona antes que nadie.\n\nEres un innovador que odia el statu quo. Preguntas '¿Por qué lo hacemos así?' y encuentras mejores caminos. Te conviertes en un verdadero líder en una crisis.\n\nPero si criticar se convierte en un hábito, la gente podría verte como negativo. No solo señales los problemas; ofrece soluciones y alternativas.",
+      "headline": "Demuestras tu valor cuando resuelves problemas y le das la vuelta a la situación.",
+      "body": "No soportas la paz estancada. Cuando alguien dice «siempre se ha hecho así», tu cerebro grita en silencio: «¿No habrá una forma mejor?».\n\nEn crisis, reestructuraciones o nuevos proyectos, aflora tu verdadero liderazgo. Te aferras a los problemas que otros abandonan y no sueltas hasta dar con la solución.\n\nPero demasiada crítica erosiona la moral del equipo. No te limites a señalar lo que está roto: ofrece siempre una alternativa.",
       "patterns": [
         "No puedes dejar pasar la ineficiencia.",
         "Sobresales en el liderazgo durante las crisis.",
@@ -387,7 +387,7 @@
     },
     "THE_RIVAL": {
       "headline": "Disfrutas de la competencia sana que los estimula mutuamente.",
-      "body": "Prefieres a alguien que te desafíe a alguien que siempre esté de acuerdo. Quieres una pareja dispuesta a debatir y empujar.\n\nIntercambian opiniones fuertes y se agudizan mutuamente a través de comentarios honestos. Nunca aburrido, siguen aprendiendo el uno del otro.\n\nPero no todas las conversaciones necesitan ser un debate. Sabe cuándo la otra persona necesita consuelo, no consejos.",
+      "body": "Prefieres a alguien que te desafíe antes que a alguien que siempre te dé la razón. Quieres a una persona dispuesta a debatir y a empujarte.\n\nTu relación se afila con opiniones contundentes y comentarios sinceros. Nunca resulta aburrida: siempre aprendes del otro.\n\nPero no toda conversación tiene que ser un debate. Sé consciente de cuándo la otra persona necesita consuelo y no consejos.",
       "patterns": [
         "No temes el desacuerdo.",
         "Tu humor y vena competitiva son profundos.",

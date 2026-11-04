@@ -1,6 +1,6 @@
 {
   "BALANCE_LABEL": "balance",
-  "CHART_HERO": "Your blueprint, expressed as four faces.",
+  "CHART_HERO": "Your blueprint, four faces.",
   "CHART_LAYER_META": {
     "year_pillar": {
       "label": "Childhood",
@@ -15,7 +15,7 @@
       "role": "Your true identity — who you are at your core"
     },
     "hour_pillar": {
-      "label": "Future",
+      "label": "Future & Inner World",
       "role": "Your inner world — your dreams and later years"
     }
   },
@@ -29,7 +29,7 @@
     "year_pillar": "ancestry / early environment",
     "month_pillar": "career / public life",
     "day_pillar": "self / partnership",
-    "hour_pillar": "inner world / legacy"
+    "hour_pillar": "inner world / later years"
   },
   "SINSAL_THEME_KEYWORD": {
     "MAGNETIC_DRAW": "magnetism and attraction",

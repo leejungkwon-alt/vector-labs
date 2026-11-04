@@ -2,32 +2,32 @@
   "SECTION_TITLES": {
     "cover": "命盘",
     "core": "核心",
-    "energy": "能量",
+    "energy": "你的能量图谱",
     "lucky_code": "幸运密码",
     "health": "身心健康",
-    "money": "财富",
-    "work": "事业",
-    "bonds": "关系",
+    "money": "财富与金钱",
+    "work": "工作与才能",
+    "bonds": "朋友与同事",
     "year": "流年",
     "timeline": "人生轨迹",
     "monthly": "月度运势",
-    "chart": "命盘",
-    "sinsal": "神煞"
+    "chart": "你的四张面孔",
+    "sinsal": "特殊特质"
   },
   "SUMMARY_LABELS": {
     "core": "核心",
-    "energy": "能源",
+    "energy": "能量",
     "lucky_code": "幸运码",
     "health": "正文",
     "money": "金钱模式",
-    "bonds": "债券",
+    "bonds": "朋友",
     "year": "今年",
     "monthly": "每月"
   },
   "INTENSITY_LABELS": {
-    "SELF_SOURCED": "自主采购",
+    "SELF_SOURCED": "自我充能型",
     "BALANCED_CORE": "平衡核心",
-    "ENVIRONMENT_TUNED": "针对环境优化的"
+    "ENVIRONMENT_TUNED": "环境响应型"
   },
   "MODE_DISPLAY": {
     "THE_STEWARD": "管家",
@@ -35,9 +35,9 @@
     "THE_FLOW": "流动型",
     "THE_CREATOR": "创作者",
     "THE_CHALLENGER": "挑战者",
-    "THE_OFFICER": "管理者",
+    "THE_OFFICER": "原则主义者",
     "THE_SURVIVOR": "幸存者",
-    "THE_MYSTIC": "神秘主义者",
+    "THE_MYSTIC": "探究者",
     "THE_MENTOR": "导师",
     "THE_GENERALIST": "通才",
     "THE_TWIN": "同伴者",
@@ -58,17 +58,17 @@
   "ENERGY_HERO_TEMPLATES": {
     "missing": "你主要依靠{dominant}——几乎没有{missing}。",
     "deficient": "你以{dominant}为主导，但内心深处却隐隐缺乏{deficient}。",
-    "default": "你的运行模式是 {dominant}。"
+    "default": "你的能量以{dominant}为核心。"
   },
   "TIMELINE_HERO": "你最辉煌的十年大约从{best_age}岁（{best_pillar}）开始。你最艰难的十年大约从{worst_age}岁开始。",
   "TIMELINE_GRADE_BLURB": {
-    "PEAK": "难得的契机。请审慎把握。",
+    "PEAK": "难得的契机。请有计划地加以利用。",
     "FAVORABLE": "顺风。顺势而为。",
     "NEUTRAL": "效果参差不齐。请关注哪些方法确实有效。",
     "CAUTION": "淡季。优先保证休息并划清界限。",
     "CHALLENGING": "艰难时期。若能顺利度过，你就会成长。"
   },
-  "LUCKY_CODE_HERO_TEMPLATE": "你的力量元素是 {element} —— 充分发挥它的力量吧。",
+  "LUCKY_CODE_HERO_TEMPLATE": "你现在最需要的能量是{element}。试着在日常中把它补充起来吧。",
   "WATCH_OUT_LABEL": "当心",
   "HEALTH_HERO_TEMPLATES": {
     "missing": "{dominant} 占主导地位——你几乎没有任何 {missing}。",
@@ -76,36 +76,36 @@
     "default": "{dominant} 塑造了你。"
   },
   "CHART_POSITION_TEMPLATES": {
-    "year_pillar": "在你的起源中，{archetype}塑造了你最初接触世界的方式。",
-    "month_pillar": "在你的公共工作中，{archetype} 就是你展现自我的方式。",
-    "day_pillar": "{archetype} 是你的核心——这就是真正的你。",
-    "hour_pillar": "在你的遗产中，{archetype} 将决定你留给后人的东西。"
+    "year_pillar": "受童年和家庭的影响，你天生带有“{archetype}”的气质。",
+    "month_pillar": "在社会生活和职场中，你像“{archetype}”一样行事，崭露头角。",
+    "day_pillar": "你最深的内在与本质是“{archetype}”。",
+    "hour_pillar": "随着年岁渐长，在内心深处，“{archetype}”的样子会慢慢显现。"
   },
-  "CHART_NOTE_TEMPLATE": "你的{a}和{b}拥有相同的“{archetype}”能量。这意味着它们密不可分——你的公众形象与你的本质合二为一。",
-  "DISCLAIMER": "注：本报告将天文计算与现代教练理论框架相结合，旨在提供个人洞见和娱乐价值。本报告不构成医疗、财务或心理建议。传统的“四柱命理”分析因流派而异——不同流派对同一命盘可能得出不同的结论，正如不同的治疗师对同一个人也会有不同的描述。 请将此报告视为一种发人深省的解读，而非定论。您的决定仍由您自己做主。如果您正处于危机之中，请联系当地紧急服务部门或自杀预防热线。如果您身处美国境外，请访问 https://findahelpline.com/。",
+  "CHART_NOTE_TEMPLATE": "你的{a}与{b}都是“{archetype}”。这意味着无论是工作时还是独处时，你的样子都是一样的。“职场中的我”与“真实的我”没有割裂，所以你始终真诚而一致；但工作与日常的界限容易变得模糊，也就容易感到疲惫。",
+  "DISCLAIMER": "说明：本报告结合天文计算与现代心理教练方法，旨在帮助自我了解并提供娱乐。本报告不属于医疗、金融或心理咨询。四柱命理的解读会因流派不同而得出不同结论——例如，有的流派注重补足你当下欠缺的能量，有的流派则更看重季节的平衡。两者并无对错。请将本报告视为一种参考视角，人生的决定请由你自己做出。如果你正处于危机之中，请联系当地的紧急服务或自杀预防热线。各地区热线可在 https://findahelpline.com/ 查询。",
   "MONEY_CONTENT": {
     "THE_STEWARD": {
-      "headline": "你进展缓慢——而这正是你的优势。",
-      "body": "与其冒险走捷径，你更愿意用心呵护某件事。对你而言，资源——时间、关注、人际关系——只要耐心管理，其价值便会倍增。\n\n你珍视那些经得起时间考验的事物。当别人在追逐下一个闪亮的新事物时，你却默默地巩固着已有的成果。这是一种难得的自律。\n\n风险在于，“谨慎”可能会变成一种关闭机会之门的习惯。过于保守地行事同样要付出代价。",
+      "headline": "你稳妥地守护资产，并借助复利让它不断增值。",
+      "body": "你极度讨厌风险，无法承受本金亏损。比起眼前的短期收益，你把长期的稳定放在第一位。\n\n这种倾向让你偏爱存款、债券、房地产等确定的安全资产。当别人为加密货币或股票短线而兴奋时，你在默默守护并壮大自己的资产。\n\n不过，过于保守可能跑不赢通货膨胀。把部分资产分散投资到成长型资产上，是你需要的智慧。",
       "action": "选一件你已经拥有的东西，问问自己：它是否仍在为我服务，还是我只是出于习惯才一直保留着它？",
       "patterns": [
         "现金和定期存款占比较高。",
-        "Fear of loss makes you delay decisions.",
+        "因为害怕亏损而迟迟不做决定。",
         "相信复利的力量，偏好长期持有。"
       ],
       "best_match": [
         "THE_OPERATOR",
         "THE_FLOW"
       ],
-      "best_reason": "A partner who adds returns on top of your safe base.",
+      "best_reason": "能在你稳健的基础上为你增添收益的伙伴。",
       "challenging_match": [
         "THE_STEWARD"
       ],
       "challenging_reason": "如果双方都一味求稳，资产增长可能赶不上通货膨胀。",
       "actions": [
-        "Diversify 10% of your assets into an index fund.",
-        "Once a year, compare your savings rate against inflation.",
-        "Start automatic dollar-cost averaging."
+        "只拿出资产的10%，分散投资到指数基金。",
+        "每年一次，对比存款利率与通货膨胀率。",
+        "通过自动转账，开始定期定额投资。"
       ],
       "red_flags": [
         "是否将所有资产都锁在了储蓄账户中？",
@@ -113,13 +113,13 @@
       ]
     },
     "THE_OPERATOR": {
-      "headline": "你将资源视为需要流动的能量。",
-      "body": "当别人只看到杂音时，你却能发现机遇。你对交流——无论是思想、关注还是资源的交流——有着敏锐的直觉。\n\n你很少满足于让事情停滞不前。你享受构建、连接和推动事物向前发展的动态能量。\n\n但当一切都飞速流动时，漏洞可能与溪流一样大。让你保持平衡的不是速度——而是你真正全身心投入的少数几件事。",
+      "headline": "你擅长灵活运用资金、捕捉机会。",
+      "body": "你享受资金流动的感觉。比起把资本闲置，你更擅长捕捉新机会并让它运转起来。\n\n副业、小型创业、短期投资……你在多个方面都有创造收益的敏锐感觉。凭借果断的决策力，别人犹豫时你敢于大胆下注，有时能赢得丰厚回报。\n\n但当一切都加速流动，漏洞也会随之变大。如果在现金流良好时不建好安全网，遇到危机就会很脆弱。",
       "action": "这周，留意你的能量流向何处，又从何处流失。不是为了去解决它——只是为了观察它。",
       "patterns": [
-        "You try to build multiple income sources.",
-        "You take risks but spread them out.",
-        "Spending rises as fast as income does."
+        "你会努力打造多元化的收入来源。",
+        "你敢于承担风险，但会把风险分散开。",
+        "支出的增长速度和收入一样快。"
       ],
       "best_match": [
         "THE_STEWARD",
@@ -131,9 +131,9 @@
       ],
       "challenging_reason": "如果双方都热衷冒险，遭遇危机时将难以恢复。",
       "actions": [
-        "Lock 30% of income into automatic savings.",
-        "Impose a 3-day cooling-off period before any new investment.",
-        "Use a debit card instead of credit to control spending."
+        "把收入的30%固定设为自动储蓄，没有例外。",
+        "任何新投资之前，先设置3天的冷静期。",
+        "用借记卡代替信用卡，控制支出。"
       ],
       "red_flags": [
         "收入虽然很高，但银行账户里却总是留不下钱？",
@@ -141,12 +141,12 @@
       ]
     },
     "THE_FLOW": {
-      "headline": "你与资源的关系会随着你的人生而变化。",
-      "body": "你对金钱没有固定的态度。当你的生活步入正轨时，资源往往会主动找上门；反之，无论付出多少努力，似乎都收效甚微。\n\n你对“什么最重要”的判断是凭直觉的，而非循规蹈矩。比起任何既定的计划，你更在意今天自己的注意力集中在哪里。\n\n其中的风险在于，这种灵活性可能会沦为逃避承诺的借口。哪怕只有一个稳定的习惯，也能为其他习惯奠定基础。",
+      "headline": "你灵活地顺着金钱的流向而行。",
+      "body": "你对金钱没有固定观念。你借助人脉、直觉和局势的流向，自然而然地创造收入。\n\n有时大笔资金涌入，有时账户又见底。但你能淡然接受这种起伏，并且在需要的时刻有把机会吸引过来的能力。\n\n这种灵活是你的优势，但毫无计划、随性花钱的习惯可能让财务陷入危险。最基本的安全保障必不可少。",
       "action": "请写下你本月的三项最大开支。它们是否反映了你目前的状况？",
       "patterns": [
         "收入与支出的波动较大。",
-        "Wealth opportunities arrive through people.",
+        "你的财富机会通过人脉而来。",
         "与其制定预算，不如随性消费。"
       ],
       "best_match": [
@@ -157,11 +157,11 @@
       "challenging_match": [
         "THE_OPERATOR"
       ],
-      "challenging_reason": "Two improvisers is a fast road to ruin.",
+      "challenging_reason": "两个人都随性而为，是通往破产的捷径。",
       "actions": [
-        "Split into two accounts (emergency / living).",
-        "Wait 24 hours before any large purchase.",
-        "Save 10% of every month's income, unconditionally."
+        "把账户分成两个（应急备用金/生活费）。",
+        "大额消费前，务必先等24小时。",
+        "每月收入的10%，无条件存起来。"
       ],
       "red_flags": [
         "是否每个月都在拆东墙补西墙地偿还信用卡？",
@@ -171,13 +171,13 @@
   },
   "WORK_CONTENT": {
     "THE_CREATOR": {
-      "headline": "当你能在工作中看到自己留下的印记时，你就会如鱼得水。",
-      "body": "你对毫无意义的琐事过敏。你需要从零开始创造一些东西，或者在其中注入你独特的见解。\n\n你的脑海中总是翻涌着各种想法。当你将这些想法付诸实践并激励他人时，你会感到最大的成就感。在能够自由发挥创造力的自主环境中，你才能真正大放异彩。\n\n但你也必须接受作为创作者的痛苦。当灵感枯竭或作品被低估时，你会很容易受到伤害。学会不执着于结果，而享受过程本身。",
+      "headline": "当作品带着你独有的印记时，你最为耀眼。",
+      "body": "你讨厌照手册办事。当你亲自策划、创造，并为作品染上属于自己的色彩时，你会获得最大的成就感。\n\n在策划、设计、营销、内容制作等需要创造力的领域，你能发挥出卓越的才能。在保障自主性的环境中，你的表现最佳。\n\n但你也要承受作为创作者的痛苦。灵感枯竭或作品被低估时，你很容易受伤。你需要练习享受过程，而不只看重结果。",
       "action": "本周请预留90分钟，专心进行创作，绝不被任何事情打断。",
       "patterns": [
-        "Autonomy matters more to you than rules.",
+        "比起规则，你更看重自主性。",
         "拥有将创意转化为现实的强大执行力。",
-        "You react sharply to criticism."
+        "对批评反应敏感。"
       ],
       "best_match": [
         "THE_OFFICER",
@@ -189,9 +189,9 @@
       ],
       "challenging_reason": "会与只强调规则的直属上司发生正面冲突。",
       "actions": [
-        "Carve out 5 hours a week of deep creative focus.",
-        "Ship output at 80% instead of 100%.",
-        "Reframe criticism as feedback, not attack."
+        "每周为创作预留5小时的沉浸时间。",
+        "试着在完成度80%时就把成果公之于世。",
+        "把批评当作反馈，而不是对个人的攻击。"
       ],
       "red_flags": [
         "是否因为追求完美主义而频繁错过截止日期？",
@@ -199,27 +199,27 @@
       ]
     },
     "THE_CHALLENGER": {
-      "headline": "当事情出了问题、需要修复时，你才能发挥出最佳状态。",
-      "body": "你不需要一个完美的系统，你需要一个真实的问题。你能比任何人都更早发现哪里出了问题。\n\n你是一位厌恶现状的创新者。你会问“为什么我们要这样做？”，并寻找更好的方法。在危机中，你会成为真正的领导者。\n\n但如果批评成了习惯，人们可能会认为你消极。不要只是指出问题，还要提出解决方案和替代方案。",
+      "headline": "当你解决问题、掀翻旧局时，才真正显出价值。",
+      "body": "你无法忍受平静而停滞的局面。当有人说“一直都是这么做的”，你的大脑就会呐喊：“难道没有更好的办法吗？”\n\n在危机、重组、拓展新业务等需要解决问题的地方，你会展现真正的领导力。别人放弃时，你锲而不舍地死磕，最终找到答案。\n\n但过度的批评和指责会打击团队士气。不要只是指出问题，一定要养成同时提出替代方案的习惯。",
       "action": "向真正有能力改变现状的人，坦率地倾诉一件让你默默感到沮丧的事情。",
       "patterns": [
-        "You can't let inefficiency slide.",
-        "You rise into leadership during crises.",
-        "You're unafraid to challenge authority."
+        "看到低效就无法容忍。",
+        "在危机时刻，你的领导力会显现出来。",
+        "你不害怕挑战权威。"
       ],
       "best_match": [
         "THE_CREATOR",
         "THE_OFFICER"
       ],
-      "best_reason": "Someone who can turn your ideas into products or systems.",
+      "best_reason": "能把你的创新想法落地为真实产品或系统的人。",
       "challenging_match": [
         "THE_OFFICER"
       ],
       "challenging_reason": "容易与高度重视既有规则的人产生摩擦。",
       "actions": [
-        "Always pair complaints with alternatives.",
+        "表达不满时，务必同时提出“替代方案”。",
         "请学会顾及上司颜面的沟通技巧。",
-        "Practice listening to a colleague all the way through."
+        "练习把同事的意见听完。"
       ],
       "red_flags": [
         "是否为了反对而反对？",
@@ -227,19 +227,19 @@
       ]
     },
     "THE_OFFICER": {
-      "headline": "只有在值得信赖的框架内，你才能发挥出最佳水平。",
-      "body": "你需要的是合情合理的规则。在合适的团队里，你是中流砥柱；在不合适的团队里，你只会筋疲力尽。\n\n你重视原则和公平。你有能力建立并维护让他人能够安全工作的体系。你凭借强烈的责任感和可靠性赢得了信任。\n\n但过于拘泥于规则可能会让你显得缺乏灵活性。请记住，有时人比流程更重要。",
+      "headline": "你是体系完善的组织里值得信赖的核心人才。",
+      "body": "你重视原则与流程。在规则明确、体系完善的组织里，你的业绩最为稳定。\n\n你公正而有责任感，深受上司和同事的信赖。大企业、公共机构、金融、法律等重视体系的领域非常适合你。\n\n但在变化迅速或标准模糊的环境里，你可能会感到憋闷。请记住，有时灵活应对比死守规则更重要。",
       "action": "请写下三项你认为工作应体现的价值观。你目前所在的工作环境是否与这些价值观一致？",
       "patterns": [
         "对于交代的工作，一定会保质保量完成。",
         "非常看重等级秩序与汇报体系。",
-        "You're excellent at pre-empting risk."
+        "你擅长提前防范风险。"
       ],
       "best_match": [
         "THE_CHALLENGER",
         "THE_PIONEER"
       ],
-      "best_reason": "Innovators who add change on top of your stable foundation.",
+      "best_reason": "能在稳固的体系之上带来新变化的创新者。",
       "challenging_match": [
         "THE_CHALLENGER"
       ],
@@ -247,7 +247,7 @@
       "actions": [
         "学习新的工作工具，实现业务流程自动化。",
         "当上司指示不合理时，请用数据说话劝服对方。",
-        "Practice welcoming ideas from younger colleagues."
+        "练习接纳年轻同事的想法。"
       ],
       "red_flags": [
         "是否总把“以前一直都是这么做的”挂在嘴边？",
@@ -255,11 +255,11 @@
       ]
     },
     "THE_SURVIVOR": {
-      "headline": "压力能让人成长，但这种压力必须有其意义。",
-      "body": "你对辛勤工作有着极高的承受力，但你知道何时代价过高。你曾果断放弃那些足以击垮他人的事情。\n\n面对危机时，你会本能地进入生存模式。当别人说“不可能”时，你却仍有突破的能量。你将逆境转化为成长的阶梯。\n\n但你的坚韧在旁人眼中可能显得冷酷或无情。别忘了，展现脆弱也是一种真正的力量。",
+      "headline": "你在超出常人极限的压力中被磨炼成长。",
+      "body": "你的压力承受极限比别人高。危机中你反而更加专注，别人说不可能的事，你也有咬牙做成的韧劲。\n\n在销售、重组、危机管理等压力巨大的领域，你格外出色。目标一旦确定，你便不顾一切地向前冲。\n\n但过分的坚强可能让周围的人误会你“冷冰冰”“太狠”。有时展现脆弱的一面，也是领导力的一种形式。",
       "action": "回想一下，上一次你为了自己而放弃赶截止日期的时候。回想一下，你当时为什么这么做。",
       "patterns": [
-        "You stay calm under crisis.",
+        "危机中依然能保持冷静。",
         "对既定目标有着极其强烈的执念。",
         "不善于表达自身的情绪。"
       ],
@@ -267,15 +267,15 @@
         "THE_MENTOR",
         "THE_FLOW"
       ],
-      "best_reason": "Someone who softens your edge.",
+      "best_reason": "能柔化你锋芒的人。",
       "challenging_match": [
         "THE_SURVIVOR"
       ],
       "challenging_reason": "如果双方都很具攻击性，团队将会大受波及。",
       "actions": [
-        "Set one full day off each week.",
-        "Approach a colleague first with thanks.",
-        "Use exercise or a hobby to discharge stress."
+        "每周定出完整的一天休息日。",
+        "主动走近同事，表达感谢。",
+        "通过运动或爱好来释放压力。"
       ],
       "red_flags": [
         "是否忽视了倦怠信号，仍在过度硬撑？",
@@ -283,27 +283,27 @@
       ]
     },
     "THE_MYSTIC": {
-      "headline": "你会跳出框框思考，这就是你的超能力。",
-      "body": "你能发现别人忽略的关联。你的最佳作品往往走的是迂回曲折的道路。当它最终呈现时，总能带来与众不同的效果。\n\n你的直觉和洞察力非同寻常。你能洞见表象背后的本质。深度专注的工作——研究、分析、战略制定——正是你所擅长的领域。\n\n但思考过于深入可能会延误行动。在完美的蓝图形成之前就行动起来吧。前路会在你前行的过程中逐渐展开。",
+      "headline": "你能看透他人看不到的本质与结构。",
+      "body": "比起表面的现象，你更爱钻研背后的原理。你擅长分析复杂的数据或现象，并提炼出核心。\n\n在研究、战略规划、数据分析、咨询等需要深度思考的领域，你能取得非凡的成绩。你的直觉和洞察力出众，能找到别人错过的关联。\n\n但想得太深会拖慢执行。别等完美的蓝图画好，要有先开始的勇气。",
       "action": "本周给自己留出一小时，不要安排任何计划。顺着任何吸引你的线索走，无需设定目标。",
       "patterns": [
-        "You analyze heavily before acting.",
+        "行动之前会做大量分析。",
         "具备极为出色的直觉洞察力。",
-        "Surface-level work bores you."
+        "对停留在表面的工作感到乏味。"
       ],
       "best_match": [
         "THE_PIONEER",
         "THE_CHALLENGER"
       ],
-      "best_reason": "Executors who turn your analysis into action.",
+      "best_reason": "能把你的分析转化为实际行动的执行者。",
       "challenging_match": [
         "THE_GENERALIST"
       ],
       "challenging_reason": "无法与缺乏深度的人进行深入沟通。",
       "actions": [
-        "Force yourself to take the first step within 3 days of analysis.",
+        "分析之后，3天内务必迈出第一步。",
         "将你的分析可视化，并分享给团队成员。",
-        "Find a partner with strong execution."
+        "找一位执行力强的搭档。"
       ],
       "red_flags": [
         "是否因过度分析而频繁错失良机？",
@@ -311,11 +311,11 @@
       ]
     },
     "THE_MENTOR": {
-      "headline": "当你帮助他人成长时，你也会因此而茁壮成长。",
-      "body": "你不仅希望自己做得出色，更希望帮助他人变得出色。你最杰出的贡献往往是无形的，发生在他人内心深处。\n\n你天生擅长分享知识和经验。你能发现后辈或同行的潜力，并悉心培养，助其茁壮成长。\n\n但帮助他人成长可能会让你忽视自身的成长。展现出你自己仍在学习和成长，这将给他人带来更大的鼓舞。",
+      "headline": "你格外擅长激发他人的潜力。",
+      "body": "你天生擅长发现并培养他人的优势。你喜欢教导和建议，看到后辈成长会获得巨大的成就感。\n\n在教育、人力资源、咨询、管理等领域，你表现突出。你带过的团队，在你离开之后依然延续着你留下的文化。\n\n但过于专注他人的成长，可能让你错过自己的成长。当你展现出自己仍在不断学习和成长时，会赢得更大的尊敬。",
       "action": "联系一位你曾帮助过的人，告诉他你在他身上看到了怎样的潜力。",
       "patterns": [
-        "You listen well to juniors' struggles.",
+        "善于倾听后辈的烦恼。",
         "乐于分享知识与经验。",
         "往往会将自己的成果与利益推后。"
       ],
@@ -329,9 +329,9 @@
       ],
       "challenging_reason": "可能与独来独往的“单打独斗型”风格不太合拍。",
       "actions": [
-        "Define your own career goals clearly.",
-        "Build expertise of your own beyond mentoring.",
-        "也请向下属展示虚心向他们学习的态度。"
+        "明确界定自己的职业目标。",
+        "在指导之外，建立属于自己的专业能力。",
+        "也请向你指导的后辈展示你仍在向他们学习的态度。"
       ],
       "red_flags": [
         "是否光顾着照顾下属，反而导致自己的绩效评价偏低？",
@@ -339,27 +339,27 @@
       ]
     },
     "THE_GENERALIST": {
-      "headline": "你就是那种样样都懂一点的人。",
-      "body": "你并非某个领域的专家，而这恰恰是你的优势。你能将不同领域的项目有机地串联起来。正是在这些衔接之处，才最需要你。\n\n与深入钻研一件事相比，你更倾向于积累广泛的经验。实际上，你正是那种能够连接不同领域、创造新价值的“T型”人才。\n\n或许有人会说你缺乏深度。但要想让你的广度真正成为优势，你需要打造至少一项“尖端专长”——一个无人能及的领域。",
+      "headline": "你游走于多个领域，创造出协同效应。",
+      "body": "你不是死磕一个领域的专家。你是把多个领域的知识连接起来创造新价值的“T型人才”。\n\n策划、PM、项目管理等需要在各方利益相关者之间发挥润滑作用的职位很适合你。你能灵活适应变化，在任何组织里都能立足。\n\n但你可能会被评价“缺乏深度”。要让广阔的视野成为真正的优势，你至少要在一个领域打造出无人能及的“尖峰”。",
       "action": "选出两项你通常分开使用的技能，然后找一个需要同时运用这两项技能的项目。",
       "patterns": [
         "好奇心强，非常享受学习新事物。",
         "能根据具体情况灵活转变自身角色。",
-        "Your focus sometimes scatters."
+        "有时注意力会分散。"
       ],
       "best_match": [
         "THE_MYSTIC",
         "THE_BLADE"
       ],
-      "best_reason": "People who integrate your varied ideas into one strategy.",
+      "best_reason": "能把你多样的想法整合成一个战略的人。",
       "challenging_match": [
         "THE_OFFICER"
       ],
-      "challenging_reason": "People who insist on one rule frustrate you.",
+      "challenging_reason": "和只坚持一条规则的人相处，你会感到憋闷。",
       "actions": [
         "请选择一个今年要集中攻克的专业领域。",
-        "Use your broad network to create collaboration opportunities.",
-        "Turn your experience into content."
+        "利用广泛的人脉，创造合作机会。",
+        "试着把你的经验整理成内容。"
       ],
       "red_flags": [
         "是否铺张了太多事情，却总是无法善始善终？",
@@ -369,13 +369,13 @@
   },
   "BONDS_CONTENT": {
     "THE_TWIN": {
-      "headline": "你们是通过平等的伙伴建立联系，而不是通过观众。",
-      "body": "你不需要领导者，也不需要追随者；你需要的是一个与你并肩前行、朝着同一方向走去的伙伴。你不需要被需要——你需要的是被理解。\n\n你与他人保持平等的相处方式。你珍视那种既能承认彼此差异，又能共同成长的关系。\n\n但若只追求“酷”的关系，反而会阻碍深层亲密感的建立。要真正拉近距离，你们需要学会偶尔互相依靠。",
+      "headline": "在平等的关系中，你最感自在。",
+      "body": "你不喜欢带领别人，也不喜欢依赖别人。你想要的是平视对方的目光、朝着同一个方向并肩前行的伙伴。\n\n你最理想的关系，是认可彼此的不同、共同成长。你们不给对方添负担，却能建立深厚的纽带。\n\n但如果只追求太“酷”的关系，可能很难建立深层的亲密感。有时也需要学会彼此依靠。",
       "action": "给一个与你旗鼓相当的人发条消息吧。不是为了索取什么，只是为了建立联系。",
       "patterns": [
-        "You prefer friend-level comfort over romance.",
-        "You respect each other's private space.",
-        "You dislike power struggles."
+        "比起恋人，你更追求朋友般的自在。",
+        "你们彼此尊重隐私。",
+        "讨厌争夺主导权。"
       ],
       "best_match": [
         "THE_ALLY",
@@ -385,11 +385,11 @@
       "challenging_match": [
         "THE_TWIN"
       ],
-      "challenging_reason": "Two cool types can make the relationship stale.",
+      "challenging_reason": "两个人都太“酷”，关系可能会变得平淡。",
       "actions": [
-        "Sometimes be the first to reach out.",
-        "Speak up honestly when something is off.",
-        "Create one shared hobby."
+        "偶尔主动伸出手。",
+        "对方让你心里不舒服时，坦率说出来。",
+        "培养一个可以一起做的爱好。"
       ],
       "red_flags": [
         "是否因过于冷漠淡然，导致对方感到受伤害？",
@@ -397,11 +397,11 @@
       ]
     },
     "THE_RIVAL": {
-      "headline": "你们之间的纽带，既源于摩擦，也源于温暖。",
-      "body": "你需要那些敢于提出异议的人。你最棒的人际关系中总带着一丝竞争的火花，而这正是维系这些关系的关键。\n\n你从与持不同意见的人交谈中获得灵感。你享受那种能够互相提出犀利反馈、彼此磨砺的关系。\n\n但并非每一次对话都必须变成争论。你需要具备同理心，去理解对方此刻是需要安慰还是建议。",
+      "headline": "你享受彼此激发的良性竞争。",
+      "body": "比起一味对你点头称是的人，你更想要愿意与你辩论、推你一把的人。\n\n你们交换不同的意见，有时尖锐地给出反馈，彼此磨砺。这样的关系从不无聊，你也能不断从对方身上学到东西。\n\n但不必把每次对话都变成争论。你需要有共情能力，分辨对方此刻是想要安慰，还是想要建议。",
       "action": "联系一位与你之间曾有过良性摩擦的人，并请他/她坦率地表达真实看法。",
       "patterns": [
-        "You don't fear disagreement.",
+        "你不害怕意见冲突。",
         "幽默感与胜负欲都很强。",
         "比起感性，更倾向于用逻辑进行沟通。"
       ],
@@ -413,11 +413,11 @@
       "challenging_match": [
         "THE_RIVAL"
       ],
-      "challenging_reason": "If both want to win, the relationship breaks.",
+      "challenging_reason": "两个人都想赢，关系就会破裂。",
       "actions": [
-        "Check the other person's feelings mid-debate.",
-        "Compliment your partner once a day.",
-        "Practice listening without countering."
+        "即使在争论中，也要留意对方的感受。",
+        "每天至少夸对方一次。",
+        "有时练习不去反驳，只是倾听。"
       ],
       "red_flags": [
         "是否为了赢下争论而说出伤人的话？",
@@ -425,11 +425,11 @@
       ]
     },
     "THE_ALLY": {
-      "headline": "你们因忠诚和共同的价值观而紧密相连。",
-      "body": "你不会随意结交人。你会慎重选择，一旦选择便始终如一。你的忠诚虽不张扬，却毋庸置疑。\n\n你非常重视忠诚。当朋友或家人遇到困难时，你总是第一个赶去帮忙的人。你的坚定让许多人信任并依赖你。\n\n但你的忠诚有时也会成为对方的负担。放下那种非要为他们解决一切问题的执念，看着他们独立站稳脚跟，这也是一种爱。",
+      "headline": "一旦结下缘分，你就会负责到底。",
+      "body": "你不会随便结交任何人。你会慎重挑选，一旦成为你的人，就会长长久久。你的忠诚安静，却非常有力。\n\n朋友或家人遇到困难时，你总是第一个赶去帮忙。你身边始终有可靠的助力者相伴。\n\n但你过度的忠诚有时会成为对方的负担。放下“必须由我解决一切”的执念，守望对方自己站起来，也是一种爱。",
       "action": "主动联系一下你一直想找的人。不是因为你必须这么做，而是因为你想这么做。",
       "patterns": [
-        "You place enormous value on loyalty.",
+        "你非常看重情义。",
         "无法对身处困境的朋友袖手旁观。",
         "对自己圈子里的内部人员无比包容。"
       ],
@@ -443,8 +443,8 @@
       ],
       "challenging_reason": "可能会被试图利用你忠诚度的人所伤害。",
       "actions": [
-        "Drop the compulsion to solve everything yourself.",
-        "Help only when asked.",
+        "放下“必须由我来解决一切”的执念。",
+        "练习只在对方开口求助时才出手帮忙。",
         "请果断清理那些让你感到消耗与疲惫的关系。"
       ],
       "red_flags": [
@@ -453,13 +453,13 @@
       ]
     },
     "THE_EMPATH": {
-      "headline": "通过感同身受，你们之间便建立了情感纽带。",
-      "body": "你善于快速而准确地洞察他人。在对方自己察觉之前，你就能发现他们状态不对劲。这让你成为一位难得的朋友——但请务必保护好自己的精力。\n\n你拥有深厚的同理心，能将他人的痛苦视作自己的痛苦。人们之所以聚集在你身边，是因为你无需他们开口，就能理解他们的心声。\n\n但过度共情意味着你常常忽视自己的感受，从而感到精疲力竭。你必须学会设定健康的心理界限。",
+      "headline": "你是能深深读懂他人情绪的共情者。",
+      "body": "你能快速而准确地捕捉他人的心情，甚至比本人更早发现对方情绪不佳，所以你是难得的好朋友。\n\n不用开口就能懂对方的心，人们因此聚集到你身边。你给予对方深深的情绪安全感。\n\n但过度代入他人的情绪，会让你顾不上自己的感受而疲惫不堪。你一定要练习在自己与他人之间建立健康的心理界限。",
       "action": "本周请至少自问一次：“这种情绪是我的，还是我背负了别人的？”",
       "patterns": [
-        "You read facial shifts well.",
+        "你善于解读对方的表情变化。",
         "非常擅长共情与给予他人慰藉。",
-        "You try to carry everyone's feelings alone."
+        "你总想独自扛起所有人的情绪。"
       ],
       "best_match": [
         "THE_RIVAL",
@@ -469,11 +469,11 @@
       "challenging_match": [
         "THE_EMPATH"
       ],
-      "challenging_reason": "Two empaths exhaust each other.",
+      "challenging_reason": "两个人都在扛情绪，彼此都会很疲惫。",
       "actions": [
-        "Ask yourself once a day how you feel first.",
-        "Don't resolve others' emotions for them.",
-        "Protect enough alone time."
+        "每天先问问自己：我现在感觉如何？",
+        "不要替对方去化解他们的情绪。",
+        "给自己留足独处的时间。"
       ],
       "red_flags": [
         "是否过于深陷在他人的悲伤情绪中？",

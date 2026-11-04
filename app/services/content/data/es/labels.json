@@ -1,6 +1,6 @@
 {
   "BALANCE_LABEL": "equilibrio",
-  "CHART_HERO": "Tu plano, expresado como cuatro rostros.",
+  "CHART_HERO": "Tu plano, cuatro rostros.",
   "CHART_LAYER_META": {
     "year_pillar": {
       "label": "Infancia",
@@ -15,7 +15,7 @@
       "role": "Tu identidad verdadera — quién eres en esencia"
     },
     "hour_pillar": {
-      "label": "Futuro",
+      "label": "Futuro y mundo interior",
       "role": "Tu mundo interior — tus sueños y tus años posteriores"
     }
   },
@@ -29,7 +29,7 @@
     "year_pillar": "ancestros y entorno temprano",
     "month_pillar": "carrera y vida pública",
     "day_pillar": "ser y pareja",
-    "hour_pillar": "mundo interior y legado"
+    "hour_pillar": "mundo interior y años finales"
   },
   "SINSAL_THEME_KEYWORD": {
     "MAGNETIC_DRAW": "magnetismo y atracción",
@@ -61,25 +61,25 @@
     "BY_ELEMENT": {
       "GROWTH": "La energía del Crecimiento (Madera) se superpone a todo esto: un fuerte impulso para seguir expandiéndose y abriendo nuevos caminos.",
       "SPARK": "A esto se suma la energía de la Chispa (Fuego): una fuerza apasionada e inmediata que impulsa esta tendencia.",
-      "GROUND": "Las capas de energía de la tierra (tierra) que se superponen a esto: esta tendencia se manifiesta a través de la construcción de cimientos sólidos y bien pensados.",
-      "EDGE": "Las capas de energía «Edge» (Metal) se superponen a esto: lo abordas con criterios claros y una gran determinación.",
-      "FLOW": "Las capas de energía Flow (Agua) se superponen a esto, lo que confiere a esta tendencia una sabiduría flexible y receptiva que se adapta al momento."
+      "GROUND": "A esto se suma la energía estable de la Tierra (土), y esta tendencia se manifiesta construyendo una base con prudencia y solidez.",
+      "EDGE": "A esto se suma la energía del Filo (金): con criterios claros y una decisión afilada, vas poniendo orden en la situación.",
+      "FLOW": "A esto se suma la energía flexible del Flujo (水), que te da la fuerza para afrontar cada situación con sabiduría y flexibilidad."
     },
     "BY_MODE_SECTION": {
       "love": {
-        "THE_TWIN": "El modo «Twin» es especialmente eficaz: tratas a tu pareja como a un compañero de toda la vida y como a un igual, no como un papel que interpretar.",
+        "THE_TWIN": "El modo «Compañero» es especialmente eficaz: tratas a tu pareja como a un compañero de toda la vida y como a un igual, no como un papel que interpretar.",
         "THE_RIVAL": "El modo «Rival» es especialmente intenso: lo que buscas es una relación en la que ambos os motivéis mutuamente y crezcáis juntos.",
-        "THE_ALLY": "El modo «Ally» es especialmente intenso: una vez que te comprometes con un vínculo, te mantienes fiel a él y le dedicas toda tu lealtad."
+        "THE_ALLY": "El modo «Aliado» es especialmente intenso: una vez que te comprometes con un vínculo, te mantienes fiel a él y le dedicas toda tu lealtad."
       },
       "career": {
         "THE_CREATOR": "El modo «Creador» es especialmente potente: destacas cuando rompes los moldes establecidos y creas obras originales.",
-        "THE_OFFICER": "El modo «Officer» es especialmente eficaz: te convierte en un talento clave de confianza dentro de organizaciones estructuradas.",
-        "THE_CHALLENGER": "El modo «Challenger» es especialmente potente: tienes el instinto de un líder capaz de resolver problemas y superar crisis."
+        "THE_OFFICER": "El modo «Guardián» es especialmente eficaz: te convierte en un talento clave de confianza dentro de organizaciones estructuradas.",
+        "THE_CHALLENGER": "El modo «Desafiante» es especialmente potente: tienes el instinto de un líder capaz de resolver problemas y superar crisis."
       },
       "wealth": {
-        "THE_OPERATOR": "El modo «Operator» es especialmente eficaz: detectas oportunidades que otros pasan por alto y haces crecer tus activos de forma contundente.",
-        "THE_STEWARD": "El modo «Steward» es especialmente eficaz: proteges lo que tienes y dejas que el crecimiento compuesto haga su trabajo.",
-        "THE_FLOW": "El modo «Flow» es especialmente potente: te dejas llevar por la corriente del dinero con flexibilidad y atraes la riqueza de forma natural."
+        "THE_OPERATOR": "El modo «Operador» es especialmente eficaz: detectas oportunidades que otros pasan por alto y haces crecer tus activos de forma contundente.",
+        "THE_STEWARD": "El modo «Administrador» es especialmente eficaz: proteges lo que tienes y dejas que el crecimiento compuesto haga su trabajo.",
+        "THE_FLOW": "El modo «Flujo» es especialmente potente: te dejas llevar por la corriente del dinero con flexibilidad y atraes la riqueza de forma natural."
       }
     }
   }
