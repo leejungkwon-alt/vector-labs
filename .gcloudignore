@@ -1,0 +1,34 @@
+﻿# Cloud Build ignore — do NOT mirror .gitignore!
+# Only exclude obviously unnecessary directories
+
+.git/
+.gitignore
+.gcloudignore
+
+# Frontend (backend doesn't need)
+frontend/
+tma/
+node_modules/
+
+# Local artifacts
+review_export/
+.review_backups/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.pre_autofix*
+*.pre_align*
+*.pre_v2
+*.pre_final
+*.pre_align2
+*.pre_align3
+*.pre_final
+.env
+.env.*
+
+# Local DB (Cloud Run uses /tmp/auth.db)
+data/auth.db
+
+# IDE
+.vscode/
+.idea/
