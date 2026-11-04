@@ -1,4 +1,5 @@
-﻿# Vercel 자동 빌드를 위해 소스 코드는 포함, 불필요한 것만 제외
+﻿# Vercel 자동 빌드용 .vercelignore
+# 주의: `/app/` 처럼 앞에 슬래시를 붙여야 "루트의 app/ 폴더만" 제외됩니다.
 
 # 의존성/캐시
 node_modules
@@ -18,29 +19,27 @@ frontend/dist
 .vercel
 .vercelignore
 
-# 백엔드/운영 (Vercel에서 안 씀)
-app/
-scripts/
-tests/
-data/
-docs/
-prompts/
-review_export/
-backups/
-migrations/
-tma/
-Dockerfile
-docker-compose.yml
-.gcloudignore
-deploy.ps1
-*.ps1
-conftest.py
+# 백엔드 (Vercel에서 안 씀) — 앞에 / 붙여 루트만 제외
+/app/
+/scripts/
+/tests/
+/data/
+/docs/
+/prompts/
+/review_export/
+/backups/
+/migrations/
+/tma/
+/Dockerfile
+/docker-compose.yml
+/.gcloudignore
+/deploy.ps1
+/conftest.py
+/*.ps1
 
-# dump/대용량 텍스트 (빌드에 불필요)
-*.txt
-*.md
-!frontend/package.json
-!frontend/app.json
+# dump/대용량 텍스트
+/*.txt
+/*.md
 
 # 임시/백업
 *.bak
