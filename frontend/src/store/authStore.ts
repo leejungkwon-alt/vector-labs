@@ -5,7 +5,7 @@ import * as AuthSession from 'expo-auth-session';
 import * as Crypto from 'expo-crypto';
 import * as WebBrowser from 'expo-web-browser';
 import type { AuthResponse } from '../../types';
-import { api, setAuthToken } from '../api/client';
+import { api, setAuthToken, ApiError } from '../api/client';
 import { storage } from './secureStore';
 
 declare var process: { env: Record<string, string | undefined> };
@@ -90,6 +90,7 @@ async function getKakaoAccessToken(): Promise<string> {
 interface AuthState {
   user: User | null;
   ready: boolean;
+  authError: string | null;
   bootstrap: () => Promise<void>;
   linkAccount: (provider: Provider) => Promise<void>;
   signInAnonymous: () => Promise<void>;
@@ -99,37 +100,41 @@ interface AuthState {
 export const useAuthStore = create<AuthState>((set) => ({
   user: null,
   ready: false,
+  authError: null,
   bootstrap: async () => {
-    let t = await storage.getItem(TOKEN_KEY);
+    const createAnonymous = async () => {
+      const res = await api.anonymous();
+      await storage.setItem(TOKEN_KEY, res.access_token);
+      setAuthToken(res.access_token);
+      set({ user: res.user, ready: true, authError: null });
+    };
 
-    // 1. 토큰이 없는 경우 -> 새 계정 생성
-    if (!t) {
-      try {
-        const res = await api.anonymous();
-        await storage.setItem(TOKEN_KEY, res.access_token);
-        setAuthToken(res.access_token);
-        set({ user: res.user, ready: true });
-      } catch (e) {
-        set({ ready: true });
-      }
-      return;
-    }
-
-    // 2. 토큰이 있는 경우 -> 유효성 검사
-    setAuthToken(t);
     try {
-      const me = await api.me();
-      set({ user: me.user, ready: true });
-    } catch {
-      // 토큰이 만료되었으면 새로 생성
-      try {
-        const res = await api.anonymous();
-        await storage.setItem(TOKEN_KEY, res.access_token);
-        setAuthToken(res.access_token);
-        set({ user: res.user, ready: true });
-      } catch (e) {
-        set({ ready: true });
+      const t = await storage.getItem(TOKEN_KEY);
+
+      // 1. 저장된 토큰이 없으면 새 익명 계정
+      if (!t) {
+        await createAnonymous();
+        return;
       }
+
+      // 2. 토큰이 있으면 유효성 검사
+      setAuthToken(t);
+      try {
+        const me = await api.me();
+        set({ user: me.user, ready: true, authError: null });
+      } catch (e) {
+        // 토큰이 "진짜로" 무효일 때(401)만 새 계정을 만든다.
+        // 네트워크/500 같은 일시 장애에서 새 계정을 만들면 기존 계정(구독 포함)을 잃는다.
+        if (e instanceof ApiError && e.status === 401) {
+          await createAnonymous();
+        } else {
+          throw e;
+        }
+      }
+    } catch (e: any) {
+      console.warn('[auth] bootstrap failed:', e);
+      set({ ready: true, authError: e?.detail ?? e?.message ?? 'auth failed' });
     }
   },
   linkAccount: async (provider: Provider) => {

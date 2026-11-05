@@ -140,7 +140,7 @@ export default function SettingsScreen() {
       </View>
 
       {/* 2. 프리미엄 구독 관리 (유료 유저 전용) */}
-      {user?.tier !== "free" && (
+      {!!user && user.tier !== "free" && (
         <View style={[styles.profileBox, { backgroundColor: colors.primary + "10", borderColor: colors.primary }]}>
           <Text style={[styles.sectionTitle, { color: colors.primary }]}>{t("settings.subscriptionManageTitle")}</Text>
           <Text style={{ fontSize: 14, color: colors.text, marginBottom: 12, lineHeight: 20 }}>

@@ -33,6 +33,9 @@ app = FastAPI(
     lifespan=_lifespan,
 )
 
+# Starlette: 마지막에 add 한 미들웨어가 가장 바깥(outermost).
+# 요청 흐름: CORS -> RequestContext -> RateLimit -> 라우터
+# (그래서 429/500 응답에도 CORS 헤더가 붙는다.)
 app.add_middleware(
     RateLimitMiddleware,
     max_requests=int(os.getenv("SAJU_RATE_LIMIT_MAX", "120")),
@@ -51,32 +54,18 @@ if "*" in _cors_origins and is_production():
         "SAJU_CORS_ORIGINS=* in production. Set explicit origins."
     )
 
+# 미리보기 배포(*.vercel.app) 허용 정규식. 빈 문자열이면 비활성화.
+_cors_regex = os.getenv("SAJU_CORS_ORIGIN_REGEX", r"https://.*\.vercel\.app").strip() or None
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_cors_origins,
-    allow_origin_regex=r"https://.*\.vercel\.app",
+    allow_origin_regex=_cors_regex,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
     expose_headers=["X-Request-ID", "X-RateLimit-Limit", "X-RateLimit-Remaining"],
 )
-
-# Starlette: 마지막에 추가된 미들웨어가 outermost
-
-
-_cors_origins = [
-    o.strip()
-    for o in os.getenv("SAJU_CORS_ORIGINS", "*").split(",")
-    if o.strip()
-]
-if "*" in _cors_origins and is_production():
-    logging.getLogger("saju.security").warning(
-        "SAJU_CORS_ORIGINS=* in production. Set explicit origins."
-    )
-
-
-
-
 
 app.include_router(saju.router, prefix="/api/v1/saju", tags=["Saju"])
 app.include_router(report.router, prefix="/api/v1/saju", tags=["Report"])

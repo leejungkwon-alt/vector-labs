@@ -55,20 +55,38 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
     if (res.status === 204) return undefined as T;
 
     const text = await res.text();
-    const body = text ? JSON.parse(text) : null;
+    // 502/404 등 HTML 응답이 와도 SyntaxError 로 터지지 않게 방어
+    let body: any = null;
+    if (text) {
+      try { body = JSON.parse(text); } catch { body = null; }
+    }
 
     if (!res.ok) {
-      const detail = (body && (body.detail ?? body.message)) ?? `HTTP ${res.status}`;
-      throw new ApiError(res.status, String(detail));
+      throw new ApiError(res.status, extractDetail(body, res.status));
     }
     return body as T;
   } catch (err: any) {
     clearTimeout(timeoutId);
-    if (err.name === "AbortError") {
+    if (err instanceof ApiError) throw err;
+    if (err?.name === "AbortError") {
       throw new ApiError(408, "서버 응답 시간이 초과되었습니다. 네트워크 상태를 확인해주세요.");
+    }
+    // fetch 자체가 실패(서버 다운 / CORS / 오프라인) -> 브라우저는 그냥 TypeError("Failed to fetch")
+    if (err instanceof TypeError) {
+      throw new ApiError(0, "서버에 연결할 수 없습니다. 잠시 후 다시 시도해 주세요.");
     }
     throw err;
   }
+}
+
+// FastAPI 의 422 는 detail 이 객체 배열이라 String() 하면 "[object Object]" 가 된다.
+function extractDetail(body: any, status: number): string {
+  const d = body && (body.detail ?? body.message);
+  if (Array.isArray(d)) {
+    return d.map((x: any) => x?.msg ?? JSON.stringify(x)).join("\n");
+  }
+  if (d && typeof d === "object") return JSON.stringify(d);
+  return d ? String(d) : `HTTP ${status}`;
 }
 
 export const api = {

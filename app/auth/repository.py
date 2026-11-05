@@ -376,10 +376,14 @@ class PostgresRepository(_BaseRepository):
                 "SAJU_DATABASE_URL 사용에는 'psycopg[binary]' 와 'psycopg_pool' 이 필요합니다."
             ) from e
         self._integrity_errors = (psycopg.IntegrityError,)
-        self._pool = ConnectionPool(conninfo=database_url,
-            min_size=int(os.environ.get("SAJU_DB_POOL_MIN", "1", check=ConnectionPool.check_connection, max_idle=60)),
+        self._pool = ConnectionPool(
+            conninfo=database_url,
+            min_size=int(os.environ.get("SAJU_DB_POOL_MIN", "1")),
             max_size=int(os.environ.get("SAJU_DB_POOL_MAX", "5")),
-            kwargs={"row_factory": dict_row},
+            # prepare_threshold=None: Supabase pgbouncer(transaction 모드)에서도 안전
+            kwargs={"row_factory": dict_row, "prepare_threshold": None},
+            check=ConnectionPool.check_connection,  # 끊어진 연결 자동 폐기
+            max_idle=60,
             open=True,
             timeout=10,
         )
