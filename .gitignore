@@ -154,3 +154,6 @@ i18n_audit_report.txt
 frontend/dist/
 .vercel
 
+
+# Phase 4 script backups
+*.bak
