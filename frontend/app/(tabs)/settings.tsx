@@ -15,7 +15,7 @@ export default function SettingsScreen() {
   const user = useAuthStore((s) => s.user);
   const t = useT();
   const signOut = useAuthStore((s) => s.signOut);
-  const profile = useProfileStore((s) => s.profile); // 생년월일 가져오기
+  const profile = useProfileStore((s) => s.profile);
   const clearProfile = useProfileStore((s) => s.clearProfile);
 
   const { data: purchaseData } = useQuery({
@@ -26,17 +26,24 @@ export default function SettingsScreen() {
 
   const [showLogin, setShowLogin] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
+  const [upgradeAfterLogin, setUpgradeAfterLogin] = useState(false); // 로그인 후 결제창 띄울지 여부
 
   const handleUpgrade = () => {
     if (!user) return;
     if (user.is_anonymous) {
+      setUpgradeAfterLogin(true); // 업그레이드 목적으로 로그인 시도
       setShowLogin(true);
     } else {
       setShowPayment(true);
     }
   };
 
-  // 프로필을 지우지 않고 입력 화면으로 이동 → 저장된 값이 채워진 상태에서 수정
+  // 단순히 계정만 연결하고 싶을 때
+  const handleLinkAccount = () => {
+    setUpgradeAfterLogin(false); // 단순 연동 목적
+    setShowLogin(true);
+  };
+
   const handleReset = () => {
     router.push("/birth-input");
   };
@@ -66,7 +73,6 @@ export default function SettingsScreen() {
   };
 
   const handleManageSubscription = () => {
-    // 실제 앱스토어/플레이스토어 구독 관리 페이지로 이동 (임시 링크)
     if (Platform.OS === "ios") {
       Linking.openURL("https://apps.apple.com/account/subscriptions");
     } else if (Platform.OS === "android") {
@@ -79,22 +85,17 @@ export default function SettingsScreen() {
   const lang = useLanguageStore((s) => s.lang);
   const setLang = useLanguageStore((s) => s.setLang);
 
-
   const formatBirthInfo = () => {
     if (!profile?.birth_date) return t("settings.birthNotSet");
     let info = profile.birth_date;
-    
     if (profile.birth_time_mode === "exact" && profile.birth_time) {
-      // HH:MM:SS 중 앞의 5자리(HH:MM)만 표시
       info += ` ${profile.birth_time.substring(0, 5)}`;
     } else if (profile.birth_time_mode === "noon") {
       info += t("settings.timeUnknownNoon");
     } else if (profile.birth_time_mode === "day_only") {
       info += t("settings.timeUnknownDayOnly");
     }
-    
     if (profile.birth_location) {
-      // 임시 키값(seoul, new_york)을 보기 좋게 표시
       info += ` · ${profile.birth_location}`;
     }
     return info;
@@ -111,7 +112,7 @@ export default function SettingsScreen() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 40 }}>
-      {/* 1. 내 계정 정보 (이메일/생년월일/등급) */}
+      {/* 1. 내 계정 정보 */}
       <View style={styles.profileBox}>
         <Text style={styles.sectionTitle}>{t("settings.accountInfo")}</Text>
         
@@ -130,16 +131,27 @@ export default function SettingsScreen() {
         <View style={styles.row}>
           <Text style={styles.label}>{t("settings.tier")}</Text>
           <Text style={[styles.value, { fontWeight: "bold", color: user?.tier === "free" ? colors.text : colors.primary }]}>
-            {
-              user?.tier === "free" ? t("settings.tierFree") :
-              user?.tier === "subscription" ? t("settings.tierSubscription") :
-              user?.tier === "premium" ? t("settings.tierPremium") : user?.tier
-            }
+            {user?.tier === "free" ? t("settings.tierFree") :
+             user?.tier === "subscription" ? t("settings.tierSubscription") :
+             user?.tier === "premium" ? t("settings.tierPremium") : user?.tier}
           </Text>
         </View>
       </View>
 
-      {/* 2. 프리미엄 구독 관리 (유료 유저 전용) */}
+      {/* ⭐️ 추가된 부분: 익명 로그인 상태일 때 계정 연결 유도 */}
+      {user?.is_anonymous && (
+        <View style={[styles.profileBox, { backgroundColor: colors.surface, borderColor: colors.primary }]}>
+          <Text style={[styles.sectionTitle, { color: colors.primary }]}>계정 연동하기</Text>
+          <Text style={{ fontSize: 14, color: colors.text, marginBottom: 12, lineHeight: 20 }}>
+            기기를 변경하거나 앱을 삭제해도 내 사주 데이터와 결제 정보를 안전하게 보관하려면 SNS 계정을 연동하세요.
+          </Text>
+          <TouchableOpacity style={styles.upgradeBtn} onPress={handleLinkAccount}>
+            <Text style={styles.upgradeBtnText}>SNS 계정 연동하기</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+
+      {/* 2. 프리미엄 구독 관리 */}
       {!!user && user.tier !== "free" && (
         <View style={[styles.profileBox, { backgroundColor: colors.primary + "10", borderColor: colors.primary }]}>
           <Text style={[styles.sectionTitle, { color: colors.primary }]}>{t("settings.subscriptionManageTitle")}</Text>
@@ -230,7 +242,15 @@ export default function SettingsScreen() {
         onClose={() => setShowLogin(false)}
         onSuccess={() => {
           setShowLogin(false);
-          setShowPayment(true);
+          if (upgradeAfterLogin) {
+            // 업그레이드 버튼을 눌러서 들어온 경우 -> 성공 시 결제창으로 연결
+            setShowPayment(true);
+          } else {
+            // 단순히 계정 연동 버튼을 눌러서 들어온 경우 -> 성공 알림만 띄우고 종료
+            const msg = "계정이 성공적으로 연결되었습니다.";
+            if (Platform.OS === "web") alert(msg);
+            else Alert.alert("알림", msg);
+          }
         }}
       />
       <PaymentModal
