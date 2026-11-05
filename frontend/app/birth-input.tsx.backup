@@ -13,6 +13,27 @@ import { TIMEZONE_LIST } from "@/constants/timezones";
 import { colors, spacing, radius } from "@/theme";
 
 export default function BirthInput() {
+
+  // 💡 도시 이름으로 경도와 타임존을 자동으로 찾아주는 마법 함수
+  const fetchCityInfo = async (cityName: string) => {
+    if (!cityName || cityName.trim().length < 2) return;
+    try {
+      const res = await fetch(
+        `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(cityName)}&count=1&language=ko&format=json`
+      );
+      const data = await res.json();
+      if (data.results && data.results.length > 0) {
+        const city = data.results[0];
+        // 💡 변수명이 다를 경우 여기를 수정하세요
+        if (typeof setCustomLongitude === 'function') setCustomLongitude(String(city.longitude));
+        if (typeof setCustomTimezone === 'function') setCustomTimezone(city.timezone); 
+        console.log("자동 세팅 완료:", city.name, city.longitude, city.timezone);
+      }
+    } catch (error) {
+      console.error("도시 정보를 가져오는데 실패했습니다:", error);
+    }
+  };
+
   const insets = useSafeAreaInsets();
   const saveProfile = useProfileStore((s) => s.saveProfile);
   const profile = useProfileStore((s) => s.profile);
