@@ -45,3 +45,11 @@ frontend/dist
 *.bak
 *.bak_*
 *.broken
+
+# 2026-11 — 레거시 빌드 제외
+/_cleanup_trash/
+/saju_fixes/
+middleware.py.new
+add_city_lookup_i18n.py
+*.py.new
+*.backup

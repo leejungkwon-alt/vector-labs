@@ -3,3 +3,6 @@ node_modules
 dist
 .expo
 .pytest_cache
+*.backup
+*.orig
+*.bak

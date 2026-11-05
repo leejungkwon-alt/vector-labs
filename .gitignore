@@ -157,3 +157,17 @@ frontend/dist/
 
 # Phase 4 script backups
 *.bak
+
+# ============================================================
+# 2026-11 — Stripe 이전 전 정리 (git 추적 제외, 디스크 유지)
+# ============================================================
+_cleanup_trash/
+saju_fixes/
+tma/
+middleware.py.new
+add_city_lookup_i18n.py
+
+# 백업 파일 (기존 *.bak은 걸리지만 아래는 안 걸림)
+*.py.new
+*.backup
+*.orig
