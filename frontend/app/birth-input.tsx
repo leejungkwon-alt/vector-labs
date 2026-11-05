@@ -211,7 +211,19 @@ export default function BirthInput() {
       </TouchableOpacity>
 
       <CityPickerModal visible={showCityModal} onClose={() => setShowCityModal(false)} onSelect={onSelectCity} currentCityKey={isCustomCity ? CUSTOM_CITY_KEY : city} />
-      <TimezonePickerModal visible={showTimezoneModal} onClose={() => setShowTimezoneModal(false)} onSelect={setCustomTimezone} currentTz={customTimezone} />
+      <TimezonePickerModal 
+         visible={showTimezoneModal} 
+         onClose={() => setShowTimezoneModal(false)} 
+         onSelect={(tz) => {
+           setCustomTimezone(tz);
+       // 💡 타임존에 맞는 도시를 CITY_LIST에서 찾아 경도를 자동으로 채워줍니다.
+           const matchedCity = CITY_LIST.find(c => c.timezone === tz);
+           if (matchedCity) {
+            setCustomLongitude(String(matchedCity.longitude));
+           }
+          }} 
+          currentTz={customTimezone} 
+/>
     </ScrollView>
   );
 }
