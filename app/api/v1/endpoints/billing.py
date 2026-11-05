@@ -1,113 +1,72 @@
 # app/api/v1/endpoints/billing.py
-import logging
+import hmac
+import hashlib
+import json
 import os
-from fastapi import APIRouter, Depends, HTTPException, Request
+from fastapi import APIRouter, Request, HTTPException, Header, Depends
 
-from app.auth.dependencies import get_current_user
 from app.auth.repository import get_repository
-from app.schemas.billing import BillingMe, CheckoutRequest, CheckoutResponse, PortalResponse
-from app.services.billing import handle_event
-from app.services.stripe_client import init_stripe, mode_for_plan, price_id_for_plan
+# 👇 프로젝트의 실제 인증 의존성(Dependency) 경로로 맞춰주세요!
+from app.auth.router import get_current_user 
 
-log = logging.getLogger(__name__)
 router = APIRouter()
 
-def _app_url() -> str:
-    url = os.environ.get("APP_URL", "").strip().rstrip("/")
-    if not url:
-        raise RuntimeError("APP_URL is not configured")
-    return url
+@router.post("/checkout")
+async def create_checkout(user: dict = Depends(get_current_user)):
+    """프론트엔드에서 결제 버튼을 눌렀을 때 호출되는 API"""
+    from app.services.lemonsqueezy_client import create_checkout_url
+    
+    url = await create_checkout_url(user_id=user["id"], email=user["email"])
+    return {"url": url}
 
-def _webhook_secret() -> str:
-    s = os.environ.get("STRIPE_WEBHOOK_SECRET", "").strip()
-    if not s:
-        raise RuntimeError("STRIPE_WEBHOOK_SECRET is not configured")
-    return s
-
-@router.post("/checkout", response_model=CheckoutResponse)
-def create_checkout(body: CheckoutRequest, current_user: dict = Depends(get_current_user)):
-    try:
-        stripe = init_stripe()
-        repo = get_repository()
-        user_id = current_user["id"]
-
-        customer_id = repo.get_stripe_customer_id(user_id)
-        if not customer_id:
-            customer = stripe.Customer.create(
-                email=current_user.get("email") or None,
-                metadata={"userId": user_id},
-            )
-            customer_id = customer.id
-            repo.set_stripe_customer_id(user_id, customer_id)
-
-        session = stripe.checkout.Session.create(
-            mode=mode_for_plan(body.plan),
-            customer=customer_id,
-            line_items=[{"price": price_id_for_plan(body.plan), "quantity": 1}],
-            success_url=f"{_app_url()}/payment/success?session_id={{CHECKOUT_SESSION_ID}}&plan={body.plan}",
-            cancel_url=f"{_app_url()}/payment/cancel",
-            allow_promotion_codes=True,
-            metadata={"userId": user_id, "plan": body.plan},
-        )
-        return CheckoutResponse(url=session.url, sessionId=session.id)
-    except Exception as e:
-        log.exception("create_checkout failed")
-        raise HTTPException(status_code=500, detail="Checkout creation failed")
-
-@router.post("/portal", response_model=PortalResponse)
-def create_portal(current_user: dict = Depends(get_current_user)):
-    try:
-        repo = get_repository()
-        customer_id = repo.get_stripe_customer_id(current_user["id"])
-        if not customer_id:
-            raise HTTPException(status_code=400, detail="No Stripe customer")
-        
-        stripe = init_stripe()
-        portal = stripe.billing_portal.Session.create(
-            customer=customer_id,
-            return_url=f"{_app_url()}/settings",
-        )
-        return PortalResponse(url=portal.url)
-    except HTTPException:
-        raise
-    except Exception as e:
-        log.exception("create_portal failed")
-        raise HTTPException(status_code=500, detail="Portal creation failed")
-
-@router.get("/me", response_model=BillingMe)
-def get_billing_me(current_user: dict = Depends(get_current_user)):
-    repo = get_repository()
-    row = repo.get_user(current_user["id"])
-    if not row:
-        raise HTTPException(status_code=404, detail="User not found")
-    return BillingMe(
-        tier=row["tier"],
-        is_premium=row["tier"] in ("premium", "subscription", "unlimited"),
-        addons=repo.list_addons(current_user["id"]),
-        subscription_status=row.get("subscription_status"),
-        current_period_end=row.get("current_period_end"),
-    )
 
 @router.post("/webhook")
-async def stripe_webhook(request: Request):
-    try:
-        stripe = init_stripe()
-        payload = await request.body()
-        sig = request.headers.get("stripe-signature", "")
-        event = stripe.Webhook.construct_event(payload, sig, _webhook_secret())
-    except Exception as e:
-        log.warning("webhook signature failed: %s", e)
-        raise HTTPException(status_code=400, detail="Invalid signature")
+async def lemonsqueezy_webhook(
+    request: Request,
+    x_signature: str = Header(..., alias="X-Signature"),
+):
+    """Lemon Squeezy 결제 완료/취소 웹훅 수신"""
+    secret = os.environ.get("LEMONSQUEEZY_WEBHOOK_SECRET", "").encode()
+    raw_body = await request.body()
+    
+    # 1. 서명 검증 (보안)
+    expected = hmac.new(secret, raw_body, hashlib.sha256).hexdigest()
+    if not hmac.compare_digest(expected, x_signature):
+        raise HTTPException(status_code=401, detail="Invalid signature")
+
+    # 2. 이벤트 데이터 파싱
+    event = json.loads(raw_body)
+    event_name = event["meta"]["event_name"]
+    custom = event["meta"].get("custom_data", {}) or {}
+    user_id = custom.get("user_id")
+
+    if not user_id:
+        return {"status": "ignored"} # user_id가 없으면 무시
 
     repo = get_repository()
-    if not repo.record_stripe_event(event["id"], event["type"]):
-        return {"received": True, "duplicate": True}
+    
+    # 3. 구독 이벤트에 따른 DB 상태 변경
+    if event_name in ("subscription_created", "subscription_updated"):
+        sub = event["data"]["attributes"]
+        status = sub.get("status") # active, past_due, cancelled 등
+        renews_at = sub.get("renews_at") # 다음 결제일
+        is_premium = status in ("active", "on_trial")
+        
+        repo.update_subscription(
+            user_id=user_id,
+            subscription_id=event["data"]["id"],
+            status=status,
+            current_period_end=renews_at,
+            is_premium=is_premium,
+        )
+        
+    elif event_name in ("subscription_cancelled", "subscription_expired"):
+        repo.update_subscription(
+            user_id=user_id,
+            subscription_id=event["data"]["id"],
+            status="cancelled",
+            current_period_end=None,
+            is_premium=False,
+        )
 
-    try:
-        handle_event(dict(event))
-    except Exception:
-        log.exception("handle_event failed for %s", event["id"])
-        repo._run("DELETE FROM stripe_events WHERE id = ?", (event["id"],)) # 재시도 허용
-        raise HTTPException(status_code=500, detail="Webhook handler failed")
-
-    return {"received": True}
+    return {"status": "ok"}
