@@ -228,6 +228,10 @@ def verify_provider_token(provider: str, token: str) -> dict:
     if not isinstance(provider, str):
         raise ProviderTokenError("provider must be a string")
     p = provider.lower().strip()
+    # _APPLE_PROD_GUARD: 프로덕션에서 apple 로그인 차단 (개발자 계정 확보 전)
+    import os as _os_apple_guard
+    if p == "apple" and _os_apple_guard.getenv("SAJU_ENV", "development").lower() == "production":
+        raise ProviderTokenError("Apple login is temporarily not allowed in production")
     if p not in SUPPORTED_PROVIDERS:
         raise ProviderTokenError(
             f"Unsupported provider: {provider!r}. "

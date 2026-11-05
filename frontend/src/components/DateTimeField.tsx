@@ -3,11 +3,15 @@ import { Platform, Text, TouchableOpacity, View } from "react-native";
 import type { StyleProp, TextStyle, ViewStyle } from "react-native";
 import DateTimePicker, { DateTimePickerEvent } from "@react-native-community/datetimepicker";
 
+// 👇 우리가 만든 휠 피커를 불러옵니다. (같은 components 폴더에 있으므로 ./ 로 시작)
+import BirthDateWheelPicker from "./BirthDateWheelPicker";
+
 /**
  * 웹(텔레그램 미니앱)에서도 동작하는 날짜/시간 입력 필드.
  *  - 웹: 글자 위에 투명한 <input type="date|time"> 을 덮어, 탭하면 브라우저/텔레그램의 기본 선택기가 열린다.
- *  - 앱(iOS/Android): 기존처럼 @react-native-community/datetimepicker (spinner) 를 사용한다.
- *    (이 라이브러리는 웹을 지원하지 않아 웹에서는 아무것도 뜨지 않았다.)
+ *  - 앱(iOS/Android): 
+ *    - 날짜(mode="date")는 우리가 커스텀한 BirthDateWheelPicker(휠)를 띄운다.
+ *    - 시간(mode="time")은 기존처럼 @react-native-community/datetimepicker (spinner) 를 사용한다.
  */
 type Props = {
   mode: "date" | "time";
@@ -25,7 +29,8 @@ const timeStr = (d: Date) => `${pad(d.getHours())}:${pad(d.getMinutes())}`;
 const MIN_DATE = "1900-01-01";
 
 export function DateTimeField({ mode, value, onChange, displayText, disabled, style, textStyle }: Props) {
-  const [showNative, setShowNative] = useState(false);
+  const [showNative, setShowNative] = useState(false); // 시간(Time) 선택용 기존 달력
+  const [showWheel, setShowWheel] = useState(false);   // 날짜(Date) 선택용 커스텀 휠
 
   if (Platform.OS === "web") {
     const handleChange = (e: any) => {
@@ -81,19 +86,42 @@ export function DateTimeField({ mode, value, onChange, displayText, disabled, st
     );
   }
 
+  // 앱(iOS / Android) 환경일 때
   return (
     <>
       <TouchableOpacity
         style={[style, disabled && { opacity: 0.4 }]}
         disabled={disabled}
-        onPress={() => setShowNative(true)}
+        onPress={() => {
+          if (mode === "date") {
+            setShowWheel(true); // 👈 날짜 선택 시 커스텀 휠 피커 열기
+          } else {
+            setShowNative(true); // 👈 시간 선택 시 기존 스피너 열기
+          }
+        }}
       >
         <Text style={textStyle}>{displayText}</Text>
       </TouchableOpacity>
-      {showNative && (
+
+      {/* 1. 날짜 선택용 커스텀 휠 피커 */}
+      {showWheel && (
+        <BirthDateWheelPicker
+          visible={showWheel}
+          initialDate={dateStr(value)} // Date 객체를 "YYYY-MM-DD" 문자열로 변환해서 전달
+          onClose={() => setShowWheel(false)}
+          onConfirm={(dateString) => {
+            // "YYYY-MM-DD" 형태의 문자열을 다시 Date 객체로 변환하여 부모 컴포넌트에 전달
+            const [y, m, d] = dateString.split("-").map(Number);
+            onChange(new Date(y, m - 1, d));
+          }}
+        />
+      )}
+
+      {/* 2. 시간 선택용 기존 달력 (안드로이드 기본 제공) */}
+      {showNative && mode === "time" && (
         <DateTimePicker
           value={value}
-          mode={mode}
+          mode="time"
           display="spinner"
           onChange={(event: DateTimePickerEvent, d?: Date) => {
             setShowNative(false);

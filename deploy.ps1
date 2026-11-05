@@ -12,6 +12,7 @@ $IMAGE        = "asia-northeast3-docker.pkg.dev/$PROJECT/cloud-run-source-deploy
 $TAG          = Get-Date -Format "yyyyMMdd_HHmmss"
 $BASE_URL     = "https://saju-backend-787049663118.asia-northeast3.run.app"
 $FRONTEND_URL = "https://gyeol-blond.vercel.app"
+$GOOGLE_CLIENT_ID = "787049663118-0tv6r1bbi28lli6mr027ruo55l6esofo.apps.googleusercontent.com"
 
 Write-Host "`n=== 1. 테스트 실행 ===" -ForegroundColor Cyan
 python -m pytest tests/ -q
@@ -32,7 +33,7 @@ gcloud run deploy $SERVICE `
     --timeout 300 `
     --allow-unauthenticated `
     --quiet `
-    --update-env-vars="SAJU_ASSET_BASE_URL=$FRONTEND_URL" `
+    --update-env-vars="SAJU_ASSET_BASE_URL=$FRONTEND_URL,SAJU_GOOGLE_CLIENT_ID=$GOOGLE_CLIENT_ID" `
     --set-secrets="SAJU_DATABASE_URL=saju-database-url:latest" `
     --startup-probe="httpGet.path=/healthz,initialDelaySeconds=2,timeoutSeconds=2,periodSeconds=3,failureThreshold=10"
 if ($LASTEXITCODE -ne 0) { Write-Host "배포 실패." -ForegroundColor Red; exit 1 }

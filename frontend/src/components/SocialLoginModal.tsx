@@ -35,7 +35,8 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
             기기를 변경하거나 앱을 삭제해도{"\n"}내 사주 데이터와 결제 정보를 안전하게 보관합니다.
           </Text>
 
-          <TouchableOpacity style={[styles.btn, styles.appleBtn]} onPress={() => handleLogin("apple")} disabled={!!loading}>
+          {/* Apple login disabled (일시 비활성화 - 재활성화하려면 이 주석 해제)
+<TouchableOpacity style={[styles.btn, styles.appleBtn]} onPress={() => handleLogin("apple")} disabled={!!loading}>
             {loading === "apple" ? <ActivityIndicator color={colors.onPrimary} /> : (
               <>
                 <Ionicons name="logo-apple" size={20} color={colors.onPrimary} />
@@ -43,6 +44,9 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
               </>
             )}
           </TouchableOpacity>
+
+
+          */}
 
           <TouchableOpacity style={[styles.btn, styles.googleBtn]} onPress={() => handleLogin("google")} disabled={!!loading}>
             {loading === "google" ? <ActivityIndicator color="#000" /> : (
