@@ -216,6 +216,30 @@ class _BaseRepository:
         self._run("UPDATE users SET tier = ? WHERE id = ?", (tier, user_id))
         return self.get_user(user_id)
 
+
+    # ---- Stripe ----
+    def get_stripe_customer_id(self, user_id: str) -> Optional[str]:
+        row = self._one("SELECT stripe_customer_id FROM users WHERE id = ?", (user_id,))
+        return row["stripe_customer_id"] if row else None
+
+    def set_stripe_customer_id(self, user_id: str, customer_id: str) -> None:
+        self._run("UPDATE users SET stripe_customer_id = ? WHERE id = ?", (customer_id, user_id))
+
+    def update_subscription(self, user_id: str, *, subscription_id: Optional[str],
+                            status: str, current_period_end: Optional[str], is_premium: bool) -> None:
+        self._run(
+            "UPDATE users SET tier = ?, stripe_subscription_id = ?, "
+            "subscription_status = ?, current_period_end = ? WHERE id = ?",
+            ("premium" if is_premium else "free", subscription_id, status, current_period_end, user_id),
+        )
+
+    def record_stripe_event(self, event_id: str, event_type: str) -> bool:
+        inserted = self._run(
+            "INSERT INTO stripe_events (id, type, processed_at) VALUES (?, ?, ?) ON CONFLICT DO NOTHING",
+            (event_id, event_type, _now_iso()),
+        )
+        return inserted > 0
+
     # ---- add-ons ----
     def grant_addon(self, user_id: str, addon: str) -> None:
         """1회성 애드온 부여 (idempotent)."""
@@ -349,6 +373,15 @@ class Repository(_BaseRepository):
                     "ADD COLUMN language_code TEXT"
                 )
 
+
+            # migration (2026-11 Stripe)
+            u_cols = {r[1] for r in self._conn.execute("PRAGMA table_info(users)").fetchall()}
+            for col in ["stripe_customer_id", "stripe_subscription_id", "subscription_status", "current_period_end"]:
+                if col not in u_cols:
+                    self._conn.execute(f"ALTER TABLE users ADD COLUMN {col} TEXT")
+            self._conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_stripe_customer ON users(stripe_customer_id) WHERE stripe_customer_id IS NOT NULL")
+            self._conn.execute("CREATE TABLE IF NOT EXISTS stripe_events (id TEXT PRIMARY KEY, type TEXT NOT NULL, processed_at TEXT NOT NULL)")
+
     def _one(self, sql, params=()):
         with self._lock:
             row = self._conn.execute(sql, params).fetchone()
@@ -417,6 +450,15 @@ class PostgresRepository(_BaseRepository):
                     "ALTER TABLE telegram_subscribers "
                     "ADD COLUMN language_code TEXT"
                 )
+
+
+            # migration (2026-11 Stripe)
+            for col in ["stripe_customer_id", "stripe_subscription_id", "subscription_status", "current_period_end"]:
+                r = conn.execute("SELECT 1 FROM information_schema.columns WHERE table_name='users' AND column_name=%s AND table_schema=current_schema()", (col,)).fetchone()
+                if r is None:
+                    conn.execute(f"ALTER TABLE users ADD COLUMN {col} TEXT")
+            conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_stripe_customer ON users(stripe_customer_id) WHERE stripe_customer_id IS NOT NULL")
+            conn.execute("CREATE TABLE IF NOT EXISTS stripe_events (id TEXT PRIMARY KEY, type TEXT NOT NULL, processed_at TEXT NOT NULL)")
 
     def _one(self, sql, params=()):
         with self._pool.connection() as conn:

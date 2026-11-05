@@ -75,6 +75,8 @@ app.include_router(daily.router, prefix="/api/v1/saju", tags=["Daily"])
 app.include_router(auth_router, prefix="/api/v1/auth", tags=["Auth"])
 app.include_router(telegram.router, prefix="/api/v1/telegram", tags=["Telegram"])
 
+from app.api.v1.endpoints import billing
+app.include_router(billing.router, prefix="/api/v1/billing", tags=["billing"])
 
 @app.get("/")
 def root():
