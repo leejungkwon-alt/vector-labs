@@ -40,3 +40,13 @@ def validate_startup() -> None:
     from app.auth.jwt_utils import _secret
 
     _secret()  # 시크릿 누락 / 32자 미만이면 여기서 RuntimeError
+
+    # Phase 4: DB 설정 fail-fast. (lifespan에서 잡지 않으면 첫 요청에서 500)
+    if (
+        not os.environ.get("SAJU_DATABASE_URL", "").strip()
+        and not os.environ.get("SAJU_AUTH_DB_PATH")
+    ):
+        raise RuntimeError(
+            "production 에서 SAJU_DATABASE_URL (PostgreSQL) 또는 "
+            "SAJU_AUTH_DB_PATH (영속 볼륨) 중 하나가 필요합니다."
+        )

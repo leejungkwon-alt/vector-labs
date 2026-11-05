@@ -35,6 +35,7 @@ def test_app_boot_ok_with_secret_in_production(monkeypatch):
     """SAJU_ENV=production + 32자 이상 secret → 부팅 성공."""
     monkeypatch.setenv("SAJU_ENV", "production")
     monkeypatch.setenv("SAJU_JWT_SECRET", "x" * 32)
+    monkeypatch.setenv("SAJU_AUTH_DB_PATH", ":memory:")  # Phase 4: prod requires DB config
 
     import app.main
     importlib.reload(app.main)

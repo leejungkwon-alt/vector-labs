@@ -8,6 +8,7 @@ import logging
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
 from app.api.v1.endpoints import saju, report, compatibility, daily, telegram
 from app.auth.router import router as auth_router
@@ -80,12 +81,37 @@ def root():
     return {"message": "Saju Engine API is running successfully!"}
 
 
-@app.get("/health")
+@app.get("/healthz")
+def healthz():
+    """Startup/liveness probe — 외부 의존성 없음 (즉시 200)."""
+    return {"status": "ok"}
+
+
+@app.get("/health")  # 기존 경로 유지 (클라이언트 호환)
 def health():
     return {"status": "ok"}
 
 
 @app.get("/ready")
 def ready():
-    return {"status": "ready"}
+    """Readiness probe — DB(SELECT 1) 까지 확인. 실패 시 503.
+
+    Cloud Run startup probe 에는 연결하지 않는다 (Neon 콜드 스타트 시
+    재시작 루프 방지). deploy.ps1 스모크 테스트 + 모니터링 용.
+    """
+    from app.auth.repository import get_repository
+
+    try:
+        get_repository().ping()
+        return {"status": "ready", "db": "ok"}
+    except Exception as e:
+        logging.getLogger("saju.ops").error("readiness check failed: %s", e)
+        return JSONResponse(
+            status_code=503,
+            content={
+                "status": "not_ready",
+                "db": "error",
+                "error": type(e).__name__,
+            },
+        )
 

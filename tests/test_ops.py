@@ -18,7 +18,9 @@ def test_health_endpoint():
 def test_ready_endpoint():
     r = client.get("/ready")
     assert r.status_code == 200
-    assert r.json() == {"status": "ready"}
+    body = r.json()
+    assert body["status"] == "ready"  # Phase 4: /ready now includes db
+    assert body.get("db") == "ok"
 
 
 def test_request_id_header_present():

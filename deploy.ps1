@@ -1,31 +1,79 @@
-﻿# deploy.ps1
+# deploy.ps1 — 백엔드 배포 + 스모크 테스트 (Phase 4)
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 [Console]::InputEncoding  = [System.Text.Encoding]::UTF8
 $OutputEncoding           = [System.Text.Encoding]::UTF8
 chcp 65001 | Out-Null
 
 $ErrorActionPreference = "Stop"
-$PROJECT = "vector-labs-api"
-$REGION  = "asia-northeast3"
-$SERVICE = "saju-backend"
-$IMAGE   = "asia-northeast3-docker.pkg.dev/$PROJECT/cloud-run-source-deploy/$SERVICE"
-$TAG     = Get-Date -Format "yyyyMMdd_HHmmss"
+$PROJECT      = "vector-labs-api"
+$REGION       = "asia-northeast3"
+$SERVICE      = "saju-backend"
+$IMAGE        = "asia-northeast3-docker.pkg.dev/$PROJECT/cloud-run-source-deploy/$SERVICE"
+$TAG          = Get-Date -Format "yyyyMMdd_HHmmss"
+$BASE_URL     = "https://saju-backend-787049663118.asia-northeast3.run.app"
+$FRONTEND_URL = "https://gyeol-blond.vercel.app"
 
-Write-Host "`n=== 1. ?뚯뒪???ㅽ뻾 ===" -ForegroundColor Cyan
+Write-Host "`n=== 1. 테스트 실행 ===" -ForegroundColor Cyan
 python -m pytest tests/ -q
-if ($LASTEXITCODE -ne 0) { Write-Host "?뚯뒪???ㅽ뙣. 諛고룷瑜?以묐떒?⑸땲??" -ForegroundColor Red; exit 1 }
+if ($LASTEXITCODE -ne 0) { Write-Host "테스트 실패. 배포를 중단합니다." -ForegroundColor Red; exit 1 }
 
-Write-Host "`n=== 2. ?대?吏 鍮뚮뱶 ($TAG) ===" -ForegroundColor Cyan
+Write-Host "`n=== 2. 이미지 빌드 ($TAG) ===" -ForegroundColor Cyan
 gcloud builds submit --tag "${IMAGE}:${TAG}" --project $PROJECT --region $REGION
-if ($LASTEXITCODE -ne 0) { Write-Host "鍮뚮뱶 ?ㅽ뙣. 諛고룷瑜?以묐떒?⑸땲??" -ForegroundColor Red; exit 1 }
+if ($LASTEXITCODE -ne 0) { Write-Host "빌드 실패. 배포를 중단합니다." -ForegroundColor Red; exit 1 }
 
-Write-Host "`n=== 3. Cloud Run 諛고룷 ===" -ForegroundColor Cyan
-# ?먮옒 Secret(saju-database-url-supabase) 李몄“ ?좎? + SAJU_ASSET_BASE_URL 異붽?
-gcloud run deploy $SERVICE --image "${IMAGE}:${TAG}" --region $REGION --platform managed --project $PROJECT --port 8080 --memory 512Mi --timeout 300 --allow-unauthenticated --quiet --update-env-vars="SAJU_ASSET_BASE_URL=https://placeholder.example.com"  --set-secrets="SAJU_DATABASE_URL=saju-database-url:latest"
-if ($LASTEXITCODE -ne 0) { Write-Host "諛고룷 ?ㅽ뙣." -ForegroundColor Red; exit 1 }
+Write-Host "`n=== 3. Cloud Run 배포 ===" -ForegroundColor Cyan
+gcloud run deploy $SERVICE `
+    --image "${IMAGE}:${TAG}" `
+    --region $REGION `
+    --platform managed `
+    --project $PROJECT `
+    --port 8080 `
+    --memory 512Mi `
+    --timeout 300 `
+    --allow-unauthenticated `
+    --quiet `
+    --update-env-vars="SAJU_ASSET_BASE_URL=$FRONTEND_URL" `
+    --set-secrets="SAJU_DATABASE_URL=saju-database-url:latest" `
+    --startup-probe="httpGet.path=/healthz,initialDelaySeconds=2,timeoutSeconds=2,periodSeconds=3,failureThreshold=10"
+if ($LASTEXITCODE -ne 0) { Write-Host "배포 실패." -ForegroundColor Red; exit 1 }
 
-Write-Host "`n諛고룷 ?깃났!" -ForegroundColor Green
-Write-Host "URL: https://saju-backend-787049663118.asia-northeast3.run.app" -ForegroundColor Green
-Write-Host "Health check ?ㅽ뻾 以?.." -ForegroundColor Yellow
-curl.exe https://saju-backend-787049663118.asia-northeast3.run.app/health
+Write-Host "`n=== 4. 스모크 테스트 ===" -ForegroundColor Cyan
 
+# (a) /ready — DB SELECT 1 (Cloud Run 트래픽 전환 대기 포함 최대 60초)
+$ready = $null
+for ($i = 0; $i -lt 30; $i++) {
+    try {
+        $ready = Invoke-RestMethod -Uri "$BASE_URL/ready" -Method GET -TimeoutSec 5
+        if ($ready.status -eq "ready") { break }
+    } catch { }
+    Start-Sleep -Seconds 2
+}
+if ($null -eq $ready -or $ready.status -ne "ready") {
+    Write-Host "READY FAILED: $($ready | ConvertTo-Json -Compress)" -ForegroundColor Red
+    exit 1
+}
+Write-Host "  /ready OK - db=$($ready.db)" -ForegroundColor Green
+
+# (b) 익명 로그인 + CORS 헤더 확인
+try {
+    $resp = Invoke-WebRequest -Uri "$BASE_URL/api/v1/auth/anonymous" `
+        -Method POST `
+        -Headers @{ Origin = $FRONTEND_URL } `
+        -TimeoutSec 10
+} catch {
+    Write-Host "AUTH FAILED: $($_.Exception.Message)" -ForegroundColor Red
+    exit 1
+}
+if ($resp.StatusCode -ne 200) {
+    Write-Host "AUTH STATUS: $($resp.StatusCode)" -ForegroundColor Red
+    exit 1
+}
+$acao = $resp.Headers["Access-Control-Allow-Origin"]
+if (-not $acao) {
+    Write-Host "CORS HEADER MISSING (Access-Control-Allow-Origin)" -ForegroundColor Red
+    exit 1
+}
+Write-Host "  /auth/anonymous OK - ACAO=$acao" -ForegroundColor Green
+
+Write-Host "`n배포 성공! 스모크 테스트 통과." -ForegroundColor Green
+Write-Host "URL: $BASE_URL" -ForegroundColor Green

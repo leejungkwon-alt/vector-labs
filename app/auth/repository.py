@@ -122,6 +122,11 @@ class _BaseRepository:
         """쓰기. 영향받은 행 수 반환."""
         raise NotImplementedError
 
+    def ping(self) -> bool:
+        """DB 연결 확인 (SELECT 1). 실패 시 예외 — /ready 전용."""
+        self._one("SELECT 1 AS ok")
+        return True
+
     def close(self) -> None:
         pass
 

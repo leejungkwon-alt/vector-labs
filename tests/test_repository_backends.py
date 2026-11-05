@@ -1,5 +1,6 @@
 """리포지토리: SQLite/PostgreSQL 동일 동작 + 운영 가드. PG 는 SAJU_TEST_DATABASE_URL 이 있을 때만."""
 import os
+import uuid
 
 import pytest
 
@@ -47,11 +48,13 @@ def test_addons_and_push_tokens_are_idempotent(repo):
 
 
 def test_social_link_conflict(repo):
+    # 매 실행마다 고유 subject — 동일 PG DB 재실행 시 unique 제약 오염 방지
+    subj = f"s-{uuid.uuid4().hex[:8]}"
     a = repo.create_anonymous_user()["id"]
     b = repo.create_anonymous_user()["id"]
-    assert repo.link_social_identity(a, "google", "s-1")["is_anonymous"] == 0
+    assert repo.link_social_identity(a, "google", subj)["is_anonymous"] == 0
     with pytest.raises(ValueError):
-        repo.link_social_identity(b, "google", "s-1")
+        repo.link_social_identity(b, "google", subj)
 
 
 def test_delete_user_cascades(repo):

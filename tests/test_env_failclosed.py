@@ -64,6 +64,7 @@ def test_validate_startup_rejects_short_secret(monkeypatch):
 def test_validate_startup_ok_with_strong_secret(monkeypatch):
     monkeypatch.setenv("SAJU_ENV", "production")
     monkeypatch.setenv("SAJU_JWT_SECRET", "x" * 40)
+    monkeypatch.setenv("SAJU_AUTH_DB_PATH", ":memory:")  # Phase 4: prod requires DB config
     validate_startup()  # 예외 없음
 
 
