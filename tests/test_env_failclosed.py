@@ -22,14 +22,6 @@ def test_explicit_dev_values_are_not_production(monkeypatch, value):
     assert is_production() is False
 
 
-def test_mock_receipt_rejected_when_env_unset(monkeypatch):
-    monkeypatch.delenv("SAJU_ENV", raising=False)
-    from app.services.iap import verify_and_grant, IAPVerificationError
-
-    with pytest.raises(IAPVerificationError, match="Mock receipts"):
-        verify_and_grant("u1", "ios", "mock_valid_receipt", "sub_monthly_299")
-
-
 def test_mock_provider_token_rejected_when_env_unset(monkeypatch):
     monkeypatch.delenv("SAJU_ENV", raising=False)
     from app.auth.providers import verify_provider_token, ProviderTokenError

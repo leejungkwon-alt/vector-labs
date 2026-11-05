@@ -161,14 +161,6 @@ class PurchaseRequest(BaseModel):
     platform: str
 
 @router.post("/me/purchase")
-def purchase(body: PurchaseRequest, user: dict = Depends(get_current_user)):
-    from app.services.iap import verify_and_grant, IAPVerificationError
-    try:
-        return verify_and_grant(user["id"], body.platform, body.receipt, body.product_id)
-    except IAPVerificationError as e:
-        raise HTTPException(status_code=400, detail=str(e))
-
-@router.get("/me/purchases")
 def list_my_purchases(user: dict = Depends(get_current_user)):
     return {"purchases": get_repository().list_purchases(user["id"])}
 

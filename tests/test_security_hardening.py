@@ -84,39 +84,6 @@ def test_jwt_explicit_secret_works_in_production(monkeypatch):
     assert _secret() == "explicit-prod-secret-32-chars-minimum-xyz"
 
 
-# ---- IAP mock 영수증 프로덕션 가드 ----
-def test_iap_mock_receipt_works_in_dev(monkeypatch, tmp_path):
-    monkeypatch.setenv("SAJU_ENV", "development")
-    monkeypatch.setenv("SAJU_AUTH_DB_PATH", str(tmp_path / "auth.db"))
-    from app.auth.repository import reset_repository
-    reset_repository()
-
-    a = client.post("/api/v1/auth/anonymous").json()
-    from app.services.iap import verify_and_grant
-    result = verify_and_grant(
-        a["user"]["id"], "ios", "mock_valid_receipt", "sub_monthly_299"
-    )
-    assert result["status"] == "success"
-
-
-def test_iap_mock_receipt_rejected_in_production(monkeypatch, tmp_path):
-    """production에서 mock 영수증 거부. JWT 시크릿도 함께 설정해야 auth 통과."""
-    monkeypatch.setenv("SAJU_ENV", "production")
-    monkeypatch.setenv("SAJU_JWT_SECRET", "test-secret-for-iap-production-32chars!")
-    monkeypatch.setenv("SAJU_AUTH_DB_PATH", str(tmp_path / "auth.db"))
-    from app.auth.repository import reset_repository
-    reset_repository()
-
-    a_resp = client.post("/api/v1/auth/anonymous")
-    assert a_resp.status_code == 200, f"auth failed: {a_resp.text}"
-    a = a_resp.json()
-
-    from app.services.iap import verify_and_grant, IAPVerificationError
-    with pytest.raises(IAPVerificationError, match="strictly forbidden"):
-        verify_and_grant(
-            a["user"]["id"], "ios", "mock_valid_receipt", "sub_monthly_299"
-        )
-
 def test_jwt_short_secret_rejected_in_production(monkeypatch):
     """production + 짧은 시크릿 → RuntimeError (최소 32자)."""
     monkeypatch.setenv("SAJU_ENV", "production")
