@@ -108,6 +108,11 @@
     "language": "语言设置"
   },
   "birthInput": {
+    "cityLookupLoading": "正在查找城市…",
+    "cityLookupNotFound": "未找到该城市。请检查拼写，或手动输入经度和时区。",
+    "cityLookupError": "城市搜索失败，请手动输入经度和时区。",
+    "tzOffsetAtBirth": "出生日的UTC偏移",
+    "longitudeInvalid": "请输入-180至180之间的经度数值。",
     "title": "输入出生信息",
     "birthDate": "出生日期",
     "birthTime": "出生时间",

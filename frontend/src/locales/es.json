@@ -108,6 +108,11 @@
     "language": "Idioma"
   },
   "birthInput": {
+    "cityLookupLoading": "Buscando la ciudad…",
+    "cityLookupNotFound": "No se encontró la ciudad. Revisa la ortografía o introduce la longitud y la zona horaria manualmente.",
+    "cityLookupError": "La búsqueda de la ciudad falló. Introduce la longitud y la zona horaria manualmente.",
+    "tzOffsetAtBirth": "Desfase UTC en la fecha de nacimiento",
+    "longitudeInvalid": "Introduce la longitud como un número entre -180 y 180.",
     "title": "Introduce tus datos de nacimiento",
     "birthDate": "Fecha de nacimiento",
     "birthTime": "Hora de nacimiento",

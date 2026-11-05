@@ -108,6 +108,11 @@
     "language": "언어 설정 (Language)"
   },
   "birthInput": {
+    "cityLookupLoading": "도시를 찾는 중…",
+    "cityLookupNotFound": "도시를 찾지 못했어요. 철자를 확인하거나 경도와 타임존을 직접 입력해 주세요.",
+    "cityLookupError": "도시 검색에 실패했어요. 경도와 타임존을 직접 입력해 주세요.",
+    "tzOffsetAtBirth": "출생일 기준 UTC 오프셋",
+    "longitudeInvalid": "경도는 -180 ~ 180 사이의 숫자로 입력해 주세요.",
     "title": "출생 정보 입력",
     "birthDate": "생년월일",
     "birthTime": "출생 시간",

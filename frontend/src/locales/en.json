@@ -108,6 +108,11 @@
     "language": "Language"
   },
   "birthInput": {
+    "cityLookupLoading": "Looking up city…",
+    "cityLookupNotFound": "City not found. Check the spelling or enter longitude and timezone manually.",
+    "cityLookupError": "City search failed. Please enter longitude and timezone manually.",
+    "tzOffsetAtBirth": "UTC offset on birth date",
+    "longitudeInvalid": "Enter longitude as a number between -180 and 180.",
     "title": "Enter Your Birth Data",
     "birthDate": "Date of birth",
     "birthTime": "Time of birth",

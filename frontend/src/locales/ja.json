@@ -108,6 +108,11 @@
     "language": "言語設定"
   },
   "birthInput": {
+    "cityLookupLoading": "都市を検索中…",
+    "cityLookupNotFound": "都市が見つかりませんでした。つづりを確認するか、経度とタイムゾーンを手動で入力してください。",
+    "cityLookupError": "都市の検索に失敗しました。経度とタイムゾーンを手動で入力してください。",
+    "tzOffsetAtBirth": "出生日時点のUTCオフセット",
+    "longitudeInvalid": "経度は-180〜180の数値で入力してください。",
     "title": "出生情報の入力",
     "birthDate": "生年月日",
     "birthTime": "出生時間",
