@@ -42,6 +42,7 @@ async function getGoogleIdToken(): Promise<string> {
     responseType: AuthSession.ResponseType.IdToken,
     scopes: ['openid', 'profile', 'email'],
     extraParams: { nonce },
+    usePKCE: false,
   });
   const discovery = await AuthSession.fetchDiscoveryAsync('https://accounts.google.com');
   const result = await request.promptAsync(discovery);
