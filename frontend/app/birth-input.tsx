@@ -11,29 +11,15 @@ import { TimezonePickerModal } from "@/components/TimezonePickerModal";
 import { CITY_LIST } from "@/constants/cities";
 import { TIMEZONE_LIST } from "@/constants/timezones";
 import { colors, spacing, radius } from "@/theme";
+import { useCityLookup } from "@/hooks/useCityLookup";
+import {
+  hitLabel, tzOffsetLabel, defaultLongitudeForTimezone, isLongitudeConsistent, CityHit,
+} from "@/utils/cityLookup";
+
+// CITY_LIST 에 longitude/timezone 이 없어도 동작하도록 느슨한 타입으로 사용
+const CITIES = CITY_LIST as ReadonlyArray<{ key: string; label: string; longitude?: number; timezone?: string }>;
 
 export default function BirthInput() {
-
-  // 💡 도시 이름으로 경도와 타임존을 자동으로 찾아주는 마법 함수
-  const fetchCityInfo = async (cityName: string) => {
-    if (!cityName || cityName.trim().length < 2) return;
-    try {
-      const res = await fetch(
-        `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(cityName)}&count=1&language=ko&format=json`
-      );
-      const data = await res.json();
-      if (data.results && data.results.length > 0) {
-        const city = data.results[0];
-        // 💡 변수명이 다를 경우 여기를 수정하세요
-        if (typeof setCustomLongitude === 'function') setCustomLongitude(String(city.longitude));
-        if (typeof setCustomTimezone === 'function') setCustomTimezone(city.timezone); 
-        console.log("자동 세팅 완료:", city.name, city.longitude, city.timezone);
-      }
-    } catch (error) {
-      console.error("도시 정보를 가져오는데 실패했습니다:", error);
-    }
-  };
-
   const insets = useSafeAreaInsets();
   const saveProfile = useProfileStore((s) => s.saveProfile);
   const profile = useProfileStore((s) => s.profile);
@@ -55,11 +41,34 @@ export default function BirthInput() {
   const [customTimezone, setCustomTimezone] = useState("Asia/Seoul");
   const [showTimezoneModal, setShowTimezoneModal] = useState(false);
 
+  // t() 가 키를 못 찾으면 키 문자열을 그대로 돌려주므로, 그 경우 기본 문구를 쓴다
+  const tf = (key: string, fallback: string) => {
+    const v = t(key);
+    return !v || v === key ? fallback : v;
+  };
+
+  // 🌍 도시 이름 -> 경도 + 타임존 자동 조회
+  const lookup = useCityLookup(lang);
+  const applyHit = (h: CityHit) => {
+    setCustomLongitude(String(Math.round(h.longitude * 1000) / 1000));
+    setCustomTimezone(h.timezone); // 선택 목록에 없는 타임존이어도 tzLabel 이 원문을 그대로 보여준다
+  };
+  // 첫 번째 결과를 자동 적용 (동명 도시가 여럿이면 아래 후보 목록에서 바꿀 수 있다)
+  useEffect(() => {
+    if (lookup.status === "found" && lookup.hits[0]) applyHit(lookup.hits[0]);
+  }, [lookup.hits]);
+
+  const parseLongitude = (raw: string) => {
+    const s = raw.trim().replace(",", ".");
+    return s === "" ? NaN : Number(s);
+  };
+
   // 🌟 UI에 표시할 도시 이름 (직접 입력이면 유저가 쓴 이름, 아니면 리스트 라벨)
   const cityLabel = isCustomCity 
     ? (customCityName || t("birthInput.customCity")) 
-    : (CITY_LIST.find(c => c.key === city)?.label || "서울 (Seoul)");
+    : (CITIES.find(c => c.key === city)?.label || "서울 (Seoul)");
   const tzLabel = TIMEZONE_LIST.find(t => t.key === customTimezone)?.label || customTimezone;
+  const offsetLabel = tzOffsetLabel(customTimezone, birthDate); // 출생일 시점의 UTC 오프셋 (역사·서머타임 반영)
 
   // 저장된 프로필이 있으면 그 값으로 입력칸 채우기
   const hydrated = useRef(false);
@@ -115,16 +124,30 @@ export default function BirthInput() {
         timeString = `${hh}:${min}:00`;
       }
       
-      // 🌟 경도(Longitude) 계산 로직 수정
+      // 🌟 경도(Longitude)
       let finalLongitude = 126.978; // 기본값 (서울)
-      
       if (isCustomCity) {
-        const parsedLon = parseFloat(customLongitude);
-        // 유저가 경도를 입력했다면 그 값 사용, 안 했다면 서울 경도(126.978)를 기본으로 사용
-        finalLongitude = (!isNaN(parsedLon) && customLongitude.trim() !== "") ? parsedLon : 126.978;
+        if (customLongitude.trim() !== "") {
+          const parsedLon = parseLongitude(customLongitude);
+          if (!Number.isFinite(parsedLon) || Math.abs(parsedLon) > 180) {
+            const msg = tf("birthInput.longitudeInvalid", "경도는 -180 ~ 180 사이의 숫자로 입력해 주세요.");
+            if (Platform.OS === "web") alert(msg); else Alert.alert(t("common.notice"), msg);
+            return;
+          }
+          finalLongitude = parsedLon;
+        } else {
+          // 비워뒀으면 선택한 타임존의 대표 도시 경도 사용 (예전에는 타임존과 무관하게 서울 경도가 들어갔다)
+          const d = defaultLongitudeForTimezone(customTimezone, birthDate);
+          if (d === null) {
+            const msg = tf("birthInput.longitudeInvalid", "경도는 -180 ~ 180 사이의 숫자로 입력해 주세요.");
+            if (Platform.OS === "web") alert(msg); else Alert.alert(t("common.notice"), msg);
+            return;
+          }
+          finalLongitude = d;
+        }
       } else {
-        // 프리셋 도시를 선택했다면 CITY_LIST에 있는 정확한 경도 가져오기
-        finalLongitude = CITY_LIST.find(c => c.key === city)?.longitude || 126.978;
+        // 프리셋 도시: 서버가 birth_location 키로 정확한 값을 따로 해석한다 (여기 값은 참고용)
+        finalLongitude = CITIES.find(c => c.key === city)?.longitude || 126.978;
       }
 
       const profileData = {
@@ -132,7 +155,7 @@ export default function BirthInput() {
         birth_time: timeString,
         birth_time_mode: timeMode,
         birth_location: isCustomCity ? null : city,
-        timezone_str: isCustomCity ? customTimezone : (CITY_LIST.find(c => c.key === city)?.timezone || "Asia/Seoul"),
+        timezone_str: isCustomCity ? customTimezone : (CITIES.find(c => c.key === city)?.timezone || "Asia/Seoul"),
         longitude: finalLongitude, // 🌟 수정된 경도 적용
         gender: gender,
       };
@@ -189,18 +212,27 @@ export default function BirthInput() {
           <TextInput
             style={styles.textInput}
             value={customCityName}
-            onChangeText={setCustomCityName}
+            onChangeText={(v) => { setCustomCityName(v); lookup.search(v); }}
             placeholder="예: 부산, 뉴욕"
             placeholderTextColor={colors.textMuted}
+            autoCorrect={false}
           />
+          {lookup.status === "loading" && <Text style={styles.hint}>{tf("birthInput.cityLookupLoading", "도시를 찾는 중…")}</Text>}
+          {lookup.status === "notfound" && <Text style={styles.hint}>{tf("birthInput.cityLookupNotFound", "도시를 찾지 못했어요. 철자를 확인하거나 경도와 타임존을 직접 입력해 주세요.")}</Text>}
+          {lookup.status === "error" && <Text style={styles.hint}>{tf("birthInput.cityLookupError", "도시 검색에 실패했어요. 경도와 타임존을 직접 입력해 주세요.")}</Text>}
+          {lookup.hits.length > 1 && lookup.hits.map((h, i) => (
+            <TouchableOpacity key={i} onPress={() => applyHit(h)} style={styles.hitRow}>
+              <Text style={styles.inputText}>{hitLabel(h)}</Text>
+            </TouchableOpacity>
+          ))}
 
           <Text style={[styles.label, { marginTop: 12 }]}>경도 (Longitude)</Text>
           <TextInput
             style={styles.textInput}
             value={customLongitude}
             onChangeText={setCustomLongitude}
-            keyboardType="numeric"
-            placeholder="모르면 비워두세요 (기본: 126.978)"
+            keyboardType={Platform.OS === "ios" ? "numbers-and-punctuation" : "numeric"}
+            placeholder="모르면 비워두세요 (타임존 대표 도시 경도 사용)"
             placeholderTextColor={colors.textMuted}
           />
           <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 4, marginBottom: 12 }}>
@@ -214,6 +246,9 @@ export default function BirthInput() {
           <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 4 }}>
             {t("birthInput.timezoneHint")}
           </Text>
+          {offsetLabel && (
+            <Text style={styles.hint}>{tf("birthInput.tzOffsetAtBirth", "출생일 기준 UTC 오프셋")}: {offsetLabel}</Text>
+          )}
         </View>
       )}
 
@@ -232,19 +267,21 @@ export default function BirthInput() {
       </TouchableOpacity>
 
       <CityPickerModal visible={showCityModal} onClose={() => setShowCityModal(false)} onSelect={onSelectCity} currentCityKey={isCustomCity ? CUSTOM_CITY_KEY : city} />
-      <TimezonePickerModal 
-         visible={showTimezoneModal} 
-         onClose={() => setShowTimezoneModal(false)} 
-         onSelect={(tz) => {
-           setCustomTimezone(tz);
-       // 💡 타임존에 맞는 도시를 CITY_LIST에서 찾아 경도를 자동으로 채워줍니다.
-           const matchedCity = CITY_LIST.find(c => c.timezone === tz);
-           if (matchedCity) {
-            setCustomLongitude(String(matchedCity.longitude));
-           }
-          }} 
-          currentTz={customTimezone} 
-/>
+      <TimezonePickerModal
+        visible={showTimezoneModal}
+        onClose={() => setShowTimezoneModal(false)}
+        onSelect={(tz) => {
+          setCustomTimezone(tz);
+          // 이미 넣은 경도가 새 타임존과 어울리면 그대로 둔다 (예: 부산 129.07 + Asia/Seoul).
+          // 비어 있거나 어울리지 않으면(예: 부산 경도 + 뉴욕 타임존) 새 타임존의 대표 도시 경도로 바꾼다.
+          const cur = parseLongitude(customLongitude);
+          if (!Number.isFinite(cur) || !isLongitudeConsistent(cur, tz, birthDate)) {
+            const d = defaultLongitudeForTimezone(tz, birthDate);
+            if (d !== null) setCustomLongitude(String(d));
+          }
+        }}
+        currentTz={customTimezone}
+      />
     </ScrollView>
   );
 }
@@ -258,6 +295,8 @@ const styles = StyleSheet.create({
   inputBtn: { backgroundColor: colors.surface, padding: 14, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, marginBottom: spacing.md },
   inputText: { fontSize: 15, color: colors.text },
   customBox: { backgroundColor: colors.surface, padding: 16, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, marginBottom: spacing.md, marginTop: -8 },
+  hint: { fontSize: 12, color: colors.textMuted, marginTop: 4 },
+  hitRow: { paddingVertical: 10, borderBottomWidth: 1, borderBottomColor: colors.border },
   textInput: { backgroundColor: colors.bg, padding: 12, borderRadius: radius.sm, borderWidth: 1, borderColor: colors.border, justifyContent: "center", minHeight: 44, color: colors.text },
   genderBtn: { flex: 1, padding: 14, borderRadius: radius.md, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border, alignItems: "center" },
   genderBtnActive: { backgroundColor: colors.primary, borderColor: colors.primary },
