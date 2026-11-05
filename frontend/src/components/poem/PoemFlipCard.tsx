@@ -96,11 +96,11 @@ export function PoemFlipCard({
   const handleSaveWallpaper = () => {
     if (isWallpaperLocked) { onSubscribePress?.(); return; }
     
-    const url = `/assets/poems/${poem.id}_wallpaper.svg`;
+    const url = `/assets/poems/${poem.id}_wallpaper.png`;
     if (Platform.OS === "web") {
       const a = document.createElement("a");
       a.href = url;
-      a.download = `${poem.id}_wallpaper.svg`;
+      a.download = `${poem.id}_wallpaper.png`;
       a.click();
     } else {
       Alert.alert("알림", "모바일 앱에서는 곧 지원될 예정입니다.");
@@ -117,10 +117,10 @@ export function PoemFlipCard({
         <View style={{ height: FACE_HEIGHT, position: "relative" }}>
           <Animated.View
             pointerEvents={flipped ? "none" : "auto"}
-            style={[StyleSheet.absoluteFillObject, styles.face,
+            style={[StyleSheet.absoluteFill, styles.face,
                     { opacity: frontOpacity, transform: [{ perspective: 900 }, { rotateY: frontRotate }] }]}
           >
-            <Image source={{ uri: `/assets/poems/${poem.id}_calligraphy.svg` }} style={styles.image} resizeMode="cover" />
+            <Image source={{ uri: `/assets/poems/${poem.id}_calligraphy.png` }} style={styles.image} resizeMode="cover" />
             <Text style={styles.elementBadge}>{poem.element}</Text>
             <Text style={styles.sijoText}>{poem.sijo || poem.sijo_ko}</Text>
             {poem.keywords && poem.keywords.length > 0 && (
@@ -133,7 +133,7 @@ export function PoemFlipCard({
 
           <Animated.View
             pointerEvents={flipped ? "auto" : "none"}
-            style={[StyleSheet.absoluteFillObject, styles.face,
+            style={[StyleSheet.absoluteFill, styles.face,
                     { opacity: backOpacity, transform: [{ perspective: 900 }, { rotateY: backRotate }] }]}
           >
             <Text style={styles.title}>{poem.title}</Text>
