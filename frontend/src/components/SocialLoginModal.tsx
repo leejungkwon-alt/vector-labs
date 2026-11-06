@@ -3,6 +3,7 @@ import { ActivityIndicator, Alert, Modal, Platform, StyleSheet, Text, TouchableO
 import { Ionicons } from "@expo/vector-icons";
 import { colors, radius, spacing } from "@/theme";
 import { useAuthStore } from "@/store/authStore";
+import { useT } from "@/i18n";
 
 interface Props {
   visible: boolean;
@@ -12,6 +13,7 @@ interface Props {
 
 export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
   const linkAccount = useAuthStore((s) => s.linkAccount);
+  const t = useT();
   const [loading, setLoading] = useState<string | null>(null);
 
   const handleLogin = async (provider: "apple" | "google" | "kakao") => {
@@ -20,7 +22,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
       await linkAccount(provider);
       onSuccess();
     } catch (e: any) {
-      if (typeof Platform !== 'undefined' && Platform.OS === 'web') { window.alert(e.message || "로그인에 실패했습니다."); } else { Alert.alert('알림', e.message || "로그인에 실패했습니다."); }
+      if (typeof Platform !== 'undefined' && Platform.OS === 'web') { window.alert(e.message || t("socialLogin.loginFailed")); } else { Alert.alert(t("common.notice"), e.message || t("socialLogin.loginFailed")); }
     } finally {
       setLoading(null);
     }
@@ -30,9 +32,9 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
       <View style={styles.overlay}>
         <View style={styles.card}>
-          <Text style={styles.title}>계정 연결</Text>
+          <Text style={styles.title}>{t("socialLogin.title")}</Text>
           <Text style={styles.desc}>
-            기기를 변경하거나 앱을 삭제해도{"\n"}내 사주 데이터와 결제 정보를 안전하게 보관합니다.
+            {t("socialLogin.desc")}
           </Text>
 
           {/* Apple login disabled (일시 비활성화 - 재활성화하려면 이 주석 해제)
@@ -40,7 +42,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
             {loading === "apple" ? <ActivityIndicator color={colors.onPrimary} /> : (
               <>
                 <Ionicons name="logo-apple" size={20} color={colors.onPrimary} />
-                <Text style={styles.btnTextWhite}>Apple로 계속하기</Text>
+                <Text style={styles.btnTextWhite}>{t("socialLogin.appleCta")}</Text>
               </>
             )}
           </TouchableOpacity>
@@ -52,7 +54,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
             {loading === "google" ? <ActivityIndicator color="#000" /> : (
               <>
                 <Ionicons name="logo-google" size={20} color="#000" />
-                <Text style={styles.btnTextBlack}>Google로 계속하기</Text>
+                <Text style={styles.btnTextBlack}>{t("socialLogin.googleCta")}</Text>
               </>
             )}
           </TouchableOpacity>
@@ -61,13 +63,13 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
             {loading === "kakao" ? <ActivityIndicator color="#000" /> : (
               <>
                 <Ionicons name="chatbubble" size={20} color="#000" />
-                <Text style={styles.btnTextBlack}>카카오로 계속하기</Text>
+                <Text style={styles.btnTextBlack}>{t("socialLogin.kakaoCta")}</Text>
               </>
             )}
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.closeBtn} onPress={onClose} disabled={!!loading}>
-            <Text style={styles.closeText}>나중에 하기</Text>
+            <Text style={styles.closeText}>{t("socialLogin.later")}</Text>
           </TouchableOpacity>
         </View>
       </View>

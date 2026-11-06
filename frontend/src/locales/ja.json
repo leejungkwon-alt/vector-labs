@@ -156,7 +156,12 @@
     "kakao": "カカオで続ける",
     "later": "後で",
     "failed": "ログインに失敗しました。",
-    "alert": "お知らせ"
+    "alert": "お知らせ",
+    "loginFailed": "ログインに失敗しました。",
+    "desc": "機種変更やアプリ削除時でも\\n四柱推命データと決済情報を安全に保管します。",
+    "appleCta": "Appleで続ける",
+    "googleCta": "Googleで続ける",
+    "kakaoCta": "Kakaoで続ける"
   },
   "payment": {
     "title": "Gyeol Premium",

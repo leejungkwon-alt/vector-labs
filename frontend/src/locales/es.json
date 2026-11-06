@@ -156,7 +156,12 @@
     "kakao": "Continuar con Kakao",
     "later": "Más tarde",
     "failed": "Error de inicio de sesión.",
-    "alert": "Aviso"
+    "alert": "Aviso",
+    "loginFailed": "Error al iniciar sesión.",
+    "desc": "Mantenga seguros sus datos de saju e información de pago\\nincluso si cambia de dispositivo o elimina la aplicación.",
+    "appleCta": "Continuar con Apple",
+    "googleCta": "Continuar con Google",
+    "kakaoCta": "Continuar con Kakao"
   },
   "payment": {
     "title": "Gyeol Premium",

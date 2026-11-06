@@ -156,7 +156,12 @@
     "kakao": "使用 Kakao 继续",
     "later": "稍后",
     "failed": "登录失败。",
-    "alert": "提示"
+    "alert": "提示",
+    "loginFailed": "登录失败。",
+    "desc": "即使更换设备或删除应用，\\n也能安全保存您的四柱数据和支付信息。",
+    "appleCta": "使用 Apple 继续",
+    "googleCta": "使用 Google 继续",
+    "kakaoCta": "使用 Kakao 继续"
   },
   "payment": {
     "title": "Gyeol Premium",

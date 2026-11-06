@@ -156,7 +156,12 @@
     "kakao": "Continue with Kakao",
     "later": "Later",
     "failed": "Login failed.",
-    "alert": "Notice"
+    "alert": "Notice",
+    "loginFailed": "Login failed.",
+    "desc": "Keep your saju data and payment info safe\\neven if you change devices or delete the app.",
+    "appleCta": "Continue with Apple",
+    "googleCta": "Continue with Google",
+    "kakaoCta": "Continue with Kakao"
   },
   "payment": {
     "title": "Gyeol Premium",
