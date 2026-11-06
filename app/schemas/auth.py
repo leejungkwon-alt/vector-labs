@@ -6,6 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 
 class UserPublic(BaseModel):
+    model_config = ConfigDict(extra="ignore")
     id: str
     tier: str
     is_anonymous: bool
@@ -15,6 +16,7 @@ class UserPublic(BaseModel):
 
 
 class TokenResponse(BaseModel):
+    model_config = ConfigDict(extra="ignore")
     access_token: str
     token_type: str = "bearer"
     expires_in: int
@@ -40,6 +42,7 @@ class LoginRequest(BaseModel):
 
 
 class MeResponse(BaseModel):
+    model_config = ConfigDict(extra="ignore")
     user: UserPublic
 
 
@@ -132,6 +135,7 @@ class PushTokenPayload(BaseModel):
 
 
 class ProfileResponse(BaseModel):
+    model_config = ConfigDict(extra="ignore")
     user_id: str
     birth_date: Optional[str]
     birth_time: Optional[str]

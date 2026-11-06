@@ -130,12 +130,12 @@ export default function SettingsScreen() {
       {/* ⭐️ 추가된 부분: 익명 로그인 상태일 때 계정 연결 유도 */}
       {user?.is_anonymous && (
         <View style={[styles.profileBox, { backgroundColor: colors.surface, borderColor: colors.primary }]}>
-          <Text style={[styles.sectionTitle, { color: colors.primary }]}>계정 연동하기</Text>
+          <Text style={[styles.sectionTitle, { color: colors.primary }]}>t("settings.linkAccountTitle")</Text>
           <Text style={{ fontSize: 14, color: colors.text, marginBottom: 12, lineHeight: 20 }}>
-            기기를 변경하거나 앱을 삭제해도 내 사주 데이터와 결제 정보를 안전하게 보관하려면 SNS 계정을 연동하세요.
+            t("settings.linkAccountDesc")
           </Text>
           <TouchableOpacity style={styles.upgradeBtn} onPress={handleLinkAccount}>
-            <Text style={styles.upgradeBtnText}>SNS 계정 연동하기</Text>
+            <Text style={styles.upgradeBtnText}>t("settings.linkAccountCta")</Text>
           </TouchableOpacity>
         </View>
       )}
@@ -209,10 +209,10 @@ export default function SettingsScreen() {
             // 업그레이드 버튼을 눌러서 들어온 경우 -> 성공 시 결제창으로 연결
             setShowPayment(true);
           } else {
-            // 단순히 계정 연동 버튼을 눌러서 들어온 경우 -> 성공 알림만 띄우고 종료
-            const msg = "계정이 성공적으로 연결되었습니다.";
+            // 단순히 계정 연동 버튼을 눌러서 들어온 경우 -> 성공 t("common.notice")만 띄우고 종료
+            const msg = "t("settings.linkAccountSuccess")";
             if (Platform.OS === "web") alert(msg);
-            else Alert.alert("알림", msg);
+            else Alert.alert("t("common.notice")", msg);
           }
         }}
       />

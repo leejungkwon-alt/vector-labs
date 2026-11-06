@@ -163,6 +163,7 @@ class SajuRequest(BaseModel):
 
 
 class SajuResponse(BaseModel):
+    model_config = ConfigDict(extra="ignore")
     solar_year: int
     year_pillar: str
     month_pillar: str
@@ -194,4 +195,5 @@ class ReportRequest(SajuRequest):
 
 
 class ReportResponse(BaseModel):
+    model_config = ConfigDict(extra="ignore")
     report: Dict[str, Any]

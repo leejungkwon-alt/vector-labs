@@ -20,7 +20,7 @@ from urllib.parse import parse_qsl
 
 import httpx
 from fastapi import APIRouter, Depends, Header, HTTPException
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 
 from app.auth.dependencies import get_current_user
 from app.auth.repository import get_repository
@@ -37,6 +37,7 @@ _MIN_CRON_SECRET_LEN = 16
 
 
 class TelegramInitData(BaseModel):
+    model_config = ConfigDict(extra="ignore")
     init_data: str = Field(
         min_length=1,
         description="Telegram.WebApp.initData 원문 (서버가 서명을 검증합니다)",
