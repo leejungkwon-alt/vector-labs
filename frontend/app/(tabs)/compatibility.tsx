@@ -299,9 +299,9 @@ const styles = StyleSheet.create({
   title: { fontSize: 20, fontWeight: "700", color: colors.text, marginBottom: 16, marginTop: 10 },
   
   segmentWrap: { flexDirection: "row", backgroundColor: colors.surface, borderRadius: radius.pill, padding: 4, marginBottom: 24, borderWidth: 1, borderColor: colors.border },
-  segmentBtn: { flex: 1, paddingVertical: 12, alignItems: "center", borderRadius: radius.pill },
+  segmentBtn: { flex: 1, paddingVertical: 10, paddingHorizontal: 4, alignItems: "center", justifyContent: "center", borderRadius: radius.pill },
   segmentBtnActive: { backgroundColor: colors.primary },
-  segmentText: { fontSize: 15, fontWeight: "600", color: colors.textMuted },
+  segmentText: { fontSize: 13, fontWeight: "600", color: colors.textMuted },
   segmentTextActive: { color: colors.onPrimary, fontWeight: "700" },
 
   label: { fontSize: 15, fontWeight: "600", color: colors.textMuted, marginBottom: 6 },

@@ -77,23 +77,19 @@ async def lemonsqueezy_webhook(
 
 @router.get("/portal")
 async def get_customer_portal(user: dict = Depends(get_current_user)):
-    """Lemon Squeezy 고객 포털(Signed URL) 반환"""
+    """Lemon Squeezy 고객 포털(Signed URL) 반환 (구독 ID 기반)"""
     from app.services.lemonsqueezy_client import get_customer_portal_url
-    
-    # 유저 객체에 이메일이 있는지 안전하게 확인
-    email = user.get("email")
-    
-    if not email:
-        # 이메일이 없으면 400 대신 명확한 에러 메시지 반환
-        print(f"DEBUG: User {user.get('id')} has no email in DB.")
-        raise HTTPException(
-            status_code=400, 
-            detail="User has no email address. Please link a social account (Google) first."
-        )
-    
-    portal_url = await get_customer_portal_url(email)
-    if not portal_url:
-        raise HTTPException(status_code=404, detail="No active subscription found for this email.")
-        
-    return {"url": portal_url}
 
+    sub_id = user.get("stripe_subscription_id")
+    if not sub_id:
+        raise HTTPException(
+            status_code=404,
+            detail="No subscription linked to this account. Please subscribe to Premium first.",
+        )
+    url = await get_customer_portal_url(str(sub_id))
+    if not url:
+        raise HTTPException(
+            status_code=502,
+            detail="Could not load the billing portal. Please try again later.",
+        )
+    return {"url": url}

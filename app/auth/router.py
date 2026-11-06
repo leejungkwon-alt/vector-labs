@@ -91,7 +91,6 @@ def link_provider(
     try:
         updated = get_repository().link_social_identity(
             user["id"], identity["provider"], identity["subject"],
-            email=identity.get("email"), # 👈 이메일도 함께 저장!
         )
     except ValueError as e:
         raise HTTPException(status_code=409, detail=str(e))

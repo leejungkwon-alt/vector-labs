@@ -377,12 +377,11 @@ class Repository(_BaseRepository):
 
             # migration (2026-11 Stripe)
             u_cols = {r[1] for r in self._conn.execute("PRAGMA table_info(users)").fetchall()}
-            for col in ["stripe_customer_id", "stripe_subscription_id", "subscription_status", "current_period_end"]:
+            for col in ["stripe_customer_id", "stripe_subscription_id", "subscription_status", "current_period_end", "email"]:
                 if col not in u_cols:
                     self._conn.execute(f"ALTER TABLE users ADD COLUMN {col} TEXT")
             self._conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_stripe_customer ON users(stripe_customer_id) WHERE stripe_customer_id IS NOT NULL")
             self._conn.execute("CREATE TABLE IF NOT EXISTS stripe_events (id TEXT PRIMARY KEY, type TEXT NOT NULL, processed_at TEXT NOT NULL)")
-
     def _one(self, sql, params=()):
         with self._lock:
             row = self._conn.execute(sql, params).fetchone()
@@ -454,13 +453,12 @@ class PostgresRepository(_BaseRepository):
 
 
             # migration (2026-11 Stripe)
-            for col in ["stripe_customer_id", "stripe_subscription_id", "subscription_status", "current_period_end"]:
+            for col in ["stripe_customer_id", "stripe_subscription_id", "subscription_status", "current_period_end", "email"]:
                 r = conn.execute("SELECT 1 FROM information_schema.columns WHERE table_name='users' AND column_name=%s AND table_schema=current_schema()", (col,)).fetchone()
                 if r is None:
                     conn.execute(f"ALTER TABLE users ADD COLUMN {col} TEXT")
             conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_stripe_customer ON users(stripe_customer_id) WHERE stripe_customer_id IS NOT NULL")
             conn.execute("CREATE TABLE IF NOT EXISTS stripe_events (id TEXT PRIMARY KEY, type TEXT NOT NULL, processed_at TEXT NOT NULL)")
-
     def _one(self, sql, params=()):
         with self._pool.connection() as conn:
             return conn.execute(self._q(sql), params).fetchone()
