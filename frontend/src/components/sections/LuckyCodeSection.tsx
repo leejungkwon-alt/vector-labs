@@ -21,7 +21,7 @@ export function LuckyCodeSectionView({ section }: { section: LuckyCodeSection })
       {section.poem && <PoemFlipCard poem={section.poem} />}
 
       <TouchableOpacity
-        onPress={() => router.push("/collection")}
+        onPress={() => /* 시조 모아보기 제거됨 */}
         style={{ marginTop: 16, padding: 12, backgroundColor: colors.surface, borderRadius: 12, borderWidth: 1, borderColor: colors.primary, alignItems: "center" }}
       >
         {/* 시조 모아보기 버튼 제거됨 */}
