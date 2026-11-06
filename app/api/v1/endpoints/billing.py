@@ -16,7 +16,7 @@ async def create_checkout(user: dict = Depends(get_current_user)):
     """프론트엔드에서 결제 버튼을 눌렀을 때 호출되는 API"""
     from app.services.lemonsqueezy_client import create_checkout_url
     
-    url = await create_checkout_url(user_id=user["id"], email=user["email"])
+    url = await create_checkout_url(user_id=user["id"], email=user.get("email"))
     return {"url": url}
 
 
@@ -26,7 +26,10 @@ async def lemonsqueezy_webhook(
     x_signature: str = Header(..., alias="X-Signature"),
 ):
     """Lemon Squeezy 결제 완료/취소 웹훅 수신"""
-    secret = os.environ.get("LEMONSQUEEZY_WEBHOOK_SECRET", "").encode()
+    secret_str = os.environ.get("LEMONSQUEEZY_WEBHOOK_SECRET", "")
+    if not secret_str:
+        raise HTTPException(status_code=503, detail="Webhook not configured")
+    secret = secret_str.encode()
     raw_body = await request.body()
     
     # 1. 서명 검증 (보안)

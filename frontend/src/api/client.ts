@@ -93,7 +93,8 @@ export const api = {
   anonymous: () => request<AuthResponse>("/auth/anonymous", { method: "POST" }),
   me: () => request<{ user: AuthResponse["user"] }>("/auth/me"),
   updateProfile: (payload: any) => request<any>("/auth/me/profile", { method: "PUT", body: JSON.stringify(payload) }),
-  linkProvider: (provider: string, token: string) => request<AuthResponse>(`/auth/link/${provider}`, { method: "POST", body: JSON.stringify({ provider_token: token }) }),
+  linkProvider: (provider: string, token: string) => request<AuthResponse>(`/auth/link/${provider}`, { method: "POST", body: JSON.stringify({ provider_token: token }) }),    checkout: () => request<{ url: string }>("/billing/checkout", { method: "POST" }),
+
   purchase: (product_id: string) => request<any>("/auth/me/purchase", { method: "POST", body: JSON.stringify({ product_id, receipt: "mock_valid_receipt", platform: Platform.OS }) }),
   deleteAccount: () => request<void>("/auth/me", { method: "DELETE" }),
   getPurchases: () => request<{ purchases: any[] }>("/auth/me/purchases"),

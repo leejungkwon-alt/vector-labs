@@ -5,6 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { colors, radius, spacing } from "@/theme";
 import { api } from "@/api/client";
 import { useAuthStore } from "@/store/authStore";
+import { Platform, Linking } from 'react-native';
 
 interface Props {
   visible: boolean;
@@ -16,17 +17,22 @@ export function PaymentModal({ visible, onClose }: Props) {
   const [loading, setLoading] = useState<string | null>(null);
   const bootstrap = useAuthStore((s) => s.bootstrap);
 
-  const handlePay = async (productId: string) => {
+    const handlePay = async (productId: string) => {
     setLoading(productId);
     try {
-      await api.purchase(productId);
-      try { await queryClient.invalidateQueries(); }
-      catch (e) { console.warn('[FIX-21] cache invalidate failed', e); }
-      await bootstrap();   // 한 번만
-      Alert.alert("Payment Successful", "The locked content has been unlocked.");
-      onClose();
+      // 1. 백엔드에서 Lemon Squeezy 결제창 URL 받아오기
+      const { url } = await api.checkout();
+      
+      // 2. 플랫폼(웹/앱)에 따라 결제창 열기
+      if (Platform.OS === "web") {
+        window.location.href = url; // 웹: 현재 창에서 결제창으로 이동
+      } else {
+        await Linking.openURL(url); // 앱: 외부 브라우저로 결제창 열기
+        onClose(); // 앱의 경우 결제창을 띄운 후 모달은 닫아줌
+      }
+      
     } catch (e: any) {
-      Alert.alert("Payment Failed", e.message || "Please try again.");
+      Alert.alert("Checkout Failed", e.message || "Please try again.");
     } finally {
       setLoading(null);
     }
