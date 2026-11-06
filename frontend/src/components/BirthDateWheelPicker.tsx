@@ -15,6 +15,7 @@ const isWeb = Platform.OS === 'web';
 const textColor = isWeb ? '#000000' : '#FFFFFF';
 
 export default function BirthDateWheelPicker({ visible, onClose, onConfirm, initialDate }: Props) {
+  const t = useT();
   const initDate = initialDate ? new Date(initialDate) : new Date(1990, 0, 1);
   const [year, setYear] = useState(initDate.getFullYear());
   const [month, setMonth] = useState(initDate.getMonth() + 1);
