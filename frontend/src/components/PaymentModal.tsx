@@ -17,7 +17,7 @@ export function PaymentModal({ visible, onClose }: Props) {
   const [loading, setLoading] = useState<string | null>(null);
   const bootstrap = useAuthStore((s) => s.bootstrap);
 
-    const handlePay = async (productId: string) => {
+  const handlePay = async (productId: string) => {
     setLoading(productId);
     try {
       // 1. 백엔드에서 Lemon Squeezy 결제창 URL 받아오기
@@ -48,42 +48,32 @@ export function PaymentModal({ visible, onClose }: Props) {
               <Ionicons name="close" size={24} color={colors.textMuted} />
             </TouchableOpacity>
           </View>
-          <Text style={styles.desc}>Choose the plan that fits your journey.</Text>
+          <Text style={styles.desc}>Unlock all deep reports and daily insights.</Text>
 
-          {/* 1. 구독 */}
-          <TouchableOpacity style={[styles.planBox, { borderColor: colors.primary, backgroundColor: colors.primary + "05" }]} onPress={() => handlePay("sub_monthly_299")} disabled={!!loading}>
+          {/* 💎 프리미엄 구독 플랜 (단일화) */}
+          <TouchableOpacity 
+            style={[styles.planBox, { borderColor: colors.primary, backgroundColor: colors.primary + "05" }]} 
+            onPress={() => handlePay("sub_monthly_699")} 
+            disabled={!!loading}
+          >
             <View style={{ flex: 1 }}>
               <View style={{ flexDirection: "row", alignItems: "center", gap: 6, marginBottom: 4 }}>
-                <Text style={styles.planName}>Monthly Subscription</Text>
-                <View style={{ backgroundColor: colors.primary, paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}><Text style={{ color: colors.onPrimary, fontSize: 10, fontWeight: "700" }}>BEST</Text></View>
+                <Text style={styles.planName}>Premium Subscription</Text>
+                <View style={{ backgroundColor: colors.primary, paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}>
+                  <Text style={{ color: colors.onPrimary, fontSize: 10, fontWeight: "700" }}>BEST</Text>
+                </View>
               </View>
               <Text style={styles.planDetail}>Daily, Monthly & All Deep Reports</Text>
-              <Text style={styles.planPrice}>$2.99 / month (Cancel anytime)</Text>
+              <Text style={styles.planPrice}>$6.99 / month (Cancel anytime)</Text>
             </View>
-            {loading === "sub_monthly_299" ? <ActivityIndicator color={colors.primary} /> : <Ionicons name="chevron-forward" size={24} color={colors.primary} />}
+            {loading === "sub_monthly_699" ? (
+              <ActivityIndicator color={colors.primary} />
+            ) : (
+              <Ionicons name="chevron-forward" size={24} color={colors.primary} />
+            )}
           </TouchableOpacity>
 
-          {/* 2. 심화 리포트 단건 */}
-          <TouchableOpacity style={styles.planBox} onPress={() => handlePay("addon_deep_099")} disabled={!!loading}>
-            <View style={{ flex: 1 }}>
-              <Text style={styles.planName}>Deep Report</Text>
-              <Text style={styles.planDetail}>Love, Career & Wealth patterns (Keep forever)</Text>
-              <Text style={styles.planPrice}>$0.99 (Lifetime Unlock)</Text>
-            </View>
-            {loading === "addon_deep_099" ? <ActivityIndicator color={colors.textMuted} /> : <Ionicons name="chevron-forward" size={24} color={colors.textMuted} />}
-          </TouchableOpacity>
-
-          {/* 3. 궁합 단건 */}
-          <TouchableOpacity style={styles.planBox} onPress={() => handlePay("addon_compat_199")} disabled={!!loading}>
-            <View style={{ flex: 1 }}>
-              <Text style={styles.planName}>Premium Compatibility</Text>
-              <Text style={styles.planDetail}>4-axis chemistry (Keep forever)</Text>
-              <Text style={styles.planPrice}>$1.99 (Lifetime Unlock)</Text>
-            </View>
-            {loading === "addon_compat_199" ? <ActivityIndicator color={colors.textMuted} /> : <Ionicons name="chevron-forward" size={24} color={colors.textMuted} />}
-          </TouchableOpacity>
-
-          <Text style={styles.terms}>Cancel anytime. Simulated checkout for global testing.</Text>
+          <Text style={styles.terms}>Secure checkout powered by Lemon Squeezy.</Text>
         </View>
       </View>
     </Modal>
