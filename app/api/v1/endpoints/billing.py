@@ -80,7 +80,12 @@ async def get_customer_portal(user: dict = Depends(get_current_user)):
     """Lemon Squeezy 고객 포털(Signed URL) 반환"""
     from app.services.lemonsqueezy_client import get_customer_portal_url
     
-    email = user.get("email")
+    # dict와 객체 타입을 모두 지원하도록 안전하게 이메일 추출
+    email = None
+    if isinstance(user, dict):
+        email = user.get("email") or user.get("user_email")
+    else:
+        email = getattr(user, "email", None) or getattr(user, "user_email", None)
     if not email:
         raise HTTPException(status_code=400, detail="User email required")
     
