@@ -451,21 +451,63 @@
     "CHALLENGING": {
       "headline": "Una combinación que lo tiene todo.",
       "body": "La estructura juega en tu contra. Eso no determina el resultado, pero sí significa que los dos debéis estar dispuestos, de forma consciente, la mayoría de los días."
-    }
+    },
+    "NEUTRAL_VARIANTS": [
+      {
+        "headline": "Sus texturas difieren bastante.",
+        "body": "Ver las cosas igual puede ser difícil ahora. Concéntrense en reconocer el ritmo del otro y construir confianza."
+      },
+      {
+        "headline": "Sus energías apuntan en direcciones distintas.",
+        "body": "Sus ritmos y tiempos de reacción difieren. Forzar la alineación cansa."
+      },
+      {
+        "headline": "Mezcla de lo familiar y lo nuevo.",
+        "body": "Responden diferente ante las mismas situaciones. Esa brecha a veces agota, a veces atrae."
+      },
+      {
+        "headline": "Medio paso en los momentos decisivos.",
+        "body": "Sin choques estructurales importantes, pero tampoco se completa solo. La clave es dar medio paso en las encrucijadas."
+      },
+      {
+        "headline": "Una relación que se ilumina mutuamente.",
+        "body": "Sus cualidades únicas crean sinergia. Juntos, sus fortalezas se vuelven más claras."
+      }
+    ]
   },
   "DISCLAIMER": "Nota: Esta interpretación de compatibilidad combina cálculos astronómicos con modelos modernos de relaciones. Se trata de una interpretación simbólica, sujeta a la interpretación de cada uno; no es un veredicto, ni una predicción, ni sustituye a una conversación sincera. Tú sigues siendo el protagonista de esta relación.",
   "RELATIONSHIP_CONTENT": {
     "romance": {
-      "tip": "Céntrate en vuestra conexión emocional. Entender el «lenguaje del amor» de cada uno puede evitar malentendidos innecesarios. (Consejos románticos)"
+      "tip": "Céntrate en vuestra conexión emocional. Entender el «lenguaje del amor» de cada uno puede evitar malentendidos innecesarios. (Consejos románticos)",
+      "tips_by_band": {
+        "low": "Sus lenguajes emocionales no están sincronizados. Bajen el ritmo.",
+        "mid": "Están encontrando el equilibrio. Los pequeños gestos importan.",
+        "high": "No den por sentada la atracción. La curiosidad mutua mantiene la temperatura."
+      }
     },
     "business": {
-      "tip": "Hay que tener en cuenta las diferencias en los estilos de trabajo y en la toma de decisiones. La clave del éxito reside en una distribución de funciones que aproveche los puntos fuertes de cada uno. (Consejos empresariales)"
+      "tip": "Hay que tener en cuenta las diferencias en los estilos de trabajo y en la toma de decisiones. La clave del éxito reside en una distribución de funciones que aproveche los puntos fuertes de cada uno. (Consejos empresariales)",
+      "tips_by_band": {
+        "low": "Sus estilos difieren. Documenten roles y alineen expectativas.",
+        "mid": "Sus fortalezas se expresan distinto. Reglas claras reducen fricción.",
+        "high": "La confianza crece. Buen momento para proyectos grandes."
+      }
     },
     "friend": {
-      "tip": "Céntrate en las experiencias compartidas y en el respeto mutuo. Mantén un equilibrio entre lo que das y lo que recibes."
+      "tip": "Céntrate en las experiencias compartidas y en el respeto mutuo. Mantén un equilibrio entre lo que das y lo que recibes.",
+      "tips_by_band": {
+        "low": "Momento de calibrar la distancia. Respeten el ritmo del otro.",
+        "mid": "El equilibrio entre juntos y solos importa. La comodidad es raíz de confianza.",
+        "high": "Base de una amistad duradera. Pueden crecer apoyándose."
+      }
     },
     "family": {
-      "tip": "Reconoce las diferencias generacionales y establece límites saludables. Es mejor mostrar empatía que ganar discusiones."
+      "tip": "Reconoce las diferencias generacionales y establece límites saludables. Es mejor mostrar empatía que ganar discusiones.",
+      "tips_by_band": {
+        "low": "Expectativas generacionales chocan. Miren las emociones antes que lo correcto.",
+        "mid": "Establecer límites sanos es la clave. Amor e intromisión son distintos.",
+        "high": "Son las raíces del otro. Expresar gratitud refuerza el vínculo."
+      }
     }
   }
 }

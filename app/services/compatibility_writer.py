@@ -35,7 +35,20 @@ def write_compatibility(compat: dict, lang: str = "en", relationship_type: str =
     pack = load_pack(lang, "compatibility")
     overall = compat["overall"]
     _overall_all = pack.get("OVERALL_CONTENT", {})
-    overall_content = _overall_all.get(overall["grade"]) or _overall_all.get("NEUTRAL", {})
+
+    # NEUTRAL 등급이면 score 기반으로 variants 중 하나 선택 (반복 방지)
+    if overall["grade"] == "NEUTRAL" and _overall_all.get("NEUTRAL_VARIANTS"):
+        variants = _overall_all["NEUTRAL_VARIANTS"]
+        try:
+            # score: -1.0 ~ 1.0 → 0~100으로 변환
+            s = (float(overall["score"]) + 1) / 2 * 100
+        except (TypeError, ValueError):
+            s = 50.0
+        n = len(variants)
+        idx = min(n - 1, max(0, int(s // (100.0 / n))))
+        overall_content = variants[idx]
+    else:
+        overall_content = _overall_all.get(overall["grade"]) or _overall_all.get("NEUTRAL", {})
     if not overall_content.get("headline"):
         # Defensive fallback: pack 이 비어있거나 예상 밖 grade 일 때
         try:
@@ -46,7 +59,18 @@ def write_compatibility(compat: dict, lang: str = "en", relationship_type: str =
 
     # 👇 관계 유형별 맞춤 조언 추가
     rel_pack = pack.get("RELATIONSHIP_CONTENT", {}).get(relationship_type, {})
-    relationship_advice = rel_pack.get("tip", "")
+    tips_by_band = rel_pack.get("tips_by_band") or {}
+    try:
+        _s = (float(overall["score"]) + 1) / 2 * 100
+    except (TypeError, ValueError):
+        _s = 50.0
+    if _s < 45:
+        _band = "low"
+    elif _s < 65:
+        _band = "mid"
+    else:
+        _band = "high"
+    relationship_advice = tips_by_band.get(_band) or rel_pack.get("tip", "")
 
     return {
         "meta": {

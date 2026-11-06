@@ -451,21 +451,63 @@
     "CHALLENGING": {
       "headline": "A combination that asks everything.",
       "body": "The structure is working against you. That doesn't decide the outcome — but it does mean you must both be willing, consciously, most days."
-    }
+    },
+    "NEUTRAL_VARIANTS": [
+      {
+        "headline": "Your textures differ considerably.",
+        "body": "Seeing eye to eye may be hard right now. Focus on acknowledging each other's pace and building trust."
+      },
+      {
+        "headline": "Your energies point in different directions.",
+        "body": "Your rhythms and reaction speeds differ. Forcing alignment will tire you out — start by acknowledging each other's tempo."
+      },
+      {
+        "headline": "A mix of the familiar and the new.",
+        "body": "You respond differently to the same situations. That gap can feel exhausting at times and magnetic at others."
+      },
+      {
+        "headline": "Half a step at decisive moments.",
+        "body": "No major structural clash, but it won't complete itself. The key is whether you both take half a step toward the other."
+      },
+      {
+        "headline": "A relationship that lights each other up.",
+        "body": "Your unique qualities create synergy. Together, your strengths become clearer and support you through tough moments."
+      }
+    ]
   },
   "DISCLAIMER": "Note: This compatibility reading blends astronomical calculation with modern relationship frameworks. It is a symbolic, school-dependent reading — not a verdict, not a prediction, and not a substitute for honest conversation. You remain the author of this relationship.",
   "RELATIONSHIP_CONTENT": {
     "romance": {
-      "tip": "Focus on your emotional exchange. Understanding each other's love language can prevent unnecessary misunderstandings. (Romance Advice)"
+      "tip": "Focus on your emotional exchange. Understanding each other's love language can prevent unnecessary misunderstandings. (Romance Advice)",
+      "tips_by_band": {
+        "low": "Your emotional languages aren't syncing. Slow down — rushing deepens misunderstandings.",
+        "mid": "You're finding balance. Small gestures matter — invest in daily kindness.",
+        "high": "Don't take the pull for granted. Mutual curiosity keeps the temperature alive."
+      }
     },
     "business": {
-      "tip": "Acknowledge differences in work styles and decision-making. Role division that leverages each other's strengths is the key to success. (Business Advice)"
+      "tip": "Acknowledge differences in work styles and decision-making. Role division that leverages each other's strengths is the key to success. (Business Advice)",
+      "tips_by_band": {
+        "low": "Working styles clearly differ. Document roles and align expectations up front.",
+        "mid": "Your strengths play out differently. Decision rules reduce friction.",
+        "high": "Trust is building. Good time for bigger projects — keep emotions in check too."
+      }
     },
     "friend": {
-      "tip": "Focus on shared experiences and mutual respect. Keep the balance of giving and taking equal."
+      "tip": "Focus on shared experiences and mutual respect. Keep the balance of giving and taking equal.",
+      "tips_by_band": {
+        "low": "Time to calibrate distance. Respect each other's rhythm instead of forcing closeness.",
+        "mid": "Balance together-time and apart-time. Comfort is the root of trust.",
+        "high": "Lasting-friendship foundation is visible. Grow into cheerleaders for each other."
+      }
     },
     "family": {
-      "tip": "Acknowledge generational differences and set healthy boundaries. Empathy over winning arguments."
+      "tip": "Acknowledge generational differences and set healthy boundaries. Empathy over winning arguments.",
+      "tips_by_band": {
+        "low": "Generational expectations are colliding. Look under the right/wrong to the emotions.",
+        "mid": "Healthy boundaries are key. Learn that love and intrusion are different.",
+        "high": "You're each other's roots. Voicing gratitude strengthens the bond."
+      }
     }
   }
 }
