@@ -3,8 +3,6 @@ import { View, Text } from "react-native";
 import { colors } from "@/theme";
 import { ss } from "./shared";
 import { useT } from "@/i18n";
-import { router } from "expo-router";
-import { TouchableOpacity } from "react-native";
 import type { LuckyCodeSection } from "../../../types";
 import { PoemFlipCard } from "../poem/PoemFlipCard";
 
@@ -19,13 +17,6 @@ export function LuckyCodeSectionView({ section }: { section: LuckyCodeSection })
       <Text style={ss.coreHero}>{section.hero}</Text>
 
       {section.poem && <PoemFlipCard poem={section.poem} />}
-
-      <TouchableOpacity
-        onPress={() => /* 시조 모아보기 제거됨 */}
-        style={{ marginTop: 16, padding: 12, backgroundColor: colors.surface, borderRadius: 12, borderWidth: 1, borderColor: colors.primary, alignItems: "center" }}
-      >
-        {/* 시조 모아보기 버튼 제거됨 */}
-      </TouchableOpacity>
 
       <View style={ss.blockBox}>
         <Text style={ss.blockTitle}>{t("sections.powerElement")} · {p.element}</Text>
