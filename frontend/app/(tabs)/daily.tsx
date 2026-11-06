@@ -26,6 +26,7 @@ export default function DailyScreen() {
   const { data, isLoading, error } = useQuery({
     queryKey: ["daily", profile, user?.id, lang],
     queryFn: () => api.daily({ ...profile, days: 7, lang }),
+    enabled: !!user && user.tier !== "free", // 🚨 무료 회원은 API 호출하지 않음
     enabled: !!profile && profileReady && !!user && ready,
     retry: false,
   });
