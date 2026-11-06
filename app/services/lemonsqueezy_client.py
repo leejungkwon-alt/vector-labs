@@ -19,7 +19,7 @@ async def create_checkout_url(user_id: str, email: str | None = None) -> str:
             "type": "checkouts",
             "attributes": {
                 "checkout_data": {
-                    "email": email,
+                   
                     "custom": {"user_id": user_id}, # 웹훅 수신 시 유저 식별용
                 },
                 "product_options": {
