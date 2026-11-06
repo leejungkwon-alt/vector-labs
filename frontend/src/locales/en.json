@@ -71,7 +71,7 @@
     "axisDayMaster": "Day master",
     "axisTenGods": "Values & mode",
     "axisSinsal": "Special traits",
-    "ageLimitTitle": "🔞 Users under 14 cannot use this service",
+    "ageLimitTitle": "🚫 Users under 14 cannot use this service",
     "ageLimitDesc": "Gyeol is available only to users aged 14 and over.\nPlease check the birthdate again.",
     "ageLimitRetry": "Try again"
   },
