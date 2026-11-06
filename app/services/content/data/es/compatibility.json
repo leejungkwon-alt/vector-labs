@@ -87,7 +87,8 @@
         "headline": "Un refugio familiar sólido, basado en el apoyo y el cariño incondicionales.",
         "body": "Vuestro vínculo es como un refugio seguro en el que cada miembro de la familia encuentra aceptación y cariño. Al mostrar una paciencia amable y escuchar sin juzgar de inmediato, mantenéis fuertes los lazos familiares. Este compromiso silencioso con el apoyo incondicional garantiza que vuestro hogar siga siendo un refugio seguro."
       }
-    }
+    },
+    "__signature__": "En su flujo natural,"
   },
   "DAY_MASTER_CONTENT": {
     "romance": {
@@ -217,7 +218,8 @@
         "headline": "Un vínculo familiar sólido, caracterizado por una lealtad inquebrantable y un cariño incondicional.",
         "body": "Vuestro vínculo trasciende los desacuerdos pasajeros y se sustenta firmemente en un compromiso familiar para toda la vida. Ofrecéis una presencia constante y sin prejuicios que permite a vuestros seres queridos sentirse completamente seguros. Esta lealtad silenciosa mantiene unida a vuestra familia a lo largo de todos los cambios de la vida."
       }
-    }
+    },
+    "__signature__": "En sus naturalezas innatas,"
   },
   "TEN_GODS_CONTENT": {
     "romance": {
@@ -307,7 +309,8 @@
         "headline": "Una estructura familiar llena de cariño en la que cada miembro se sienta valorado y apoyado.",
         "body": "Mantienes un ambiente tranquilo y comprensivo que permite a todos crecer a su propio ritmo. Ofrecer ayuda discreta y celebrar los pequeños logros familiares contribuye a mantener alta la moral en el hogar. Este marco de apoyo garantiza que tu hogar siga siendo un verdadero refugio."
       }
-    }
+    },
+    "__signature__": "En cómo se relacionan,"
   },
   "SINSAL_CONTENT": {
     "romance": {
@@ -429,7 +432,8 @@
         "headline": "Un vínculo familiar atemporal, basado en una profunda aceptación y una devoción silenciosa.",
         "body": "El vínculo familiar se basa en una promesa silenciosa y duradera de apoyarse mutuamente pase lo que pase. A lo largo de todas las etapas de la vida, vuestra presencia constante os proporciona la reconfortante sensación de estar en casa. Esta aceptación incondicional es el mayor regalo que os hacéis unos a otros."
       }
-    }
+    },
+    "__signature__": "En el hilo entre ustedes,"
   },
   "OVERALL_CONTENT": {
     "PEAK": {
@@ -455,7 +459,7 @@
     "NEUTRAL_VARIANTS": [
       {
         "headline": "Sus texturas difieren bastante.",
-        "body": "Ver las cosas igual puede ser difícil ahora. Concéntrense en reconocer el ritmo del otro y construir confianza."
+        "body": "Ver las cosas igual puede ser difícil ahora. Concéntrense en reconocer el ritmo del otro."
       },
       {
         "headline": "Sus energías apuntan en direcciones distintas.",
@@ -473,6 +477,56 @@
         "headline": "Una relación que se ilumina mutuamente.",
         "body": "Sus cualidades únicas crean sinergia. Juntos, sus fortalezas se vuelven más claras."
       }
+    ],
+    "PEAK_INTROS": [
+      "Una química estructuralmente rara.",
+      "Los cuatro ejes inusualmente alineados.",
+      "Una conexión rara donde sus formas encajan naturalmente."
+    ],
+    "PEAK_BODIES": [
+      "Nada está garantizado, pero este vínculo puede sostener más que la mayoría. Tienen una base rara para desenvolver juntos su potencial.",
+      "No es una combinación común. Hay una gran probabilidad de que se comprendan más profundamente con el tiempo. Cuiden este vínculo y perdurará.",
+      "La estructura los respalda. Construyan confianza ahora y se volverá una relación que no se tambalea en ninguna tormenta."
+    ],
+    "FAVORABLE_INTROS": [
+      "Una pareja que puede crecer junta.",
+      "Se estimulan mutuamente de la mejor forma.",
+      "La estructura es favorable — crecen a través del otro."
+    ],
+    "FAVORABLE_BODIES": [
+      "No es sin esfuerzo, pero la estructura los respalda. La fricción que sienten es productiva, no destructiva.",
+      "Una relación que no se desmorona fácilmente. Sus diferencias encienden la conversación.",
+      "Mientras estén dispuestos a entender las diferencias del otro, esto se profundiza con el tiempo."
+    ],
+    "NEUTRAL_INTROS": [
+      "Lo familiar y lo nuevo se cruzan.",
+      "Es momento de sincronizar sus ritmos.",
+      "Se intrigan mutuamente con encantos distintos."
+    ],
+    "NEUTRAL_BODIES": [
+      "Responden diferente ante las mismas situaciones. Esa brecha a veces cansa, a veces atrae. Quién sonríe primero en los momentos clave marca la temperatura.",
+      "Se profundiza cuando respetan el ritmo del otro en lugar de forzar alineación. La confianza construida actúa en los momentos difíciles.",
+      "Reconocer las diferencias permite que esto crezca en direcciones inesperadas. La comunicación cálida es el secreto de la duración."
+    ],
+    "CAUTION_INTROS": [
+      "Una pareja que pide mucho.",
+      "Ahora es un tiempo de fricción real.",
+      "Una relación que especialmente necesita hablar con honestidad."
+    ],
+    "CAUTION_BODIES": [
+      "Hay fricción real. No es 'terminen' — es 'hablen pronto, seguido y con honestidad'.",
+      "Evitar las diferencias hace más grande el problema. No escondan las conversaciones incómodas.",
+      "Cuando las emociones se calientan, respiren. Construir confianza toma tiempo."
+    ],
+    "CHALLENGING_INTROS": [
+      "Una pareja que pide todo.",
+      "Una relación estructuralmente difícil.",
+      "Ambos deben poner esfuerzo consciente."
+    ],
+    "CHALLENGING_BODIES": [
+      "La estructura va contra ambos. El resultado no está fijado, pero la mayoría de días exigen voluntad consciente de ambos lados.",
+      "No es un vínculo fácil. Pero si la sinceridad es real, pueden cruzar esta dificultad juntos.",
+      "Su esfuerzo hoy moldea el futuro de la relación. Cada pequeño gesto hace la diferencia."
     ]
   },
   "DISCLAIMER": "Nota: Esta interpretación de compatibilidad combina cálculos astronómicos con modelos modernos de relaciones. Se trata de una interpretación simbólica, sujeta a la interpretación de cada uno; no es un veredicto, ni una predicción, ni sustituye a una conversación sincera. Tú sigues siendo el protagonista de esta relación.",

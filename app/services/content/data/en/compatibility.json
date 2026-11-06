@@ -87,7 +87,8 @@
         "headline": "A steadfast family sanctuary built on unconditional support and care.",
         "body": "Your connection serves as a reliable harbor where every family member finds acceptance and warmth. By offering gentle patience and listening without immediate judgment, you keep family ties strong. This quiet commitment to unconditional support ensures your home remains a safe haven."
       }
-    }
+    },
+    "__signature__": "In your shared flow,"
   },
   "DAY_MASTER_CONTENT": {
     "romance": {
@@ -217,7 +218,8 @@
         "headline": "A resilient family connection defined by enduring loyalty and unconditional care.",
         "body": "Your bond transcends temporary disagreements, anchored firmly in lifelong family commitment. You offer a steady, non-judgmental presence that allows loved ones to feel completely safe. This quiet loyalty keeps your family unit connected through all of life's changes."
       }
-    }
+    },
+    "__signature__": "In your innate natures,"
   },
   "TEN_GODS_CONTENT": {
     "romance": {
@@ -307,7 +309,8 @@
         "headline": "A loving family structure where every member feels valued and supported.",
         "body": "You maintain a gentle, accommodating structure that gives everyone room to grow at their own pace. Offering quiet help and celebrating small family milestones keeps household morale high. This supportive framework ensures that your home remains a place of true refuge."
       }
-    }
+    },
+    "__signature__": "In how you relate,"
   },
   "SINSAL_CONTENT": {
     "romance": {
@@ -429,7 +432,8 @@
         "headline": "A timeless family bond grounded in deep acceptance and quiet devotion.",
         "body": "Your family connection is built on a quiet, enduring promise to stand by one another no matter what. Through every season of life, your steadfast presence provides a comforting sense of home. This unconditional acceptance is the greatest gift you offer to one another."
       }
-    }
+    },
+    "__signature__": "In the thread between you,"
   },
   "OVERALL_CONTENT": {
     "PEAK": {
@@ -471,8 +475,58 @@
       },
       {
         "headline": "A relationship that lights each other up.",
-        "body": "Your unique qualities create synergy. Together, your strengths become clearer and support you through tough moments."
+        "body": "Your unique qualities create synergy. Together, your strengths become clearer."
       }
+    ],
+    "PEAK_INTROS": [
+      "A structurally rare chemistry.",
+      "All four axes unusually aligned.",
+      "A rare connection where your shapes naturally interlock."
+    ],
+    "PEAK_BODIES": [
+      "Nothing is guaranteed, but this bond can hold more than most. You have a rare foundation to unfold each other's potential together.",
+      "Not a common pairing. There's a strong chance you'll come to understand each other more deeply over time. Handle this bond carefully, and it lasts.",
+      "Structure backs you both. Build trust now, and this becomes a relationship that won't sway in any storm."
+    ],
+    "FAVORABLE_INTROS": [
+      "A pairing that can grow together.",
+      "You bring out the best stimulation in each other.",
+      "The structure is favorable — you grow through each other."
+    ],
+    "FAVORABLE_BODIES": [
+      "Not effortless, but structure has your back. The friction you feel is productive, not destructive.",
+      "A relationship that doesn't fall apart easily. Your differences actually spark conversation.",
+      "As long as you're willing to understand each other's differences, this deepens over time."
+    ],
+    "NEUTRAL_INTROS": [
+      "The familiar and the new intersect.",
+      "Now is the time to sync your rhythms.",
+      "You intrigue each other with different charms."
+    ],
+    "NEUTRAL_BODIES": [
+      "You respond differently to the same situations. That gap tires you sometimes and magnetizes you other times. Who smiles first in pivotal moments sets the temperature.",
+      "It deepens when you honor each other's pace instead of forcing alignment. Trust you've built kicks in during hard moments.",
+      "Acknowledging your differences lets this relationship grow in unexpected directions. Warm communication is the secret to lasting."
+    ],
+    "CAUTION_INTROS": [
+      "A pairing that asks a lot.",
+      "Now is a time of real friction.",
+      "A relationship that especially needs honest talk."
+    ],
+    "CAUTION_BODIES": [
+      "There's real friction. This isn't 'break up' — it's 'speak early, often, and honestly.'",
+      "Avoiding each other's differences makes the problem bigger. Don't dodge uncomfortable talks.",
+      "When emotions run hot, take half a beat. Building trust takes time."
+    ],
+    "CHALLENGING_INTROS": [
+      "A pairing that asks everything.",
+      "A structurally difficult relationship.",
+      "Both of you must consciously put in effort."
+    ],
+    "CHALLENGING_BODIES": [
+      "Structure pushes against both of you. The outcome isn't fixed, but most days require conscious will from both sides.",
+      "Not an easy bond. But if the sincerity is real, you can cross this difficulty together.",
+      "Your effort today shapes the relationship's future. Every small gesture makes a difference."
     ]
   },
   "DISCLAIMER": "Note: This compatibility reading blends astronomical calculation with modern relationship frameworks. It is a symbolic, school-dependent reading — not a verdict, not a prediction, and not a substitute for honest conversation. You remain the author of this relationship.",

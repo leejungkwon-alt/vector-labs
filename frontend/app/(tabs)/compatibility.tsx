@@ -112,7 +112,7 @@ export default function CompatibilityScreen() {
       if (status === 400 && (lowerMsg.includes("14") || lowerMsg.includes("years old"))) {
         return (
           <View style={{ marginTop: 30, padding: 24, backgroundColor: colors.dangerSoft, borderRadius: radius.lg, alignItems: "center", borderWidth: 1, borderColor: colors.danger }}>
-            <Text style={{ fontSize: 40, marginBottom: 12 }}>🔞</Text>
+            
             <Text style={{ fontSize: 18, fontWeight: "800", color: colors.danger, marginBottom: 8, textAlign: "center" }}>
               {t("compatibility.ageLimitTitle")}
             </Text>

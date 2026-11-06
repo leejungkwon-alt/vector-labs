@@ -16,13 +16,18 @@ def _write_axis(axis_data: dict, content_map: dict, relationship_type: str) -> d
     # 관계 유형(romance/business)에 따른 서브 맵 가져오기
     rel_map = content_map.get(relationship_type, {})
     content = rel_map.get(tag) or rel_map.get("DEFAULT", {})
+    signature = content_map.get("__signature__", "")
+    
+    body = content.get("body", "")
+    if signature and body:
+        body = f"{signature} {body}"
     
     out = {
         "score": axis_data["score"],
         "grade": axis_data["grade"],
         "tag": tag,
         "headline": content.get("headline", ""),
-        "body": content.get("body", ""),
+        "body": body,
     }
     if axis_data.get("shared"):
         out["shared"] = axis_data["shared"]
@@ -45,7 +50,7 @@ def write_compatibility(compat: dict, lang: str = "en", relationship_type: str =
         except (TypeError, ValueError):
             s = 50.0
         n = len(variants)
-        idx = min(n - 1, max(0, int(s // (100.0 / n))))
+        idx = min(n - 1, max(0, int(round(s) * n // 100)))  # 표시 반올림과 정확히 일치
         overall_content = variants[idx]
     else:
         overall_content = _overall_all.get(overall["grade"]) or _overall_all.get("NEUTRAL", {})
