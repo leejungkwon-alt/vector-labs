@@ -258,8 +258,6 @@
     "timeout": "服务器响应超时。请检查网络连接。"
   },
   "poem": {
-    "viewCollection": "查看我的收藏",
-    "collection": "诗歌收藏",
     "back": "返回"
   },
   "billing": {
