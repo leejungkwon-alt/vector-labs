@@ -108,6 +108,30 @@ export default function CompatibilityScreen() {
       
       //  401(세션 만료) 또는 403(구독/결제 필요) 에러 핸들링
       const status = error instanceof ApiError ? error.status : 500;
+            const lowerMsg = msg.toLowerCase();
+      if (status === 400 && (lowerMsg.includes("14") || lowerMsg.includes("years old"))) {
+        return (
+          <View style={{ marginTop: 30, padding: 24, backgroundColor: colors.dangerSoft, borderRadius: radius.lg, alignItems: "center", borderWidth: 1, borderColor: colors.danger }}>
+            <Text style={{ fontSize: 40, marginBottom: 12 }}>🔞</Text>
+            <Text style={{ fontSize: 18, fontWeight: "800", color: colors.danger, marginBottom: 8, textAlign: "center" }}>
+              {t("compatibility.ageLimitTitle")}
+            </Text>
+            <Text style={{ fontSize: 15, color: colors.text, textAlign: "center", lineHeight: 22, marginBottom: 24 }}>
+              {t("compatibility.ageLimitDesc")}
+            </Text>
+            <TouchableOpacity 
+              style={{ backgroundColor: colors.primary, paddingHorizontal: 24, paddingVertical: 14, borderRadius: radius.md, width: "100%", alignItems: "center" }} 
+              onPress={() => setIsCalculated(false)}
+            >
+              <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>
+                {t("compatibility.ageLimitRetry")}
+              </Text>
+            </TouchableOpacity>
+          </View>
+        );
+      }
+
+      // 401(세션 만료) 또는 403(구독/결제 필요) 에러 핸들링
       if (status === 401 || status === 403) {
         const isAuthError = status === 401;
         return (
