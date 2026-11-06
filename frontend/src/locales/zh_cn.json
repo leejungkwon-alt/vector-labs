@@ -70,7 +70,10 @@
     "axisElements": "五行",
     "axisDayMaster": "日主",
     "axisTenGods": "价值观与模式",
-    "axisSinsal": "特殊特质"
+    "axisSinsal": "特殊特质",
+    "ageLimitTitle": "🔞 14岁以下用户无法使用此服务",
+    "ageLimitDesc": "Gyeol仅限14岁及以上用户使用。\n请重新确认对方的出生日期。",
+    "ageLimitRetry": "重新输入"
   },
   "settings": {
     "accountInfo": "账户信息",

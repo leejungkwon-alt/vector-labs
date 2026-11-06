@@ -70,7 +70,10 @@
     "axisDayMaster": "일간 관계",
     "axisTenGods": "가치관/모드",
     "axisSinsal": "신살 공명",
-    "partnerTimezone": "출생지 타임존"
+    "partnerTimezone": "출생지 타임존",
+    "ageLimitTitle": "🔞 만 14세 미만은 이용할 수 없습니다",
+    "ageLimitDesc": "Gyeol은 만 14세 이상만 이용 가능한 서비스입니다.\n상대방의 생년월일을 다시 확인해 주세요.",
+    "ageLimitRetry": "다시 입력하기"
   },
   "settings": {
     "accountInfo": "내 계정 정보",

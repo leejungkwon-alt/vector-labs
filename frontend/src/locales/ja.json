@@ -70,7 +70,10 @@
     "axisElements": "五行",
     "axisDayMaster": "日干",
     "axisTenGods": "価値観とモード",
-    "axisSinsal": "特別な特性"
+    "axisSinsal": "特別な特性",
+    "ageLimitTitle": "🔞 14歳未満の方はご利用いただけません",
+    "ageLimitDesc": "Gyeolは14歳以上の方のみご利用いただけます。\nお相手の生年月日をご確認ください。",
+    "ageLimitRetry": "再入力する"
   },
   "settings": {
     "accountInfo": "アカウント情報",
