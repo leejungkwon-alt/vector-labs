@@ -138,7 +138,8 @@
     "minute": "分",
     "cityNameLabel": "城市名称",
     "longitudeLabel": "经度",
-    "longitudeHint": "* 用于四柱计算中的太阳时校正。不清楚可留空。"
+    "longitudeHint": "* 用于四柱计算中的太阳时校正。不清楚可留空。",
+    "navTitle": "输入出生信息"
   },
   "cityModal": {
     "title": "选择出生地",

@@ -60,7 +60,7 @@ export default function RootLayout() {
         <StatusBar style="dark" />
         <Stack screenOptions={{ headerShown: false }}>
           <Stack.Screen name="index" />
-          <Stack.Screen name="birth-input" options={{ title: "출생 정보 입력", headerShown: true }} />
+          <Stack.Screen name="birth-input" options={{ title: "", headerShown: true }} />
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         </Stack>
       </QueryClientProvider>

@@ -138,7 +138,8 @@
     "minute": "분",
     "cityNameLabel": "도시 이름",
     "longitudeLabel": "경도",
-    "longitudeHint": "* 사주 계산 시 태양시 보정에 사용됩니다. 모르시면 비워두셔도 됩니다."
+    "longitudeHint": "* 사주 계산 시 태양시 보정에 사용됩니다. 모르시면 비워두셔도 됩니다.",
+    "navTitle": "출생 정보 입력"
   },
   "cityModal": {
     "title": "출생지 선택",

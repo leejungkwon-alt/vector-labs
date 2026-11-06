@@ -138,7 +138,8 @@
     "minute": "",
     "cityNameLabel": "City Name",
     "longitudeLabel": "Longitude",
-    "longitudeHint": "* Used for solar time correction. Leave blank if unknown."
+    "longitudeHint": "* Used for solar time correction. Leave blank if unknown.",
+    "navTitle": "Birth Data"
   },
   "cityModal": {
     "title": "Select Birthplace",

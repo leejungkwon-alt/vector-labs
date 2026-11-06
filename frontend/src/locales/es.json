@@ -138,7 +138,8 @@
     "minute": "Minuto",
     "cityNameLabel": "Nombre de la ciudad",
     "longitudeLabel": "Longitud",
-    "longitudeHint": "* Se usa para la corrección de hora solar. Deje en blanco si no lo sabe."
+    "longitudeHint": "* Se usa para la corrección de hora solar. Deje en blanco si no lo sabe.",
+    "navTitle": "Datos de nacimiento"
   },
   "cityModal": {
     "title": "Seleccionar lugar de nacimiento",
