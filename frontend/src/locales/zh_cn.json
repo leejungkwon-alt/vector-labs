@@ -265,5 +265,13 @@
     "backToSettings": "返回设置",
     "cancelTitle": "支付已取消",
     "cancelDesc": "您的支付未完成。您可以随时重试。"
+  },
+  "datePicker": {
+    "cancel": "取消",
+    "title": "选择出生日期",
+    "confirm": "确认",
+    "yearSuffix": "年",
+    "monthSuffix": "月",
+    "daySuffix": "日"
   }
 }

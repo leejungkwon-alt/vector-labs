@@ -265,5 +265,13 @@
     "backToSettings": "설정으로 돌아가기",
     "cancelTitle": "결제가 취소되었습니다",
     "cancelDesc": "결제가 완료되지 않았습니다. 언제든지 다시 시도하실 수 있습니다."
+  },
+  "datePicker": {
+    "cancel": "취소",
+    "title": "생년월일 선택",
+    "confirm": "확인",
+    "yearSuffix": "년",
+    "monthSuffix": "월",
+    "daySuffix": "일"
   }
 }

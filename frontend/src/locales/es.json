@@ -265,5 +265,13 @@
     "backToSettings": "Volver a Configuración",
     "cancelTitle": "Pago cancelado",
     "cancelDesc": "Su pago no se completó. Puede intentarlo de nuevo en cualquier momento."
+  },
+  "datePicker": {
+    "cancel": "Cancelar",
+    "title": "Seleccionar fecha",
+    "confirm": "Aceptar",
+    "yearSuffix": "",
+    "monthSuffix": "",
+    "daySuffix": ""
   }
 }

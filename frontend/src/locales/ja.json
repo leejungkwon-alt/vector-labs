@@ -265,5 +265,13 @@
     "backToSettings": "設定に戻る",
     "cancelTitle": "お支払いがキャンセルされました",
     "cancelDesc": "お支払いは完了していません。いつでも再試行できます。"
+  },
+  "datePicker": {
+    "cancel": "キャンセル",
+    "title": "生年月日を選択",
+    "confirm": "確認",
+    "yearSuffix": "年",
+    "monthSuffix": "月",
+    "daySuffix": "日"
   }
 }

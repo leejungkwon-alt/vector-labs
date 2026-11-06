@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Modal, TouchableOpacity, StyleSheet, Platform } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
+import { useT } from '@/i18n';
 
 interface Props {
   visible: boolean;
@@ -43,11 +44,11 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
         <View style={styles.bottomSheet}>
           <View style={styles.header}>
             <TouchableOpacity onPress={onClose}>
-              <Text style={styles.cancelText}>취소</Text>
+              <Text style={styles.cancelText}>{t("datePicker.cancel")}</Text>
             </TouchableOpacity>
-            <Text style={styles.title}>생년월일 선택</Text>
+            <Text style={styles.title}>{t("datePicker.title")}</Text>
             <TouchableOpacity onPress={handleConfirm}>
-              <Text style={styles.confirmText}>확인</Text>
+              <Text style={styles.confirmText}>{t("datePicker.confirm")}</Text>
             </TouchableOpacity>
           </View>
 
@@ -59,7 +60,7 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
               itemStyle={styles.pickerItem}
             >
               {years.map((y) => (
-                <Picker.Item key={y} label={`${y}년`} value={y} color={textColor} />
+                <Picker.Item key={y} label={`${y}${t("datePicker.yearSuffix")}`} value={y} color={textColor} />
               ))}
             </Picker>
 
@@ -70,7 +71,7 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
               itemStyle={styles.pickerItem}
             >
               {months.map((m) => (
-                <Picker.Item key={m} label={`${m}월`} value={m} color={textColor} />
+                <Picker.Item key={m} label={`${m}${t("datePicker.monthSuffix")}`} value={m} color={textColor} />
               ))}
             </Picker>
 
@@ -81,7 +82,7 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
               itemStyle={styles.pickerItem}
             >
               {days.map((d) => (
-                <Picker.Item key={d} label={`${d}일`} value={d} color={textColor} />
+                <Picker.Item key={d} label={`${d}${t("datePicker.daySuffix")}`} value={d} color={textColor} />
               ))}
             </Picker>
           </View>
@@ -111,7 +112,13 @@ const styles = StyleSheet.create({
   title: { color: isWeb ? '#000' : '#FFF', fontSize: 16, fontWeight: 'bold' },
   cancelText: { color: '#888', fontSize: 16 },
   confirmText: { color: '#4A90E2', fontSize: 16, fontWeight: 'bold' },
-  pickerContainer: { flexDirection: 'row', height: 200, width: '100%' },
-  picker: { flex: 1, color: textColor },
-  pickerItem: { color: textColor, fontSize: 18, height: 200 },
+  pickerContainer: {
+    flexDirection: 'row',
+    height: isWeb ? 56 : 200,
+    width: '100%',
+    alignItems: 'center',
+    paddingHorizontal: 8,
+  },
+  picker: { flex: 1, color: textColor, height: isWeb ? 40 : undefined },
+  pickerItem: { color: textColor, fontSize: 18 },
 });

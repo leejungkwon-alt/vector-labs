@@ -68,13 +68,17 @@ export default function SettingsScreen() {
   const handleManageSubscription = async () => {
     try {
       const res = await api.getPortalUrl();
-      if (res?.url) {
-        Linking.openURL(res.url);
-      } else {
+      if (!res?.url) {
         alert("구독 정보를 찾을 수 없습니다.");
+        return;
+      }
+      if (Platform.OS === "web") {
+        window.location.href = res.url;
+      } else {
+        await Linking.openURL(res.url);
       }
     } catch (e: any) {
-      alert("구독 관리 페이지를 불러오지 못했습니다.");
+      alert(e?.detail || "구독 관리 페이지를 불러오지 못했습니다.");
     }
   };
 
