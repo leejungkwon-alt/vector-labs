@@ -135,7 +135,10 @@
     "month": "",
     "day": "",
     "hour": "",
-    "minute": ""
+    "minute": "",
+    "cityNameLabel": "City Name",
+    "longitudeLabel": "Longitude",
+    "longitudeHint": "* Used for solar time correction. Leave blank if unknown."
   },
   "cityModal": {
     "title": "Select Birthplace",

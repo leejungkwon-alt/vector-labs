@@ -135,7 +135,10 @@
     "month": "Mes",
     "day": "Día",
     "hour": "Hora",
-    "minute": "Minuto"
+    "minute": "Minuto",
+    "cityNameLabel": "Nombre de la ciudad",
+    "longitudeLabel": "Longitud",
+    "longitudeHint": "* Se usa para la corrección de hora solar. Deje en blanco si no lo sabe."
   },
   "cityModal": {
     "title": "Seleccionar lugar de nacimiento",

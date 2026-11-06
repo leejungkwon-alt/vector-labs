@@ -135,7 +135,10 @@
     "month": "月",
     "day": "日",
     "hour": "時",
-    "minute": "分"
+    "minute": "分",
+    "cityNameLabel": "都市名",
+    "longitudeLabel": "経度",
+    "longitudeHint": "* 四柱推命計算の太陽時補正に使用。不明な場合は空欄で構いません。"
   },
   "cityModal": {
     "title": "出生地の選択",

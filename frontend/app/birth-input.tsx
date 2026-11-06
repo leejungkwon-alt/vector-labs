@@ -208,7 +208,7 @@ export default function BirthInput() {
       {/* 🌟 직접 입력(Custom) UI 확장 */}
       {isCustomCity && (
         <View style={styles.customBox}>
-          <Text style={styles.label}>도시 이름 (City Name)</Text>
+          <Text style={styles.label}>{t("birthInput.cityNameLabel")}</Text>
           <TextInput
             style={styles.textInput}
             value={customCityName}
@@ -217,16 +217,16 @@ export default function BirthInput() {
             placeholderTextColor={colors.textMuted}
             autoCorrect={false}
           />
-          {lookup.status === "loading" && <Text style={styles.hint}>{tf("birthInput.cityLookupLoading", "도시를 찾는 중…")}</Text>}
-          {lookup.status === "notfound" && <Text style={styles.hint}>{tf("birthInput.cityLookupNotFound", "도시를 찾지 못했어요. 철자를 확인하거나 경도와 타임존을 직접 입력해 주세요.")}</Text>}
-          {lookup.status === "error" && <Text style={styles.hint}>{tf("birthInput.cityLookupError", "도시 검색에 실패했어요. 경도와 타임존을 직접 입력해 주세요.")}</Text>}
+          {lookup.status === "loading" && <Text style={styles.hint}>{tf("birthInput.cityLookupLoading", "Searching city...")}</Text>}
+          {lookup.status === "notfound" && <Text style={styles.hint}>{tf("birthInput.cityLookupNotFound", "City not found. Check spelling or enter manually.")}</Text>}
+          {lookup.status === "error" && <Text style={styles.hint}>{tf("birthInput.cityLookupError", "City search failed. Please enter manually.")}</Text>}
           {lookup.hits.length > 1 && lookup.hits.map((h, i) => (
             <TouchableOpacity key={i} onPress={() => applyHit(h)} style={styles.hitRow}>
               <Text style={styles.inputText}>{hitLabel(h)}</Text>
             </TouchableOpacity>
           ))}
 
-          <Text style={[styles.label, { marginTop: 12 }]}>경도 (Longitude)</Text>
+          <Text style={[styles.label, { marginTop: 12 }]}>{t("birthInput.longitudeLabel")}</Text>
           <TextInput
             style={styles.textInput}
             value={customLongitude}
@@ -236,7 +236,7 @@ export default function BirthInput() {
             placeholderTextColor={colors.textMuted}
           />
           <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 4, marginBottom: 12 }}>
-            * 사주 계산 시 태양시 보정에 사용됩니다. 모르시면 비워두셔도 됩니다.
+            {t("birthInput.longitudeHint")}
           </Text>
 
           <Text style={styles.label}>{t("birthInput.birthTimezone")}</Text>
@@ -247,7 +247,7 @@ export default function BirthInput() {
             {t("birthInput.timezoneHint")}
           </Text>
           {offsetLabel && (
-            <Text style={styles.hint}>{tf("birthInput.tzOffsetAtBirth", "출생일 기준 UTC 오프셋")}: {offsetLabel}</Text>
+            <Text style={styles.hint}>{tf("birthInput.tzOffsetAtBirth", "UTC offset at birth")}: {offsetLabel}</Text>
           )}
         </View>
       )}
