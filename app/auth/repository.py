@@ -51,6 +51,7 @@ _SCHEMA_STATEMENTS = [
         social_provider TEXT,
         social_subject TEXT,
         created_at TEXT NOT NULL,
+          email TEXT,
         UNIQUE (social_provider, social_subject)
     )
     """,
@@ -189,7 +190,7 @@ class _BaseRepository:
         )
 
     def link_social_identity(
-        self, user_id: str, provider: str, subject: str
+        self, user_id: str, provider: str, subject: str, email: str | None = None
     ) -> dict:
         """익명 → 소셜 승격. 다른 사용자가 이미 점유한 identity 면 ValueError."""
         existing = self.find_user_by_social(provider, subject)
@@ -200,8 +201,8 @@ class _BaseRepository:
         try:
             self._run(
                 "UPDATE users SET social_provider = ?, social_subject = ?, "
-                "is_anonymous = 0 WHERE id = ?",
-                (provider, subject, user_id),
+                "is_anonymous = 0, email = COALESCE(?, email) WHERE id = ?",
+                (provider, subject, email, user_id),
             )
         except self._integrity_errors as e:
             raise ValueError(f"Link failed: {e}") from e
