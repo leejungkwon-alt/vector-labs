@@ -70,7 +70,15 @@ export default function CompatibilityScreen() {
       const fallbackLongitude = 0 ;
 
       return api.compatibility({
-        person_a: myProfile,
+        person_a: {
+          birth_date: myProfile.birth_date,
+          birth_time: myProfile.birth_time,
+          birth_time_mode: myProfile.birth_time_mode,
+          birth_location: myProfile.birth_location,
+          timezone_str: myProfile.timezone_str,
+          longitude: myProfile.longitude,
+          gender: myProfile.gender,
+        },
         person_b: {
           birth_date: `${yyyy}-${mm}-${dd}`,
           birth_time: timeString,
@@ -194,24 +202,28 @@ export default function CompatibilityScreen() {
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: insets.bottom + 40 }}>
       <Text style={styles.title}>{t("compatibility.title")}</Text>
 
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginBottom: 24 }}>
-        <View style={[styles.segmentWrap, { paddingRight: 0 }]}>
-          {[
-            { key: "romance", label: t("compatibility.typeRomance") },
-            { key: "business", label: t("compatibility.typeBusiness") },
-            { key: "friend", label: t("compatibility.typeFriend") },
-            { key: "family", label: t("compatibility.typeFamily") },
-          ].map((tab) => (
-            <TouchableOpacity 
-              key={tab.key}
-              style={[styles.segmentBtn, relationshipType === tab.key && styles.segmentBtnActive, { paddingHorizontal: 16 }]} 
-              onPress={() => setRelationshipType(tab.key as any)}
+      <View style={styles.segmentWrap}>
+        {[
+          { key: "romance", label: t("compatibility.typeRomance") },
+          { key: "business", label: t("compatibility.typeBusiness") },
+          { key: "friend", label: t("compatibility.typeFriend") },
+          { key: "family", label: t("compatibility.typeFamily") },
+        ].map((tab) => (
+          <TouchableOpacity 
+            key={tab.key}
+            style={[styles.segmentBtn, relationshipType === tab.key && styles.segmentBtnActive]} 
+            onPress={() => setRelationshipType(tab.key as any)}
+          >
+            <Text 
+              style={[styles.segmentText, relationshipType === tab.key && styles.segmentTextActive]}
+              numberOfLines={1}
+              adjustsFontSizeToFit
             >
-              <Text style={[styles.segmentText, relationshipType === tab.key && styles.segmentTextActive]}>{tab.label}</Text>
-            </TouchableOpacity>
-          ))}
-        </View>
-      </ScrollView>
+              {tab.label}
+            </Text>
+          </TouchableOpacity>
+        ))}
+      </View>
 
       <Text style={styles.label}>{t("compatibility.partnerDate")}</Text>
       <DateTimeField
