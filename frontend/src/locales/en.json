@@ -257,5 +257,13 @@
     "viewCollection": "View My Collection",
     "collection": "Poem Collection",
     "back": "Back"
+  },
+  "billing": {
+    "successTitle": "Payment Successful!",
+    "successDesc1": "Premium features are now active.",
+    "successDesc2": "Please check the settings screen shortly.",
+    "backToSettings": "Back to Settings",
+    "cancelTitle": "Payment Cancelled",
+    "cancelDesc": "Your payment was not completed. You can try again anytime."
   }
 }

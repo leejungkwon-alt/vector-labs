@@ -1,23 +1,25 @@
 // frontend/app/billing/success.tsx
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { router } from "expo-router";
+import { useT } from "@/i18n";
 import { colors, radius } from "@/theme";
 
 export default function BillingSuccessScreen() {
+  const t = useT();
   return (
     <View style={styles.container}>
       <Text style={styles.emoji}>🎉</Text>
-      <Text style={styles.title}>결제가 완료되었습니다!</Text>
+      <Text style={styles.title}>{t("billing.successTitle")}</Text>
       <Text style={styles.subtitle}>
-        프리미엄 기능이 활성화되었습니다.{"\n"}
-        잠시 후 설정 화면에서 확인해 주세요.
+        {t("billing.successDesc1")}{"\n"}
+        {t("billing.successDesc2")}
       </Text>
       
       <TouchableOpacity 
         style={styles.button} 
         onPress={() => router.replace("/settings")}
       >
-        <Text style={styles.buttonText}>설정으로 돌아가기</Text>
+        <Text style={styles.buttonText}>{t("billing.backToSettings")}</Text>
       </TouchableOpacity>
     </View>
   );

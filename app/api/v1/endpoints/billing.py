@@ -73,3 +73,19 @@ async def lemonsqueezy_webhook(
         )
 
     return {"status": "ok"}
+
+
+@router.get("/portal")
+async def get_customer_portal(user: dict = Depends(get_current_user)):
+    """Lemon Squeezy 고객 포털(Signed URL) 반환"""
+    from app.services.lemonsqueezy_client import get_customer_portal_url
+    
+    email = user.get("email")
+    if not email:
+        raise HTTPException(status_code=400, detail="User email required")
+    
+    portal_url = await get_customer_portal_url(email)
+    if not portal_url:
+        raise HTTPException(status_code=404, detail="No active subscription found")
+        
+    return {"url": portal_url}

@@ -67,7 +67,7 @@ export default function SettingsScreen() {
 
   const handleManageSubscription = async () => {
     try {
-      const res = await api.billing.getPortalUrl();
+      const res = await api.getPortalUrl();
       if (res?.url) {
         Linking.openURL(res.url);
       } else {

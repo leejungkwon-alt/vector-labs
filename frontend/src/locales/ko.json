@@ -257,5 +257,13 @@
     "viewCollection": "내 시조 모아보기",
     "collection": "시조 컬렉션",
     "back": "돌아가기"
+  },
+  "billing": {
+    "successTitle": "결제가 완료되었습니다!",
+    "successDesc1": "프리미엄 기능이 활성화되었습니다.",
+    "successDesc2": "잠시 후 설정 화면에서 확인해 주세요.",
+    "backToSettings": "설정으로 돌아가기",
+    "cancelTitle": "결제가 취소되었습니다",
+    "cancelDesc": "결제가 완료되지 않았습니다. 언제든지 다시 시도하실 수 있습니다."
   }
 }

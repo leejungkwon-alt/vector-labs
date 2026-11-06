@@ -257,5 +257,13 @@
     "viewCollection": "コレクションを見る",
     "collection": "詩のコレクション",
     "back": "戻る"
+  },
+  "billing": {
+    "successTitle": "お支払いが完了しました！",
+    "successDesc1": "プレミアム機能が有効になりました。",
+    "successDesc2": "しばらくしてから設定画面でご確認ください。",
+    "backToSettings": "設定に戻る",
+    "cancelTitle": "お支払いがキャンセルされました",
+    "cancelDesc": "お支払いは完了していません。いつでも再試行できます。"
   }
 }

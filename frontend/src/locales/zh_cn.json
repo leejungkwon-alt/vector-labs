@@ -257,5 +257,13 @@
     "viewCollection": "查看我的收藏",
     "collection": "诗歌收藏",
     "back": "返回"
+  },
+  "billing": {
+    "successTitle": "支付成功！",
+    "successDesc1": "高级功能已激活。",
+    "successDesc2": "请稍后在设置页面查看。",
+    "backToSettings": "返回设置",
+    "cancelTitle": "支付已取消",
+    "cancelDesc": "您的支付未完成。您可以随时重试。"
   }
 }

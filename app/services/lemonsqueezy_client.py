@@ -41,3 +41,25 @@ async def create_checkout_url(user_id: str, email: str | None = None) -> str:
         resp.raise_for_status()
         
     return resp.json()["data"]["attributes"]["url"]
+
+async def get_customer_portal_url(email: str) -> str | None:
+    """이메일로 구독을 찾아 고객 포털(Signed URL)을 반환합니다."""
+    headers = {
+        "Accept": "application/vnd.api+json",
+        "Authorization": f"Bearer {os.environ['LEMONSQUEEZY_API_KEY']}",
+    }
+    params = {"filter[user_email]": email}
+    
+    async with httpx.AsyncClient(timeout=15) as client:
+        resp = await client.get(f"{LS_API}/subscriptions", headers=headers, params=params)
+        
+    if resp.status_code >= 400:
+        log.error("LemonSqueezy Portal Error %s: %s", resp.status_code, resp.text)
+        return None
+        
+    data = resp.json().get("data", [])
+    if not data:
+        return None
+        
+    # 가장 최근 구독의 고객 포털 URL 반환
+    return data[0].get("attributes", {}).get("urls", {}).get("customer_portal")
