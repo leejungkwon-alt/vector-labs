@@ -183,7 +183,7 @@ export default function CompatibilityScreen() {
               <Text style={{ fontWeight: "700", color: gradeColors[axis.grade] }}>{axis.grade}</Text>
             </View>
             <Text style={{ fontSize: 16, fontWeight: "600", color: colors.text, marginBottom: 4 }}>{axis.headline}</Text>
-            <Text style={{ fontSize: 14, color: colors.textMuted, lineHeight: 20 }}>{axis.body}</Text>
+            <Text style={{ fontSize: 14, color: colors.textMuted, lineHeight: 20 }} numberOfLines={4}>{axis.body}</Text>
           </View>
         ))}
       </View>
