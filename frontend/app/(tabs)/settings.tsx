@@ -130,12 +130,12 @@ export default function SettingsScreen() {
       {/* ⭐️ 추가된 부분: 익명 로그인 상태일 때 계정 연결 유도 */}
       {user?.is_anonymous && (
         <View style={[styles.profileBox, { backgroundColor: colors.surface, borderColor: colors.primary }]}>
-          <Text style={[styles.sectionTitle, { color: colors.primary }]}>t("settings.linkAccountTitle")</Text>
+          <Text style={[styles.sectionTitle, { color: colors.primary }]}>{t("settings.linkAccountTitle")}</Text>
           <Text style={{ fontSize: 14, color: colors.text, marginBottom: 12, lineHeight: 20 }}>
-            t("settings.linkAccountDesc")
+            {t("settings.linkAccountDesc")}
           </Text>
           <TouchableOpacity style={styles.upgradeBtn} onPress={handleLinkAccount}>
-            <Text style={styles.upgradeBtnText}>t("settings.linkAccountCta")</Text>
+            <Text style={styles.upgradeBtnText}>{t("settings.linkAccountCta")}</Text>
           </TouchableOpacity>
         </View>
       )}
@@ -209,10 +209,10 @@ export default function SettingsScreen() {
             // 업그레이드 버튼을 눌러서 들어온 경우 -> 성공 시 결제창으로 연결
             setShowPayment(true);
           } else {
-            // 단순히 계정 연동 버튼을 눌러서 들어온 경우 -> 성공 t("common.notice")만 띄우고 종료
-            const msg = "t("settings.linkAccountSuccess")";
+            // 단순히 계정 연동 버튼을 눌러서 들어온 경우 -> 성공 알림만 띄우고 종료
+            const msg = t("settings.linkAccountSuccess");
             if (Platform.OS === "web") alert(msg);
-            else Alert.alert("t("common.notice")", msg);
+            else Alert.alert(t("common.notice"), msg);
           }
         }}
       />
