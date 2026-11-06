@@ -24,7 +24,7 @@ export function LuckyCodeSectionView({ section }: { section: LuckyCodeSection })
         onPress={() => router.push("/collection")}
         style={{ marginTop: 16, padding: 12, backgroundColor: colors.surface, borderRadius: 12, borderWidth: 1, borderColor: colors.primary, alignItems: "center" }}
       >
-        <Text style={{ color: colors.primary, fontWeight: "700" }}>{t("poem.viewCollection")} (25)</Text>
+        {/* 시조 모아보기 버튼 제거됨 */}
       </TouchableOpacity>
 
       <View style={ss.blockBox}>
