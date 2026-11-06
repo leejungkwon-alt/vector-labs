@@ -105,7 +105,11 @@
     "deleteAccountCancel": "Cancel",
     "deleteAccountDelete": "Delete permanently",
     "manageSubscriptionWeb": "You can manage your subscription in the mobile app.",
-    "language": "Language"
+    "language": "Language",
+    "linkAccountTitle": "Link Account",
+    "linkAccountDesc": "Link your social account to safely keep your saju data and payment info even if you change devices or delete the app.",
+    "linkAccountCta": "Link Social Account",
+    "linkAccountSuccess": "Account successfully linked."
   },
   "birthInput": {
     "cityLookupLoading": "Looking up city…",
