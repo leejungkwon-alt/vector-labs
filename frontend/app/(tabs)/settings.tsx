@@ -65,10 +65,17 @@ export default function SettingsScreen() {
     }
   };
 
-  const handleManageSubscription = () => {
-    // Lemon Squeezy 고객 포털 (구독 관리·카드 변경·영수증 다운로드)
-    // TODO: 백엔드에서 signed URL을 받아 자동 로그인으로 전환 예정
-    Linking.openURL("https://gyeol.lemonsqueezy.com/billing");
+  const handleManageSubscription = async () => {
+    try {
+      const res = await api.billing.getPortalUrl();
+      if (res?.url) {
+        Linking.openURL(res.url);
+      } else {
+        alert("구독 정보를 찾을 수 없습니다.");
+      }
+    } catch (e: any) {
+      alert("구독 관리 페이지를 불러오지 못했습니다.");
+    }
   };
 
   const lang = useLanguageStore((s) => s.lang);
