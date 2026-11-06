@@ -1,6 +1,5 @@
 import { useLanguageStore, SupportedLang } from "@/store/languageStore";
 import { useT } from "@/i18n";
-import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Alert, Platform, Linking, ScrollView } from "react-native";
 import { router } from "expo-router";
@@ -17,12 +16,6 @@ export default function SettingsScreen() {
   const signOut = useAuthStore((s) => s.signOut);
   const profile = useProfileStore((s) => s.profile);
   const clearProfile = useProfileStore((s) => s.clearProfile);
-
-  const { data: purchaseData } = useQuery({
-    queryKey: ["purchases", user?.id],
-    queryFn: () => api.getPurchases(),
-    enabled: !!user,
-  });
 
   const [showLogin, setShowLogin] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
@@ -73,13 +66,9 @@ export default function SettingsScreen() {
   };
 
   const handleManageSubscription = () => {
-    if (Platform.OS === "ios") {
-      Linking.openURL("https://apps.apple.com/account/subscriptions");
-    } else if (Platform.OS === "android") {
-      Linking.openURL("https://play.google.com/store/account/subscriptions");
-    } else {
-      alert(t("settings.manageSubscriptionWeb"));
-    }
+    // Lemon Squeezy 고객 포털 (구독 관리·카드 변경·영수증 다운로드)
+    // TODO: 백엔드에서 signed URL을 받아 자동 로그인으로 전환 예정
+    Linking.openURL("https://gyeol.lemonsqueezy.com/billing");
   };
 
   const lang = useLanguageStore((s) => s.lang);
@@ -174,32 +163,6 @@ export default function SettingsScreen() {
           <TouchableOpacity style={styles.upgradeBtn} onPress={handleUpgrade}>
             <Text style={styles.upgradeBtnText}>{t("settings.upgradeCta")}</Text>
           </TouchableOpacity>
-        </View>
-      )}
-
-      {/* 3.5 결제 내역 (영수증) */}
-      {purchaseData?.purchases && purchaseData.purchases.length > 0 && (
-        <View style={styles.profileBox}>
-          <Text style={styles.sectionTitle}>{t("settings.paymentHistory")}</Text>
-          {purchaseData.purchases.map((p: any, i: number) => (
-            <View key={i} style={[styles.row, { borderBottomWidth: i === purchaseData.purchases.length - 1 ? 0 : 1, borderBottomColor: colors.border, paddingBottom: 10, marginBottom: 10 }]}>
-              <View>
-                <Text style={{ fontSize: 14, fontWeight: "600", color: colors.text }}>
-                  {p.product_id === "sub_monthly_299" ? t("settings.productSubMonthly") : 
-                   p.product_id === "addon_compat_199" ? t("settings.productCompatAddon") :
-                   p.product_id === "addon_deep_099" ? t("settings.productDeepReport") : p.product_id}
-                </Text>
-                <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 4 }}>
-                  {new Date(p.purchased_at).toLocaleString()} · {p.platform.toUpperCase()}
-                </Text>
-              </View>
-              <Text style={{ fontSize: 15, fontWeight: "700", color: colors.primary }}>
-                {p.product_id === "sub_monthly_299" ? "$2.99" : 
-                 p.product_id === "addon_compat_199" ? "$1.99" :
-                 p.product_id === "addon_deep_099" ? "$0.99" : "-"}
-              </Text>
-            </View>
-          ))}
         </View>
       )}
 
