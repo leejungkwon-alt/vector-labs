@@ -105,7 +105,11 @@
     "deleteAccountCancel": "取消",
     "deleteAccountDelete": "永久删除",
     "manageSubscriptionWeb": "请在移动应用中管理订阅。",
-    "language": "语言设置"
+    "language": "语言设置",
+    "linkAccountTitle": "关联账号",
+    "linkAccountDesc": "即使更换设备或删除应用，为了安全保存您的四柱数据和支付信息，请关联SNS账号。",
+    "linkAccountCta": "关联SNS账号",
+    "linkAccountSuccess": "账号关联成功。"
   },
   "birthInput": {
     "cityLookupLoading": "正在查找城市…",

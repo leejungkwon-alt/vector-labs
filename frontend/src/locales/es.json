@@ -105,7 +105,11 @@
     "deleteAccountCancel": "Cancelar",
     "deleteAccountDelete": "Eliminar permanentemente",
     "manageSubscriptionWeb": "Puedes gestionar tu suscripción en la aplicación móvil.",
-    "language": "Idioma"
+    "language": "Idioma",
+    "linkAccountTitle": "Vincular cuenta",
+    "linkAccountDesc": "Vincule su cuenta de redes sociales para mantener seguros sus datos de saju e información de pago incluso si cambia de dispositivo o elimina la aplicación.",
+    "linkAccountCta": "Vincular cuenta social",
+    "linkAccountSuccess": "Cuenta vinculada con éxito."
   },
   "birthInput": {
     "cityLookupLoading": "Buscando la ciudad…",
