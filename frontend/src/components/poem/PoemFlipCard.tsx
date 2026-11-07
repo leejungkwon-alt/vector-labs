@@ -77,17 +77,107 @@ export function PoemFlipCard({
 
   const isWallpaperLocked = (poem.locked_fields || []).includes("wallpaper_image");
 
-  const handleSaveWallpaper = () => {
+  const handleSaveWallpaper = async () => {
     if (isWallpaperLocked) { onSubscribePress?.(); return; }
     
-    const url = `/assets/poems/${poem.id}_wallpaper.png`;
-    if (Platform.OS === "web") {
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `${poem.id}_wallpaper.png`;
-      a.click();
-    } else {
+    const wallpaperSrc = `/assets/poems/${poem.id}_wallpaper.png`;
+    
+    if (Platform.OS !== "web") {
       Alert.alert("알림", "모바일 앱에서는 곧 지원될 예정입니다.");
+      return;
+    }
+    
+    try {
+      // 1. 배경 이미지 로드
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      await new Promise<void>((resolve, reject) => {
+        img.onload = () => resolve();
+        img.onerror = () => reject(new Error("배경 이미지 로드 실패"));
+        img.src = wallpaperSrc;
+      });
+      
+      // 2. 캔버스 생성
+      const canvas = document.createElement("canvas");
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) throw new Error("Canvas 2D 컨텍스트 없음");
+      
+      const W = img.width;
+      const H = img.height;
+      
+      // 3. 배경 그리기
+      ctx.drawImage(img, 0, 0);
+      
+      // 4. 하단 그라데이션 오버레이 (텍스트 가독성)
+      const overlayH = H * 0.5;
+      const grad = ctx.createLinearGradient(0, H - overlayH, 0, H);
+      grad.addColorStop(0, "rgba(0,0,0,0)");
+      grad.addColorStop(0.4, "rgba(0,0,0,0.55)");
+      grad.addColorStop(1, "rgba(0,0,0,0.82)");
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, H - overlayH, W, overlayH);
+      
+      // 5. 폰트 크기
+      const titleSize = Math.round(W * 0.07);
+      const sijoSize = Math.round(W * 0.05);
+      const romanSize = Math.round(W * 0.025);
+      
+      ctx.textAlign = "center";
+      ctx.shadowColor = "rgba(0,0,0,0.8)";
+      ctx.shadowBlur = 12;
+      
+      // 6. 제목
+      ctx.font = `bold ${titleSize}px "Noto Serif KR", "Noto Serif", serif`;
+      ctx.fillStyle = "rgba(255,255,255,0.98)";
+      const titleY = H - overlayH + titleSize * 1.5;
+      ctx.fillText(poem.title || "", W / 2, titleY);
+      
+      // 7. 시조 본문
+      ctx.font = `${sijoSize}px "Noto Serif KR", "Noto Serif", serif`;
+      ctx.fillStyle = "rgba(240,245,255,0.95)";
+      const sijoText = poem.sijo || poem.sijo_ko || "";
+      const sijoLines = sijoText.split(/\n|\\n/).map((s: string) => s.trim()).filter(Boolean);
+      const sijoStartY = titleY + sijoSize * 2.2;
+      sijoLines.forEach((line: string, i: number) => {
+        ctx.fillText(line, W / 2, sijoStartY + i * sijoSize * 1.6);
+      });
+      
+      // 8. 로마자 (한국어일 때만)
+      if (poem.romanization && currentLang === "ko") {
+        ctx.font = `italic ${romanSize}px "Noto Serif KR", "Noto Serif", serif`;
+        ctx.fillStyle = "rgba(200,220,255,0.65)";
+        ctx.shadowBlur = 4;
+        const romanY = sijoStartY + sijoLines.length * sijoSize * 1.6 + romanSize * 1.8;
+        ctx.fillText(poem.romanization, W / 2, romanY);
+      }
+      
+      // 9. URL 워터마크
+      const wmSize = Math.round(W * 0.024);
+      ctx.font = `italic ${wmSize}px "Noto Sans KR", sans-serif`;
+      ctx.fillStyle = "rgba(255,255,255,0.5)";
+      ctx.shadowBlur = 0;
+      ctx.fillText("gyeol.app", W / 2, H - W * 0.03);
+      
+      // 10. 다운로드
+      await new Promise<void>((resolve) => {
+        canvas.toBlob((blob) => {
+          if (!blob) return resolve();
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = `${poem.id}_wallpaper.png`;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+          resolve();
+        }, "image/png", 0.95);
+      });
+    } catch (e: any) {
+      console.error("[wallpaper save]", e);
+      alert(`배경화면 생성 중 오류: ${e?.message || "알 수 없는 오류"}`);
     }
   };
 
