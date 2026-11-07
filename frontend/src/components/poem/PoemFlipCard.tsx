@@ -210,7 +210,7 @@ export function PoemFlipCard({
   return (
     <View style={{ marginVertical: 16 }}>
       <Text style={styles.caption}>
-        {tt(currentLang, "오늘의 시조", "Poem of the Day")} · {getRelationLabel(poem.relation, currentLang)}
+        {tt(currentLang, "이번 달의 시조", "Poem of the Month")} · {getRelationLabel(poem.relation, currentLang)}
       </Text>
 
       <Pressable onPress={flip} accessibilityRole="button">
