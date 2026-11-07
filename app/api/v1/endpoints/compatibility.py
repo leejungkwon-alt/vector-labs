@@ -54,42 +54,59 @@ def _pair_summary(p: dict, lang: str = "ko") -> dict:
     es = p.get("energy_signature", {})
     dom = es.get("dominant") or []
     elem_char = dom[0] if dom else "BALANCED"
-    
-    ELEM_MAP = {
-        "水": {"ko": "물", "en": "Water", "ja": "水", "zh_cn": "水", "es": "Agua"},
-        "木": {"ko": "나무", "en": "Wood", "ja": "木", "zh_cn": "木", "es": "Madera"},
-        "火": {"ko": "불", "en": "Fire", "ja": "火", "zh_cn": "火", "es": "Fuego"},
-        "土": {"ko": "흙", "en": "Earth", "ja": "土", "zh_cn": "土", "es": "Tierra"},
-        "金": {"ko": "쇠", "en": "Metal", "ja": "金", "zh_cn": "金", "es": "Metal"},
-        "BALANCED": {"ko": "균형", "en": "Balanced", "ja": "バランス", "zh_cn": "平衡", "es": "Equilibrado"}
-    }
-    elem_label = ELEM_MAP.get(elem_char, {}).get(lang, elem_char)
-    
-    ARCH_MAP = {
-        "THE_CREATOR": {"ko": "창조자", "en": "The Creator", "ja": "創造者", "zh_cn": "创造者", "es": "El Creador"},
-        "THE_WARRIOR": {"ko": "전사", "en": "The Warrior", "ja": "戦士", "zh_cn": "战士", "es": "El Guerrero"},
-        "THE_SAGE": {"ko": "현자", "en": "The Sage", "ja": "賢者", "zh_cn": "贤者", "es": "El Sabio"},
-        "THE_LOVER": {"ko": "연인", "en": "The Lover", "ja": "恋人", "zh_cn": "恋人", "es": "El Amante"},
-        "THE_RULER": {"ko": "통치자", "en": "The Ruler", "ja": "支配者", "zh_cn": "统治者", "es": "El Gobernante"},
-    }
     arch_key = p["archetype"]["key"]
-    arch_label = ARCH_MAP.get(arch_key, {}).get(lang, arch_key)
-    
-    INTENSITY_MAP = {
-        "STRONG": {"ko": "강한", "en": "Strong", "ja": "強い", "zh_cn": "强", "es": "Fuerte"},
-        "BALANCED": {"ko": "균형 잡힌", "en": "Balanced", "ja": "バランスの取れた", "zh_cn": "平衡的", "es": "Equilibrado"},
-        "GENTLE": {"ko": "부드러운", "en": "Gentle", "ja": "穏やかな", "zh_cn": "柔和的", "es": "Suave"},
-    }
     int_raw = p["archetype"].get("intensity", "BALANCED")
-    int_label = INTENSITY_MAP.get(int_raw, {}).get(lang, int_raw)
+
+    def _tr(key: str, category: str) -> str:
+        if lang != "ko":
+            return key.replace("_", " ").title()
+        
+        # 한글(영문) 병기 사전
+        MAP = {
+            # Archetypes
+            "THE_ANCHOR": "닻 (THE ANCHOR)",
+            "THE_CREATOR": "창조자 (THE CREATOR)",
+            "THE_WARRIOR": "전사 (THE WARRIOR)",
+            "THE_SAGE": "현자 (THE SAGE)",
+            "THE_LOVER": "연인 (THE LOVER)",
+            "THE_RULER": "통치자 (THE RULER)",
+            "THE_EXPLORER": "탐험가 (THE EXPLORER)",
+            "THE_INNOCENT": "순수한 자 (THE INNOCENT)",
+            "THE_REBEL": "반항아 (THE REBEL)",
+            "THE_MAGICIAN": "마법사 (THE MAGICIAN)",
+            "THE_HERO": "영웅 (THE HERO)",
+            "THE_CAREGIVER": "돌봄이 (THE CAREGIVER)",
+            "THE_JESTER": "광대 (THE JESTER)",
+            "THE_ORPHAN": "고아 (THE ORPHAN)",
+            
+            # Elements / Signatures (GROUND, FLOW, SPARK 등)
+            "GROUND": "대지 (GROUND)",
+            "FLOW": "흐름 (FLOW)",
+            "SPARK": "불꽃 (SPARK)",
+            "METAL": "금속 (METAL)",
+            "WOOD": "나무 (WOOD)",
+            "WATER": "물 (WATER)",
+            "FIRE": "불 (FIRE)",
+            "EARTH": "흙 (EARTH)",
+            "BALANCED": "균형 (BALANCED)",
+            "木": "나무 (木)", "火": "불 (火)", "土": "흙 (土)", "金": "쇠 (金)", "水": "물 (水)",
+            
+            # Intensities / Modes
+            "SELF_SOURCED": "자기주도적 (SELF-SOURCED)",
+            "EXPRESSIVE": "표현력 풍부한 (EXPRESSIVE)",
+            "INTENSE": "강렬한 (INTENSE)",
+            "GENTLE": "부드러운 (GENTLE)",
+            "STRONG": "강한 (STRONG)",
+        }
+        return MAP.get(key, key.replace("_", " ").title())
 
     return {
         "archetype": arch_key,
-        "archetype_label": arch_label,
+        "archetype_label": _tr(arch_key, "arch"),
         "element": elem_char,
-        "element_label": elem_label,
+        "element_label": _tr(elem_char, "elem"),
         "intensity": int_raw,
-        "intensity_label": int_label,
+        "intensity_label": _tr(int_raw, "intensity"),
     }
 
 
