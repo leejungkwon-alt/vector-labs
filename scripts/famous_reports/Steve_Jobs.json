@@ -1,0 +1,117 @@
+{
+  "person": {
+    "name": "Steve Jobs",
+    "birth_date": "1955-02-24",
+    "birth_time": "19:15:00",
+    "timezone_str": "America/Los_Angeles",
+    "longitude": -122.4194,
+    "gender": "M",
+    "birth_location": "san_francisco",
+    "known_for": "Apple 창업, 혁신적 리더십, 56세 사망(췌장암)"
+  },
+  "saju_result": {
+    "solar_year": 1955,
+    "year_pillar": "乙未",
+    "month_pillar": "戊寅",
+    "day_pillar": "丙辰",
+    "hour_pillar": "戊戌",
+    "hour_pillar_confidence": "exact",
+    "birth_time_mode": "exact",
+    "solar_adjusted_time": "1955-02-24T19:05:19.344000",
+    "birth_instant_utc": "1955-02-25T03:15:00+00:00",
+    "daewoon_info": {
+      "is_forward": false,
+      "age_basis": "international",
+      "daewoon_number": 6.846572791369598,
+      "daewoon_years": 7,
+      "daewoon_months": 0,
+      "daewoon_display": "7년 0개월",
+      "start_age_first_daewoon": 7,
+      "daewoon_was_corrected": false,
+      "daewoon_pillars": [
+        {
+          "daewoon_index": 1,
+          "start_age": 7,
+          "end_age": 16,
+          "pillar": "丁丑"
+        },
+        {
+          "daewoon_index": 2,
+          "start_age": 17,
+          "end_age": 26,
+          "pillar": "丙子"
+        },
+        {
+          "daewoon_index": 3,
+          "start_age": 27,
+          "end_age": 36,
+          "pillar": "乙亥"
+        },
+        {
+          "daewoon_index": 4,
+          "start_age": 37,
+          "end_age": 46,
+          "pillar": "甲戌"
+        },
+        {
+          "daewoon_index": 5,
+          "start_age": 47,
+          "end_age": 56,
+          "pillar": "癸酉"
+        },
+        {
+          "daewoon_index": 6,
+          "start_age": 57,
+          "end_age": 66,
+          "pillar": "壬申"
+        },
+        {
+          "daewoon_index": 7,
+          "start_age": 67,
+          "end_age": 76,
+          "pillar": "辛未"
+        },
+        {
+          "daewoon_index": 8,
+          "start_age": 77,
+          "end_age": 86,
+          "pillar": "庚午"
+        },
+        {
+          "daewoon_index": 9,
+          "start_age": 87,
+          "end_age": 96,
+          "pillar": "己巳"
+        },
+        {
+          "daewoon_index": 10,
+          "start_age": 97,
+          "end_age": 106,
+          "pillar": "戊辰"
+        }
+      ]
+    },
+    "ten_gods": {
+      "year_pillar": {
+        "stem": "TEN_GOD_DIRECT_RESOURCE",
+        "branch": "TEN_GOD_HURTING_OFFICER"
+      },
+      "month_pillar": {
+        "stem": "TEN_GOD_EATING_GOD",
+        "branch": "TEN_GOD_INDIRECT_RESOURCE"
+      },
+      "day_pillar": {
+        "stem": "ROLE_DAY_MASTER",
+        "branch": "TEN_GOD_EATING_GOD"
+      },
+      "hour_pillar": {
+        "stem": "TEN_GOD_EATING_GOD",
+        "branch": "TEN_GOD_EATING_GOD"
+      }
+    },
+    "luck_info": null,
+    "birth_date": "1955-02-24",
+    "birth_location": "san_francisco",
+    "region": "NORTH_AMERICA"
+  }
+}

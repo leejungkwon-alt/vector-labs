@@ -1,0 +1,117 @@
+{
+  "person": {
+    "name": "IU (이지은)",
+    "birth_date": "1993-05-16",
+    "birth_time": "12:00:00",
+    "timezone_str": "Asia/Seoul",
+    "longitude": 126.978,
+    "gender": "F",
+    "birth_location": "seoul",
+    "known_for": "싱어송라이터, 배우, 자선활동, 안정적 성장"
+  },
+  "saju_result": {
+    "solar_year": 1993,
+    "year_pillar": "癸酉",
+    "month_pillar": "丁巳",
+    "day_pillar": "丁酉",
+    "hour_pillar": "丙午",
+    "hour_pillar_confidence": "exact",
+    "birth_time_mode": "exact",
+    "solar_adjusted_time": "1993-05-16T11:27:54.720000",
+    "birth_instant_utc": "1993-05-16T03:00:00+00:00",
+    "daewoon_info": {
+      "is_forward": true,
+      "age_basis": "international",
+      "daewoon_number": 6.850806172935957,
+      "daewoon_years": 7,
+      "daewoon_months": 0,
+      "daewoon_display": "7년 0개월",
+      "start_age_first_daewoon": 7,
+      "daewoon_was_corrected": false,
+      "daewoon_pillars": [
+        {
+          "daewoon_index": 1,
+          "start_age": 7,
+          "end_age": 16,
+          "pillar": "戊午"
+        },
+        {
+          "daewoon_index": 2,
+          "start_age": 17,
+          "end_age": 26,
+          "pillar": "己未"
+        },
+        {
+          "daewoon_index": 3,
+          "start_age": 27,
+          "end_age": 36,
+          "pillar": "庚申"
+        },
+        {
+          "daewoon_index": 4,
+          "start_age": 37,
+          "end_age": 46,
+          "pillar": "辛酉"
+        },
+        {
+          "daewoon_index": 5,
+          "start_age": 47,
+          "end_age": 56,
+          "pillar": "壬戌"
+        },
+        {
+          "daewoon_index": 6,
+          "start_age": 57,
+          "end_age": 66,
+          "pillar": "癸亥"
+        },
+        {
+          "daewoon_index": 7,
+          "start_age": 67,
+          "end_age": 76,
+          "pillar": "甲子"
+        },
+        {
+          "daewoon_index": 8,
+          "start_age": 77,
+          "end_age": 86,
+          "pillar": "乙丑"
+        },
+        {
+          "daewoon_index": 9,
+          "start_age": 87,
+          "end_age": 96,
+          "pillar": "丙寅"
+        },
+        {
+          "daewoon_index": 10,
+          "start_age": 97,
+          "end_age": 106,
+          "pillar": "丁卯"
+        }
+      ]
+    },
+    "ten_gods": {
+      "year_pillar": {
+        "stem": "TEN_GOD_SEVEN_KILLINGS",
+        "branch": "TEN_GOD_INDIRECT_WEALTH"
+      },
+      "month_pillar": {
+        "stem": "TEN_GOD_FRIEND",
+        "branch": "TEN_GOD_ROB_WEALTH"
+      },
+      "day_pillar": {
+        "stem": "ROLE_DAY_MASTER",
+        "branch": "TEN_GOD_INDIRECT_WEALTH"
+      },
+      "hour_pillar": {
+        "stem": "TEN_GOD_ROB_WEALTH",
+        "branch": "TEN_GOD_FRIEND"
+      }
+    },
+    "luck_info": null,
+    "birth_date": "1993-05-16",
+    "birth_location": "seoul",
+    "region": "KOREA"
+  }
+}
