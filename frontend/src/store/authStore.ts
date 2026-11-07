@@ -94,6 +94,7 @@ interface AuthState {
   authError: string | null;
   bootstrap: () => Promise<void>;
   linkAccount: (provider: Provider) => Promise<void>;
+  signInWithProvider: (provider: Provider) => Promise<void>;
   signInAnonymous: () => Promise<void>;
   signOut: () => Promise<void>;
 }
@@ -160,6 +161,23 @@ export const useAuthStore = create<AuthState>((set) => ({
         throw e;
       }
     }
+    await storage.setItem(TOKEN_KEY, res.access_token);
+    setAuthToken(res.access_token);
+    set({ user: res.user });
+  },
+  signInWithProvider: async (provider: Provider) => {
+    let providerToken: string;
+    if (provider === 'apple') {
+      if (Platform.OS !== 'ios') {
+        throw new Error('Apple sign-in is only available on iOS');
+      }
+      providerToken = await getAppleIdentityToken();
+    } else if (provider === 'google') {
+      providerToken = await getGoogleIdToken();
+    } else {
+      providerToken = await getKakaoAccessToken();
+    }
+    const res = await api.loginProvider(provider, providerToken);
     await storage.setItem(TOKEN_KEY, res.access_token);
     setAuthToken(res.access_token);
     set({ user: res.user });
