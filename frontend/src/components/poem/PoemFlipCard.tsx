@@ -61,6 +61,22 @@ export function PoemFlipCard({
 }) {
   const storeLang = useLanguageStore((s) => s.lang);
   const currentLang = lang || storeLang || "en";
+
+  const getPoetName = (poet: string | undefined) => {
+    if (!poet) return "";
+    if (poet === "작자 미상" || poet === "미상" || poet === "Anonymous") {
+      const map: Record<string, string> = {
+        ko: "작자 미상",
+        en: "Anonymous",
+        ja: "作者不明",
+        zh_cn: "佚名",
+        es: "Anónimo"
+      };
+      return map[currentLang] || "Anonymous";
+    }
+    return poet;
+  };
+
   const [flipped, setFlipped] = useState(false);
   const anim = useRef(new Animated.Value(0)).current;
 
@@ -80,16 +96,15 @@ export function PoemFlipCard({
 
   const handleSaveWallpaper = async () => {
     if (isWallpaperLocked) { onSubscribePress?.(); return; }
-    
+
     const wallpaperSrc = `/assets/poems/${poem.id}_wallpaper.png`;
-    
+
     if (Platform.OS !== "web") {
       Alert.alert("알림", "모바일 앱에서는 곧 지원될 예정입니다.");
       return;
     }
-    
+
     try {
-      // 1. 배경 이미지 로드
       const img = new window.Image();
       img.crossOrigin = "anonymous";
       await new Promise<void>((resolve, reject) => {
@@ -97,21 +112,18 @@ export function PoemFlipCard({
         img.onerror = () => reject(new Error("배경 이미지 로드 실패"));
         img.src = wallpaperSrc;
       });
-      
-      // 2. 캔버스 생성
+
       const canvas = document.createElement("canvas");
       canvas.width = img.width;
       canvas.height = img.height;
       const ctx = canvas.getContext("2d");
       if (!ctx) throw new Error("Canvas 2D 컨텍스트 없음");
-      
+
       const W = img.width;
       const H = img.height;
-      
-      // 3. 배경 그리기
+
       ctx.drawImage(img, 0, 0);
-      
-      // 4. 하단 그라데이션 오버레이 (텍스트 가독성)
+
       const overlayH = H * 0.5;
       const grad = ctx.createLinearGradient(0, H - overlayH, 0, H);
       grad.addColorStop(0, "rgba(0,0,0,0)");
@@ -119,33 +131,32 @@ export function PoemFlipCard({
       grad.addColorStop(1, "rgba(0,0,0,0.82)");
       ctx.fillStyle = grad;
       ctx.fillRect(0, H - overlayH, W, overlayH);
-      
-      // 5. 폰트 크기
+
       const titleSize = Math.round(W * 0.07);
       const sijoSize = Math.round(W * 0.05);
       const romanSize = Math.round(W * 0.025);
-      
+
       ctx.textAlign = "center";
       ctx.shadowColor = "rgba(0,0,0,0.8)";
       ctx.shadowBlur = 12;
-      
-      // 6. 제목
+
+      // 제목
       ctx.font = `bold ${titleSize}px "Noto Serif KR", "Noto Serif", serif`;
       ctx.fillStyle = "rgba(255,255,255,0.98)";
       const titleY = H - overlayH + titleSize * 1.5;
       ctx.fillText(poem.title || "", W / 2, titleY);
-      
-      // 7. 시조 본문
+
+      // 시조 본문
       ctx.font = `${sijoSize}px "Noto Serif KR", "Noto Serif", serif`;
       ctx.fillStyle = "rgba(240,245,255,0.95)";
       const sijoText = poem.sijo || poem.sijo_ko || "";
-      const sijoLines = sijoText.split(/\n|\\n/).map((s: string) => s.trim()).filter(Boolean);
+      const sijoLines = sijoText.split(/\n/).map((s: string) => s.trim()).filter(Boolean);
       const sijoStartY = titleY + sijoSize * 2.2;
       sijoLines.forEach((line: string, i: number) => {
         ctx.fillText(line, W / 2, sijoStartY + i * sijoSize * 1.6);
       });
-      
-      // 8. 로마자 (한국어일 때만)
+
+      // 로마자 (한국어일 때만)
       if (poem.romanization && currentLang === "ko") {
         ctx.font = `italic ${romanSize}px "Noto Serif KR", "Noto Serif", serif`;
         ctx.fillStyle = "rgba(200,220,255,0.65)";
@@ -153,61 +164,56 @@ export function PoemFlipCard({
         const romanY = sijoStartY + sijoLines.length * sijoSize * 1.6 + romanSize * 1.8;
         ctx.fillText(poem.romanization, W / 2, romanY);
       }
-      
-      // 9. QR 코드 + URL 워터마크 (우측 하단)
+
+      // QR 코드 + URL (우측 하단)
       try {
-        const qrSize = Math.round(W * 0.12); // QR 크기 (이미지 너비의 12%)
-        const qrDataUrl = await QRCode.toDataURL("https://gyeol.app", {
+        const qrSize = Math.round(W * 0.12);
+        const qrDataUrl = await QRCode.toDataURL("https://gyeol-blond.vercel.app", {
           margin: 1,
           color: { dark: "#1a1a1a", light: "#ffffff" },
           width: qrSize,
         });
-        
         const qrImg = new window.Image();
         await new Promise<void>((resolve, reject) => {
           qrImg.onload = () => resolve();
           qrImg.onerror = () => reject();
           qrImg.src = qrDataUrl;
         });
-
         const qrX = W - qrSize - (W * 0.04);
         const qrY = H - qrSize - (W * 0.04);
-        
-        // QR 흰색 배경 (모서리 둥글게 그리기 위해 roundRect 사용 가능하나 사각형으로 처리)
         ctx.fillStyle = "rgba(255,255,255,0.9)";
         ctx.fillRect(qrX - 6, qrY - 6, qrSize + 12, qrSize + 12);
-        
-        // QR 이미지 그리기
         ctx.drawImage(qrImg, qrX, qrY, qrSize, qrSize);
-
-        // QR 아래 텍스트
         ctx.font = `italic ${Math.round(W * 0.02)}px "Noto Sans KR", sans-serif`;
         ctx.fillStyle = "rgba(255,255,255,0.75)";
         ctx.shadowBlur = 0;
         ctx.fillText("gyeol.app", qrX + qrSize / 2, qrY + qrSize + (W * 0.03));
       } catch (qrErr) {
-        console.warn("[wallpaper] QR 생성 실패, 텍스트로 대체:", qrErr);
-        const wmSize = Math.round(W * 0.024);
-        ctx.font = `italic ${wmSize}px "Noto Sans KR", sans-serif`;
+        console.warn("[wallpaper] QR 생성 실패:", qrErr);
+        ctx.font = `italic ${Math.round(W * 0.024)}px "Noto Sans KR", sans-serif`;
         ctx.fillStyle = "rgba(255,255,255,0.5)";
         ctx.shadowBlur = 0;
         ctx.fillText("gyeol.app", W / 2, H - W * 0.03);
       }
-      
-      // 10. 다운로드
+
+      // 다운로드
       await new Promise<void>((resolve) => {
-        canvas.toBlob((blob) => {
-          if (!blob) return resolve();
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement("a");
-          a.href = url;
-          a.download = `${poem.id}_wallpaper.png`;
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
-          URL.revokeObjectURL(url);
-          resolve();
-        }, "image/png", 0.95);
+        canvas.toBlob(
+          (blob) => {
+            if (!blob) return resolve();
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `${poem.id}_wallpaper.png`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            resolve();
+          },
+          "image/png",
+          0.95
+        );
       });
     } catch (e: any) {
       console.error("[wallpaper save]", e);
@@ -245,7 +251,8 @@ export function PoemFlipCard({
                     { opacity: backOpacity, transform: [{ perspective: 900 }, { rotateY: backRotate }] }]}
           >
             <Text style={styles.title}>{poem.title}</Text>
-                        <Text style={styles.romanization}>{poem.romanization}</Text>
+            {poem.poet && <Text style={styles.poet}>- {getPoetName(poem.poet)} -</Text>}
+            <Text style={styles.romanization}>{poem.romanization}</Text>
             <View style={styles.divider} />
             {poem.commentary ? <Text style={styles.commentary}>{poem.commentary}</Text> : null}
             <View style={styles.divider} />
