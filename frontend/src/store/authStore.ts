@@ -150,7 +150,16 @@ export const useAuthStore = create<AuthState>((set) => ({
     } else {
       providerToken = await getKakaoAccessToken();
     }
-    const res = await api.linkProvider(provider, providerToken);
+    let res;
+    try {
+      res = await api.linkProvider(provider, providerToken);
+    } catch (e: any) {
+      if (e instanceof ApiError && e.status === 409) {
+        res = await api.loginProvider(provider, providerToken);
+      } else {
+        throw e;
+      }
+    }
     await storage.setItem(TOKEN_KEY, res.access_token);
     setAuthToken(res.access_token);
     set({ user: res.user });
