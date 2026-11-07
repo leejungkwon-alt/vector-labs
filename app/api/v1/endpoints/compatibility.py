@@ -50,13 +50,46 @@ def _build_profile(payload) -> dict:
     return build_semantic_profile(result)
 
 
-def _pair_summary(p: dict) -> dict:
+def _pair_summary(p: dict, lang: str = "ko") -> dict:
     es = p.get("energy_signature", {})
     dom = es.get("dominant") or []
+    elem_char = dom[0] if dom else "BALANCED"
+    
+    ELEM_MAP = {
+        "水": {"ko": "물", "en": "Water", "ja": "水", "zh_cn": "水", "es": "Agua"},
+        "木": {"ko": "나무", "en": "Wood", "ja": "木", "zh_cn": "木", "es": "Madera"},
+        "火": {"ko": "불", "en": "Fire", "ja": "火", "zh_cn": "火", "es": "Fuego"},
+        "土": {"ko": "흙", "en": "Earth", "ja": "土", "zh_cn": "土", "es": "Tierra"},
+        "金": {"ko": "쇠", "en": "Metal", "ja": "金", "zh_cn": "金", "es": "Metal"},
+        "BALANCED": {"ko": "균형", "en": "Balanced", "ja": "バランス", "zh_cn": "平衡", "es": "Equilibrado"}
+    }
+    elem_label = ELEM_MAP.get(elem_char, {}).get(lang, elem_char)
+    
+    ARCH_MAP = {
+        "THE_CREATOR": {"ko": "창조자", "en": "The Creator", "ja": "創造者", "zh_cn": "创造者", "es": "El Creador"},
+        "THE_WARRIOR": {"ko": "전사", "en": "The Warrior", "ja": "戦士", "zh_cn": "战士", "es": "El Guerrero"},
+        "THE_SAGE": {"ko": "현자", "en": "The Sage", "ja": "賢者", "zh_cn": "贤者", "es": "El Sabio"},
+        "THE_LOVER": {"ko": "연인", "en": "The Lover", "ja": "恋人", "zh_cn": "恋人", "es": "El Amante"},
+        "THE_RULER": {"ko": "통치자", "en": "The Ruler", "ja": "支配者", "zh_cn": "统治者", "es": "El Gobernante"},
+    }
+    arch_key = p["archetype"]["key"]
+    arch_label = ARCH_MAP.get(arch_key, {}).get(lang, arch_key)
+    
+    INTENSITY_MAP = {
+        "STRONG": {"ko": "강한", "en": "Strong", "ja": "強い", "zh_cn": "强", "es": "Fuerte"},
+        "BALANCED": {"ko": "균형 잡힌", "en": "Balanced", "ja": "バランスの取れた", "zh_cn": "平衡的", "es": "Equilibrado"},
+        "GENTLE": {"ko": "부드러운", "en": "Gentle", "ja": "穏やかな", "zh_cn": "柔和的", "es": "Suave"},
+    }
+    int_raw = p["archetype"].get("intensity", "BALANCED")
+    int_label = INTENSITY_MAP.get(int_raw, {}).get(lang, int_raw)
+
     return {
-        "archetype": p["archetype"]["key"],
-        "element": dom[0] if dom else "BALANCED",
-        "intensity": p["archetype"]["intensity"],
+        "archetype": arch_key,
+        "archetype_label": arch_label,
+        "element": elem_char,
+        "element_label": elem_label,
+        "intensity": int_raw,
+        "intensity_label": int_label,
     }
 
 
@@ -88,7 +121,7 @@ def api_compatibility(
     compat = compute_compatibility(pa, pb)
     response = write_compatibility(compat, lang=payload.lang, relationship_type=payload.relationship_type)
     response["pair"] = {
-        "a": _pair_summary(pa),
-        "b": _pair_summary(pb),
+        "a": _pair_summary(pa, payload.lang),
+        "b": _pair_summary(pb, payload.lang),
     }
     return {"compatibility": response}

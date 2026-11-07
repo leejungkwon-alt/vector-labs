@@ -191,6 +191,35 @@ export default function CompatibilityScreen() {
           <Text style={styles.resultBody}>{compat.overall.body}</Text>
         </View>
 
+        {/* 🌟 상대방 리포트 카드 */}
+        {data?.pair?.b && (
+          <View style={[styles.resultCard, { marginTop: -8, alignItems: "flex-start", backgroundColor: colors.primary + "08" }]}>
+            <Text style={{ fontSize: 14, fontWeight: "700", color: colors.primary, marginBottom: 12 }}>
+              💡 상대방은 어떤 사람일까요?
+            </Text>
+            <View style={{ flexDirection: "row", alignItems: "center", marginBottom: 8 }}>
+              <Text style={{ fontSize: 32, marginRight: 12 }}>
+                {data.pair.b.element === "水" ? "🌊" :
+                 data.pair.b.element === "木" ? "🌿" :
+                 data.pair.b.element === "火" ? "🔥" :
+                 data.pair.b.element === "土" ? "⛰️" : "⚔️"}
+              </Text>
+              <View>
+                <Text style={{ fontSize: 18, fontWeight: "800", color: colors.text }}>
+                  {data.pair.b.archetype_label || data.pair.b.archetype}
+                </Text>
+                <Text style={{ fontSize: 13, color: colors.textMuted, marginTop: 2 }}>
+                  {data.pair.b.element_label || data.pair.b.element} 기운 · {data.pair.b.intensity_label || data.pair.b.intensity}
+                </Text>
+              </View>
+            </View>
+            <Text style={{ fontSize: 14, color: colors.text, lineHeight: 22 }}>
+              상대방은 {data.pair.b.element_label || data.pair.b.element}의 기운을 타고난 {data.pair.b.archetype_label || data.pair.b.archetype}입니다. 
+              두 사람의 관계에서 이 기질이 어떻게 작용하는지 위의 케미를 확인해 보세요.
+            </Text>
+          </View>
+        )}
+
         {compat.relationship_advice && (
           <View style={styles.tipCard}>
             <Text style={styles.tipTitle}>{t("compatibility.adviceTitle")}</Text>
