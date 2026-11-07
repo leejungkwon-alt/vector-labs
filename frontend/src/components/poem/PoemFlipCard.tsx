@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { View, Text, Pressable, Animated, StyleSheet, Alert, Platform, Image } from "react-native";
 import { colors } from "@/theme";
 import { useLanguageStore } from "@/store/languageStore";
+import QRCode from "qrcode";
 import type { PoemCard } from "../../../types";
 import { getRelationLabel } from "@/utils/poemRelations";
 
@@ -153,12 +154,45 @@ export function PoemFlipCard({
         ctx.fillText(poem.romanization, W / 2, romanY);
       }
       
-      // 9. URL 워터마크
-      const wmSize = Math.round(W * 0.024);
-      ctx.font = `italic ${wmSize}px "Noto Sans KR", sans-serif`;
-      ctx.fillStyle = "rgba(255,255,255,0.5)";
-      ctx.shadowBlur = 0;
-      ctx.fillText("gyeol.app", W / 2, H - W * 0.03);
+      // 9. QR 코드 + URL 워터마크 (우측 하단)
+      try {
+        const qrSize = Math.round(W * 0.12); // QR 크기 (이미지 너비의 12%)
+        const qrDataUrl = await QRCode.toDataURL("https://gyeol.app", {
+          margin: 1,
+          color: { dark: "#1a1a1a", light: "#ffffff" },
+          width: qrSize,
+        });
+        
+        const qrImg = new window.Image();
+        await new Promise<void>((resolve, reject) => {
+          qrImg.onload = () => resolve();
+          qrImg.onerror = () => reject();
+          qrImg.src = qrDataUrl;
+        });
+
+        const qrX = W - qrSize - (W * 0.04);
+        const qrY = H - qrSize - (W * 0.04);
+        
+        // QR 흰색 배경 (모서리 둥글게 그리기 위해 roundRect 사용 가능하나 사각형으로 처리)
+        ctx.fillStyle = "rgba(255,255,255,0.9)";
+        ctx.fillRect(qrX - 6, qrY - 6, qrSize + 12, qrSize + 12);
+        
+        // QR 이미지 그리기
+        ctx.drawImage(qrImg, qrX, qrY, qrSize, qrSize);
+
+        // QR 아래 텍스트
+        ctx.font = `italic ${Math.round(W * 0.02)}px "Noto Sans KR", sans-serif`;
+        ctx.fillStyle = "rgba(255,255,255,0.75)";
+        ctx.shadowBlur = 0;
+        ctx.fillText("gyeol.app", qrX + qrSize / 2, qrY + qrSize + (W * 0.03));
+      } catch (qrErr) {
+        console.warn("[wallpaper] QR 생성 실패, 텍스트로 대체:", qrErr);
+        const wmSize = Math.round(W * 0.024);
+        ctx.font = `italic ${wmSize}px "Noto Sans KR", sans-serif`;
+        ctx.fillStyle = "rgba(255,255,255,0.5)";
+        ctx.shadowBlur = 0;
+        ctx.fillText("gyeol.app", W / 2, H - W * 0.03);
+      }
       
       // 10. 다운로드
       await new Promise<void>((resolve) => {
