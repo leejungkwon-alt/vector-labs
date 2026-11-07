@@ -173,7 +173,14 @@
     "desc": "기기를 변경하거나 앱을 삭제해도\\n내 사주 데이터와 결제 정보를 안전하게 보관합니다.",
     "appleCta": "Apple로 계속하기",
     "googleCta": "Google로 계속하기",
-    "kakaoCta": "카카오로 계속하기"
+    "kakaoCta": "카카오로 계속하기",
+    "loginTitle": "로그인",
+    "loginDesc": "기존 계정으로 로그인하세요.",
+    "googleLoginCta": "Google 계정으로 로그인",
+    "kakaoLoginCta": "카카오 계정으로 로그인",
+    "switchToLogin": "이미 계정이 있으신가요? 로그인",
+    "switchToLink": "← 계정 연동으로 돌아가기",
+    "noAccountPrompt": "가입된 계정이 없습니다. '계정 연동'으로 전환하여 새로 시작하세요."
   },
   "payment": {
     "title": "Gyeol Premium",

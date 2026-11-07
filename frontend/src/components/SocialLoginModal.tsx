@@ -3,6 +3,7 @@ import { ActivityIndicator, Alert, Modal, Platform, StyleSheet, Text, TouchableO
 import { Ionicons } from "@expo/vector-icons";
 import { colors, radius, spacing } from "@/theme";
 import { useAuthStore } from "@/store/authStore";
+import { ApiError } from "@/api/client";
 import { useT } from "@/i18n";
 
 interface Props {
@@ -13,16 +14,32 @@ interface Props {
 
 export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
   const linkAccount = useAuthStore((s) => s.linkAccount);
+  const signInWithProvider = useAuthStore((s) => s.signInWithProvider);
   const t = useT();
   const [loading, setLoading] = useState<string | null>(null);
+  const [mode, setMode] = useState<"link" | "login">("link");
 
   const handleLogin = async (provider: "apple" | "google" | "kakao") => {
     setLoading(provider);
     try {
-      await linkAccount(provider);
+      if (mode === "login") {
+        await signInWithProvider(provider);
+      } else {
+        await linkAccount(provider);
+      }
       onSuccess();
     } catch (e: any) {
-      if (typeof Platform !== 'undefined' && Platform.OS === 'web') { window.alert(e.message || t("socialLogin.loginFailed")); } else { Alert.alert(t("common.notice"), e.message || t("socialLogin.loginFailed")); }
+      // 로그인 모드에서 계정이 없는 경우(404) -> 연동 모드로 자동 전환
+      if (mode === "login" && e instanceof ApiError && e.status === 404) {
+        setMode("link");
+        const msg = t("socialLogin.noAccountPrompt");
+        if (typeof Platform !== "undefined" && Platform.OS === "web") window.alert(msg);
+        else Alert.alert(t("common.notice"), msg);
+      } else {
+        const msg = e?.message || t("socialLogin.loginFailed");
+        if (typeof Platform !== "undefined" && Platform.OS === "web") window.alert(msg);
+        else Alert.alert(t("common.notice"), msg);
+      }
     } finally {
       setLoading(null);
     }
@@ -32,9 +49,11 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
       <View style={styles.overlay}>
         <View style={styles.card}>
-          <Text style={styles.title}>{t("socialLogin.title")}</Text>
+          <Text style={styles.title}>
+            {mode === "login" ? t("socialLogin.loginTitle") : t("socialLogin.title")}
+          </Text>
           <Text style={styles.desc}>
-            {t("socialLogin.desc")}
+            {mode === "login" ? t("socialLogin.loginDesc") : t("socialLogin.desc")}
           </Text>
 
           {/* Apple login disabled (일시 비활성화 - 재활성화하려면 이 주석 해제)
@@ -54,7 +73,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
             {loading === "google" ? <ActivityIndicator color="#000" /> : (
               <>
                 <Ionicons name="logo-google" size={20} color="#000" />
-                <Text style={styles.btnTextBlack}>{t("socialLogin.googleCta")}</Text>
+                <Text style={styles.btnTextBlack}>{mode === "login" ? t("socialLogin.googleLoginCta") : t("socialLogin.googleCta")}</Text>
               </>
             )}
           </TouchableOpacity>
@@ -63,9 +82,25 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
             {loading === "kakao" ? <ActivityIndicator color="#000" /> : (
               <>
                 <Ionicons name="chatbubble" size={20} color="#000" />
-                <Text style={styles.btnTextBlack}>{t("socialLogin.kakaoCta")}</Text>
+                <Text style={styles.btnTextBlack}>{mode === "login" ? t("socialLogin.kakaoLoginCta") : t("socialLogin.kakaoCta")}</Text>
               </>
             )}
+          </TouchableOpacity>
+
+          <View style={styles.divider}>
+            <View style={styles.dividerLine} />
+            <Text style={styles.dividerText}>or</Text>
+            <View style={styles.dividerLine} />
+          </View>
+
+          <TouchableOpacity
+            style={styles.modeToggle}
+            onPress={() => setMode(mode === "login" ? "link" : "login")}
+            disabled={!!loading}
+          >
+            <Text style={styles.modeToggleText}>
+              {mode === "login" ? t("socialLogin.switchToLink") : t("socialLogin.switchToLogin")}
+            </Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.closeBtn} onPress={onClose} disabled={!!loading}>
@@ -90,4 +125,9 @@ const styles = StyleSheet.create({
   btnTextBlack: { color: "#000", fontSize: 16, fontWeight: "600" },
   closeBtn: { marginTop: 12, padding: 8 },
   closeText: { color: colors.textMuted, fontSize: 14 },
+  divider: { flexDirection: "row", alignItems: "center", width: "100%", marginVertical: 12 },
+  dividerLine: { flex: 1, height: 1, backgroundColor: colors.border },
+  dividerText: { marginHorizontal: 12, color: colors.textMuted, fontSize: 12 },
+  modeToggle: { paddingVertical: 10, paddingHorizontal: 16 },
+  modeToggleText: { color: colors.primary, fontSize: 14, fontWeight: "600" },
 });

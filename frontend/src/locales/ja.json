@@ -173,7 +173,14 @@
     "desc": "機種変更やアプリ削除時でも\\n四柱推命データと決済情報を安全に保管します。",
     "appleCta": "Appleで続ける",
     "googleCta": "Googleで続ける",
-    "kakaoCta": "Kakaoで続ける"
+    "kakaoCta": "Kakaoで続ける",
+    "loginTitle": "ログイン",
+    "loginDesc": "既存のアカウントでログインしてください。",
+    "googleLoginCta": "Googleでログイン",
+    "kakaoLoginCta": "Kakaoでログイン",
+    "switchToLogin": "すでにアカウントをお持ちですか？ログイン",
+    "switchToLink": "← 連携モードに戻る",
+    "noAccountPrompt": "アカウントが見つかりません。連携モードに切り替えて新規登録してください。"
   },
   "payment": {
     "title": "Gyeol Premium",

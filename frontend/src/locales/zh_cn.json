@@ -173,7 +173,14 @@
     "desc": "即使更换设备或删除应用，\\n也能安全保存您的四柱数据和支付信息。",
     "appleCta": "使用 Apple 继续",
     "googleCta": "使用 Google 继续",
-    "kakaoCta": "使用 Kakao 继续"
+    "kakaoCta": "使用 Kakao 继续",
+    "loginTitle": "登录",
+    "loginDesc": "使用现有账号登录。",
+    "googleLoginCta": "使用 Google 登录",
+    "kakaoLoginCta": "使用 Kakao 登录",
+    "switchToLogin": "已有账号？登录",
+    "switchToLink": "← 返回关联模式",
+    "noAccountPrompt": "未找到账号。已切换到关联模式，请重新开始。"
   },
   "payment": {
     "title": "Gyeol Premium",

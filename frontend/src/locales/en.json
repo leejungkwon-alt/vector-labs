@@ -173,7 +173,14 @@
     "desc": "Keep your saju data and payment info safe\\neven if you change devices or delete the app.",
     "appleCta": "Continue with Apple",
     "googleCta": "Continue with Google",
-    "kakaoCta": "Continue with Kakao"
+    "kakaoCta": "Continue with Kakao",
+    "loginTitle": "Sign In",
+    "loginDesc": "Sign in with your existing account.",
+    "googleLoginCta": "Sign in with Google",
+    "kakaoLoginCta": "Sign in with Kakao",
+    "switchToLogin": "Already have an account? Sign in",
+    "switchToLink": "← Back to link mode",
+    "noAccountPrompt": "No account found. Switching to link mode to start fresh."
   },
   "payment": {
     "title": "Gyeol Premium",

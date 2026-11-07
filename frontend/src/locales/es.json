@@ -173,7 +173,14 @@
     "desc": "Mantenga seguros sus datos de saju e información de pago\\nincluso si cambia de dispositivo o elimina la aplicación.",
     "appleCta": "Continuar con Apple",
     "googleCta": "Continuar con Google",
-    "kakaoCta": "Continuar con Kakao"
+    "kakaoCta": "Continuar con Kakao",
+    "loginTitle": "Iniciar sesión",
+    "loginDesc": "Inicia sesión con tu cuenta existente.",
+    "googleLoginCta": "Iniciar sesión con Google",
+    "kakaoLoginCta": "Iniciar sesión con Kakao",
+    "switchToLogin": "¿Ya tienes cuenta? Inicia sesión",
+    "switchToLink": "← Volver al modo de vinculación",
+    "noAccountPrompt": "No se encontró ninguna cuenta. Cambiando al modo de vinculación para empezar."
   },
   "payment": {
     "title": "Gyeol Premium",
