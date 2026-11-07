@@ -73,7 +73,9 @@
     "axisSinsal": "特別な特性",
     "ageLimitTitle": "🚫 14歳未満の方はご利用いただけません",
     "ageLimitDesc": "Gyeolは14歳以上の方のみご利用いただけます。\nお相手の生年月日をご確認ください。",
-    "ageLimitRetry": "再入力する"
+    "ageLimitRetry": "再入力する",
+    "partnerReportTitle": "💡 お相手はどんな人ですか？",
+    "partnerReportDesc": "お相手は{element}の気を持つ{archetype}です。二人の関係でこの気質がどう作用するか、上のケミストリーを確認してみてください。"
   },
   "settings": {
     "accountInfo": "アカウント情報",

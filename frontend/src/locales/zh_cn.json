@@ -73,7 +73,9 @@
     "axisSinsal": "特殊特质",
     "ageLimitTitle": "🚫 14岁以下用户无法使用此服务",
     "ageLimitDesc": "Gyeol仅限14岁及以上用户使用。\n请重新确认对方的出生日期。",
-    "ageLimitRetry": "重新输入"
+    "ageLimitRetry": "重新输入",
+    "partnerReportTitle": "💡 对方是什么样的人？",
+    "partnerReportDesc": "对方是拥有{element}能量的{archetype}。在你们的关系中，这种特质如何发挥作用，请查看上方的契合度。"
   },
   "settings": {
     "accountInfo": "账户信息",

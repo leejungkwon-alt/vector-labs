@@ -73,7 +73,9 @@
     "axisSinsal": "Rasgos especiales",
     "ageLimitTitle": "🚫 Los menores de 14 años no pueden usar este servicio",
     "ageLimitDesc": "Gyeol solo está disponible para usuarios de 14 años o más.\nVerifique la fecha de nacimiento nuevamente.",
-    "ageLimitRetry": "Intentar de nuevo"
+    "ageLimitRetry": "Intentar de nuevo",
+    "partnerReportTitle": "💡 ¿Cómo es tu pareja?",
+    "partnerReportDesc": "Tu pareja es {archetype} con energía {element}. Mira cómo se refleja este rasgo en su química arriba."
   },
   "settings": {
     "accountInfo": "Cuenta",
