@@ -114,7 +114,10 @@
     "linkAccountTitle": "Vincular cuenta",
     "linkAccountDesc": "Vincule su cuenta de redes sociales para mantener seguros sus datos de saju e información de pago incluso si cambia de dispositivo o elimina la aplicación.",
     "linkAccountCta": "Vincular cuenta social",
-    "linkAccountSuccess": "Cuenta vinculada con éxito."
+    "linkAccountSuccess": "Cuenta vinculada con éxito.",
+    "logout": "Cerrar sesión",
+    "logoutConfirm": "¿Seguro que quieres cerrar sesión?",
+    "logoutFail": "No se pudo cerrar sesión."
   },
   "birthInput": {
     "cityLookupLoading": "Buscando la ciudad…",

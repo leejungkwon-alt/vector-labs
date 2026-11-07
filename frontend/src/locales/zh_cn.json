@@ -114,7 +114,10 @@
     "linkAccountTitle": "关联账号",
     "linkAccountDesc": "即使更换设备或删除应用，为了安全保存您的四柱数据和支付信息，请关联SNS账号。",
     "linkAccountCta": "关联SNS账号",
-    "linkAccountSuccess": "账号关联成功。"
+    "linkAccountSuccess": "账号关联成功。",
+    "logout": "退出登录",
+    "logoutConfirm": "确定要退出登录吗？",
+    "logoutFail": "退出登录失败。"
   },
   "birthInput": {
     "cityLookupLoading": "正在查找城市…",

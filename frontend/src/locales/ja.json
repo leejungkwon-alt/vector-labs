@@ -114,7 +114,10 @@
     "linkAccountTitle": "アカウント連携",
     "linkAccountDesc": "機種変更やアプリ削除時でも、四柱推命データと決済情報を安全に保つためにSNSアカウントを連携してください。",
     "linkAccountCta": "SNSアカウントを連携",
-    "linkAccountSuccess": "アカウントが正常に連携されました。"
+    "linkAccountSuccess": "アカウントが正常に連携されました。",
+    "logout": "ログアウト",
+    "logoutConfirm": "本当にログアウトしますか？",
+    "logoutFail": "ログアウトに失敗しました。"
   },
   "birthInput": {
     "cityLookupLoading": "都市を検索中…",

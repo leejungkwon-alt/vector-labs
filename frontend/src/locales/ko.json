@@ -114,7 +114,10 @@
     "linkAccountTitle": "계정 연동하기",
     "linkAccountDesc": "기기를 변경하거나 앱을 삭제해도 내 사주 데이터와 결제 정보를 안전하게 보관하려면 SNS 계정을 연동하세요.",
     "linkAccountCta": "SNS 계정 연동하기",
-    "linkAccountSuccess": "계정이 성공적으로 연결되었습니다."
+    "linkAccountSuccess": "계정이 성공적으로 연결되었습니다.",
+    "logout": "로그아웃",
+    "logoutConfirm": "정말 로그아웃하시겠어요?",
+    "logoutFail": "로그아웃에 실패했습니다."
   },
   "birthInput": {
     "cityLookupLoading": "도시를 찾는 중…",

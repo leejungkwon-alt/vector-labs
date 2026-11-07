@@ -114,7 +114,10 @@
     "linkAccountTitle": "Link Account",
     "linkAccountDesc": "Link your social account to safely keep your saju data and payment info even if you change devices or delete the app.",
     "linkAccountCta": "Link Social Account",
-    "linkAccountSuccess": "Account successfully linked."
+    "linkAccountSuccess": "Account successfully linked.",
+    "logout": "Sign out",
+    "logoutConfirm": "Are you sure you want to sign out?",
+    "logoutFail": "Failed to sign out."
   },
   "birthInput": {
     "cityLookupLoading": "Looking up city…",

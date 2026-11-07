@@ -41,6 +41,32 @@ export default function SettingsScreen() {
     router.push("/birth-input");
   };
 
+  const handleSignOut = async () => {
+    const performSignOut = async () => {
+      try {
+        await signOut();
+        router.replace("/");
+      } catch (e: any) {
+        const msg = e?.message || t("settings.logoutFail");
+        if (Platform.OS === "web") alert(msg);
+        else Alert.alert(t("common.notice"), msg);
+      }
+    };
+
+    if (Platform.OS === "web") {
+      if (confirm(t("settings.logoutConfirm"))) await performSignOut();
+    } else {
+      Alert.alert(
+        t("settings.logout"),
+        t("settings.logoutConfirm"),
+        [
+          { text: t("common.cancel"), style: "cancel" },
+          { text: t("settings.logout"), style: "destructive", onPress: performSignOut },
+        ]
+      );
+    }
+  };
+
   const handleDeleteAccount = () => {
     const performDelete = async () => {
       try {
@@ -181,6 +207,10 @@ export default function SettingsScreen() {
       <View style={styles.list}>
         <TouchableOpacity style={styles.btn} onPress={handleReset}>
           <Text style={styles.btnText}>{t("settings.editBirthInfo")}</Text>
+        </TouchableOpacity>
+        
+        <TouchableOpacity style={styles.btn} onPress={handleSignOut}>
+          <Text style={styles.btnText}>{t("settings.logout")}</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={[styles.btn, styles.dangerBtn]} onPress={handleDeleteAccount}>
