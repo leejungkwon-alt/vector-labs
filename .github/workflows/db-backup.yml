@@ -1,36 +1,38 @@
-# .github/workflows/db-backup.yml
 name: Daily DB Backup
 
 on:
   schedule:
-    - cron: '0 18 * * *'  # UTC 18:00 = KST 03:00
-  workflow_dispatch:  # 수동 실행 가능
+    - cron: '0 18 * * *'  # 매일 한국시간 새벽 3시
+  workflow_dispatch:
 
 jobs:
   backup:
     runs-on: ubuntu-latest
     steps:
-      - name: Install PostgreSQL client
-        run: sudo apt-get update && sudo apt-get install -y postgresql-client-15
+      - name: Install PostgreSQL Client (Latest)
+        run: |
+          sudo apt-get update
+          # 버전 명시 없이 설치 (기본적으로 최신 안정 버전인 16 또는 17이 설치됨)
+          sudo apt-get install -y postgresql-client
 
-      - name: Dump database
+      - name: Test Connection
         env:
           DATABASE_URL: ${{ secrets.SAJU_DATABASE_URL }}
         run: |
-          # pooler 제거한 직접 연결 사용
-          DIRECT_URL=$(echo "$DATABASE_URL" | sed 's/-pooler//')
-          TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-          pg_dump "$DIRECT_URL" --no-owner --no-acl -Fc > backup_${TIMESTAMP}.dump
-          echo "BACKUP_FILE=backup_${TIMESTAMP}.dump" >> $GITHUB_ENV
-          echo "SIZE=$(du -h backup_*.dump | cut -f1)" >> $GITHUB_ENV
+          echo "🔍 연결 테스트 중..."
+          psql "$DATABASE_URL" -c "SELECT version();"
 
-      - name: Upload backup as artifact
+      - name: Dump Database
+        env:
+          DATABASE_URL: ${{ secrets.SAJU_DATABASE_URL }}
+        run: |
+          TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+          pg_dump "$DATABASE_URL" --no-owner --no-acl -Fc > backup_${TIMESTAMP}.dump
+          echo "✅ 백업 완료: backup_${TIMESTAMP}.dump"
+
+      - name: Upload Backup
         uses: actions/upload-artifact@v4
         with:
           name: db-backup-${{ github.run_id }}
           path: backup_*.dump
           retention-days: 90
-
-      - name: Summary
-        run: |
-          echo "✅ Backup: ${{ env.BACKUP_FILE }} (${{ env.SIZE }})" >> $GITHUB_STEP_SUMMARY
