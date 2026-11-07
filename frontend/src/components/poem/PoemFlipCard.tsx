@@ -60,13 +60,6 @@ export function PoemFlipCard({
 }) {
   const storeLang = useLanguageStore((s) => s.lang);
   const currentLang = lang || storeLang || "en";
-
-  ;
-      return map[currentLang] || "Anonymous";
-    }
-    return poet;
-  };
-
   const [flipped, setFlipped] = useState(false);
   const anim = useRef(new Animated.Value(0)).current;
 
@@ -128,8 +121,7 @@ export function PoemFlipCard({
                     { opacity: backOpacity, transform: [{ perspective: 900 }, { rotateY: backRotate }] }]}
           >
             <Text style={styles.title}>{poem.title}</Text>
-            
-            <Text style={styles.romanization}>{poem.romanization}</Text>
+                        <Text style={styles.romanization}>{poem.romanization}</Text>
             <View style={styles.divider} />
             {poem.commentary ? <Text style={styles.commentary}>{poem.commentary}</Text> : null}
             <View style={styles.divider} />
@@ -162,6 +154,7 @@ const styles = StyleSheet.create({
   keywordRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 6, marginBottom: 16 },
   keyword: { fontSize: 12, color: C.muted, paddingHorizontal: 8, paddingVertical: 4, borderWidth: 1, borderColor: C.border, borderRadius: 999 },
   title: { fontSize: 22, fontWeight: "600", textAlign: "center", color: C.text, marginBottom: 4 },
+  poet: { fontSize: 14, textAlign: "center", color: C.accent, marginBottom: 8, fontStyle: "italic" },
   commentary: { fontSize: 14, lineHeight: 22, color: C.text, fontStyle: "italic", marginBottom: 8 },
   romanization: { fontSize: 12, fontStyle: "italic", textAlign: "center", color: C.muted, marginBottom: 12 },
   divider: { height: 1, backgroundColor: C.border, marginVertical: 12 },
