@@ -62,20 +62,6 @@ export function PoemFlipCard({
   const storeLang = useLanguageStore((s) => s.lang);
   const currentLang = lang || storeLang || "en";
 
-  const getPoetName = (poet: string | undefined) => {
-    if (!poet) return "";
-    if (poet === "작자 미상" || poet === "미상" || poet === "Anonymous") {
-      const map: Record<string, string> = {
-        ko: "작자 미상",
-        en: "Anonymous",
-        ja: "作者不明",
-        zh_cn: "佚名",
-        es: "Anónimo"
-      };
-      return map[currentLang] || "Anonymous";
-    }
-    return poet;
-  };
 
   const [flipped, setFlipped] = useState(false);
   const anim = useRef(new Animated.Value(0)).current;
@@ -251,7 +237,6 @@ export function PoemFlipCard({
                     { opacity: backOpacity, transform: [{ perspective: 900 }, { rotateY: backRotate }] }]}
           >
             <Text style={styles.title}>{poem.title}</Text>
-            {poem.poet && <Text style={styles.poet}>- {getPoetName(poem.poet)} -</Text>}
             <Text style={styles.romanization}>{poem.romanization}</Text>
             <View style={styles.divider} />
             {poem.commentary ? <Text style={styles.commentary}>{poem.commentary}</Text> : null}
