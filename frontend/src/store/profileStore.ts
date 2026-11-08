@@ -1,7 +1,6 @@
 import { create } from "zustand";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { api } from "../api/client";
-import { api } from "@/api/client";
 
 const PROFILE_KEY = "saju_profile";
 
