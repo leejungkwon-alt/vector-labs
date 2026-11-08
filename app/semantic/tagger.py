@@ -161,12 +161,33 @@ def build_semantic_profile(saju_result: dict) -> dict:
     daewoon_info = saju_result.get("daewoon_info") or {}
     raw_daewoon = daewoon_info.get("daewoon_pillars", [])
     scored_daewoon = score_daewoon(raw_daewoon, yongsin)
-    # 용신 element 추출 (str 또는 int 방어)
+    # 용신 element 추출 (dict/str/int 모두 방어)
+    # 한자 오행 매핑
+    _HANJA_MAP = {"木": "木", "火": "火", "土": "土", "金": "金", "水": "水"}
+    # 한글 오행 매핑
+    _KO_MAP = {"목": "木", "화": "火", "토": "土", "금": "金", "수": "水",
+               "나무": "木", "불": "火", "흙": "土", "쇠": "金", "물": "水"}
+    # 영문 매핑
+    _EN_MAP = {"WOOD": "木", "FIRE": "火", "EARTH": "土", "METAL": "金", "WATER": "水",
+               "wood": "木", "fire": "火", "earth": "土", "metal": "金", "water": "水"}
+
     def _yongsin_elem(y):
-        if isinstance(y, str) and y in ELEMENT_NAMES:
-            return y
+        # dict → 'yongsin' 또는 'element' 키 추출
+        if isinstance(y, dict):
+            y = y.get("yongsin") or y.get("element") or y.get("yongsin_element")
         if isinstance(y, int) and 0 <= y < len(ELEMENT_NAMES):
             return ELEMENT_NAMES[y]
+        if not isinstance(y, str):
+            return None
+        # 한자
+        if y in _HANJA_MAP:
+            return _HANJA_MAP[y]
+        # 한글
+        if y in _KO_MAP:
+            return _KO_MAP[y]
+        # 영문
+        if y in _EN_MAP:
+            return _EN_MAP[y]
         return None
 
     yong_elem = _yongsin_elem(yongsin)
@@ -180,6 +201,7 @@ def build_semantic_profile(saju_result: dict) -> dict:
     timeline = []
     for d in scored_daewoon:
         pillar = d.get("pillar", "")
+        _dbg_len = len(pillar) if isinstance(pillar, str) else -1
         stem = pillar[0] if len(pillar) == 2 else ""
         branch = pillar[1] if len(pillar) == 2 else ""
         stem_elem = STEM_TO_ELEMENT.get(stem)

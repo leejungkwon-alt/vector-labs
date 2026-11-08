@@ -1,5 +1,6 @@
 // frontend/src/components/sections/TimelineSection.tsx
-import { View, Text, Platform } from "react-native";
+import { View, Text, Platform, TouchableOpacity, StyleSheet } from "react-native";
+import { useState } from "react";
 import { colors, gradeColors } from "@/theme";
 import { ss } from "./shared";
 import { useT } from "@/i18n";
@@ -41,31 +42,66 @@ export function TimelineSectionView({ section }: { section: TimelineSection }) {
       </View>
       {section.hero && <Text style={ss.coreHero}>{section.hero}</Text>}
       {section.items.map((item, i) => (
-        <View
-          key={i}
-          style={[
-            ss.blockBox,
-            item.is_current && { borderColor: colors.primary, borderWidth: 2 },
-          ]}
-        >
-          <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 4, flexWrap: "wrap", gap: 4 }}>
-            <Text style={{ fontSize: 15, fontWeight: "700", color: colors.text }}>
-              {item.ages[0]}–{item.ages[1]}{t("sections.yearsOld")}{item.pillar_name ? ` · ${item.pillar_name}` : ""}
-              {item.is_current && <Text style={{ color: colors.primary }}> · {t("sections.current")}</Text>}
-            </Text>
-            <Text
-              style={{
-                fontSize: 13,
-                fontWeight: "700",
-                color: gradeColors[item.grade] || colors.text,
-              }}
-            >
-              {item.grade}
-            </Text>
-          </View>
-          {item.blurb && <Text style={ss.paragraph}>{item.blurb}</Text>}
-        </View>
+        <TimelineItem key={i} item={item} gradeColors={gradeColors} colors={colors} ss={ss} t={t} />
       ))}
+    </View>
+  );
+}
+
+function TimelineItem({ item, gradeColors, colors, ss, t }: any) {
+  const [open, setOpen] = useState(item.is_current === true);
+  const hasDetails = !!(item.theme || item.body || item.caution || item.practice);
+
+  return (
+    <View
+      style={[
+        ss.blockBox,
+        item.is_current && { borderColor: colors.primary, borderWidth: 2 },
+        { paddingVertical: 8 },
+      ]}
+    >
+      <TouchableOpacity
+        onPress={() => hasDetails && setOpen(!open)}
+        disabled={!hasDetails}
+        style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingVertical: 4 }}
+      >
+        <View style={{ flex: 1 }}>
+          <Text style={{ fontSize: 15, fontWeight: "700", color: colors.text }}>
+            {item.ages[0]}–{item.ages[1]}{t("sections.yearsOld")}
+            {item.pillar_name ? ` · ${item.pillar_name}` : ""}
+            {item.is_current && <Text style={{ color: colors.primary }}> · {t("sections.current")}</Text>}
+          </Text>
+          {item.theme && (
+            <Text style={{ fontSize: 13, color: colors.textMuted, marginTop: 2 }}>
+              {item.theme}
+            </Text>
+          )}
+        </View>
+        <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+          <Text style={{ fontSize: 13, fontWeight: "700", color: gradeColors[item.grade] || colors.text }}>
+            {item.grade}
+          </Text>
+          {hasDetails && (
+            <Text style={{ fontSize: 12, color: colors.textMuted }}>{open ? "▲" : "▼"}</Text>
+          )}
+        </View>
+      </TouchableOpacity>
+
+      {open && hasDetails && (
+        <View style={{ marginTop: 10, paddingTop: 10, borderTopWidth: 1, borderTopColor: colors.border }}>
+          {item.body && <Text style={[ss.paragraph, { marginBottom: 8 }]}>{item.body}</Text>}
+          {item.caution && (
+            <Text style={{ fontSize: 13, color: colors.warn, marginBottom: 6 }}>
+              ⚠️ {item.caution}
+            </Text>
+          )}
+          {item.practice && (
+            <Text style={{ fontSize: 13, color: colors.primary }}>
+              💡 {item.practice}
+            </Text>
+          )}
+        </View>
+      )}
     </View>
   );
 }

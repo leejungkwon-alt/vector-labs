@@ -753,6 +753,40 @@ def write_age_band_section(profile: dict, lang: str = "en") -> dict | None:
 # ============================================================
 # TIMELINE
 # ============================================================
+def _load_timeline_themes(lang: str) -> dict:
+    """언어별 timeline_themes.json 로드. 실패 시 빈 dict."""
+    from pathlib import Path as _P
+    import json as _j
+    try:
+        p = _P(__file__).resolve().parent / "content" / "data" / lang / "timeline_themes.json"
+        if not p.exists():
+            return {}
+        with open(p, "r", encoding="utf-8") as f:
+            return _j.load(f)
+    except Exception:
+        return {}
+
+
+def _resolve_theme(d: dict, themes_pack: dict) -> dict:
+    """관계(stem_relation) + 오행(stem_element) → 테마/본문/주의/실천."""
+    if not themes_pack:
+        return {}
+    themes = themes_pack.get("THEMES", {})
+    cautions = themes_pack.get("CAUTIONS", {})
+    practices = themes_pack.get("PRACTICES", {})
+    rel = d.get("stem_relation") or d.get("branch_relation")
+    elem = d.get("stem_element") or d.get("branch_element")
+    if not rel or not elem:
+        return {}
+    t = (themes.get(rel) or {}).get(elem) or {}
+    return {
+        "theme": t.get("theme", ""),
+        "body": t.get("body", ""),
+        "caution": cautions.get(rel, ""),
+        "practice": practices.get(rel, ""),
+    }
+
+
 def write_timeline_section(profile: dict, lang: str = "en") -> dict:
     timeline = profile.get("daewoon_timeline", [])
 
@@ -761,6 +795,8 @@ def write_timeline_section(profile: dict, lang: str = "en") -> dict:
         blurbs = pack.get("TIMELINE_GRADE_BLURB", {})
     except KeyError:
         blurbs = {}
+
+    themes_pack = _load_timeline_themes(lang)
 
     age_band = profile.get("age_band") or {}
     current_age = age_band.get("age")
@@ -771,6 +807,7 @@ def write_timeline_section(profile: dict, lang: str = "en") -> dict:
         is_current = (
             current_age is not None and start <= current_age <= end
         )
+        theme_info = _resolve_theme(d, themes_pack)
         items.append({
             "index": d["index"],
             "ages": [start, end],
@@ -780,6 +817,10 @@ def write_timeline_section(profile: dict, lang: str = "en") -> dict:
             "score": d["score"],
             "grade": d["grade"],
             "blurb": blurbs.get(d["grade"], ""),
+            "theme": theme_info.get("theme", ""),
+            "body": theme_info.get("body", ""),
+            "caution": theme_info.get("caution", ""),
+            "practice": theme_info.get("practice", ""),
             "is_current": is_current,
         })
 
@@ -1121,10 +1162,9 @@ def _resolve_poem(profile: dict, lang: str, power_sig: str, content_map: dict):
         return None
     yong_idx = ELEMENT_NAMES.index(yong_elem)
 
-    month_pillar = (profile.get("pillars") or {}).get("month_pillar", "")
-    if not isinstance(month_pillar, str) or len(month_pillar) != 2:
-        return None
-    month_idx = month_branch_to_season_idx(month_pillar[1])
+    from app.engine.elements import current_solar_term_month
+    month_branch = current_solar_term_month()
+    month_idx = month_branch_to_season_idx(month_branch)
     if month_idx is None:
         return None
 
