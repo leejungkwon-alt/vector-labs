@@ -192,5 +192,14 @@ export const useAuthStore = create<AuthState>((set) => ({
     await storage.deleteItem(TOKEN_KEY);
     setAuthToken(null);
     set({ user: null });
+    // 🆕 로그아웃 후 새 익명 세션 자동 생성
+    try {
+      const res = await api.anonymous();
+      await storage.setItem(TOKEN_KEY, res.access_token);
+      setAuthToken(res.access_token);
+      set({ user: res.user, ready: true, authError: null });
+    } catch (e) {
+      console.warn('[signOut] anonymous re-issue failed:', e);
+    }
   },
 }));
