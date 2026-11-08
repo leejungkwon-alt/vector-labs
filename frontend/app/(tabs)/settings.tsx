@@ -6,6 +6,7 @@ import { router } from "expo-router";
 import { colors, spacing, radius } from "@/theme";
 import { useAuthStore } from "@/store/authStore";
 import { useProfileStore } from "@/store/profileStore";
+import { usePoemStore } from "@/store/poemStore";
 import { api } from "@/api/client";
 import { SocialLoginModal } from "@/components/SocialLoginModal";
 import { PaymentModal } from "@/components/PaymentModal";
@@ -16,6 +17,7 @@ export default function SettingsScreen() {
   const signOut = useAuthStore((s) => s.signOut);
   const profile = useProfileStore((s) => s.profile);
   const clearProfile = useProfileStore((s) => s.clearProfile);
+  const setCurrentPoem = usePoemStore((s) => s.setCurrentPoem);
 
   const [showLogin, setShowLogin] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
@@ -45,7 +47,15 @@ export default function SettingsScreen() {
     const performSignOut = async () => {
       try {
         await signOut();
-        router.replace("/");
+        // 🆕 프로필/시조 상태 완전 초기화 (이전 계정 데이터 제거)
+        try { await clearProfile(); } catch {}
+        try { setCurrentPoem(null as any, []); } catch {}
+        // 🆕 웹은 풀 리로드 (모든 캐시 초기화, 확실한 로그아웃)
+        if (Platform.OS === "web") {
+          window.location.href = "/";
+        } else {
+          router.replace("/");
+        }
       } catch (e: any) {
         const msg = e?.message || t("settings.logoutFail");
         if (Platform.OS === "web") alert(msg);
