@@ -38,6 +38,7 @@ export default function CompatibilityScreen() {
   const [showTimezoneModal, setShowTimezoneModal] = useState(false);
 
   const [isCalculated, setIsCalculated] = useState(false);
+  const [expandedAxes, setExpandedAxes] = useState<Record<string, boolean>>({});
   const cityLabel = isCustomCity ? t("birthInput.customCity") : (CITY_LIST.find(c => c.key === city)?.[lang === "en" ? "label_en" : "label"] || "서울 (Seoul)");
   const tzLabel = TIMEZONE_LIST.find(t => t.key === customTimezone)?.label || customTimezone;
 
@@ -228,18 +229,31 @@ export default function CompatibilityScreen() {
           </View>
         )}
 
-        {Object.entries(compat.axes).map(([key, axis]) => (
-          <View key={key} style={styles.axisCard}>
-            <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 8 }}>
-              <Text style={styles.axisTitle}>
-                {key === "elements" ? t("compatibility.axisElements") : key === "day_master" ? t("compatibility.axisDayMaster") : key === "ten_gods" ? t("compatibility.axisTenGods") : t("compatibility.axisSinsal")}
-              </Text>
-              <Text style={{ fontWeight: "700", color: gradeColors[axis.grade] }}>{axis.grade}</Text>
+        {Object.entries(compat.axes).map(([key, axis]) => {
+          const isExpanded = !!expandedAxes[key];
+          return (
+            <View key={key} style={styles.axisCard}>
+              <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 8 }}>
+                <Text style={styles.axisTitle}>
+                  {key === "elements" ? t("compatibility.axisElements") : key === "day_master" ? t("compatibility.axisDayMaster") : key === "ten_gods" ? t("compatibility.axisTenGods") : t("compatibility.axisSinsal")}
+                </Text>
+                <Text style={{ fontWeight: "700", color: gradeColors[axis.grade] }}>{axis.grade}</Text>
+              </View>
+              <Text style={{ fontSize: 16, fontWeight: "600", color: colors.text, marginBottom: 4 }}>{axis.headline}</Text>
+              <Text style={{ fontSize: 14, color: colors.textMuted, lineHeight: 20 }} numberOfLines={isExpanded ? undefined : 4}>{axis.body}</Text>
+              {axis.body && axis.body.length > 100 && (
+                <TouchableOpacity
+                  onPress={() => setExpandedAxes(prev => ({ ...prev, [key]: !prev[key] }))}
+                  style={{ paddingVertical: 6, marginTop: 4 }}
+                >
+                  <Text style={{ fontSize: 13, color: colors.primary, fontWeight: "600" }}>
+                    {isExpanded ? t("compatibility.readLess") : t("compatibility.readMore")}
+                  </Text>
+                </TouchableOpacity>
+              )}
             </View>
-            <Text style={{ fontSize: 16, fontWeight: "600", color: colors.text, marginBottom: 4 }}>{axis.headline}</Text>
-            <Text style={{ fontSize: 14, color: colors.textMuted, lineHeight: 20 }} numberOfLines={4}>{axis.body}</Text>
-          </View>
-        ))}
+          );
+        })}
       </View>
     );
   };

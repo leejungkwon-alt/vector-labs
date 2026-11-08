@@ -75,7 +75,9 @@
     "ageLimitDesc": "Gyeol is available only to users aged 14 and over.\nPlease check the birthdate again.",
     "ageLimitRetry": "Try again",
     "partnerReportTitle": "💡 What is your partner like?",
-    "partnerReportDesc": "Your partner is {archetype} with {element} energy. See how this trait plays out in your chemistry above."
+    "partnerReportDesc": "Your partner is {archetype} with {element} energy. See how this trait plays out in your chemistry above.",
+    "readMore": "Read more ▾",
+    "readLess": "Show less ▴"
   },
   "settings": {
     "accountInfo": "Account",
