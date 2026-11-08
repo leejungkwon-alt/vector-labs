@@ -221,3 +221,44 @@ def classify_yongsin_month_relation(yongsin_idx: int, month_idx: int) -> str:
     if element_controls(month_idx, yongsin_idx):
         return "controls_me"
     return "same"
+
+def current_solar_term_month() -> str:
+    """현재 날짜의 절기 월건(地支) 반환.
+    
+    절기 경계 (연 ±1일 오차 허용):
+    - 인월(寅): 입춘(2/4) ~ 경칩(3/5)
+    - 묘월(卯): 경칩 ~ 청명(4/4)
+    - 진월(辰): 청명 ~ 입하(5/5)
+    - 사월(巳): 입하 ~ 망종(6/5)
+    - 오월(午): 망종 ~ 소서(7/7)
+    - 미월(未): 소서 ~ 입추(8/7)
+    - 신월(申): 입추 ~ 백로(9/7)
+    - 유월(酉): 백로 ~ 한로(10/8)
+    - 술월(戌): 한로 ~ 입동(11/7)
+    - 해월(亥): 입동 ~ 대설(12/7)
+    - 자월(子): 대설 ~ 소한(1/5)
+    - 축월(丑): 소한 ~ 입춘(2/4)
+    """
+    from datetime import date as _date
+    d = _date.today()
+    m, day = d.month, d.day
+    
+    if (m == 2 and day >= 4) or (m == 3 and day < 5):   return "寅"
+    if (m == 3 and day >= 5) or (m == 4 and day < 4):   return "卯"
+    if (m == 4 and day >= 4) or (m == 5 and day < 5):   return "辰"
+    if (m == 5 and day >= 5) or (m == 6 and day < 5):   return "巳"
+    if (m == 6 and day >= 5) or (m == 7 and day < 7):   return "午"
+    if (m == 7 and day >= 7) or (m == 8 and day < 7):   return "未"
+    if (m == 8 and day >= 7) or (m == 9 and day < 7):   return "申"
+    if (m == 9 and day >= 7) or (m == 10 and day < 8):  return "酉"
+    if (m == 10 and day >= 8) or (m == 11 and day < 7): return "戌"
+    if (m == 11 and day >= 7) or (m == 12 and day < 7): return "亥"
+    if (m == 12 and day >= 7) or (m == 1 and day < 5):  return "子"
+    return "丑"
+
+# 지지 → 오행
+BRANCH_TO_ELEMENT = {
+    "子": "水", "丑": "土", "寅": "木", "卯": "木",
+    "辰": "土", "巳": "火", "午": "火", "未": "土",
+    "申": "金", "酉": "金", "戌": "土", "亥": "水",
+}

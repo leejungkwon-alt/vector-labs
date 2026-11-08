@@ -10,7 +10,7 @@
 calculate_saju()의 결과 dict를 받아서 언어 중립 태그를 뽑는다.
 이 태그가 이후 모든 콘텐츠의 기반.
 """
-from app.engine.elements import analyze_element_distribution
+from app.engine.elements import analyze_element_distribution, STEM_TO_ELEMENT, BRANCH_TO_ELEMENT, ELEMENT_NAMES, classify_yongsin_month_relation
 from app.engine.strength import assess_day_master_strength
 from app.engine.yongsin import derive_useful_god
 from app.engine.relations import detect_relations, summarize_relations
@@ -161,16 +161,43 @@ def build_semantic_profile(saju_result: dict) -> dict:
     daewoon_info = saju_result.get("daewoon_info") or {}
     raw_daewoon = daewoon_info.get("daewoon_pillars", [])
     scored_daewoon = score_daewoon(raw_daewoon, yongsin)
-    timeline = [
-        {
+    # 용신 element 추출 (str 또는 int 방어)
+    def _yongsin_elem(y):
+        if isinstance(y, str) and y in ELEMENT_NAMES:
+            return y
+        if isinstance(y, int) and 0 <= y < len(ELEMENT_NAMES):
+            return ELEMENT_NAMES[y]
+        return None
+
+    yong_elem = _yongsin_elem(yongsin)
+    yong_idx = ELEMENT_NAMES.index(yong_elem) if yong_elem else None
+
+    def _rel(y_idx, other_elem):
+        if y_idx is None or other_elem not in ELEMENT_NAMES:
+            return None
+        return classify_yongsin_month_relation(y_idx, ELEMENT_NAMES.index(other_elem))
+
+    timeline = []
+    for d in scored_daewoon:
+        pillar = d.get("pillar", "")
+        stem = pillar[0] if len(pillar) == 2 else ""
+        branch = pillar[1] if len(pillar) == 2 else ""
+        stem_elem = STEM_TO_ELEMENT.get(stem)
+        branch_elem = BRANCH_TO_ELEMENT.get(branch)
+        timeline.append({
             "index": d["daewoon_index"],
             "ages": [d["start_age"], d["end_age"]],
-            "pillar": d["pillar"],
+            "pillar": pillar,
             "score": d["score"],
             "grade": d["grade"],
-        }
-        for d in scored_daewoon
-    ]
+            "stem": stem,
+            "branch": branch,
+            "stem_element": stem_elem,
+            "branch_element": branch_elem,
+            "yongsin_element": yong_elem,
+            "stem_relation": _rel(yong_idx, stem_elem),
+            "branch_relation": _rel(yong_idx, branch_elem),
+        })
     daewoon_summary = summarize_daewoon_timeline(scored_daewoon)
 
     # 10. 올해의 흐름
