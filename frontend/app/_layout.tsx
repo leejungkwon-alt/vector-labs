@@ -35,7 +35,8 @@ export default function RootLayout() {
   useEffect(() => {
     async function prepare() {
       try {
-        await Promise.all([bootstrap(), loadLang(), loadProfile()]);
+        await bootstrap();
+        await Promise.all([loadLang(), loadProfile()]);
       } catch (e) {
         console.warn("Initialization error:", e);
       } finally {

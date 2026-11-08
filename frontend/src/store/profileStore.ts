@@ -19,17 +19,22 @@ export const useProfileStore = create<ProfileState>((set) => ({
     try {
       // 1) 백엔드에서 현재 로그인 계정의 프로필 우선 조회
       try {
-        const res = await api.getMyProfile();  // GET /auth/me/profile
+        const res = await api.getMyProfile();
         if (res) {
           set({ profile: res, ready: true });
-          // 로컬 캐시도 동기화
           await AsyncStorage.setItem(PROFILE_KEY, JSON.stringify(res));
           return;
         }
       } catch (e: any) {
-        // 404 = 아직 프로필 없음 → 캐시 시도
-        // 401 = 로그인 안 됨 → 캐시 시도
-        // 500/네트워크 → 캐시 fallback
+        // 🆕 401/422 = 토큰 문제 또는 프로필 손상 → 캐시 신뢰 불가
+        //         → 캐시 삭제 후 null
+        if (e?.status === 401 || e?.status === 422) {
+          await AsyncStorage.removeItem(PROFILE_KEY);
+          set({ profile: null, ready: true });
+          return;
+        }
+        // 404 = 신규 계정 (프로필 없음) → 캐시 시도
+        // 5xx = 서버 장애 → 캐시 fallback
       }
       // 2) 백엔드 실패 시 로컬 캐시 fallback
       const data = await AsyncStorage.getItem(PROFILE_KEY);
