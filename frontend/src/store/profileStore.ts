@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { api } from "../api/client";
+import { api } from "@/api/client";
 
 const PROFILE_KEY = "saju_profile";
 
@@ -17,11 +18,26 @@ export const useProfileStore = create<ProfileState>((set) => ({
   ready: false,
   loadProfile: async () => {
     try {
+      // 1) 백엔드에서 현재 로그인 계정의 프로필 우선 조회
+      try {
+        const res = await api.getMyProfile();  // GET /auth/me/profile
+        if (res) {
+          set({ profile: res, ready: true });
+          // 로컬 캐시도 동기화
+          await AsyncStorage.setItem(PROFILE_KEY, JSON.stringify(res));
+          return;
+        }
+      } catch (e: any) {
+        // 404 = 아직 프로필 없음 → 캐시 시도
+        // 401 = 로그인 안 됨 → 캐시 시도
+        // 500/네트워크 → 캐시 fallback
+      }
+      // 2) 백엔드 실패 시 로컬 캐시 fallback
       const data = await AsyncStorage.getItem(PROFILE_KEY);
       if (data) {
         set({ profile: JSON.parse(data), ready: true });
       } else {
-        set({ ready: true });
+        set({ profile: null, ready: true });
       }
     } catch {
       set({ ready: true });
