@@ -30,11 +30,11 @@ export const colors = {
 
 // 등급 색상 — compatibility / daily / timeline 공통
 export const gradeColors: Record<string, string> = {
-  PEAK: colors.success,
-  FAVORABLE: "#5FAF7A",
-  NEUTRAL: colors.textMuted,
-  CAUTION: colors.warn,
-  CHALLENGING: colors.danger,
+  PEAK: "#A855F7",         // 보라 (Peak)
+  FAVORABLE: "#22C55E",    // 초록 (Good)
+  NEUTRAL: "#EAB308",      // 황금 (Neutral)
+  CAUTION: "#F97316",      // 주황 (Caution)
+  CHALLENGING: "#EF4444",  // 빨강 (Challenging)
 };
 
 export const spacing = { xs: 4, sm: 8, md: 16, lg: 24, xl: 32 } as const;
