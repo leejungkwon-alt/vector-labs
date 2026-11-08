@@ -10,7 +10,7 @@ SUPPORTED_LANGS = ("en", "ko", "ja", "zh_cn", "es")
 
 
 class CompatibilityRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="ignore")
     person_a: SajuRequest
     person_b: SajuRequest
     relationship_type: str = Field(default="romance", examples=["romance", "business"])

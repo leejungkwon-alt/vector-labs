@@ -52,7 +52,17 @@ export default function HomeScreen() {
 
   const { data, isLoading, error } = useQuery({
     queryKey: ["report", profile, lang, ready],
-    queryFn: () => api.report({ ...profile, use_current_solar_year: true, lang }),
+    queryFn: () => api.report({ ...{
+          birth_date: profile.birth_date,
+          birth_time: profile.birth_time || undefined,
+          birth_time_mode: profile.birth_time_mode || "exact",
+          timezone_str: profile.timezone_str || "Asia/Seoul",
+          longitude: profile.longitude ?? 126.978,
+          correction_mode: profile.correction_mode || "lmt",
+          jasi_boundary: profile.jasi_boundary ?? 23,
+          gender: profile.gender || "M",
+          birth_location: profile.birth_location || undefined,
+        }, use_current_solar_year: true, lang }),
     enabled: !!profile && profileReady && ready,
     retry: false,
   });

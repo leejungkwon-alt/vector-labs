@@ -25,7 +25,17 @@ export default function DailyScreen() {
 
   const { data, isLoading, error } = useQuery({
     queryKey: ["daily", profile, user?.id, lang],
-    queryFn: () => api.daily({ ...profile, days: 7, lang }),
+    queryFn: () => api.daily({ ...{
+          birth_date: profile.birth_date,
+          birth_time: profile.birth_time || undefined,
+          birth_time_mode: profile.birth_time_mode || "exact",
+          timezone_str: profile.timezone_str || "Asia/Seoul",
+          longitude: profile.longitude ?? 126.978,
+          correction_mode: profile.correction_mode || "lmt",
+          jasi_boundary: profile.jasi_boundary ?? 23,
+          gender: profile.gender || "M",
+          birth_location: profile.birth_location || undefined,
+        }, days: 7, lang }),
     enabled: !!user && user.tier !== "free", // 🚨 무료 회원은 API 호출하지 않음
     enabled: !!profile && profileReady && !!user && ready,
     retry: false,
