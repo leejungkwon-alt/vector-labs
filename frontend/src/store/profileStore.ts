@@ -26,14 +26,13 @@ export const useProfileStore = create<ProfileState>((set) => ({
           return;
         }
       } catch (e: any) {
-        // 🆕 401/422 = 토큰 문제 또는 프로필 손상 → 캐시 신뢰 불가
-        //         → 캐시 삭제 후 null
-        if (e?.status === 401 || e?.status === 422) {
+        // 🆕 401/422/404 = 캐시 신뢰 불가 (다른 계정의 캐시일 수 있음)
+        //         404 = 새 계정 / 프로필 미입력 계정 → 캐시 삭제
+        if (e?.status === 401 || e?.status === 422 || e?.status === 404) {
           await AsyncStorage.removeItem(PROFILE_KEY);
           set({ profile: null, ready: true });
           return;
         }
-        // 404 = 신규 계정 (프로필 없음) → 캐시 시도
         // 5xx = 서버 장애 → 캐시 fallback
       }
       // 2) 백엔드 실패 시 로컬 캐시 fallback
