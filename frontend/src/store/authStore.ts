@@ -7,6 +7,7 @@ import * as WebBrowser from 'expo-web-browser';
 import type { AuthResponse } from '../../types';
 import { api, setAuthToken, ApiError } from '../api/client';
 import { storage } from './secureStore';
+import { useProfileStore } from "./profileStore";
 
 declare var process: { env: Record<string, string | undefined> };
 
@@ -164,6 +165,7 @@ export const useAuthStore = create<AuthState>((set) => ({
     await storage.setItem(TOKEN_KEY, res.access_token);
     setAuthToken(res.access_token);
     set({ user: res.user });
+    try { await useProfileStore.getState().loadProfile(); } catch {}
   },
   signInWithProvider: async (provider: Provider) => {
     let providerToken: string;
@@ -181,6 +183,7 @@ export const useAuthStore = create<AuthState>((set) => ({
     await storage.setItem(TOKEN_KEY, res.access_token);
     setAuthToken(res.access_token);
     set({ user: res.user });
+    try { await useProfileStore.getState().loadProfile(); } catch {}
   },
   signInAnonymous: async () => {
     const res = await api.anonymous();
@@ -198,6 +201,7 @@ export const useAuthStore = create<AuthState>((set) => ({
       await storage.setItem(TOKEN_KEY, res.access_token);
       setAuthToken(res.access_token);
       set({ user: res.user, ready: true, authError: null });
+      try { await useProfileStore.getState().loadProfile(); } catch {}
     } catch (e) {
       console.warn('[signOut] anonymous re-issue failed:', e);
     }
