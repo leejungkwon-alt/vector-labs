@@ -49,7 +49,8 @@ class MeResponse(BaseModel):
 class ProfilePayload(BaseModel):
     """PUT /me/profile — full replace."""
 
-    model_config = ConfigDict(extra="forbid")
+    # extra="ignore" (여분 필드 무시 — 프론트 호환성)
+    model_config = ConfigDict(extra="ignore")
 
     birth_date: Optional[str] = Field(default=None, examples=["1974-02-24"])
     birth_time: Optional[str] = Field(default=None, examples=["05:30:00"])
@@ -137,12 +138,12 @@ class PushTokenPayload(BaseModel):
 class ProfileResponse(BaseModel):
     model_config = ConfigDict(extra="ignore")
     user_id: str
-    birth_date: Optional[str]
-    birth_time: Optional[str]
-    birth_location: Optional[str]
-    timezone_str: str
-    longitude: float
-    gender: str
-    jasi_boundary: int
-    correction_mode: str
-    updated_at: str
+    birth_date: Optional[str] = None
+    birth_time: Optional[str] = None
+    birth_location: Optional[str] = None
+    timezone_str: str = "Asia/Seoul"
+    longitude: float = 126.978
+    gender: str = "M"
+    jasi_boundary: int = 23
+    correction_mode: str = "lmt"
+    updated_at: str = ""

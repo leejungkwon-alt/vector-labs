@@ -65,7 +65,19 @@ def get_my_profile(user: dict = Depends(get_current_user)):
     profile = get_repository().get_profile(user["id"])
     if profile is None:
         raise HTTPException(status_code=404, detail="Profile not found.")
-    return profile
+    # 🆕 예전 프로필 (필드 누락) 방어
+    d = dict(profile)
+    defaults = {
+        "timezone_str": "Asia/Seoul",
+        "longitude": 126.978,
+        "gender": "M",
+        "jasi_boundary": 23,
+        "correction_mode": "lmt",
+    }
+    for k, v in defaults.items():
+        if d.get(k) is None:
+            d[k] = v
+    return d
 
 
 @router.put("/me/profile", response_model=ProfileResponse)
