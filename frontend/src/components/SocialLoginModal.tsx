@@ -17,7 +17,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
   const signInWithProvider = useAuthStore((s) => s.signInWithProvider);
   const t = useT();
   const [loading, setLoading] = useState<string | null>(null);
-  const [mode, setMode] = useState<"link" | "login">("link");
+  const [mode, setMode] = useState<"link" | "login">("login");
 
   const handleLogin = async (provider: "apple" | "google" | "kakao") => {
     setLoading(provider);
