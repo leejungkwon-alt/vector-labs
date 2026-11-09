@@ -67,9 +67,9 @@
     "resultFamily": "家族の相性",
     "scoreUnit": "点",
     "adviceTitle": "💡 この関係に合わせたアドバイス",
-    "axisElements": "五行",
-    "axisDayMaster": "日干",
-    "axisTenGods": "価値観とモード",
+    "axisElements": "エネルギーの流れ",
+    "axisDayMaster": "生まれ持った気質",
+    "axisTenGods": "関係のスタイル",
     "axisSinsal": "特別な特性",
     "ageLimitTitle": "🚫 14歳未満の方はご利用いただけません",
     "ageLimitDesc": "Gyeolは14歳以上の方のみご利用いただけます。\nお相手の生年月日をご確認ください。",
@@ -77,7 +77,11 @@
     "partnerReportTitle": "💡 お相手はどんな人ですか？",
     "partnerReportDesc": "お相手は{element}の気を持つ{archetype}です。二人の関係でこの気質がどう作用するか、上のケミストリーを確認してみてください。",
     "readMore": "もっと見る ▾",
-    "readLess": "閉じる ▴"
+    "readLess": "閉じる ▴",
+    "axisSinsal_romance": "二人の縁",
+    "axisSinsal_business": "仕事の相性",
+    "axisSinsal_friend": "友情のケミ",
+    "axisSinsal_family": "家族の絆"
   },
   "settings": {
     "accountInfo": "アカウント情報",

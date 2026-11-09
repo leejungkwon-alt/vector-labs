@@ -23,6 +23,14 @@ export default function CompatibilityScreen() {
   const myProfile = useProfileStore((s) => s.profile);
 
   const [relationshipType, setRelationshipType] = useState<"romance" | "business" | "friend" | "family">("romance");
+
+  const SINSAL_AXIS_KEY = {
+    romance: "compatibility.axisSinsal_romance",
+    business: "compatibility.axisSinsal_business",
+    friend: "compatibility.axisSinsal_friend",
+    family: "compatibility.axisSinsal_family",
+  } as const;
+
   const [showPayment, setShowPayment] = useState(false);
 
   const [partnerDate, setPartnerDate] = useState(new Date(1995, 9, 24));
@@ -235,7 +243,7 @@ export default function CompatibilityScreen() {
             <View key={key} style={styles.axisCard}>
               <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 8 }}>
                 <Text style={styles.axisTitle}>
-                  {key === "elements" ? t("compatibility.axisElements") : key === "day_master" ? t("compatibility.axisDayMaster") : key === "ten_gods" ? t("compatibility.axisTenGods") : t("compatibility.axisSinsal")}
+                  {key === "elements" ? t("compatibility.axisElements") : key === "day_master" ? t("compatibility.axisDayMaster") : key === "ten_gods" ? t("compatibility.axisTenGods") : t(SINSAL_AXIS_KEY[relationshipType])}
                 </Text>
                 <Text style={{ fontWeight: "700", color: gradeColors[axis.grade] }}>{axis.grade}</Text>
               </View>

@@ -67,9 +67,9 @@
     "resultFamily": "亲情合盘",
     "scoreUnit": "分",
     "adviceTitle": "💡 针对此关系的定制建议",
-    "axisElements": "五行",
-    "axisDayMaster": "日主",
-    "axisTenGods": "价值观与模式",
+    "axisElements": "能量流动",
+    "axisDayMaster": "天生性情",
+    "axisTenGods": "相处方式",
     "axisSinsal": "特殊特质",
     "ageLimitTitle": "🚫 14岁以下用户无法使用此服务",
     "ageLimitDesc": "Gyeol仅限14岁及以上用户使用。\n请重新确认对方的出生日期。",
@@ -77,7 +77,11 @@
     "partnerReportTitle": "💡 对方是什么样的人？",
     "partnerReportDesc": "对方是拥有{element}能量的{archetype}。在你们的关系中，这种特质如何发挥作用，请查看上方的契合度。",
     "readMore": "展开 ▾",
-    "readLess": "收起 ▴"
+    "readLess": "收起 ▴",
+    "axisSinsal_romance": "两人的缘分",
+    "axisSinsal_business": "工作契合度",
+    "axisSinsal_friend": "友情默契",
+    "axisSinsal_family": "家人的羁绊"
   },
   "settings": {
     "accountInfo": "账户信息",

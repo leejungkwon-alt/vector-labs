@@ -67,9 +67,9 @@
     "resultFamily": "Química familiar",
     "scoreUnit": "pts",
     "adviceTitle": "💡 Consejos adaptados a esta relación",
-    "axisElements": "Cinco Elementos",
-    "axisDayMaster": "Maestro del día",
-    "axisTenGods": "Valores y modo",
+    "axisElements": "Flujo de Energía",
+    "axisDayMaster": "Temperamento Innato",
+    "axisTenGods": "Estilo de Relación",
     "axisSinsal": "Rasgos especiales",
     "ageLimitTitle": "🚫 Los menores de 14 años no pueden usar este servicio",
     "ageLimitDesc": "Gyeol solo está disponible para usuarios de 14 años o más.\nVerifique la fecha de nacimiento nuevamente.",
@@ -77,7 +77,11 @@
     "partnerReportTitle": "💡 ¿Cómo es tu pareja?",
     "partnerReportDesc": "Tu pareja es {archetype} con energía {element}. Mira cómo se refleja este rasgo en su química arriba.",
     "readMore": "Ver más ▾",
-    "readLess": "Ver menos ▴"
+    "readLess": "Ver menos ▴",
+    "axisSinsal_romance": "Conexión Destinada",
+    "axisSinsal_business": "Sinergia Laboral",
+    "axisSinsal_friend": "Vibra Amistosa",
+    "axisSinsal_family": "Vínculo Familiar"
   },
   "settings": {
     "accountInfo": "Cuenta",

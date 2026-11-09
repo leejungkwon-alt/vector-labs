@@ -67,9 +67,9 @@
     "resultFamily": "Family chemistry",
     "scoreUnit": "pts",
     "adviceTitle": "💡 Advice tuned to this relationship",
-    "axisElements": "Five Elements",
-    "axisDayMaster": "Day master",
-    "axisTenGods": "Values & mode",
+    "axisElements": "Energy Flow",
+    "axisDayMaster": "Innate Temperament",
+    "axisTenGods": "Relationship Style",
     "axisSinsal": "Special traits",
     "ageLimitTitle": "🚫 Users under 14 cannot use this service",
     "ageLimitDesc": "Gyeol is available only to users aged 14 and over.\nPlease check the birthdate again.",
@@ -77,7 +77,11 @@
     "partnerReportTitle": "💡 What is your partner like?",
     "partnerReportDesc": "Your partner is {archetype} with {element} energy. See how this trait plays out in your chemistry above.",
     "readMore": "Read more ▾",
-    "readLess": "Show less ▴"
+    "readLess": "Show less ▴",
+    "axisSinsal_romance": "Destined Connection",
+    "axisSinsal_business": "Work Synergy",
+    "axisSinsal_friend": "Friendship Vibes",
+    "axisSinsal_family": "Family Bond"
   },
   "settings": {
     "accountInfo": "Account",
