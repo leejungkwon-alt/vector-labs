@@ -16,7 +16,8 @@
       "expo-localization",
       "expo-web-browser",
       "expo-splash-screen",
-      "expo-sharing"
+      "expo-sharing",
+      "expo-font"
     ]
   }
 }

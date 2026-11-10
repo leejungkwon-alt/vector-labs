@@ -95,10 +95,11 @@ def test_report_invalid_jasi_boundary_422():
     assert resp.status_code == 422
 
 
-def test_report_extra_field_forbidden_422():
+def test_report_extra_field_ignored():
+    """extra 필드는 무시됨 (extra="ignore" 정책)"""
     payload = {**BASE_PAYLOAD, "include_ai": True}
     resp = client.post("/api/v1/saju/report", json=payload)
-    assert resp.status_code == 422
+    assert resp.status_code == 200
 
 
 def test_report_no_llm_strings():

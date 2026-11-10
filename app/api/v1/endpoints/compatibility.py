@@ -57,56 +57,98 @@ def _pair_summary(p: dict, lang: str = "ko") -> dict:
     arch_key = p["archetype"]["key"]
     int_raw = p["archetype"].get("intensity", "BALANCED")
 
-    def _tr(key: str, category: str) -> str:
+    ARCH_KO = {
+        "THE_ADAPTER": "적응자",
+        "THE_ADVENTURER": "모험가",
+        "THE_ALCHEMIST": "연금술사",
+        "THE_ANCHOR": "닻",
+        "THE_ARCHITECT": "설계자",
+        "THE_ARTIST": "예술가",
+        "THE_BUILDER": "건설자",
+        "THE_CAREGIVER": "돌봄이",
+        "THE_CHAMPION": "챔피언",
+        "THE_CREATOR": "창조자",
+        "THE_DIPLOMAT": "외교관",
+        "THE_DREAMER": "꿈꾸는 자",
+        "THE_EXPLORER": "탐험가",
+        "THE_GARDENER": "정원사",
+        "THE_GUARDIAN": "수호자",
+        "THE_HEALER": "치유자",
+        "THE_HERO": "영웅",
+        "THE_INNOCENT": "순수한 자",
+        "THE_JESTER": "광대",
+        "THE_JUDGE": "재판관",
+        "THE_LEADER": "지도자",
+        "THE_LOVER": "연인",
+        "THE_MAGICIAN": "마법사",
+        "THE_MEDIATOR": "중재자",
+        "THE_MENTOR": "멘토",
+        "THE_MESSENGER": "전달자",
+        "THE_MYSTIC": "신비주의자",
+        "THE_NAVIGATOR": "항해자",
+        "THE_OBSERVER": "관찰자",
+        "THE_ORACLE": "신탁",
+        "THE_ORPHAN": "고아",
+        "THE_PEACEMAKER": "평화주의자",
+        "THE_PERFORMER": "연기자",
+        "THE_PHILOSOPHER": "철학자",
+        "THE_PROTECTOR": "보호자",
+        "THE_REBEL": "반항아",
+        "THE_REVOLUTIONARY": "혁명가",
+        "THE_RULER": "통치자",
+        "THE_SAGE": "현자",
+        "THE_SEEKER": "탐구자",
+        "THE_STRATEGIST": "전략가",
+        "THE_STUDENT": "학도",
+        "THE_THINKER": "사색가",
+        "THE_VISIONARY": "선지자",
+        "THE_WANDERER": "방랑자",
+        "THE_WARRIOR": "전사",
+    }
+    INT_KO = {
+        "ADAPTIVE": "적응력 있는",
+        "BALANCED": "균형 잡힌",
+        "BOLD": "대담한",
+        "CALM": "차분한",
+        "CAUTIOUS": "신중한",
+        "CURIOUS": "호기심 많은",
+        "DYNAMIC": "역동적",
+        "ENVIRONMENT_TUNED": "환경 적응형",
+        "EXPRESSIVE": "표현력 풍부한",
+        "FOCUSED": "집중력 있는",
+        "GENTLE": "부드러운",
+        "GROUNDED": "안정된",
+        "INTENSE": "강렬한",
+        "MODERATE": "중간 강도",
+        "OPEN": "개방적",
+        "RESERVED": "내향적",
+        "RESTLESS": "역동적",
+        "SELF_SOURCED": "자기주도적",
+        "STEADY": "꾸준한",
+        "STRONG": "강한",
+    }
+    ELEM_KO = {
+        "GROUND": "대지", "SPARK": "불꽃", "FLOW": "흐름",
+        "WOOD": "나무", "FIRE": "불", "EARTH": "흙",
+        "METAL": "금속", "WATER": "물", "BALANCED": "균형",
+        "木": "나무", "火": "불", "土": "흙", "金": "쇠", "水": "물",
+    }
+
+    def _tr(key: str, mapping: dict) -> str:
         if lang != "ko":
             return key.replace("_", " ").title()
-        
-        # 한글(영문) 병기 사전
-        MAP = {
-            # Archetypes
-            "THE_ANCHOR": "닻 (THE ANCHOR)",
-            "THE_CREATOR": "창조자 (THE CREATOR)",
-            "THE_WARRIOR": "전사 (THE WARRIOR)",
-            "THE_SAGE": "현자 (THE SAGE)",
-            "THE_LOVER": "연인 (THE LOVER)",
-            "THE_RULER": "통치자 (THE RULER)",
-            "THE_EXPLORER": "탐험가 (THE EXPLORER)",
-            "THE_INNOCENT": "순수한 자 (THE INNOCENT)",
-            "THE_REBEL": "반항아 (THE REBEL)",
-            "THE_MAGICIAN": "마법사 (THE MAGICIAN)",
-            "THE_HERO": "영웅 (THE HERO)",
-            "THE_CAREGIVER": "돌봄이 (THE CAREGIVER)",
-            "THE_JESTER": "광대 (THE JESTER)",
-            "THE_ORPHAN": "고아 (THE ORPHAN)",
-            
-            # Elements / Signatures (GROUND, FLOW, SPARK 등)
-            "GROUND": "대지 (GROUND)",
-            "FLOW": "흐름 (FLOW)",
-            "SPARK": "불꽃 (SPARK)",
-            "METAL": "금속 (METAL)",
-            "WOOD": "나무 (WOOD)",
-            "WATER": "물 (WATER)",
-            "FIRE": "불 (FIRE)",
-            "EARTH": "흙 (EARTH)",
-            "BALANCED": "균형 (BALANCED)",
-            "木": "나무 (木)", "火": "불 (火)", "土": "흙 (土)", "金": "쇠 (金)", "水": "물 (水)",
-            
-            # Intensities / Modes
-            "SELF_SOURCED": "자기주도적 (SELF-SOURCED)",
-            "EXPRESSIVE": "표현력 풍부한 (EXPRESSIVE)",
-            "INTENSE": "강렬한 (INTENSE)",
-            "GENTLE": "부드러운 (GENTLE)",
-            "STRONG": "강한 (STRONG)",
-        }
-        return MAP.get(key, key.replace("_", " ").title())
+        ko = mapping.get(key)
+        if ko:
+            return f"{ko} ({key})"
+        return key.replace("_", " ").title()
 
     return {
         "archetype": arch_key,
-        "archetype_label": _tr(arch_key, "arch"),
+        "archetype_label": _tr(arch_key, ARCH_KO),
         "element": elem_char,
-        "element_label": _tr(elem_char, "elem"),
+        "element_label": _tr(elem_char, ELEM_KO),
         "intensity": int_raw,
-        "intensity_label": _tr(int_raw, "intensity"),
+        "intensity_label": _tr(int_raw, INT_KO),
     }
 
 

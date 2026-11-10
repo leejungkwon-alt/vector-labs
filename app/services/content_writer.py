@@ -774,16 +774,51 @@ def _resolve_theme(d: dict, themes_pack: dict) -> dict:
     themes = themes_pack.get("THEMES", {})
     cautions = themes_pack.get("CAUTIONS", {})
     practices = themes_pack.get("PRACTICES", {})
-    rel = d.get("stem_relation") or d.get("branch_relation")
-    elem = d.get("stem_element") or d.get("branch_element")
+    # 지지(branch) 우선 → 인접 대운이 다른 theme 나옴
+    rel = d.get("branch_relation") or d.get("stem_relation")
+    elem = d.get("branch_element") or d.get("stem_element")
     if not rel or not elem:
         return {}
-    t = (themes.get(rel) or {}).get(elem) or {}
+    raw = (themes.get(rel) or {}).get(elem)
+    if not raw:
+        return {}
+    # 3-variant list면 (index + index//3) % 3 (인접·5차이 모두 다름)
+    if isinstance(raw, list):
+        idx = int(d.get("index", 0))
+        variant_idx = (idx + idx // 3) % len(raw)
+        t = raw[variant_idx]
+    elif isinstance(raw, dict):
+        t = raw
+    else:
+        return {}
+    # grade → severity 매핑
+    grade = str(d.get("grade", "NEUTRAL"))
+    severity = "neutral"
+    if grade == "CHALLENGING":
+        severity = "danger"
+    elif grade == "CAUTION":
+        severity = "warning"
+    elif grade in ("FAVORABLE", "PEAK"):
+        severity = "positive"
+
+    # cautions/practices[rel]이 dict(severity별) 또는 str(하위 호환)
+    idx = int(d.get("index", 0))
+
+    def _pick(container, rel, severity):
+        rel_val = container.get(rel, "")
+        if not isinstance(rel_val, dict):
+            return rel_val
+        sev_val = rel_val.get(severity, rel_val.get("neutral", ""))
+        # severity 내부가 list면 index%len으로 선택
+        if isinstance(sev_val, list) and sev_val:
+            return sev_val[idx % len(sev_val)]
+        return sev_val if isinstance(sev_val, str) else ""
+
     return {
         "theme": t.get("theme", ""),
         "body": t.get("body", ""),
-        "caution": cautions.get(rel, ""),
-        "practice": practices.get(rel, ""),
+        "caution": _pick(cautions, rel, severity),
+        "practice": _pick(practices, rel, severity),
     }
 
 

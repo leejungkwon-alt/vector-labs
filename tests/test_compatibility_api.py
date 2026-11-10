@@ -139,13 +139,14 @@ def test_compat_missing_birth_date_422(fresh_auth):
     assert r.status_code == 422
 
 
-def test_compat_extra_field_422(fresh_auth):
+def test_compat_extra_field_ignored(fresh_auth):
+    """extra 필드는 무시됨 (extra="ignore" 정책)"""
     a = _anon()
     from app.auth.repository import get_repository
     get_repository().grant_addon(a["user"]["id"], "compatibility")
     payload = {**PAIR, "extra": "no"}
     r = client.post("/api/v1/saju/compatibility", headers=_h(a["access_token"]), json=payload)
-    assert r.status_code == 422
+    assert r.status_code == 200
 
 
 def test_compat_no_ai_strings(fresh_auth):
