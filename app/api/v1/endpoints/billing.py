@@ -82,6 +82,19 @@ async def lemonsqueezy_webhook(
             current_period_end=None,
             is_premium=False,
         )
+    elif event_name == "order_created":
+        # 💡 1회성 결제(단품) 웹훅 처리
+        order = event["data"]["attributes"]
+        variant_id = str(order.get("first_order_item", {}).get("variant_id"))
+        onetime_variant = os.environ.get("LEMONSQUEEZY_ONETIME_VARIANT_ID")
+        
+        if onetime_variant and variant_id == str(onetime_variant):
+            repo.add_onetime_credit(user_id)
+            repo.log_purchase(user_id, "lemon_onetime", "lemon_squeezy")
+        else:
+            # 구독 상품 결제인 경우
+            repo.update_user_tier(user_id, "premium")
+            repo.log_purchase(user_id, "lemon_sub", "lemon_squeezy")
 
     return {"status": "ok"}
 

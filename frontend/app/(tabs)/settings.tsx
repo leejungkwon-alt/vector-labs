@@ -299,6 +299,7 @@ export default function SettingsScreen() {
                 {item.product_id === "stars_onetime" ? "1회 이용권 (텔레그램 150 Stars)" : 
                  item.product_id === "stars_sub" ? "프리미엄 구독 (텔레그램 400 Stars)" : 
                  item.product_id === "lemon_sub" ? "프리미엄 구독 (웹 결제)" :
+                 item.product_id === "lemon_onetime" ? "1회 이용권 (웹 결제)" :
                  item.product_id}
               </Text>
               <Text style={styles.value}>
