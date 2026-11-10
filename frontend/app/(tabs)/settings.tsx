@@ -41,8 +41,10 @@ export default function SettingsScreen() {
 
   // 화면이 그려진 후 텔레그램 SDK가 로드되었는지 확인
   useEffect(() => {
-    if (typeof window !== "undefined" && (window as any).Telegram?.WebApp) {
-      setIsTgEnv(true);
+    if (typeof window !== "undefined") {
+      // 텔레그램 SDK는 웹에서도 객체를 만들기 때문에, initData가 실제로 있는지 확인해야 함
+      const tg = (window as any).Telegram?.WebApp;
+      setIsTgEnv(!!tg?.initData && tg.initData.length > 0);
     }
   }, []);
 
