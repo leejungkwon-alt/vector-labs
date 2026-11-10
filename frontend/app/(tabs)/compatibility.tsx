@@ -29,25 +29,30 @@ export default function CompatibilityScreen() {
       const uri = await captureRef(shareRef, { format: "png", quality: 1 });
       
       if (Platform.OS === "web") {
-        // 웹: Web Share API 시도 (모바일 브라우저 대응)
-        try {
-          const res = await fetch(uri);
-          const blob = await res.blob();
-          const file = new File([blob], "gyeol-compatibility.png", { type: "image/png" });
-          
-          if (navigator.canShare && navigator.canShare({ files: [file] })) {
-            await navigator.share({
-              files: [file],
-              title: "Gyeol Compatibility",
-              text: "Check out our compatibility!",
-            });
-            return; // 공유 성공 시 종료
+        // PC(데스크톱)인지 확인 (모바일 웹은 navigator.userAgent로 구분)
+        const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+          // 모바일 웹: Web Share API 시도
+          try {
+            const res = await fetch(uri);
+            const blob = await res.blob();
+            const file = new File([blob], "gyeol-compatibility.png", { type: "image/png" });
+            
+            if (navigator.canShare && navigator.canShare({ files: [file] })) {
+              await navigator.share({
+                files: [file],
+                title: "Gyeol Compatibility",
+                text: "Check out our compatibility!",
+              });
+              return; // 공유 성공 시 종료
+            }
+          } catch (e) {
+            console.log("Mobile Web Share failed, falling back to download.");
           }
-        } catch (e) {
-          console.log("Web Share API not available or failed, falling back to download.");
         }
 
-        // 폴백: 다운로드 (PC 브라우저 등)
+        // PC 브라우저 또는 모바일 공유 실패 시: 다운로드
         const link = document.createElement("a");
         link.href = uri;
         link.download = "gyeol-compatibility.png";
