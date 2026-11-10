@@ -74,7 +74,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
 <TouchableOpacity style={[styles.btn, styles.appleBtn]} onPress={() => handleLogin("apple")} disabled={!!loading}>
             {loading === "apple" ? <ActivityIndicator color={colors.onPrimary} /> : (
               <>
-                <Text style={{ fontSize: 20, marginRight: 8 }}>🍎</Text>
+                
                 <Text style={styles.btnTextWhite}>{t("socialLogin.appleCta")}</Text>
               </>
             )}
@@ -86,7 +86,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
           {!isTelegram && (<TouchableOpacity style={[styles.btn, styles.googleBtn]} onPress={() => handleLogin("google")} disabled={!!loading}>
             {loading === "google" ? <ActivityIndicator color="#000" /> : (
               <>
-                <Text style={{ fontSize: 20, marginRight: 8 }}>🌐</Text>
+                
                 <Text style={styles.btnTextBlack}>{mode === "login" ? t("socialLogin.googleLoginCta") : t("socialLogin.googleCta")}</Text>
               </>
             )}
@@ -95,7 +95,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
           {!isTelegram && (<TouchableOpacity style={[styles.btn, styles.kakaoBtn]} onPress={() => handleLogin("kakao")} disabled={!!loading}>
             {loading === "kakao" ? <ActivityIndicator color="#000" /> : (
               <>
-                <Text style={{ fontSize: 20, marginRight: 8 }}>💬</Text>
+                
                 <Text style={styles.btnTextBlack}>{mode === "login" ? t("socialLogin.kakaoLoginCta") : t("socialLogin.kakaoCta")}</Text>
               </>
             )}
@@ -105,7 +105,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
             <TouchableOpacity style={[styles.btn, { backgroundColor: "#0088cc" }]} onPress={handleTelegramLogin} disabled={!!loading}>
               {loading === "telegram" ? <ActivityIndicator color="#FFF" /> : (
                 <>
-                  <Ionicons name="paper-plane" size={20} color="#FFF" />
+                  
                   <Text style={styles.btnTextWhite}>텔레그램으로 1초 만에 로그인</Text>
                 </>
               )}

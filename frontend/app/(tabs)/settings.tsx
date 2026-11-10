@@ -317,7 +317,8 @@ export default function SettingsScreen() {
       <SocialLoginModal
         visible={showLogin}
         onClose={() => setShowLogin(false)}
-        onSuccess={() => {
+        onSuccess={async () => {
+          await useAuthStore.getState().bootstrap(); // 유저 정보 강제 갱신
           setShowLogin(false);
           if (upgradeAfterLogin) {
             // 업그레이드 버튼을 눌러서 들어온 경우 -> 성공 시 결제창으로 연결
