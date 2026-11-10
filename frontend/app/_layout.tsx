@@ -1,4 +1,12 @@
 import { useEffect, useState } from "react";
+
+// [TMA] 텔레그램 SDK 로드 (앱 실행 최우선)
+if (typeof window !== "undefined") {
+  const script = document.createElement("script");
+  script.src = "https://telegram.org/js/telegram-web-app.js";
+  script.async = false; // 동기적으로 로드하여 해시 파싱 보장
+  document.head.appendChild(script);
+}
 import { Stack } from "expo-router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { SafeAreaProvider } from "react-native-safe-area-context";
