@@ -109,6 +109,7 @@ interface AuthState {
   bootstrap: () => Promise<void>;
   linkAccount: (provider: Provider) => Promise<void>;
   signInWithProvider: (provider: Provider) => Promise<void>;
+  loginWithTelegram: () => Promise<void>;
   signInAnonymous: () => Promise<void>;
   signOut: () => Promise<void>;
 }
@@ -179,6 +180,17 @@ export const useAuthStore = create<AuthState>((set) => ({
     await storage.setItem(TOKEN_KEY, res.access_token);
     setAuthToken(res.access_token);
     set({ user: res.user });
+    try { await useProfileStore.getState().loadProfile(); } catch {}
+  },
+  
+  loginWithTelegram: async () => {
+    const tg = (window as any).Telegram?.WebApp;
+    if (!tg || !tg.initData) throw new Error("Telegram environment not found");
+    
+    const res = await api.loginTelegram(tg.initData);
+    await storage.setItem(TOKEN_KEY, res.access_token);
+    setAuthToken(res.access_token);
+    set({ user: res.user, ready: true });
     try { await useProfileStore.getState().loadProfile(); } catch {}
   },
   signInWithProvider: async (provider: Provider) => {

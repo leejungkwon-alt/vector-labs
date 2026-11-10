@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ActivityIndicator, Alert, Modal, Platform, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { colors, radius, spacing } from "@/theme";
@@ -18,6 +18,20 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
   const t = useT();
   const [loading, setLoading] = useState<string | null>(null);
   const [mode, setMode] = useState<"link" | "login">("login");
+  const [isTelegram, setIsTelegram] = useState(false);
+  useEffect(() => { setIsTelegram(!!(window as any).Telegram?.WebApp?.initData); }, []);
+
+  const handleTelegramLogin = async () => {
+    setLoading("telegram");
+    try {
+      await useAuthStore.getState().loginWithTelegram();
+      onSuccess();
+    } catch (e: any) {
+      alert(e.message || "로그인 실패");
+    } finally {
+      setLoading(null);
+    }
+  };
 
   const handleLogin = async (provider: "apple" | "google" | "kakao") => {
     setLoading(provider);
@@ -69,31 +83,42 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
 
           */}
 
-          <TouchableOpacity style={[styles.btn, styles.googleBtn]} onPress={() => handleLogin("google")} disabled={!!loading}>
+          {!isTelegram && (<TouchableOpacity style={[styles.btn, styles.googleBtn]} onPress={() => handleLogin("google")} disabled={!!loading}>
             {loading === "google" ? <ActivityIndicator color="#000" /> : (
               <>
                 <Ionicons name="logo-google" size={20} color="#000" />
                 <Text style={styles.btnTextBlack}>{mode === "login" ? t("socialLogin.googleLoginCta") : t("socialLogin.googleCta")}</Text>
               </>
             )}
-          </TouchableOpacity>
+          </TouchableOpacity>)}
 
-          <TouchableOpacity style={[styles.btn, styles.kakaoBtn]} onPress={() => handleLogin("kakao")} disabled={!!loading}>
+          {!isTelegram && (<TouchableOpacity style={[styles.btn, styles.kakaoBtn]} onPress={() => handleLogin("kakao")} disabled={!!loading}>
             {loading === "kakao" ? <ActivityIndicator color="#000" /> : (
               <>
                 <Ionicons name="chatbubble" size={20} color="#000" />
                 <Text style={styles.btnTextBlack}>{mode === "login" ? t("socialLogin.kakaoLoginCta") : t("socialLogin.kakaoCta")}</Text>
               </>
             )}
-          </TouchableOpacity>
+          </TouchableOpacity>)}
 
-          <View style={styles.divider}>
+          {isTelegram && (
+            <TouchableOpacity style={[styles.btn, { backgroundColor: "#0088cc" }]} onPress={handleTelegramLogin} disabled={!!loading}>
+              {loading === "telegram" ? <ActivityIndicator color="#FFF" /> : (
+                <>
+                  <Ionicons name="paper-plane" size={20} color="#FFF" />
+                  <Text style={styles.btnTextWhite}>텔레그램으로 1초 만에 로그인</Text>
+                </>
+              )}
+            </TouchableOpacity>
+          )}
+
+          {!isTelegram && <View style={styles.divider}>
             <View style={styles.dividerLine} />
             <Text style={styles.dividerText}>or</Text>
             <View style={styles.dividerLine} />
-          </View>
+          </View>}
 
-          <TouchableOpacity
+          {!isTelegram && <TouchableOpacity
             style={styles.modeToggle}
             onPress={() => setMode(mode === "login" ? "link" : "login")}
             disabled={!!loading}
@@ -101,7 +126,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
             <Text style={styles.modeToggleText}>
               {mode === "login" ? t("socialLogin.switchToLink") : t("socialLogin.switchToLogin")}
             </Text>
-          </TouchableOpacity>
+          </TouchableOpacity>}
 
           <TouchableOpacity style={styles.closeBtn} onPress={onClose} disabled={!!loading}>
             <Text style={styles.closeText}>{t("socialLogin.later")}</Text>

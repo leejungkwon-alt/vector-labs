@@ -5,6 +5,8 @@ from app.auth.dependencies import get_current_user
 from app.auth.jwt_utils import encode_token, ttl_seconds
 from app.auth.providers import ProviderTokenError, verify_provider_token
 from app.auth.repository import get_repository
+
+from app.api.v1.endpoints.telegram import _verified_telegram_id, TelegramInitData
 from pydantic import BaseModel
 from app.schemas.auth import (
     AnonymousTokenResponse,
@@ -181,3 +183,35 @@ def list_my_purchases(user: dict = Depends(get_current_user)):
 def list_push_tokens(user: dict = Depends(get_current_user)):
     """등록된 푸시 토큰 목록 (다기기 디버깅용)."""
     return {"tokens": get_repository().list_push_tokens(user["id"])}
+
+
+@router.post("/login/telegram")
+def login_telegram(payload: TelegramInitData):
+    from app.auth.security import create_access_token
+    from app.auth.repository import get_repository
+    
+    tg_id = _verified_telegram_id(payload)
+    repo = get_repository()
+    
+    # 텔레그램 ID로 기존 유저 찾기 (없으면 생성)
+    user = None
+    try:
+        # 기존 레포지토리에 텔레그램 ID로 유저를 찾는 함수가 있다고 가정
+        user = repo.get_user_by_telegram_id(tg_id)
+    except AttributeError:
+        pass
+        
+    if not user:
+        # 없으면 새 계정 생성 (익명 계정과 동일하게 처리)
+        user = repo.create_anonymous_user()
+        # 텔레그램 구독자로 등록 (ID 연동)
+        repo.upsert_telegram_subscriber(tg_id, user["id"], payload.lang or "ko")
+    
+    # JWT 토큰 발급
+    token = create_access_token({"sub": user["id"]})
+    
+    return {
+        "access_token": token,
+        "token_type": "bearer",
+        "user": user
+    }
