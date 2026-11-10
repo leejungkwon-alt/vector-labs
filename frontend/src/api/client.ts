@@ -103,7 +103,7 @@ export const api = {
 
   purchase: (product_id: string) => request<any>("/auth/me/purchase", { method: "POST", body: JSON.stringify({ product_id, receipt: "mock_valid_receipt", platform: Platform.OS }) }),
   deleteAccount: () => request<void>("/auth/me", { method: "DELETE" }),
-  getPurchases: () => request<{ purchases: any[] }>("/auth/me/purchases"),
+  getPurchases: () => request<{ purchases: any[] }>("/billing/purchases"),
   calculate: (payload: SajuRequest) =>
     request<SajuResponse>("/saju/calculate", { method: "POST", body: JSON.stringify(payload) }),
   report: (payload: ReportRequest) =>
