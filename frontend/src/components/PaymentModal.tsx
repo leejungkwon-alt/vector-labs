@@ -20,17 +20,38 @@ export function PaymentModal({ visible, onClose }: Props) {
   const handlePay = async (productId: string) => {
     setLoading(productId);
     try {
-      // 1. 백엔드에서 Lemon Squeezy 결제창 URL 받아오기
-      const { url } = await api.checkout();
-      
-      // 2. 플랫폼(웹/앱)에 따라 결제창 열기
-      if (Platform.OS === "web") {
-        window.location.href = url; // 웹: 현재 창에서 결제창으로 이동
-      } else {
-        await Linking.openURL(url); // 앱: 외부 브라우저로 결제창 열기
-        onClose(); // 앱의 경우 결제창을 띄운 후 모달은 닫아줌
+      const tg = (window as any).Telegram?.WebApp;
+      const isTelegram = !!tg?.initData;
+
+      if (isTelegram) {
+        // --- 텔레그램 스타 결제 ---
+        try {
+          const { invoice_link } = await api.createStarsInvoice();
+          tg.openInvoice(invoice_link, (status: string) => {
+            if (status === "paid") {
+              Alert.alert("결제 완료", "프리미엄이 활성화되었습니다! 앱을 새로고침합니다.");
+              window.location.reload();
+            } else if (status === "cancelled") {
+              // 사용자 취소
+            } else if (status === "failed") {
+              Alert.alert("결제 실패", "결제를 다시 시도해주세요.");
+            }
+          });
+          return; // ★ 중요: 여기서 함수를 종료하여 Lemon Squeezy로 넘어가지 않도록 함
+        } catch (e: any) {
+          Alert.alert("결제 오류", e.message || "텔레그램 결제를 시작할 수 없습니다.");
+          return;
+        }
       }
-      
+
+      // --- 기존 Lemon Squeezy 결제 (일반 웹) ---
+      const { url } = await api.checkout();
+      if (Platform.OS === "web") {
+        window.location.href = url;
+      } else {
+        await Linking.openURL(url);
+        onClose();
+      }
     } catch (e: any) {
       Alert.alert("Checkout Failed", e.message || "Please try again.");
     } finally {
