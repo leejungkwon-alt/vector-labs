@@ -42,7 +42,8 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
   if (!visible) return null;
 
   return (
-    {Platform.OS === 'web' ? (
+    <>
+      {Platform.OS === 'web' ? (
       <View style={{ position: 'fixed' as any, top: 0, left: 0, right: 0, bottom: 0, zIndex: 9999, touchAction: 'manipulation' }}> 
         <View style={styles.overlay}>
           
@@ -149,6 +150,7 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
         </View>
       </Modal>
     )}
+    </>
   );
 }
 
