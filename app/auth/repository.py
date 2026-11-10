@@ -247,19 +247,6 @@ class _BaseRepository:
     def set_stripe_customer_id(self, user_id: str, customer_id: str) -> None:
         self._run("UPDATE users SET stripe_customer_id = ? WHERE id = ?", (customer_id, user_id))
 
-    def add_onetime_credits(self, user_id: str, amount: int = 1) -> None:
-        """유저의 1회 이용권(크레딧)을 증가시킵니다."""
-        self._run(
-            "UPDATE users SET onetime_credits = COALESCE(onetime_credits, 0) + ? WHERE id = ?",
-            (amount, user_id),
-        )
-        
-        # SQLAlchemy 예시:
-        # user = self.db.query(User).filter(User.id == user_id).first()
-        # if user:
-        #     user.onetime_credits = (user.onetime_credits or 0) + amount
-        #     self.db.commit()
-
     def get_onetime_credits(self, user_id: str) -> int:
         """유저의 1회 이용권(크레딧) 잔액을 조회합니다."""
         try:

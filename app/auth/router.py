@@ -33,6 +33,7 @@ def _user_public(user: dict) -> dict:
         "social_subject": user.get("social_subject"),
         "created_at": user["created_at"],
         "email": user.get("email"),
+        "onetime_credits": user.get("onetime_credits", 0),
     }
 
 

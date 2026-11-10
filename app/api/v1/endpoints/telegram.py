@@ -281,10 +281,10 @@ async def telegram_payment_webhook(request: Request):
             user_id = payload.replace("onetime_", "")
             repo = get_repository()
             try:
-                repo.add_onetime_credits(user_id, 1)
+                repo.add_onetime_credit(user_id, 1)
                 logger.info(f"One-time credit added for user {user_id}")
             except AttributeError:
-                logger.error("Repository does not have add_onetime_credits method!")
+                logger.error("Repository does not have add_onetime_credit method!")
             except Exception as e:
                 logger.error(f"One-time Credit DB Update Error: {e}")
                     

@@ -9,6 +9,7 @@ class UserPublic(BaseModel):
     model_config = ConfigDict(extra="ignore")
     id: str
     tier: str
+    onetime_credits: int = 0
     is_anonymous: bool
     social_provider: Optional[str] = None
     social_subject: Optional[str] = None
