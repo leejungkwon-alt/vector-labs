@@ -44,7 +44,7 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
   return (
     <>
       {Platform.OS === 'web' ? (
-      <View style={{ position: 'fixed' as any, top: 0, left: 0, right: 0, bottom: 0, zIndex: 9999, touchAction: 'manipulation' }}> 
+      <View style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 9999, touchAction: 'manipulation' } as any}> 
         <View style={styles.overlay}>
           
         <View style={styles.bottomSheet}>
