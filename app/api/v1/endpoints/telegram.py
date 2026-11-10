@@ -230,3 +230,51 @@ def push_daily_wallpapers(
             time.sleep(0.05)  # Telegram 전송 한도(초당 ~30건) 보호
 
     return {"status": "ok", "sent": sent, "failed": failed, "removed": removed, "skipped": skipped}
+
+from fastapi import Request
+
+@router.post("/webhook")
+async def telegram_payment_webhook(request: Request):
+    """텔레그램 결제 완료(successful_payment) 웹훅 수신"""
+    update = await request.json()
+    
+    # 1. 결제 사전 확인 (pre_checkout_query) 처리 - 10초 내 응답 필수
+    pre_checkout = update.get("pre_checkout_query")
+    if pre_checkout:
+        import os, httpx
+        bot_token = os.getenv("SAJU_TELEGRAM_BOT_TOKEN")
+        query_id = pre_checkout["id"]
+        
+        async with httpx.AsyncClient() as client:
+            await client.post(
+                f"https://api.telegram.org/bot{bot_token}/answerPreCheckoutQuery",
+                json={"pre_checkout_query_id": query_id, "ok": True}
+            )
+        return {"ok": True}
+
+    # 2. 결제 완료 (successful_payment) 처리
+    msg = update.get("message", {})
+    successful_payment = msg.get("successful_payment")
+    # ... (기존 코드 유지)
+    
+    if successful_payment:
+        payload = successful_payment.get("invoice_payload", "")
+        if payload.startswith("sub_"):
+            user_id = payload.replace("sub_", "")
+            repo = get_repository()
+            # DB 유저 등급을 프리미엄으로 업데이트
+            try:
+                repo.update_user_tier(user_id, "premium") 
+            except AttributeError:
+                # 기존 레몬 스퀴지용 메서드가 있다면 그것을 사용
+                try:
+                    repo.update_subscription(
+                        user_id=user_id,
+                        subscription_id=f"stars_{successful_payment.get('telegram_payment_charge_id')}",
+                        status="active",
+                        renews_at=None
+                    )
+                except Exception as e:
+                    print(f"DB Update Error: {e}")
+                    
+    return {"ok": True}
