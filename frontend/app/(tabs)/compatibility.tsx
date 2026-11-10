@@ -1,9 +1,12 @@
 import { useLanguageStore } from "@/store/languageStore";
 import { formatPickerDate, formatPickerTime } from "@/i18n";
 import { useT } from "@/i18n";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet, ActivityIndicator, Switch } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity, StyleSheet, ActivityIndicator, Switch, Platform } from "react-native";
+import { captureRef } from "react-native-view-shot";
+import * as Sharing from "expo-sharing";
+import { Ionicons } from "@expo/vector-icons";
 import { DateTimeField } from "@/components/DateTimeField";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { router } from "expo-router";
@@ -18,6 +21,33 @@ import { TIMEZONE_LIST } from "@/constants/timezones";
 
 export default function CompatibilityScreen() {
   const lang = useLanguageStore((s) => s.lang);
+  const shareRef = useRef<any>(null);
+
+  const handleShare = async () => {
+    try {
+      if (!shareRef.current) return;
+      const uri = await captureRef(shareRef, { format: "png", quality: 1 });
+      
+      if (Platform.OS === "web") {
+        // 웹: 다운로드
+        const link = document.createElement("a");
+        link.href = uri;
+        link.download = "gyeol-compatibility.png";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } else {
+        // 모바일: 네이티브 공유 시트
+        if (await Sharing.isAvailableAsync()) {
+          await Sharing.shareAsync(uri, { dialogTitle: "Share your Compatibility" });
+        }
+      }
+    } catch (err) {
+      console.error("Share failed:", err);
+      alert("공유에 실패했습니다.");
+    }
+  };
+
   const t = useT();
   const insets = useSafeAreaInsets();
   const myProfile = useProfileStore((s) => s.profile);
@@ -177,7 +207,8 @@ export default function CompatibilityScreen() {
     const color = gradeColors[compat.overall.grade] || colors.text;
 
     return (
-      <View style={{ marginTop: 30, gap: 16 }}>
+      <View style={{ marginTop: 30 }}>
+        <View ref={shareRef} collapsable={false} style={{ gap: 16, paddingBottom: 20, backgroundColor: colors.bg }}>
         <View style={styles.resultCard}>
           <Text style={styles.resultLabel}>
             {relationshipType === "romance" ? t("compatibility.resultRomance") : 
@@ -269,6 +300,23 @@ export default function CompatibilityScreen() {
             </View>
           );
         })}
+        
+        {/* 워터마크 */}
+        <Text style={{ textAlign: "center", fontSize: 12, color: colors.textMuted, marginTop: 10, fontWeight: "600" }}>
+          Gyeol - gyeol-blond.vercel.app
+        </Text>
+        </View>
+
+        {/* 공유 버튼 */}
+        <TouchableOpacity 
+          onPress={handleShare} 
+          style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: colors.primary, padding: 16, borderRadius: radius.md, marginTop: 20 }}
+        >
+          <Ionicons name="share-outline" size={20} color="#FFF" style={{ marginRight: 8 }} />
+          <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>
+            {t("compatibility.share") || "Share"}
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   };
