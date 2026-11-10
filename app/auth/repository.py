@@ -249,22 +249,16 @@ class _BaseRepository:
 
     def get_onetime_credits(self, user_id: str) -> int:
         """유저의 1회 이용권(크레딧) 잔액을 조회합니다."""
-        try:
-            row = self._run(
-                "SELECT onetime_credits FROM users WHERE id = ?", (user_id,)
-            ).fetchone()
-            return row["onetime_credits"] if row and row["onetime_credits"] else 0
-        except Exception:
-            return 0
+        row = self._one("SELECT onetime_credits FROM users WHERE id = ?", (user_id,))
+        return row["onetime_credits"] if row and row["onetime_credits"] else 0
 
     def deduct_onetime_credit(self, user_id: str) -> bool:
         """1회 이용권을 1개 차감합니다. 차감 성공 시 True 반환"""
-        cursor = self._run(
+        updated = self._run(
             "UPDATE users SET onetime_credits = onetime_credits - 1 WHERE id = ? AND onetime_credits > 0",
             (user_id,)
         )
-        # sqlite3 기준 rowcount > 0 이면 차감 성공
-        return cursor.rowcount > 0
+        return updated > 0
 
     def update_subscription(self, user_id: str, *, subscription_id: Optional[str],
                             status: str, current_period_end: Optional[str], is_premium: bool) -> None:
@@ -420,6 +414,10 @@ class Repository(_BaseRepository):
             for col in ["stripe_customer_id", "stripe_subscription_id", "subscription_status", "current_period_end", "email"]:
                 if col not in u_cols:
                     self._conn.execute(f"ALTER TABLE users ADD COLUMN {col} TEXT")
+            if "onetime_credits" not in u_cols:
+                self._conn.execute("ALTER TABLE users ADD COLUMN onetime_credits INTEGER DEFAULT 0")
+            if "onetime_credits" not in u_cols:
+                self._conn.execute("ALTER TABLE users ADD COLUMN onetime_credits INTEGER DEFAULT 0")
             self._conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_stripe_customer ON users(stripe_customer_id) WHERE stripe_customer_id IS NOT NULL")
             self._conn.execute("CREATE TABLE IF NOT EXISTS stripe_events (id TEXT PRIMARY KEY, type TEXT NOT NULL, processed_at TEXT NOT NULL)")
     def _one(self, sql, params=()):
@@ -497,6 +495,12 @@ class PostgresRepository(_BaseRepository):
                 r = conn.execute("SELECT 1 FROM information_schema.columns WHERE table_name='users' AND column_name=%s AND table_schema=current_schema()", (col,)).fetchone()
                 if r is None:
                     conn.execute(f"ALTER TABLE users ADD COLUMN {col} TEXT")
+            r = conn.execute("SELECT 1 FROM information_schema.columns WHERE table_name='users' AND column_name='onetime_credits' AND table_schema=current_schema()").fetchone()
+            if r is None:
+                conn.execute("ALTER TABLE users ADD COLUMN onetime_credits INTEGER DEFAULT 0")
+            r = conn.execute("SELECT 1 FROM information_schema.columns WHERE table_name='users' AND column_name='onetime_credits' AND table_schema=current_schema()").fetchone()
+            if r is None:
+                conn.execute("ALTER TABLE users ADD COLUMN onetime_credits INTEGER DEFAULT 0")
             conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_stripe_customer ON users(stripe_customer_id) WHERE stripe_customer_id IS NOT NULL")
             conn.execute("CREATE TABLE IF NOT EXISTS stripe_events (id TEXT PRIMARY KEY, type TEXT NOT NULL, processed_at TEXT NOT NULL)")
     def _one(self, sql, params=()):
