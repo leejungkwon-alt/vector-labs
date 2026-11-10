@@ -39,9 +39,13 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
     onClose();
   };
 
+  if (!visible) return null;
+
   return (
-    <Modal visible={visible} transparent animationType="slide">
-      <View style={styles.overlay}>
+    {Platform.OS === 'web' ? (
+      <View style={{ position: 'fixed' as any, top: 0, left: 0, right: 0, bottom: 0, zIndex: 9999, touchAction: 'manipulation' }}> 
+        <View style={styles.overlay}>
+          
         <View style={styles.bottomSheet}>
           <View style={styles.header}>
             <TouchableOpacity onPress={onClose}>
@@ -88,8 +92,63 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
             </Picker>
           </View>
         </View>
+      
+        </View>
       </View>
-    </Modal>
+    ) : (
+      <Modal visible={visible} transparent animationType="slide">
+        <View style={styles.overlay}>
+          
+        <View style={styles.bottomSheet}>
+          <View style={styles.header}>
+            <TouchableOpacity onPress={onClose}>
+              <Text style={styles.cancelText}>{t("datePicker.cancel")}</Text>
+            </TouchableOpacity>
+            <Text style={styles.title}>{t("datePicker.title")}</Text>
+            <TouchableOpacity onPress={handleConfirm}>
+              <Text style={styles.confirmText}>{t("datePicker.confirm")}</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.pickerContainer}>
+            <Picker
+              style={styles.picker}
+              selectedValue={year}
+              onValueChange={(itemValue: number) => setYear(itemValue)}
+              itemStyle={styles.pickerItem}
+            >
+              {years.map((y) => (
+                <Picker.Item key={y} label={`${y}${t("datePicker.yearSuffix")}`} value={y} color={textColor} />
+              ))}
+            </Picker>
+
+            <Picker
+              style={styles.picker}
+              selectedValue={month}
+              onValueChange={(itemValue: number) => setMonth(itemValue)}
+              itemStyle={styles.pickerItem}
+            >
+              {months.map((m) => (
+                <Picker.Item key={m} label={`${m}${t("datePicker.monthSuffix")}`} value={m} color={textColor} />
+              ))}
+            </Picker>
+
+            <Picker
+              style={styles.picker}
+              selectedValue={day}
+              onValueChange={(itemValue: number) => setDay(itemValue)}
+              itemStyle={styles.pickerItem}
+            >
+              {days.map((d) => (
+                <Picker.Item key={d} label={`${d}${t("datePicker.daySuffix")}`} value={d} color={textColor} />
+              ))}
+            </Picker>
+          </View>
+        </View>
+      
+        </View>
+      </Modal>
+    )}
   );
 }
 
