@@ -1,7 +1,6 @@
 import { useQueryClient } from '@tanstack/react-query';
 import React, { useState } from "react";
 import { Modal, View, Text, TouchableOpacity, StyleSheet, ActivityIndicator, Alert } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 import { colors, radius, spacing } from "@/theme";
 import { api } from "@/api/client";
 import { useAuthStore } from "@/store/authStore";
@@ -70,7 +69,7 @@ export function PaymentModal({ visible, onClose }: Props) {
           <View style={styles.header}>
             <Text style={styles.title}>Gyeol Premium</Text>
             <TouchableOpacity onPress={onClose} style={styles.closeIcon}>
-              <Ionicons name="close" size={24} color={colors.textMuted} />
+              <Text style={{ fontSize: 22, color: colors.textMuted, lineHeight: 24 }}>✕</Text>
             </TouchableOpacity>
           </View>
           <Text style={styles.desc}>Unlock all deep reports and daily insights.</Text>
@@ -94,7 +93,7 @@ export function PaymentModal({ visible, onClose }: Props) {
             {loading === "sub_monthly_699" ? (
               <ActivityIndicator color={colors.primary} />
             ) : (
-              <Ionicons name="chevron-forward" size={24} color={colors.primary} />
+              <Text style={{ fontSize: 26, color: colors.primary, lineHeight: 26 }}>›</Text>
             )}
           </TouchableOpacity>
 
@@ -112,7 +111,7 @@ export function PaymentModal({ visible, onClose }: Props) {
             {loading === "onetime" ? (
               <ActivityIndicator color={colors.textMuted} />
             ) : (
-              <Ionicons name="chevron-forward" size={24} color={colors.textMuted} />
+              <Text style={{ fontSize: 26, color: colors.textMuted, lineHeight: 26 }}>›</Text>
             )}
           </TouchableOpacity>
 
