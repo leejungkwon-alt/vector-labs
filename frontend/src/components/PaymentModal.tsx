@@ -48,7 +48,7 @@ export function PaymentModal({ visible, onClose }: Props) {
       }
 
       // --- 기존 Lemon Squeezy 결제 (일반 웹) ---
-      const { url } = await api.checkout();
+      const { url } = await api.checkout(productId === 'onetime');
       if (Platform.OS === "web") {
         window.location.href = url;
       } else {
