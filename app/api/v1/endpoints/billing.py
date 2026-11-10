@@ -93,3 +93,36 @@ async def get_customer_portal(user: dict = Depends(get_current_user)):
             detail="Could not load the billing portal. Please try again later.",
         )
     return {"url": url}
+
+
+import httpx
+
+@router.post("/stars/invoice")
+async def create_stars_invoice(user: dict = Depends(get_current_user)):
+    """Telegram Stars 결제를 위한 인보이스 링크 생성"""
+    import os
+    bot_token = os.getenv("SAJU_TELEGRAM_BOT_TOKEN")
+    if not bot_token:
+        raise HTTPException(status_code=503, detail="Bot token not configured")
+
+    # 가격: 250 Stars (필요시 조정 가능)
+    prices = [{"label": "Gyeol Premium", "amount": 400}]
+
+    payload = {
+        "title": "Gyeol Premium Subscription",
+        "description": "Unlock all deep reports and daily insights.",
+        "payload": f"sub_{user['id']}",
+        "currency": "XTR", # Telegram Stars 화폐 코드
+        "prices": prices,
+    }
+
+    async with httpx.AsyncClient() as client:
+        resp = await client.post(
+            f"https://api.telegram.org/bot{bot_token}/createInvoiceLink",
+            json=payload,
+        )
+        data = resp.json()
+        if not data.get("ok"):
+            raise HTTPException(status_code=500, detail=data.get("description"))
+
+    return {"invoice_link": data["result"]}
