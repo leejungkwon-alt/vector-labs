@@ -91,6 +91,7 @@ function extractDetail(body: any, status: number): string {
 
 export const api = {
   anonymous: () => request<AuthResponse>("/auth/anonymous", { method: "POST" }),
+  createStarsInvoice: () => request<{ invoice_link: string }>("/billing/stars/invoice", { method: "POST" }),
   me: () => request<{ user: AuthResponse["user"] }>("/auth/me"),
   updateProfile: (payload: any) => request<any>("/auth/me/profile", { method: "PUT", body: JSON.stringify(payload) }),
   getMyProfile: () => request<any>("/auth/me/profile"),
