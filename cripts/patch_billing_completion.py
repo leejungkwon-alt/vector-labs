@@ -32,7 +32,7 @@ async def create_checkout(body: CheckoutRequest, user: dict = Depends(get_curren
     # product_id에 따라 다른 Variant ID 매핑
     variant_id = "2341690" # 기본 구독 ID
     if body.product_id == "onetime":
-        variant_id = "여기에_일시불_레몬스퀴지_상품_ID_입력" # (대표님이 레몬스퀴지에서 새로 만든 $2.99 상품 ID)
+        variant_id = "2357370" # (대표님이 레몬스퀴지에서 새로 만든 $2.99 상품 ID)
         
     url = await create_checkout_url(user_id=user["id"], email=user.get("email"), variant_id=variant_id)
     return {"url": url}'''

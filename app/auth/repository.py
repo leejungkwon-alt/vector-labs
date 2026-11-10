@@ -153,6 +153,15 @@ class _BaseRepository:
             (telegram_id,)
         )
 
+    def add_onetime_credit(self, user_id: str) -> None:
+        """일시불 결제 시 단품 이용권(크레딧) +1 증가"""
+        # 크레딧 컬럼이 없으면 추가 (마이그레이션)
+        try:
+            self._run("ALTER TABLE users ADD COLUMN onetime_credits INTEGER DEFAULT 0")
+        except Exception:
+            pass # 이미 컬럼이 있으면 무시
+        self._run("UPDATE users SET onetime_credits = COALESCE(onetime_credits, 0) + 1 WHERE id = ?", (user_id,))
+
     def get_user(self, user_id: str) -> Optional[dict]:
         return self._one("SELECT * FROM users WHERE id = ?", (user_id,))
 
