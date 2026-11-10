@@ -218,17 +218,36 @@ export default function SettingsScreen() {
         </View>
       </View>
 
-      {/* ⭐️ 추가된 부분: 익명 로그인 상태일 때 계정 연결 유도 */}
-      {user?.is_anonymous && !isTgEnv && (
-        <View style={[styles.profileBox, { backgroundColor: colors.surface, borderColor: colors.primary }]}>
-          <Text style={[styles.sectionTitle, { color: colors.primary }]}>{t("settings.linkAccountTitle")}</Text>
-          <Text style={{ fontSize: 14, color: colors.text, marginBottom: 12, lineHeight: 20 }}>
-            {t("settings.linkAccountDesc")}
-          </Text>
-          <TouchableOpacity style={styles.upgradeBtn} onPress={handleLinkAccount}>
-            <Text style={styles.upgradeBtnText}>{t("settings.linkAccountCta")}</Text>
-          </TouchableOpacity>
-        </View>
+      {/* ⭐️ 게스트 상태: 텔레그램 환경이면 텔레그램 로그인 카드, 아니면 SNS 연동 카드 */}
+      {user?.is_anonymous && (
+        isTgEnv ? (
+          <View style={[styles.profileBox, { backgroundColor: "#f0f8ff", borderColor: "#0088cc" }]}>
+            <Text style={[styles.sectionTitle, { color: "#0088cc" }]}>텔레그램으로 로그인</Text>
+            <Text style={{ fontSize: 14, color: colors.text, marginBottom: 12, lineHeight: 20 }}>
+              텔레그램 계정으로 로그인하면 모든 기기에서 프리미엄 혜택을 그대로 이용할 수 있습니다.
+            </Text>
+            <TouchableOpacity 
+              style={[styles.upgradeBtn, { backgroundColor: "#0088cc" }]} 
+              onPress={() => {
+                useAuthStore.getState().loginWithTelegram().then(() => {
+                  useAuthStore.getState().bootstrap();
+                }).catch((e: any) => alert(e.message));
+              }}
+            >
+              <Text style={styles.upgradeBtnText}>텔레그램으로 1초 만에 로그인</Text>
+            </TouchableOpacity>
+          </View>
+        ) : (
+          <View style={[styles.profileBox, { backgroundColor: colors.surface, borderColor: colors.primary }]}>
+            <Text style={[styles.sectionTitle, { color: colors.primary }]}>{t("settings.linkAccountTitle")}</Text>
+            <Text style={{ fontSize: 14, color: colors.text, marginBottom: 12, lineHeight: 20 }}>
+              {t("settings.linkAccountDesc")}
+            </Text>
+            <TouchableOpacity style={styles.upgradeBtn} onPress={handleLinkAccount}>
+              <Text style={styles.upgradeBtnText}>{t("settings.linkAccountCta")}</Text>
+            </TouchableOpacity>
+          </View>
+        )
       )}
 
       {/* 2. 프리미엄 구독 관리 */}
