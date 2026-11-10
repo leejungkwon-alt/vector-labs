@@ -1,6 +1,6 @@
 import { useLanguageStore, SupportedLang } from "@/store/languageStore";
 import { useT } from "@/i18n";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Alert, Platform, Linking, ScrollView } from "react-native";
 import { Switch } from "react-native";
 import { router } from "expo-router";
@@ -37,6 +37,14 @@ export default function SettingsScreen() {
   // 단순히 계정만 연결하고 싶을 때
   const [isTgSubscribed, setIsTgSubscribed] = useState(false);
   const [isTgLoading, setIsTgLoading] = useState(false);
+  const [isTgEnv, setIsTgEnv] = useState(false);
+
+  // 화면이 그려진 후 텔레그램 SDK가 로드되었는지 확인
+  useEffect(() => {
+    if (typeof window !== "undefined" && (window as any).Telegram?.WebApp) {
+      setIsTgEnv(true);
+    }
+  }, []);
 
   const handleTelegramToggle = async () => {
     const tg = (window as any).Telegram?.WebApp;
@@ -208,7 +216,7 @@ export default function SettingsScreen() {
       </View>
 
       {/* 텔레그램 알림 스위치 (TMA 환경일 때만 노출) */}
-      {typeof window !== "undefined" && !!(window as any).Telegram?.WebApp?.initData && (
+      {isTgEnv && (
         <View style={styles.profileBox}>
           <View style={[styles.row, { borderBottomWidth: 0 }]}>
             <View style={{ flex: 1 }}>
