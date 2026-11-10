@@ -14,6 +14,7 @@ import { PaymentModal } from "@/components/PaymentModal";
 
 export default function SettingsScreen() {
   const user = useAuthStore((s) => s.user);
+  const [dbg, setDbg] = useState("로딩 중");
   const t = useT();
   const signOut = useAuthStore((s) => s.signOut);
   const profile = useProfileStore((s) => s.profile);
@@ -187,8 +188,22 @@ export default function SettingsScreen() {
     return t("settings.loginSocial", { provider });
   };
 
+  
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const w = window as any;
+    setDbg(
+      `BUILD 1110-D | Telegram: ${!!w.Telegram} | WebApp: ${!!w.Telegram?.WebApp} | initData: ${w.Telegram?.WebApp?.initData?.length ?? 0} | hash: ${window.location.hash.slice(0, 10)}`
+    );
+  }, []);
+
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 40 }}>
+        {/* DEBUG BOX */}
+        <View style={{ backgroundColor: "yellow", padding: 12, zIndex: 9999 }}>
+          <Text style={{ fontSize: 12, color: "black", fontWeight: "bold" }}>{dbg}</Text>
+        </View>
+
       {/* 1. 내 계정 정보 */}
       <View style={styles.profileBox}>
         <Text style={styles.sectionTitle}>{t("settings.accountInfo")}</Text>
