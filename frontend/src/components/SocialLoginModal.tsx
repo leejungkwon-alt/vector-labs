@@ -74,7 +74,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
 <TouchableOpacity style={[styles.btn, styles.appleBtn]} onPress={() => handleLogin("apple")} disabled={!!loading}>
             {loading === "apple" ? <ActivityIndicator color={colors.onPrimary} /> : (
               <>
-                <Ionicons name="logo-apple" size={20} color={colors.onPrimary} />
+                <Text style={{ fontSize: 20, marginRight: 8 }}>🍎</Text>
                 <Text style={styles.btnTextWhite}>{t("socialLogin.appleCta")}</Text>
               </>
             )}
@@ -86,7 +86,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
           {!isTelegram && (<TouchableOpacity style={[styles.btn, styles.googleBtn]} onPress={() => handleLogin("google")} disabled={!!loading}>
             {loading === "google" ? <ActivityIndicator color="#000" /> : (
               <>
-                <Ionicons name="logo-google" size={20} color="#000" />
+                <Text style={{ fontSize: 20, marginRight: 8 }}>🌐</Text>
                 <Text style={styles.btnTextBlack}>{mode === "login" ? t("socialLogin.googleLoginCta") : t("socialLogin.googleCta")}</Text>
               </>
             )}
@@ -95,7 +95,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
           {!isTelegram && (<TouchableOpacity style={[styles.btn, styles.kakaoBtn]} onPress={() => handleLogin("kakao")} disabled={!!loading}>
             {loading === "kakao" ? <ActivityIndicator color="#000" /> : (
               <>
-                <Ionicons name="chatbubble" size={20} color="#000" />
+                <Text style={{ fontSize: 20, marginRight: 8 }}>💬</Text>
                 <Text style={styles.btnTextBlack}>{mode === "login" ? t("socialLogin.kakaoLoginCta") : t("socialLogin.kakaoCta")}</Text>
               </>
             )}
