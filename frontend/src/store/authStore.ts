@@ -14,6 +14,19 @@ declare var process: { env: Record<string, string | undefined> };
 WebBrowser.maybeCompleteAuthSession();
 
 const TOKEN_KEY = 'saju.access_token';
+const GUEST_TOKEN_BACKUP_KEY = 'saju.guest_token_backup';
+
+// 로그인 직전 게스트 토큰을 백업 (최초 게스트만 보존)
+async function backupGuestToken(): Promise<void> {
+  try {
+    const existing = await storage.getItem(GUEST_TOKEN_BACKUP_KEY);
+    if (existing) return;
+    const current = await storage.getItem(TOKEN_KEY);
+    if (current) await storage.setItem(GUEST_TOKEN_BACKUP_KEY, current);
+  } catch (e) {
+    console.warn('[backupGuestToken] failed:', e);
+  }
+}
 type User = AuthResponse['user'];
 type Provider = 'apple' | 'google' | 'kakao';
 
@@ -162,6 +175,7 @@ export const useAuthStore = create<AuthState>((set) => ({
         throw e;
       }
     }
+    await backupGuestToken();
     await storage.setItem(TOKEN_KEY, res.access_token);
     setAuthToken(res.access_token);
     set({ user: res.user });
@@ -180,6 +194,7 @@ export const useAuthStore = create<AuthState>((set) => ({
       providerToken = await getKakaoAccessToken();
     }
     const res = await api.loginProvider(provider, providerToken);
+    await backupGuestToken();
     await storage.setItem(TOKEN_KEY, res.access_token);
     setAuthToken(res.access_token);
     set({ user: res.user });
@@ -192,11 +207,30 @@ export const useAuthStore = create<AuthState>((set) => ({
     set({ user: res.user });
   },
   signOut: async () => {
-    await storage.deleteItem(TOKEN_KEY);
     setAuthToken(null);
     set({ user: null });
-    // 🆕 로그아웃 후 새 익명 세션 자동 생성
+    try { await useProfileStore.getState().clearProfile(); } catch {}
+
+    // 🆕 로그인 직전 게스트 토큰이 있으면 그 세션으로 복원
+    const backup = await storage.getItem(GUEST_TOKEN_BACKUP_KEY);
+    if (backup) {
+      try {
+        setAuthToken(backup);
+        const me = await api.me();
+        await storage.setItem(TOKEN_KEY, backup);
+        await storage.deleteItem(GUEST_TOKEN_BACKUP_KEY);
+        set({ user: me.user, ready: true, authError: null });
+        try { await useProfileStore.getState().loadProfile(); } catch {}
+        return;
+      } catch (e) {
+        console.warn('[signOut] guest restore failed, falling back:', e);
+        await storage.deleteItem(GUEST_TOKEN_BACKUP_KEY);
+      }
+    }
+
+    // 백업이 없거나 무효 → 새 익명 세션 생성
     try {
+      await storage.deleteItem(TOKEN_KEY);
       const res = await api.anonymous();
       await storage.setItem(TOKEN_KEY, res.access_token);
       setAuthToken(res.access_token);
