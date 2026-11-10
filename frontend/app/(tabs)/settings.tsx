@@ -2,6 +2,7 @@ import { useLanguageStore, SupportedLang } from "@/store/languageStore";
 import { useT } from "@/i18n";
 import { useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Alert, Platform, Linking, ScrollView } from "react-native";
+import { Switch } from "react-native";
 import { router } from "expo-router";
 import { colors, spacing, radius } from "@/theme";
 import { useAuthStore } from "@/store/authStore";
@@ -34,18 +35,22 @@ export default function SettingsScreen() {
   };
 
   // 단순히 계정만 연결하고 싶을 때
-  const handleTelegramRegister = async () => {
+  const [isTgSubscribed, setIsTgSubscribed] = useState(false);
+  const [isTgLoading, setIsTgLoading] = useState(false);
+
+  const handleTelegramToggle = async () => {
+    const tg = (window as any).Telegram?.WebApp;
+    if (!tg || !tg.initData) return;
+    setIsTgLoading(true);
     try {
-      const tg = (window as any).Telegram?.WebApp;
-      if (!tg || !tg.initData) {
-        alert("텔레그램 앱에서만 이용할 수 있습니다.");
-        return;
-      }
-      const res = await fetch("https://saju-backend-787049663118.asia-northeast3.run.app/api/v1/telegram/register", {
+      const { storage } = await import("@/store/secureStore");
+      const token = await storage.getItem("saju.access_token");
+      const endpoint = isTgSubscribed ? "unregister" : "register";
+      const res = await fetch(`https://saju-backend-787049663118.asia-northeast3.run.app/api/v1/telegram/${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${(useAuthStore.getState() as any).token || ""}`,
+          "Authorization": `Bearer ${token || ""}`,
         },
         body: JSON.stringify({ init_data: tg.initData, lang }),
       });
@@ -54,9 +59,11 @@ export default function SettingsScreen() {
         if (res.status === 403) throw new Error(t("settings.telegramPushAgeLimit"));
         throw new Error(t("settings.telegramPushError"));
       }
-      alert(t("settings.telegramPushSuccess"));
+      setIsTgSubscribed(!isTgSubscribed);
     } catch (e: any) {
       alert(e.message);
+    } finally {
+      setIsTgLoading(false);
     }
   };
 
@@ -200,16 +207,22 @@ export default function SettingsScreen() {
         </View>
       </View>
 
-      {/* 텔레그램 데일리 푸시 (TMA 환경일 때만 노출) */}
+      {/* 텔레그램 알림 스위치 (TMA 환경일 때만 노출) */}
       {typeof window !== "undefined" && !!(window as any).Telegram?.WebApp?.initData && (
-        <View style={[styles.profileBox, { backgroundColor: "#0088cc10", borderColor: "#0088cc" }]}>
-          <Text style={[styles.sectionTitle, { color: "#0088cc" }]}>{t("settings.telegramPushTitle")}</Text>
-          <Text style={{ fontSize: 14, color: colors.text, marginBottom: 12, lineHeight: 20 }}>
-            {t("settings.telegramPushDesc")}
-          </Text>
-          <TouchableOpacity style={[styles.upgradeBtn, { backgroundColor: "#0088cc" }]} onPress={handleTelegramRegister}>
-            <Text style={styles.upgradeBtnText}>{t("settings.telegramPushCta")}</Text>
-          </TouchableOpacity>
+        <View style={styles.profileBox}>
+          <View style={[styles.row, { borderBottomWidth: 0 }]}>
+            <View style={{ flex: 1 }}>
+              <Text style={styles.label}>{t("settings.telegramPushTitle")}</Text>
+              <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 4, lineHeight: 18 }}>
+                {t("settings.telegramPushDesc")}
+              </Text>
+            </View>
+            <Switch 
+              value={isTgSubscribed} 
+              onValueChange={handleTelegramToggle} 
+              disabled={isTgLoading} 
+            />
+          </View>
         </View>
       )}
 
