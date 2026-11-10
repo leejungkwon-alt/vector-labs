@@ -40,6 +40,30 @@ export default function DailyScreen() {
     retry: false,
   });
 
+
+  // Daily Paywall: 무료 회원은 API 호출을 막았으므로, 예쁜 업그레이드 유도 화면을 보여줌
+  if (user?.tier === "free") {
+    return (
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", padding: 24, backgroundColor: colors.bg }}>
+        <Text style={{ fontSize: 48, marginBottom: 16 }}>🔒</Text>
+        <Text style={{ fontSize: 22, fontWeight: "700", color: colors.text, marginBottom: 12, textAlign: "center" }}>
+          프리미엄 전용 메뉴입니다
+        </Text>
+        <Text style={{ fontSize: 15, color: colors.textMuted, textAlign: "center", marginBottom: 32, lineHeight: 22 }}>
+          매일 아침, 당신만을 위한 깊이 있는 데일리 운세를 확인하려면 프리미엄으로 업그레이드하세요.
+        </Text>
+        <TouchableOpacity 
+          style={{ backgroundColor: colors.primary, paddingHorizontal: 32, paddingVertical: 16, borderRadius: 12, width: "100%", alignItems: "center" }}
+          onPress={() => router.push("/settings")}
+        >
+          <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>
+            프리미엄 구독하러 가기
+          </Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+
   if (!profileReady || !ready) {
     return (
       <View style={styles.center}>
