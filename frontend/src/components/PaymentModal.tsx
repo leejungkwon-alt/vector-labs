@@ -88,7 +88,7 @@ export function PaymentModal({ visible, onClose }: Props) {
                 </View>
               </View>
               <Text style={styles.planDetail}>Daily, Monthly & All Deep Reports</Text>
-              <Text style={styles.planPrice}>{isTelegramEnv ? "400 Stars / month" : "$6.99 / month (Cancel anytime)"}</Text>
+              <Text style={styles.planPrice}>{isTelegramEnv ? "400 Stars / month (Auto-renews)" : "$6.99 / month (Auto-renews. Cancel anytime.)"}</Text>
             </View>
             {loading === "sub_monthly_699" ? (
               <ActivityIndicator color={colors.primary} />
