@@ -511,8 +511,8 @@ export interface CompatibilityResponse {
     disclaimer: string;
     relationship_advice?: string;
     pair: {
-      a: { archetype: string; element: string; intensity: string };
-      b: { archetype: string; element: string; intensity: string };
+      a: { archetype: string; element: string; intensity: string; archetype_label?: string; element_label?: string; intensity_label?: string };
+      b: { archetype: string; element: string; intensity: string; archetype_label?: string; element_label?: string; intensity_label?: string };
     };
   };
 }

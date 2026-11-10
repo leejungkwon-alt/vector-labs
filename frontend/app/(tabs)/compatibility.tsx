@@ -239,6 +239,7 @@ export default function CompatibilityScreen() {
 
         {Object.entries(compat.axes).map(([key, axis]) => {
           const isExpanded = !!expandedAxes[key];
+          const axisScore = Math.round((axis.score + 1) * 50);
           return (
             <View key={key} style={styles.axisCard}>
               <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 8 }}>
@@ -246,6 +247,12 @@ export default function CompatibilityScreen() {
                   {key === "elements" ? t("compatibility.axisElements") : key === "day_master" ? t("compatibility.axisDayMaster") : key === "ten_gods" ? t("compatibility.axisTenGods") : t(SINSAL_AXIS_KEY[relationshipType])}
                 </Text>
                 <Text style={{ fontWeight: "700", color: gradeColors[axis.grade] }}>{axis.grade}</Text>
+              </View>
+              <View style={{ flexDirection: "row", alignItems: "center", marginBottom: 8 }}>
+                <View style={{ flex: 1, height: 6, backgroundColor: colors.border, borderRadius: 3, overflow: "hidden", marginRight: 8 }}>
+                  <View style={{ height: "100%", width: `${axisScore}%`, backgroundColor: gradeColors[axis.grade] }} />
+                </View>
+                <Text style={{ fontSize: 12, fontWeight: "600", color: colors.textMuted }}>{axisScore}</Text>
               </View>
               <Text style={{ fontSize: 16, fontWeight: "600", color: colors.text, marginBottom: 4 }}>{axis.headline}</Text>
               <Text style={{ fontSize: 14, color: colors.textMuted, lineHeight: 20 }} numberOfLines={isExpanded ? undefined : 4}>{axis.body}</Text>
