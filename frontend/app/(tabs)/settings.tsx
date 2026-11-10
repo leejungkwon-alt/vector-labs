@@ -9,6 +9,7 @@ import { useAuthStore } from "@/store/authStore";
 import { useProfileStore } from "@/store/profileStore";
 import { usePoemStore } from "@/store/poemStore";
 import { api } from "@/api/client";
+import type { Purchase } from "../../../types";
 import { SocialLoginModal } from "@/components/SocialLoginModal";
 import { PaymentModal } from "@/components/PaymentModal";
 
@@ -22,6 +23,7 @@ export default function SettingsScreen() {
 
   const [showLogin, setShowLogin] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
+  const [purchases, setPurchases] = useState<Purchase[]>([]);
   const [upgradeAfterLogin, setUpgradeAfterLogin] = useState(false); // 로그인 후 결제창 띄울지 여부
 
   const handleUpgrade = () => {
@@ -40,6 +42,15 @@ export default function SettingsScreen() {
   const [isTgEnv, setIsTgEnv] = useState(false);
 
   // 화면이 그려진 후 텔레그램 SDK가 로드되었는지 확인
+  
+  useEffect(() => {
+    if (user) {
+      api.getPurchases().then((res) => {
+        if (res && res.purchases) setPurchases(res.purchases);
+      }).catch((e) => console.warn("Failed to load purchases", e));
+    }
+  }, [user]);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       // 텔레그램 SDK는 웹에서도 객체를 만들기 때문에, initData가 실제로 있는지 확인해야 함
@@ -277,7 +288,28 @@ export default function SettingsScreen() {
         </View>
       )}
 
+
+      {/* 구매 내역 */}
+      {purchases.length > 0 && (
+        <View style={styles.profileBox}>
+          <Text style={styles.sectionTitle}>구매 내역</Text>
+          {purchases.map((item) => (
+            <View key={item.id} style={styles.row}>
+              <Text style={styles.label}>
+                {item.product_id === "stars_onetime" ? "1회 이용권 (150 Stars)" : 
+                 item.product_id === "stars_sub" ? "프리미엄 구독 (400 Stars)" : 
+                 item.product_id}
+              </Text>
+              <Text style={styles.value}>
+                {new Date(item.purchased_at).toLocaleDateString()}
+              </Text>
+            </View>
+          ))}
+        </View>
+      )}
+
       {/* 4. 계정 액션 */}
+
       <View style={styles.list}>
         <TouchableOpacity style={styles.btn} onPress={handleReset}>
           <Text style={styles.btnText}>{t("settings.editBirthInfo")}</Text>

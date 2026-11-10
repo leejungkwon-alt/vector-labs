@@ -160,3 +160,11 @@ async def create_stars_invoice_onetime(user: dict = Depends(get_current_user)):
             raise HTTPException(status_code=500, detail=data.get("description"))
 
     return {"invoice_link": data["result"]}
+
+
+@router.get("/purchases")
+async def get_purchases(user: dict = Depends(get_current_user)):
+    """유저의 결제(구매) 내역을 반환합니다."""
+    repo = get_repository()
+    purchases = repo.list_purchases(user["id"])
+    return {"purchases": purchases}

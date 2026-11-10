@@ -414,10 +414,14 @@ class Repository(_BaseRepository):
             for col in ["stripe_customer_id", "stripe_subscription_id", "subscription_status", "current_period_end", "email"]:
                 if col not in u_cols:
                     self._conn.execute(f"ALTER TABLE users ADD COLUMN {col} TEXT")
-            if "onetime_credits" not in u_cols:
+            try:
                 self._conn.execute("ALTER TABLE users ADD COLUMN onetime_credits INTEGER DEFAULT 0")
-            if "onetime_credits" not in u_cols:
+            except sqlite3.OperationalError:
+                pass  # 이미 컬럼이 존재하면 무시
+            try:
                 self._conn.execute("ALTER TABLE users ADD COLUMN onetime_credits INTEGER DEFAULT 0")
+            except sqlite3.OperationalError:
+                pass  # 이미 컬럼이 존재하면 무시
             self._conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_stripe_customer ON users(stripe_customer_id) WHERE stripe_customer_id IS NOT NULL")
             self._conn.execute("CREATE TABLE IF NOT EXISTS stripe_events (id TEXT PRIMARY KEY, type TEXT NOT NULL, processed_at TEXT NOT NULL)")
     def _one(self, sql, params=()):

@@ -539,3 +539,11 @@ export interface PushTokenRequest {
   token: string;
   platform: "ios" | "android" | "web";
 }
+
+export interface Purchase {
+  id: string;
+  user_id: string;
+  product_id: string;
+  platform: string;
+  purchased_at: string;
+}
