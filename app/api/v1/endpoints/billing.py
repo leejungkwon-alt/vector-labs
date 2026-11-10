@@ -62,6 +62,8 @@ async def lemonsqueezy_webhook(
             current_period_end=renews_at,
             is_premium=is_premium,
         )
+        if event_name == "subscription_created":
+            repo.log_purchase(user_id, "lemon_sub", "lemon_squeezy")
         
     elif event_name in ("subscription_cancelled", "subscription_expired"):
         repo.update_subscription(

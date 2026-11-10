@@ -264,7 +264,8 @@ async def telegram_payment_webhook(request: Request):
             repo = get_repository()
             # DB 유저 등급을 프리미엄으로 업데이트
             try:
-                repo.update_user_tier(user_id, "premium") 
+                repo.update_user_tier(user_id, "premium")
+                repo.log_purchase(user_id, "stars_sub", "telegram") 
             except AttributeError:
                 # 기존 레몬 스퀴지용 메서드가 있다면 그것을 사용
                 try:
