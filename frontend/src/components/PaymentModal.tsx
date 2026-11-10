@@ -12,7 +12,10 @@ interface Props {
   onClose: () => void;
 }
 
-export function PaymentModal({ visible, onClose }: Props) {
+export function PaymentModal({
+  const tg = typeof window !== "undefined" ? (window as any).Telegram?.WebApp : null;
+  const isTelegramEnv = !!tg?.initData;
+ visible, onClose }: Props) {
   const queryClient = useQueryClient();
   const [loading, setLoading] = useState<string | null>(null);
   const bootstrap = useAuthStore((s) => s.bootstrap);
@@ -66,7 +69,7 @@ export function PaymentModal({ visible, onClose }: Props) {
           <View style={styles.header}>
             <Text style={styles.title}>Gyeol Premium</Text>
             <TouchableOpacity onPress={onClose} style={styles.closeIcon}>
-              <Ionicons name="close" size={24} color={colors.textMuted} />
+              <Text style={{ fontSize: 20 }}>✕</Text>
             </TouchableOpacity>
           </View>
           <Text style={styles.desc}>Unlock all deep reports and daily insights.</Text>
@@ -85,7 +88,9 @@ export function PaymentModal({ visible, onClose }: Props) {
                 </View>
               </View>
               <Text style={styles.planDetail}>Daily, Monthly & All Deep Reports</Text>
-              <Text style={styles.planPrice}>$6.99 / month (Cancel anytime)</Text>
+              <Text style={styles.planPrice}>
+                {isTelegramEnv ? "400 Stars / month" : "$6.99 / month (Cancel anytime)"}
+              </Text>
             </View>
             {loading === "sub_monthly_699" ? (
               <ActivityIndicator color={colors.primary} />
@@ -94,7 +99,11 @@ export function PaymentModal({ visible, onClose }: Props) {
             )}
           </TouchableOpacity>
 
-          <Text style={styles.terms}>Secure checkout powered by Lemon Squeezy.</Text>
+          <Text style={styles.terms}>
+              {isTelegramEnv 
+                ? "Secure checkout powered by Telegram Stars." 
+                : "Secure checkout powered by Lemon Squeezy."}
+            </Text>
         </View>
       </View>
     </Modal>
