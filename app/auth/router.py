@@ -141,6 +141,11 @@ def login_telegram(payload: TelegramInitData):
         user = repo.create_anonymous_user()
         repo.upsert_telegram_subscriber(tg_id, user["id"], payload.lang or "ko")
     
+    # 텔레그램 로그인을 했으므로 익명 상태 해제
+    if user.get("is_anonymous"):
+        repo.set_user_not_anonymous(user["id"])
+        user = repo.get_user(user["id"]) # 최신 유저 정보 다시 가져오기
+    
     # 3. JWT 토큰 발급 (기존 프로젝트 방식)
     token = encode_token(user["id"])
     

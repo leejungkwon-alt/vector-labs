@@ -141,6 +141,9 @@ class _BaseRepository:
         )
         return self.get_user(uid)
 
+    def set_user_not_anonymous(self, user_id: str) -> None:
+        self._run("UPDATE users SET is_anonymous = 0 WHERE id = ?", (user_id,))
+
     def get_user(self, user_id: str) -> Optional[dict]:
         return self._one("SELECT * FROM users WHERE id = ?", (user_id,))
 

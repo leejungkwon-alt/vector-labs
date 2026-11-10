@@ -219,7 +219,7 @@ export default function SettingsScreen() {
       </View>
 
       {/* ⭐️ 추가된 부분: 익명 로그인 상태일 때 계정 연결 유도 */}
-      {user?.is_anonymous && (
+      {user?.is_anonymous && !isTgEnv && (
         <View style={[styles.profileBox, { backgroundColor: colors.surface, borderColor: colors.primary }]}>
           <Text style={[styles.sectionTitle, { color: colors.primary }]}>{t("settings.linkAccountTitle")}</Text>
           <Text style={{ fontSize: 14, color: colors.text, marginBottom: 12, lineHeight: 20 }}>
