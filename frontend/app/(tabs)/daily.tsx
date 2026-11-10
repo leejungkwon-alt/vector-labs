@@ -36,8 +36,7 @@ export default function DailyScreen() {
           gender: profile.gender || "M",
           birth_location: profile.birth_location || undefined,
         }, days: 7, lang }),
-    enabled: !!user && user.tier !== "free", // 🚨 무료 회원은 API 호출하지 않음
-    enabled: !!profile && profileReady && !!user && ready,
+    enabled: !!profile && profileReady && !!user && ready && user.tier !== "free", // 🚨 무료 회원은 API 호출하지 않음
     retry: false,
   });
 
