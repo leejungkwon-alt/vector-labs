@@ -144,6 +144,15 @@ class _BaseRepository:
     def set_user_not_anonymous(self, user_id: str) -> None:
         self._run("UPDATE users SET is_anonymous = 0 WHERE id = ?", (user_id,))
 
+    def get_user_by_telegram_id(self, telegram_id: str) -> Optional[dict]:
+        """텔레그램 ID로 유저 정보를 정확히 조회합니다 (계정 통합용)."""
+        return self._one(
+            "SELECT u.* FROM users u "
+            "JOIN telegram_subscribers t ON u.id = t.user_id "
+            "WHERE t.telegram_id = ?",
+            (telegram_id,)
+        )
+
     def get_user(self, user_id: str) -> Optional[dict]:
         return self._one("SELECT * FROM users WHERE id = ?", (user_id,))
 

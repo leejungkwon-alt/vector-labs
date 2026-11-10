@@ -126,27 +126,20 @@ def login_telegram(payload: TelegramInitData):
     tg_id = _verified_telegram_id(payload)
     repo = get_repository()
     
-    # 1. 기존 텔레그램 구독자 목록에서 유저 찾기
-    user = None
-    try:
-        subs = repo.list_telegram_subscribers()
-        existing = next((s for s in subs if s["telegram_id"] == tg_id), None)
-        if existing:
-            user = repo.get_user_by_id(existing["user_id"])
-    except Exception:
-        pass
+    # 1. 텔레그램 ID로 기존 유저가 있는지 1:1 매칭 (계정 통합 핵심)
+    user = repo.get_user_by_telegram_id(tg_id)
     
-    # 2. 없으면 새 계정 생성
+    # 2. 없으면 새 계정 생성 및 구독자 등록
     if not user:
         user = repo.create_anonymous_user()
         repo.upsert_telegram_subscriber(tg_id, user["id"], payload.lang or "ko")
     
-    # 텔레그램 로그인을 했으므로 익명 상태 해제
+    # 3. 텔레그램 로그인이므로 익명 상태 해제
     if user.get("is_anonymous"):
         repo.set_user_not_anonymous(user["id"])
-        user = repo.get_user(user["id"]) # 최신 유저 정보 다시 가져오기
+        user = repo.get_user(user["id"]) # 최신 정보 갱신
     
-    # 3. JWT 토큰 발급 (기존 프로젝트 방식)
+    # 4. JWT 토큰 발급
     token = encode_token(user["id"])
     
     return {
