@@ -124,7 +124,14 @@
     "linkAccountSuccess": "계정이 성공적으로 연결되었습니다.",
     "logout": "로그아웃",
     "logoutConfirm": "정말 로그아웃하시겠어요?",
-    "logoutFail": "로그아웃에 실패했습니다."
+    "logoutFail": "로그아웃에 실패했습니다.",
+    "telegramPushTitle": "텔레그램 데일리 운세",
+    "telegramPushDesc": "매일 아침 텔레그램으로 오늘의 운세를 받아보세요.",
+    "telegramPushCta": "구독하기",
+    "telegramPushSuccess": "데일리 푸시 알림이 구독되었습니다!",
+    "telegramPushNoProfile": "출생 정보를 먼저 저장해 주세요.",
+    "telegramPushAgeLimit": "만 14세 미만은 이용할 수 없습니다.",
+    "telegramPushError": "구독에 실패했습니다. 다시 시도해 주세요."
   },
   "birthInput": {
     "cityLookupLoading": "도시를 찾는 중…",

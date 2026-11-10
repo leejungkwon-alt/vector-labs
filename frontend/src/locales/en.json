@@ -124,7 +124,14 @@
     "linkAccountSuccess": "Account successfully linked.",
     "logout": "Sign out",
     "logoutConfirm": "Are you sure you want to sign out?",
-    "logoutFail": "Failed to sign out."
+    "logoutFail": "Failed to sign out.",
+    "telegramPushTitle": "Telegram Daily Fortune",
+    "telegramPushDesc": "Get your daily fortune on Telegram every morning.",
+    "telegramPushCta": "Subscribe",
+    "telegramPushSuccess": "Daily push notifications subscribed!",
+    "telegramPushNoProfile": "Please save your birth profile first.",
+    "telegramPushAgeLimit": "You must be at least 14 years old.",
+    "telegramPushError": "Subscription failed. Please try again."
   },
   "birthInput": {
     "cityLookupLoading": "Looking up city…",

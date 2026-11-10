@@ -34,6 +34,32 @@ export default function SettingsScreen() {
   };
 
   // 단순히 계정만 연결하고 싶을 때
+  const handleTelegramRegister = async () => {
+    try {
+      const tg = (window as any).Telegram?.WebApp;
+      if (!tg || !tg.initData) {
+        alert("텔레그램 앱에서만 이용할 수 있습니다.");
+        return;
+      }
+      const res = await fetch("https://saju-backend-787049663118.asia-northeast3.run.app/api/v1/telegram/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${(useAuthStore.getState() as any).token || ""}`,
+        },
+        body: JSON.stringify({ init_data: tg.initData, lang }),
+      });
+      if (!res.ok) {
+        if (res.status === 409) throw new Error(t("settings.telegramPushNoProfile"));
+        if (res.status === 403) throw new Error(t("settings.telegramPushAgeLimit"));
+        throw new Error(t("settings.telegramPushError"));
+      }
+      alert(t("settings.telegramPushSuccess"));
+    } catch (e: any) {
+      alert(e.message);
+    }
+  };
+
   const handleLinkAccount = () => {
     setUpgradeAfterLogin(false); // 단순 연동 목적
     setShowLogin(true);
@@ -173,6 +199,19 @@ export default function SettingsScreen() {
           </Text>
         </View>
       </View>
+
+      {/* 텔레그램 데일리 푸시 (TMA 환경일 때만 노출) */}
+      {typeof window !== "undefined" && !!(window as any).Telegram?.WebApp?.initData && (
+        <View style={[styles.profileBox, { backgroundColor: "#0088cc10", borderColor: "#0088cc" }]}>
+          <Text style={[styles.sectionTitle, { color: "#0088cc" }]}>{t("settings.telegramPushTitle")}</Text>
+          <Text style={{ fontSize: 14, color: colors.text, marginBottom: 12, lineHeight: 20 }}>
+            {t("settings.telegramPushDesc")}
+          </Text>
+          <TouchableOpacity style={[styles.upgradeBtn, { backgroundColor: "#0088cc" }]} onPress={handleTelegramRegister}>
+            <Text style={styles.upgradeBtnText}>{t("settings.telegramPushCta")}</Text>
+          </TouchableOpacity>
+        </View>
+      )}
 
       {/* ⭐️ 추가된 부분: 익명 로그인 상태일 때 계정 연결 유도 */}
       {user?.is_anonymous && (

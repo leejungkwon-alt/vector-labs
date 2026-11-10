@@ -124,7 +124,14 @@
     "linkAccountSuccess": "Cuenta vinculada con éxito.",
     "logout": "Cerrar sesión",
     "logoutConfirm": "¿Seguro que quieres cerrar sesión?",
-    "logoutFail": "No se pudo cerrar sesión."
+    "logoutFail": "No se pudo cerrar sesión.",
+    "telegramPushTitle": "Fortuna Diaria en Telegram",
+    "telegramPushDesc": "Recibe tu fortuna diaria en Telegram cada mañana.",
+    "telegramPushCta": "Suscribirse",
+    "telegramPushSuccess": "¡Notificaciones diarias suscritas!",
+    "telegramPushNoProfile": "Por favor, guarda tu perfil de nacimiento primero.",
+    "telegramPushAgeLimit": "Debes tener al menos 14 años.",
+    "telegramPushError": "Suscripción fallida. Por favor, inténtalo de nuevo."
   },
   "birthInput": {
     "cityLookupLoading": "Buscando la ciudad…",

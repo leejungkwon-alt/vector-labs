@@ -124,7 +124,14 @@
     "linkAccountSuccess": "アカウントが正常に連携されました。",
     "logout": "ログアウト",
     "logoutConfirm": "本当にログアウトしますか？",
-    "logoutFail": "ログアウトに失敗しました。"
+    "logoutFail": "ログアウトに失敗しました。",
+    "telegramPushTitle": "Telegram 毎日の運勢",
+    "telegramPushDesc": "毎朝、Telegramで今日の運勢を受け取れます。",
+    "telegramPushCta": "購読する",
+    "telegramPushSuccess": "毎日のプッシュ通知を購読しました！",
+    "telegramPushNoProfile": "先に出生情報を保存してください。",
+    "telegramPushAgeLimit": "14歳未満はご利用いただけません。",
+    "telegramPushError": "購読に失敗しました。もう一度お試しください。"
   },
   "birthInput": {
     "cityLookupLoading": "都市を検索中…",

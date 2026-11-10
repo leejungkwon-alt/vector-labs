@@ -124,7 +124,14 @@
     "linkAccountSuccess": "账号关联成功。",
     "logout": "退出登录",
     "logoutConfirm": "确定要退出登录吗？",
-    "logoutFail": "退出登录失败。"
+    "logoutFail": "退出登录失败。",
+    "telegramPushTitle": "Telegram 每日运势",
+    "telegramPushDesc": "每天早上在Telegram接收今日运势。",
+    "telegramPushCta": "订阅",
+    "telegramPushSuccess": "已成功订阅每日推送！",
+    "telegramPushNoProfile": "请先保存出生信息。",
+    "telegramPushAgeLimit": "未满14岁无法使用。",
+    "telegramPushError": "订阅失败，请重试。"
   },
   "birthInput": {
     "cityLookupLoading": "正在查找城市…",
