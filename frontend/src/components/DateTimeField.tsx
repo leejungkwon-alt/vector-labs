@@ -34,7 +34,17 @@ export function DateTimeField({ mode, value, onChange, displayText, disabled, st
         <TouchableOpacity
           style={[style, disabled && { opacity: 0.4 }]}
           disabled={disabled}
-          onPress={() => setShowWheel(true)}
+          onPress={() => {
+            if (Platform.OS === "web") {
+              // 텔레그램 웹뷰 터치 씹힘 방지: 포커스 해제 후 약간의 지연
+              if (typeof document !== "undefined" && document.activeElement instanceof HTMLElement) {
+                document.activeElement.blur();
+              }
+              setTimeout(() => setShowWheel(true), 50);
+            } else {
+              setShowWheel(true);
+            }
+          }}
         >
           <Text style={textStyle}>{displayText}</Text>
         </TouchableOpacity>
