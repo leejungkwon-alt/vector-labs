@@ -1,4 +1,4 @@
-﻿{
+{
   "expo": {
     "name": "Vector Labs",
     "slug": "vector-labs",
@@ -15,7 +15,8 @@
       "@react-native-community/datetimepicker",
       "expo-localization",
       "expo-web-browser",
-      "expo-splash-screen"
+      "expo-splash-screen",
+      "expo-sharing"
     ]
   }
 }
