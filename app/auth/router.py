@@ -25,17 +25,16 @@ router = APIRouter()
 
 
 def _user_public(user: dict) -> dict:
+    """유저 정보를 안전하게 반환합니다 (onetime_credits 포함)."""
     return {
-        "id": user["id"],
-        "tier": user["tier"],
-        "is_anonymous": bool(user["is_anonymous"]),
+        "id": user.get("id"),
+        "tier": user.get("tier", "free"),
+        "onetime_credits": user.get("onetime_credits", 0),
+        "is_anonymous": bool(user.get("is_anonymous", 0)),
         "social_provider": user.get("social_provider"),
         "social_subject": user.get("social_subject"),
-        "created_at": user["created_at"],
-        "email": user.get("email"),
-        "onetime_credits": user.get("onetime_credits", 0),
+        "created_at": user.get("created_at"),
     }
-
 
 @router.post("/anonymous", response_model=AnonymousTokenResponse)
 def create_anonymous_session():
