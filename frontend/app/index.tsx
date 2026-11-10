@@ -94,6 +94,7 @@ const styles = StyleSheet.create({
   mark: {
     fontSize: 132,
     lineHeight: 160,
+    fontWeight: "900",
     color: colors.text,
     textAlign: "center",
   },

@@ -26,6 +26,19 @@ const queryClient = new QueryClient({
 });
 
 export default function RootLayout() {
+  useEffect(() => {
+    if (typeof document !== "undefined" && Platform.OS === "web") {
+      const style = document.createElement("style");
+      style.innerHTML = `
+        body, div, span, p, h1, h2, h3, h4, h5, h6, input, textarea, button, a, li, label {
+          font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif !important;
+        }
+      `;
+      document.head.appendChild(style);
+      return () => { document.head.removeChild(style); };
+    }
+  }, []);
+
   const bootstrap = useAuthStore((s) => s.bootstrap);
   const loadProfile = useProfileStore((s) => s.loadProfile);
   const loadLang = useLanguageStore((s) => s.loadLang);
