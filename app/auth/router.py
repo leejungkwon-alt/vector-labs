@@ -118,6 +118,38 @@ def link_provider(
     }
 
 
+@router.post("/login/telegram")
+def login_telegram(payload: TelegramInitData):
+    from app.auth.security import create_access_token
+    from app.auth.repository import get_repository
+    
+    tg_id = _verified_telegram_id(payload)
+    repo = get_repository()
+    
+    # 텔레그램 ID로 기존 유저 찾기 (없으면 생성)
+    user = None
+    try:
+        # 기존 레포지토리에 텔레그램 ID로 유저를 찾는 함수가 있다고 가정
+        user = repo.get_user_by_telegram_id(tg_id)
+    except AttributeError:
+        pass
+        
+    if not user:
+        # 없으면 새 계정 생성 (익명 계정과 동일하게 처리)
+        user = repo.create_anonymous_user()
+        # 텔레그램 구독자로 등록 (ID 연동)
+        repo.upsert_telegram_subscriber(tg_id, user["id"], payload.lang or "ko")
+    
+    # JWT 토큰 발급
+    token = create_access_token({"sub": user["id"]})
+    
+    return {
+        "access_token": token,
+        "token_type": "bearer",
+        "user": user
+    }
+
+
 @router.post("/login/{provider}", response_model=TokenResponse)
 def login_provider(provider: str, body: LoginRequest):
     """이미 링크된 소셜 identity 로 로그인. 없으면 404."""
@@ -185,33 +217,3 @@ def list_push_tokens(user: dict = Depends(get_current_user)):
     return {"tokens": get_repository().list_push_tokens(user["id"])}
 
 
-@router.post("/login/telegram")
-def login_telegram(payload: TelegramInitData):
-    from app.auth.security import create_access_token
-    from app.auth.repository import get_repository
-    
-    tg_id = _verified_telegram_id(payload)
-    repo = get_repository()
-    
-    # 텔레그램 ID로 기존 유저 찾기 (없으면 생성)
-    user = None
-    try:
-        # 기존 레포지토리에 텔레그램 ID로 유저를 찾는 함수가 있다고 가정
-        user = repo.get_user_by_telegram_id(tg_id)
-    except AttributeError:
-        pass
-        
-    if not user:
-        # 없으면 새 계정 생성 (익명 계정과 동일하게 처리)
-        user = repo.create_anonymous_user()
-        # 텔레그램 구독자로 등록 (ID 연동)
-        repo.upsert_telegram_subscriber(tg_id, user["id"], payload.lang or "ko")
-    
-    # JWT 토큰 발급
-    token = create_access_token({"sub": user["id"]})
-    
-    return {
-        "access_token": token,
-        "token_type": "bearer",
-        "user": user
-    }
