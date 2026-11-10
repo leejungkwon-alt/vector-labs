@@ -299,13 +299,42 @@ class _BaseRepository:
         return [r["addon"] for r in rows]
 
     # ---- purchases ----
-    def log_purchase(self, user_id: str, product_id: str, platform: str) -> dict:
-        pid = uuid.uuid4().hex
+    def log_purchase(
+        self, user_id: str, product_id: str, platform: str, purchase_id: Optional[str] = None
+    ) -> dict:
+        """구매 내역 기록. purchase_id가 주어지면 멱등적(ON CONFLICT DO NOTHING)으로 삽입."""
+        pid = purchase_id or uuid.uuid4().hex
         self._run(
-            "INSERT INTO purchases (id, user_id, product_id, platform, purchased_at) VALUES (?, ?, ?, ?, ?)",
-            (pid, user_id, product_id, platform, _now_iso())
+            "INSERT INTO purchases (id, user_id, product_id, platform, purchased_at) "
+            "VALUES (?, ?, ?, ?, ?) ON CONFLICT (id) DO NOTHING",
+            (pid, user_id, product_id, platform, _now_iso()),
         )
         return self._one("SELECT * FROM purchases WHERE id = ?", (pid,))
+
+    def add_onetime_purchase_idempotent(
+        self, user_id: str, order_id: str, platform: str = "lemon_squeezy"
+    ) -> bool:
+        """
+        1회권 구매 원자적 멱등 처리:
+        동일 purchase_id(lemon_order_{order_id})가 이미 purchases에 존재하면
+        중복 크레딧을 지급하지 않고 False 반환.
+        신규 주문이면 purchases 기록 및 onetime_credits +1 증가 후 True 반환.
+        """
+        purchase_id = f"lemon_order_{order_id}" if not str(order_id).startswith("lemon_") else str(order_id)
+        
+        # 1. purchases에 삽입 시도 (idempotency anchor)
+        inserted = self._run(
+            "INSERT INTO purchases (id, user_id, product_id, platform, purchased_at) "
+            "VALUES (?, ?, ?, ?, ?) ON CONFLICT (id) DO NOTHING",
+            (purchase_id, user_id, "lemon_onetime", platform, _now_iso()),
+        )
+        if inserted == 0:
+            # 이미 처리된 주문 (중복 웹훅)
+            return False
+
+        # 2. 신규 주문에 한해서만 크레딧 +1 증가
+        self.add_onetime_credit(user_id)
+        return True
 
     def list_purchases(self, user_id: str) -> list:
         return self._all(

@@ -72,7 +72,7 @@ async def lemonsqueezy_webhook(
             is_premium=is_premium,
         )
         if event_name == "subscription_created":
-            repo.log_purchase(user_id, "lemon_sub", "lemon_squeezy")
+            repo.log_purchase(user_id, "lemon_sub", "lemon_squeezy", purchase_id=f"lemon_sub_{event['data']['id']}")
         
     elif event_name in ("subscription_cancelled", "subscription_expired"):
         repo.update_subscription(
@@ -83,19 +83,50 @@ async def lemonsqueezy_webhook(
             is_premium=False,
         )
     elif event_name == "order_created":
-        # 💡 1회성 결제(단품) 웹훅 처리
-        order = event["data"]["attributes"]
-        variant_id = str(order.get("first_order_item", {}).get("variant_id"))
-        onetime_variant = os.environ.get("LEMONSQUEEZY_ONETIME_VARIANT_ID")
-        
-        if onetime_variant and variant_id == str(onetime_variant):
-            repo.add_onetime_credit(user_id)
-            repo.log_purchase(user_id, "lemon_onetime", "lemon_squeezy")
-        else:
-            # 구독 상품 결제인 경우
-            repo.update_user_tier(user_id, "premium")
-            repo.log_purchase(user_id, "lemon_sub", "lemon_squeezy")
+        order_id = str(event["data"]["id"])
+        order_attrs = event["data"].get("attributes", {})
+        status = order_attrs.get("status")
 
+        # 1. 결제 완료 상태(paid) 및 비환불 건 확인
+        if status != "paid" or order_attrs.get("refunded"):
+            return {
+                "status": "ignored",
+                "reason": f"unpaid_or_refunded (status={status}, refunded={order_attrs.get('refunded')})",
+            }
+
+        # 2. 주문 상품의 variant_id 확인
+        first_item = order_attrs.get("first_order_item") or {}
+        variant_id = str(first_item.get("variant_id") or "")
+
+        onetime_variant = str(os.environ.get("LEMONSQUEEZY_ONETIME_VARIANT_ID", "")).strip()
+        sub_variant = str(os.environ.get("LEMONSQUEEZY_VARIANT_ID", "")).strip()
+
+        # 구독 결제의 첫 주문(order_created)인 경우 -> subscription_created에서 처리하므로 스킵
+        if sub_variant and variant_id == sub_variant:
+            return {"status": "ignored", "reason": "subscription_order_delegated"}
+
+        # 1회권 variant_id가 환경변수에 설정되어 있는 경우 불일치 시 스킵
+        if onetime_variant and variant_id != onetime_variant:
+            return {
+                "status": "ignored",
+                "reason": f"variant_mismatch (got {variant_id}, expected {onetime_variant})",
+            }
+
+        # 3. 멱등적(Idempotent) 크레딧 지급 및 구매 기록
+        try:
+            applied = repo.add_onetime_purchase_idempotent(
+                user_id=user_id, order_id=order_id, platform="lemon_squeezy"
+            )
+            if applied:
+                print(f"[Webhook] User {user_id} 1회권 결제 완료 (Order: {order_id})")
+                return {"status": "ok", "action": "credit_added", "order_id": order_id}
+            else:
+                print(f"[Webhook] User {user_id} 이미 처리된 주문 건 (Order: {order_id})")
+                return {"status": "ok", "action": "duplicate_ignored", "order_id": order_id}
+        except Exception as e:
+            print(f"[Webhook] DB 업데이트 실패 (Order: {order_id}): {e}")
+            raise HTTPException(status_code=500, detail="Database update failed")
+            
     return {"status": "ok"}
 
 
