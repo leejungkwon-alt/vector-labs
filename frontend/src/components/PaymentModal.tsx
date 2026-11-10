@@ -28,7 +28,9 @@ export function PaymentModal({ visible, onClose }: Props) {
       if (isTelegram) {
         // --- 텔레그램 스타 결제 ---
         try {
-          const { invoice_link } = await api.createStarsInvoice();
+          const { invoice_link } = productId === "onetime" 
+            ? await api.createStarsInvoiceOnetime() 
+            : await api.createStarsInvoice();
           tg.openInvoice(invoice_link, (status: string) => {
             if (status === "paid") {
               Alert.alert("결제 완료", "프리미엄이 활성화되었습니다! 앱을 새로고침합니다.");
@@ -93,6 +95,24 @@ export function PaymentModal({ visible, onClose }: Props) {
               <ActivityIndicator color={colors.primary} />
             ) : (
               <Ionicons name="chevron-forward" size={24} color={colors.primary} />
+            )}
+          </TouchableOpacity>
+
+          {/* 💳 일시불 단품 결제 (One-time) */}
+          <TouchableOpacity 
+            style={[styles.planBox, { borderColor: colors.border, backgroundColor: colors.surface, marginTop: 12 }]} 
+            onPress={() => handlePay("onetime")} 
+            disabled={!!loading}
+          >
+            <View style={{ flex: 1 }}>
+              <Text style={styles.planName}>Deep Report (1-time)</Text>
+              <Text style={styles.planDetail}>Unlock one deep report. No subscription.</Text>
+              <Text style={styles.planPrice}>{isTelegramEnv ? "150 Stars" : "$2.99 (One-time)"}</Text>
+            </View>
+            {loading === "onetime" ? (
+              <ActivityIndicator color={colors.textMuted} />
+            ) : (
+              <Ionicons name="chevron-forward" size={24} color={colors.textMuted} />
             )}
           </TouchableOpacity>
 

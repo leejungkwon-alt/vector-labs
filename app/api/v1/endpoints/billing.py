@@ -126,3 +126,37 @@ async def create_stars_invoice(user: dict = Depends(get_current_user)):
             raise HTTPException(status_code=500, detail=data.get("description"))
 
     return {"invoice_link": data["result"]}
+
+
+@router.post("/stars/invoice/onetime")
+async def create_stars_invoice_onetime(user: dict = Depends(get_current_user)):
+    """Telegram Stars 일시불(단품) 결제 인보이스 링크 생성"""
+    import os
+    import httpx
+    from fastapi import HTTPException
+    
+    bot_token = os.getenv("SAJU_TELEGRAM_BOT_TOKEN")
+    if not bot_token:
+        raise HTTPException(status_code=503, detail="Bot token not configured")
+
+    # 일시불 가격: 150 Stars
+    prices = [{"label": "Gyeol Deep Report (1-time)", "amount": 150}]
+
+    payload = {
+        "title": "Gyeol Deep Report",
+        "description": "Unlock one deep report.",
+        "payload": f"onetime_{user['id']}",
+        "currency": "XTR",
+        "prices": prices,
+    }
+
+    async with httpx.AsyncClient() as client:
+        resp = await client.post(
+            f"https://api.telegram.org/bot{bot_token}/createInvoiceLink",
+            json=payload,
+        )
+        data = resp.json()
+        if not data.get("ok"):
+            raise HTTPException(status_code=500, detail=data.get("description"))
+
+    return {"invoice_link": data["result"]}
