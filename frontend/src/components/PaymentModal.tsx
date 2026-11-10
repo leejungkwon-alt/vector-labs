@@ -16,6 +16,8 @@ export function PaymentModal({ visible, onClose }: Props) {
   const queryClient = useQueryClient();
   const [loading, setLoading] = useState<string | null>(null);
   const bootstrap = useAuthStore((s) => s.bootstrap);
+  const tg = typeof window !== "undefined" ? (window as any).Telegram?.WebApp : null;
+  const isTelegramEnv = !!tg?.initData;
 
   const handlePay = async (productId: string) => {
     setLoading(productId);
@@ -85,7 +87,7 @@ export function PaymentModal({ visible, onClose }: Props) {
                 </View>
               </View>
               <Text style={styles.planDetail}>Daily, Monthly & All Deep Reports</Text>
-              <Text style={styles.planPrice}>$6.99 / month (Cancel anytime)</Text>
+              <Text style={styles.planPrice}>{isTelegramEnv ? "400 Stars / month" : "$6.99 / month (Cancel anytime)"}</Text>
             </View>
             {loading === "sub_monthly_699" ? (
               <ActivityIndicator color={colors.primary} />
@@ -94,7 +96,7 @@ export function PaymentModal({ visible, onClose }: Props) {
             )}
           </TouchableOpacity>
 
-          <Text style={styles.terms}>Secure checkout powered by Lemon Squeezy.</Text>
+          <Text style={styles.terms}>{isTelegramEnv ? "Secure checkout powered by Telegram Stars." : "Secure checkout powered by Lemon Squeezy."}</Text>
         </View>
       </View>
     </Modal>
