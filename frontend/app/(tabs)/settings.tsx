@@ -210,10 +210,11 @@ export default function SettingsScreen() {
 
         <View style={styles.row}>
           <Text style={styles.label}>{t("settings.tier")}</Text>
-          <Text style={[styles.value, { fontWeight: "bold", color: user?.tier === "free" ? colors.text : colors.primary }]}>
-            {user?.tier === "free" ? t("settings.tierFree") :
+          <Text style={[styles.value, { fontWeight: "bold", color: (user?.tier === "free" && (user?.onetime_credits ?? 0) === 0) ? colors.text : colors.primary }]}>
+            {user?.tier === "premium" ? t("settings.tierPremium") :
              user?.tier === "subscription" ? t("settings.tierSubscription") :
-             user?.tier === "premium" ? t("settings.tierPremium") : user?.tier}
+             (user?.onetime_credits ?? 0) > 0 ? `1회 이용권 ${user.onetime_credits}매 보유` :
+             t("settings.tierFree")}
           </Text>
         </View>
       </View>
@@ -264,7 +265,7 @@ export default function SettingsScreen() {
       )}
 
       {/* 3. 무료 유저 업그레이드 유도 */}
-      {user?.tier === "free" && (
+      {user?.tier === "free" && (user?.onetime_credits ?? 0) === 0 && (
         <View style={[styles.profileBox, { backgroundColor: colors.primary + "10", borderColor: colors.primary }]}>
           <Text style={[styles.sectionTitle, { color: colors.primary }]}>{t("settings.upgradeTitle")}</Text>
           <Text style={{ fontSize: 14, color: colors.text, marginBottom: 12, lineHeight: 20 }}>

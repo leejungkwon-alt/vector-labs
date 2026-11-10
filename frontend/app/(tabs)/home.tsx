@@ -67,6 +67,13 @@ export default function HomeScreen() {
     retry: false,
   });
 
+  // 🆕 리포트 데이터 로드 완료 후 크레딧(이용권) 잔액 갱신
+  useEffect(() => {
+    if (data) {
+      useAuthStore.getState().bootstrap();
+    }
+  }, [data]);
+
 
 
   useEffect(() => {

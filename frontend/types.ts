@@ -531,6 +531,7 @@ export interface AuthResponse {
     social_provider: string | null;
     social_subject: string | null;
     created_at: string;
+    onetime_credits: number;
   };
 }
 

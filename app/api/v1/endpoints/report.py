@@ -101,7 +101,19 @@ def api_generate_report(
 
     tier = "free" if current_user is None else (current_user.get("tier") or "free")
     uid = current_user.get("id") if current_user else None
+    
     from app.auth.repository import get_repository
-    addons = get_repository().list_addons(uid) if uid else []
+    repo = get_repository()
+    
+    # 💡 1회권(크레딧) 결제 유저 처리
+    if uid and tier == "free":
+        credits = repo.get_onetime_credits(uid)
+        if credits and credits > 0:
+            # 원자적 차감 성공 시 이번 리포트는 프리미엄으로 취급
+            if repo.deduct_onetime_credit(uid):
+                tier = "premium"
+                logger.info(f"User {uid} used 1 onetime credit. Remaining: {credits - 1}")
+
+    addons = repo.list_addons(uid) if uid else []
     report = apply_entitlement_gate(report, tier, addons)
     return {"report": report}
