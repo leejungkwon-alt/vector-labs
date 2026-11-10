@@ -288,7 +288,27 @@ export default function SettingsScreen() {
         </TouchableOpacity>
       </View>
 
-      {/* 5. 언어 설정 */}
+            {/* 텔레그램 알림 스위치 */}
+      {isTgEnv && (
+        <View style={{ marginTop: 24, padding: 16, borderRadius: 12, borderWidth: 1, borderColor: "#0088cc", backgroundColor: "#f0f8ff" }}>
+          <Text style={{ fontSize: 10, color: "#aaa", marginBottom: 4 }}>BUILD 1110-C</Text>
+          <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+            <View style={{ flex: 1, marginRight: 10 }}>
+              <Text style={{ fontSize: 16, fontWeight: "600", color: "#0088cc" }}>텔레그램 알림 받기</Text>
+              <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 4, lineHeight: 18 }}>
+                매일 아침 텔레그램으로 오늘의 운세를 보내드립니다.
+              </Text>
+            </View>
+            <Switch 
+              value={isTgSubscribed} 
+              onValueChange={handleTelegramToggle} 
+              disabled={isTgLoading} 
+            />
+          </View>
+        </View>
+      )}
+
+{/* 5. 언어 설정 */}
       <View style={{ marginTop: 24, padding: 16, borderRadius: 12, borderWidth: 1, borderColor: colors.border }}>
         <Text style={{ fontSize: 16, fontWeight: "600", color: colors.text, marginBottom: 12 }}>{t("settings.language")}</Text>
         <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 10 }}>
