@@ -9,14 +9,23 @@ from app.auth.repository import get_repository
 # 👇 프로젝트의 실제 인증 의존성(Dependency) 경로로 맞춰주세요!
 from app.auth.router import get_current_user 
 
+from pydantic import BaseModel
+
+class CheckoutRequest(BaseModel):
+    is_onetime: bool = False
+
 router = APIRouter()
 
 @router.post("/checkout")
-async def create_checkout(user: dict = Depends(get_current_user)):
+async def create_checkout(payload: CheckoutRequest = CheckoutRequest(), user: dict = Depends(get_current_user)):
     """프론트엔드에서 결제 버튼을 눌렀을 때 호출되는 API"""
     from app.services.lemonsqueezy_client import create_checkout_url
+    import os
     
-    url = await create_checkout_url(user_id=user["id"], email=user.get("email"))
+    # 1회권인 경우 ONETIME_VARIANT_ID 사용, 아니면 기본(구독) VARIANT_ID 사용
+    variant_id = os.environ.get("LEMONSQUEEZY_ONETIME_VARIANT_ID") if payload.is_onetime else os.environ.get("LEMONSQUEEZY_VARIANT_ID")
+    
+    url = await create_checkout_url(user_id=user["id"], email=user.get("email"), variant_id=variant_id)
     return {"url": url}
 
 

@@ -6,7 +6,7 @@ import logging
 log = logging.getLogger("saju.billing")
 LS_API = "https://api.lemonsqueezy.com/v1"
 
-async def create_checkout_url(user_id: str, email: str | None = None) -> str:
+async def create_checkout_url(user_id: str, email: str | None = None, variant_id: str | None = None) -> str:
     """프론트엔드에서 결제 버튼을 눌렀을 때 이동할 Lemon Squeezy 결제창 URL을 생성합니다."""
     headers = {
         "Accept": "application/vnd.api+json",
@@ -28,7 +28,7 @@ async def create_checkout_url(user_id: str, email: str | None = None) -> str:
             },
             "relationships": {
                 "store": {"data": {"type": "stores", "id": os.environ["LEMONSQUEEZY_STORE_ID"]}},
-                "variant": {"data": {"type": "variants", "id": os.environ["LEMONSQUEEZY_VARIANT_ID"]}},
+                "variant": {"data": {"type": "variants", "id": variant_id or os.environ["LEMONSQUEEZY_VARIANT_ID"]}},
             },
         }
     }
