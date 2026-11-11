@@ -25,6 +25,13 @@ export default function CompatibilityScreen() {
   const shareRef = useRef<any>(null);
 
   const handleShare = async () => {
+    // 💡 텔레그램 환경에서는 웹뷰 다운로드가 안 되므로 안내창 표시
+    const tg = (window as any).Telegram?.WebApp;
+    if (tg && tg.initData) {
+      tg.showAlert("이미지로 저장하시려면 화면을 캡처해 주세요!\n(아래 '나도 내 궁합 확인하러 가기' 링크를 친구에게 공유할 수도 있습니다.)");
+      return;
+    }
+
     try {
       if (!shareRef.current) return;
       const uri = await captureRef(shareRef, { format: "png", quality: 1 });
