@@ -32,23 +32,9 @@ export default function CompatibilityScreen() {
       if (!shareRef.current) return;
       const uri = await captureRef(shareRef, { format: "png", quality: 1 });
 
-      // 💡 텔레그램 환경: downloadFile API로 저장 시도
+      // 💡 텔레그램 환경: 이미지 저장이 불가능하므로 스크린샷 안내
       if (isTelegram) {
-        try {
-          if (typeof tg.downloadFile === "function") {
-            const res = await fetch(uri);
-            const blob = await res.blob();
-            const blobUrl = URL.createObjectURL(blob);
-            tg.downloadFile({ url: blobUrl, fileName: "gyeol-compatibility.png" });
-            tg.showAlert("이미지 저장을 시작합니다!\n저장이 안 되면 화면을 길게 눌러 저장해 주세요.");
-            setTimeout(() => URL.revokeObjectURL(blobUrl), 10000);
-            return;
-          }
-        } catch (e) {
-          console.error("Telegram downloadFile failed", e);
-        }
-        // downloadFile 미지원 or 실패 시 안내
-        tg.showAlert("이미지가 준비되었습니다.\n화면을 길게 눌러 저장하거나 스크린샷을 찍어 주세요.");
+        tg.showAlert("텔레그램에서는 이미지 저장을 지원하지 않습니다.\n\n화면을 캡처(스크린샷)해서 친구에게 보내주세요!");
         return;
       }
 
