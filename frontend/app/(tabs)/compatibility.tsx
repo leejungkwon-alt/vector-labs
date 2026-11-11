@@ -26,7 +26,7 @@ export default function CompatibilityScreen() {
   const handleShare = async () => {
     // 💡 [안전장치] 텔레그램 환경일 때만 실행되고, 웹 브라우저는 이 코드를 무시합니다.
     const tg = (window as any).Telegram?.WebApp;
-    if (tg && tg.initData) {
+    if (tg) {
       const inviteId = useAuthStore.getState().user?.id || "unknown";
       const deepLink = `https://t.me/my_vector_labs_bot?startapp=invite_${inviteId}`;
       const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(deepLink)}&text=${encodeURIComponent("내 궁합 결과 확인해 봐! 👇")}`;
@@ -347,7 +347,7 @@ export default function CompatibilityScreen() {
           onPress={handleShare} 
           style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: colors.primary, padding: 16, borderRadius: radius.md, marginTop: 20 }}
         >
-          <Ionicons name="share-outline" size={20} color="#FFF" style={{ marginRight: 8 }} />
+          <Text style={{ fontSize: 20, color: "#FFF", marginRight: 8 }}>📤</Text>
           <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>
             {t("compatibility.share") || "Share"}
           </Text>
