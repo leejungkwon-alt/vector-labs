@@ -239,6 +239,14 @@ class _BaseRepository:
         """궁합 결과를 저장하고 고유 ID를 반환합니다."""
         import uuid
         share_id = uuid.uuid4().hex
+        # 테이블이 없으면 자동 생성 (안전장치)
+        try:
+            self._run(
+                "CREATE TABLE IF NOT EXISTS shared_compatibilities (id TEXT PRIMARY KEY, result_data TEXT NOT NULL, created_at TEXT NOT NULL)",
+                (),
+            )
+        except Exception:
+            pass
         self._run(
             "INSERT INTO shared_compatibilities (id, result_data, created_at) VALUES (?, ?, ?)",
             (share_id, result_data, _now_iso()),
