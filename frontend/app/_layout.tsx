@@ -7,6 +7,7 @@ if (typeof window !== "undefined") {
   script.async = false; // 동기적으로 로드하여 해시 파싱 보장
   document.head.appendChild(script);
 }
+import { useTelegramUX } from '@/hooks/useTelegramUX';
 import { Stack } from "expo-router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -26,6 +27,7 @@ const queryClient = new QueryClient({
 });
 
 export default function RootLayout() {
+  useTelegramUX();
   useEffect(() => {
     if (typeof document !== "undefined" && Platform.OS === "web") {
       const style = document.createElement("style");
