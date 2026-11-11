@@ -36,13 +36,25 @@ ${shareUrl}`;
       tg.openTelegramLink(telegramShareUrl);
       return;
     } else {
-      // 웹 환경에서도 링크 복사 or 공유
+      // 웹 환경 분기
       if (Platform.OS === "web") {
-        if (navigator.share) {
-          await navigator.share({ title: "Gyeol Compatibility", url: shareUrl });
+        if (!shareUrl || shareUrl.includes("undefined")) {
+          alert("공유 링크를 생성하지 못했습니다. 다시 시도해 주세요.");
+          return;
+        }
+        
+        const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        
+        if (isMobile && navigator.share) {
+          try {
+            await navigator.share({ title: "Gyeol Compatibility", url: shareUrl });
+          } catch (e) {
+            // 사용자가 공유 취소한 경우 무시
+          }
         } else {
+          // PC 웹은 무조건 링크 복사
           await navigator.clipboard.writeText(shareUrl);
-          alert("공유 링크가 복사되었습니다! 친구에게 붙여넣기 해주세요.");
+          alert("공유 링크가 복사되었습니다! 친구에게 붙여넣기 해주세요.\n\n" + shareUrl);
         }
         return;
       }
