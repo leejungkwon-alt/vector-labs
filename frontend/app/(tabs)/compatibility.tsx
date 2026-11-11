@@ -25,17 +25,33 @@ export default function CompatibilityScreen() {
   const shareRef = useRef<any>(null);
 
   const handleShare = async () => {
-    // 💡 텔레그램 환경에서는 웹뷰 다운로드가 안 되므로 안내창 표시
     const tg = (window as any).Telegram?.WebApp;
-    if (tg && tg.initData) {
-      tg.showAlert("이미지로 저장하시려면 화면을 캡처해 주세요!\n(아래 '나도 내 궁합 확인하러 가기' 링크를 친구에게 공유할 수도 있습니다.)");
-      return;
-    }
+    const isTelegram = !!(tg && tg.initData);
 
     try {
       if (!shareRef.current) return;
       const uri = await captureRef(shareRef, { format: "png", quality: 1 });
-      
+
+      // 💡 텔레그램 환경: downloadFile API로 저장 시도
+      if (isTelegram) {
+        try {
+          if (typeof tg.downloadFile === "function") {
+            const res = await fetch(uri);
+            const blob = await res.blob();
+            const blobUrl = URL.createObjectURL(blob);
+            tg.downloadFile({ url: blobUrl, fileName: "gyeol-compatibility.png" });
+            tg.showAlert("이미지 저장을 시작합니다!\n저장이 안 되면 화면을 길게 눌러 저장해 주세요.");
+            setTimeout(() => URL.revokeObjectURL(blobUrl), 10000);
+            return;
+          }
+        } catch (e) {
+          console.error("Telegram downloadFile failed", e);
+        }
+        // downloadFile 미지원 or 실패 시 안내
+        tg.showAlert("이미지가 준비되었습니다.\n화면을 길게 눌러 저장하거나 스크린샷을 찍어 주세요.");
+        return;
+      }
+
       if (Platform.OS === "web") {
         // PC(데스크톱)인지 확인 (모바일 웹은 navigator.userAgent로 구분)
         const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
