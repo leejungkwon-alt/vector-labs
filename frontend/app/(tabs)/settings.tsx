@@ -194,6 +194,13 @@ export default function SettingsScreen() {
   const getLoginProvider = () => {
     if (!user) return t("settings.loginNotSet");
     if (user.is_anonymous) return t("settings.loginAnonymous");
+    
+    // 💡 텔레그램 환경에서는 무조건 텔레그램으로 표시
+    if (isTgEnv) {
+      return "Telegram 연동됨";
+    }
+    
+    // 웹 환경에서는 기존 소셜 로그인 정보 표시
     const provider = user.social_provider
       ? user.social_provider.charAt(0).toUpperCase() + user.social_provider.slice(1)
       : "Social";
