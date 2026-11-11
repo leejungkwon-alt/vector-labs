@@ -183,4 +183,17 @@ def api_compatibility(
         "a": _pair_summary(pa, payload.lang),
         "b": _pair_summary(pb, payload.lang),
     }
-    return {"compatibility": response}
+    # 💡 결과를 DB에 저장하고 share_id 발급
+    import json
+    share_id = get_repository().save_shared_compatibility(json.dumps(response, ensure_ascii=False))
+    return {"compatibility": response, "share_id": share_id}
+
+
+@router.get("/shared/{share_id}")
+def get_shared_compatibility(share_id: str):
+    """공유된 궁합 결과를 로그인 없이 조회합니다."""
+    import json
+    row = get_repository().get_shared_compatibility(share_id)
+    if not row:
+        raise HTTPException(status_code=404, detail="Shared compatibility not found.")
+    return {"compatibility": json.loads(row["result_data"])}

@@ -26,23 +26,26 @@ export default function CompatibilityScreen() {
 
   const handleShare = async () => {
     const tg = (window as any).Telegram?.WebApp;
-    if (tg && tg.platform !== "unknown") {
-      try {
-        if (typeof tg.openTelegramLink === "function") {
-          const inviteId = useAuthStore.getState().user?.id || "unknown";
-          const deepLink = `https://t.me/my_vector_labs_bot?startapp=invite_${inviteId}`;
-          const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(deepLink)}&text=${encodeURIComponent("내 궁합 결과 확인해 봐! 👇")}`;
-          
-          // 텔레그램 공유창 호출
-          tg.openTelegramLink(shareUrl);
-        } else {
-          tg.showAlert("이 텔레그램 버전은 공유 기능을 지원하지 않습니다. 업데이트 해주세요.");
-        }
-      } catch (e: any) {
-        // 에러가 나면 텔레그램 화면에 팝업으로 보여줌
-        tg.showAlert("공유 에러 발생: " + (e.message || String(e)));
-      }
+    const isTelegram = !!tg?.platform && tg.platform !== "unknown";
+    const shareUrl = `https://gyeol-blond.vercel.app/share/${data?.share_id}`;
+
+    if (isTelegram) {
+      const text = `내 궁합 결과 확인해 봐! 👇
+${shareUrl}`;
+      const telegramShareUrl = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(text)}`;
+      tg.openTelegramLink(telegramShareUrl);
       return;
+    } else {
+      // 웹 환경에서도 링크 복사 or 공유
+      if (Platform.OS === "web") {
+        if (navigator.share) {
+          await navigator.share({ title: "Gyeol Compatibility", url: shareUrl });
+        } else {
+          await navigator.clipboard.writeText(shareUrl);
+          alert("공유 링크가 복사되었습니다! 친구에게 붙여넣기 해주세요.");
+        }
+        return;
+      }
     }
 
     // 👇 여기서부터는 기존 웹앱 로직이 그대로 실행됩니다. (절대 건드리지 않음)

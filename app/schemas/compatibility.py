@@ -34,3 +34,4 @@ class CompatibilityRequest(BaseModel):
 
 class CompatibilityResponse(BaseModel):
     compatibility: Dict[str, Any]
+    share_id: Optional[str] = None

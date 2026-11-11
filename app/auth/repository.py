@@ -233,6 +233,24 @@ class _BaseRepository:
         """계정 및 연관 데이터(프로필, 애드온, 푸시 토큰, 텔레그램 구독) 삭제."""
         return self._run("DELETE FROM users WHERE id = ?", (user_id,)) > 0
 
+
+    # ---- shared compatibility ----
+    def save_shared_compatibility(self, result_data: str) -> str:
+        """궁합 결과를 저장하고 고유 ID를 반환합니다."""
+        import uuid
+        share_id = uuid.uuid4().hex
+        self._run(
+            "INSERT INTO shared_compatibilities (id, result_data, created_at) VALUES (?, ?, ?)",
+            (share_id, result_data, _now_iso()),
+        )
+        return share_id
+
+    def get_shared_compatibility(self, share_id: str) -> Optional[dict]:
+        """공유된 궁합 결과를 조회합니다."""
+        return self._one(
+            "SELECT * FROM shared_compatibilities WHERE id = ?", (share_id,)
+        )
+
     def set_tier(self, user_id: str, tier: str) -> dict:
         """관리/테스트용. 실제 결제 연동은 IAP 스텝에서."""
         self._run("UPDATE users SET tier = ? WHERE id = ?", (tier, user_id))
