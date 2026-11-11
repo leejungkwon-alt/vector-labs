@@ -25,8 +25,12 @@ export default function SharedCompatibilityScreen() {
   if (isLoading) return <View style={styles.center}><ActivityIndicator size="large" color={colors.primary} /></View>;
   if (error || !data) return <View style={styles.center}><Text style={styles.errorText}>결과를 찾을 수 없습니다.</Text></View>;
 
-  // 데이터 구조 안전성 검사
-  const compat = data.compatibility;
+  // 이중 래핑 대응: data.compatibility.compatibility 또는 data.compatibility
+  let compat = data.compatibility;
+  if (compat && compat.compatibility) {
+    compat = compat.compatibility;
+  }
+
   if (!compat) {
     return (
       <View style={styles.center}>
@@ -35,26 +39,36 @@ export default function SharedCompatibilityScreen() {
     );
   }
 
-  // body가 배열이거나 객체일 수 있으므로 문자열로 안전하게 변환
   const safeBody = typeof compat.body === 'string' 
     ? compat.body 
     : JSON.stringify(compat.body, null, 2);
+
+  const pair = compat.pair;
+  const score = compat.overall_score || compat.total_score || null;
 
   return (
     <ScrollView style={styles.container}>
       <View style={styles.card}>
         <Text style={styles.title}>궁합 결과</Text>
-        <Text style={styles.score}>{compat.overall_score || 0}점</Text>
-        <Text style={styles.headline}>{compat.headline || ""}</Text>
-        <Text style={styles.body}>{safeBody}</Text>
+        {score !== null && <Text style={styles.score}>{score}점</Text>}
+        {compat.grade_label && <Text style={styles.grade}>{compat.grade_label}</Text>}
+        {compat.headline && <Text style={styles.headline}>{compat.headline}</Text>}
+        {safeBody && <Text style={styles.body}>{safeBody}</Text>}
         
-        {/* axes가 배열일 때만 렌더링 */}
-        {Array.isArray(compat.axes) && compat.axes.map((axis: any, idx: number) => (
-          <View key={idx} style={styles.axisBox}>
-            <Text style={styles.axisTitle}>{axis.title || ""}</Text>
-            <Text style={styles.axisDesc}>{axis.description || ""}</Text>
+        {compat.relationship_advice && (
+          <View style={styles.adviceBox}>
+            <Text style={styles.adviceTitle}>관계 조언</Text>
+            <Text style={styles.adviceText}>{compat.relationship_advice}</Text>
           </View>
-        ))}
+        )}
+
+        {pair && (
+          <View style={styles.pairBox}>
+            <Text style={styles.pairTitle}>두 사람의 에너지</Text>
+            <Text style={styles.pairText}>A: {pair.a?.archetype_label || pair.a?.archetype || ""}</Text>
+            <Text style={styles.pairText}>B: {pair.b?.archetype_label || pair.b?.archetype || ""}</Text>
+          </View>
+        )}
       </View>
       
       <TouchableOpacity style={styles.ctaBtn} onPress={handleGoToApp}>
@@ -71,11 +85,15 @@ const styles = StyleSheet.create({
   card: { backgroundColor: colors.surface, padding: 24, borderRadius: radius.lg, borderWidth: 1, borderColor: colors.border, marginBottom: 24 },
   title: { fontSize: 20, fontWeight: "700", color: colors.text, textAlign: "center", marginBottom: 16 },
   score: { fontSize: 56, fontWeight: "800", color: colors.primary, textAlign: "center", marginBottom: 8 },
+  grade: { fontSize: 22, fontWeight: "700", color: colors.text, textAlign: "center", marginBottom: 16 },
   headline: { fontSize: 18, fontWeight: "700", color: colors.text, textAlign: "center", marginBottom: 8 },
   body: { fontSize: 15, color: colors.textMuted, textAlign: "center", lineHeight: 22, marginBottom: 24 },
-  axisBox: { backgroundColor: colors.bg, padding: 16, borderRadius: radius.md, marginBottom: 12 },
-  axisTitle: { fontSize: 16, fontWeight: "700", color: colors.primary, marginBottom: 4 },
-  axisDesc: { fontSize: 14, color: colors.text, lineHeight: 20 },
+  adviceBox: { backgroundColor: colors.primary + "10", padding: 16, borderRadius: radius.md, marginBottom: 12 },
+  adviceTitle: { fontSize: 14, fontWeight: "700", color: colors.primary, marginBottom: 6 },
+  adviceText: { fontSize: 15, color: colors.text, lineHeight: 22 },
+  pairBox: { backgroundColor: colors.bg, padding: 16, borderRadius: radius.md, marginBottom: 12 },
+  pairTitle: { fontSize: 16, fontWeight: "700", color: colors.primary, marginBottom: 8 },
+  pairText: { fontSize: 14, color: colors.text, marginBottom: 4 },
   ctaBtn: { backgroundColor: colors.primary, padding: 16, borderRadius: radius.md, alignItems: "center", marginBottom: 40 },
   ctaText: { color: colors.onPrimary, fontSize: 17, fontWeight: "700" },
 });
