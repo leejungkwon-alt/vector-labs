@@ -24,16 +24,26 @@ export default function CompatibilityScreen() {
   const shareRef = useRef<any>(null);
 
   const handleShare = async () => {
-    // 💡 [안전장치] 텔레그램 환경일 때만 실행되고, 웹 브라우저는 이 코드를 무시합니다.
     const tg = (window as any).Telegram?.WebApp;
     if (tg) {
-      const inviteId = useAuthStore.getState().user?.id || "unknown";
-      const deepLink = `https://t.me/my_vector_labs_bot?startapp=invite_${inviteId}`;
-      const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(deepLink)}&text=${encodeURIComponent("내 궁합 결과 확인해 봐! 👇")}`;
-      tg.openTelegramLink(shareUrl);
-      return; // 텔레그램 공유를 실행했으므로, 아래의 웹 다운로드 로직은 실행하지 않고 종료!
+      try {
+        if (typeof tg.openTelegramLink === "function") {
+          const inviteId = useAuthStore.getState().user?.id || "unknown";
+          const deepLink = `https://t.me/my_vector_labs_bot?startapp=invite_${inviteId}`;
+          const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(deepLink)}&text=${encodeURIComponent("내 궁합 결과 확인해 봐! 👇")}`;
+          
+          // 텔레그램 공유창 호출
+          tg.openTelegramLink(shareUrl);
+        } else {
+          tg.showAlert("이 텔레그램 버전은 공유 기능을 지원하지 않습니다. 업데이트 해주세요.");
+        }
+      } catch (e: any) {
+        // 에러가 나면 텔레그램 화면에 팝업으로 보여줌
+        tg.showAlert("공유 에러 발생: " + (e.message || String(e)));
+      }
+      return;
     }
-    
+
     // 👇 여기서부터는 기존 웹앱 로직이 그대로 실행됩니다. (절대 건드리지 않음)
 
     try {
