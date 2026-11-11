@@ -187,7 +187,8 @@ export const useAuthStore = create<AuthState>((set) => ({
     const tg = (window as any).Telegram?.WebApp;
     if (!tg || !tg.initData) throw new Error("Telegram environment not found");
     
-    const res = await api.loginTelegram(tg.initData);
+    const currentToken = await storage.getItem(TOKEN_KEY);
+    const res = await api.loginTelegram(tg.initData, currentToken);
     await storage.setItem(TOKEN_KEY, res.access_token);
     setAuthToken(res.access_token);
     set({ user: res.user, ready: true });
