@@ -26,7 +26,7 @@ export default function CompatibilityScreen() {
 
   const handleShare = async () => {
     const tg = (window as any).Telegram?.WebApp;
-    if (tg) {
+    if (tg && tg.platform !== "unknown") {
       try {
         if (typeof tg.openTelegramLink === "function") {
           const inviteId = useAuthStore.getState().user?.id || "unknown";
