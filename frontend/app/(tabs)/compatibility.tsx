@@ -1,3 +1,4 @@
+import { useAuthStore } from '@/store/authStore';
 import { useLanguageStore } from "@/store/languageStore";
 import { formatPickerDate, formatPickerTime } from "@/i18n";
 import { useT } from "@/i18n";
