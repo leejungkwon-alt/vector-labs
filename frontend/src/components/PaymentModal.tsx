@@ -1,3 +1,4 @@
+import * as RNIap from 'react-native-iap';
 import { useQueryClient } from '@tanstack/react-query';
 import React, { useState } from "react";
 import { Modal, View, Text, TouchableOpacity, StyleSheet, ActivityIndicator, Alert } from "react-native";
@@ -15,45 +16,91 @@ interface Props {
 export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
   const queryClient = useQueryClient();
   const [loading, setLoading] = useState<string | null>(null);
+
+  const [iapReady, setIapReady] = useState(false);
+
+  useEffect(() => {
+    let isMounted = true;
+    const initIAP = async () => {
+      if (Platform.OS === 'android' && !isTelegramEnv) {
+        try {
+          await RNIap.initConnection();
+          if (isMounted) setIapReady(true);
+          console.log('IAP Connection initialized');
+        } catch (err) {
+          console.warn('IAP init error:', err);
+        }
+      }
+    };
+    initIAP();
+    return () => {
+      isMounted = false;
+      if (Platform.OS === 'android' && !isTelegramEnv) {
+        RNIap.endConnection();
+      }
+    };
+  }, [isTelegramEnv]);
+
   const bootstrap = useAuthStore((s) => s.bootstrap);
   const user = useAuthStore((s) => s.user);
   const tg = typeof window !== "undefined" ? (window as any).Telegram?.WebApp : null;
   const isTelegramEnv = !!tg?.initData;
 
   const handlePay = async (productId: string) => {
-    if (user?.is_anonymous) {
-      if (onRequireLogin) onRequireLogin();
-      return;
-    }
     setLoading(productId);
     try {
       const tg = (window as any).Telegram?.WebApp;
       const isTelegram = !!tg?.initData;
 
-      if (isTelegram) {
-        // --- 텔레그램 스타 결제 ---
+      // --- 1. 안드로이드 앱 (구글 플레이 결제) ---
+      if (Platform.OS === 'android' && !isTelegram) {
+        if (!iapReady) {
+          alert("구글 플레이 결제 모듈을 불러오는 중입니다. 잠시 후 다시 시도해 주세요.");
+          setLoading(null);
+          return;
+        }
         try {
-          const { invoice_link } = productId === "onetime" 
-            ? await api.createStarsInvoiceOnetime() 
+          const sku = productId === "onetime" ? "gyeol_onetime_credit" : "gyeol_premium_monthly";
+          const purchase = productId === "onetime"
+            ? await RNIap.requestPurchase({ sku })
+            : await RNIap.requestSubscription({ sku });
+
+          if (purchase) {
+            // TODO: 백엔드 영수증 검증 API 호출
+            await RNIap.finishTransaction({ purchase: purchase as any, isConsumable: productId === "onetime" });
+            alert("결제가 완료되었습니다! (서버 검증 연동 필요)");
+            onClose();
+            bootstrap();
+          }
+        } catch (err: any) {
+          if (err.code !== 'E_USER_CANCELLED') {
+            alert("결제 중 오류가 발생했습니다: " + err.message);
+          }
+        }
+        setLoading(null);
+        return;
+      }
+
+      // --- 2. 텔레그램 스타 결제 ---
+      if (isTelegram) {
+        try {
+          const { invoice_link } = productId === "onetime"
+            ? await api.createStarsInvoiceOnetime()
             : await api.createStarsInvoice();
           tg.openInvoice(invoice_link, (status: string) => {
             if (status === "paid") {
-              Alert.alert("결제 완료", "프리미엄이 활성화되었습니다! 앱을 새로고침합니다.");
+              alert("결제 완료! 프리미엄이 활성화되었습니다.");
               window.location.reload();
-            } else if (status === "cancelled") {
-              // 사용자 취소
-            } else if (status === "failed") {
-              Alert.alert("결제 실패", "결제를 다시 시도해주세요.");
             }
           });
-          return; // ★ 중요: 여기서 함수를 종료하여 Lemon Squeezy로 넘어가지 않도록 함
         } catch (e: any) {
-          Alert.alert("결제 오류", e.message || "텔레그램 결제를 시작할 수 없습니다.");
-          return;
+          alert("결제 오류: " + (e.message || "텔레그램 결제를 시작할 수 없습니다."));
         }
+        setLoading(null);
+        return;
       }
 
-      // --- 기존 Lemon Squeezy 결제 (일반 웹) ---
+      // --- 3. 일반 웹 (레몬 스퀴지) ---
       const { url } = await api.checkout(productId === 'onetime');
       if (Platform.OS === "web") {
         window.location.href = url;
@@ -62,7 +109,7 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
         onClose();
       }
     } catch (e: any) {
-      Alert.alert("Checkout Failed", e.message || "Please try again.");
+      alert("Checkout Failed: " + (e.message || "Please try again."));
     } finally {
       setLoading(null);
     }
