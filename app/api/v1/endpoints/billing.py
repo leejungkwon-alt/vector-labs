@@ -14,16 +14,21 @@ from pydantic import BaseModel
 class CheckoutRequest(BaseModel):
     is_onetime: bool = False
 
+import logging
+logger = logging.getLogger("saju.billing")
+
 router = APIRouter()
 
 @router.post("/checkout")
 async def create_checkout(payload: CheckoutRequest = CheckoutRequest(), user: dict = Depends(get_current_user)):
     """프론트엔드에서 결제 버튼을 눌렀을 때 호출되는 API"""
+    if user.get("is_anonymous"):
+        raise HTTPException(status_code=401, detail="Login required for checkout.")
     from app.services.lemonsqueezy_client import create_checkout_url
     import os
     
     # 1회권인 경우 ONETIME_VARIANT_ID 사용, 아니면 기본(구독) VARIANT_ID 사용
-    variant_id = os.environ.get("LEMONSQUEEZY_ONETIME_VARIANT_ID") if payload.is_onetime else os.environ.get("LEMONSQUEEZY_VARIANT_ID")
+    variant_id = (os.environ.get("LEMONSQUEEZY_ONETIME_VARIANT_ID") or "").strip() if payload.is_onetime else (os.environ.get("LEMONSQUEEZY_VARIANT_ID") or "").strip()
     
     url = await create_checkout_url(user_id=user["id"], email=user.get("email"), variant_id=variant_id)
     return {"url": url}
@@ -35,7 +40,7 @@ async def lemonsqueezy_webhook(
     x_signature: str = Header(..., alias="X-Signature"),
 ):
     """Lemon Squeezy 결제 완료/취소 웹훅 수신"""
-    secret_str = os.environ.get("LEMONSQUEEZY_WEBHOOK_SECRET", "")
+    secret_str = os.environ.get("LEMONSQUEEZY_WEBHOOK_SECRET", "").strip()
     if not secret_str:
         raise HTTPException(status_code=503, detail="Webhook not configured")
     secret = secret_str.encode()
@@ -53,7 +58,8 @@ async def lemonsqueezy_webhook(
     user_id = custom.get("user_id")
 
     if not user_id:
-        return {"status": "ignored"} # user_id가 없으면 무시
+        logger.warning("LS webhook %s ignored: no custom_data.user_id", event_name)
+        return {"status": "ignored"}
 
     repo = get_repository()
     
@@ -83,50 +89,24 @@ async def lemonsqueezy_webhook(
             is_premium=False,
         )
     elif event_name == "order_created":
-        order_id = str(event["data"]["id"])
-        order_attrs = event["data"].get("attributes", {})
-        status = order_attrs.get("status")
-
-        # 1. 결제 완료 상태(paid) 및 비환불 건 확인
-        if status != "paid" or order_attrs.get("refunded"):
-            return {
-                "status": "ignored",
-                "reason": f"unpaid_or_refunded (status={status}, refunded={order_attrs.get('refunded')})",
-            }
-
-        # 2. 주문 상품의 variant_id 확인
-        first_item = order_attrs.get("first_order_item") or {}
-        variant_id = str(first_item.get("variant_id") or "")
-
-        onetime_variant = str(os.environ.get("LEMONSQUEEZY_ONETIME_VARIANT_ID", "")).strip()
-        sub_variant = str(os.environ.get("LEMONSQUEEZY_VARIANT_ID", "")).strip()
-
-        # 구독 결제의 첫 주문(order_created)인 경우 -> subscription_created에서 처리하므로 스킵
-        if sub_variant and variant_id == sub_variant:
-            return {"status": "ignored", "reason": "subscription_order_delegated"}
-
-        # 1회권 variant_id가 환경변수에 설정되어 있는 경우 불일치 시 스킵
-        if onetime_variant and variant_id != onetime_variant:
-            return {
-                "status": "ignored",
-                "reason": f"variant_mismatch (got {variant_id}, expected {onetime_variant})",
-            }
-
-        # 3. 멱등적(Idempotent) 크레딧 지급 및 구매 기록
-        try:
-            applied = repo.add_onetime_purchase_idempotent(
-                user_id=user_id, order_id=order_id, platform="lemon_squeezy"
-            )
-            if applied:
-                print(f"[Webhook] User {user_id} 1회권 결제 완료 (Order: {order_id})")
-                return {"status": "ok", "action": "credit_added", "order_id": order_id}
-            else:
-                print(f"[Webhook] User {user_id} 이미 처리된 주문 건 (Order: {order_id})")
-                return {"status": "ok", "action": "duplicate_ignored", "order_id": order_id}
-        except Exception as e:
-            print(f"[Webhook] DB 업데이트 실패 (Order: {order_id}): {e}")
-            raise HTTPException(status_code=500, detail="Database update failed")
+        attrs = event["data"]["attributes"]
+        variant_id = str((attrs.get("first_order_item") or {}).get("variant_id"))
+        onetime_variant = os.environ.get("LEMONSQUEEZY_ONETIME_VARIANT_ID", "").strip()
+        
+        # 1회권 상품이 아니거나 결제 상태가 paid가 아니면 무시
+        if variant_id != onetime_variant or attrs.get("status") != "paid":
+            logger.info("LS order ignored (not onetime or not paid). variant=%s", variant_id)
+            return {"status": "ignored"}
             
+        order_id = event["data"]["id"]
+        try:
+            # 💡 멱등성 메서드 적용 (중복 적립 방지)
+            granted = repo.add_onetime_purchase_idempotent(user_id, order_id)
+            logger.info("✅ LS order_created order=%s user=%s granted=%s", order_id, user_id, granted)
+        except Exception:
+            logger.exception("❌ LS order_created failed order=%s", order_id)
+            raise HTTPException(status_code=500, detail="retry") # 500 에러를 던져 레몬 스퀴지가 재시도하게 함
+
     return {"status": "ok"}
 
 
@@ -155,6 +135,8 @@ import httpx
 @router.post("/stars/invoice")
 async def create_stars_invoice(user: dict = Depends(get_current_user)):
     """Telegram Stars 결제를 위한 인보이스 링크 생성"""
+    if user.get("is_anonymous"):
+        raise HTTPException(status_code=401, detail="Login required for checkout.")
     import os
     bot_token = os.getenv("SAJU_TELEGRAM_BOT_TOKEN")
     if not bot_token:
@@ -186,6 +168,8 @@ async def create_stars_invoice(user: dict = Depends(get_current_user)):
 @router.post("/stars/invoice/onetime")
 async def create_stars_invoice_onetime(user: dict = Depends(get_current_user)):
     """Telegram Stars 일시불(단품) 결제 인보이스 링크 생성"""
+    if user.get("is_anonymous"):
+        raise HTTPException(status_code=401, detail="Login required for checkout.")
     import os
     import httpx
     from fastapi import HTTPException

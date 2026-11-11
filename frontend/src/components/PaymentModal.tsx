@@ -9,16 +9,22 @@ import { Platform, Linking } from 'react-native';
 interface Props {
   visible: boolean;
   onClose: () => void;
+  onRequireLogin?: () => void;
 }
 
-export function PaymentModal({ visible, onClose }: Props) {
+export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
   const queryClient = useQueryClient();
   const [loading, setLoading] = useState<string | null>(null);
   const bootstrap = useAuthStore((s) => s.bootstrap);
+  const user = useAuthStore((s) => s.user);
   const tg = typeof window !== "undefined" ? (window as any).Telegram?.WebApp : null;
   const isTelegramEnv = !!tg?.initData;
 
   const handlePay = async (productId: string) => {
+    if (user?.is_anonymous) {
+      if (onRequireLogin) onRequireLogin();
+      return;
+    }
     setLoading(productId);
     try {
       const tg = (window as any).Telegram?.WebApp;

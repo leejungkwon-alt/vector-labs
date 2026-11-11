@@ -32,3 +32,50 @@ data/auth.db
 # IDE
 .vscode/
 .idea/
+
+# --- 2026-11 보안 정리 ---
+# 시크릿/환경 파일 (이름이 .env 가 아니어도 전부 제외)
+*.env
+.env*
+*.pem
+*.key
+*.p12
+*.token
+*.secret
+*_credentials.json
+*_service_account.json
+scripts/_secrets_*
+
+# 로컬 DB (운영은 PostgreSQL)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# 정리 대상 / 백업 / 임시
+_cleanup_trash/
+scripts/_backups/
+scripts/archive/
+*.bak
+*.bak_*
+*.bak.*
+*.pre_*
+*.new
+*.orig
+*.backup
+
+# 덤프 / 리포트 / 일회성 스크립트
+code_dump.txt
+*_dump.txt
+report_dump.json
+dump_code.py
+apply_fixes.py
+cleanup_repo.py
+_patch_repo.py
+cripts/
+
+# 기타 불필요 항목
+.github/
+.vercel/
+.vercelignore
+docs/

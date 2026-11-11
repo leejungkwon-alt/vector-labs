@@ -4,6 +4,9 @@ import httpx
 import logging
 
 log = logging.getLogger("saju.billing")
+def _env(name: str, default: str = "") -> str:
+    return os.environ.get(name, default).strip()
+
 LS_API = "https://api.lemonsqueezy.com/v1"
 
 async def create_checkout_url(user_id: str, email: str | None = None, variant_id: str | None = None) -> str:
@@ -11,7 +14,7 @@ async def create_checkout_url(user_id: str, email: str | None = None, variant_id
     headers = {
         "Accept": "application/vnd.api+json",
         "Content-Type": "application/vnd.api+json",
-        "Authorization": f"Bearer {os.environ['LEMONSQUEEZY_API_KEY']}",
+        "Authorization": f"Bearer {_env("LEMONSQUEEZY_API_KEY")}",
     }
     
     payload = {
@@ -27,8 +30,8 @@ async def create_checkout_url(user_id: str, email: str | None = None, variant_id
                 },
             },
             "relationships": {
-                "store": {"data": {"type": "stores", "id": os.environ["LEMONSQUEEZY_STORE_ID"]}},
-                "variant": {"data": {"type": "variants", "id": variant_id or os.environ["LEMONSQUEEZY_VARIANT_ID"]}},
+                "store": {"data": {"type": "stores", "id": _env("LEMONSQUEEZY_STORE_ID")}},
+                "variant": {"data": {"type": "variants", "id": variant_id or _env("LEMONSQUEEZY_VARIANT_ID")}},
             },
         }
     }
@@ -46,7 +49,7 @@ async def get_customer_portal_url(subscription_id: str) -> str | None:
     """Lemon Squeezy 구독 ID로 고객 포털(Signed URL)을 조회."""
     headers = {
         "Accept": "application/vnd.api+json",
-        "Authorization": f"Bearer {os.environ['LEMONSQUEEZY_API_KEY']}",
+        "Authorization": f"Bearer {_env("LEMONSQUEEZY_API_KEY")}",
     }
     async with httpx.AsyncClient(timeout=15) as client:
         resp = await client.get(f"{LS_API}/subscriptions/{subscription_id}", headers=headers)

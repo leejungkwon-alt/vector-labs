@@ -388,6 +388,11 @@ export default function SettingsScreen() {
       <PaymentModal
         visible={showPayment}
         onClose={() => setShowPayment(false)}
+        onRequireLogin={() => {
+          setShowPayment(false);
+          setIsLinkMode(false);
+          setShowLogin(true);
+        }}
       />
     </ScrollView>
   );

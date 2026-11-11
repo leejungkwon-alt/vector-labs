@@ -282,11 +282,14 @@ async def telegram_payment_webhook(request: Request):
             user_id = payload.replace("onetime_", "")
             repo = get_repository()
             try:
-                repo.add_onetime_credit(user_id, 1)
-                logger.info(f"One-time credit added for user {user_id}")
-            except AttributeError:
-                logger.error("Repository does not have add_onetime_credit method!")
+                # 💡 수정: 두 번째 인자(1) 제거! (메서드는 user_id만 받음)
+                repo.add_onetime_credit(user_id)
+                # 💡 구매 내역도 함께 기록
+                repo.log_purchase(user_id, "stars_onetime", "telegram")
+                logger.info(f"✅ [Telegram Webhook] One-time credit added for user {user_id}")
             except Exception as e:
-                logger.error(f"One-time Credit DB Update Error: {e}")
+                logger.error(f"❌ [Telegram Webhook] DB Update Error: {e}")
+                # 에러 발생 시 텔레그램이 재시도하도록 500 에러 반환
+                raise HTTPException(status_code=500, detail="Database update failed")
                     
     return {"ok": True}

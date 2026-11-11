@@ -333,7 +333,12 @@ class _BaseRepository:
             return False
 
         # 2. 신규 주문에 한해서만 크레딧 +1 증가
-        self.add_onetime_credit(user_id)
+        try:
+            self.add_onetime_credit(user_id)
+        except Exception:
+            # 크레딧 지급 실패 시 구매 기록을 되돌려 재시도가 가능하게 함
+            self._run("DELETE FROM purchases WHERE id = ?", (purchase_id,))
+            raise
         return True
 
     def list_purchases(self, user_id: str) -> list:
