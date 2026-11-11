@@ -25,43 +25,6 @@ export default function CompatibilityScreen() {
   const shareRef = useRef<any>(null);
 
   const handleShare = async () => {
-    const tg = (window as any).Telegram?.WebApp;
-    const isTelegram = !!tg?.platform && tg.platform !== "unknown";
-    const shareUrl = `https://gyeol-blond.vercel.app/share/${data?.share_id}`;
-
-    if (isTelegram) {
-      const text = `내 궁합 결과 확인해 봐! 👇
-${shareUrl}`;
-      const telegramShareUrl = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(text)}`;
-      tg.openTelegramLink(telegramShareUrl);
-      return;
-    } else {
-      // 웹 환경 분기
-      if (Platform.OS === "web") {
-        if (!shareUrl || shareUrl.includes("undefined")) {
-          alert("공유 링크를 생성하지 못했습니다. 다시 시도해 주세요.");
-          return;
-        }
-        
-        const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-        
-        if (isMobile && navigator.share) {
-          try {
-            await navigator.share({ title: "Gyeol Compatibility", url: shareUrl });
-          } catch (e) {
-            // 사용자가 공유 취소한 경우 무시
-          }
-        } else {
-          // PC 웹은 무조건 링크 복사
-          await navigator.clipboard.writeText(shareUrl);
-          alert("공유 링크가 복사되었습니다! 친구에게 붙여넣기 해주세요.\n\n" + shareUrl);
-        }
-        return;
-      }
-    }
-
-    // 👇 여기서부터는 기존 웹앱 로직이 그대로 실행됩니다. (절대 건드리지 않음)
-
     try {
       if (!shareRef.current) return;
       const uri = await captureRef(shareRef, { format: "png", quality: 1 });
@@ -90,22 +53,16 @@ ${shareUrl}`;
           }
         }
 
-        // PC 브라우저 또는 모바일 공유 실패 시: 다운로드
+        // PC 웹이거나 모바일 웹 공유 실패 시 다운로드
         const link = document.createElement("a");
         link.href = uri;
         link.download = "gyeol-compatibility.png";
-        document.body.appendChild(link);
         link.click();
-        document.body.removeChild(link);
       } else {
-        // 모바일: 네이티브 공유 시트
-        if (await Sharing.isAvailableAsync()) {
-          await Sharing.shareAsync(uri, { dialogTitle: "Share your Compatibility" });
-        }
+        // 네이티브 앱 (iOS/Android) 로직은 필요시 추가
       }
-    } catch (err) {
-      console.error("Share failed:", err);
-      alert("공유에 실패했습니다.");
+    } catch (e) {
+      console.error("Share failed", e);
     }
   };
 
