@@ -24,6 +24,18 @@ export default function CompatibilityScreen() {
   const shareRef = useRef<any>(null);
 
   const handleShare = async () => {
+    // 💡 [안전장치] 텔레그램 환경일 때만 실행되고, 웹 브라우저는 이 코드를 무시합니다.
+    const tg = (window as any).Telegram?.WebApp;
+    if (tg && tg.initData) {
+      const inviteId = useAuthStore.getState().user?.id || "unknown";
+      const deepLink = `https://t.me/my_vector_labs_bot?startapp=invite_${inviteId}`;
+      const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(deepLink)}&text=${encodeURIComponent("내 궁합 결과 확인해 봐! 👇")}`;
+      tg.openTelegramLink(shareUrl);
+      return; // 텔레그램 공유를 실행했으므로, 아래의 웹 다운로드 로직은 실행하지 않고 종료!
+    }
+    
+    // 👇 여기서부터는 기존 웹앱 로직이 그대로 실행됩니다. (절대 건드리지 않음)
+
     try {
       if (!shareRef.current) return;
       const uri = await captureRef(shareRef, { format: "png", quality: 1 });
