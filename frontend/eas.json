@@ -9,12 +9,18 @@
       "distribution": "internal"
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "android": { "buildType": "apk" },
+      "env": {
+        "EXPO_PUBLIC_API_BASE_URL": "https://saju-backend-787049663118.asia-northeast3.run.app/api/v1",
+        "EXPO_PUBLIC_GOOGLE_CLIENT_ID": "787049663118-0tv6r1bbi28lli6mr027ruo55l6esofo.apps.googleusercontent.com"
+      }
     },
     "production": {
       "autoIncrement": true,
       "env": {
-        "EXPO_PUBLIC_API_BASE_URL": "https://saju-backend-787049663118.asia-northeast3.run.app"
+        "EXPO_PUBLIC_API_BASE_URL": "https://saju-backend-787049663118.asia-northeast3.run.app/api/v1",
+        "EXPO_PUBLIC_GOOGLE_CLIENT_ID": "787049663118-0tv6r1bbi28lli6mr027ruo55l6esofo.apps.googleusercontent.com"
       }
     }
   },
