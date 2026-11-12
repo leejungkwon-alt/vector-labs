@@ -1,25 +1,26 @@
 import { useEffect, useState } from "react";
-
-// [TMA] 텔레그램 SDK 로드 (앱 실행 최우선)
-if (typeof window !== "undefined") {
-  const script = document.createElement("script");
-  script.src = "https://telegram.org/js/telegram-web-app.js";
-  script.async = false; // 동기적으로 로드하여 해시 파싱 보장
-  document.head.appendChild(script);
-}
-import { useTelegramUX } from '@/hooks/useTelegramUX';
+import { useTelegramUX } from "@/hooks/useTelegramUX";
 import { Stack } from "expo-router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
-import { View, ActivityIndicator, StyleSheet , Platform} from "react-native";
+// 17번째 줄에 있던 Platform을 여기로 올렸습니다.
+import { View, ActivityIndicator, StyleSheet, Platform } from "react-native"; 
 import { useAuthStore } from "@/store/authStore";
 import { useProfileStore } from "@/store/profileStore";
 import { useLanguageStore } from "@/store/languageStore";
 import { colors } from "@/theme";
 
-// 앱이 준비될 때까지 스플래시 화면 유지
+// [TMA] 텔레그램 SDK 로드 (웹 브라우저에서만 실행되도록 변경)
+if (Platform.OS === "web") {
+  const script = document.createElement("script");
+  script.src = "https://telegram.org/js/telegram-web-app.js";
+  script.async = false;
+  document.head.appendChild(script);
+}
+
+// 앱 준비될 때까지 스플래시 화면 유지
 SplashScreen.preventAutoHideAsync().catch(() => {});
 
 const queryClient = new QueryClient({
@@ -27,6 +28,7 @@ const queryClient = new QueryClient({
 });
 
 export default function RootLayout() {
+  // ... (이하 기존 코드는 그대로 두시면 됩니다)
   useTelegramUX();
   useEffect(() => {
     if (typeof document !== "undefined" && Platform.OS === "web") {

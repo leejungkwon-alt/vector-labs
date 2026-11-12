@@ -1,13 +1,21 @@
-import { useAuthStore } from '@/store/authStore';
-import { useLanguageStore } from "@/store/languageStore";
-import { formatPickerDate, formatPickerTime } from "@/i18n";
-import { useT } from "@/i18n";
 import { useState, useRef } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet, ActivityIndicator, Switch, Platform } from "react-native";
+import { 
+  View, 
+  Text, 
+  ScrollView, 
+  TouchableOpacity, 
+  StyleSheet, 
+  ActivityIndicator, 
+  Switch, 
+  Platform, 
+  Share 
+} from "react-native";
+import { useAuthStore } from '@/store/authStore';
+import { useLanguageStore } from "@/store/languageStore";
+import { formatPickerDate, formatPickerTime, useT } from "@/i18n";
 import { captureRef } from "react-native-view-shot";
 import * as Sharing from "expo-sharing";
-import { Ionicons } from "@expo/vector-icons";
 import { DateTimeField } from "@/components/DateTimeField";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { router } from "expo-router";
@@ -25,53 +33,52 @@ export default function CompatibilityScreen() {
   const shareRef = useRef<any>(null);
 
   const handleShare = async () => {
-    const tg = (window as any).Telegram?.WebApp;
-    const isTelegram = !!(tg && tg.initData);
+    const title = "Gyeol Compatibility";
+    const text = "Check out our compatibility!";
+    const url = "https://gyeol-blond.vercel.app"; // 실제 공유할 링크
 
-    try {
-      if (!shareRef.current) return;
-      const uri = await captureRef(shareRef, { format: "png", quality: 1 });
-
-      // 💡 텔레그램 환경: 이미지 저장이 불가능하므로 스크린샷 안내
-      if (isTelegram) {
-        tg.showAlert("텔레그램에서는 이미지 저장을 지원하지 않습니다.\n\n화면을 캡처(스크린샷)해서 친구에게 보내주세요!");
-        return;
+    if (Platform.OS === 'web') {
+      // 💻 웹 브라우저 로직
+      try {
+        if (navigator.share) {
+          await navigator.share({ title, text, url });
+          return;
+        }
+      } catch (e) {
+        console.log("Mobile Web Share failed, falling back to download");
       }
 
-      if (Platform.OS === "web") {
-        // PC(데스크톱)인지 확인 (모바일 웹은 navigator.userAgent로 구분)
-        const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-        
-        if (isMobile) {
-          // 모바일 웹: Web Share API 시도
-          try {
-            const res = await fetch(uri);
-            const blob = await res.blob();
-            const file = new File([blob], "gyeol-compatibility.png", { type: "image/png" });
-            
-            if (navigator.canShare && navigator.canShare({ files: [file] })) {
-              await navigator.share({
-                files: [file],
-                title: "Gyeol Compatibility",
-                text: "Check out our compatibility!",
-              });
-              return; // 공유 성공 시 종료
-            }
-          } catch (e) {
-            console.log("Mobile Web Share failed, falling back to download.");
-          }
-        }
-
+      try {
         // PC 웹이거나 모바일 웹 공유 실패 시 다운로드
         const link = document.createElement("a");
-        link.href = uri;
+        link.href = url;
         link.download = "gyeol-compatibility.png";
         link.click();
-      } else {
-        // 네이티브 앱 (iOS/Android) 로직은 필요시 추가
+      } catch (e) {
+        console.error("Share failed", e);
       }
-    } catch (e) {
-      console.error("Share failed", e);
+    } else {
+      // 📱 네이티브 앱 (iOS/Android) 로직: 화면 캡처 후 이미지 공유
+      try {
+        if (shareRef.current) {
+          const uri = await captureRef(shareRef, {
+            format: "png",
+            quality: 1,
+          });
+          
+          if (await Sharing.isAvailableAsync()) {
+            await Sharing.shareAsync(uri, {
+              dialogTitle: title,
+              mimeType: "image/png",
+            });
+          } else {
+            // 이미지 공유가 불가능한 환경이면 텍스트로 공유
+            await Share.share({ message: `${text}\n${url}` });
+          }
+        }
+      } catch (error) {
+        console.error("App Share failed", error);
+      }
     }
   };
 
@@ -172,13 +179,12 @@ export default function CompatibilityScreen() {
     if (error) {
       const msg = error instanceof ApiError ? error.detail : (error as Error).message;
       
-      //  401(세션 만료) 또는 403(구독/결제 필요) 에러 핸들링
       const status = error instanceof ApiError ? error.status : 500;
-            const lowerMsg = msg.toLowerCase();
+      const lowerMsg = msg.toLowerCase();
+      
       if (status === 400 && (lowerMsg.includes("14") || lowerMsg.includes("years old"))) {
         return (
           <View style={{ marginTop: 30, padding: 24, backgroundColor: colors.dangerSoft, borderRadius: radius.lg, alignItems: "center", borderWidth: 1, borderColor: colors.danger }}>
-            
             <Text style={{ fontSize: 18, fontWeight: "800", color: colors.danger, marginBottom: 8, textAlign: "center" }}>
               {t("compatibility.ageLimitTitle")}
             </Text>
@@ -197,12 +203,11 @@ export default function CompatibilityScreen() {
         );
       }
 
-      // 401(세션 만료) 또는 403(구독/결제 필요) 에러 핸들링
       if (status === 401 || status === 403) {
         const isAuthError = status === 401;
         return (
           <View style={{ marginTop: 30, padding: 24, backgroundColor: colors.primary + "10", borderRadius: radius.lg, alignItems: "center", borderWidth: 1, borderColor: colors.primary + "30" }}>
-            <Text style={{ fontSize: 40, marginBottom: 12 }}>{isAuthError ? "" : ""}</Text>
+            <Text style={{ fontSize: 40, marginBottom: 12 }}>{isAuthError ? "🔒" : "💎"}</Text>
             <Text style={{ fontSize: 20, fontWeight: "800", color: colors.text, marginBottom: 8 }}>
               {isAuthError ? "세션이 만료되었습니다" : t("compatibility.paywallTitle")}
             </Text>
@@ -221,16 +226,13 @@ export default function CompatibilityScreen() {
         );
       }
       
-      // 그 외 일반 에러
       return <Text style={{ color: colors.danger, marginTop: 20, textAlign: "center" }}>{msg}</Text>;
     }
     if (!data?.compatibility) return null;
     const compat = data.compatibility;
     
-    //  -1.0 ~ 1.0 점수를 0 ~ 100점으로 직관적 변환
     const rawScore = compat.overall.score;
     const displayScore = Math.round((rawScore + 1) * 50);
-    
     const color = gradeColors[compat.overall.grade] || colors.text;
 
     return (
@@ -243,7 +245,6 @@ export default function CompatibilityScreen() {
              relationshipType === "friend" ? t("compatibility.resultFriend") : t("compatibility.resultFamily")}
           </Text>
           
-          {/*  100점 만점 점수 표시 및 게이지 바 */}
           <View style={{ flexDirection: "row", alignItems: "flex-end", marginBottom: 8 }}>
             <Text style={[styles.overallScore, { color }]}>{displayScore}</Text>
             <Text style={{ fontSize: 20, fontWeight: "700", color: colors.textMuted, marginBottom: 10 }}> / 100 {t("compatibility.scoreUnit")}</Text>
@@ -258,7 +259,6 @@ export default function CompatibilityScreen() {
           <Text style={styles.resultBody}>{compat.overall.body}</Text>
         </View>
 
-        {/* 🌟 상대방 리포트 카드 */}
         {compat?.pair?.b && (
           <View style={[styles.resultCard, { marginTop: -8, alignItems: "flex-start", backgroundColor: colors.primary + "08" }]}>
             <Text style={{ fontSize: 14, fontWeight: "700", color: colors.primary, marginBottom: 12 }}>
@@ -328,13 +328,11 @@ export default function CompatibilityScreen() {
           );
         })}
         
-        {/* 워터마크 */}
         <Text style={{ textAlign: "center", fontSize: 12, color: colors.textMuted, marginTop: 10, fontWeight: "600" }}>
           Gyeol - gyeol-blond.vercel.app
         </Text>
         </View>
 
-        {/* 공유 버튼 */}
         <TouchableOpacity 
           onPress={handleShare} 
           style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: colors.primary, padding: 16, borderRadius: radius.md, marginTop: 20 }}
@@ -479,7 +477,6 @@ const styles = StyleSheet.create({
   resultCard: { backgroundColor: colors.surface, padding: spacing.xl, borderRadius: radius.lg, borderWidth: 1, borderColor: colors.border, alignItems: "center" },
   resultLabel: { fontSize: 14, fontWeight: "700", color: colors.textMuted, marginBottom: 8 },
   
-  //  100점 만점 스타일
   overallScore: { fontSize: 56, fontWeight: "800" },
   gaugeBg: { width: "100%", height: 8, backgroundColor: colors.bgMuted, borderRadius: 4, marginBottom: 16, overflow: "hidden" },
   gaugeFill: { height: "100%", borderRadius: 4 },

@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { View, Text, Pressable, Animated, StyleSheet, Alert, Platform, Image } from "react-native";
 import { colors } from "@/theme";
 import { useLanguageStore } from "@/store/languageStore";
-import QRCode from "qrcode";
+// import QRCode from "qrcode"; // 👈 앱 크래시 방지를 위해 아래 함수 안으로 이동시켰습니다.
 import type { PoemCard } from "../../../types";
 import { getRelationLabel } from "@/utils/poemRelations";
 
@@ -62,7 +62,6 @@ export function PoemFlipCard({
   const storeLang = useLanguageStore((s) => s.lang);
   const currentLang = lang || storeLang || "en";
 
-
   const [flipped, setFlipped] = useState(false);
   const anim = useRef(new Animated.Value(0)).current;
 
@@ -85,12 +84,16 @@ export function PoemFlipCard({
 
     const wallpaperSrc = `/assets/poems/${poem.id}_wallpaper.png`;
 
+    // 📱 네이티브 앱(Android/iOS) 방어 코드
     if (Platform.OS !== "web") {
       Alert.alert("알림", "모바일 앱에서는 곧 지원될 예정입니다.");
       return;
     }
 
+    // 💻 여기서부터는 웹 브라우저에서만 실행됩니다.
     try {
+      const QRCode = require("qrcode"); // 👈 웹일 때만 라이브러리 로드
+      
       const img = new window.Image();
       img.crossOrigin = "anonymous";
       await new Promise<void>((resolve, reject) => {
@@ -220,7 +223,7 @@ export function PoemFlipCard({
             style={[StyleSheet.absoluteFill, styles.face,
                     { opacity: frontOpacity, transform: [{ perspective: 900 }, { rotateY: frontRotate }] }]}
           >
-            <Image source={{ uri: `/assets/poems/${poem.id}_calligraphy.png` }} style={styles.image} resizeMode="cover" />
+            <Image source={{ uri: `https://gyeol-blond.vercel.app/assets/poems/${poem.id}_calligraphy.png` }} style={styles.image} resizeMode="cover" />
             <Text style={styles.elementBadge}>{poem.element}</Text>
             <Text style={styles.sijoText}>{poem.sijo || poem.sijo_ko}</Text>
             {poem.keywords && poem.keywords.length > 0 && (

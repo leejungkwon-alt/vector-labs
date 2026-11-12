@@ -18,7 +18,20 @@
       "expo-splash-screen",
       "expo-sharing",
       "expo-font"
-      "react-native-iap"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "1f769488-3d31-4767-8dca-ea79ae4d0b72"
+      }
+    },
+    "owner": "vectorlaps-team",
+    "android": {
+      "package": "com.vectorlabs.gyeol"
+    }
   }
 }

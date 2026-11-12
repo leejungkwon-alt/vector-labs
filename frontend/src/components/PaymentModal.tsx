@@ -1,6 +1,7 @@
 import * as RNIap from 'react-native-iap';
 import { useQueryClient } from '@tanstack/react-query';
-import React, { useState } from "react";
+// 1. useEffect 추가
+import React, { useState, useEffect } from "react";
 import { Modal, View, Text, TouchableOpacity, StyleSheet, ActivityIndicator, Alert } from "react-native";
 import { colors, radius, spacing } from "@/theme";
 import { api } from "@/api/client";
@@ -16,8 +17,13 @@ interface Props {
 export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
   const queryClient = useQueryClient();
   const [loading, setLoading] = useState<string | null>(null);
-
   const [iapReady, setIapReady] = useState(false);
+
+  // 2. isTelegramEnv 변수를 useEffect 위로 이동
+  const bootstrap = useAuthStore((s) => s.bootstrap);
+  const user = useAuthStore((s) => s.user);
+  const tg = typeof window !== "undefined" ? (window as any).Telegram?.WebApp : null;
+  const isTelegramEnv = !!tg?.initData;
 
   useEffect(() => {
     let isMounted = true;
@@ -41,11 +47,6 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
     };
   }, [isTelegramEnv]);
 
-  const bootstrap = useAuthStore((s) => s.bootstrap);
-  const user = useAuthStore((s) => s.user);
-  const tg = typeof window !== "undefined" ? (window as any).Telegram?.WebApp : null;
-  const isTelegramEnv = !!tg?.initData;
-
   const handlePay = async (productId: string) => {
     setLoading(productId);
     try {
@@ -61,13 +62,19 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
         }
         try {
           const sku = productId === "onetime" ? "gyeol_onetime_credit" : "gyeol_premium_monthly";
-          const purchase = productId === "onetime"
-            ? await RNIap.requestPurchase({ sku })
-            : await RNIap.requestSubscription({ sku });
+          
+          // 3. react-native-iap 타입 에러 방지를 위해 (RNIap as any) 적용
+          let purchase;
+          if (productId === "onetime") {
+            purchase = await (RNIap as any).requestPurchase({ sku });
+          } else {
+            // 일부 버전에서는 requestSubscription 대신 requestPurchase를 쓰기도 합니다.
+            purchase = await (RNIap as any).requestSubscription({ sku });
+          }
 
           if (purchase) {
             // TODO: 백엔드 영수증 검증 API 호출
-            await RNIap.finishTransaction({ purchase: purchase as any, isConsumable: productId === "onetime" });
+            await (RNIap as any).finishTransaction({ purchase: purchase as any, isConsumable: productId === "onetime" });
             alert("결제가 완료되었습니다! (서버 검증 연동 필요)");
             onClose();
             bootstrap();

@@ -1,19 +1,21 @@
-import { useEffect } from 'react';
-import { Platform } from 'react-native';
-import { useRouter, usePathname } from 'expo-router';
+import { useEffect } from "react";
+import { Platform } from "react-native";
+import { useRouter, usePathname } from "expo-router";
 
 export function useTelegramUX() {
   const router = useRouter();
   const pathname = usePathname();
 
   useEffect(() => {
-    if (Platform.OS !== 'web') return;
+    // 📱 네이티브 앱(Android/iOS)에서는 텔레그램 로직이 필요 없으므로 즉시 종료합니다.
+    if (Platform.OS !== "web") return;
+
     const tg = (window as any).Telegram?.WebApp;
     if (!tg) return;
 
     // 1. 테마(다크모드) 동기화
     tg.ready();
-    const bgColor = tg.themeParams?.bg_color || (tg.colorScheme === 'dark' ? '#1c1c1e' : '#ffffff');
+    const bgColor = tg.themeParams?.bg_color || (tg.colorScheme === "dark" ? "#111" : "#fff");
     document.body.style.backgroundColor = bgColor;
 
     // 2. 뒤로가기 버튼 연동
@@ -23,7 +25,8 @@ export function useTelegramUX() {
       }
     };
 
-    const isRoot = ['/home', '/', '/daily', '/settings', '/compatibility'].includes(pathname);
+    const isRoot = ["/home", "/", "/daily", "/settings", "/compatibility"].includes(pathname);
+    
     if (isRoot) {
       tg.BackButton.hide();
     } else {
@@ -31,8 +34,11 @@ export function useTelegramUX() {
       tg.BackButton.onClick(handleBack);
     }
 
+    // 클린업 함수
     return () => {
-      tg.BackButton.offClick(handleBack);
+      if (!isRoot) {
+        tg.BackButton.offClick(handleBack);
+      }
     };
-  }, [router, pathname]);
+  }, [pathname, router]);
 }

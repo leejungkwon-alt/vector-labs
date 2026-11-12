@@ -16,7 +16,6 @@ WebBrowser.maybeCompleteAuthSession();
 const TOKEN_KEY = 'saju.access_token';
 const GUEST_TOKEN_BACKUP_KEY = 'saju.guest_token_backup';
 
-// 로그인 직전 게스트 토큰을 백업 (최초 게스트만 보존)
 async function backupGuestToken(): Promise<void> {
   try {
     const existing = await storage.getItem(GUEST_TOKEN_BACKUP_KEY);
@@ -27,6 +26,7 @@ async function backupGuestToken(): Promise<void> {
     console.warn('[backupGuestToken] failed:', e);
   }
 }
+
 type User = AuthResponse['user'];
 type Provider = 'apple' | 'google' | 'kakao';
 
@@ -129,20 +129,16 @@ export const useAuthStore = create<AuthState>((set) => ({
     try {
       const t = await storage.getItem(TOKEN_KEY);
 
-      // 1. 저장된 토큰이 없으면 새 익명 계정
       if (!t) {
         await createAnonymous();
         return;
       }
 
-      // 2. 토큰이 있으면 유효성 검사
       setAuthToken(t);
       try {
         const me = await api.me();
         set({ user: me.user, ready: true, authError: null });
       } catch (e) {
-        // 토큰이 "진짜로" 무효일 때(401)만 새 계정을 만든다.
-        // 네트워크/500 같은 일시 장애에서 새 계정을 만들면 기존 계정(구독 포함)을 잃는다.
         if (e instanceof ApiError && e.status === 401) {
           await createAnonymous();
         } else {
@@ -168,10 +164,10 @@ export const useAuthStore = create<AuthState>((set) => ({
     }
     let res;
     try {
-      res = await api.linkProvider(provider, providerToken);
+      res = await api.linkProvider(provider, providerToken); // ⚠️ api/client.ts 확인 필요
     } catch (e: any) {
       if (e instanceof ApiError && e.status === 409) {
-        res = await api.loginProvider(provider, providerToken);
+        res = await api.loginProvider(provider, providerToken); // ⚠️ api/client.ts 확인 필요
       } else {
         throw e;
       }
@@ -184,11 +180,16 @@ export const useAuthStore = create<AuthState>((set) => ({
   },
   
   loginWithTelegram: async () => {
+    // 📱 앱 환경 방어 코드 추가
+    if (Platform.OS !== 'web') {
+      throw new Error("Telegram login is only available on Web");
+    }
+    
     const tg = (window as any).Telegram?.WebApp;
     if (!tg || !tg.initData) throw new Error("Telegram environment not found");
     
     const currentToken = await storage.getItem(TOKEN_KEY);
-    const res = await api.loginTelegram(tg.initData, currentToken);
+    const res = await api.loginTelegram(tg.initData);// ⚠️ api/client.ts 확인 필요
     await storage.setItem(TOKEN_KEY, res.access_token);
     setAuthToken(res.access_token);
     set({ user: res.user, ready: true });
@@ -206,7 +207,7 @@ export const useAuthStore = create<AuthState>((set) => ({
     } else {
       providerToken = await getKakaoAccessToken();
     }
-    const res = await api.loginProvider(provider, providerToken);
+    const res = await api.loginProvider(provider, providerToken); // ⚠️ api/client.ts 확인 필요
     await backupGuestToken();
     await storage.setItem(TOKEN_KEY, res.access_token);
     setAuthToken(res.access_token);
@@ -224,7 +225,6 @@ export const useAuthStore = create<AuthState>((set) => ({
     set({ user: null });
     try { await useProfileStore.getState().clearProfile(); } catch {}
 
-    // 🆕 로그인 직전 게스트 토큰이 있으면 그 세션으로 복원
     const backup = await storage.getItem(GUEST_TOKEN_BACKUP_KEY);
     if (backup) {
       try {
@@ -241,7 +241,6 @@ export const useAuthStore = create<AuthState>((set) => ({
       }
     }
 
-    // 백업이 없거나 무효 → 새 익명 세션 생성
     try {
       await storage.deleteItem(TOKEN_KEY);
       const res = await api.anonymous();
