@@ -48,6 +48,26 @@ async function getGoogleIdToken(): Promise<string> {
   if (!clientId) {
     throw new Error('EXPO_PUBLIC_GOOGLE_CLIENT_ID is not set');
   }
+
+  // 📱 앱(Android/iOS): 네이티브 구글 로그인
+  if (Platform.OS !== 'web') {
+    // 웹 번들에 포함되지 않도록 함수 안에서 불러옵니다.
+    const { GoogleSignin } = require('@react-native-google-signin/google-signin');
+    GoogleSignin.configure({ webClientId: clientId });
+    await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
+    const res = await GoogleSignin.signIn();
+    // 라이브러리 버전에 따라 응답 형태가 다릅니다.
+    if (res?.type === 'cancelled') {
+      throw new Error('Google sign-in was cancelled');
+    }
+    const idToken = res?.data?.idToken ?? res?.idToken;
+    if (!idToken) {
+      throw new Error('Google sign-in returned no idToken');
+    }
+    return idToken;
+  }
+
+  // 🌐 웹: 기존 방식 유지
   const redirectUri = AuthSession.makeRedirectUri();
   const nonce = await Crypto.randomUUID();
   const request = new AuthSession.AuthRequest({
