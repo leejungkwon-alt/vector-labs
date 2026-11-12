@@ -39,7 +39,14 @@
     "errorTitle": "오류가 발생했습니다",
     "heroSub": "앞으로 7일간의 하루하루 흐름이에요.",
     "focus": "집중",
-    "watch": "주의"
+    "watch": "주의",
+    "premiumOnlyTitle": "프리미엄 전용 메뉴입니다",
+    "premiumOnlyCta": "프리미엄 구독하러 가기",
+    "premiumOnlyBody": "매일 아침, 당신만을 위한 깊이 있는 데일리 운세를 확인하려면 프리미엄으로 업그레이드하세요.",
+    "goBack": "돌아가기",
+    "sessionExpiredTitle": "세션이 만료되었습니다",
+    "dataUnavailable": "데이터를 불러올 수 없습니다. 잠시 후 다시 시도해 주세요.",
+    "sessionExpiredBody": "다시 로그인하거나 앱을 새로고침해 주세요."
   },
   "compatibility": {
     "noProfile": "내 사주 정보를 먼저 입력해 주세요.",
@@ -131,7 +138,21 @@
     "telegramPushSuccess": "데일리 푸시 알림이 구독되었습니다!",
     "telegramPushNoProfile": "출생 정보를 먼저 저장해 주세요.",
     "telegramPushAgeLimit": "만 14세 미만은 이용할 수 없습니다.",
-    "telegramPushError": "구독에 실패했습니다. 다시 시도해 주세요."
+    "telegramPushError": "구독에 실패했습니다. 다시 시도해 주세요.",
+    "subscriptionNotFound": "구독 정보를 찾을 수 없습니다.",
+    "subscriptionPortalFail": "구독 관리 페이지를 불러오지 못했습니다.",
+    "telegramLinked": "Telegram 연동됨",
+    "creditsHeld": "1회 이용권 {count}매 보유",
+    "telegramLoginTitle": "텔레그램으로 로그인",
+    "telegramLoginDesc": "텔레그램 계정으로 로그인하면 모든 기기에서 프리미엄 혜택을 그대로 이용할 수 있습니다.",
+    "telegramLoginCta": "텔레그램으로 1초 만에 로그인",
+    "purchaseHistory": "구매 내역",
+    "productStarsOnetime": "1회 이용권 (텔레그램 150 Stars)",
+    "productStarsSub": "프리미엄 구독 (텔레그램 400 Stars)",
+    "productWebSub": "프리미엄 구독 (웹 결제)",
+    "productWebOnetime": "1회 이용권 (웹 결제)",
+    "productPlayOnetime": "1회 이용권 (Google Play)",
+    "productPlaySub": "프리미엄 구독 (Google Play)"
   },
   "birthInput": {
     "cityLookupLoading": "도시를 찾는 중…",

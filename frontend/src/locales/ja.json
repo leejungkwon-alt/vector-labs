@@ -39,7 +39,14 @@
     "errorTitle": "エラーが発生しました",
     "heroSub": "今後7日間の運勢です。",
     "focus": "集中",
-    "watch": "注意"
+    "watch": "注意",
+    "premiumOnlyTitle": "プレミアム専用メニューです",
+    "premiumOnlyCta": "プレミアムを購読する",
+    "premiumOnlyBody": "毎朝、あなただけの詳しいデイリー運勢を見るには、プレミアムにアップグレードしてください。",
+    "goBack": "戻る",
+    "sessionExpiredTitle": "セッションの有効期限が切れました",
+    "dataUnavailable": "データを読み込めません。しばらくしてからもう一度お試しください。",
+    "sessionExpiredBody": "もう一度ログインするか、アプリを再読み込みしてください。"
   },
   "compatibility": {
     "noProfile": "まずあなたの生年月日情報を入力してください。",
@@ -131,7 +138,21 @@
     "telegramPushSuccess": "毎日のプッシュ通知を購読しました！",
     "telegramPushNoProfile": "先に出生情報を保存してください。",
     "telegramPushAgeLimit": "14歳未満はご利用いただけません。",
-    "telegramPushError": "購読に失敗しました。もう一度お試しください。"
+    "telegramPushError": "購読に失敗しました。もう一度お試しください。",
+    "subscriptionNotFound": "サブスクリプション情報が見つかりません。",
+    "subscriptionPortalFail": "サブスクリプション管理ページを読み込めませんでした。",
+    "telegramLinked": "Telegram連携済み",
+    "creditsHeld": "1回利用券を{count}枚保有",
+    "telegramLoginTitle": "Telegramでログイン",
+    "telegramLoginDesc": "Telegramアカウントでログインすると、すべての端末でプレミアム特典をそのままご利用いただけます。",
+    "telegramLoginCta": "Telegramで1秒ログイン",
+    "purchaseHistory": "購入履歴",
+    "productStarsOnetime": "1回利用券(Telegram 150 Stars)",
+    "productStarsSub": "プレミアム購読(Telegram 400 Stars)",
+    "productWebSub": "プレミアム購読(Web決済)",
+    "productWebOnetime": "1回利用券(Web決済)",
+    "productPlayOnetime": "1回利用券(Google Play)",
+    "productPlaySub": "プレミアム購読(Google Play)"
   },
   "birthInput": {
     "cityLookupLoading": "都市を検索中…",

@@ -47,17 +47,17 @@ export default function DailyScreen() {
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center", padding: 24, backgroundColor: colors.bg }}>
         <Text style={{ fontSize: 48, marginBottom: 16 }}>🔒</Text>
         <Text style={{ fontSize: 22, fontWeight: "700", color: colors.text, marginBottom: 12, textAlign: "center" }}>
-          프리미엄 전용 메뉴입니다
+          {t("daily.premiumOnlyTitle")}
         </Text>
         <Text style={{ fontSize: 15, color: colors.textMuted, textAlign: "center", marginBottom: 32, lineHeight: 22 }}>
-          매일 아침, 당신만을 위한 깊이 있는 데일리 운세를 확인하려면 프리미엄으로 업그레이드하세요.
+          {t("daily.premiumOnlyBody")}
         </Text>
         <TouchableOpacity 
           style={{ backgroundColor: colors.primary, paddingHorizontal: 32, paddingVertical: 16, borderRadius: 12, width: "100%", alignItems: "center" }}
           onPress={() => router.push("/settings")}
         >
           <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>
-            프리미엄 구독하러 가기
+            {t("daily.premiumOnlyCta")}
           </Text>
         </TouchableOpacity>
       </View>
@@ -99,14 +99,14 @@ export default function DailyScreen() {
         <View style={styles.center}>
           <View style={{ backgroundColor: colors.surface, padding: 24, borderRadius: radius.lg, alignItems: "center", borderWidth: 1, borderColor: colors.border }}>
             <Text style={{ fontSize: 20, fontWeight: "700", color: colors.text, marginBottom: 8 }}>
-              {isAuthError ? "세션이 만료되었습니다" : t("daily.subscriberOnlyTitle")}
+              {isAuthError ? t("daily.sessionExpiredTitle") : t("daily.subscriberOnlyTitle")}
             </Text>
             <Text style={{ fontSize: 15, color: colors.textMuted, textAlign: "center", lineHeight: 22, marginBottom: 24 }}>
-              {isAuthError ? "다시 로그인하거나 앱을 새로고침해 주세요." : t("daily.subscriberOnlyBody")}
+              {isAuthError ? t("daily.sessionExpiredBody") : t("daily.subscriberOnlyBody")}
             </Text>
             <TouchableOpacity style={{ backgroundColor: colors.primary, paddingHorizontal: 24, paddingVertical: 14, borderRadius: radius.md, width: "100%", alignItems: "center" }} onPress={() => isAuthError ? router.replace("/") : setShowPayment(true)}>
               <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>
-                {isAuthError ? "돌아가기" : t("daily.upgrade")}
+                {isAuthError ? t("daily.goBack") : t("daily.upgrade")}
               </Text>
             </TouchableOpacity>
           </View>
@@ -127,7 +127,7 @@ export default function DailyScreen() {
     return (
       <View style={styles.center}>
         <Text style={styles.errorText}>{t("common.error")}</Text>
-        <Text style={styles.errorDetail}>데이터를 불러올 수 없습니다. 잠시 후 다시 시도해 주세요.</Text>
+        <Text style={styles.errorDetail}>{t("daily.dataUnavailable")}</Text>
       </View>
     );
   }

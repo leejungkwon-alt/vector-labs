@@ -39,7 +39,14 @@
     "errorTitle": "发生错误",
     "heroSub": "未来7天的运势。",
     "focus": "专注",
-    "watch": "注意"
+    "watch": "注意",
+    "premiumOnlyTitle": "这是高级会员专属功能",
+    "premiumOnlyCta": "订阅高级会员",
+    "premiumOnlyBody": "升级为高级会员,每天早晨即可查看专属于您的深度每日运势。",
+    "goBack": "返回",
+    "sessionExpiredTitle": "会话已过期",
+    "dataUnavailable": "无法加载数据,请稍后再试。",
+    "sessionExpiredBody": "请重新登录或刷新应用。"
   },
   "compatibility": {
     "noProfile": "请先输入你的出生信息。",
@@ -131,7 +138,21 @@
     "telegramPushSuccess": "已成功订阅每日推送！",
     "telegramPushNoProfile": "请先保存出生信息。",
     "telegramPushAgeLimit": "未满14岁无法使用。",
-    "telegramPushError": "订阅失败，请重试。"
+    "telegramPushError": "订阅失败，请重试。",
+    "subscriptionNotFound": "未找到订阅信息。",
+    "subscriptionPortalFail": "无法打开订阅管理页面。",
+    "telegramLinked": "已关联 Telegram",
+    "creditsHeld": "持有 {count} 张单次券",
+    "telegramLoginTitle": "使用 Telegram 登录",
+    "telegramLoginDesc": "使用 Telegram 账号登录,即可在所有设备上继续享受高级会员权益。",
+    "telegramLoginCta": "1 秒使用 Telegram 登录",
+    "purchaseHistory": "购买记录",
+    "productStarsOnetime": "单次券(Telegram 150 Stars)",
+    "productStarsSub": "高级会员订阅(Telegram 400 Stars)",
+    "productWebSub": "高级会员订阅(网页支付)",
+    "productWebOnetime": "单次券(网页支付)",
+    "productPlayOnetime": "单次券(Google Play)",
+    "productPlaySub": "高级会员订阅(Google Play)"
   },
   "birthInput": {
     "cityLookupLoading": "正在查找城市…",

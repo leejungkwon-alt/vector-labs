@@ -159,7 +159,7 @@ export default function SettingsScreen() {
     try {
       const res = await api.getPortalUrl();
       if (!res?.url) {
-        alert("구독 정보를 찾을 수 없습니다.");
+        alert(t("settings.subscriptionNotFound"));
         return;
       }
       if (Platform.OS === "web") {
@@ -168,12 +168,24 @@ export default function SettingsScreen() {
         await Linking.openURL(res.url);
       }
     } catch (e: any) {
-      alert(e?.detail || "구독 관리 페이지를 불러오지 못했습니다.");
+      alert(e?.detail || t("settings.subscriptionPortalFail"));
     }
   };
 
   const lang = useLanguageStore((s) => s.lang);
   const setLang = useLanguageStore((s) => s.setLang);
+
+  const productLabel = (id: string) => {
+    const keys: Record<string, string> = {
+      stars_onetime: "settings.productStarsOnetime",
+      stars_sub: "settings.productStarsSub",
+      lemon_sub: "settings.productWebSub",
+      lemon_onetime: "settings.productWebOnetime",
+      gyeol_onetime_credit: "settings.productPlayOnetime",
+      gyeol_premium_monthly: "settings.productPlaySub",
+    };
+    return keys[id] ? t(keys[id] as any) : id;
+  };
 
   const formatBirthInfo = () => {
     if (!profile?.birth_date) return t("settings.birthNotSet");
@@ -197,7 +209,7 @@ export default function SettingsScreen() {
     
     // 💡 텔레그램 환경에서는 무조건 텔레그램으로 표시
     if (isTgEnv) {
-      return "Telegram 연동됨";
+      return t("settings.telegramLinked");
     }
     
     // 웹 환경에서는 기존 소셜 로그인 정보 표시
@@ -230,7 +242,7 @@ export default function SettingsScreen() {
           <Text style={[styles.value, { fontWeight: "bold", color: (user?.tier === "free" && (user?.onetime_credits ?? 0) === 0) ? colors.text : colors.primary }]}>
             {user?.tier === "premium" ? t("settings.tierPremium") :
              user?.tier === "subscription" ? t("settings.tierSubscription") :
-             (user?.onetime_credits ?? 0) > 0 ? `1회 이용권 ${user?.onetime_credits}매 보유` :
+             (user?.onetime_credits ?? 0) > 0 ? t("settings.creditsHeld", { count: user?.onetime_credits ?? 0 }) :
              t("settings.tierFree")}
           </Text>
         </View>
@@ -240,9 +252,9 @@ export default function SettingsScreen() {
       {user?.is_anonymous && (
         isTgEnv ? (
           <View style={[styles.profileBox, { backgroundColor: "#f0f8ff", borderColor: "#0088cc" }]}>
-            <Text style={[styles.sectionTitle, { color: "#0088cc" }]}>텔레그램으로 로그인</Text>
+            <Text style={[styles.sectionTitle, { color: "#0088cc" }]}>{t("settings.telegramLoginTitle")}</Text>
             <Text style={{ fontSize: 14, color: colors.text, marginBottom: 12, lineHeight: 20 }}>
-              텔레그램 계정으로 로그인하면 모든 기기에서 프리미엄 혜택을 그대로 이용할 수 있습니다.
+              {t("settings.telegramLoginDesc")}
             </Text>
             <TouchableOpacity 
               style={[styles.upgradeBtn, { backgroundColor: "#0088cc" }]} 
@@ -252,7 +264,7 @@ export default function SettingsScreen() {
                 }).catch((e: any) => alert(e.message));
               }}
             >
-              <Text style={styles.upgradeBtnText}>텔레그램으로 1초 만에 로그인</Text>
+              <Text style={styles.upgradeBtnText}>{t("settings.telegramLoginCta")}</Text>
             </TouchableOpacity>
           </View>
         ) : (
@@ -297,15 +309,11 @@ export default function SettingsScreen() {
       {/* 구매 내역 */}
       {purchases.length > 0 && (
         <View style={styles.profileBox}>
-          <Text style={styles.sectionTitle}>구매 내역</Text>
+          <Text style={styles.sectionTitle}>{t("settings.purchaseHistory")}</Text>
           {purchases.map((item) => (
             <View key={item.id} style={styles.row}>
               <Text style={styles.label}>
-                {item.product_id === "stars_onetime" ? "1회 이용권 (텔레그램 150 Stars)" : 
-                 item.product_id === "stars_sub" ? "프리미엄 구독 (텔레그램 400 Stars)" : 
-                 item.product_id === "lemon_sub" ? "프리미엄 구독 (웹 결제)" :
-                 item.product_id === "lemon_onetime" ? "1회 이용권 (웹 결제)" :
-                 item.product_id}
+                {productLabel(item.product_id)}
               </Text>
               <Text style={styles.value}>
                 {new Date(item.purchased_at).toLocaleDateString()}

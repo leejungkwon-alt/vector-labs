@@ -39,7 +39,14 @@
     "errorTitle": "Something went wrong",
     "heroSub": "Your energy for the next 7 days.",
     "focus": "Focus",
-    "watch": "Watch out"
+    "watch": "Watch out",
+    "premiumOnlyTitle": "This is a Premium feature",
+    "premiumOnlyCta": "Subscribe to Premium",
+    "premiumOnlyBody": "Upgrade to Premium to get your in-depth daily reading every morning.",
+    "goBack": "Go back",
+    "sessionExpiredTitle": "Your session has expired",
+    "dataUnavailable": "Couldn't load the data. Please try again shortly.",
+    "sessionExpiredBody": "Please sign in again or reload the app."
   },
   "compatibility": {
     "noProfile": "Add your birth details first so we can read your side of the chart.",
@@ -131,7 +138,21 @@
     "telegramPushSuccess": "Daily push notifications subscribed!",
     "telegramPushNoProfile": "Please save your birth profile first.",
     "telegramPushAgeLimit": "You must be at least 14 years old.",
-    "telegramPushError": "Subscription failed. Please try again."
+    "telegramPushError": "Subscription failed. Please try again.",
+    "subscriptionNotFound": "Subscription information not found.",
+    "subscriptionPortalFail": "Couldn't open the subscription management page.",
+    "telegramLinked": "Telegram linked",
+    "creditsHeld": "{count} one-time pass(es) available",
+    "telegramLoginTitle": "Sign in with Telegram",
+    "telegramLoginDesc": "Sign in with your Telegram account to keep your Premium benefits on every device.",
+    "telegramLoginCta": "Sign in with Telegram in 1 second",
+    "purchaseHistory": "Purchase history",
+    "productStarsOnetime": "One-time pass (Telegram 150 Stars)",
+    "productStarsSub": "Premium subscription (Telegram 400 Stars)",
+    "productWebSub": "Premium subscription (Web)",
+    "productWebOnetime": "One-time pass (Web)",
+    "productPlayOnetime": "One-time pass (Google Play)",
+    "productPlaySub": "Premium subscription (Google Play)"
   },
   "birthInput": {
     "cityLookupLoading": "Looking up city…",

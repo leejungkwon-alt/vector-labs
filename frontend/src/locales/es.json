@@ -39,7 +39,14 @@
     "errorTitle": "Algo salió mal",
     "heroSub": "Tu energía para los próximos 7 días.",
     "focus": "Enfoque",
-    "watch": "Atención"
+    "watch": "Atención",
+    "premiumOnlyTitle": "Función exclusiva Premium",
+    "premiumOnlyCta": "Suscribirse a Premium",
+    "premiumOnlyBody": "Mejora a Premium para ver cada mañana tu lectura diaria detallada.",
+    "goBack": "Volver",
+    "sessionExpiredTitle": "Tu sesión ha caducado",
+    "dataUnavailable": "No se pudieron cargar los datos. Inténtalo de nuevo en un momento.",
+    "sessionExpiredBody": "Inicia sesión de nuevo o recarga la app."
   },
   "compatibility": {
     "noProfile": "Primero añade tus datos de nacimiento para leer tu parte de la carta.",
@@ -131,7 +138,21 @@
     "telegramPushSuccess": "¡Notificaciones diarias suscritas!",
     "telegramPushNoProfile": "Por favor, guarda tu perfil de nacimiento primero.",
     "telegramPushAgeLimit": "Debes tener al menos 14 años.",
-    "telegramPushError": "Suscripción fallida. Por favor, inténtalo de nuevo."
+    "telegramPushError": "Suscripción fallida. Por favor, inténtalo de nuevo.",
+    "subscriptionNotFound": "No se encontró la información de la suscripción.",
+    "subscriptionPortalFail": "No se pudo abrir la página de gestión de la suscripción.",
+    "telegramLinked": "Telegram vinculado",
+    "creditsHeld": "{count} pase(s) único(s) disponible(s)",
+    "telegramLoginTitle": "Iniciar sesión con Telegram",
+    "telegramLoginDesc": "Inicia sesión con tu cuenta de Telegram para mantener tus ventajas Premium en todos tus dispositivos.",
+    "telegramLoginCta": "Inicia sesión con Telegram en 1 segundo",
+    "purchaseHistory": "Historial de compras",
+    "productStarsOnetime": "Pase único (Telegram 150 Stars)",
+    "productStarsSub": "Suscripción Premium (Telegram 400 Stars)",
+    "productWebSub": "Suscripción Premium (Web)",
+    "productWebOnetime": "Pase único (Web)",
+    "productPlayOnetime": "Pase único (Google Play)",
+    "productPlaySub": "Suscripción Premium (Google Play)"
   },
   "birthInput": {
     "cityLookupLoading": "Buscando la ciudad…",

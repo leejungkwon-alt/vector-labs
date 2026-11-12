@@ -27,7 +27,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
       await useAuthStore.getState().loginWithTelegram();
       onSuccess();
     } catch (e: any) {
-      alert(e.message || "로그인 실패");
+      alert(e.message || t("socialLogin.loginFailed"));
     } finally {
       setLoading(null);
     }
@@ -43,7 +43,6 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
       }
       onSuccess();
     } catch (e: any) {
-      // 로그인 모드에서 계정이 없는 경우(404) -> 연동 모드로 자동 전환
       if (mode === "login" && e instanceof ApiError && e.status === 404) {
         setMode("link");
         const msg = t("socialLogin.noAccountPrompt");
@@ -62,7 +61,11 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
   return (
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
       <View style={styles.overlay}>
-        <View style={styles.card}>
+        {/* 🎨 모드에 따라 배경색과 미세한 테두리 톤을 다르게 적용 */}
+        <View style={[
+          styles.card, 
+          mode === "link" ? styles.linkCard : styles.loginCard
+        ]}>
           <Text style={styles.title}>
             {mode === "login" ? t("socialLogin.loginTitle") : t("socialLogin.title")}
           </Text>
@@ -70,63 +73,53 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
             {mode === "login" ? t("socialLogin.loginDesc") : t("socialLogin.desc")}
           </Text>
 
-          {/* Apple login disabled (일시 비활성화 - 재활성화하려면 이 주석 해제)
-<TouchableOpacity style={[styles.btn, styles.appleBtn]} onPress={() => handleLogin("apple")} disabled={!!loading}>
-            {loading === "apple" ? <ActivityIndicator color={colors.onPrimary} /> : (
-              <>
-                
-                <Text style={styles.btnTextWhite}>{t("socialLogin.appleCta")}</Text>
-              </>
-            )}
-          </TouchableOpacity>
-
-
-          */}
-
-          {!isTelegram && (<TouchableOpacity style={[styles.btn, styles.googleBtn]} onPress={() => handleLogin("google")} disabled={!!loading}>
-            {loading === "google" ? <ActivityIndicator color="#000" /> : (
-              <>
-                
-                <Text style={styles.btnTextBlack}>{mode === "login" ? t("socialLogin.googleLoginCta") : t("socialLogin.googleCta")}</Text>
-              </>
-            )}
-          </TouchableOpacity>)}
-
-          {!isTelegram && (<TouchableOpacity style={[styles.btn, styles.kakaoBtn]} onPress={() => handleLogin("kakao")} disabled={!!loading}>
-            {loading === "kakao" ? <ActivityIndicator color="#000" /> : (
-              <>
-                
-                <Text style={styles.btnTextBlack}>{mode === "login" ? t("socialLogin.kakaoLoginCta") : t("socialLogin.kakaoCta")}</Text>
-              </>
-            )}
-          </TouchableOpacity>)}
-
-          {isTelegram && (
-            <TouchableOpacity style={[styles.btn, { backgroundColor: "#0088cc" }]} onPress={handleTelegramLogin} disabled={!!loading}>
-              {loading === "telegram" ? <ActivityIndicator color="#FFF" /> : (
-                <>
-                  
-                  <Text style={styles.btnTextWhite}>텔레그램으로 1초 만에 로그인</Text>
-                </>
+          {!isTelegram && (
+            <TouchableOpacity style={[styles.btn, styles.googleBtn]} onPress={() => handleLogin("google")} disabled={!!loading}>
+              {loading === "google" ? <ActivityIndicator color="#000" /> : (
+                <Text style={styles.btnTextBlack}>
+                  {mode === "login" ? t("socialLogin.googleLoginCta") : t("socialLogin.googleCta")}
+                </Text>
               )}
             </TouchableOpacity>
           )}
 
-          {!isTelegram && <View style={styles.divider}>
-            <View style={styles.dividerLine} />
-            <Text style={styles.dividerText}>or</Text>
-            <View style={styles.dividerLine} />
-          </View>}
+          {!isTelegram && (
+            <TouchableOpacity style={[styles.btn, styles.kakaoBtn]} onPress={() => handleLogin("kakao")} disabled={!!loading}>
+              {loading === "kakao" ? <ActivityIndicator color="#000" /> : (
+                <Text style={styles.btnTextBlack}>
+                  {mode === "login" ? t("socialLogin.kakaoLoginCta") : t("socialLogin.kakaoCta")}
+                </Text>
+              )}
+            </TouchableOpacity>
+          )}
 
-          {!isTelegram && <TouchableOpacity
-            style={styles.modeToggle}
-            onPress={() => setMode(mode === "login" ? "link" : "login")}
-            disabled={!!loading}
-          >
-            <Text style={styles.modeToggleText}>
-              {mode === "login" ? t("socialLogin.switchToLink") : t("socialLogin.switchToLogin")}
-            </Text>
-          </TouchableOpacity>}
+          {isTelegram && (
+            <TouchableOpacity style={[styles.btn, { backgroundColor: "#0088cc" }]} onPress={handleTelegramLogin} disabled={!!loading}>
+              {loading === "telegram" ? <ActivityIndicator color="#FFF" /> : (
+                <Text style={styles.btnTextWhite}>{t("socialLogin.telegramCta")}</Text>
+              )}
+            </TouchableOpacity>
+          )}
+
+          {!isTelegram && (
+            <View style={styles.divider}>
+              <View style={styles.dividerLine} />
+              <Text style={styles.dividerText}>{t("socialLogin.or")}</Text>
+              <View style={styles.dividerLine} />
+            </View>
+          )}
+
+          {!isTelegram && (
+            <TouchableOpacity
+              style={styles.modeToggle}
+              onPress={() => setMode(mode === "login" ? "link" : "login")}
+              disabled={!!loading}
+            >
+              <Text style={styles.modeToggleText}>
+                {mode === "login" ? t("socialLogin.switchToLink") : t("socialLogin.switchToLogin")}
+              </Text>
+            </TouchableOpacity>
+          )}
 
           <TouchableOpacity style={styles.closeBtn} onPress={onClose} disabled={!!loading}>
             <Text style={styles.closeText}>{t("socialLogin.later")}</Text>
@@ -139,11 +132,19 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
 
 const styles = StyleSheet.create({
   overlay: { flex: 1, backgroundColor: "rgba(0,0,0,0.5)", justifyContent: "center", alignItems: "center", padding: 20 },
-  card: { backgroundColor: colors.surface, width: "100%", maxWidth: 340, borderRadius: radius.lg, padding: 24, alignItems: "center" },
-  title: { fontSize: 20, fontWeight: "700", color: colors.text, marginBottom: 8 },
+  
+  // 기본 공통 카드 스타일
+  card: { width: "100%", maxWidth: 340, borderRadius: radius.lg, padding: 24, alignItems: "center", shadowColor: "#000", shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.15, shadowRadius: 12, elevation: 5 },
+  
+  // 🔑 로그인 모드 배경 (깔끔한 기본 서피스 톤)
+  loginCard: { backgroundColor: colors.surface },
+  
+  // 🔗 계정 연동 모드 배경 (눈에 띄게 구분되도록 따뜻한 미세 베이지/오렌지빛 또는 테두리 강조)
+  linkCard: { backgroundColor: "#FFF8F3", borderWidth: 1.5, borderColor: "#FEE2D5" },
+
+  title: { fontSize: 20, fontWeight: "700", color: colors.text, marginBottom: 8, textAlign: "center" },
   desc: { fontSize: 14, color: colors.textMuted, textAlign: "center", lineHeight: 20, marginBottom: 24 },
   btn: { flexDirection: "row", alignItems: "center", justifyContent: "center", width: "100%", padding: 14, borderRadius: radius.md, marginBottom: 12, gap: 8 },
-  appleBtn: { backgroundColor: "#000" },
   googleBtn: { backgroundColor: "#FFF", borderWidth: 1, borderColor: "#CCC" },
   kakaoBtn: { backgroundColor: "#FEE500" },
   btnTextWhite: { color: colors.onPrimary, fontSize: 16, fontWeight: "600" },
