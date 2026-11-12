@@ -2,13 +2,13 @@ import * as RNIap from "react-native-iap";
 import React, { useState, useEffect, useRef } from "react";
 import {
   Modal, View, Text, TouchableOpacity, StyleSheet, ActivityIndicator, Alert,
-  Platform, Linking,
+  Platform, Linking, ScrollView,
 } from "react-native";
 import { colors, radius, spacing } from "@/theme";
 import { api } from "@/api/client";
 import { useAuthStore } from "@/store/authStore";
 
-// Play Console에 등록한 상품 ID와 정확히 같아야 합니다.
+// Play Console에 등록한 상품 ID와 정확히 일치해야 합니다.
 const SKU_ONETIME = "gyeol_onetime_credit"; // 관리형 상품(1회권)
 const SKU_SUBS = "gyeol_premium_monthly"; // 구독
 
@@ -41,7 +41,7 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
     let mounted = true;
     const IAP: any = RNIap;
 
-    // 구매 결과는 requestPurchase의 반환값이 아니라 이 리스너로 옵니다.
+    // 구매 결과 리스너
     const updateSub = IAP.purchaseUpdatedListener(async (purchase: any) => {
       try {
         const token: string = purchase?.purchaseToken ?? "";
@@ -50,8 +50,7 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
         if (token && processedRef.current.has(token)) return;
         if (token) processedRef.current.add(token);
 
-        // 서버 검증: api.verifyGooglePurchase 를 백엔드에 만든 뒤 연결하세요.
-        // 검증이 성공한 뒤에만 finishTransaction 을 호출해야 안전합니다.
+        // 서버 검증 API 호출 (존재하는 경우)
         const verify = (api as any).verifyGooglePurchase;
         if (typeof verify === "function") {
           await verify({ sku, purchaseToken: token, productId: sku });
@@ -99,7 +98,7 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
 
   const handlePay = async (productId: string) => {
     setLoading(productId);
-    let keepLoading = false; // 구글 결제 창이 떠 있는 동안 버튼 잠금 유지
+    let keepLoading = false; 
     try {
       const tgNow = (window as any)?.Telegram?.WebApp;
       const isTelegram = !!tgNow?.initData;
@@ -108,6 +107,7 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
       if (Platform.OS === "android" && !isTelegram) {
         if (!iapReady) {
           Alert.alert("잠시만요", "구글 플레이 결제 모듈을 불러오는 중입니다. 잠시 후 다시 시도해 주세요.");
+          setLoading(null);
           return;
         }
         const IAP: any = RNIap;
@@ -116,7 +116,6 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
         const type = isOnetime ? "in-app" : "subs";
 
         try {
-          // 안드로이드는 구매 전에 상품 정보를 먼저 조회해야 합니다.
           const fetched: any = await IAP.fetchProducts({ skus: [sku], type });
           const products: any[] = Array.isArray(fetched) ? fetched : [];
           const product = products.find((p) => (p?.id ?? p?.productId) === sku);
@@ -148,13 +147,13 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
               type: "subs",
             });
           }
-          // 결과는 purchaseUpdatedListener / purchaseErrorListener 로 옵니다.
           keepLoading = true;
         } catch (err: any) {
           const code = String(err?.code ?? "");
           if (code !== "user-cancelled" && code !== "E_USER_CANCELLED") {
             Alert.alert("결제 오류", String(err?.message ?? err));
           }
+          setLoading(null);
         }
         return;
       }
@@ -174,11 +173,13 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
           });
         } catch (e: any) {
           alert("결제 오류: " + (e.message || "텔레그램 결제를 시작할 수 없습니다."));
+        } finally {
+          setLoading(null);
         }
         return;
       }
 
-      // --- 3. 일반 웹 (레몬 스퀴지) ---
+      // --- 3. 일반 웹 (레몬 스퀴지 등) ---
       const { url } = await api.checkout(productId === "onetime");
       if (Platform.OS === "web") {
         window.location.href = url;
@@ -188,8 +189,7 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
       }
     } catch (e: any) {
       Alert.alert("Checkout Failed", String(e?.message || "Please try again."));
-    } finally {
-      if (!keepLoading) setLoading(null);
+      setLoading(null);
     }
   };
 

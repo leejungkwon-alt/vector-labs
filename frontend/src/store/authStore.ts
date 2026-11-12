@@ -51,12 +51,19 @@ async function getGoogleIdToken(): Promise<string> {
 
   // 📱 앱(Android/iOS): 네이티브 구글 로그인
   if (Platform.OS !== 'web') {
-    // 웹 번들에 포함되지 않도록 함수 안에서 불러옵니다.
     const { GoogleSignin } = require('@react-native-google-signin/google-signin');
     GoogleSignin.configure({ webClientId: clientId });
     await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
+    
+    // 💡 핵심 수정 1: 기존 로그인 세션을 지우거나(signOut) 또는 강제 프롬프트를 위해 
+    // GoogleSignin.signIn() 호출 전에 아래와 같이 처리하여 매번 계정을 고르게 유도합니다.
+    try {
+      await GoogleSignin.signOut(); // 이전에 로그인된 구글 세션 캐시 초기화
+    } catch (e) {
+      // 세션이 없는 경우 무시
+    }
+
     const res = await GoogleSignin.signIn();
-    // 라이브러리 버전에 따라 응답 형태가 다릅니다.
     if (res?.type === 'cancelled') {
       throw new Error('Google sign-in was cancelled');
     }
@@ -67,7 +74,7 @@ async function getGoogleIdToken(): Promise<string> {
     return idToken;
   }
 
-  // 🌐 웹: 기존 방식 유지
+  // 🌐 웹: 기존 방식 유지 + prompt 파라미터 추가
   const redirectUri = AuthSession.makeRedirectUri();
   const nonce = await Crypto.randomUUID();
   const request = new AuthSession.AuthRequest({
@@ -75,7 +82,11 @@ async function getGoogleIdToken(): Promise<string> {
     redirectUri,
     responseType: AuthSession.ResponseType.IdToken,
     scopes: ['openid', 'profile', 'email'],
-    extraParams: { nonce },
+    // 💡 핵심 수정 2: 웹 AuthSession 요청 시 extraParams에 prompt 추가
+    extraParams: { 
+      nonce, 
+      prompt: 'select_account' 
+    },
     usePKCE: false,
   });
   const discovery = await AuthSession.fetchDiscoveryAsync('https://accounts.google.com');
