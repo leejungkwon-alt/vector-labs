@@ -9,7 +9,7 @@ import { useAuthStore } from "@/store/authStore";
 import { useProfileStore } from "@/store/profileStore";
 import { usePoemStore } from "@/store/poemStore";
 import { api } from "@/api/client";
-import type { Purchase } from "../../../types";
+import type { Purchase } from "../../types";
 import { SocialLoginModal } from "@/components/SocialLoginModal";
 import { PaymentModal } from "@/components/PaymentModal";
 
@@ -207,7 +207,6 @@ export default function SettingsScreen() {
     return t("settings.loginSocial", { provider });
   };
 
-  
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 40 }}>
       {/* 1. 내 계정 정보 */}
@@ -231,7 +230,7 @@ export default function SettingsScreen() {
           <Text style={[styles.value, { fontWeight: "bold", color: (user?.tier === "free" && (user?.onetime_credits ?? 0) === 0) ? colors.text : colors.primary }]}>
             {user?.tier === "premium" ? t("settings.tierPremium") :
              user?.tier === "subscription" ? t("settings.tierSubscription") :
-             (user?.onetime_credits ?? 0) > 0 ? `1회 이용권 ${user.onetime_credits}매 보유` :
+             (user?.onetime_credits ?? 0) > 0 ? `1회 이용권 ${user?.onetime_credits}매 보유` :
              t("settings.tierFree")}
           </Text>
         </View>
@@ -295,7 +294,6 @@ export default function SettingsScreen() {
         </View>
       )}
 
-
       {/* 구매 내역 */}
       {purchases.length > 0 && (
         <View style={styles.profileBox}>
@@ -318,7 +316,6 @@ export default function SettingsScreen() {
       )}
 
       {/* 4. 계정 액션 */}
-
       <View style={styles.list}>
         <TouchableOpacity style={styles.btn} onPress={handleReset}>
           <Text style={styles.btnText}>{t("settings.editBirthInfo")}</Text>
@@ -352,7 +349,7 @@ export default function SettingsScreen() {
         </View>
       )}
 
-{/* 5. 언어 설정 */}
+      {/* 5. 언어 설정 */}
       <View style={{ marginTop: 24, padding: 16, borderRadius: 12, borderWidth: 1, borderColor: colors.border }}>
         <Text style={{ fontSize: 16, fontWeight: "600", color: colors.text, marginBottom: 12 }}>{t("settings.language")}</Text>
         <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 10 }}>
@@ -382,10 +379,8 @@ export default function SettingsScreen() {
           await useAuthStore.getState().bootstrap(); // 유저 정보 강제 갱신
           setShowLogin(false);
           if (upgradeAfterLogin) {
-            // 업그레이드 버튼을 눌러서 들어온 경우 -> 성공 시 결제창으로 연결
             setShowPayment(true);
           } else {
-            // 단순히 계정 연동 버튼을 눌러서 들어온 경우 -> 성공 알림만 띄우고 종료
             const msg = t("settings.linkAccountSuccess");
             if (Platform.OS === "web") alert(msg);
             else Alert.alert(t("common.notice"), msg);
@@ -397,7 +392,7 @@ export default function SettingsScreen() {
         onClose={() => setShowPayment(false)}
         onRequireLogin={() => {
           setShowPayment(false);
-          setIsLinkMode(false);
+          setUpgradeAfterLogin(true);
           setShowLogin(true);
         }}
       />
