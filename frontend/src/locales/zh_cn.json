@@ -89,7 +89,9 @@
     "axisSinsal_business": "工作契合度",
     "axisSinsal_friend": "友情默契",
     "axisSinsal_family": "家人的羁绊",
-    "share": "分享"
+    "share": "分享",
+    "shareTitle": "Gyeol 合盘分析",
+    "shareMessage": "来看看我们的契合度吧！在 Gyeol。"
   },
   "settings": {
     "accountInfo": "账户信息",
@@ -160,6 +162,10 @@
     "cityLookupError": "城市搜索失败，请手动输入经度和时区。",
     "tzOffsetAtBirth": "出生日的UTC偏移",
     "longitudeInvalid": "请输入-180至180之间的经度数值。",
+    "longitudePlaceholder": "例：126.978",
+    "cityPlaceholder": "输入城市（例：北京）",
+    "customCity": "直接输入",
+    "cityDefault": "北京",
     "title": "输入出生信息",
     "birthDate": "出生日期",
     "birthTime": "出生时间",
@@ -182,7 +188,10 @@
     "cityNameLabel": "城市名称",
     "longitudeLabel": "经度",
     "longitudeHint": "* 用于四柱计算中的太阳时校正。不清楚可留空。",
-    "navTitle": "输入出生信息"
+    "navTitle": "输入出生信息",
+    "longitudePlaceholder": "例：126.978",
+    "cityPlaceholder": "输入城市（例：北京）",
+    "cityDefault": "北京"
   },
   "cityModal": {
     "title": "选择出生地",
@@ -234,7 +243,14 @@
     "compatDetail": "4维合盘（永久保留）",
     "compatPrice": "$1.99（终身解锁）",
     "best": "推荐",
-    "terms": "随时取消。全球测试用模拟结账。"
+    "terms": "随时取消。全球测试用模拟结账。",
+    "iapLoading": "正在加载 Google Play 支付模块，请稍后再试。",
+    "iapSuccessStaging": "支付成功！（等待服务器验证）",
+    "productFetchError": "无法获取商品信息。请检查 Play Console 设置。",
+    "offerNotFoundError": "未找到订阅优惠。",
+    "termsTelegram": "通过 Telegram Stars 安全结账",
+    "termsGoogle": "通过 Google Play 安全结账",
+    "termsWeb": "安全网页支付系统"
   },
   "sections": {
     "yourChart": "你的命盘",
@@ -308,7 +324,16 @@
     "timeout": "服务器响应超时。请检查网络连接。"
   },
   "poem": {
-    "back": "返回"
+    "dailySijo": "今日诗歌",
+    "poemOfTheMonth": "本月诗歌",
+    "tapToFlip": "点击翻转 →",
+    "tapToReturn": "← 点击返回",
+    "dailyPractice": "今日实践",
+    "wallpaperPremium": "壁纸 · 高级版",
+    "saveWallpaper": "保存壁纸",
+    "saveSuccess": "壁纸保存成功。",
+    "saveFail": "背景图片加载失败。",
+    "appSupportSoon": "移动应用端即将推出。"
   },
   "billing": {
     "successTitle": "支付成功！",
@@ -325,5 +350,16 @@
     "yearSuffix": "年",
     "monthSuffix": "月",
     "daySuffix": "日"
+  },
+  "splash": {
+    "brand": "结",
+    "pronunciation": "gyeol [kjʌl]",
+    "meaningKo": "名词 · 木头、皮肤、丝绸的纹理，水、风的流动，心性",
+    "meaningEn": "noun · grain, texture, and flow — the natural pattern of things"
+  },
+  "crisis": {
+    "title": "如果您需要帮助",
+    "fallback": "如遇危机，请联系当地的自杀预防热线。",
+    "findHelpline": "查找当地热线"
   }
 }

@@ -78,6 +78,8 @@
     "axisDayMaster": "生まれ持った気質",
     "axisTenGods": "関係のスタイル",
     "axisSinsal": "特別な特性",
+    "shareTitle": "Gyeol 相性分析",
+    "shareMessage": "二人の相性をチェックしよう！ Gyeol で。",
     "ageLimitTitle": "🚫 14歳未満の方はご利用いただけません",
     "ageLimitDesc": "Gyeolは14歳以上の方のみご利用いただけます。\nお相手の生年月日をご確認ください。",
     "ageLimitRetry": "再入力する",
@@ -160,6 +162,10 @@
     "cityLookupError": "都市の検索に失敗しました。経度とタイムゾーンを手動で入力してください。",
     "tzOffsetAtBirth": "出生日時点のUTCオフセット",
     "longitudeInvalid": "経度は-180〜180の数値で入力してください。",
+    "longitudePlaceholder": "例：126.978",
+    "cityPlaceholder": "都市名を入力（例：東京）",
+    "customCity": "直接入力",
+    "cityDefault": "東京",
     "title": "出生情報の入力",
     "birthDate": "生年月日",
     "birthTime": "出生時間",
@@ -173,7 +179,6 @@
     "female": "女性",
     "submit": "結果を見る",
     "saveFailed": "保存に失敗しました。入力値を確認してください。",
-    "customCity": "直接入力",
     "year": "年",
     "month": "月",
     "day": "日",
@@ -234,7 +239,14 @@
     "compatDetail": "4つの相性（永久に保存）",
     "compatPrice": "$1.99（買い切り）",
     "best": "BEST",
-    "terms": "いつでもキャンセル可能。グローバルテスト用の模擬チェックアウトです。"
+    "terms": "いつでもキャンセル可能。グローバルテスト用の模擬チェックアウトです。",
+    "iapLoading": "Google Play 決済モジュールを読み込み中です。しばらくしてからもう一度お試しください。",
+    "iapSuccessStaging": "決済が完了しました！（サーバー検証の連携待ち）",
+    "productFetchError": "商品情報を取得できませんでした。Play Console の設定を確認してください。",
+    "offerNotFoundError": "購読オファーが見つかりませんでした。",
+    "termsTelegram": "Telegram Stars による安全な決済",
+    "termsGoogle": "Google Play による安全な決済",
+    "termsWeb": "安全なウェブ決済システム"
   },
   "sections": {
     "yourChart": "あなたの命式",
@@ -308,7 +320,17 @@
     "timeout": "サーバーの応答がタイムアウトしました。ネットワーク接続を確認してください。"
   },
   "poem": {
-    "back": "戻る"
+    "back": "戻る",
+    "dailySijo": "今日の詩",
+    "poemOfTheMonth": "今月の詩",
+    "tapToFlip": "タップして裏返す →",
+    "tapToReturn": "← タップして戻る",
+    "dailyPractice": "今日の実践",
+    "wallpaperPremium": "壁紙 ・ プレミアム",
+    "saveWallpaper": "壁紙を保存",
+    "saveSuccess": "壁紙画像を保存しました。",
+    "saveFail": "背景画像の読み込みに失敗しました。",
+    "appSupportSoon": "モバイルアプリでは近日サポート予定です。"
   },
   "billing": {
     "successTitle": "お支払いが完了しました！",
@@ -325,5 +347,16 @@
     "yearSuffix": "年",
     "monthSuffix": "月",
     "daySuffix": "日"
+  },
+  "splash": {
+    "brand": "結",
+    "pronunciation": "gyeol [kjʌl]",
+    "meaningKo": "名詞 ・ 木・肌・絹の目、水・風の流れ、気立て",
+    "meaningEn": "noun ・ grain, texture, and flow — the natural pattern of things"
+  },
+  "crisis": {
+    "title": "サポートが必要なとき",
+    "fallback": "危機的な状況なら地域の自殺予防ホットラインにご連絡ください。",
+    "findHelpline": "地域のホットラインを探す"
   }
 }

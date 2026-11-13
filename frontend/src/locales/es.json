@@ -89,7 +89,9 @@
     "axisSinsal_business": "Sinergia Laboral",
     "axisSinsal_friend": "Vibra Amistosa",
     "axisSinsal_family": "Vínculo Familiar",
-    "share": "Compartir"
+    "share": "Compartir",
+    "shareTitle": "Gyeol Química",
+    "shareMessage": "¡Mira nuestra química en Gyeol!"
   },
   "settings": {
     "accountInfo": "Cuenta",
@@ -160,6 +162,9 @@
     "cityLookupError": "La búsqueda de la ciudad falló. Introduce la longitud y la zona horaria manualmente.",
     "tzOffsetAtBirth": "Desfase UTC en la fecha de nacimiento",
     "longitudeInvalid": "Introduce la longitud como un número entre -180 y 180.",
+    "longitudePlaceholder": "ej. 126.978",
+    "cityPlaceholder": "Ciudad (ej. Madrid)",
+    "customCity": "Personalizado",
     "title": "Introduce tus datos de nacimiento",
     "birthDate": "Fecha de nacimiento",
     "birthTime": "Hora de nacimiento",
@@ -173,7 +178,6 @@
     "female": "Femenino",
     "submit": "Ver resultado",
     "saveFailed": "Error al guardar. Por favor revisa tus datos.",
-    "customCity": "Personalizado",
     "year": "Año",
     "month": "Mes",
     "day": "Día",
@@ -182,7 +186,8 @@
     "cityNameLabel": "Nombre de la ciudad",
     "longitudeLabel": "Longitud",
     "longitudeHint": "* Se usa para la corrección de hora solar. Deje en blanco si no lo sabe.",
-    "navTitle": "Datos de nacimiento"
+    "navTitle": "Datos de nacimiento",
+    "cityDefault": "Madrid"
   },
   "cityModal": {
     "title": "Seleccionar lugar de nacimiento",
@@ -234,7 +239,14 @@
     "compatDetail": "Química de 4 ejes (Conservar para siempre)",
     "compatPrice": "$1.99 (Desbloqueo de por vida)",
     "best": "MEJOR",
-    "terms": "Cancela cuando quieras. Pago simulado para pruebas globales."
+    "terms": "Cancela cuando quieras. Pago simulado para pruebas globales.",
+    "iapLoading": "Iniciando Google Play... Por favor, inténtalo de nuevo en un momento.",
+    "iapSuccessStaging": "¡Pago exitoso! (Esperando verificación del servidor)",
+    "productFetchError": "Error al obtener info del producto. Comprueba ajustes en Play Console.",
+    "offerNotFoundError": "Oferta de suscripción no encontrada.",
+    "termsTelegram": "Pago seguro mediante Telegram Stars.",
+    "termsGoogle": "Pago seguro mediante Google Play.",
+    "termsWeb": "Sistema de pago web seguro."
   },
   "sections": {
     "yourChart": "Tu Carta",
@@ -308,7 +320,17 @@
     "timeout": "El servidor agotó el tiempo de espera. Por favor, revisa tu red."
   },
   "poem": {
-    "back": "Volver"
+    "back": "Volver",
+    "dailySijo": "Poema del Día",
+    "poemOfTheMonth": "Poema del Mes",
+    "tapToFlip": "Toca para voltear →",
+    "tapToReturn": "← Toca para volver",
+    "dailyPractice": "Práctica de Hoy",
+    "wallpaperPremium": "Fondo de pantalla · Premium",
+    "saveWallpaper": "Guardar fondo",
+    "saveSuccess": "Imagen de fondo guardada.",
+    "saveFail": "Error al cargar la imagen de fondo.",
+    "appSupportSoon": "Próximamente en la aplicación móvil."
   },
   "billing": {
     "successTitle": "¡Pago exitoso!",
@@ -325,5 +347,16 @@
     "yearSuffix": "",
     "monthSuffix": "",
     "daySuffix": ""
+  },
+  "splash": {
+    "brand": "Gyeol",
+    "pronunciation": "gyeol [kjʌl]",
+    "meaningKo": "nombre · grano, textura y flujo: el patrón natural de las cosas",
+    "meaningEn": "noun · grain, texture, and flow — the natural pattern of things"
+  },
+  "crisis": {
+    "title": "Si necesitas apoyo",
+    "fallback": "Si estás en crisis, contacta con una línea de prevención del suicidio local.",
+    "findHelpline": "Buscar una línea de ayuda"
   }
 }

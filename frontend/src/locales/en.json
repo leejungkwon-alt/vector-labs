@@ -78,6 +78,8 @@
     "axisDayMaster": "Innate Temperament",
     "axisTenGods": "Relationship Style",
     "axisSinsal": "Special traits",
+    "shareTitle": "Gyeol Chemistry",
+    "shareMessage": "Check out our chemistry on Gyeol!",
     "ageLimitTitle": "🚫 Users under 14 cannot use this service",
     "ageLimitDesc": "Gyeol is available only to users aged 14 and over.\nPlease check the birthdate again.",
     "ageLimitRetry": "Try again",
@@ -160,6 +162,10 @@
     "cityLookupError": "City search failed. Please enter longitude and timezone manually.",
     "tzOffsetAtBirth": "UTC offset on birth date",
     "longitudeInvalid": "Enter longitude as a number between -180 and 180.",
+    "longitudePlaceholder": "e.g. 126.978",
+    "cityPlaceholder": "Enter city (e.g. London)",
+    "customCity": "Custom",
+    "cityDefault": "Seoul",
     "title": "Enter Your Birth Data",
     "birthDate": "Date of birth",
     "birthTime": "Time of birth",
@@ -173,7 +179,6 @@
     "female": "Female",
     "submit": "See result",
     "saveFailed": "Failed to save. Please check your inputs.",
-    "customCity": "Custom",
     "year": "",
     "month": "",
     "day": "",
@@ -234,7 +239,14 @@
     "compatDetail": "4-axis chemistry (Keep forever)",
     "compatPrice": "$1.99 (Lifetime Unlock)",
     "best": "BEST",
-    "terms": "Cancel anytime. Simulated checkout for global testing."
+    "terms": "Cancel anytime. Simulated checkout for global testing.",
+    "iapLoading": "Initializing Google Play... Please try again in a moment.",
+    "iapSuccessStaging": "Payment successful! (Staging: Verification pending)",
+    "productFetchError": "Failed to fetch product info. Please check Play Console settings.",
+    "offerNotFoundError": "Subscription offer not found.",
+    "termsTelegram": "Secure checkout powered by Telegram Stars.",
+    "termsGoogle": "Secure checkout powered by Google Play.",
+    "termsWeb": "Secure checkout powered by Stripe/LemonSqueezy."
   },
   "sections": {
     "yourChart": "Your Chart",
@@ -325,5 +337,28 @@
     "yearSuffix": "",
     "monthSuffix": "",
     "daySuffix": ""
+  },
+  "splash": {
+    "brand": "결",
+    "pronunciation": "gyeol [kjʌl]",
+    "meaningKo": "명사 · 나무·살갗·비단의 무늬, 물·바람의 흐름, 마음씨",
+    "meaningEn": "noun · grain, texture, and flow — the natural pattern of things"
+  },
+  "poem": {
+    "dailySijo": "Poem of the Day",
+    "poemOfTheMonth": "Poem of the Month",
+    "tapToFlip": "Tap to flip →",
+    "tapToReturn": "← Tap to flip back",
+    "dailyPractice": "Today's Practice",
+    "wallpaperPremium": "Wallpaper · Premium",
+    "saveWallpaper": "Save wallpaper",
+    "saveSuccess": "Saved wallpaper image.",
+    "saveFail": "Failed to load background image.",
+    "appSupportSoon": "Coming soon to the mobile app."
+  },
+  "crisis": {
+    "title": "If you need support",
+    "fallback": "If you are in crisis, contact a local suicide prevention hotline.",
+    "findHelpline": "Find a helpline"
   }
 }
