@@ -207,3 +207,103 @@ async def get_purchases(user: dict = Depends(get_current_user)):
     repo = get_repository()
     purchases = repo.list_purchases(user["id"])
     return {"purchases": purchases}
+
+# ------------------------- Google Play purchase verification -------------------------
+import hashlib
+from datetime import datetime, timezone
+from app.services import google_play
+
+SKU_SUBS = "gyeol_premium_monthly"
+SKU_ONETIME = "gyeol_onetime_credit"
+_VALID_SUB_STATES = {"SUBSCRIPTION_STATE_ACTIVE", "SUBSCRIPTION_STATE_IN_GRACE_PERIOD"}
+
+
+class GoogleVerifyRequest(BaseModel):
+    sku: str
+    purchaseToken: str
+    productId: str | None = None
+
+
+def _parse_time(value: str | None):
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def _check_binding(user_id: str, obfuscated: str | None) -> None:
+    # If the app set obfuscatedAccountId on purchase, only that account may claim it.
+    if obfuscated and obfuscated != user_id:
+        raise HTTPException(status_code=403, detail="Purchase belongs to another account.")
+    if not obfuscated:
+        logger.warning("Google purchase has no obfuscated account id (user=%s)", user_id)
+
+
+@router.post("/google/verify")
+async def verify_google_purchase(
+    payload: GoogleVerifyRequest, user: dict = Depends(get_current_user)
+):
+    """Verify an Android Google Play purchase and grant the entitlement."""
+    if user.get("is_anonymous"):
+        raise HTTPException(status_code=401, detail="Login required.")
+    sku = payload.sku.strip()
+    token = payload.purchaseToken.strip()
+    if sku not in (SKU_SUBS, SKU_ONETIME) or not token:
+        raise HTTPException(status_code=400, detail="Invalid product or token.")
+
+    repo = get_repository()
+    token_id = hashlib.sha256(token.encode()).hexdigest()[:32]
+
+    try:
+        if sku == SKU_SUBS:
+            data = await google_play.get_subscription(token)
+            line = next((i for i in data.get("lineItems", []) if i.get("productId") == sku), None)
+            if not line:
+                raise HTTPException(status_code=400, detail="Product mismatch.")
+            _check_binding(
+                user["id"],
+                (data.get("externalAccountIdentifiers") or {}).get("obfuscatedExternalAccountId"),
+            )
+            state = data.get("subscriptionState")
+            expiry = _parse_time(line.get("expiryTime"))
+            still_valid = bool(expiry and expiry > datetime.now(timezone.utc))
+            is_premium = state in _VALID_SUB_STATES or (
+                state == "SUBSCRIPTION_STATE_CANCELED" and still_valid
+            )
+            if not is_premium:
+                raise HTTPException(status_code=400, detail=f"Subscription not active ({state}).")
+
+            repo.update_subscription(
+                user_id=user["id"],
+                subscription_id=f"google_{token_id}",
+                status="active" if state != "SUBSCRIPTION_STATE_CANCELED" else "cancelled",
+                current_period_end=expiry.isoformat() if expiry else None,
+                is_premium=True,
+            )
+            try:
+                repo.log_purchase(user["id"], "google_sub", "google_play", purchase_id=f"google_sub_{token_id}")
+            except Exception:
+                logger.info("google sub purchase log skipped user=%s", user["id"])
+            return {"status": "ok", "kind": "subscription", "is_premium": True}
+
+        # one-time credit
+        data = await google_play.get_product_purchase(sku, token)
+        _check_binding(user["id"], data.get("obfuscatedExternalAccountId"))
+        if data.get("purchaseState") == 2:
+            raise HTTPException(status_code=409, detail="Payment is pending.")
+        if data.get("purchaseState") != 0:
+            raise HTTPException(status_code=400, detail="Purchase is not completed.")
+        order_id = data.get("orderId") or token_id
+        granted = repo.add_onetime_purchase_idempotent(
+            user["id"], f"google_{order_id}", platform="google_play"
+        )
+        logger.info("Google onetime order=%s user=%s granted=%s", order_id, user["id"], granted)
+        return {"status": "ok", "kind": "onetime", "granted": bool(granted)}
+
+    except google_play.GooglePlayError as e:
+        if e.status in (400, 404, 410):
+            raise HTTPException(status_code=400, detail="Purchase could not be verified.")
+        logger.error("Google Play API error status=%s", e.status)
+        raise HTTPException(status_code=502, detail="Purchase verification is temporarily unavailable.")

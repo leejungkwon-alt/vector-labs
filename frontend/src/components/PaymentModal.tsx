@@ -50,12 +50,12 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
         if (token && processedRef.current.has(token)) return;
         if (token) processedRef.current.add(token);
 
-        // 서버 검증 API 호출 (존재하는 경우)
-        const verify = (api as any).verifyGooglePurchase;
-        if (typeof verify === "function") {
-          await verify({ sku, purchaseToken: token, productId: sku });
-        } else {
-          console.warn("[IAP] 서버 검증 API가 아직 없습니다. 검증 없이 처리됩니다.");
+        if (!token) throw new Error("Missing purchase token.");
+        try {
+          await api.verifyGooglePurchase({ sku, purchaseToken: token, productId: sku });
+        } catch (e) {
+          processedRef.current.delete(token); // allow retry
+          throw e; // do not finish the purchase when server verification fails
         }
 
         await IAP.finishTransaction({ purchase, isConsumable: sku === SKU_ONETIME });

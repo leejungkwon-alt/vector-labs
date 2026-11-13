@@ -173,3 +173,5 @@ add_city_lookup_i18n.py
 *.orig
 # Secrets backup (never commit)
 scripts/_secrets_*.env
+
+_backup_google_billing/
