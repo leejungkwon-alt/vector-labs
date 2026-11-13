@@ -7,6 +7,7 @@ import {
 import { colors, radius, spacing } from "@/theme";
 import { api } from "@/api/client";
 import { useAuthStore } from "@/store/authStore";
+import { useQueryClient } from "@tanstack/react-query";
 
 // Play Console에 등록한 상품 ID와 정확히 일치해야 합니다.
 const SKU_ONETIME = "gyeol_onetime_credit"; // 관리형 상품(1회권)
@@ -23,6 +24,7 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
   const [iapReady, setIapReady] = useState(false);
 
   const bootstrap = useAuthStore((s) => s.bootstrap);
+  const queryClient = useQueryClient();
   const tg = typeof window !== "undefined" ? (window as any).Telegram?.WebApp : null;
   const isTelegramEnv = !!tg?.initData;
   const isAndroidApp = Platform.OS === "android" && !isTelegramEnv;
@@ -30,8 +32,10 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
   // 리스너 안에서 최신 함수를 쓰기 위한 ref
   const onCloseRef = useRef(onClose);
   const bootstrapRef = useRef(bootstrap);
+  const queryClientRef = useRef(queryClient);
   useEffect(() => { onCloseRef.current = onClose; }, [onClose]);
   useEffect(() => { bootstrapRef.current = bootstrap; }, [bootstrap]);
+  useEffect(() => { queryClientRef.current = queryClient; }, [queryClient]);
 
   // 같은 구매가 두 번 처리되지 않도록 기록
   const processedRef = useRef<Set<string>>(new Set());
@@ -65,6 +69,7 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
           Alert.alert("결제 완료", "결제가 완료되었습니다.");
           onCloseRef.current();
           bootstrapRef.current();
+          queryClientRef.current.invalidateQueries(); // refetch report/daily/etc. so locked content opens
         }
       } catch (e: any) {
         if (mounted) setLoading(null);

@@ -34,7 +34,7 @@ gcloud run deploy $SERVICE `
     --allow-unauthenticated `
     --quiet `
     --update-env-vars="SAJU_ENV=production,SAJU_ASSET_BASE_URL=$FRONTEND_URL,SAJU_GOOGLE_CLIENT_ID=$GOOGLE_CLIENT_ID,LEMONSQUEEZY_STORE_ID=516056,LEMONSQUEEZY_VARIANT_ID=2341690,LEMONSQUEEZY_ONETIME_VARIANT_ID=2357370" `
-    --set-secrets="SAJU_DATABASE_URL=saju-database-url:latest,SAJU_JWT_SECRET=saju-jwt-secret:latest,SAJU_TELEGRAM_BOT_TOKEN=saju-telegram-bot-token:latest,LEMONSQUEEZY_API_KEY=lemonsqueezy-api-key:latest,LEMONSQUEEZY_WEBHOOK_SECRET=lemonsqueezy-webhook-secret:latest" `
+    --set-secrets="SAJU_DATABASE_URL=saju-database-url:latest,SAJU_JWT_SECRET=saju-jwt-secret:latest,SAJU_TELEGRAM_BOT_TOKEN=saju-telegram-bot-token:latest,LEMONSQUEEZY_API_KEY=lemonsqueezy-api-key:latest,LEMONSQUEEZY_WEBHOOK_SECRET=lemonsqueezy-webhook-secret:latest,GOOGLE_PLAY_SERVICE_ACCOUNT_JSON=google-play-sa-json:latest" `
     --startup-probe="httpGet.path=/healthz,initialDelaySeconds=2,timeoutSeconds=2,periodSeconds=3,failureThreshold=10"
 if ($LASTEXITCODE -ne 0) { Write-Host "배포 실패." -ForegroundColor Red; exit 1 }
 
