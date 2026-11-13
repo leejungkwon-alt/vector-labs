@@ -33,8 +33,8 @@ export default function CompatibilityScreen() {
   const shareRef = useRef<any>(null);
 
   const handleShare = async () => {
-    const title = "Gyeol Compatibility";
-    const text = "Check out our compatibility!";
+    const title = t("compatibility.shareTitle");
+    const text = t("compatibility.shareMessage");
     const url = "https://gyeol-blond.vercel.app"; // 실제 공유할 링크
 
     if (Platform.OS === 'web') {
@@ -111,7 +111,7 @@ export default function CompatibilityScreen() {
 
   const [isCalculated, setIsCalculated] = useState(false);
   const [expandedAxes, setExpandedAxes] = useState<Record<string, boolean>>({});
-  const cityLabel = isCustomCity ? t("birthInput.customCity") : (CITY_LIST.find(c => c.key === city)?.[lang === "en" ? "label_en" : "label"] || "서울 (Seoul)");
+  const cityLabel = isCustomCity ? t("birthInput.customCity") : (CITY_LIST.find(c => c.key === city)?.[lang === "en" ? "label_en" : "label"] || t("birthInput.cityDefault"));
   const tzLabel = TIMEZONE_LIST.find(t => t.key === customTimezone)?.label || customTimezone;
 
   const onSelectCity = (key: string) => {
@@ -339,7 +339,7 @@ export default function CompatibilityScreen() {
         >
           <Text style={{ fontSize: 20, color: "#FFF", marginRight: 8 }}>📤</Text>
           <Text style={{ color: "#FFF", fontSize: 16, fontWeight: "700" }}>
-            {t("compatibility.share") || "Share"}
+            {t("compatibility.share")}
           </Text>
         </TouchableOpacity>
       </View>

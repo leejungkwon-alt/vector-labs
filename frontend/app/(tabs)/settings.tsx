@@ -343,9 +343,9 @@ export default function SettingsScreen() {
         <View style={{ marginTop: 24, padding: 16, borderRadius: 12, borderWidth: 1, borderColor: "#0088cc", backgroundColor: "#f0f8ff" }}>
           <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
             <View style={{ flex: 1, marginRight: 10 }}>
-              <Text style={{ fontSize: 16, fontWeight: "600", color: "#0088cc" }}>{t("settings.telegramPushTitle") || "텔레그램 알림 받기"}</Text>
+              <Text style={{ fontSize: 16, fontWeight: "600", color: "#0088cc" }}>{t("settings.telegramPushTitle")}</Text>
               <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 4, lineHeight: 18 }}>
-                {t("settings.telegramPushDesc") || "매일 아침 텔레그램으로 오늘의 운세를 보내드립니다."}
+                {t("settings.telegramPushDesc")}
               </Text>
             </View>
             <Switch 
