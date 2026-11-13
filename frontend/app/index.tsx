@@ -4,6 +4,7 @@ import { Redirect } from "expo-router";
 import { colors } from "@/theme";
 import { useProfileStore } from "@/store/profileStore";
 import { useLanguageStore } from "@/store/languageStore";
+import { useT } from "@/i18n";
 
 // 스플래시 설정 ---------------------------------------------------------
 const MIN_SPLASH_MS = 2200;   // 글자가 다 나타나고 읽힐 만큼의 최소 표시 시간
@@ -21,6 +22,7 @@ export default function Index() {
   const profileReady = useProfileStore((s) => s.ready);
   const profile = useProfileStore((s) => s.profile);
   const langReady = useLanguageStore((s) => s.ready);
+  const t = useT();
 
   const [minElapsed, setMinElapsed] = useState(false);
   const [timedOut, setTimedOut] = useState(false);
@@ -68,16 +70,16 @@ export default function Index() {
           { opacity: markA, transform: [{ translateY: markShift }, { scale: markScale }] },
         ]}
       >
-        결
+        {t("splash.brand")}
       </Animated.Text>
 
       <Animated.View style={{ opacity: pronA, alignItems: "center" }}>
-        <Text style={styles.pron}>gyeol  [kjʌl]</Text>
+        <Text style={styles.pron}>{t("splash.pronunciation")}</Text>
       </Animated.View>
 
       <Animated.View style={[styles.meaningBox, { opacity: meanA }]}>
-        <Text style={styles.meaningKo}>명사 · 나무·살갗·비단의 무늬, 물·바람의 흐름, 마음씨</Text>
-        <Text style={styles.meaningEn}>noun · grain, texture, and flow — the natural pattern of things</Text>
+        <Text style={styles.meaningKo}>{t("splash.meaningKo")}</Text>
+        <Text style={styles.meaningEn}>{t("splash.meaningEn")}</Text>
       </Animated.View>
     </View>
   );

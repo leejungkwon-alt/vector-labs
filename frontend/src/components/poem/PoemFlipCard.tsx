@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { View, Text, Pressable, Animated, StyleSheet, Alert, Platform, Image } from "react-native";
 import { colors } from "@/theme";
 import { useLanguageStore } from "@/store/languageStore";
+import { useT } from "@/i18n";
 // import QRCode from "qrcode"; // 👈 앱 크래시 방지를 위해 아래 함수 안으로 이동시켰습니다.
 import type { PoemCard } from "../../../types";
 import { getRelationLabel } from "@/utils/poemRelations";
@@ -18,40 +19,6 @@ const C = {
   accentSoft: (colors as any).accentSoft || (colors as any).primarySoft || "#F5EBD8",
 };
 
-const LANG_MAP: Record<string, Record<string, string>> = {
-  es: {
-    "오늘의 시조": "Poema del Día",
-    "탭하여 뒤집기 →": "Toca para voltear →",
-    "← 탭하여 돌아가기": "← Toca para volver",
-    "오늘의 실천": "Práctica de Hoy",
-    "배경화면 · 프리미엄": "Fondo de pantalla · Premium",
-    "배경화면 저장": "Guardar fondo"
-  },
-  ja: {
-    "오늘의 시조": "今日の詩",
-    "탭하여 뒤집기 →": "タップして裏返す →",
-    "← 탭하여 돌아가기": "← タップして戻る",
-    "오늘의 실천": "今日の実践",
-    "배경화면 · 프리미엄": "壁紙 · プレミアム",
-    "배경화면 저장": "壁紙を保存"
-  },
-  zh_cn: {
-    "오늘의 시조": "今日诗歌",
-    "탭하여 뒤집기 →": "点击翻转 →",
-    "← 탭하여 돌아가기": "← 点击返回",
-    "오늘의 실천": "今日实践",
-    "배경화면 · 프리미엄": "壁纸 · 高级",
-    "배경화면 저장": "保存壁纸"
-  }
-};
-
-function tt(lang: string | undefined, ko: string, en: string): string {
-  const l = lang || "en";
-  if (l === "ko") return ko;
-  if (l === "en") return en;
-  return LANG_MAP[l]?.[ko] || en;
-}
-
 export function PoemFlipCard({
   poem, lang, onSubscribePress,
 }: {
@@ -59,6 +26,7 @@ export function PoemFlipCard({
   lang?: string;
   onSubscribePress?: () => void;
 }) {
+  const t = useT();
   const storeLang = useLanguageStore((s) => s.lang);
   const currentLang = lang || storeLang || "en";
 
@@ -86,7 +54,7 @@ export function PoemFlipCard({
 
     // 📱 네이티브 앱(Android/iOS) 방어 코드
     if (Platform.OS !== "web") {
-      Alert.alert("알림", "모바일 앱에서는 곧 지원될 예정입니다.");
+      Alert.alert(t("common.notice"), t("poem.appSupportSoon"));
       return;
     }
 
@@ -98,7 +66,7 @@ export function PoemFlipCard({
       img.crossOrigin = "anonymous";
       await new Promise<void>((resolve, reject) => {
         img.onload = () => resolve();
-        img.onerror = () => reject(new Error("배경 이미지 로드 실패"));
+        img.onerror = () => reject(new Error(t("poem.saveFail")));
         img.src = wallpaperSrc;
       });
 
@@ -204,16 +172,17 @@ export function PoemFlipCard({
           0.95
         );
       });
+      alert(t("poem.saveSuccess"));
     } catch (e: any) {
       console.error("[wallpaper save]", e);
-      alert(`배경화면 생성 중 오류: ${e?.message || "알 수 없는 오류"}`);
+      alert(`${t("poem.saveFail")}: ${e?.message || ""}`);
     }
   };
 
   return (
     <View style={{ marginVertical: 16 }}>
       <Text style={styles.caption}>
-        {tt(currentLang, "이번 달의 시조", "Poem of the Month")} · {getRelationLabel(poem.relation, currentLang)}
+        {t("poem.poemOfTheMonth")} · {getRelationLabel(poem.relation, currentLang)}
       </Text>
 
       <Pressable onPress={flip} accessibilityRole="button">
@@ -231,7 +200,7 @@ export function PoemFlipCard({
                 {poem.keywords.map((k, i) => <Text key={i} style={styles.keyword}>#{k}</Text>)}
               </View>
             )}
-            <Text style={styles.tapHint}>{tt(currentLang, "탭하여 뒤집기 →", "Tap to flip →")}</Text>
+            <Text style={styles.tapHint}>{t("poem.tapToFlip")}</Text>
           </Animated.View>
 
           <Animated.View
@@ -247,16 +216,16 @@ export function PoemFlipCard({
             <Text style={styles.interpretation}>{poem.interpretation}</Text>
             {poem.practice ? (
               <View style={styles.practiceBox}>
-                <Text style={styles.practiceLabel}>{tt(currentLang, "오늘의 실천", "Today's Practice")}</Text>
+                <Text style={styles.practiceLabel}>{t("poem.dailyPractice")}</Text>
                 <Text style={styles.practiceText}>{poem.practice}</Text>
               </View>
             ) : null}
             <Pressable onPress={handleSaveWallpaper} style={styles.saveButton}>
               <Text style={styles.saveButtonText}>
-                {isWallpaperLocked ? tt(currentLang, "배경화면 · 프리미엄", "Wallpaper · Premium") : tt(currentLang, "배경화면 저장", "Save wallpaper")}
+                {isWallpaperLocked ? t("poem.wallpaperPremium") : t("poem.saveWallpaper")}
               </Text>
             </Pressable>
-            <Text style={styles.tapHint}>{tt(currentLang, "← 탭하여 돌아가기", "← Tap to flip back")}</Text>
+            <Text style={styles.tapHint}>{t("poem.tapToReturn")}</Text>
           </Animated.View>
         </View>
       </Pressable>

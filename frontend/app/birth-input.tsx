@@ -41,12 +41,6 @@ export default function BirthInput() {
   const [customTimezone, setCustomTimezone] = useState("Asia/Seoul");
   const [showTimezoneModal, setShowTimezoneModal] = useState(false);
 
-  // t() 가 키를 못 찾으면 키 문자열을 그대로 돌려주므로, 그 경우 기본 문구를 쓴다
-  const tf = (key: string, fallback: string) => {
-    const v = t(key);
-    return !v || v === key ? fallback : v;
-  };
-
   // 🌍 도시 이름 -> 경도 + 타임존 자동 조회
   const lookup = useCityLookup(lang);
   const applyHit = (h: CityHit) => {
@@ -66,7 +60,7 @@ export default function BirthInput() {
   // 🌟 UI에 표시할 도시 이름 (직접 입력이면 유저가 쓴 이름, 아니면 리스트 라벨)
   const cityLabel = isCustomCity 
     ? (customCityName || t("birthInput.customCity")) 
-    : (CITIES.find(c => c.key === city)?.label || "서울 (Seoul)");
+    : (CITIES.find(c => c.key === city)?.label || t("birthInput.cityDefault"));
   const tzLabel = TIMEZONE_LIST.find(t => t.key === customTimezone)?.label || customTimezone;
   const offsetLabel = tzOffsetLabel(customTimezone, birthDate); // 출생일 시점의 UTC 오프셋 (역사·서머타임 반영)
 
@@ -130,7 +124,7 @@ export default function BirthInput() {
         if (customLongitude.trim() !== "") {
           const parsedLon = parseLongitude(customLongitude);
           if (!Number.isFinite(parsedLon) || Math.abs(parsedLon) > 180) {
-            const msg = tf("birthInput.longitudeInvalid", "경도는 -180 ~ 180 사이의 숫자로 입력해 주세요.");
+            const msg = t("birthInput.longitudeInvalid");
             if (Platform.OS === "web") alert(msg); else Alert.alert(t("common.notice"), msg);
             return;
           }
@@ -139,7 +133,7 @@ export default function BirthInput() {
           // 비워뒀으면 선택한 타임존의 대표 도시 경도 사용 (예전에는 타임존과 무관하게 서울 경도가 들어갔다)
           const d = defaultLongitudeForTimezone(customTimezone, birthDate);
           if (d === null) {
-            const msg = tf("birthInput.longitudeInvalid", "경도는 -180 ~ 180 사이의 숫자로 입력해 주세요.");
+            const msg = t("birthInput.longitudeInvalid");
             if (Platform.OS === "web") alert(msg); else Alert.alert(t("common.notice"), msg);
             return;
           }
@@ -214,13 +208,13 @@ export default function BirthInput() {
             style={styles.textInput}
             value={customCityName}
             onChangeText={(v) => { setCustomCityName(v); lookup.search(v); }}
-            placeholder="예: 부산, 뉴욕"
+            placeholder={t("birthInput.cityPlaceholder")}
             placeholderTextColor={colors.textMuted}
             autoCorrect={false}
           />
-          {lookup.status === "loading" && <Text style={styles.hint}>{tf("birthInput.cityLookupLoading", "Searching city...")}</Text>}
-          {lookup.status === "notfound" && <Text style={styles.hint}>{tf("birthInput.cityLookupNotFound", "City not found. Check spelling or enter manually.")}</Text>}
-          {lookup.status === "error" && <Text style={styles.hint}>{tf("birthInput.cityLookupError", "City search failed. Please enter manually.")}</Text>}
+          {lookup.status === "loading" && <Text style={styles.hint}>{t("birthInput.cityLookupLoading")}</Text>}
+          {lookup.status === "notfound" && <Text style={styles.hint}>{t("birthInput.cityLookupNotFound")}</Text>}
+          {lookup.status === "error" && <Text style={styles.hint}>{t("birthInput.cityLookupError")}</Text>}
           {lookup.hits.length > 1 && lookup.hits.map((h, i) => (
             <TouchableOpacity key={i} onPress={() => applyHit(h)} style={styles.hitRow}>
               <Text style={styles.inputText}>{hitLabel(h)}</Text>
@@ -233,7 +227,7 @@ export default function BirthInput() {
             value={customLongitude}
             onChangeText={setCustomLongitude}
             keyboardType={Platform.OS === "ios" ? "numbers-and-punctuation" : "numeric"}
-            placeholder="모르면 비워두세요 (타임존 대표 도시 경도 사용)"
+            placeholder={t("birthInput.longitudePlaceholder")}
             placeholderTextColor={colors.textMuted}
           />
           <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 4, marginBottom: 12 }}>
@@ -248,7 +242,7 @@ export default function BirthInput() {
             {t("birthInput.timezoneHint")}
           </Text>
           {offsetLabel && (
-            <Text style={styles.hint}>{tf("birthInput.tzOffsetAtBirth", "UTC offset at birth")}: {offsetLabel}</Text>
+            <Text style={styles.hint}>{t("birthInput.tzOffsetAtBirth")}: {offsetLabel}</Text>
           )}
         </View>
       )}

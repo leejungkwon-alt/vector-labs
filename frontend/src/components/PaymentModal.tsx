@@ -8,6 +8,7 @@ import { colors, radius, spacing } from "@/theme";
 import { api } from "@/api/client";
 import { useAuthStore } from "@/store/authStore";
 import { useQueryClient } from "@tanstack/react-query";
+import { useT } from "@/i18n";
 
 // Play Console에 등록한 상품 ID와 정확히 일치해야 합니다.
 const SKU_ONETIME = "gyeol_onetime_credit"; // 관리형 상품(1회권)
@@ -22,6 +23,7 @@ interface Props {
 export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
   const [loading, setLoading] = useState<string | null>(null);
   const [iapReady, setIapReady] = useState(false);
+  const t = useT();
 
   const bootstrap = useAuthStore((s) => s.bootstrap);
   const queryClient = useQueryClient();
@@ -66,14 +68,14 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
 
         if (mounted) {
           setLoading(null);
-          Alert.alert("결제 완료", "결제가 완료되었습니다.");
+          Alert.alert(t("common.notice"), t("payment.successTitle"));
           onCloseRef.current();
           bootstrapRef.current();
           queryClientRef.current.invalidateQueries(); // refetch report/daily/etc. so locked content opens
         }
       } catch (e: any) {
         if (mounted) setLoading(null);
-        Alert.alert("결제 처리 오류", String(e?.message ?? e));
+        Alert.alert(t("payment.failTitle"), String(e?.message ?? e));
       }
     });
 
@@ -81,7 +83,7 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
       const code = String(err?.code ?? "");
       const cancelled = code === "user-cancelled" || code === "E_USER_CANCELLED";
       if (mounted) setLoading(null);
-      if (!cancelled) Alert.alert("결제 오류", String(err?.message ?? err));
+      if (!cancelled) Alert.alert(t("payment.failTitle"), String(err?.message ?? err));
     });
 
     (async () => {
@@ -111,7 +113,7 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
       // --- 1. 안드로이드 앱 (구글 플레이 결제) ---
       if (Platform.OS === "android" && !isTelegram) {
         if (!iapReady) {
-          Alert.alert("잠시만요", "구글 플레이 결제 모듈을 불러오는 중입니다. 잠시 후 다시 시도해 주세요.");
+          Alert.alert(t("common.notice"), t("payment.iapLoading"));
           setLoading(null);
           return;
         }
@@ -125,9 +127,7 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
           const products: any[] = Array.isArray(fetched) ? fetched : [];
           const product = products.find((p) => (p?.id ?? p?.productId) === sku);
           if (!product) {
-            throw new Error(
-              "상품 정보를 불러오지 못했습니다. Play Console의 상품 ID와 활성 상태를 확인하세요. (" + sku + ")"
-            );
+            throw new Error(t("payment.productFetchError") + " (" + sku + ")");
           }
 
           if (isOnetime) {
@@ -142,10 +142,8 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
               offer?.offerToken ??
               product.subscriptionOfferDetailsAndroid?.[0]?.offerToken;
             if (!offerToken) {
-              throw new Error(
-                "구독 오퍼를 찾지 못했습니다: " +
-                  JSON.stringify(product.subscriptionOffers ?? null).slice(0, 300)
-              );
+              throw new Error(t("payment.offerNotFoundError"));
+            }
             }
             await IAP.requestPurchase({
               request: { google: { skus: [sku], subscriptionOffers: [{ sku, offerToken }] } },
@@ -156,7 +154,7 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
         } catch (err: any) {
           const code = String(err?.code ?? "");
           if (code !== "user-cancelled" && code !== "E_USER_CANCELLED") {
-            Alert.alert("결제 오류", String(err?.message ?? err));
+            Alert.alert(t("payment.failTitle"), String(err?.message ?? err));
           }
           setLoading(null);
         }
@@ -172,12 +170,12 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
               : await api.createStarsInvoice();
           tgNow.openInvoice(invoice_link, (status: string) => {
             if (status === "paid") {
-              alert("결제 완료! 프리미엄이 활성화되었습니다.");
+              alert(t("payment.successTitle"));
               window.location.reload();
             }
           });
         } catch (e: any) {
-          alert("결제 오류: " + (e.message || "텔레그램 결제를 시작할 수 없습니다."));
+          alert(t("payment.failTitle") + ": " + (e.message || "error"));
         } finally {
           setLoading(null);
         }
@@ -193,28 +191,28 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
         onClose();
       }
     } catch (e: any) {
-      Alert.alert("Checkout Failed", String(e?.message || "Please try again."));
+      Alert.alert(t("payment.failTitle"), String(e?.message || t("payment.failRetry")));
       setLoading(null);
     }
   };
 
   const termsText = isTelegramEnv
-    ? "Secure checkout powered by Telegram Stars."
+    ? t("payment.termsTelegram")
     : Platform.OS === "android"
-    ? "Secure checkout powered by Google Play."
-    : "Secure checkout powered by Lemon Squeezy.";
+    ? t("payment.termsGoogle")
+    : t("payment.termsWeb");
 
   return (
     <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
       <View style={styles.overlay}>
         <View style={styles.card}>
           <View style={styles.header}>
-            <Text style={styles.title}>Gyeol Premium</Text>
+            <Text style={styles.title}>{t("payment.title")}</Text>
             <TouchableOpacity onPress={onClose} style={styles.closeIcon}>
               <Text style={{ fontSize: 22, color: colors.textMuted, lineHeight: 24 }}>✕</Text>
             </TouchableOpacity>
           </View>
-          <Text style={styles.desc}>Unlock all deep reports and daily insights.</Text>
+          <Text style={styles.desc}>{t("payment.description")}</Text>
 
           {/* 💎 프리미엄 구독 플랜 */}
           <TouchableOpacity
@@ -224,12 +222,12 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
           >
             <View style={{ flex: 1 }}>
               <View style={{ flexDirection: "row", alignItems: "center", gap: 6, marginBottom: 4 }}>
-                <Text style={styles.planName}>Premium Subscription</Text>
+                <Text style={styles.planName}>{t("payment.subMonthlyTitle")}</Text>
                 <View style={{ backgroundColor: colors.primary, paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}>
-                  <Text style={{ color: colors.onPrimary, fontSize: 10, fontWeight: "700" }}>BEST</Text>
+                  <Text style={{ color: colors.onPrimary, fontSize: 10, fontWeight: "700" }}>{t("payment.best")}</Text>
                 </View>
               </View>
-              <Text style={styles.planDetail}>Daily, Monthly & All Deep Reports</Text>
+              <Text style={styles.planDetail}>{t("payment.subMonthlyDetail")}</Text>
               <Text style={styles.planPrice}>
                 {isTelegramEnv ? "400 Stars / month (Auto-renews)" : "$6.99 / month (Auto-renews. Cancel anytime.)"}
               </Text>
@@ -248,8 +246,8 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
             disabled={!!loading}
           >
             <View style={{ flex: 1 }}>
-              <Text style={styles.planName}>Deep Report (1-time)</Text>
-              <Text style={styles.planDetail}>Unlock one deep report. No subscription.</Text>
+              <Text style={styles.planName}>{t("payment.deepReportTitle")}</Text>
+              <Text style={styles.planDetail}>{t("payment.deepReportDetail")}</Text>
               <Text style={styles.planPrice}>{isTelegramEnv ? "150 Stars" : "$2.99 (One-time)"}</Text>
             </View>
             {loading === "onetime" ? (
