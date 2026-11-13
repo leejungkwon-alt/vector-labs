@@ -546,4 +546,6 @@ export interface Purchase {
   product_id: string;
   platform: string;
   purchased_at: string;
+  kind: "onetime" | "subscription";
+  expires_date: string | null;
 }

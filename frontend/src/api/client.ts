@@ -104,7 +104,7 @@ export const api = {
 
   purchase: (product_id: string) => request<any>("/auth/me/purchase", { method: "POST", body: JSON.stringify({ product_id, receipt: "mock_valid_receipt", platform: Platform.OS }) }),
   deleteAccount: () => request<void>("/auth/me", { method: "DELETE" }),
-  getPurchases: () => request<{ purchases: any[] }>("/billing/purchases"),
+  getPurchases: () => request<{ purchases: Purchase[] }>("/billing/purchases"),
   verifyGooglePurchase: (p: { sku: string; purchaseToken: string; productId?: string }) =>
     request<{ status: string; kind: string }>("/billing/google/verify", { method: "POST", body: JSON.stringify(p) }),
   calculate: (payload: SajuRequest) =>
