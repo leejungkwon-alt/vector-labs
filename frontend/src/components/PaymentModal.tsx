@@ -144,12 +144,12 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
             if (!offerToken) {
               throw new Error(t("payment.offerNotFoundError"));
             }
-            }
-            await IAP.requestPurchase({
-              request: { google: { skus: [sku], subscriptionOffers: [{ sku, offerToken }] } },
-              type: "subs",
-            });
           }
+          // requestPurchase 호출은 if/else 블록 외부에서 공통으로 처리
+          await IAP.requestPurchase({
+            request: { google: { skus: [sku], subscriptionOffers: [{ sku, offerToken: offerToken || '' }] } },
+            type: isOnetime ? "in-app" : "subs",
+          });
           keepLoading = true;
         } catch (err: any) {
           const code = String(err?.code ?? "");
