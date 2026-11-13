@@ -47,16 +47,17 @@ export const useProfileStore = create<ProfileState>((set) => ({
     }
   },
   saveProfile: async (profile: any) => {
-    // 1. 로컬 저장 (오프라인/새로고침 대비)
-    await AsyncStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
-    set({ profile });
-
-    // 2. 서버 동기화 (에러가 나도 로컬은 유지)
+    // 1. 서버 동기화 시도 (에러가 나면 여기서 throw 하여 UI에서 알림을 띄우게 함)
     try {
       await api.updateProfile(profile);
     } catch (e) {
-      console.warn("Server profile sync failed (using local cache):", e);
+      console.warn("Server profile sync failed:", e);
+      throw e; // 부모 컴포넌트(birth-input.tsx)에서 에러 메시지를 보여줄 수 있게 던짐
     }
+
+    // 2. 서버 성공 시에만 로컬 저장 (유효하지 않은 데이터는 저장하지 않음)
+    await AsyncStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
+    set({ profile });
   },
   clearProfile: async () => {
     await AsyncStorage.removeItem(PROFILE_KEY);

@@ -162,9 +162,10 @@ export default function BirthInput() {
       
       await saveProfile(profileData);
       router.replace("/(tabs)/home");
-    } catch (error) {
-      if (Platform.OS === "web") alert(t("birthInput.saveFailed"));
-      else Alert.alert(t("common.notice"), t("birthInput.saveFailed"));
+    } catch (error: any) {
+      const msg = error?.detail || t("birthInput.saveFailed");
+      if (Platform.OS === "web") alert(msg);
+      else Alert.alert(t("common.notice"), msg);
     }
   };
 

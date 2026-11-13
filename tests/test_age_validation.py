@@ -1,4 +1,5 @@
-﻿# tests/test_age_validation.py
+import re
+# tests/test_age_validation.py
 """미래 생년월일은 '만 14세 미만'이 아닌 별개 에러로 거부되어야 함."""
 from datetime import date, timedelta
 
@@ -43,5 +44,6 @@ def test_future_message_does_not_mention_age():
     with pytest.raises(ValueError) as exc_info:
         validate_age(future)
     msg = str(exc_info.value)
+    msg = re.sub(r"\d{4}-\d{2}-\d{2}", "", msg)  # 메시지에 포함된 날짜는 검사에서 제외
     assert "14" not in msg
     assert "at least" not in msg

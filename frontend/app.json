@@ -1,10 +1,17 @@
 {
   "expo": {
-    "name": "Vector Labs",
+    "name": "Gyeol",
     "slug": "vector-labs",
     "version": "1.0.0",
     "orientation": "portrait",
+    "icon": "./assets/icon.png",
     "scheme": "gyeol",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#121623"
+    },
     "web": {
       "bundler": "metro",
       "output": "single"
@@ -27,10 +34,10 @@
         }
       },
       "eas": {
-        "projectId": "1f769488-3d31-4767-8dca-ea79ae4d0b72"
+        "projectId": "4a82ab2b-d0a8-42a0-864a-e2e8f99f9b51"
       }
     },
-    "owner": "vectorlaps-team",
+    "owner": "vectorlaps",
     "android": {
       "package": "com.vectorlabs.gyeol"
     }

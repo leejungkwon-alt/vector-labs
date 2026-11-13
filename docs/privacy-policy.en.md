@@ -2,7 +2,7 @@
 
 Last updated: 2026-10-20
 
-This Privacy Policy applies to the SAJU (Vector Labs) service, which provides a self-insight report based on Four Pillars (Saju) analysis.
+This Privacy Policy applies to the Gyeol (Vector Labs) service, which provides a self-insight report based on Four Pillars (Saju) analysis.
 
 ## 1. Information We Collect
 - **Birth data**: date of birth, time of birth (optional), place of birth, gender
