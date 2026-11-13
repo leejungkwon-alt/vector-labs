@@ -8,17 +8,17 @@
 ---
 
 ## 🟢 1단계: 프론트엔드 확장
-- [ ] `frontend/src/locales/` 폴더에 `es.json`, `ja.json`, `zh_cn.json` 생성 (en.json 구조 복제 및 번역)
-- [ ] `frontend/src/i18n.ts`의 `RESOURCES`에 3개 로케일 추가
-- [ ] `frontend/src/i18n.ts`의 `useLang().availableLangs`에 3개 언어 항목 추가
-- [ ] `frontend/app/(tabs)/settings.tsx` 언어 선택 UI에 3개 언어 버튼 추가
+- [x] `frontend/src/locales/` 폴더에 `es.json`, `ja.json`, `zh_cn.json` 생성 (en.json 구조 복제 및 번역)
+- [x] `frontend/src/i18n.ts`의 `RESOURCES`에 3개 로케일 추가
+- [x] `frontend/src/i18n.ts`의 `useLang().availableLangs`에 3개 언어 항목 추가
+- [x] `frontend/app/(tabs)/settings.tsx` 언어 선택 UI에 3개 언어 버튼 추가
 
 ## 🟡 2단계: 백엔드 API 및 테스트 수정
-- [ ] 백엔드 `SUPPORTED_LANGS` 수정: `("en", "ko", "es", "ja", "zh_cn")` 로 변경
-- [ ] `app/schemas/saju.py`, `daily.py`, `compatibility.py` 의 `validate_lang` 완화
-- [ ] `tests/test_multilingual_api.py`, `tests/test_step4e.py` 제약 해제 및 테스트 케이스 수정
-- [ ] `app/services/content/data/` 하위에 `es` 폴더 생성 (en 폴백용)
-- [ ] `pytest -q` 전체 통과 확인
+- [x] 백엔드 `SUPPORTED_LANGS` 수정: `("en", "ko", "es", "ja", "zh_cn")` 로 변경
+- [x] `app/schemas/saju.py`, `daily.py`, `compatibility.py` 의 `validate_lang` 완화
+- [x] `tests/test_multilingual_api.py`, `tests/test_step4e.py` 제약 해제 및 테스트 케이스 수정
+- [x] `app/services/content/data/` 하위에 `es` 폴더 생성 (en 폴백용)
+- [x] `pytest -q` 전체 통과 확인
 
 ## ⚪ 3단계: 마무리
 - [ ] `docs/i18n-final-audit.md` 업데이트

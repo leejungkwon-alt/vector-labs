@@ -19,7 +19,7 @@ class DailyRequest(SajuRequest):
     @classmethod
     def v_lang(cls, v: str) -> str:
         if v not in SUPPORTED_LANGS:
-            raise ValueError("lang must be 'en' or 'ko'.")
+            raise ValueError(f"lang must be one of {SUPPORTED_LANGS}")
         return v
 
     @field_validator("target_date")
