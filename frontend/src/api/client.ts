@@ -101,7 +101,7 @@ export const api = {
   loginProvider: (provider: string, token: string) => request<AuthResponse>(`/auth/login/${provider}`, { method: "POST", body: JSON.stringify({ provider_token: token }) }),
   loginTelegram: (initData: string) => request<AuthResponse>("/auth/login/telegram", { method: "POST", body: JSON.stringify({ init_data: initData }) }),    checkout: (is_onetime = false) => request<{ url: string }>('/billing/checkout', { method: 'POST', body: JSON.stringify({ is_onetime }) }),
   getSharedCompatibility: (id: string) => request<{ compatibility: any }>(`/saju/compatibility/shared/${id}`),
-  getPortalUrl: () => request<{ url: string }>("/billing/portal"),
+  getPortalUrl: () => request<{ url?: string | null; provider?: string }>("/billing/portal"),
 
   purchase: (product_id: string) => request<any>("/auth/me/purchase", { method: "POST", body: JSON.stringify({ product_id, receipt: "mock_valid_receipt", platform: Platform.OS }) }),
   deleteAccount: () => request<void>("/auth/me", { method: "DELETE" }),

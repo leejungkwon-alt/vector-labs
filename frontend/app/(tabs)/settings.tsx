@@ -198,6 +198,11 @@ export default function SettingsScreen() {
   const handleManageSubscription = async () => {
     try {
       const res = await api.getPortalUrl();
+      if (res?.provider === "telegram") {
+        // 텔레그램 Stars 구독은 텔레그램 안에서 관리한다.
+        alert(t("settings.subscriptionManageTelegram"));
+        return;
+      }
       if (!res?.url) {
         alert(t("settings.subscriptionNotFound"));
         return;
