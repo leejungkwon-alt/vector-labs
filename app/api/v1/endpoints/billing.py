@@ -121,6 +121,16 @@ async def get_customer_portal(user: dict = Depends(get_current_user)):
             status_code=404,
             detail="No subscription linked to this account. Please subscribe to Premium first.",
         )
+    # 텔레그램 Stars 구독: 앱에서 관리할 수 없고 텔레그램 안에서 해지/관리한다.
+    if str(sub_id).startswith("stars_"):
+        return {"url": None, "provider": "telegram"}
+    # Google Play로 구독한 계정: 구독 ID가 "google_..."이라 Lemon Squeezy 포털로는 열 수 없다.
+    # Play 스토어의 구독 관리 페이지로 보낸다.
+    if str(sub_id).startswith("google_"):
+        package = (os.environ.get("GOOGLE_PLAY_PACKAGE_NAME") or "com.vectorlabs.gyeol").strip()
+        return {
+            "url": f"https://play.google.com/store/account/subscriptions?sku=gyeol_premium_monthly&package={package}"
+        }
     url = await get_customer_portal_url(str(sub_id))
     if not url:
         raise HTTPException(
@@ -151,6 +161,7 @@ async def create_stars_invoice(user: dict = Depends(get_current_user)):
         "payload": f"sub_{user['id']}",
         "currency": "XTR", # Telegram Stars 화폐 코드
         "prices": prices,
+        "subscription_period": 2592000,  # 30일마다 자동 갱신되는 구독 (텔레그램은 현재 30일만 지원)
     }
 
     async with httpx.AsyncClient() as client:

@@ -16,6 +16,7 @@ import json
 import logging
 import os
 import time
+from datetime import datetime, timedelta, timezone
 from urllib.parse import parse_qsl
 
 import httpx
@@ -98,6 +99,24 @@ def _verified_telegram_id(payload: TelegramInitData) -> str:
     except ValueError as e:
         raise HTTPException(status_code=401, detail=str(e))
     return str(user["id"])
+
+
+def _check_webhook_secret(
+    x_telegram_bot_api_secret_token: str | None = Header(
+        default=None, alias="X-Telegram-Bot-Api-Secret-Token"
+    ),
+) -> None:
+    secret_str = os.environ.get("SAJU_TELEGRAM_WEBHOOK_SECRET", "").strip()
+    if not secret_str:
+        raise HTTPException(status_code=503, detail="Telegram webhook secret is not configured.")
+
+    if not x_telegram_bot_api_secret_token:
+        raise HTTPException(status_code=401, detail="X-Telegram-Bot-Api-Secret-Token header is missing.")
+
+    if not hmac.compare_digest(
+        secret_str.encode(), x_telegram_bot_api_secret_token.encode()
+    ):
+        raise HTTPException(status_code=401, detail="Invalid X-Telegram-Bot-Api-Secret-Token.")
 
 
 @router.post("/register")
@@ -233,63 +252,96 @@ def push_daily_wallpapers(
 
 from fastapi import Request
 
+_STARS_PERIOD_DAYS = 30
+
+
 @router.post("/webhook")
-async def telegram_payment_webhook(request: Request):
-    """텔레그램 결제 완료(successful_payment) 웹훅 수신"""
+async def telegram_payment_webhook(
+    request: Request,
+    _=Depends(_check_webhook_secret),  # 비밀 헤더 검증(위에 정의). 실패하면 여기까지 오지 않는다.
+):
+    """텔레그램 Stars 결제 웹훅 (pre_checkout_query / successful_payment)"""
     update = await request.json()
-    
-    # 1. 결제 사전 확인 (pre_checkout_query) 처리 - 10초 내 응답 필수
+
+    # 1. 결제 사전 확인 (pre_checkout_query) - 10초 내 응답 필수
     pre_checkout = update.get("pre_checkout_query")
     if pre_checkout:
-        import os, httpx
-        bot_token = os.getenv("SAJU_TELEGRAM_BOT_TOKEN")
-        query_id = pre_checkout["id"]
-        
-        async with httpx.AsyncClient() as client:
+        payload = str(pre_checkout.get("invoice_payload", ""))
+        ok = pre_checkout.get("currency") == "XTR" and payload.startswith(("sub_", "onetime_"))
+        body: dict = {"pre_checkout_query_id": pre_checkout["id"], "ok": ok}
+        if not ok:
+            body["error_message"] = "Invalid payment request."
+        async with httpx.AsyncClient(timeout=8.0) as client:
             await client.post(
-                f"https://api.telegram.org/bot{bot_token}/answerPreCheckoutQuery",
-                json={"pre_checkout_query_id": query_id, "ok": True}
+                f"https://api.telegram.org/bot{_bot_token()}/answerPreCheckoutQuery",
+                json=body,
             )
         return {"ok": True}
 
-    # 2. 결제 완료 (successful_payment) 처리
-    msg = update.get("message", {})
-    successful_payment = msg.get("successful_payment")
-    # ... (기존 코드 유지)
-    
-    if successful_payment:
-        payload = successful_payment.get("invoice_payload", "")
-        if payload.startswith("sub_"):
-            user_id = payload.replace("sub_", "")
-            repo = get_repository()
-            # DB 유저 등급을 프리미엄으로 업데이트
+    # 2. 결제 완료 (successful_payment)
+    msg = update.get("message") or {}
+    sp = msg.get("successful_payment")
+    if not sp:
+        return {"ok": True}
+
+    payload = str(sp.get("invoice_payload", ""))
+    charge_id = str(sp.get("telegram_payment_charge_id") or "")
+    if sp.get("currency") != "XTR" or not charge_id:
+        logger.error("Stars payment ignored: currency=%s charge_id=%s", sp.get("currency"), bool(charge_id))
+        return {"ok": True}
+
+    repo = get_repository()
+    purchase_id = f"stars_{charge_id}"  # 같은 결제 알림이 여러 번 와도 한 번만 처리하는 기준
+
+    if payload.startswith("sub_"):
+        user_id = payload[len("sub_"):]
+        if not repo.get_user(user_id):
+            logger.error("Stars sub payment for unknown user=%s", user_id)
+            return {"ok": True}  # 재시도해도 해결되지 않으므로 200
+
+        # 만료일: 텔레그램이 알려주면 그 값, 없으면(예전 일회성 링크) 지금부터 30일
+        exp = sp.get("subscription_expiration_date")
+        if exp:
+            period_end = datetime.fromtimestamp(int(exp), tz=timezone.utc)
+        else:
+            period_end = datetime.now(timezone.utc) + timedelta(days=_STARS_PERIOD_DAYS)
+
+        try:
+            if not repo.record_purchase_once(user_id, "stars_sub", "telegram", purchase_id):
+                return {"ok": True}  # 이미 처리한 결제
             try:
-                repo.update_user_tier(user_id, "premium")
-                repo.log_purchase(user_id, "stars_sub", "telegram") 
-            except AttributeError:
-                # 기존 레몬 스퀴지용 메서드가 있다면 그것을 사용
-                try:
-                    repo.update_subscription(
-                        user_id=user_id,
-                        subscription_id=f"stars_{successful_payment.get('telegram_payment_charge_id')}",
-                        status="active",
-                        renews_at=None
-                    )
-                except Exception as e:
-                    logger.error(f"DB Update Error: {e}")
-                    
-        elif payload.startswith("onetime_"):
-            user_id = payload.replace("onetime_", "")
-            repo = get_repository()
+                repo.update_subscription(
+                    user_id=user_id,
+                    subscription_id=purchase_id,
+                    status="active",
+                    current_period_end=period_end.isoformat(),
+                    is_premium=True,
+                )
+            except Exception:
+                repo.delete_purchase(purchase_id)  # 되돌려서 재시도 가능하게
+                raise
+            logger.info("Stars sub granted user=%s recurring=%s until=%s",
+                        user_id, bool(sp.get("is_recurring")), period_end.isoformat())
+        except Exception:
+            logger.exception("Stars sub DB update failed user=%s", user_id)
+            raise HTTPException(status_code=500, detail="Database update failed")
+
+    elif payload.startswith("onetime_"):
+        user_id = payload[len("onetime_"):]
+        if not repo.get_user(user_id):
+            logger.error("Stars onetime payment for unknown user=%s", user_id)
+            return {"ok": True}
+        try:
+            if not repo.record_purchase_once(user_id, "stars_onetime", "telegram", purchase_id):
+                return {"ok": True}  # 이미 처리한 결제 (크레딧 중복 지급 방지)
             try:
-                # 💡 수정: 두 번째 인자(1) 제거! (메서드는 user_id만 받음)
                 repo.add_onetime_credit(user_id)
-                # 💡 구매 내역도 함께 기록
-                repo.log_purchase(user_id, "stars_onetime", "telegram")
-                logger.info(f"✅ [Telegram Webhook] One-time credit added for user {user_id}")
-            except Exception as e:
-                logger.error(f"❌ [Telegram Webhook] DB Update Error: {e}")
-                # 에러 발생 시 텔레그램이 재시도하도록 500 에러 반환
-                raise HTTPException(status_code=500, detail="Database update failed")
-                    
+            except Exception:
+                repo.delete_purchase(purchase_id)
+                raise
+            logger.info("Stars onetime credit added user=%s", user_id)
+        except Exception:
+            logger.exception("Stars onetime DB update failed user=%s", user_id)
+            raise HTTPException(status_code=500, detail="Database update failed")
+
     return {"ok": True}

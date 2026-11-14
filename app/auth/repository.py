@@ -21,7 +21,7 @@ import os
 import sqlite3
 import threading
 import uuid
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
 
@@ -163,7 +163,41 @@ class _BaseRepository:
         self._run("UPDATE users SET onetime_credits = COALESCE(onetime_credits, 0) + 1 WHERE id = ?", (user_id,))
 
     def get_user(self, user_id: str) -> Optional[dict]:
-        return self._one("SELECT * FROM users WHERE id = ?", (user_id,))
+        return self._expire_stars_subscription(
+            self._one("SELECT * FROM users WHERE id = ?", (user_id,))
+        )
+
+    # 텔레그램 Stars 구독은 취소해도 만료 이벤트가 오지 않는다(갱신 결제만 안 올 뿐).
+    # 그래서 만료일(current_period_end)이 지난 stars_ 구독은 조회 시점에 free로 내린다.
+    # 갱신 결제가 약간 늦게 도착하는 경우를 위해 24시간 여유를 둔다.
+    # (Lemon Squeezy는 웹훅으로, 구글 구독은 별도 흐름으로 처리하므로 여기서는 건드리지 않는다.)
+    _STARS_EXPIRY_GRACE = timedelta(hours=24)
+
+    def _expire_stars_subscription(self, user: Optional[dict]) -> Optional[dict]:
+        if not user or user.get("tier") != "premium":
+            return user
+        sub_id = str(user.get("stripe_subscription_id") or "")
+        if not sub_id.startswith("stars_"):
+            return user
+        end_raw = user.get("current_period_end")
+        if not end_raw:
+            return user
+        try:
+            end = datetime.fromisoformat(str(end_raw).replace("Z", "+00:00"))
+        except ValueError:
+            return user
+        if end.tzinfo is None:
+            end = end.replace(tzinfo=timezone.utc)
+        if end + self._STARS_EXPIRY_GRACE >= datetime.now(timezone.utc):
+            return user
+        self.update_subscription(
+            user_id=user["id"], subscription_id=sub_id,
+            status="expired", current_period_end=str(end_raw), is_premium=False,
+        )
+        user = dict(user)
+        user["tier"] = "free"
+        user["subscription_status"] = "expired"
+        return user
 
     # ---- profiles ----
     def upsert_profile(self, user_id: str, data: dict) -> dict:
@@ -367,6 +401,21 @@ class _BaseRepository:
             self._run("DELETE FROM purchases WHERE id = ?", (purchase_id,))
             raise
         return True
+
+    def record_purchase_once(
+        self, user_id: str, product_id: str, platform: str, purchase_id: str
+    ) -> bool:
+        """결제 1건을 멱등적으로 기록. 새로 기록했으면 True, 이미 있던 결제면 False."""
+        inserted = self._run(
+            "INSERT INTO purchases (id, user_id, product_id, platform, purchased_at) "
+            "VALUES (?, ?, ?, ?, ?) ON CONFLICT (id) DO NOTHING",
+            (purchase_id, user_id, product_id, platform, _now_iso()),
+        )
+        return inserted != 0
+
+    def delete_purchase(self, purchase_id: str) -> None:
+        """지급 처리에 실패했을 때 기록을 되돌려 재시도가 가능하게 한다."""
+        self._run("DELETE FROM purchases WHERE id = ?", (purchase_id,))
 
     def list_purchases(self, user_id: str) -> list:
         return self._all(
