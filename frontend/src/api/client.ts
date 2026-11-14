@@ -8,6 +8,7 @@ import type {
   CompatibilityRequest,
   CompatibilityResponse,
   PushTokenRequest,
+  Purchase,
 } from "../../types";
 import { Platform } from "react-native";
 
@@ -33,7 +34,7 @@ export function setAuthToken(t: string | null) {
   _token = t;
 }
 
-async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
+async function request<T>(path: string, init: RequestInit = {}, timeoutMs = 30000): Promise<T> {
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
     ...(init.headers as Record<string, string> | undefined),
@@ -42,7 +43,7 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
 
   // 30초 타임아웃 설정
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 30000);
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
   try {
     const res = await fetch(`${BASE_URL}${path}`, {
@@ -106,7 +107,8 @@ export const api = {
   deleteAccount: () => request<void>("/auth/me", { method: "DELETE" }),
   getPurchases: () => request<{ purchases: Purchase[] }>("/billing/purchases"),
   verifyGooglePurchase: (p: { sku: string; purchaseToken: string; productId?: string }) =>
-    request<{ status: string; kind: string }>("/billing/google/verify", { method: "POST", body: JSON.stringify(p) }),
+    // 구글 서버 확인은 느릴 수 있어(콜드 스타트 + Google API) 타임아웃을 넉넉히 둔다.
+    request<{ status: string; kind: string }>("/billing/google/verify", { method: "POST", body: JSON.stringify(p) }, 45000),
   calculate: (payload: SajuRequest) =>
     request<SajuResponse>("/saju/calculate", { method: "POST", body: JSON.stringify(payload) }),
   report: (payload: ReportRequest) =>

@@ -114,9 +114,9 @@
     "upgradeBody": "Subscribe to unlock 7-day Daily Energy and Chemistry analysis.",
     "upgradeCta": "Subscribe to Premium",
     "paymentHistory": "Receipts",
-    "productSubMonthly": "Monthly Subscription",
+ 
     "productCompatAddon": "Compatibility Add-on",
-    "productDeepReport": "Deep Report",
+  
     "editBirthInfo": "Edit birth data",
     "deleteAccount": "Delete account permanently",
     "deleteAccountConfirm": "Are you sure you want to permanently delete your account? This action cannot be undone.",
@@ -131,6 +131,15 @@
     "linkAccountDesc": "Link your social account to safely keep your saju data and payment info even if you change devices or delete the app.",
     "linkAccountCta": "Link Social Account",
     "linkAccountSuccess": "Account successfully linked.",
+
+    "productSubMonthly": "Monthly Premium Subscription",
+    "productOnetimeCredit": "One-time Deep Report",
+    "productDeepReport": "Deep Report",
+    "productCompatibilityAddon": "Compatibility Add-on",
+    "productTypeGoogle": "Google Play",
+    "productTypeWeb": "Web Payment",
+    "subscriptionStatusActive": "Active",
+    "subscriptionStatusExpired": "Expired",
     "logout": "Sign out",
     "logoutConfirm": "Are you sure you want to sign out?",
     "logoutFail": "Failed to sign out.",
@@ -149,6 +158,14 @@
     "telegramLoginDesc": "Sign in with your Telegram account to keep your Premium benefits on every device.",
     "telegramLoginCta": "Sign in with Telegram in 1 second",
     "purchaseHistory": "Purchase history",
+    "purchaseSub": "Premium subscription",
+    "purchaseOnetime": "One-time pass",
+    "purchaseChannelApp": "App",
+    "purchaseChannelWeb": "Web",
+    "purchaseChannelTelegram": "Telegram",
+    "purchaseLabel": "{name} ({channel})",
+    "purchaseViewMore": "Show more ({count})",
+    "purchaseCollapse": "Show less",
     "productStarsOnetime": "One-time pass (Telegram 150 Stars)",
     "productStarsSub": "Premium subscription (Telegram 400 Stars)",
     "productWebSub": "Premium subscription (Web)",
@@ -223,6 +240,9 @@
     "noAccountPrompt": "No account found. Switching to link mode to start fresh."
   },
   "payment": {
+    "verifying": "Confirming your Google Play payment. This can take a moment…",
+    "pendingNotice": "Your payment is pending approval. Please reopen the app to check once it's approved.",
+    "verifyDelayed": "Confirmation is taking longer than expected. Please check Purchase history in Settings in a moment, and contact us if it doesn't appear.",
     "title": "Gyeol Premium",
     "description": "Choose the plan that fits your journey.",
     "successTitle": "Payment Successful",
@@ -319,9 +339,7 @@
   "api": {
     "timeout": "Server timed out. Please check your network."
   },
-  "poem": {
-    "back": "Back"
-  },
+
   "billing": {
     "successTitle": "Payment Successful!",
     "successDesc1": "Premium features are now active.",
@@ -354,7 +372,8 @@
     "saveWallpaper": "Save wallpaper",
     "saveSuccess": "Saved wallpaper image.",
     "saveFail": "Failed to load background image.",
-    "appSupportSoon": "Coming soon to the mobile app."
+    "appSupportSoon": "Coming soon to the mobile app.",
+    "back": "Back"
   },
   "crisis": {
     "title": "If you need support",

@@ -283,7 +283,7 @@ async def verify_google_purchase(
                 is_premium=True,
             )
             try:
-                repo.log_purchase(user["id"], "google_sub", "google_play", purchase_id=f"google_sub_{token_id}")
+                repo.log_purchase(user["id"], SKU_SUBS, "google_play", purchase_id=f"google_sub_{token_id}")
             except Exception:
                 logger.info("google sub purchase log skipped user=%s", user["id"])
             return {"status": "ok", "kind": "subscription", "is_premium": True}
@@ -297,7 +297,7 @@ async def verify_google_purchase(
             raise HTTPException(status_code=400, detail="Purchase is not completed.")
         order_id = data.get("orderId") or token_id
         granted = repo.add_onetime_purchase_idempotent(
-            user["id"], f"google_{order_id}", platform="google_play"
+            user["id"], f"google_{order_id}", platform="google_play", product_id=SKU_ONETIME
         )
         logger.info("Google onetime order=%s user=%s granted=%s", order_id, user["id"], granted)
         return {"status": "ok", "kind": "onetime", "granted": bool(granted)}

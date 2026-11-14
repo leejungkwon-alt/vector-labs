@@ -149,6 +149,14 @@
     "telegramLoginDesc": "使用 Telegram 账号登录,即可在所有设备上继续享受高级会员权益。",
     "telegramLoginCta": "1 秒使用 Telegram 登录",
     "purchaseHistory": "购买记录",
+    "purchaseSub": "高级会员订阅",
+    "purchaseOnetime": "单次券",
+    "purchaseChannelApp": "应用内支付",
+    "purchaseChannelWeb": "网页支付",
+    "purchaseChannelTelegram": "Telegram支付",
+    "purchaseLabel": "{name}({channel})",
+    "purchaseViewMore": "查看更多({count})",
+    "purchaseCollapse": "收起",
     "productStarsOnetime": "单次券(Telegram 150 Stars)",
     "productStarsSub": "高级会员订阅(Telegram 400 Stars)",
     "productWebSub": "高级会员订阅(网页支付)",
@@ -162,10 +170,8 @@
     "cityLookupError": "城市搜索失败，请手动输入经度和时区。",
     "tzOffsetAtBirth": "出生日的UTC偏移",
     "longitudeInvalid": "请输入-180至180之间的经度数值。",
-    "longitudePlaceholder": "例：126.978",
-    "cityPlaceholder": "输入城市（例：北京）",
-    "customCity": "直接输入",
-    "cityDefault": "北京",
+    
+    
     "title": "输入出生信息",
     "birthDate": "出生日期",
     "birthTime": "出生时间",
@@ -227,6 +233,9 @@
     "noAccountPrompt": "未找到账号。已切换到关联模式，请重新开始。"
   },
   "payment": {
+    "verifying": "正在确认 Google Play 付款，请稍候…",
+    "pendingNotice": "付款正在等待批准，批准后请重新打开应用查看。",
+    "verifyDelayed": "确认耗时较长。请稍后在设置中查看购买记录，如仍未显示请联系我们。",
     "title": "Gyeol Premium",
     "description": "选择适合你的计划。",
     "successTitle": "支付成功",

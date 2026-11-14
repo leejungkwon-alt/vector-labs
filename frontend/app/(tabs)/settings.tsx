@@ -26,6 +26,46 @@ export default function SettingsScreen() {
   const [purchases, setPurchases] = useState<Purchase[]>([]);
   const [upgradeAfterLogin, setUpgradeAfterLogin] = useState(false); // 로그인 후 결제창 띄울지 여부
 
+  // ---- 구매 내역 ----
+  // 처음에는 최신 N개만 보여주고 나머지는 "더보기"로 펼칩니다.
+  const [showAllPurchases, setShowAllPurchases] = useState(false);
+
+  // 구매 내역 한 줄의 표시 문구를 만든다: "상품명(결제 채널)"
+  // - 상품 종류: item.kind 우선, 없으면 product_id로 추정 (예전 데이터의 google_sub, lemon_onetime 포함)
+  // - 결제 채널: platform 기준 (google_play/android → 앱, telegram → 텔레그램, 그 외 → 웹)
+  const productDetails = (item: Purchase) => {
+    const pid = (item.product_id || "").toLowerCase();
+    const plat = (item.platform || "").toLowerCase();
+
+    let channelKey = "settings.purchaseChannelWeb";
+    if (/google|android|play/.test(plat)) channelKey = "settings.purchaseChannelApp";
+    else if (/telegram|stars/.test(plat)) channelKey = "settings.purchaseChannelTelegram";
+
+    let nameKey: string | null = null;
+    if (pid === "deep_report") nameKey = "settings.productDeepReport";
+    else if (pid === "compatibility_addon") nameKey = "settings.productCompatAddon";
+    else if (item.kind === "subscription" || /sub|premium|monthly/.test(pid)) nameKey = "settings.purchaseSub";
+    else if (item.kind === "onetime" || /onetime|credit|once/.test(pid)) nameKey = "settings.purchaseOnetime";
+
+    const name = nameKey ? t(nameKey) : item.product_id; // 알 수 없는 상품은 ID 그대로
+    let status = "";
+    if (nameKey === "settings.purchaseSub" && item.expires_date) {
+      const expires = new Date(item.expires_date);
+      status = expires > new Date()
+        ? ` (${t("settings.subscriptionStatusActive")} ~${expires.toLocaleDateString()})`
+        : ` (${t("settings.subscriptionStatusExpired")})`;
+    }
+
+    return {
+      name: `${t("settings.purchaseLabel", { name, channel: t(channelKey) })}${status}`,
+      purchasedAt: new Date(item.purchased_at).toLocaleDateString(),
+    };
+  };
+
+  const PURCHASE_PREVIEW_COUNT = 4;
+  const visiblePurchases = showAllPurchases ? purchases : purchases.slice(0, PURCHASE_PREVIEW_COUNT);
+  const hiddenPurchaseCount = Math.max(0, purchases.length - PURCHASE_PREVIEW_COUNT);
+
   const handleUpgrade = () => {
     if (!user) return;
     if (user.is_anonymous) {
@@ -310,16 +350,24 @@ export default function SettingsScreen() {
       {purchases.length > 0 && (
         <View style={styles.profileBox}>
           <Text style={styles.sectionTitle}>{t("settings.purchaseHistory")}</Text>
-          {purchases.map((item) => (
-            <View key={item.id} style={styles.row}>
-              <Text style={styles.label}>
-                {productLabel(item.product_id)}
+          {visiblePurchases.map((item) => {
+            const details = productDetails(item);
+            return (
+              <View key={item.id} style={styles.row}>
+                <Text style={[styles.label, styles.purchaseName]}>{details.name}</Text>
+                <Text style={styles.value}>{details.purchasedAt}</Text>
+              </View>
+            );
+          })}
+          {hiddenPurchaseCount > 0 && (
+            <TouchableOpacity style={styles.moreBtn} onPress={() => setShowAllPurchases((v) => !v)}>
+              <Text style={styles.moreBtnText}>
+                {showAllPurchases
+                  ? t("settings.purchaseCollapse")
+                  : t("settings.purchaseViewMore", { count: hiddenPurchaseCount })}
               </Text>
-              <Text style={styles.value}>
-                {new Date(item.purchased_at).toLocaleDateString()}
-              </Text>
-            </View>
-          ))}
+            </TouchableOpacity>
+          )}
         </View>
       )}
 
@@ -424,4 +472,7 @@ const styles = StyleSheet.create({
   upgradeBtnText: { color: colors.onPrimary, fontSize: 16, fontWeight: "700" },
   manageBtn: { backgroundColor: colors.surface, padding: 14, borderRadius: radius.md, alignItems: "center", borderWidth: 1, borderColor: colors.primary },
   manageBtnText: { color: colors.primary, fontSize: 15, fontWeight: "600" },
+  purchaseName: { flexShrink: 1, marginRight: spacing.sm },
+  moreBtn: { alignItems: "center", paddingVertical: spacing.sm },
+  moreBtnText: { fontSize: 14, fontWeight: "600", color: colors.primary },
 });

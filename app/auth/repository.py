@@ -338,7 +338,8 @@ class _BaseRepository:
         return self._one("SELECT * FROM purchases WHERE id = ?", (pid,))
 
     def add_onetime_purchase_idempotent(
-        self, user_id: str, order_id: str, platform: str = "lemon_squeezy"
+        self, user_id: str, order_id: str, platform: str = "lemon_squeezy",
+        product_id: str = "lemon_onetime",
     ) -> bool:
         """
         1회권 구매 원자적 멱등 처리:
@@ -352,7 +353,7 @@ class _BaseRepository:
         inserted = self._run(
             "INSERT INTO purchases (id, user_id, product_id, platform, purchased_at) "
             "VALUES (?, ?, ?, ?, ?) ON CONFLICT (id) DO NOTHING",
-            (purchase_id, user_id, "lemon_onetime", platform, _now_iso()),
+            (purchase_id, user_id, product_id, platform, _now_iso()),
         )
         if inserted == 0:
             # 이미 처리된 주문 (중복 웹훅)

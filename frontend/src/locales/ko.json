@@ -114,9 +114,9 @@
     "upgradeBody": "구독하면 7일치 데일리 에너지와 궁합 분석을 모두 이용할 수 있습니다.",
     "upgradeCta": "프리미엄 구독하기",
     "paymentHistory": "결제 내역",
-    "productSubMonthly": "월간 구독권",
+ 
     "productCompatAddon": "케미 애드온",
-    "productDeepReport": "심화 리포트",
+   
     "editBirthInfo": "출생 정보 수정하기",
     "deleteAccount": "계정 영구 삭제",
     "deleteAccountConfirm": "정말로 계정을 영구 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.",
@@ -131,6 +131,15 @@
     "linkAccountDesc": "기기를 변경하거나 앱을 삭제해도 내 사주 데이터와 결제 정보를 안전하게 보관하려면 SNS 계정을 연동하세요.",
     "linkAccountCta": "SNS 계정 연동하기",
     "linkAccountSuccess": "계정이 성공적으로 연결되었습니다.",
+ 
+    "productSubMonthly": "월간 프리미엄 구독",
+    "productOnetimeCredit": "1회권 심화 리포트",
+    "productDeepReport": "심화 리포트",
+    "productCompatibilityAddon": "케미 분석 애드온",
+    "productTypeGoogle": "Google Play",
+    "productTypeWeb": "웹 결제",
+    "subscriptionStatusActive": "활성",
+    "subscriptionStatusExpired": "만료됨",
     "logout": "로그아웃",
     "logoutConfirm": "정말 로그아웃하시겠어요?",
     "logoutFail": "로그아웃에 실패했습니다.",
@@ -149,6 +158,14 @@
     "telegramLoginDesc": "텔레그램 계정으로 로그인하면 모든 기기에서 프리미엄 혜택을 그대로 이용할 수 있습니다.",
     "telegramLoginCta": "텔레그램으로 1초 만에 로그인",
     "purchaseHistory": "구매 내역",
+    "purchaseSub": "프리미엄 구독",
+    "purchaseOnetime": "1회 이용권",
+    "purchaseChannelApp": "앱 결제",
+    "purchaseChannelWeb": "웹 결제",
+    "purchaseChannelTelegram": "텔레그램 결제",
+    "purchaseLabel": "{name}({channel})",
+    "purchaseViewMore": "더보기 ({count})",
+    "purchaseCollapse": "접기",
     "productStarsOnetime": "1회 이용권 (텔레그램 150 Stars)",
     "productStarsSub": "프리미엄 구독 (텔레그램 400 Stars)",
     "productWebSub": "프리미엄 구독 (웹 결제)",
@@ -223,6 +240,9 @@
     "noAccountPrompt": "가입된 계정이 없습니다. '계정 연동'으로 전환하여 새로 시작하세요."
   },
   "payment": {
+    "verifying": "Google 결제를 확인하는 중입니다. 잠시만 기다려 주세요…",
+    "pendingNotice": "결제가 승인 대기 중입니다. 승인이 끝난 뒤 앱을 다시 열어 확인해 주세요.",
+    "verifyDelayed": "결제 확인이 지연되고 있습니다. 잠시 후 설정 화면의 구매 내역을 확인해 주세요. 계속 반영되지 않으면 문의해 주세요.",
     "title": "Gyeol Premium",
     "description": "나에게 맞는 플랜을 선택하세요.",
     "successTitle": "결제가 완료되었어요",
@@ -319,9 +339,7 @@
   "api": {
     "timeout": "서버 응답 시간이 초과되었습니다. 네트워크 상태를 확인해주세요."
   },
-  "poem": {
-    "back": "돌아가기"
-  },
+
   "billing": {
     "successTitle": "결제가 완료되었습니다!",
     "successDesc1": "프리미엄 기능이 활성화되었습니다.",
@@ -354,7 +372,8 @@
     "saveWallpaper": "배경화면 저장",
     "saveSuccess": "배경 이미지를 저장했습니다.",
     "saveFail": "배경 이미지 로드 실패",
-    "appSupportSoon": "모바일 앱에서는 곧 지원될 예정입니다."
+    "appSupportSoon": "모바일 앱에서는 곧 지원될 예정입니다.",
+    "back": "돌아가기"
   },
   "crisis": {
     "title": "도움이 필요하시면",

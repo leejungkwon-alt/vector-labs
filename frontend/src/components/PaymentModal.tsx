@@ -14,6 +14,28 @@ import { useT } from "@/i18n";
 const SKU_ONETIME = "gyeol_onetime_credit"; // 관리형 상품(1회권)
 const SKU_SUBS = "gyeol_premium_monthly"; // 구독
 
+const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
+
+// 구글 결제는 반영/응답이 느릴 수 있어서, 서버 확인을 바로 포기하지 않고 몇 번 기다렸다가 다시 시도한다.
+// 재시도 대상: 네트워크 끊김/타임아웃(0, 408), 결제 보류(409), 서버 오류(5xx), 구글 반영 지연으로 인한 400.
+// 로그인 만료(401), 다른 계정 구매(403) 같은 확정 오류는 바로 중단한다.
+const VERIFY_RETRY_DELAYS_MS = [0, 3000, 5000, 8000, 12000];
+async function verifyWithRetry(payload: { sku: string; purchaseToken: string; productId?: string }) {
+  let lastErr: any;
+  for (const delay of VERIFY_RETRY_DELAYS_MS) {
+    if (delay) await sleep(delay);
+    try {
+      return await api.verifyGooglePurchase(payload);
+    } catch (e: any) {
+      lastErr = e;
+      const s = Number(e?.status);
+      const retryable = s === 0 || s === 408 || s === 409 || s === 400 || s >= 500;
+      if (!retryable) throw e;
+    }
+  }
+  throw lastErr;
+}
+
 interface Props {
   visible: boolean;
   onClose: () => void;
@@ -23,6 +45,7 @@ interface Props {
 export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
   const [loading, setLoading] = useState<string | null>(null);
   const [iapReady, setIapReady] = useState(false);
+  const [verifying, setVerifying] = useState(false); // 결제 후 서버 확인 중
   const t = useT();
 
   const bootstrap = useAuthStore((s) => s.bootstrap);
@@ -52,13 +75,21 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
       try {
         const token: string = purchase?.purchaseToken ?? "";
         const sku: string = purchase?.productId ?? purchase?.ids?.[0] ?? "";
-        if (purchase?.purchaseState === "pending") return; // 결제 보류 중
+        if (purchase?.purchaseState === "pending") {
+          // 결제 승인 대기: 스피너가 영원히 돌지 않게 풀고 안내한다.
+          if (mounted) {
+            setLoading(null);
+            Alert.alert(t("common.notice"), t("payment.pendingNotice"));
+          }
+          return;
+        }
         if (token && processedRef.current.has(token)) return;
         if (token) processedRef.current.add(token);
 
         if (!token) throw new Error("Missing purchase token.");
+        if (mounted) setVerifying(true);
         try {
-          await api.verifyGooglePurchase({ sku, purchaseToken: token, productId: sku });
+          await verifyWithRetry({ sku, purchaseToken: token, productId: sku });
         } catch (e) {
           processedRef.current.delete(token); // allow retry
           throw e; // do not finish the purchase when server verification fails
@@ -75,7 +106,11 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
         }
       } catch (e: any) {
         if (mounted) setLoading(null);
-        Alert.alert(t("payment.failTitle"), String(e?.message ?? e));
+        const s = Number(e?.status);
+        const delayed = s === 0 || s === 408 || s === 409 || s >= 500;
+        Alert.alert(t("payment.failTitle"), delayed ? t("payment.verifyDelayed") : String(e?.message ?? e));
+      } finally {
+        if (mounted) setVerifying(false);
       }
     });
 
@@ -144,12 +179,11 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
             if (!offerToken) {
               throw new Error(t("payment.offerNotFoundError"));
             }
+            await IAP.requestPurchase({
+              request: { google: { skus: [sku], subscriptionOffers: [{ sku, offerToken }] } },
+              type: "subs",
+            });
           }
-          // requestPurchase 호출은 if/else 블록 외부에서 공통으로 처리
-          await IAP.requestPurchase({
-            request: { google: { skus: [sku], subscriptionOffers: [{ sku, offerToken: offerToken || '' }] } },
-            type: isOnetime ? "in-app" : "subs",
-          });
           keepLoading = true;
         } catch (err: any) {
           const code = String(err?.code ?? "");
@@ -214,6 +248,13 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
           </View>
           <Text style={styles.desc}>{t("payment.description")}</Text>
 
+          {verifying && (
+            <View style={styles.verifyBox}>
+              <ActivityIndicator color={colors.primary} />
+              <Text style={styles.verifyText}>{t("payment.verifying")}</Text>
+            </View>
+          )}
+
           {/* 💎 프리미엄 구독 플랜 */}
           <TouchableOpacity
             style={[styles.planBox, { borderColor: colors.primary, backgroundColor: colors.primary + "05" }]}
@@ -275,5 +316,7 @@ const styles = StyleSheet.create({
   planName: { fontSize: 16, fontWeight: "700", color: colors.text, marginBottom: 2 },
   planDetail: { fontSize: 13, color: colors.textMuted, marginBottom: 6 },
   planPrice: { fontSize: 15, fontWeight: "600", color: colors.primary },
+  verifyBox: { flexDirection: "row", alignItems: "center", gap: 10, padding: 12, marginBottom: 12, borderRadius: radius.md, backgroundColor: colors.primary + "10" },
+  verifyText: { flex: 1, fontSize: 13, color: colors.text },
   terms: { textAlign: "center", fontSize: 11, color: colors.textMuted, marginTop: 12 },
 });
