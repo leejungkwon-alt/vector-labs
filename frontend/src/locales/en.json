@@ -114,9 +114,7 @@
     "upgradeBody": "Subscribe to unlock 7-day Daily Energy and Chemistry analysis.",
     "upgradeCta": "Subscribe to Premium",
     "paymentHistory": "Receipts",
- 
     "productCompatAddon": "Compatibility Add-on",
-  
     "editBirthInfo": "Edit birth data",
     "deleteAccount": "Delete account permanently",
     "deleteAccountConfirm": "Are you sure you want to permanently delete your account? This action cannot be undone.",
@@ -131,7 +129,6 @@
     "linkAccountDesc": "Link your social account to safely keep your saju data and payment info even if you change devices or delete the app.",
     "linkAccountCta": "Link Social Account",
     "linkAccountSuccess": "Account successfully linked.",
-
     "productSubMonthly": "Monthly Premium Subscription",
     "productOnetimeCredit": "One-time Deep Report",
     "productDeepReport": "Deep Report",
@@ -172,7 +169,8 @@
     "productWebSub": "Premium subscription (Web)",
     "productWebOnetime": "One-time pass (Web)",
     "productPlayOnetime": "One-time pass (Google Play)",
-    "productPlaySub": "Premium subscription (Google Play)"
+    "productPlaySub": "Premium subscription (Google Play)",
+    "yearReportUnlocked": "This year's report unlocked"
   },
   "birthInput": {
     "cityLookupLoading": "Looking up city…",
@@ -254,8 +252,8 @@
     "subMonthlyDetail": "Daily, Monthly & All Deep Reports",
     "subMonthlyPrice": "$2.99 / month (Cancel anytime)",
     "deepReportTitle": "Deep Report",
-    "deepReportDetail": "Love, Career & Wealth patterns (Keep forever)",
-    "deepReportPrice": "$0.99 (Lifetime Unlock)",
+    "deepReportDetail": "Deep Report (Single pass · View once)",
+    "deepReportPrice": "$0.99 (One-time)",
     "compatTitle": "Premium Compatibility",
     "compatDetail": "4-axis chemistry (Keep forever)",
     "compatPrice": "$1.99 (Lifetime Unlock)",
@@ -267,7 +265,8 @@
     "offerNotFoundError": "Subscription offer not found.",
     "termsTelegram": "Secure checkout powered by Telegram Stars.",
     "termsGoogle": "Secure checkout powered by Google Play.",
-    "termsWeb": "Secure checkout powered by Stripe/LemonSqueezy."
+    "termsWeb": "Secure checkout powered by Stripe/LemonSqueezy.",
+    "deepReportYearNote": "Once opened, view it again all year at no extra cost"
   },
   "sections": {
     "yourChart": "Your Chart",
@@ -340,7 +339,6 @@
   "api": {
     "timeout": "Server timed out. Please check your network."
   },
-
   "billing": {
     "successTitle": "Payment Successful!",
     "successDesc1": "Premium features are now active.",

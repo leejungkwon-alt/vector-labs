@@ -6,7 +6,7 @@ import {
 } from "react-native";
 import { colors, radius, spacing } from "@/theme";
 import { api } from "@/api/client";
-import { useAuthStore } from "@/store/authStore";
+import { useAuthStore, refreshUser, applyWalletSnapshot } from "@/store/authStore";
 import { useQueryClient } from "@tanstack/react-query";
 import { useT } from "@/i18n";
 
@@ -48,7 +48,6 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
   const [verifying, setVerifying] = useState(false); // 결제 후 서버 확인 중
   const t = useT();
 
-  const bootstrap = useAuthStore((s) => s.bootstrap);
   const queryClient = useQueryClient();
   const tg = typeof window !== "undefined" ? (window as any).Telegram?.WebApp : null;
   const isTelegramEnv = !!tg?.initData;
@@ -56,10 +55,8 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
 
   // 리스너 안에서 최신 함수를 쓰기 위한 ref
   const onCloseRef = useRef(onClose);
-  const bootstrapRef = useRef(bootstrap);
   const queryClientRef = useRef(queryClient);
   useEffect(() => { onCloseRef.current = onClose; }, [onClose]);
-  useEffect(() => { bootstrapRef.current = bootstrap; }, [bootstrap]);
   useEffect(() => { queryClientRef.current = queryClient; }, [queryClient]);
 
   // 같은 구매가 두 번 처리되지 않도록 기록
@@ -88,8 +85,9 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
 
         if (!token) throw new Error("Missing purchase token.");
         if (mounted) setVerifying(true);
+        let verified: { tier?: string; is_premium?: boolean; onetime_credits?: number } | null = null;
         try {
-          await verifyWithRetry({ sku, purchaseToken: token, productId: sku });
+          verified = await verifyWithRetry({ sku, purchaseToken: token, productId: sku });
         } catch (e) {
           processedRef.current.delete(token); // allow retry
           throw e; // do not finish the purchase when server verification fails
@@ -97,12 +95,16 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
 
         await IAP.finishTransaction({ purchase, isConsumable: sku === SKU_ONETIME });
 
+        // 💡 서버가 돌려준 티어/크레딧으로 유저 상태를 먼저 갱신한 뒤,
+        //    화면(홈 리포트/daily 등)을 다시 불러온다. (닫기 전에 실행해야 반영이 보장됨)
+        if (verified) applyWalletSnapshot(verified);
+        await refreshUser();
+        await queryClientRef.current.invalidateQueries();
+
         if (mounted) {
           setLoading(null);
           Alert.alert(t("common.notice"), t("payment.successTitle"));
           onCloseRef.current();
-          bootstrapRef.current();
-          queryClientRef.current.invalidateQueries(); // refetch report/daily/etc. so locked content opens
         }
       } catch (e: any) {
         if (mounted) setLoading(null);
@@ -270,7 +272,7 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
               </View>
               <Text style={styles.planDetail}>{t("payment.subMonthlyDetail")}</Text>
               <Text style={styles.planPrice}>
-                {isTelegramEnv ? "400 Stars / month (Auto-renews)" : "$6.99 / month (Auto-renews. Cancel anytime.)"}
+                {isTelegramEnv ? "400 Stars / month (Auto-renews)" : t("payment.subMonthlyPrice")}
               </Text>
             </View>
             {loading === "sub_monthly_699" ? (
@@ -289,7 +291,8 @@ export function PaymentModal({ visible, onClose, onRequireLogin }: Props) {
             <View style={{ flex: 1 }}>
               <Text style={styles.planName}>{t("payment.deepReportTitle")}</Text>
               <Text style={styles.planDetail}>{t("payment.deepReportDetail")}</Text>
-              <Text style={styles.planPrice}>{isTelegramEnv ? "150 Stars" : "$2.99 (One-time)"}</Text>
+              <Text style={styles.planNote}>{t("payment.deepReportYearNote")}</Text>
+              <Text style={styles.planPrice}>{isTelegramEnv ? "150 Stars" : t("payment.deepReportPrice")}</Text>
             </View>
             {loading === "onetime" ? (
               <ActivityIndicator color={colors.textMuted} />
@@ -315,6 +318,7 @@ const styles = StyleSheet.create({
   planBox: { flexDirection: "row", alignItems: "center", borderWidth: 1, borderColor: colors.border, borderRadius: radius.md, padding: 16, marginBottom: 12 },
   planName: { fontSize: 16, fontWeight: "700", color: colors.text, marginBottom: 2 },
   planDetail: { fontSize: 13, color: colors.textMuted, marginBottom: 6 },
+  planNote: { fontSize: 12, color: colors.primary, marginBottom: 6 },
   planPrice: { fontSize: 15, fontWeight: "600", color: colors.primary },
   verifyBox: { flexDirection: "row", alignItems: "center", gap: 10, padding: 12, marginBottom: 12, borderRadius: radius.md, backgroundColor: colors.primary + "10" },
   verifyText: { flex: 1, fontSize: 13, color: colors.text },

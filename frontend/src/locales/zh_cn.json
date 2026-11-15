@@ -163,7 +163,8 @@
     "productWebSub": "高级会员订阅(网页支付)",
     "productWebOnetime": "单次券(网页支付)",
     "productPlayOnetime": "单次券(Google Play)",
-    "productPlaySub": "高级会员订阅(Google Play)"
+    "productPlaySub": "高级会员订阅(Google Play)",
+    "yearReportUnlocked": "今年报告已解锁"
   },
   "birthInput": {
     "cityLookupLoading": "正在查找城市…",
@@ -171,8 +172,6 @@
     "cityLookupError": "城市搜索失败，请手动输入经度和时区。",
     "tzOffsetAtBirth": "出生日的UTC偏移",
     "longitudeInvalid": "请输入-180至180之间的经度数值。",
-    
-    
     "title": "输入出生信息",
     "birthDate": "出生日期",
     "birthTime": "出生时间",
@@ -247,8 +246,8 @@
     "subMonthlyDetail": "每日、每月及所有深度报告",
     "subMonthlyPrice": "$2.99 / 月（随时可取消）",
     "deepReportTitle": "深度报告",
-    "deepReportDetail": "爱情、事业及财富模式（永久保留）",
-    "deepReportPrice": "$0.99（终身解锁）",
+    "deepReportDetail": "深度报告（单次券·可查看1次）",
+    "deepReportPrice": "$0.99（单次券）",
     "compatTitle": "高级合盘",
     "compatDetail": "4维合盘（永久保留）",
     "compatPrice": "$1.99（终身解锁）",
@@ -260,7 +259,8 @@
     "offerNotFoundError": "未找到订阅优惠。",
     "termsTelegram": "通过 Telegram Stars 安全结账",
     "termsGoogle": "通过 Google Play 安全结账",
-    "termsWeb": "安全网页支付系统"
+    "termsWeb": "安全网页支付系统",
+    "deepReportYearNote": "解锁后今年内可重复查看,不会再次扣费"
   },
   "sections": {
     "yourChart": "你的命盘",

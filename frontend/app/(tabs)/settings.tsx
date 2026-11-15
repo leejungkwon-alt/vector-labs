@@ -1,9 +1,9 @@
 import { useLanguageStore, SupportedLang } from "@/store/languageStore";
 import { useT } from "@/i18n";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Alert, Platform, Linking, ScrollView } from "react-native";
 import { Switch } from "react-native";
-import { router } from "expo-router";
+import { router, useFocusEffect } from "expo-router";
 import { colors, spacing, radius } from "@/theme";
 import { useAuthStore } from "@/store/authStore";
 import { useProfileStore } from "@/store/profileStore";
@@ -24,6 +24,8 @@ export default function SettingsScreen() {
   const [showLogin, setShowLogin] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
   const [purchases, setPurchases] = useState<Purchase[]>([]);
+  const [unlockedYears, setUnlockedYears] = useState<number[]>([]); // 1회권으로 열린 리포트 연도
+  const yearUnlocked = unlockedYears.includes(new Date().getFullYear());
   const [upgradeAfterLogin, setUpgradeAfterLogin] = useState(false); // 로그인 후 결제창 띄울지 여부
 
   // ---- 구매 내역 ----
@@ -83,13 +85,17 @@ export default function SettingsScreen() {
 
   // 화면이 그려진 후 텔레그램 SDK가 로드되었는지 확인
   
-  useEffect(() => {
-    if (user) {
+  // 화면에 들어올 때마다(결제/리포트 열람 후 돌아올 때 포함) 구매 내역과 열람 상태를 다시 불러온다.
+  useFocusEffect(
+    useCallback(() => {
+      if (!user) return;
       api.getPurchases().then((res) => {
         if (res && res.purchases) setPurchases(res.purchases);
+        const years = (res as any)?.unlocked_years;
+        setUnlockedYears(Array.isArray(years) ? years.map(Number) : []);
       }).catch((e) => console.warn("Failed to load purchases", e));
-    }
-  }, [user]);
+    }, [user])
+  );
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -284,10 +290,11 @@ export default function SettingsScreen() {
 
         <View style={styles.row}>
           <Text style={styles.label}>{t("settings.tier")}</Text>
-          <Text style={[styles.value, { fontWeight: "bold", color: (user?.tier === "free" && (user?.onetime_credits ?? 0) === 0) ? colors.text : colors.primary }]}>
+          <Text style={[styles.value, { fontWeight: "bold", color: (user?.tier === "free" && (user?.onetime_credits ?? 0) === 0 && !yearUnlocked) ? colors.text : colors.primary }]}>
             {user?.tier === "premium" ? t("settings.tierPremium") :
              user?.tier === "subscription" ? t("settings.tierSubscription") :
              (user?.onetime_credits ?? 0) > 0 ? t("settings.creditsHeld", { count: user?.onetime_credits ?? 0 }) :
+             yearUnlocked ? t("settings.yearReportUnlocked") :
              t("settings.tierFree")}
           </Text>
         </View>

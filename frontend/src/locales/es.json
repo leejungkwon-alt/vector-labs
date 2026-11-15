@@ -163,7 +163,8 @@
     "productWebSub": "Suscripción Premium (Web)",
     "productWebOnetime": "Pase único (Web)",
     "productPlayOnetime": "Pase único (Google Play)",
-    "productPlaySub": "Suscripción Premium (Google Play)"
+    "productPlaySub": "Suscripción Premium (Google Play)",
+    "yearReportUnlocked": "Informe de este año desbloqueado"
   },
   "birthInput": {
     "cityLookupLoading": "Buscando la ciudad…",
@@ -245,8 +246,8 @@
     "subMonthlyDetail": "Informes diarios, mensuales y profundos",
     "subMonthlyPrice": "$2.99 / mes (Cancela cuando quieras)",
     "deepReportTitle": "Informe profundo",
-    "deepReportDetail": "Patrones de Amor, Carrera y Riqueza (Conservar para siempre)",
-    "deepReportPrice": "$0.99 (Desbloqueo de por vida)",
+    "deepReportDetail": "Informe profundo (Pase de 1 uso · 1 consulta)",
+    "deepReportPrice": "$0.99 (1 uso)",
     "compatTitle": "Compatibilidad Premium",
     "compatDetail": "Química de 4 ejes (Conservar para siempre)",
     "compatPrice": "$1.99 (Desbloqueo de por vida)",
@@ -258,7 +259,8 @@
     "offerNotFoundError": "Oferta de suscripción no encontrada.",
     "termsTelegram": "Pago seguro mediante Telegram Stars.",
     "termsGoogle": "Pago seguro mediante Google Play.",
-    "termsWeb": "Sistema de pago web seguro."
+    "termsWeb": "Sistema de pago web seguro.",
+    "deepReportYearNote": "Una vez abierto, puedes volver a verlo este año sin costo adicional"
   },
   "sections": {
     "yourChart": "Tu Carta",

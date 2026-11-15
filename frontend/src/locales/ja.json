@@ -163,7 +163,8 @@
     "productWebSub": "プレミアム購読(Web決済)",
     "productWebOnetime": "1回利用券(Web決済)",
     "productPlayOnetime": "1回利用券(Google Play)",
-    "productPlaySub": "プレミアム購読(Google Play)"
+    "productPlaySub": "プレミアム購読(Google Play)",
+    "yearReportUnlocked": "今年のレポート解放済み"
   },
   "birthInput": {
     "cityLookupLoading": "都市を検索中…",
@@ -245,8 +246,8 @@
     "subMonthlyDetail": "毎日、毎月、すべての詳細レポート",
     "subMonthlyPrice": "$2.99 / 月（いつでもキャンセル可能）",
     "deepReportTitle": "詳細レポート",
-    "deepReportDetail": "恋愛、キャリア、富のパターン（永久に保存）",
-    "deepReportPrice": "$0.99（買い切り）",
+    "deepReportDetail": "詳細レポート（1回券・1回閲覧）",
+    "deepReportPrice": "$0.99（1回券）",
     "compatTitle": "プレミアム相性",
     "compatDetail": "4つの相性（永久に保存）",
     "compatPrice": "$1.99（買い切り）",
@@ -258,7 +259,8 @@
     "offerNotFoundError": "購読オファーが見つかりませんでした。",
     "termsTelegram": "Telegram Stars による安全な決済",
     "termsGoogle": "Google Play による安全な決済",
-    "termsWeb": "安全なウェブ決済システム"
+    "termsWeb": "安全なウェブ決済システム",
+    "deepReportYearNote": "一度開くと、今年中は何度見ても追加料金はかかりません"
   },
   "sections": {
     "yourChart": "あなたの命式",
