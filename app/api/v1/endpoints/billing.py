@@ -217,7 +217,12 @@ async def get_purchases(user: dict = Depends(get_current_user)):
     """유저의 결제(구매) 내역을 반환합니다."""
     repo = get_repository()
     purchases = repo.list_purchases(user["id"])
-    return {"purchases": purchases}
+    return {
+        "purchases": purchases,
+        # 1회권으로 열린 리포트의 연도 목록과 남은 크레딧 (설정 화면 표시용)
+        "unlocked_years": repo.list_report_unlock_years(user["id"]),
+        "onetime_credits": repo.get_onetime_credits(user["id"]),
+    }
 
 # ------------------------- Google Play purchase verification -------------------------
 import hashlib
@@ -311,7 +316,15 @@ async def verify_google_purchase(
             user["id"], f"google_{order_id}", platform="google_play", product_id=SKU_ONETIME
         )
         logger.info("Google onetime order=%s user=%s granted=%s", order_id, user["id"], granted)
-        return {"status": "ok", "kind": "onetime", "granted": bool(granted)}
+        fresh = repo.get_user(user["id"]) or {}
+        return {
+            "status": "ok",
+            "kind": "onetime",
+            "granted": bool(granted),
+            # 결제 직후 앱이 바로 잠금 해제 상태를 보여줄 수 있도록 지갑 상태를 함께 반환
+            "tier": fresh.get("tier") or "free",
+            "onetime_credits": repo.get_onetime_credits(user["id"]),
+        }
 
     except google_play.GooglePlayError as e:
         if e.status in (400, 404, 410):

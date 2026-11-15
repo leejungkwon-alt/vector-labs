@@ -378,3 +378,73 @@ def test_unknown_tier_summary_cards_gated():
     out = apply_entitlement_gate(r, "vip_unknown")
     cards = out["summary_cards"]
     assert any(c.get("locked") is True for c in cards[2:])
+
+
+# ============================================================
+# 1회권(크레딧) 구매 → 리포트 잠금 해제
+# ============================================================
+
+def test_api_onetime_credit_unlocks_report(fresh_auth):
+    """1회권(크레딧) 보유 유저는 리포트가 잠금 해제되고, meta에 차감 정보가 남는다."""
+    from app.auth.repository import get_repository
+
+    a = client.post("/api/v1/auth/anonymous").json()
+    repo = get_repository()
+    repo.add_onetime_credit(a["user"]["id"])
+
+    resp = client.post(
+        "/api/v1/saju/report",
+        headers=_h(a["access_token"]),
+        json=BASE_PAYLOAD,
+    )
+    assert resp.status_code == 200
+    report = resp.json()["report"]
+
+    # 이번 리포트는 프리미엄(un-gated)으로 생성됨
+    assert report["meta"]["tier"] == "premium"
+    assert report["meta"]["locked_sections"] == []
+    assert "body" in report["sections"]["love"]
+
+    # 클라이언트가 재요청(재차감)을 피할 수 있도록 차감 사실을 알려준다
+    assert report["meta"]["credit_used"] is True
+    assert report["meta"]["onetime_credits"] == 0
+
+    # 같은 사람 + 같은 해 리포트는 다시 열어도 차감 없이 계속 열려 있다
+    resp2 = client.post(
+        "/api/v1/saju/report",
+        headers=_h(a["access_token"]),
+        json=BASE_PAYLOAD,
+    )
+    report2 = resp2.json()["report"]
+    assert report2["meta"]["tier"] == "premium"
+    assert report2["meta"]["credit_used"] is False
+    assert report2["meta"]["already_unlocked"] is True
+    assert report2["meta"]["onetime_credits"] == 0
+
+    # 다른 사람(생년월일이 다름)의 리포트는 크레딧이 없으니 다시 잠긴다
+    other = {**BASE_PAYLOAD, "birth_date": "1985-05-05"}
+    resp3 = client.post(
+        "/api/v1/saju/report",
+        headers=_h(a["access_token"]),
+        json=other,
+    )
+    assert resp3.json()["report"]["meta"]["tier"] == "free"
+
+
+def test_api_onetime_unlock_is_per_year(fresh_auth):
+    from app.auth.repository import get_repository
+
+    a = client.post("/api/v1/auth/anonymous").json()
+    repo = get_repository()
+    repo.add_onetime_credit(a["user"]["id"])
+
+    r1 = client.post("/api/v1/saju/report", headers=_h(a["access_token"]),
+                     json={**BASE_PAYLOAD, "target_year": 2026})
+    assert r1.json()["report"]["meta"]["tier"] == "premium"
+
+    # 다음 해는 새 크레딧이 필요하다
+    r2 = client.post("/api/v1/saju/report", headers=_h(a["access_token"]),
+                     json={**BASE_PAYLOAD, "target_year": 2027})
+    assert r2.json()["report"]["meta"]["tier"] == "free"
+    assert repo.list_report_unlock_years(a["user"]["id"]) == [2026]
+

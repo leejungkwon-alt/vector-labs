@@ -14,6 +14,7 @@
   - SAJU_REQUIRE_AUTH_FOR_REPORT=true 면 헤더 없을 때 401
 """
 import os
+import hashlib
 import logging
 from datetime import datetime
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
@@ -39,6 +40,22 @@ def _resolve_today(tz_str: str):
     except (ZoneInfoNotFoundError, ValueError):
         tz = ZoneInfo("Asia/Seoul")
     return datetime.now(tz).date()
+
+
+def _unlock_key(payload, year: int) -> str:
+    """
+    1회권 열람 기록 키: 같은 사람(생년월일시+성별) + 같은 연도(양력).
+    언어/계산 옵션을 바꿔도 다시 결제하지 않도록 키에는 넣지 않는다.
+    """
+    parts = [
+        str(getattr(payload, "birth_date", "")),
+        str(getattr(payload, "birth_time", "") or ""),
+        str(getattr(payload, "birth_time_mode", "") or ""),
+        str(getattr(payload, "gender", "") or ""),
+        str(year),
+    ]
+    digest = hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:40]
+    return f"{year}:{digest}"  # 연도를 앞에 둬서 설정 화면에서 "올해 열림" 을 표시할 수 있게 한다
 
 
 def _require_auth() -> bool:
@@ -106,14 +123,31 @@ def api_generate_report(
     repo = get_repository()
     
     # 💡 1회권(크레딧) 결제 유저 처리
+    #    같은 사람 + 같은 해(양력) 리포트는 한 번 열면 다시 열어도 크레딧을 차감하지 않는다.
+    credit_used = False
+    already_unlocked = False
+    onetime_credits_after = None
     if uid and tier == "free":
-        credits = repo.get_onetime_credits(uid)
-        if credits and credits > 0:
-            # 원자적 차감 성공 시 이번 리포트는 프리미엄으로 취급
-            if repo.deduct_onetime_credit(uid):
-                tier = "premium"
-                logger.info(f"User {uid} used 1 onetime credit. Remaining: {credits - 1}")
+        unlock_year = getattr(payload, "target_year", None) or today.year
+        status = repo.unlock_report_with_credit(uid, _unlock_key(payload, unlock_year))
+        if status == "credit":
+            tier = "premium"
+            credit_used = True
+            logger.info("User %s used 1 onetime credit (year=%s).", uid, unlock_year)
+        elif status == "already":
+            tier = "premium"
+            already_unlocked = True
+        onetime_credits_after = repo.get_onetime_credits(uid)
 
     addons = repo.list_addons(uid) if uid else []
     report = apply_entitlement_gate(report, tier, addons)
+
+    # 💡 클라이언트가 "이 리포트를 1회권으로 열었는지" 알 수 있게 meta에 표시.
+    #    (홈 화면이 잔액 갱신만 하고 리포트를 다시 요청하지 않도록 → 크레딧 중복 차감 방지)
+    meta = report.setdefault("meta", {})
+    meta["credit_used"] = credit_used
+    meta["already_unlocked"] = already_unlocked
+    if onetime_credits_after is not None:
+        meta["onetime_credits"] = onetime_credits_after
+
     return {"report": report}

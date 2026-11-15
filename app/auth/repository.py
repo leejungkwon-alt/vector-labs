@@ -104,6 +104,14 @@ _SCHEMA_STATEMENTS = [
         language_code TEXT
     )
     """,
+    """
+    CREATE TABLE IF NOT EXISTS report_unlocks (
+        user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        unlock_key TEXT NOT NULL,
+        unlocked_at TEXT NOT NULL,
+        PRIMARY KEY (user_id, unlock_key)
+    )
+    """,
 ]
 
 
@@ -319,6 +327,53 @@ class _BaseRepository:
             (user_id,)
         )
         return updated > 0
+
+    # ---- report unlocks (1회권: 같은 사람 + 같은 해는 다시 열어도 차감 없음) ----
+    def has_report_unlock(self, user_id: str, unlock_key: str) -> bool:
+        row = self._one(
+            "SELECT 1 AS ok FROM report_unlocks WHERE user_id = ? AND unlock_key = ?",
+            (user_id, unlock_key),
+        )
+        return row is not None
+
+    def list_report_unlock_years(self, user_id: str) -> list:
+        """열려 있는 리포트의 연도 목록(내림차순). 열람 키는 "<연도>:<해시>" 형식."""
+        rows = self._all(
+            "SELECT unlock_key FROM report_unlocks WHERE user_id = ?", (user_id,)
+        )
+        years = set()
+        for r in rows:
+            head = str(r["unlock_key"]).split(":", 1)[0]
+            if head.isdigit():
+                years.add(int(head))
+        return sorted(years, reverse=True)
+
+    def unlock_report_with_credit(self, user_id: str, unlock_key: str) -> str:
+        """
+        1회권으로 리포트를 연다.
+        - "already": 이미 열린 리포트 (크레딧 차감 없음)
+        - "credit" : 이번에 크레딧 1개를 차감하고 열림 (열람 기록 저장)
+        - "none"   : 열려 있지 않고 크레딧도 없음
+        """
+        if self.has_report_unlock(user_id, unlock_key):
+            return "already"
+        if not self.deduct_onetime_credit(user_id):
+            return "none"
+        try:
+            inserted = self._run(
+                "INSERT INTO report_unlocks (user_id, unlock_key, unlocked_at) "
+                "VALUES (?, ?, ?) ON CONFLICT (user_id, unlock_key) DO NOTHING",
+                (user_id, unlock_key, _now_iso()),
+            )
+        except Exception:
+            # 기록 저장 실패 시 차감한 크레딧을 되돌린다 (크레딧만 사라지는 일 방지)
+            self.add_onetime_credit(user_id)
+            raise
+        if inserted == 0:
+            # 동시에 들어온 다른 요청이 먼저 열었음 → 이번 차감은 되돌린다
+            self.add_onetime_credit(user_id)
+            return "already"
+        return "credit"
 
     def update_subscription(self, user_id: str, *, subscription_id: Optional[str],
                             status: str, current_period_end: Optional[str], is_premium: bool) -> None:
