@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Modal, TouchableOpacity, StyleSheet, Platform } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useT } from '@/i18n';
 
 interface Props {
@@ -14,11 +15,17 @@ interface Props {
 const isWeb = Platform.OS === 'web';
 const textColor = isWeb ? '#000000' : '#FFFFFF';
 // 안드로이드 네이티브 스피너는 칸이 좁으면 "10월" 같은 글자가 "10…" 로 잘린다.
-// 그래서 안드로이드에서는 항목을 숫자만 보여주고, 년/월/일은 칸 위 라벨로 따로 표시한다.
+// 그래서 안드로이드에서는 "1974년  2월  24일" 을 직접 그린 한 줄 버튼으로 보여주고,
+// 그 위에 투명한 네이티브 Picker 를 겹쳐서 눌렀을 때 선택 목록이 뜨게 한다.
 const isAndroid = Platform.OS === 'android';
 
 export default function BirthDateWheelPicker({ visible, onClose, onConfirm, initialDate }: Props) {
   const t = useT();
+  // 안드로이드 하단 시스템 내비게이션 바에 시트가 가려지지 않도록 하단 여백을 잡는다.
+  // (Modal 안에서는 인셋이 0으로 읽히는 기기가 있어, 3버튼 바 높이(약 48dp)를 덮는 최소값을 보장한다.)
+  const insets = useSafeAreaInsets();
+  const sheetBottomPadding =
+    Platform.OS === 'web' ? 10 : Platform.OS === 'ios' ? 30 : Math.max(insets.bottom, 40) + 8;
 
   const parseInitial = () => {
     const d = initialDate ? new Date(initialDate) : new Date(1990, 0, 1);
@@ -55,8 +62,34 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
     month: t("datePicker.monthSuffix"),
     day: t("datePicker.daySuffix"),
   };
-  const itemLabel = (n: number, suffix: string) => (isAndroid ? String(n) : `${n}${suffix}`);
-  const headerLabel = (suffix: string, fallback: string) => (suffix && suffix.trim() ? suffix.trim() : fallback);
+  const itemLabel = (n: number, suffix: string) => `${n}${suffix}`;
+
+  // 안드로이드 전용 한 줄 선택 칸: 보이는 글자는 직접 그리고, 투명 Picker 가 터치를 받아 목록을 연다.
+  const renderAndroidField = (
+    value: number,
+    list: number[],
+    onChange: (v: number) => void,
+    suffix: string,
+    flex: number,
+  ) => (
+    <View style={[styles.androidField, { flex }]}>
+      <Text style={styles.androidFieldText} numberOfLines={1}>
+        {itemLabel(value, suffix)}
+        <Text style={styles.androidArrow}>{' ▾'}</Text>
+      </Text>
+      <Picker
+        mode="dropdown"
+        style={styles.androidPickerOverlay}
+        selectedValue={value}
+        onValueChange={(itemValue: number) => onChange(Number(itemValue))}
+        dropdownIconColor="transparent"
+      >
+        {list.map((n) => (
+          <Picker.Item key={n} label={itemLabel(n, suffix)} value={n} color={textColor} style={styles.androidItem} />
+        ))}
+      </Picker>
+    </View>
+  );
 
   const handleConfirm = () => {
     const formattedMonth = String(month).padStart(2, '0');
@@ -77,14 +110,13 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
         </TouchableOpacity>
       </View>
 
-      {isAndroid && (
-        <View style={styles.colHeaderRow}>
-          <Text style={[styles.colHeaderText, styles.columnWide]}>{headerLabel(suffixes.year, 'YYYY')}</Text>
-          <Text style={styles.colHeaderText}>{headerLabel(suffixes.month, 'MM')}</Text>
-          <Text style={styles.colHeaderText}>{headerLabel(suffixes.day, 'DD')}</Text>
+      {isAndroid ? (
+        <View style={styles.androidRow}>
+          {renderAndroidField(year, years, setYear, suffixes.year, 1.5)}
+          {renderAndroidField(month, months, setMonth, suffixes.month, 1)}
+          {renderAndroidField(day, days, setDay, suffixes.day, 1)}
         </View>
-      )}
-
+      ) : (
       <View style={styles.pickerContainer}>
         <View style={[styles.column, styles.columnWide]}>
           <Picker
@@ -95,7 +127,7 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
             dropdownIconColor={textColor}
           >
             {years.map((y) => (
-              <Picker.Item key={y} label={itemLabel(y, suffixes.year)} value={y} color={textColor} style={isAndroid ? styles.androidItem : undefined} />
+              <Picker.Item key={y} label={itemLabel(y, suffixes.year)} value={y} color={textColor} />
             ))}
           </Picker>
         </View>
@@ -109,7 +141,7 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
             dropdownIconColor={textColor}
           >
             {months.map((m) => (
-              <Picker.Item key={m} label={itemLabel(m, suffixes.month)} value={m} color={textColor} style={isAndroid ? styles.androidItem : undefined} />
+              <Picker.Item key={m} label={itemLabel(m, suffixes.month)} value={m} color={textColor} />
             ))}
           </Picker>
         </View>
@@ -123,11 +155,12 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
             dropdownIconColor={textColor}
           >
             {days.map((d) => (
-              <Picker.Item key={d} label={itemLabel(d, suffixes.day)} value={d} color={textColor} style={isAndroid ? styles.androidItem : undefined} />
+              <Picker.Item key={d} label={itemLabel(d, suffixes.day)} value={d} color={textColor} />
             ))}
           </Picker>
         </View>
       </View>
+      )}
     </>
   );
 
@@ -138,7 +171,7 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
     return (
       <View style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 9999, touchAction: 'manipulation' } as any}>
         <View style={styles.overlay}>
-          <View style={styles.bottomSheet}>{pickerBody}</View>
+          <View style={[styles.bottomSheet, { paddingBottom: sheetBottomPadding }]}>{pickerBody}</View>
         </View>
       </View>
     );
@@ -147,7 +180,7 @@ export default function BirthDateWheelPicker({ visible, onClose, onConfirm, init
   return (
     <Modal visible={visible} transparent animationType="slide">
       <View style={styles.overlay}>
-        <View style={styles.bottomSheet}>{pickerBody}</View>
+        <View style={[styles.bottomSheet, { paddingBottom: sheetBottomPadding }]}>{pickerBody}</View>
       </View>
     </Modal>
   );
@@ -175,7 +208,7 @@ const styles = StyleSheet.create({
   confirmText: { color: '#4A90E2', fontSize: 16, fontWeight: 'bold' },
   pickerContainer: {
     flexDirection: 'row',
-    height: isWeb ? 56 : isAndroid ? 64 : 200,
+    height: isWeb ? 56 : 200,
     width: '100%',
     alignItems: 'center',
     paddingHorizontal: 8,
@@ -183,9 +216,19 @@ const styles = StyleSheet.create({
   // 연도/월/일 열: 연도는 "1990년" 처럼 길어서 넓게(1.6배) 잡고, 월/일은 남는 폭을 나눠 갖는다.
   column: { flex: 1, alignItems: 'center', justifyContent: 'center', width: '100%' },
   columnWide: { flex: 1.5 },
-  // 안드로이드 전용: 칸 위 년/월/일 라벨 (pickerContainer 와 같은 좌우 여백/비율)
-  colHeaderRow: { flexDirection: 'row', paddingHorizontal: 8, paddingTop: 12 },
-  colHeaderText: { flex: 1, textAlign: 'center', color: '#9A9A9A', fontSize: 13 },
+  // 안드로이드 전용 한 줄 선택 칸
+  androidRow: { flexDirection: 'row', paddingHorizontal: 12, paddingVertical: 18 },
+  androidField: {
+    height: 52,
+    marginHorizontal: 4,
+    borderRadius: 12,
+    backgroundColor: '#3A3A3A',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  androidFieldText: { color: '#FFFFFF', fontSize: 18, fontWeight: '600' },
+  androidArrow: { color: '#9A9A9A', fontSize: 14, fontWeight: '400' },
+  androidPickerOverlay: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0 },
   androidItem: { fontSize: 17 },
   picker: { width: '100%', color: textColor, height: isWeb ? 44 : undefined, marginHorizontal: 0 },
   pickerItem: { color: textColor, fontSize: 18 },
