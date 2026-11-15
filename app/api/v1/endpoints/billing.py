@@ -17,6 +17,11 @@ class CheckoutRequest(BaseModel):
 import logging
 logger = logging.getLogger("saju.billing")
 
+# Telegram Stars 인보이스 금액(XTR). 결제 금액은 서버가 결정하므로 여기 한 곳에서만 관리한다.
+# (프론트엔드의 PaymentModal도 이 값과 같은 숫자를 표시한다. 바꿀 때는 둘 다 맞출 것.)
+TELEGRAM_STARS_SUBS = 400
+TELEGRAM_STARS_ONETIME = 150
+
 router = APIRouter()
 
 @router.post("/checkout")
@@ -152,8 +157,8 @@ async def create_stars_invoice(user: dict = Depends(get_current_user)):
     if not bot_token:
         raise HTTPException(status_code=503, detail="Bot token not configured")
 
-    # 가격: 250 Stars (필요시 조정 가능)
-    prices = [{"label": "Gyeol Premium", "amount": 400}]
+    # 가격: 구독 400 Stars (billing 모듈 상수에서 관리)
+    prices = [{"label": "Gyeol Premium", "amount": TELEGRAM_STARS_SUBS}]
 
     payload = {
         "title": "Gyeol Premium Subscription",
@@ -189,8 +194,8 @@ async def create_stars_invoice_onetime(user: dict = Depends(get_current_user)):
     if not bot_token:
         raise HTTPException(status_code=503, detail="Bot token not configured")
 
-    # 일시불 가격: 150 Stars
-    prices = [{"label": "Gyeol Deep Report (1-time)", "amount": 150}]
+    # 일시불 가격: 150 Stars (billing 모듈 상수에서 관리)
+    prices = [{"label": "Gyeol Deep Report (1-time)", "amount": TELEGRAM_STARS_ONETIME}]
 
     payload = {
         "title": "Gyeol Deep Report",

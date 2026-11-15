@@ -45,7 +45,6 @@ export default function SettingsScreen() {
 
     let nameKey: string | null = null;
     if (pid === "deep_report") nameKey = "settings.productDeepReport";
-    else if (pid === "compatibility_addon") nameKey = "settings.productCompatAddon";
     else if (item.kind === "subscription" || /sub|premium|monthly/.test(pid)) nameKey = "settings.purchaseSub";
     else if (item.kind === "onetime" || /onetime|credit|once/.test(pid)) nameKey = "settings.purchaseOnetime";
 
