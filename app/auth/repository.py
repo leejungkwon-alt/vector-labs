@@ -687,6 +687,13 @@ class PostgresRepository(_BaseRepository):
                 )
 
 
+            # migration (birth_time_mode): profiles 에 컬럼이 없던 시절 데이터 호환.
+            # ⚠️ SQLite 블록(PRAGMA 기반)과 **반드시 쌍으로** 유지해야 한다.
+            #    (이 블록이 빠져 Neon/Postgres 에서 upsert 가 UndefinedColumn 으로 실패했다)
+            conn.execute(
+                "ALTER TABLE profiles ADD COLUMN IF NOT EXISTS birth_time_mode TEXT"
+            )
+
             # migration (2026-11 Stripe)
             for col in ["stripe_customer_id", "stripe_subscription_id", "subscription_status", "current_period_end", "email"]:
                 r = conn.execute("SELECT 1 FROM information_schema.columns WHERE table_name='users' AND column_name=%s AND table_schema=current_schema()", (col,)).fetchone()
