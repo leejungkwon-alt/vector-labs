@@ -1,5 +1,8 @@
 import { useRef, useState } from "react";
-import { View, Text, Pressable, Animated, StyleSheet, Alert, Platform, Image } from "react-native";
+import {
+  View, Text, Pressable, Animated, StyleSheet, Alert, Platform, Image,
+  Modal, ActivityIndicator, useWindowDimensions,
+} from "react-native";
 import { colors } from "@/theme";
 import { useLanguageStore } from "@/store/languageStore";
 import { useT } from "@/i18n";
@@ -9,6 +12,9 @@ import { getRelationLabel } from "@/utils/poemRelations";
 
 const FACE_HEIGHT = 560;
 const USE_NATIVE = Platform.OS !== "web";
+const ASSET_BASE = "https://gyeol-blond.vercel.app";
+// 앱 전용 합성 화면 (웹 번들에서는 실행되지 않도록 네이티브일 때만 불러온다)
+const PoemWallpaperShot: any = USE_NATIVE ? require("./PoemWallpaperShot").PoemWallpaperShot : null;
 
 const C = {
   bg: (colors as any).bg || (colors as any).card || "#FBF8F2",
@@ -47,14 +53,75 @@ export function PoemFlipCard({
 
   const isWallpaperLocked = (poem.locked_fields || []).includes("wallpaper_image");
 
+  // ---------------- 앱(Android/iOS) 전용: 배경화면 미리보기 + 저장/공유 ----------------
+  // 웹은 canvas로 합성해 바로 다운로드하지만, 앱에는 canvas/document가 없다.
+  // 그래서 같은 모양을 뷰로 그려 미리보기로 보여주고, 그 뷰를 PNG로 캡처해 공유 창(갤러리 저장 등)으로 넘긴다.
+  const { width: winW, height: winH } = useWindowDimensions();
+  const [previewOpen, setPreviewOpen] = useState(false);
+  const [imgSize, setImgSize] = useState<{ w: number; h: number } | null>(null);
+  const [imgReady, setImgReady] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const shotRef = useRef<View>(null);
+  const wallpaperUri = `${ASSET_BASE}/assets/poems/${poem.id}_wallpaper.png`;
+
+  const openNativePreview = () => {
+    setImgSize(null);
+    setImgReady(false);
+    setPreviewOpen(true);
+    Image.getSize(
+      wallpaperUri,
+      (w, h) => setImgSize({ w, h }),
+      () => {
+        setPreviewOpen(false);
+        Alert.alert(t("poem.saveFail"));
+      }
+    );
+  };
+
+  const saveNative = async () => {
+    if (saving || !imgReady || !imgSize) return;
+    setSaving(true);
+    try {
+      const { captureRef } = require("react-native-view-shot");
+      const Sharing = require("expo-sharing");
+      const outW = 1080;
+      const outH = Math.round((outW * imgSize.h) / imgSize.w);
+      const fileUri: string = await captureRef(shotRef, {
+        format: "png", quality: 1, result: "tmpfile", width: outW, height: outH,
+      });
+      if (!(await Sharing.isAvailableAsync())) {
+        throw new Error("Sharing is not available on this device.");
+      }
+      await Sharing.shareAsync(fileUri, {
+        mimeType: "image/png", UTI: "public.png", dialogTitle: t("poem.saveWallpaper"),
+      });
+    } catch (e: any) {
+      console.error("[wallpaper save:native]", e);
+      Alert.alert(t("poem.saveFail"), String(e?.message ?? ""));
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  // 미리보기 크기: 화면 너비/높이 안에 원본 비율로 맞춘다
+  let shotW = Math.min(winW - 32, 420);
+  let shotH = 0;
+  if (imgSize) {
+    shotH = (shotW * imgSize.h) / imgSize.w;
+    const maxH = winH * 0.68;
+    if (shotH > maxH) { shotH = maxH; shotW = (shotH * imgSize.w) / imgSize.h; }
+  }
+  shotW = Math.round(shotW);
+  shotH = Math.round(shotH);
+
   const handleSaveWallpaper = async () => {
     if (isWallpaperLocked) { onSubscribePress?.(); return; }
 
     const wallpaperSrc = `/assets/poems/${poem.id}_wallpaper.png`;
 
-    // 📱 네이티브 앱(Android/iOS) 방어 코드
+    // 📱 네이티브 앱(Android/iOS): 미리보기 창을 열고, 거기서 캡처해 공유/저장한다.
     if (Platform.OS !== "web") {
-      Alert.alert(t("common.notice"), t("poem.appSupportSoon"));
+      openNativePreview();
       return;
     }
 
@@ -229,6 +296,59 @@ export function PoemFlipCard({
           </Animated.View>
         </View>
       </Pressable>
+
+      {USE_NATIVE && PoemWallpaperShot && (
+        <Modal
+          visible={previewOpen}
+          transparent
+          statusBarTranslucent
+          animationType="fade"
+          onRequestClose={() => setPreviewOpen(false)}
+        >
+          <View style={styles.modalBackdrop}>
+            <Pressable
+              style={styles.modalClose}
+              onPress={() => setPreviewOpen(false)}
+              hitSlop={12}
+              accessibilityRole="button"
+            >
+              <Text style={styles.modalCloseText}>✕</Text>
+            </Pressable>
+
+            {imgSize ? (
+              <PoemWallpaperShot
+                ref={shotRef}
+                imageUri={wallpaperUri}
+                width={shotW}
+                height={shotH}
+                title={poem.title || ""}
+                sijo={poem.sijo || poem.sijo_ko || ""}
+                romanization={currentLang === "ko" ? poem.romanization : undefined}
+                onImageLoad={() => setImgReady(true)}
+                onImageError={() => {
+                  setPreviewOpen(false);
+                  Alert.alert(t("poem.saveFail"));
+                }}
+              />
+            ) : (
+              <ActivityIndicator color="#fff" />
+            )}
+
+            <Pressable
+              onPress={saveNative}
+              disabled={!imgReady || saving}
+              style={[styles.modalSave, (!imgReady || saving) && { opacity: 0.5 }]}
+              accessibilityRole="button"
+            >
+              {saving ? (
+                <ActivityIndicator color="#fff" />
+              ) : (
+                <Text style={styles.modalSaveText}>{t("poem.saveWallpaper")}</Text>
+              )}
+            </Pressable>
+          </View>
+        </Modal>
+      )}
     </View>
   );
 }
@@ -253,4 +373,9 @@ const styles = StyleSheet.create({
   saveButton: { borderWidth: 1, borderColor: C.accent, borderRadius: 999, paddingVertical: 10, alignItems: "center", marginBottom: 8 },
   saveButtonText: { color: C.accent, fontWeight: "600", fontSize: 14 },
   tapHint: { fontSize: 11, color: C.muted, textAlign: "center", letterSpacing: 0.5 },
+  modalBackdrop: { flex: 1, backgroundColor: "rgba(0,0,0,0.88)", alignItems: "center", justifyContent: "center", padding: 16 },
+  modalClose: { position: "absolute", top: 44, right: 20, padding: 8, zIndex: 2 },
+  modalCloseText: { color: "#fff", fontSize: 24 },
+  modalSave: { marginTop: 20, minWidth: 200, height: 48, borderRadius: 999, backgroundColor: C.accent, alignItems: "center", justifyContent: "center", paddingHorizontal: 24 },
+  modalSaveText: { color: "#fff", fontWeight: "700", fontSize: 15 },
 });

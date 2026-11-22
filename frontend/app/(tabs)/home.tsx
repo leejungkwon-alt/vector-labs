@@ -1,12 +1,12 @@
 import { useLanguageStore } from "@/store/languageStore";
 import { useT } from "@/i18n";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { router, useFocusEffect } from "expo-router";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { View, Text, ScrollView, ActivityIndicator, StyleSheet, TouchableOpacity } from "react-native";
-import { router } from "expo-router";
-import { useEffect, useState } from "react";
 import { api, ApiError } from "@/api/client";
 import { colors, spacing, radius } from "@/theme";
-import { useAuthStore } from "@/store/authStore";
+import { useAuthStore, refreshUser } from "@/store/authStore";
 import { useProfileStore } from "@/store/profileStore";
 import { usePoemStore } from "@/store/poemStore";
 import { CrisisBanner } from "@/components/CrisisBanner";
@@ -42,7 +42,11 @@ export default function HomeScreen() {
   const profileReady = useProfileStore((s) => s.ready);
   const ready = useAuthStore((s) => s.ready);
   const [expanded, setExpanded] = useState<Record<string, boolean>>({ core: true });
+  // 1회권(크레딧)을 이번 세션에서 이미 리포트 생성에 사용했는지 (재요청 방지)
+  const [creditUsed, setCreditUsed] = useState(false);
+  const showingCreditRef = useRef(false);
   const setCurrentPoem = usePoemStore((s) => s.setCurrentPoem);
+  const queryClient = useQueryClient();
 
   useEffect(() => {
     if (profileReady && !profile) {
@@ -51,7 +55,7 @@ export default function HomeScreen() {
   }, [profileReady, profile]);
 
   const { data, isLoading, error } = useQuery({
-    queryKey: ["report", profile, lang, ready],
+    queryKey: ["report", profile, lang, ready, creditUsed],
     queryFn: () => api.report({ ...{
           birth_date: profile.birth_date,
           birth_time: profile.birth_time || undefined,
@@ -68,13 +72,40 @@ export default function HomeScreen() {
   });
 
   // 🆕 리포트 데이터 로드 완료 후 크레딧(이용권) 잔액 갱신
+  //    - 화면에 1회권으로 열린 리포트가 떠 있으면 이미 차감된 상태이므로,
+  //      위처럼 재요청(재차감)하지 않고 유저 정보만 새로고침한다.
   useEffect(() => {
-    if (data) {
-      useAuthStore.getState().bootstrap();
+    if (!data?.report) return;
+    const creditUsedNow = (data.report as any).meta?.credit_used === true;
+
+    if (creditUsedNow && !showingCreditRef.current) {
+      // 쿼리 키를 바꿔 캐시를 고정 → 같은 리포트가 자동으로 재요청/재차감되는 것을 방지
+      showingCreditRef.current = true;
+      setCreditUsed(true);
     }
+    refreshUser();
   }, [data]);
 
-
+  // 💳 결제/복귀 등으로 홈 탭에 다시 들어오면 새로 결제했을 수 있으므로
+  //    유저 정보(보유 크레딧)를 새로 받아오고, 상태가 바뀌었으면 리포트를 다시 불러와
+  //    잠겨 있던 콘텐츠가 열리도록 한다.
+  useFocusEffect(
+    useCallback(() => {
+      let cancelled = false;
+      (async () => {
+        const before = useAuthStore.getState().user;
+        const after = await refreshUser();
+        if (cancelled || !after || !before) return;
+        // 이미 1회권 리포트를 보여준 뒤라면 재요청하지 않는다 (크레딧 재차감 방지)
+        if (showingCreditRef.current) return;
+        const changed =
+          before.tier !== after.tier ||
+          (before.onetime_credits ?? 0) !== (after.onetime_credits ?? 0);
+        if (changed) await queryClient.invalidateQueries({ queryKey: ["report"] });
+      })();
+      return () => { cancelled = true; };
+    }, [queryClient])
+  );
 
   useEffect(() => {
     if (data?.report?.sections?.lucky_code?.poem) {

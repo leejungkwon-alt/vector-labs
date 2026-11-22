@@ -108,7 +108,14 @@ export const api = {
   getPurchases: () => request<{ purchases: Purchase[] }>("/billing/purchases"),
   verifyGooglePurchase: (p: { sku: string; purchaseToken: string; productId?: string }) =>
     // 구글 서버 확인은 느릴 수 있어(콜드 스타트 + Google API) 타임아웃을 넉넉히 둔다.
-    request<{ status: string; kind: string }>("/billing/google/verify", { method: "POST", body: JSON.stringify(p) }, 45000),
+    request<{
+      status: string;
+      kind: string;
+      granted?: boolean;
+      tier?: string;
+      is_premium?: boolean;
+      onetime_credits?: number;
+    }>("/billing/google/verify", { method: "POST", body: JSON.stringify(p) }, 45000),
   calculate: (payload: SajuRequest) =>
     request<SajuResponse>("/saju/calculate", { method: "POST", body: JSON.stringify(payload) }),
   report: (payload: ReportRequest) =>
