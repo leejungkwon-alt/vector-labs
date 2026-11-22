@@ -15,7 +15,7 @@ $FRONTEND_URL = "https://gyeol-blond.vercel.app"
 $GOOGLE_CLIENT_ID = "787049663118-0tv6r1bbi28lli6mr027ruo55l6esofo.apps.googleusercontent.com"
 
 Write-Host "`n=== 1. 테스트 실행 ===" -ForegroundColor Cyan
-python -m pytest tests/ -q
+python -m pytest -q --import-mode=importlib
 if ($LASTEXITCODE -ne 0) { Write-Host "테스트 실패. 배포를 중단합니다." -ForegroundColor Red; exit 1 }
 
 Write-Host "`n=== 2. 이미지 빌드 ($TAG) ===" -ForegroundColor Cyan
