@@ -6,6 +6,10 @@ import { useAuthStore } from "@/store/authStore";
 import { ApiError } from "@/api/client";
 import { useT } from "@/i18n";
 
+// 카카오 로그인 버튼 노출 여부. 지금은 구글 로그인만 쓰므로 false.
+// (서버의 카카오 검증과 authStore의 카카오 처리는 그대로 두었다. 다시 켜려면 true로만 바꾸면 된다.)
+const ENABLE_KAKAO_LOGIN = false;
+
 interface Props {
   visible: boolean;
   onClose: () => void;
@@ -83,7 +87,7 @@ export function SocialLoginModal({ visible, onClose, onSuccess }: Props) {
             </TouchableOpacity>
           )}
 
-          {!isTelegram && (
+          {ENABLE_KAKAO_LOGIN && !isTelegram && (
             <TouchableOpacity style={[styles.btn, styles.kakaoBtn]} onPress={() => handleLogin("kakao")} disabled={!!loading}>
               {loading === "kakao" ? <ActivityIndicator color="#000" /> : (
                 <Text style={styles.btnTextBlack}>
