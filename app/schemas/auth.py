@@ -48,13 +48,26 @@ class MeResponse(BaseModel):
 
 
 class ProfilePayload(BaseModel):
-    """PUT /me/profile — full replace."""
+    """PUT /me/profile — full replace.
+
+    ⚠️ 필드가 Optional 이라고 해서 "생략 = null 덮어쓰기"가 아니다.
+    라우터에서 `model_fields_set` 로 "키가 실제로 왔는지"를 보고,
+    생략된 필드는 기존 DB 값을 유지한다(구버전 클라이언트 보호).
+    """
 
     # extra="ignore" (여분 필드 무시 — 프론트 호환성)
     model_config = ConfigDict(extra="ignore")
 
     birth_date: Optional[str] = Field(default=None, examples=["1974-02-24"])
     birth_time: Optional[str] = Field(default=None, examples=["05:30:00"])
+    birth_time_mode: Optional[str] = Field(
+        default=None,
+        examples=["exact", "noon", "day_only"],
+        description=(
+            "exact=정확한 시각, noon=정오 가정, day_only=일주만. "
+            "생략하면 기존 값 유지, 명시적 null 이면 미지정(NULL)으로 저장."
+        ),
+    )
     birth_location: Optional[str] = Field(default=None, examples=["seoul"])
     timezone_str: str = Field(default="Asia/Seoul")
     longitude: float = Field(default=126.9780)
@@ -89,6 +102,16 @@ class ProfilePayload(BaseModel):
             except ValueError:
                 continue
         raise ValueError("birth_time must be in HH:MM:SS or HH:MM format")
+
+    @field_validator("birth_time_mode")
+    @classmethod
+    def v_birth_time_mode(cls, v):
+        if v is None:
+            return v
+        m = v.strip().lower()
+        if m not in ("exact", "noon", "day_only"):
+            raise ValueError("birth_time_mode must be 'exact', 'noon', or 'day_only'.")
+        return m
 
     @field_validator("longitude")
     @classmethod
@@ -141,6 +164,7 @@ class ProfileResponse(BaseModel):
     user_id: str
     birth_date: Optional[str] = None
     birth_time: Optional[str] = None
+    birth_time_mode: Optional[str] = None
     birth_location: Optional[str] = None
     timezone_str: str = "Asia/Seoul"
     longitude: float = 126.978

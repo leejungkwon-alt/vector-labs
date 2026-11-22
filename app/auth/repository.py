@@ -66,6 +66,7 @@ _SCHEMA_STATEMENTS = [
         gender TEXT NOT NULL DEFAULT 'M',
         jasi_boundary INTEGER NOT NULL DEFAULT 23,
         correction_mode TEXT NOT NULL DEFAULT 'lmt',
+        birth_time_mode TEXT,
         updated_at TEXT NOT NULL
     )
     """,
@@ -209,16 +210,46 @@ class _BaseRepository:
 
     # ---- profiles ----
     def upsert_profile(self, user_id: str, data: dict) -> dict:
+        """프로필 저장.
+
+        birth 계열 필드는 기존 값을 **보존하는 쪽**이 기본이다(사고 방지).
+        - `birth_time` / `birth_time_mode`: COALESCE(excluded, profiles) → 생략/null 이면 유지
+        - 예외(우선): `birth_time_mode == "noon"` 이면 `birth_time` 을 NULL 로 저장한다.
+          사용자가 "시간 모름"으로 되돌린 경우 COALESCE 때문에 옛 시각이 남아
+          mode=noon + 시각 존재 모순이 되는 것을 막는다.
+        """
+        now = _now_iso()
+        mode_in = data.get("birth_time_mode")
+        time_in = None if mode_in == "noon" else data.get("birth_time")
+        # noon 은 COALESCE 보다 우선: "시간 모름"으로 되돌리면 옛 시각을 지운다.
+        time_set = "birth_time = ?" if mode_in == "noon" else "birth_time = COALESCE(excluded.birth_time, profiles.birth_time)"
+        params = [
+            user_id,
+            data.get("birth_date"),
+            time_in,
+            data.get("birth_location"),
+            data.get("timezone_str", "Asia/Seoul"),
+            data.get("longitude", 126.9780),
+            data.get("gender", "M"),
+            data.get("jasi_boundary", 23),
+            data.get("correction_mode", "lmt"),
+            mode_in,
+            now,
+        ]
+        if mode_in == "noon":
+            # SET 절의 `birth_time = ?` 자리(두 번째)에 전달할 값 = NULL
+            params.append(None)
         self._run(
-            """
+            f"""
             INSERT INTO profiles (
                 user_id, birth_date, birth_time, birth_location,
                 timezone_str, longitude, gender, jasi_boundary,
-                correction_mode, updated_at
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                correction_mode, birth_time_mode, updated_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(user_id) DO UPDATE SET
-                birth_date = excluded.birth_date,
-                birth_time = excluded.birth_time,
+                birth_date = COALESCE(excluded.birth_date, profiles.birth_date),
+                {time_set},
+                birth_time_mode = COALESCE(excluded.birth_time_mode, profiles.birth_time_mode),
                 birth_location = excluded.birth_location,
                 timezone_str = excluded.timezone_str,
                 longitude = excluded.longitude,
@@ -227,20 +258,11 @@ class _BaseRepository:
                 correction_mode = excluded.correction_mode,
                 updated_at = excluded.updated_at
             """,
-            (
-                user_id,
-                data.get("birth_date"),
-                data.get("birth_time"),
-                data.get("birth_location"),
-                data.get("timezone_str", "Asia/Seoul"),
-                data.get("longitude", 126.9780),
-                data.get("gender", "M"),
-                data.get("jasi_boundary", 23),
-                data.get("correction_mode", "lmt"),
-                _now_iso(),
-            ),
+            tuple(params),
         )
         return self.get_profile(user_id)
+
+
 
     def get_profile(self, user_id: str) -> Optional[dict]:
         return self._one("SELECT * FROM profiles WHERE user_id = ?", (user_id,))
@@ -572,6 +594,12 @@ class Repository(_BaseRepository):
                     "ALTER TABLE telegram_subscribers "
                     "ADD COLUMN language_code TEXT"
                 )
+
+            # migration (birth_time_mode): 예전엔 컬럼 자체가 없어 "시간 모름" 이 저장되지
+            # 못했다(시각만 남고 모드는 항상 NULL). 기존 행은 NULL = 미지정으로 본다.
+            p_cols = {r[1] for r in self._conn.execute("PRAGMA table_info(profiles)").fetchall()}
+            if "birth_time_mode" not in p_cols:
+                self._conn.execute("ALTER TABLE profiles ADD COLUMN birth_time_mode TEXT")
 
 
             # migration (2026-11 Stripe)

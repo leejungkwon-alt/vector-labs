@@ -19,6 +19,38 @@ import {
 // CITY_LIST 에 longitude/timezone 이 없어도 동작하도록 느슨한 타입으로 사용
 const CITIES = CITY_LIST as ReadonlyArray<{ key: string; label: string; longitude?: number; timezone?: string }>;
 
+/** 공백 제거 후 "5:3" → "05:03" 처럼 보정한다(수동 입력 대비). */
+function normalizeClock(s: string): string {
+  const m = s.trim().match(/^(\d{1,2})\s*:\s*(\d{1,2})$/);
+  if (!m) return s.trim();
+  return `${m[1].padStart(2, "0")}:${m[2].padStart(2, "0")}`;
+}
+
+/**
+ * 저장된 프로필 → 화면 초기값.
+ * 우선순위: 저장된 값 > 화면 기본값.
+ * "시간 모름"으로 저장된 프로필(mode=noon/day_only 또는 time 없음)은 스위치를 켠 채로
+ * 복원한다 → 사용자가 아무것도 바꾸지 않고 저장만 눌러도 시간이 되살아나지 않는다.
+ */
+export function deriveInitialForm(profile: any): { birth_date?: string; birth_time: string | null; unknown: boolean } {
+  const out: { birth_date?: string; birth_time: string | null; unknown: boolean } = {
+    birth_time: null,
+    unknown: false,
+  };
+  if (!profile) return out;
+  if (typeof profile.birth_date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(profile.birth_date)) {
+    out.birth_date = profile.birth_date;
+  }
+  const mode = typeof profile.birth_time_mode === "string" ? profile.birth_time_mode : null;
+  if (mode === "noon" || mode === "day_only" || !profile.birth_time) {
+    out.unknown = true;
+  } else {
+    out.birth_time = normalizeClock(String(profile.birth_time));
+    out.unknown = false;
+  }
+  return out;
+}
+
 export default function BirthInput() {
   const insets = useSafeAreaInsets();
   const saveProfile = useProfileStore((s) => s.saveProfile);
@@ -110,8 +142,15 @@ export default function BirthInput() {
       const yyyy = birthDate.getFullYear();
       const mm = String(birthDate.getMonth() + 1).padStart(2, "0");
       const dd = String(birthDate.getDate()).padStart(2, "0");
+      // 시간 모름 = noon + birth_time null (엔진의 "정오 가정" 규칙과 일치).
+      //   - 이 화면은 "최초 입력"과 "설정 → 생년월일 재설정" 양쪽에서 열린다.
+      //   - 프리필은 저장된 프로필 값을 화면 상태로 채운 것이고, 사용자가 그 상태로
+      //     저장을 누르면 화면 상태가 곧 최종값이다(화면 = 미리 채워진 원본).
+      //   - 따라서 세 필드를 **항상** 보낸다. (birth_time_mode 컬럼이 없던 시절의 API 는
+      //     이 값을 저장조차 못 했고, birth_date/birth_time_mode 를 빼고 보내면 PUT 전체 교체
+      //     특성상 저장된 birth_time 이 NULL 로 지워졌다.)
       const timeMode = unknownTime ? "noon" : "exact";
-      let timeString = null;
+      let timeString: string | null = null;
       if (!unknownTime) {
         const hh = String(birthTime.getHours()).padStart(2, "0");
         const min = String(birthTime.getMinutes()).padStart(2, "0");
@@ -166,6 +205,12 @@ export default function BirthInput() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: insets.bottom + 24 }}>
       <Text style={styles.title}>{t("birthInput.title")}</Text>
+      {/*
+        저장 payload 는 화면 상태에서 그대로 만든다(프리필 값도 사용자가 확인/수정할 수 있는
+        "현재 값"이므로 우선순위는 항상 화면 상태 = 최종값이다).
+        birth_date / birth_time / birth_time_mode 를 항상 보내야 전체 교체(PUT)에서
+        기존 저장값이 지워지지 않는다.
+      */}
       
       <Text style={styles.label}>{t("birthInput.birthDate")}</Text>
       <DateTimeField
