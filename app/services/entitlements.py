@@ -173,9 +173,6 @@ for _sid, _extras in _P0_3_LOCKED_EXTRA.items():
 
 UNGATED_TIERS = {"subscription", "premium", "unlimited"}
 
-# 애드온으로 잠금 해제되는 섹션 (deep_report 1회권)
-ADDON_UNLOCKED_SECTIONS = {"love", "career", "wealth"}
-
 
 # ============================================================
 # fail-closed 기본 규칙 (규칙 미정의 섹션용)
@@ -189,12 +186,11 @@ FAIL_CLOSED_RULE = {
 
 
 def is_section_rule_defined(sid: str) -> bool:
-    """섹션 id 에 명시적 게이트 규칙(또는 애드온 예외)이 있는지.
+    """섹션 id 에 명시적 게이트 규칙이 있는지.
 
     커버리지 테스트와 fail-closed 판정에서 공용으로 사용한다.
+    (애드온 기반 예외는 2026-11 정리로 제거 — 1회권은 크레딧 모델로 단일화)
     """
-    if sid in ADDON_UNLOCKED_SECTIONS:
-        return True
     rule = FREE_SECTION_RULES.get(sid)
     return rule is not None and bool(rule)
 
@@ -264,10 +260,9 @@ def apply_entitlement_gate(report: dict, tier: str, addons: list[str] = None) ->
     locked_section_ids = []
 
     for sid, section in sections.items():
-        # 심화 리포트 애드온이 있으면 love, career, wealth 는 잠금 해제
-        if sid in ADDON_UNLOCKED_SECTIONS and "deep_report" in addons:
-            gated_sections[sid] = section
-            continue
+        # (제거) 과거 `deep_report` 애드온 분기 — 지급 경로가 없어 도달 불가였고,
+        # 1회권은 크레딧(report.py 의 tier 승격)으로 단일화되었다.
+        # 다른 애드온(예: compatibility)은 이 함수와 무관한 경로에서 판정한다.
 
         # fail-closed: 규칙이 없으면 통과시키지 않고 FAIL_CLOSED_RULE 로 잠근다.
         rule = default_free_rule(sid)

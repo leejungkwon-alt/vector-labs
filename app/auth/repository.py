@@ -438,6 +438,9 @@ class _BaseRepository:
         return inserted > 0
 
     # ---- add-ons ----
+    # `compatibility` 애드온에서 사용 중(궁합 접근 게이트). 심화 리포트(deep_report)
+    # 애드온 경로는 2026-11 에 제거되었고 1회권은 크레딧 모델로 단일화되었다.
+    # 테이블/행은 삭제하지 않는다(운영 데이터 보존, 과거 deep_report 행은 무시됨).
     def grant_addon(self, user_id: str, addon: str) -> None:
         """1회성 애드온 부여 (idempotent)."""
         self._run(

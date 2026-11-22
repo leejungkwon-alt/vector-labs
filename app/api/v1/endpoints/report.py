@@ -139,8 +139,10 @@ def api_generate_report(
             already_unlocked = True
         onetime_credits_after = repo.get_onetime_credits(uid)
 
-    addons = repo.list_addons(uid) if uid else []
-    report = apply_entitlement_gate(report, tier, addons)
+    # 1회권은 크레딧 모델로 단일화되었다(애드온 기반 심화 리포트 해제 경로 제거).
+    # 애드온 테이블/조회는 남겨둔다 — 과거 행이 있어도 무시되며(참고: compatibility
+    # 애드온은 궁합 엔드포인트에서 별도 판정), 여기서는 게이트에 넘기지 않는다.
+    report = apply_entitlement_gate(report, tier)
 
     # 💡 클라이언트가 "이 리포트를 1회권으로 열었는지" 알 수 있게 meta에 표시.
     #    (홈 화면이 잔액 갱신만 하고 리포트를 다시 요청하지 않도록 → 크레딧 중복 차감 방지)

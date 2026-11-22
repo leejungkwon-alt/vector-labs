@@ -44,8 +44,9 @@ export default function SettingsScreen() {
     else if (/telegram|stars/.test(plat)) channelKey = "settings.purchaseChannelTelegram";
 
     let nameKey: string | null = null;
-    if (pid === "deep_report") nameKey = "settings.productDeepReport";
-    else if (item.kind === "subscription" || /sub|premium|monthly/.test(pid)) nameKey = "settings.purchaseSub";
+    // 1회권은 크레딧 모델로 단일화됨: 실제 product_id(lemon_onetime / gyeol_onetime_credit)로만 분류한다.
+    // (과거 'deep_report' 애드온 상품명 매핑은 지급 경로가 없어 제거)
+    if (item.kind === "subscription" || /sub|premium|monthly/.test(pid)) nameKey = "settings.purchaseSub";
     else if (item.kind === "onetime" || /onetime|credit|once/.test(pid)) nameKey = "settings.purchaseOnetime";
 
     const name = nameKey ? t(nameKey) : item.product_id; // 알 수 없는 상품은 ID 그대로
