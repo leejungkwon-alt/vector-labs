@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException, Header
 from app.auth.dependencies import get_current_user, get_current_user_optional
 from app.auth.jwt_utils import encode_token, ttl_seconds
 from app.auth.providers import ProviderTokenError, verify_provider_token
-from app.auth.repository import get_repository
+from app.auth.repository import get_repository, DobChangeLimitExceeded
 
 from app.api.v1.endpoints.telegram import _verified_telegram_id, TelegramInitData
 from pydantic import BaseModel
@@ -87,7 +87,17 @@ def upsert_my_profile(
     payload: ProfilePayload,
     user: dict = Depends(get_current_user),
 ):
-    return get_repository().upsert_profile(user["id"], payload.model_dump())
+    data = payload.model_dump()
+    # 구버전 앱( mbti 필드를 모르는 클라이언트 )이 보낸 요청으로 기존 MBTI 가
+    # 지워지지 않도록, 요청에 키가 실제로 있었을 때만 저장 대상에 넣는다.
+    #   - 키 없음            → 기존 값 유지
+    #   - 키 있고 null/""    → 미입력(null)으로 저장 (사용자가 건너뛰기 한 경우)
+    if "mbti" not in payload.model_fields_set:
+        data.pop("mbti", None)
+    try:
+        return get_repository().upsert_profile(user["id"], data)
+    except DobChangeLimitExceeded as e:
+        raise HTTPException(status_code=409, detail=e.message)
 
 
 @router.post("/link/{provider}", response_model=TokenResponse)
@@ -222,5 +232,3 @@ def list_my_purchases(user: dict = Depends(get_current_user)):
 def list_push_tokens(user: dict = Depends(get_current_user)):
     """등록된 푸시 토큰 목록 (다기기 디버깅용)."""
     return {"tokens": get_repository().list_push_tokens(user["id"])}
-
-

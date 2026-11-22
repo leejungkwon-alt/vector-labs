@@ -23,7 +23,9 @@ import threading
 import uuid
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Any
+from abc import ABC, abstractmethod
+from contextlib import AbstractContextManager
 
 
 _PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -32,6 +34,19 @@ _DEFAULT_DB_PATH = _PROJECT_ROOT / "data" / "auth.db"
 
 def _now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+# 생년월일 변경 허용 횟수 (첫 입력은 횟수에 포함하지 않음)
+MAX_DOB_CHANGES = 5
+
+
+class DobChangeLimitExceeded(Exception):
+    """생년월일 변경 횟수 초과. 라우터에서 HTTP 응답으로 변환한다."""
+
+    def __init__(self, message: str = (
+        "생년월일은 5회까지만 변경할 수 있습니다. 변경이 필요하시면 고객센터에 문의해주세요."
+    )):
+        self.message = message
+        super().__init__(message)
 
 
 def _resolve_db_path() -> str:
@@ -66,6 +81,9 @@ _SCHEMA_STATEMENTS = [
         gender TEXT NOT NULL DEFAULT 'M',
         jasi_boundary INTEGER NOT NULL DEFAULT 23,
         correction_mode TEXT NOT NULL DEFAULT 'lmt',
+        dob_change_count INTEGER NOT NULL DEFAULT 0,
+        last_dob_change_at TEXT,
+        mbti TEXT,
         updated_at TEXT NOT NULL
     )
     """,
@@ -209,15 +227,33 @@ class _BaseRepository:
 
     # ---- profiles ----
     def upsert_profile(self, user_id: str, data: dict) -> dict:
-        self._run(
-            """
+        """프로필 저장. 생년월일 변경은 DB 한 문장 안에서 원자적으로 횟수를 제한한다.
+
+        - 첫 입력(기존 birth_date 가 NULL)은 변경으로 세지 않는다.
+        - birth_date 가 None 으로 들어오면 기존 값을 유지한다 (지우고 다시 넣는 우회 방지).
+        - 한도 초과 시 WHERE 절이 거짓이 되어 0행이 갱신되고 DobChangeLimitExceeded 를 던진다.
+        - mbti 는 "키가 없으면 기존 값 유지, 명시적 None 이면 삭제"로 구분한다.
+          (`data.get(...)` 으로 읽으면 구버전 앱의 필드 생략이 기존 값을 지운다.)
+        """
+        now = _now_iso()
+        changed = (
+            "(profiles.birth_date IS NOT NULL "
+            "AND excluded.birth_date IS NOT NULL "
+            "AND excluded.birth_date <> profiles.birth_date)"
+        )
+        mbti_provided = "mbti" in data
+        mbti_set_clause = (
+            "mbti = excluded.mbti" if mbti_provided else "mbti = profiles.mbti"
+        )
+        affected = self._run(
+            f"""
             INSERT INTO profiles (
                 user_id, birth_date, birth_time, birth_location,
                 timezone_str, longitude, gender, jasi_boundary,
-                correction_mode, updated_at
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                correction_mode, dob_change_count, last_dob_change_at, mbti, updated_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 0, NULL, ?, ?)
             ON CONFLICT(user_id) DO UPDATE SET
-                birth_date = excluded.birth_date,
+                birth_date = COALESCE(excluded.birth_date, profiles.birth_date),
                 birth_time = excluded.birth_time,
                 birth_location = excluded.birth_location,
                 timezone_str = excluded.timezone_str,
@@ -225,7 +261,13 @@ class _BaseRepository:
                 gender = excluded.gender,
                 jasi_boundary = excluded.jasi_boundary,
                 correction_mode = excluded.correction_mode,
+                {mbti_set_clause},
+                dob_change_count = profiles.dob_change_count
+                    + CASE WHEN {changed} THEN 1 ELSE 0 END,
+                last_dob_change_at = CASE WHEN {changed}
+                    THEN excluded.updated_at ELSE profiles.last_dob_change_at END,
                 updated_at = excluded.updated_at
+            WHERE NOT ({changed} AND profiles.dob_change_count >= ?)
             """,
             (
                 user_id,
@@ -237,9 +279,14 @@ class _BaseRepository:
                 data.get("gender", "M"),
                 data.get("jasi_boundary", 23),
                 data.get("correction_mode", "lmt"),
-                _now_iso(),
+                data.get("mbti"),   # 키가 없으면 None → 신규 row 만 NULL
+                now,
+                MAX_DOB_CHANGES,
             ),
         )
+
+        if affected == 0:
+            raise DobChangeLimitExceeded()
         return self.get_profile(user_id)
 
     def get_profile(self, user_id: str) -> Optional[dict]:
@@ -574,6 +621,19 @@ class Repository(_BaseRepository):
                 )
 
 
+            # migration (생년월일 변경 횟수 제한)
+            p_cols = {r[1] for r in self._conn.execute("PRAGMA table_info(profiles)").fetchall()}
+            if "dob_change_count" not in p_cols:
+                self._conn.execute(
+                    "ALTER TABLE profiles ADD COLUMN dob_change_count INTEGER NOT NULL DEFAULT 0"
+                )
+            if "last_dob_change_at" not in p_cols:
+                self._conn.execute("ALTER TABLE profiles ADD COLUMN last_dob_change_at TEXT")
+
+            # migration (사주×MBTI 대조): 자기신고 MBTI (nullable, 없으면 건너뜀)
+            if "mbti" not in p_cols:
+                self._conn.execute("ALTER TABLE profiles ADD COLUMN mbti TEXT")
+
             # migration (2026-11 Stripe)
             u_cols = {r[1] for r in self._conn.execute("PRAGMA table_info(users)").fetchall()}
             for col in ["stripe_customer_id", "stripe_subscription_id", "subscription_status", "current_period_end", "email"]:
@@ -658,6 +718,18 @@ class PostgresRepository(_BaseRepository):
                     "ADD COLUMN language_code TEXT"
                 )
 
+
+            # migration (생년월일 변경 횟수 제한)
+            conn.execute(
+                "ALTER TABLE profiles ADD COLUMN IF NOT EXISTS "
+                "dob_change_count INTEGER NOT NULL DEFAULT 0"
+            )
+            conn.execute(
+                "ALTER TABLE profiles ADD COLUMN IF NOT EXISTS last_dob_change_at TEXT"
+            )
+
+            # migration (사주×MBTI 대조): 자기신고 MBTI (nullable, 미입력 = 건너뜀)
+            conn.execute("ALTER TABLE profiles ADD COLUMN IF NOT EXISTS mbti TEXT")
 
             # migration (2026-11 Stripe)
             for col in ["stripe_customer_id", "stripe_subscription_id", "subscription_status", "current_period_end", "email"]:

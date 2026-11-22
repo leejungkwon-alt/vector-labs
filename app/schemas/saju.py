@@ -59,6 +59,20 @@ class SajuRequest(BaseModel):
         examples=[0, 1],
         description="DST 중복 시각 선택 (0=첫 번째, 1=두 번째). 모호하지 않으면 무시.",
     )
+    mbti: Optional[str] = Field(
+        default=None,
+        examples=["INFJ", None],
+        description=(
+            "자기신고 MBTI 4글자 (^[EI][NS][TF][JP]$). 선택 입력 — 생략/빈 값은 null 로 "
+            "정규화되어 '건너뜀' 으로 처리된다. 추정하지 않는다."
+        ),
+    )
+
+    @field_validator("mbti")
+    @classmethod
+    def validate_mbti(cls, v):
+        from app.schemas.auth import normalize_mbti
+        return normalize_mbti(v)
 
     @field_validator("birth_date")
     @classmethod

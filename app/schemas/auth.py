@@ -4,6 +4,24 @@ from typing import Optional
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
+# 자기신고 MBTI (선택 입력). 4글자 대문자, 각 축의 유효 문자만 허용.
+MBTI_PATTERN = r"^[EI][NS][TF][JP]$"
+
+
+def normalize_mbti(value):
+    """빈 문자열/공백/None → None, 그 외는 대문자 정규화 후 패턴 검증."""
+    if value is None:
+        return None
+    if not isinstance(value, str):
+        raise ValueError("mbti must be a string")
+    v = value.strip().upper()
+    if not v:
+        return None
+    import re
+    if not re.fullmatch(MBTI_PATTERN, v):
+        raise ValueError("mbti must be a 4-letter type like INFJ (^[EI][NS][TF][JP]$)")
+    return v
+
 
 class UserPublic(BaseModel):
     model_config = ConfigDict(extra="ignore")
@@ -61,6 +79,18 @@ class ProfilePayload(BaseModel):
     gender: str = Field(default="M")
     jasi_boundary: int = Field(default=23)
     correction_mode: str = Field(default="lmt")
+    # 자기신고 MBTI (선택). None/"" → null. `model_fields_set` 로 "키 생략"과
+    # "명시적 null" 을 구분해 구버전 앱이 기존 값을 지우지 않게 한다.
+    mbti: Optional[str] = Field(
+        default=None,
+        examples=["INFJ"],
+        description="자기신고 MBTI 4글자 (^[EI][NS][TF][JP]$). 미입력 시 null(건너뜀).",
+    )
+
+    @field_validator("mbti")
+    @classmethod
+    def v_mbti(cls, v):
+        return normalize_mbti(v)
 
     @field_validator("birth_date")
     @classmethod
@@ -147,4 +177,7 @@ class ProfileResponse(BaseModel):
     gender: str = "M"
     jasi_boundary: int = 23
     correction_mode: str = "lmt"
+    mbti: Optional[str] = None
+    dob_change_count: int = 0 # 추가
+    last_dob_change_at: Optional[str] = None # 추가
     updated_at: str = ""
