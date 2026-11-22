@@ -147,13 +147,42 @@ def test_ungated_tiers_keep_unknown_section(tier):
     assert out["meta"]["locked_sections"] == []
 
 
-def test_addon_still_unlocks_deep_report_sections():
-    """회귀 방지: deep_report 애드온 예외는 fail-closed 전환 후에도 동작해야 한다."""
-    report = _report()
-    out = apply_entitlement_gate(report, "free", addons=["deep_report"])
+def test_deep_report_addon_path_removed(fresh_auth):
+    """2026-11 정리: deep_report 애드온 해제 경로 제거 → 애드온 행이 있어도 free 는 잠김.
+
+    1회권은 크레딧 모델로 단일화(report.py 가 tier 를 premium 으로 승격).
+    DB 테이블/행은 남아 있으므로, 과거 deep_report 행이 **무시**되는지만 확인한다.
+    """
+    from app.auth.repository import get_repository
+
+    r = _report()
+    out = apply_entitlement_gate(r, "free", addons=["deep_report"])
     for sid in ("love", "career", "wealth"):
-        assert "body" in out["sections"][sid]
-        assert sid not in out["meta"]["locked_sections"]
+        assert "body" not in out["sections"][sid]
+        assert sid in out["meta"]["locked_sections"]
+
+    # API 레벨: 과거 애드온 행이 있어도 free 유저는 잠긴다(행 자체는 보존됨)
+    a = client.post("/api/v1/auth/anonymous").json()
+    uid, token = a["user"]["id"], a["access_token"]
+    get_repository().grant_addon(uid, "deep_report")
+    assert get_repository().list_addons(uid) == ["deep_report"]  # 데이터 보존
+
+    resp = client.post("/api/v1/saju/report", headers=_h(token), json=BASE_PAYLOAD)
+    report = resp.json()["report"]
+    assert "love" in report["meta"]["locked_sections"]
+    assert "body" not in report["sections"]["love"]
+
+
+def test_compatibility_addon_still_works(fresh_auth):
+    """다른 애드온(compatibility)은 이번 정리 대상이 아니며 계속 동작해야 한다."""
+    from app.auth.repository import get_repository
+
+    a = client.post("/api/v1/auth/anonymous").json()
+    uid = a["user"]["id"]
+    assert get_repository().has_addon(uid, "compatibility") is False
+    get_repository().grant_addon(uid, "compatibility")
+    assert get_repository().has_addon(uid, "compatibility") is True
+
 
 
 # ============================================================
@@ -235,30 +264,38 @@ def test_section_shaped_packs_declare_i18n_rule():
 
 
 # ============================================================
-# 4) 1단계 조사 항목 고정 (동작 변경 아님)
-#    - `grant_addon` 호출부가 없다 → deep_report 애드온은 어떤 결제로도 지급되지 않는다.
+# 4) 1단계 조사 항목 → 2026-11 정리 후 상태 고정
+#    - 애드온 기반 '심화 리포트(deep_report)' 지급/해제 경로는 제거됨(1회권=크레딧).
+#    - `grant_addon` 자체는 `compatibility` 애드온에서 계속 사용된다(궁합 게이트).
 #    - `POST /auth/me/purchase` 는 구매 *내역 조회*일 뿐, 권한을 부여하지 않는다.
-#    아래 테스트는 "지금의 위험한 상태"를 문서화한다. 지급 경로를 만들면 갱신할 것.
 # ============================================================
 
 def test_no_code_path_grants_deep_report_addon():
-    """결제 3채널 + 인증 라우터 어디에도 grant_addon 호출이 없어야 (현재) 참.
+    """`deep_report` 애드온을 지급/해제하는 코드가 없어야 한다(제거 상태 고정).
 
-    지급 경로를 실제로 붙이면 이 테스트는 실패한다 —
-    그때는 deep_report 해제 E2E 테스트로 교체해야 한다 (의도된 알람).
+    다른 애드온(compatibility)은 허용한다 — 그쪽은 궁합 접근 게이트에서 쓰인다.
+    만약 누군가 deep_report 지급을 다시 붙이면 이 테스트가 깨진다(의도된 알람).
     """
+    root = pathlib.Path(__file__).parent.parent
+    offenders = []
+    for p in list((root / "app").rglob("*.py")) + list((root / "api").rglob("*.py")):
+        for i, line in enumerate(p.read_text(encoding="utf-8").splitlines(), 1):
+            if "deep_report" in line and not line.strip().startswith("#"):
+                offenders.append(f"{p.relative_to(root)}:{i}")
+    assert offenders == [], f"deep_report 코드 경로가 남아 있음: {offenders}"
+
+
+def test_grant_addon_only_used_for_compatibility():
+    """`grant_addon` 호출은 프로덕션 코드에 없고(테스트에서만), 애드온 이름은 compatibility 뿐."""
     root = pathlib.Path(__file__).parent.parent
     callers = []
     for p in list((root / "app").rglob("*.py")) + list((root / "api").rglob("*.py")):
-        text = p.read_text(encoding="utf-8")
-        for i, line in enumerate(text.splitlines(), 1):
-            stripped = line.strip()
-            if ".grant_addon(" in stripped and not stripped.startswith("def "):
+        for i, line in enumerate(p.read_text(encoding="utf-8").splitlines(), 1):
+            s = line.strip()
+            if ".grant_addon(" in s and not s.startswith("def "):
                 callers.append(f"{p.relative_to(root)}:{i}")
-    assert callers == [], (
-        "grant_addon 호출부가 생겼다. deep_report 지급 E2E 테스트로 교체할 것: "
-        + ", ".join(callers)
-    )
+    assert callers == [], f"프로덕션 코드의 grant_addon 호출: {callers}"
+
 
 
 def test_purchase_endpoint_does_not_grant_entitlement(fresh_auth):
