@@ -30,6 +30,62 @@ async function backupGuestToken(): Promise<void> {
 type User = AuthResponse['user'];
 type Provider = 'apple' | 'google' | 'kakao';
 
+/**
+ * 유저 정보(user)만 다시 불러옵니다.
+ *
+ * 💡 bootstrap() 은 토큰이 없거나 만료됐을 때 게스트 토큰을 새로 발급하는데,
+ *    결제 완료 직후 호출되면 방금 지급된 크레딧/티어가 사라진 새 계정으로
+ *    교체될 수 있습니다. 그래서 결제 후 갱신처럼 "유저 정보만 새로고침"이
+ *    필요한 경우에는 안전한 refreshUser() 를 사용합니다.
+ *    - 실패해도 기존 로그인 상태/유저 정보는 그대로 유지 (익명 재발급 금지)
+ *    - 네트워크/서버 일시 오류는 최대 `retries` 회까지 재시도
+ */
+export const refreshUser = async (retries = 2): Promise<User | null> => {
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const me = await api.me();
+      useAuthStore.setState({ user: me.user });
+      return me.user;
+    } catch (e) {
+      if (e instanceof ApiError && e.status === 401) {
+        // 토큰 만료/무효 → 자동 재발급하지 않음 (로그아웃 처리 전 상태 유지)
+        console.warn('[refreshUser] token is no longer valid:', e.detail);
+        return null;
+      }
+      if (attempt === retries) {
+        console.warn('[refreshUser] failed:', e);
+        return null;
+      }
+      await new Promise<void>((r) => setTimeout(r, 800 * (attempt + 1)));
+    }
+  }
+  return null;
+};
+
+/**
+ * 지갑 상태(티어/보유 크레딧 수)를 서버 응답으로 즉시 반영합니다.
+ * (결제 완료 직후 화면이 바로 풀리도록 로컬 상태를 먼저 갱신)
+ */
+export const applyWalletSnapshot = (wallet: {
+  tier?: string | null;
+  is_premium?: boolean | null;
+  onetime_credits?: number | null;
+}) => {
+  const current = useAuthStore.getState().user as any;
+  if (!current) return;
+
+  const next: any = { ...current };
+  if (typeof wallet.onetime_credits === "number") {
+    next.onetime_credits = wallet.onetime_credits;
+  }
+  if (wallet.is_premium === true) {
+    next.tier = "premium";
+  } else if (wallet.tier) {
+    next.tier = wallet.tier;
+  }
+  useAuthStore.setState({ user: next });
+};
+
 async function getAppleIdentityToken(): Promise<string> {
   const credential = await AppleAuthentication.signInAsync({
     requestedScopes: [
