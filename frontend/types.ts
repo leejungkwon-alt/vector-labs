@@ -20,6 +20,8 @@ export interface SajuRequest {
   use_current_solar_year?: boolean;
   birth_location?: string | null;
   dst_fold?: 0 | 1 | null;
+  /** 자기신고 MBTI 4글자 (선택). 서버는 추정하지 않는다. */
+  mbti?: string | null;
 }
 
 export interface TenGod {

@@ -19,6 +19,22 @@ import {
 // CITY_LIST 에 longitude/timezone 이 없어도 동작하도록 느슨한 타입으로 사용
 const CITIES = CITY_LIST as ReadonlyArray<{ key: string; label: string; longitude?: number; timezone?: string }>;
 
+// 자기신고 MBTI 선택 UI (선택 입력 · 건너뛰기 가능). 서버가 추정하지 않는다.
+const MBTI_AXES = [
+  { key: "EI", options: ["E", "I"] },
+  { key: "NS", options: ["N", "S"] },
+  { key: "TF", options: ["T", "F"] },
+  { key: "JP", options: ["J", "P"] },
+] as const;
+
+type MbtiDraft = { EI: string | null; NS: string | null; TF: string | null; JP: string | null };
+
+function toMbtiType(draft: MbtiDraft): string | null {
+  const v = `${draft.EI ?? ""}${draft.NS ?? ""}${draft.TF ?? ""}${draft.JP ?? ""}`;
+  return /^[EI][NS][TF][JP]$/.test(v) ? v : null;
+}
+
+
 export default function BirthInput() {
   const insets = useSafeAreaInsets();
   const saveProfile = useProfileStore((s) => s.saveProfile);
@@ -33,6 +49,13 @@ export default function BirthInput() {
   const [city, setCity] = useState("seoul");
   const [showCityModal, setShowCityModal] = useState(false);
   const [gender, setGender] = useState("M");
+
+  // MBTI (선택). touched=false 면 payload 에 넣지 않아 기존 값이 보존된다.
+  const [mbtiDraft, setMbtiDraft] = useState<MbtiDraft>({ EI: null, NS: null, TF: null, JP: null });
+  const [mbtiTouched, setMbtiTouched] = useState(false);
+  const [mbtiSkip, setMbtiSkip] = useState(false);
+  const mbtiDraftValue = toMbtiType(mbtiDraft);
+
 
   // 🌟 직접 입력(Custom)을 위한 상태 추가
   const [isCustomCity, setIsCustomCity] = useState(false);
@@ -82,6 +105,14 @@ export default function BirthInput() {
         setUnknownTime(false);
       }
       if (profile.gender === "M" || profile.gender === "F") setGender(profile.gender);
+
+      // 저장된 MBTI 가 있으면 4축 토글을 그 값으로 채운다 (없으면 미입력 = 건너뜀)
+      if (typeof profile.mbti === "string" && /^[EI][NS][TF][JP]$/.test(profile.mbti)) {
+        setMbtiDraft({
+          EI: profile.mbti[0], NS: profile.mbti[1], TF: profile.mbti[2], JP: profile.mbti[3],
+        });
+        setMbtiSkip(false);
+      }
       
       if (profile.birth_location) {
         setIsCustomCity(false);
@@ -144,7 +175,7 @@ export default function BirthInput() {
         finalLongitude = CITIES.find(c => c.key === city)?.longitude || 126.978;
       }
 
-      const profileData = {
+      const profileData: any = {
         birth_date: `${yyyy}-${mm}-${dd}`,
         birth_time: timeString,
         birth_time_mode: timeMode,
@@ -153,11 +184,20 @@ export default function BirthInput() {
         longitude: finalLongitude, // 🌟 수정된 경도 적용
         gender: gender,
       };
-      
+
+      // MBTI: 사용자가 실제로 만졌을 때만 포함한다.
+      //   - 4축 모두 선택 → 유형 문자열
+      //   - 일부만 선택/건너뛰기 → null(미입력)
+      //   - 건드리지 않음 → 키 생략 → 서버가 기존 값 유지
+      if (mbtiTouched) {
+        profileData.mbti = mbtiDraftValue; // null 이면 서버에서 "미입력"으로 저장
+      }
+
       await saveProfile(profileData);
       router.replace("/(tabs)/home");
     } catch (error: any) {
-      const msg = error?.detail || t("birthInput.saveFailed");
+      // 저장 실패: 화면을 넘기지 않고 그대로 머문다(입력값 보존). 서버 오류는 그대로 노출.
+      const msg = error?.detail || error?.message || t("birthInput.saveFailed");
       if (Platform.OS === "web") alert(msg);
       else Alert.alert(t("common.notice"), msg);
     }
@@ -166,6 +206,13 @@ export default function BirthInput() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: insets.bottom + 24 }}>
       <Text style={styles.title}>{t("birthInput.title")}</Text>
+      {/*
+        ⚠️ 이 화면은 birth_date/birth_time_mode 를 읽지만 저장 payload(profileData)에는
+        넣지 않는다. 전체 교체(PUT)라서 저장하면 기존 birth_date 가 COALESCE 로 유지되고
+           고정 "noon" 이 매번 덮어써져 정확한 시간 입력이 사라진다(기존 동작, 이번 범위 밖).
+        아래 MBTI 만는 "사용자가 실제로 건드렸을 때만" payload 에 넣어
+        구버전/미변경 사용자의 기존 값을 지우지 않도록 한다.
+      */}
       
       <Text style={styles.label}>{t("birthInput.birthDate")}</Text>
       <DateTimeField
@@ -256,6 +303,49 @@ export default function BirthInput() {
           <Text style={[styles.genderText, gender === "F" && styles.genderTextActive]}>{t("birthInput.female")}</Text>
         </TouchableOpacity>
       </View>
+
+      {/* ---- MBTI (선택 입력 · 건너뛰기 가능) ---- */}
+      <Text style={styles.label}>{t("birthInput.mbtiLabel")}</Text>
+      <Text style={styles.hint}>{t("birthInput.mbtiHint")}</Text>
+      {MBTI_AXES.map((axis) => (
+        <View key={axis.key} style={{ marginTop: 10 }}>
+          <Text style={{ fontSize: 13, color: colors.textMuted, marginBottom: 6 }}>
+            {t(`birthInput.mbtiAxis_${axis.key}`)}
+          </Text>
+          <View style={{ flexDirection: "row", gap: 10 }}>
+            {axis.options.map((opt) => {
+              const selected = mbtiDraft[axis.key] === opt;
+              return (
+                <TouchableOpacity
+                  key={opt}
+                  style={[styles.genderBtn, selected && styles.genderBtnActive]}
+                  onPress={() => {
+                    setMbtiTouched(true);
+                    setMbtiDraft((prev) => ({ ...prev, [axis.key]: prev[axis.key] === opt ? null : opt }));
+                  }}
+                >
+                  <Text style={[styles.genderText, selected && styles.genderTextActive]}>{opt}</Text>
+                </TouchableOpacity>
+              );
+            })}
+          </View>
+        </View>
+      ))}
+      <TouchableOpacity
+        style={{ marginTop: 12, paddingVertical: 10 }}
+        onPress={() => {
+          setMbtiTouched(true);
+          setMbtiDraft({ EI: null, NS: null, TF: null, JP: null });
+          setMbtiSkip(true);
+        }}
+      >
+        <Text style={{ fontSize: 14, color: colors.primary, fontWeight: "600" }}>
+          {mbtiSkip ? "✓ " : ""}{t("birthInput.mbtiSkip")}
+        </Text>
+      </TouchableOpacity>
+      <Text style={styles.hint}>
+        {mbtiDraftValue ? `${t("birthInput.mbtiSelected")}: ${mbtiDraftValue}` : t("birthInput.mbtiNone")}
+      </Text>
 
       <TouchableOpacity style={styles.nextBtn} onPress={handleNext}>
         <Text style={styles.nextBtnText}>{t("birthInput.submit")}</Text>
