@@ -9,6 +9,13 @@
 적용 위치: API 레이어 (report.py).
 content_writer.py 는 손대지 않는다.
 
+**fail-closed (2026-11)**
+  규칙이 정의되지 않은 섹션은 "규칙 미정의 → 통과"가 아니라 **유료 취급**한다.
+  게이트 규칙을 깜빡한 새 섹션이 무료로 새는 것을 막기 위함이다.
+  - 무료로 열어야 하는 섹션은 `FREE_SECTION_RULES` 에 명시적 `keep_all: True` 규칙을 둔다.
+  - 조립 가능한 모든 섹션은 규칙을 가져야 한다(`tests/test_entitlement_coverage.py`).
+  - 새 섹션 팩은 `i18n_rule` 키로 섹션 id 를 신고해 커버리지 테스트에 잡히게 한다.
+
 티어
   preview      : Step 4-A 이전 ungated. 현재는 free와 동일하게 게이팅 대상.
   free         : 모든 섹션 티저만 공개 + locked_fields 세팅
@@ -102,6 +109,13 @@ FREE_SECTION_RULES = {
         "keep": {"id", "title", "mode", "headline"},
         "locked_hint": ["body", "patterns", "compatibility", "actions", "red_flags"],
     },
+    # ---- 하위 모듈 규칙 (팩의 `i18n_rule` 신고와 1:1) ----
+    # 문구 팩이지만 "어디에 붙는지"를 명시해 두면, 교차 인사이트/타이밍을
+    # 섹션으로 승격할 때 fail-closed 기본값에 걸리지 않고 의도대로 잠긴다.
+    "cross_insight": {
+        "keep": {"id", "title", "mode"},
+        "locked_hint": ["intro", "angles", "tension_text", "closing", "disclaimer"],
+    },
     # ---- Timeline: 첫 3개 인생의 큰 흐름 ----
     "timeline": {
         "keep": {"id", "title", "hero"},
@@ -158,6 +172,37 @@ for _sid, _extras in _P0_3_LOCKED_EXTRA.items():
             _hint.append(_f)
 
 UNGATED_TIERS = {"subscription", "premium", "unlimited"}
+
+# 애드온으로 잠금 해제되는 섹션 (deep_report 1회권)
+ADDON_UNLOCKED_SECTIONS = {"love", "career", "wealth"}
+
+
+# ============================================================
+# fail-closed 기본 규칙 (규칙 미정의 섹션용)
+# ============================================================
+# 규칙이 없는 섹션은 **유료로 가정**한다. 본문/데이터 필드는 전부 숨기고
+# 제목 등 최소 식별 정보만 남겨 프론트가 "잠김" 카드로 그릴 수 있게 한다.
+FAIL_CLOSED_RULE = {
+    "keep": {"id", "title"},
+    "locked_hint": ["content"],
+}
+
+
+def is_section_rule_defined(sid: str) -> bool:
+    """섹션 id 에 명시적 게이트 규칙(또는 애드온 예외)이 있는지.
+
+    커버리지 테스트와 fail-closed 판정에서 공용으로 사용한다.
+    """
+    if sid in ADDON_UNLOCKED_SECTIONS:
+        return True
+    rule = FREE_SECTION_RULES.get(sid)
+    return rule is not None and bool(rule)
+
+
+def default_free_rule(sid: str) -> dict:
+    """무료 티어에서 적용할 규칙. 미정의 섹션은 fail-closed 기본 규칙."""
+    return FREE_SECTION_RULES.get(sid) or FAIL_CLOSED_RULE
+
 
 # ============================================================
 # Summary Cards 게이팅 (Step 4-A)
@@ -219,23 +264,22 @@ def apply_entitlement_gate(report: dict, tier: str, addons: list[str] = None) ->
     locked_section_ids = []
 
     for sid, section in sections.items():
-        # [신규] 심화 리포트 애드온이 있으면 love, career, wealth는 잠금 해제
-        if sid in ("love", "career", "wealth") and "deep_report" in addons:
+        # 심화 리포트 애드온이 있으면 love, career, wealth 는 잠금 해제
+        if sid in ADDON_UNLOCKED_SECTIONS and "deep_report" in addons:
             gated_sections[sid] = section
             continue
 
-        rule = FREE_SECTION_RULES.get(sid)
-
-        if rule is None:
-            # 규칙 미정의 → 안전하게 통과 (원본 유지)
-            gated_sections[sid] = section
-            continue
+        # fail-closed: 규칙이 없으면 통과시키지 않고 FAIL_CLOSED_RULE 로 잠근다.
+        rule = default_free_rule(sid)
+        unknown_section = sid not in FREE_SECTION_RULES
 
         if rule.get("keep_all"):
             gated_sections[sid] = section
             continue
 
         teaser, locked_fields = _apply_teaser_rule(section, rule)
+        if unknown_section and "content" not in locked_fields:
+            locked_fields = list(locked_fields) + ["content"]
         if locked_fields:
             teaser["locked_fields"] = locked_fields
             locked_section_ids.append(sid)

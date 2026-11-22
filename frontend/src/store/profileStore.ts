@@ -7,14 +7,18 @@ const PROFILE_KEY = "saju_profile";
 interface ProfileState {
   profile: any | null;
   ready: boolean;
+  dobChangeCount: number; // 생년월일 변경 횟수
+  lastDobChangeAt: string | null; // 마지막 생년월일 변경 일시
   loadProfile: () => Promise<void>;
   saveProfile: (profile: any) => Promise<void>;
   clearProfile: () => Promise<void>;
 }
 
-export const useProfileStore = create<ProfileState>((set) => ({
+export const useProfileStore = create<ProfileState>((set, get) => ({
   profile: null,
   ready: false,
+  dobChangeCount: 0,
+  lastDobChangeAt: null,
   loadProfile: async () => {
     try {
       // 1) 백엔드에서 현재 로그인 계정의 프로필 우선 조회
@@ -46,21 +50,40 @@ export const useProfileStore = create<ProfileState>((set) => ({
       set({ ready: true });
     }
   },
-  saveProfile: async (profile: any) => {
+  saveProfile: async (newProfile: any) => {
+    const state = get();
+    const oldProfile = state.profile;
+
+    let currentDobChangeCount = state.dobChangeCount;
+    let currentLastDobChangeAt = state.lastDobChangeAt;
+
+    // 생년월일이 변경되었는지 확인
+    if (oldProfile && oldProfile.birth_date !== newProfile.birth_date) {
+      if (currentDobChangeCount >= 5) {
+        throw new Error("생년월일은 5회까지만 변경할 수 있습니다. 변경이 필요하시면 고객센터에 문의해주세요.");
+      }
+      currentDobChangeCount += 1;
+      currentLastDobChangeAt = new Date().toISOString();
+    }
+
     // 1. 서버 동기화 시도 (에러가 나면 여기서 throw 하여 UI에서 알림을 띄우게 함)
     try {
-      await api.updateProfile(profile);
+      await api.updateProfile(newProfile);
     } catch (e) {
       console.warn("Server profile sync failed:", e);
       throw e; // 부모 컴포넌트(birth-input.tsx)에서 에러 메시지를 보여줄 수 있게 던짐
     }
 
     // 2. 서버 성공 시에만 로컬 저장 (유효하지 않은 데이터는 저장하지 않음)
-    await AsyncStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
-    set({ profile });
+    await AsyncStorage.setItem(PROFILE_KEY, JSON.stringify(newProfile));
+    set({ 
+      profile: newProfile, 
+      dobChangeCount: currentDobChangeCount, 
+      lastDobChangeAt: currentLastDobChangeAt 
+    });
   },
   clearProfile: async () => {
     await AsyncStorage.removeItem(PROFILE_KEY);
-    set({ profile: null });
+    set({ profile: null, dobChangeCount: 0, lastDobChangeAt: null });
   },
 }));
