@@ -62,6 +62,46 @@ def delete_me(user: dict = Depends(get_current_user)):
     return None
 
 
+_PROFILE_KEYED_FIELDS = ("birth_date", "birth_time", "birth_time_mode", "mbti")
+
+
+def apply_profile_key_presence(payload, data: dict) -> dict:
+    """요청에 키가 없는 필드는 저장 대상에서 빼서 기존 값을 유지한다.
+
+    PUT /me/profile 은 "전체 교체"지만, 구버전 클라이언트는 새 필드를 모른 채
+    요청을 보낸다. `model_dump()` 는 생략된 필드를 기본값(None)으로 채우므로,
+    그대로 저장하면 기존 값이 NULL 로 지워진다.
+      - 키 없음        → 저장 대상에서 제외(기존 값 유지)
+      - 키 있고 null   → 그대로 저장(명시적 삭제)
+
+    대상 필드: birth_date / birth_time / birth_time_mode / mbti
+    (레포의 birth_date·birth_time·birth_time_mode 는 COALESCE 보존이라 null 도 유지되고,
+     mbti 는 null 전달 시 삭제된다 — 각 브랜치의 기존 동작을 그대로 따른다.)
+    """
+    fields_set = getattr(payload, "model_fields_set", set())
+    for name in _PROFILE_KEYED_FIELDS:
+        if name not in fields_set:
+            data.pop(name, None)
+    return data
+
+
+def _check_birth_time_combination(mode, time_value):
+    """`birth_time_mode` 와 `birth_time` 의 모순 조합을 422 로 거부한다.
+
+    보낸 필드가 하나뿐이면(생략) 기존 값과 합쳐질 수 있으므로 검사하지 않는다.
+    """
+    if mode == "exact" and not time_value:
+        raise HTTPException(
+            status_code=422,
+            detail="birth_time is required when birth_time_mode='exact'.",
+        )
+    if mode in ("noon", "day_only") and time_value:
+        raise HTTPException(
+            status_code=422,
+            detail=f"birth_time must be null when birth_time_mode='{mode}'.",
+        )
+
+
 @router.get("/me/profile", response_model=ProfileResponse)
 def get_my_profile(user: dict = Depends(get_current_user)):
     profile = get_repository().get_profile(user["id"])
@@ -87,13 +127,12 @@ def upsert_my_profile(
     payload: ProfilePayload,
     user: dict = Depends(get_current_user),
 ):
-    data = payload.model_dump()
-    # 구버전 앱( mbti 필드를 모르는 클라이언트 )이 보낸 요청으로 기존 MBTI 가
-    # 지워지지 않도록, 요청에 키가 실제로 있었을 때만 저장 대상에 넣는다.
-    #   - 키 없음            → 기존 값 유지
-    #   - 키 있고 null/""    → 미입력(null)으로 저장 (사용자가 건너뛰기 한 경우)
-    if "mbti" not in payload.model_fields_set:
-        data.pop("mbti", None)
+    data = apply_profile_key_presence(payload, payload.model_dump())
+
+    # 두 키가 모두 왔을 때만 조합 모순을 판정한다(한쪽 생략 = 기존 값과 합쳐짐).
+    fields_set = payload.model_fields_set
+    if "birth_time" in fields_set and "birth_time_mode" in fields_set:
+        _check_birth_time_combination(payload.birth_time_mode, payload.birth_time)
     try:
         return get_repository().upsert_profile(user["id"], data)
     except DobChangeLimitExceeded as e:

@@ -83,6 +83,7 @@ _SCHEMA_STATEMENTS = [
         correction_mode TEXT NOT NULL DEFAULT 'lmt',
         dob_change_count INTEGER NOT NULL DEFAULT 0,
         last_dob_change_at TEXT,
+        birth_time_mode TEXT,
         mbti TEXT,
         updated_at TEXT NOT NULL
     )
@@ -232,6 +233,9 @@ class _BaseRepository:
         - 첫 입력(기존 birth_date 가 NULL)은 변경으로 세지 않는다.
         - birth_date 가 None 으로 들어오면 기존 값을 유지한다 (지우고 다시 넣는 우회 방지).
         - 한도 초과 시 WHERE 절이 거짓이 되어 0행이 갱신되고 DobChangeLimitExceeded 를 던진다.
+        - birth_date / birth_time / birth_time_mode 는 기존 값 **보존**(COALESCE)이 기본.
+          예외(우선): `birth_time_mode == "noon"` 이면 `birth_time` 을 NULL 로 저장한다
+          ("시간 모름" 되돌리기 시 옛 시각이 남아 mode=noon + 시각 모순이 되는 것을 방지).
         - mbti 는 "키가 없으면 기존 값 유지, 명시적 None 이면 삭제"로 구분한다.
           (`data.get(...)` 으로 읽으면 구버전 앱의 필드 생략이 기존 값을 지운다.)
         """
@@ -241,20 +245,45 @@ class _BaseRepository:
             "AND excluded.birth_date IS NOT NULL "
             "AND excluded.birth_date <> profiles.birth_date)"
         )
+        mode_in = data.get("birth_time_mode")
+        time_in = None if mode_in == "noon" else data.get("birth_time")
+        # noon 은 COALESCE 보다 우선: "시간 모름"으로 되돌리면 옛 시각(time_in=None)을 지운다.
+        # 자리표시자(?)를 늘리지 않도록 excluded.birth_time(=time_in)을 그대로 참조한다.
+        time_set = (
+            "birth_time = excluded.birth_time" if mode_in == "noon"
+            else "birth_time = COALESCE(excluded.birth_time, profiles.birth_time)"
+        )
         mbti_provided = "mbti" in data
         mbti_set_clause = (
             "mbti = excluded.mbti" if mbti_provided else "mbti = profiles.mbti"
         )
+        params = [
+            user_id,
+            data.get("birth_date"),
+            time_in,
+            data.get("birth_location"),
+            data.get("timezone_str", "Asia/Seoul"),
+            data.get("longitude", 126.9780),
+            data.get("gender", "M"),
+            data.get("jasi_boundary", 23),
+            data.get("correction_mode", "lmt"),
+            mode_in,
+            data.get("mbti"),   # 키가 없으면 None → 신규 row 만 NULL / 기존 행은 SET 절이 보존
+            now,
+            MAX_DOB_CHANGES,
+        ]
         affected = self._run(
             f"""
             INSERT INTO profiles (
                 user_id, birth_date, birth_time, birth_location,
                 timezone_str, longitude, gender, jasi_boundary,
-                correction_mode, dob_change_count, last_dob_change_at, mbti, updated_at
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 0, NULL, ?, ?)
+                correction_mode, dob_change_count, last_dob_change_at,
+                birth_time_mode, mbti, updated_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 0, NULL, ?, ?, ?)
             ON CONFLICT(user_id) DO UPDATE SET
                 birth_date = COALESCE(excluded.birth_date, profiles.birth_date),
-                birth_time = excluded.birth_time,
+                {time_set},
+                birth_time_mode = COALESCE(excluded.birth_time_mode, profiles.birth_time_mode),
                 birth_location = excluded.birth_location,
                 timezone_str = excluded.timezone_str,
                 longitude = excluded.longitude,
@@ -269,25 +298,14 @@ class _BaseRepository:
                 updated_at = excluded.updated_at
             WHERE NOT ({changed} AND profiles.dob_change_count >= ?)
             """,
-            (
-                user_id,
-                data.get("birth_date"),
-                data.get("birth_time"),
-                data.get("birth_location"),
-                data.get("timezone_str", "Asia/Seoul"),
-                data.get("longitude", 126.9780),
-                data.get("gender", "M"),
-                data.get("jasi_boundary", 23),
-                data.get("correction_mode", "lmt"),
-                data.get("mbti"),   # 키가 없으면 None → 신규 row 만 NULL
-                now,
-                MAX_DOB_CHANGES,
-            ),
+            tuple(params),
         )
 
         if affected == 0:
             raise DobChangeLimitExceeded()
         return self.get_profile(user_id)
+
+
 
     def get_profile(self, user_id: str) -> Optional[dict]:
         return self._one("SELECT * FROM profiles WHERE user_id = ?", (user_id,))
@@ -623,6 +641,12 @@ class Repository(_BaseRepository):
                     "ADD COLUMN language_code TEXT"
                 )
 
+            # migration (birth_time_mode): 예전엔 컬럼 자체가 없어 "시간 모름" 이 저장되지
+            # 못했다(시각만 남고 모드는 항상 NULL). 기존 행은 NULL = 미지정으로 본다.
+            p_cols = {r[1] for r in self._conn.execute("PRAGMA table_info(profiles)").fetchall()}
+            if "birth_time_mode" not in p_cols:
+                self._conn.execute("ALTER TABLE profiles ADD COLUMN birth_time_mode TEXT")
+
 
             # migration (생년월일 변경 횟수 제한)
             p_cols = {r[1] for r in self._conn.execute("PRAGMA table_info(profiles)").fetchall()}
@@ -729,6 +753,13 @@ class PostgresRepository(_BaseRepository):
             )
             conn.execute(
                 "ALTER TABLE profiles ADD COLUMN IF NOT EXISTS last_dob_change_at TEXT"
+            )
+
+            # migration (birth_time_mode): profiles 에 컬럼이 없던 시절 데이터 호환.
+            # ⚠️ SQLite 블록(PRAGMA 기반)과 **반드시 쌍으로** 유지해야 한다.
+            #    (이 블록이 빠져 Neon/Postgres 에서 upsert 가 UndefinedColumn 으로 실패했다)
+            conn.execute(
+                "ALTER TABLE profiles ADD COLUMN IF NOT EXISTS birth_time_mode TEXT"
             )
 
             # migration (사주×MBTI 대조): 자기신고 MBTI (nullable, 미입력 = 건너뜀)
