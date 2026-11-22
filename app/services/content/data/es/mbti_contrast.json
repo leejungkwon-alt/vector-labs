@@ -1,0 +1,66 @@
+  {
+  "_TODO_I18N": "en copy — translate before shipping (TODO-i18n)",
+  "i18n_rule": "mbti_contrast",
+  "MBTI_STYLE_NOTE": "MBTI-style preference · self-reported, not an official test result",
+  "TITLE": "Saju × MBTI in contrast",
+  "AXIS_MODULES": {
+    "outward": {
+      "label": "A grain that reaches outward",
+      "body": "This chart reads as energy moving outward. Things tend to open up when you start new threads, move, and meet the world head-on."
+    },
+    "inward": {
+      "label": "A grain that gathers inward",
+      "body": "This chart reads as energy gathering inward. Things tend to open up when you sort it out alone, look closely, and move once you are sure."
+    },
+    "balanced": {
+      "label": "A grain that holds both sides",
+      "body": "This chart does not lean clearly to either side; the two grains sit together. You may step forward or step back depending on the situation."
+    }
+  },
+  "LINK": {
+    "match": {
+      "headline": "Two languages pointing the same way",
+      "body": "The style you picked and the grain of this chart land on a similar side. Reading the same direction in two different languages usually suggests a fairly consistent way of showing up."
+    },
+    "contrast": {
+      "headline": "A different layer sits beneath the surface",
+      "body": "The grain that shows on the outside and the way you prefer to work inside are different layers, not one verdict. You might move brightly among people yet want to make the actual decision alone; or look quiet while already holding a clear direction inside. It can mean you have tuned the outer grain to your environment and role, that a hidden grain sits underneath, or that you are deliberately practising the other side. None of these makes one layer 'real' and the other 'fake'."
+    },
+    "balanced": {
+      "headline": "A range that resists a single verdict",
+      "body": "The two languages point at different things, but neither pushes hard. It fits better to treat this as a range you move across than as a fixed setting."
+    }
+  },
+  "DAY_STEM_OVERLAY": {
+    "甲": "There is a pull to grow straight upward.",
+    "乙": "There is a pull to bend without breaking.",
+    "丙": "There is a pull to shine and make things visible.",
+    "丁": "There is a pull to burn small but long.",
+    "戊": "There is a pull to stand firm and hold ground.",
+    "己": "There is a pull to tend and level things out.",
+    "庚": "There is a pull to cut through and clear a path.",
+    "辛": "There is a pull to refine until it is clear.",
+    "壬": "There is a pull to flow wide and hold a lot.",
+    "癸": "There is a pull to seep in and nourish quietly."
+  },
+  "SLOTS": {
+    "layer": {
+      "title": "The two layers",
+      "body": "The grain that shows on the outside and the way you prefer to work inside do not have to explain each other. The outer grain may be the result of tuning to an environment and role, while the inner preference tends to surface when you are alone. There is no need to decide which one is correct."
+    },
+    "environment": {
+      "title": "Adapting to environment and role",
+      "body": "If a role or setting pushed you to shape the outer grain one way for a long time, that is not necessarily the same as your inner grain. Where you feel more at ease after changing situations is a useful clue."
+    },
+    "hidden": {
+      "title": "The hidden grain",
+      "body": "Separate from the outward picture, watch which way you lean in the moment just before deciding. Whether company leaves you charged or only being alone lets you settle is a good marker of the inner preference."
+    },
+    "complement": {
+      "title": "Deliberate complementing",
+      "body": "Even when a natural grain leans one way, people sometimes practise the opposite side on purpose. In that case the outer grain is the direction built by effort, while the inner grain is where you return when you relax — two layers rather than a contradiction."
+    }
+  },
+  "HOURLY_NOTICE": "Birth time was unknown, so the hour pillar was not used. Signals that need the hour have been left out.",
+  "DISCLAIMER": "A for-fun reflection. This is not an assessment, and there are no right or wrong answers."
+}

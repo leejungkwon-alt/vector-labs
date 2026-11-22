@@ -23,6 +23,7 @@
   "home": {
     "summary": "Resumen",
     "loading": "Leyendo el plano de tu vida...",
+    "reenterBirth": "Volver a ingresar la fecha",
     "noProfile": "No se encontraron datos de nacimiento.",
     "unlockHint": "Análisis más profundo e información personalizada están listos para ti.",
     "viewFullReport": "Ver informe completo",

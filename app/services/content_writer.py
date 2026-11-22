@@ -1015,10 +1015,90 @@ def _build_summary_cards(profile: dict, lang: str, user_id: str | None = None) -
 
 
 # ============================================================
+# MBTI CONTRAST (사주 × MBTI 대조)
+# ============================================================
+def write_mbti_contrast_section(
+    profile: dict,
+    lang: str = "en",
+    mbti: str | None = None,
+) -> dict | None:
+    """사용자가 **직접 입력한** MBTI 와 사주 결을 대조한 카드.
+
+    - MBTI 는 서버가 추정하지 않는다. 입력이 없으면 섹션을 만들지 않는다(None).
+    - 판정(assess_contrast)은 '측정'이 아니라 해석 장치다(contrast.py 참조).
+      여기서도 맞다/틀리다를 단정하지 않고, 층위가 다를 수 있음을 설명한다.
+    """
+    if not mbti:
+        return None
+    from app.semantic.contrast import assess_contrast
+
+    pack = load_pack(lang, "mbti_contrast")
+    verdict = assess_contrast(profile)
+    label = verdict["label"]
+
+    axis = (pack.get("AXIS_MODULES") or {}).get(label, {})
+    link_key = _contrast_link_key(mbti, label)
+    link = (pack.get("LINK") or {}).get(link_key, {})
+
+    day_stem = ((profile.get("pillars") or {}).get("day_pillar") or "")[:1]
+    overlay = (pack.get("DAY_STEM_OVERLAY") or {}).get(day_stem, "")
+
+    slots = pack.get("SLOTS") or {}
+    detail_slots = [
+        {
+            "key": key,
+            "title": slots.get(key, {}).get("title", ""),
+            "body": slots.get(key, {}).get("body", ""),
+        }
+        for key in ("layer", "environment", "hidden", "complement")
+    ]
+
+    return {
+        "id": "mbti_contrast",
+        "title": pack.get("TITLE", ""),
+        "mbti": mbti,
+        # ⚠️ 공식 검사가 아님을 제목 옆에서 항상 알린다.
+        "mbti_style_note": pack.get("MBTI_STYLE_NOTE", ""),
+        "disclaimer": pack.get("DISCLAIMER", ""),
+        "label": label,
+        "label_title": axis.get("label", ""),
+        "summary": axis.get("body", ""),
+        "link_key": link_key,
+        "link_headline": link.get("headline", ""),
+        "link_body": link.get("body", ""),
+        "day_stem_overlay": overlay,
+        "hour_signals_excluded": verdict["hour_signals_excluded"],
+        "hourly_notice": pack.get("HOURLY_NOTICE", "") if verdict["hour_signals_excluded"] else "",
+        "out_share": verdict["out_share"],
+        "detail_slots": detail_slots,
+    }
+
+
+def _contrast_link_key(mbti: str, label: str) -> str:
+    """입력 MBTI 의 E/I 와 사주 결을 대조한 **연결 키**.
+
+    outward=바깥으로 뻗는 결, inward=안으로 모으는 결.
+      - 방향이 같으면 match
+      - 어느 한쪽이 balanced 면 balanced
+      - 정반대면 contrast
+    MBTI 유형(4글자)을 다시 만들어내지 않고, E/I 한 축만 비교한다.
+    """
+    if label not in ("outward", "inward") or not mbti:
+        return "balanced"
+    mbti_outward = mbti[0].upper() == "E"
+    saju_outward = label == "outward"
+    return "match" if mbti_outward == saju_outward else "contrast"
+
+
+# ============================================================
 # FULL REPORT
 # ============================================================
-def generate_full_report(profile: dict, lang: str = "en", user_id: str | None = None, today=None) -> dict:
-    """모든 섹션을 조립한 완성 리포트."""
+def generate_full_report(profile: dict, lang: str = "en", user_id: str | None = None, today=None, mbti: str | None = None) -> dict:
+    """모든 섹션을 조립한 완성 리포트.
+
+    `mbti` 는 사용자가 **직접 입력한** 값(없으면 None). 입력이 없으면
+    `mbti_contrast` 섹션은 아예 만들지 않는다(서버는 MBTI 를 추정하지 않는다).
+    """
     sections = {
         "chart": write_chart_section(profile, lang),
         "core": write_core_section(profile, lang),
@@ -1049,6 +1129,11 @@ def generate_full_report(profile: dict, lang: str = "en", user_id: str | None = 
     age_band = write_age_band_section(profile, lang)
     if age_band:
         sections["age_band"] = age_band
+
+    # 사주×MBTI 대조: 사용자가 MBTI 를 입력했을 때만 붙는다.
+    mbti_contrast = write_mbti_contrast_section(profile, lang, mbti=mbti)
+    if mbti_contrast:
+        sections["mbti_contrast"] = mbti_contrast
 
     return {
         "meta": {

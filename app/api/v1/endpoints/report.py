@@ -27,6 +27,7 @@ from app.services.content_writer import generate_full_report
 from app.services.entitlements import apply_entitlement_gate
 from app.auth.dependencies import get_current_user_optional
 from app.schemas.saju import ReportRequest, ReportResponse
+from app.schemas.auth import normalize_mbti
 from app.api.errors import format_dst_error
 from app.engine.time_correction import DSTAmbiguousError, DSTGapError
 
@@ -61,6 +62,27 @@ def _unlock_key(payload, year: int) -> str:
 def _require_auth() -> bool:
     v = os.environ.get("SAJU_REQUIRE_AUTH_FOR_REPORT", "").lower()
     return v in ("1", "true", "yes", "on")
+
+
+def _resolve_mbti(payload, uid) -> str | None:
+    """대조에 쓸 MBTI 를 정한다.
+
+    우선순위: 요청에 명시된 값 → 저장된 프로필 값.
+    서버는 MBTI 를 **추정하지 않는다**. 둘 다 없으면 None → 섹션 생략.
+    """
+    raw = getattr(payload, "mbti", None)
+    if not raw and uid:
+        try:
+            from app.auth.repository import get_repository
+            saved = get_repository().get_profile(uid) or {}
+            raw = saved.get("mbti")
+        except Exception:  # 프로필 조회 실패는 대조 기능만 건너뛴다
+            logger.debug("profile lookup for mbti failed", exc_info=True)
+            raw = None
+    try:
+        return normalize_mbti(raw)
+    except ValueError:
+        return None
 
 
 @router.post("/report", response_model=ReportResponse)
@@ -108,7 +130,13 @@ def api_generate_report(
         profile = build_semantic_profile(saju_result)
         uid = current_user.get('id') if current_user else None
         today = _resolve_today(payload.timezone_str)
-        report = generate_full_report(profile, lang=payload.lang, user_id=uid, today=today)
+        report = generate_full_report(
+            profile,
+            lang=payload.lang,
+            user_id=uid,
+            today=today,
+            mbti=_resolve_mbti(payload, uid),
+        )
     except Exception:
         logger.exception("Report generation failed")
         raise HTTPException(

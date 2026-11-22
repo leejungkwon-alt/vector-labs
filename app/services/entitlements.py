@@ -154,6 +154,20 @@ FREE_SECTION_RULES = {
         },
         "locked_hint": ["items"],
     },
+
+    # ---- 사주×MBTI 대조: 요약/카드 무료, 상세 슬롯은 프리미엄 ----
+    # 사용자가 직접 입력한 MBTI 와 사주 결의 '대조'만 다룬다(유형 추정 없음).
+    # 무료: 제목·입력값·고지·결 라벨·한 줄 요약·일간 오버레이 (카드 1장 분량)
+    # 잠금: slot 본문(detail_slots)
+    "mbti_contrast": {
+        "keep": {
+            "id", "title", "mbti", "mbti_style_note", "disclaimer",
+            "label", "label_title", "summary", "day_stem_overlay",
+            "hour_signals_excluded", "hourly_notice",
+            "link_key", "link_headline",
+        },
+        "locked_hint": ["detail_slots", "link_body"],
+    },
 }
 
 # P0-3: extend free locked_hint with premium blocks (upsell)

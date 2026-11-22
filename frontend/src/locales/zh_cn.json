@@ -23,6 +23,7 @@
   "home": {
     "summary": "摘要",
     "loading": "正在解读你的人生蓝图...",
+    "reenterBirth": "重新输入出生日期",
     "noProfile": "没有出生信息。",
     "unlockHint": "更深度的分析及个性化洞察已为你准备好。",
     "viewFullReport": "查看完整报告",

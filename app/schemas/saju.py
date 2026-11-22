@@ -1,4 +1,5 @@
 # app/schemas/saju.py
+import re
 from datetime import datetime
 from typing import Any, Dict, Optional
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
@@ -199,6 +200,13 @@ class SajuResponse(BaseModel):
 class ReportRequest(SajuRequest):
     """완성 리포트 요청. SajuRequest의 모든 필드 + lang."""
     lang: str = Field(default="en", examples=["en", "ko"], description="리포트 언어")
+    # 사주×MBTI 대조용 자기신고 값. 없으면 저장된 프로필 값을 쓰고,
+    # 그것도 없으면 대조 섹션을 생략한다(서버는 MBTI 를 추정하지 않는다).
+    mbti: Optional[str] = Field(
+        default=None,
+        examples=["INFJ"],
+        description="자기신고 MBTI 4글자 (^[EI][NS][TF][JP]$). 미입력 시 프로필 값 사용.",
+    )
 
     @field_validator("lang")
     @classmethod
@@ -206,6 +214,18 @@ class ReportRequest(SajuRequest):
         if v not in SUPPORTED_LANGS:
             raise ValueError(f"lang must be one of {SUPPORTED_LANGS}")
         return v
+
+    @field_validator("mbti")
+    @classmethod
+    def validate_mbti(cls, v):
+        if v is None:
+            return v
+        m = str(v).strip().upper()
+        if not m:
+            return None
+        if not re.fullmatch(r"[EI][NS][TF][JP]", m):
+            raise ValueError("mbti must be a 4-letter type like INFJ")
+        return m
 
 
 class ReportResponse(BaseModel):

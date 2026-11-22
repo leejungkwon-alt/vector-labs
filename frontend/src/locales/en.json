@@ -23,6 +23,7 @@
   "home": {
     "summary": "Summary",
     "loading": "Reading your life blueprint...",
+    "reenterBirth": "Re-enter birth date",
     "noProfile": "No birth data found.",
     "unlockHint": "Deeper analysis and personalized insights are ready for you.",
     "viewFullReport": "View full report",

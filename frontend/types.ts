@@ -24,6 +24,38 @@ export interface SajuRequest {
   mbti?: string | null;
 }
 
+export interface MbtiContrastSlot {
+  key: string;
+  title: string;
+  body: string;
+}
+
+/**
+ * 사주 × MBTI 대조 — 사용자가 직접 입력한 MBTI 와 사주 결을 대조한 카드.
+ * ⚠️ 서버가 MBTI 유형을 추정하는 섹션이 아니다. label 은 3값뿐이다.
+ */
+export interface MbtiContrastSection {
+  id: "mbti_contrast";
+  title: string;
+  mbti: string;
+  mbti_style_note?: string;
+  disclaimer?: string;
+  /** outward | inward | balanced */
+  label: "outward" | "inward" | "balanced";
+  label_title?: string;
+  summary?: string;
+  /** match | contrast | balanced */
+  link_key?: "match" | "contrast" | "balanced";
+  link_headline?: string;
+  link_body?: string;
+  day_stem_overlay?: string;
+  hour_signals_excluded?: boolean;
+  hourly_notice?: string;
+  /** 프리미엄: 상세 슬롯 */
+  detail_slots?: MbtiContrastSlot[];
+  locked_fields?: string[];
+}
+
 export interface TenGod {
   stem: string;
   branch: string;

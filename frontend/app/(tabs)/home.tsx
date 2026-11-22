@@ -15,6 +15,7 @@ import {
   ChartSectionView, CoreSectionView, EnergySectionView, LuckyCodeSectionView,
   HealthSectionView, ModeSectionView, PremiumSectionView, TimelineSectionView,
   MonthlySectionView, SinsalSectionView, AgeBandSectionView, YearSectionView, LockedHint,
+  MbtiContrastCard,
 } from "@/components/sections";
 
 function renderSection(key: string, sec: any) {
@@ -120,7 +121,18 @@ export default function HomeScreen() {
 
   if (!profileReady || !profile || !ready) return <View style={styles.center}><ActivityIndicator color={colors.primary} /></View>;
   if (isLoading) return <View style={styles.center}><ActivityIndicator size="large" color={colors.primary} /><Text style={styles.loadingText}>{t("home.loading")}</Text></View>;
-  if (error) return <View style={styles.center}><Text style={styles.errorText}>{error instanceof ApiError ? error.detail : (error as Error).message}</Text></View>;
+  if (error) {
+    // 422(모순된 생년월일/시각 조합 등)나 기타 오류에서 프로필을 고칠 길이 없으면
+    // 화면이 막힌다. 최소한 '생년월일 다시 입력' 경로를 항상 제공한다.
+    return (
+      <View style={styles.center}>
+        <Text style={styles.errorText}>{error instanceof ApiError ? error.detail : (error as Error).message}</Text>
+        <TouchableOpacity style={styles.recoverButton} onPress={() => router.replace("/birth-input")} accessibilityRole="button">
+          <Text style={styles.recoverButtonText}>{t("home.reenterBirth")}</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
 
   const report = data?.report as ReportResponse["report"];
   if (!report) return null;
@@ -133,6 +145,13 @@ export default function HomeScreen() {
         <Text style={styles.coverTagline}>{report.cover.archetype.tagline}</Text>
         <View style={styles.badge}><Text style={styles.badgeText}>{report.cover.intensity_label}</Text></View>
       </View>
+
+      {/* 사주 × MBTI 대조 카드 — 결과 상단 1장. 미입력이면 입력 CTA. */}
+      <MbtiContrastCard
+        section={(report.sections as any)?.mbti_contrast ?? null}
+        onPressInput={() => router.push("/birth-input")}
+        onPressUpgrade={goToUpgrade}
+      />
 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>{t("home.summary")}</Text>
@@ -178,6 +197,8 @@ const styles = StyleSheet.create({
   center: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: colors.bg, padding: spacing.lg },
   loadingText: { marginTop: spacing.md, fontSize: 16, color: colors.textMuted },
   errorText: { fontSize: 16, color: colors.danger, textAlign: "center" },
+  recoverButton: { marginTop: spacing.lg, backgroundColor: colors.primary, paddingVertical: 12, paddingHorizontal: 20, borderRadius: radius.md },
+  recoverButtonText: { color: "#fff", fontWeight: "700", fontSize: 15 },
   container: { flex: 1, backgroundColor: colors.bg },
   cover: { backgroundColor: colors.surface, padding: spacing.xl, alignItems: "center", borderBottomWidth: 1, borderBottomColor: colors.border },
   coverSymbol: { fontSize: 48, marginBottom: spacing.sm },

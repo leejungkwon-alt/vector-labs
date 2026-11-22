@@ -23,6 +23,7 @@
   "home": {
     "summary": "요약",
     "loading": "인생 설계도를 분석 중입니다...",
+    "reenterBirth": "생년월일 다시 입력",
     "noProfile": "사주 정보가 없습니다.",
     "unlockHint": "더 깊은 분석과 맞춤 인사이트가 준비되어 있어요.",
     "viewFullReport": "전체 리포트 보기",

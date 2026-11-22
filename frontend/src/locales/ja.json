@@ -23,6 +23,7 @@
   "home": {
     "summary": "要約",
     "loading": "人生の設計図を読み解いています...",
+    "reenterBirth": "生年月日を再入力",
     "noProfile": "生年月日情報がありません。",
     "unlockHint": "さらに深い分析とパーソナライズされたインサイトが用意されています。",
     "viewFullReport": "レポート全文を見る",

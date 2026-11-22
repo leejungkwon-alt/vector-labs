@@ -11,4 +11,5 @@ export { MonthlySectionView } from "./MonthlySection";
 export { SinsalSectionView } from "./SinsalSection";
 export { AgeBandSectionView } from "./AgeBandSection";
 export { YearSectionView } from "./YearSection";
+export { MbtiContrastCard } from "./MbtiContrastCard";
 export { LockedHint, CompatBox, RedFlagsBox } from "./shared";
