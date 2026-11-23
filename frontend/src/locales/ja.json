@@ -382,5 +382,15 @@
     "title": "サポートが必要なとき",
     "fallback": "危機的な状況なら地域の自殺予防ホットラインにご連絡ください。",
     "findHelpline": "地域のホットラインを探す"
+  },
+  "mbtiContrast": {
+    "kicker": "Saju and MBTI, side by side",
+    "ctaTitle": "Want to see your MBTI next to your chart?",
+    "ctaBody": "Tell us your MBTI and we'll set it beside the direction your chart suggests. We never guess an MBTI type from your chart.",
+    "ctaButton": "Add my MBTI",
+    "styleNote": "MBTI-style preference · what you entered, not an official test result",
+    "unlockDetail": "See why the two might look different ▸",
+    "disclaimer": "This is a for-fun comparison, not a test. There are no right or wrong answers.",
+    "hourUnknown": "Without your birth time, this is less precise. Adding the time makes it sharper."
   }
 }

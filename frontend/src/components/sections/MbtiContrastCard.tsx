@@ -58,6 +58,10 @@ export function MbtiContrastCard({ section, onPressInput, onPressUpgrade }: Prop
       </Text>
       {!!section.summary && <Text style={styles.summary}>{section.summary}</Text>}
       {!!section.day_stem_overlay && <Text style={styles.overlay}>{section.day_stem_overlay}</Text>}
+      {/* 시각 미상(정오 가정) — 시간 의존 신호를 뺐다는 한 줄 안내 */}
+      {section.hour_signals_excluded && (
+        <Text style={styles.hourHint}>{t("mbtiContrast.hourUnknown")}</Text>
+      )}
       {!!section.hourly_notice && <Text style={styles.hourly}>{section.hourly_notice}</Text>}
 
       {/* 상세 슬롯(프리미엄) — 무료는 잠금 안내 */}
@@ -101,6 +105,7 @@ const styles = StyleSheet.create({
   summary: { fontSize: 14, color: colors.text, lineHeight: 21, marginBottom: 6 },
   overlay: { fontSize: 13, color: colors.textMuted, lineHeight: 19, marginBottom: 6 },
   hourly: { fontSize: 12, color: colors.textMuted, marginBottom: 6 },
+  hourHint: { fontSize: 12, color: colors.textMuted, lineHeight: 18, marginBottom: 6 },
   lockBox: {
     marginTop: spacing.sm, padding: spacing.sm, backgroundColor: colors.bgElevated,
     borderRadius: radius.md, borderWidth: 1, borderColor: colors.border,

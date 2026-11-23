@@ -1093,7 +1093,13 @@ def _contrast_link_key(mbti: str, label: str) -> str:
 # ============================================================
 # FULL REPORT
 # ============================================================
-def generate_full_report(profile: dict, lang: str = "en", user_id: str | None = None, today=None, mbti: str | None = None) -> dict:
+def generate_full_report(
+    profile: dict,
+    lang: str = "en",
+    user_id: str | None = None,
+    today=None,
+    mbti: str | None = None,
+) -> dict:
     """모든 섹션을 조립한 완성 리포트.
 
     `mbti` 는 사용자가 **직접 입력한** 값(없으면 None). 입력이 없으면

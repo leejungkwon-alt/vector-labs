@@ -382,5 +382,15 @@
     "title": "도움이 필요하시면",
     "fallback": "위기 상황이라면 지역 자살예방 핫라인에 연락하세요.",
     "findHelpline": "지역별 핫라인 찾기"
+  },
+  "mbtiContrast": {
+    "kicker": "사주 × MBTI 대조",
+    "ctaTitle": "내 MBTI와 사주를 나란히 볼까요?",
+    "ctaBody": "MBTI를 알려 주면 사주에서 읽히는 방향과 견줘서 보여드려요. 사주로 MBTI를 추정하지는 않아요.",
+    "ctaButton": "MBTI 입력하기",
+    "styleNote": "MBTI 스타일 성향 · 공식 검사 결과가 아니라 직접 입력한 성향입니다",
+    "unlockDetail": "하지만 둘이 왜 다르게 보이는지 풀어서 보기 ▸",
+    "disclaimer": "재미로 보는 대조입니다. 검사가 아니고, 맞고 틀린 답도 없습니다.",
+    "hourUnknown": "출생 시각을 모르면 정확도가 낮아요. 시간을 알면 더 정확해져요"
   }
 }

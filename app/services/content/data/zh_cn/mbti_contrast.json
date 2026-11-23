@@ -1,34 +1,34 @@
-  {
+{
   "_TODO_I18N": "en copy — translate before shipping (TODO-i18n)",
   "i18n_rule": "mbti_contrast",
-  "MBTI_STYLE_NOTE": "MBTI-style preference · self-reported, not an official test result",
-  "TITLE": "Saju × MBTI in contrast",
+  "MBTI_STYLE_NOTE": "Your own MBTI pick — not an official test result",
+  "TITLE": "Saju × MBTI, side by side",
   "AXIS_MODULES": {
     "outward": {
-      "label": "A grain that reaches outward",
-      "body": "This chart reads as energy moving outward. Things tend to open up when you start new threads, move, and meet the world head-on."
+      "label": "Reaching outward",
+      "body": "Your chart leans outward. You settle into things most easily when you start, move, and bump into the world."
     },
     "inward": {
-      "label": "A grain that gathers inward",
-      "body": "This chart reads as energy gathering inward. Things tend to open up when you sort it out alone, look closely, and move once you are sure."
+      "label": "Gathering inward",
+      "body": "Your chart leans inward. You do best when you sort things out alone and move once it feels certain."
     },
     "balanced": {
-      "label": "A grain that holds both sides",
-      "body": "This chart does not lean clearly to either side; the two grains sit together. You may step forward or step back depending on the situation."
+      "label": "Both sides at once",
+      "body": "Your chart doesn't lean hard either way. Some days you step out, some days you pull back."
     }
   },
   "LINK": {
     "match": {
-      "headline": "Two languages pointing the same way",
-      "body": "The style you picked and the grain of this chart land on a similar side. Reading the same direction in two different languages usually suggests a fairly consistent way of showing up."
+      "headline": "Both stories point the same way",
+      "body": "Your own pick and your chart agree on the direction. That usually reads as a fairly steady way of showing up."
     },
     "contrast": {
-      "headline": "A different layer sits beneath the surface",
-      "body": "The grain that shows on the outside and the way you prefer to work inside are different layers, not one verdict. You might move brightly among people yet want to make the actual decision alone; or look quiet while already holding a clear direction inside. It can mean you have tuned the outer grain to your environment and role, that a hidden grain sits underneath, or that you are deliberately practising the other side. None of these makes one layer 'real' and the other 'fake'."
+      "headline": "Your chart and your MBTI disagree",
+      "body": "Your chart says outward, but you may feel recharged on the inside. You might have shaped your outside to fit a role, or a different side comes out when you're comfortable."
     },
     "balanced": {
-      "headline": "A range that resists a single verdict",
-      "body": "The two languages point at different things, but neither pushes hard. It fits better to treat this as a range you move across than as a fixed setting."
+      "headline": "Hard to pin to one side",
+      "body": "Neither one points firmly one way. It may sit better as a range you move around than a fixed label."
     }
   },
   "DAY_STEM_OVERLAY": {
@@ -45,20 +45,20 @@
   },
   "SLOTS": {
     "layer": {
-      "title": "The two layers",
-      "body": "The grain that shows on the outside and the way you prefer to work inside do not have to explain each other. The outer grain may be the result of tuning to an environment and role, while the inner preference tends to surface when you are alone. There is no need to decide which one is correct."
+      "title": "Outside and inside differ",
+      "body": "How you look to others and how you are alone don't have to match. Neither one needs to be declared the real you."
     },
     "environment": {
-      "title": "Adapting to environment and role",
-      "body": "If a role or setting pushed you to shape the outer grain one way for a long time, that is not necessarily the same as your inner grain. Where you feel more at ease after changing situations is a useful clue."
+      "title": "Shaped by role",
+      "body": "If a role long pushed your outside one way, that may not reflect your inside. Notice where you feel lighter after a change of scene."
     },
     "hidden": {
       "title": "The hidden grain",
-      "body": "Separate from the outward picture, watch which way you lean in the moment just before deciding. Whether company leaves you charged or only being alone lets you settle is a good marker of the inner preference."
+      "body": "Watch which way you lean just before a decision. Feeling charged after people, or only settled alone, is a good clue."
     },
     "complement": {
-      "title": "Deliberate complementing",
-      "body": "Even when a natural grain leans one way, people sometimes practise the opposite side on purpose. In that case the outer grain is the direction built by effort, while the inner grain is where you return when you relax — two layers rather than a contradiction."
+      "title": "Practised on purpose",
+      "body": "Sometimes people train the opposite side by choice. Your outside becomes the way effort built, your inside the way you drift when relaxed."
     }
   },
   "HOURLY_NOTICE": "Birth time was unknown, so the hour pillar was not used. Signals that need the hour have been left out.",

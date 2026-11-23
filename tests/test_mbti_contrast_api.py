@@ -61,8 +61,12 @@ def test_golden_flagship_with_intp_is_contrast():
     section = write_mbti_contrast_section(_flagship_profile(), "ko", mbti="INTP")
     assert section["label"] == "outward"
     assert section["link_key"] == "contrast"
-    # 서사가 '틀렸다'고 판정하지 않아야 한다 — 층위 설명 문구 사용
-    assert "층위" in section["link_body"]
+    # 서사가 '틀렸다'고 판정하지 않아야 한다.
+    # 전문용어 없이, '둘 다 맞을 수 있어요' 톤으로 풀어 쓴다.
+    body = section["link_body"]
+    for jargon in ("층위", "원국", "결", "기운"):
+        assert jargon not in body, f"전문용어 노출: {jargon}"
+    assert "둘 다 맞을 수 있어요" in body
 
 
 def test_golden_flagship_with_entp_is_match():
