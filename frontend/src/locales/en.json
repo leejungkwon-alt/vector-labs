@@ -187,6 +187,8 @@
     "birthTimezone": "Birthplace timezone",
     "timezoneHint": "* Exact longitude is calculated automatically from the timezone.",
     "gender": "Gender",
+  "mbtiAdd": "Add MBTI (optional)",
+  "mbtiHintShort": "Pick if you know it. Otherwise just skip.",
   "mbtiLabel": "MBTI (optional)",
   "mbtiHint": "Pick the four letters if you know them, or skip. We never guess your MBTI from the chart.",
   "mbtiAxis_EI": "Energy direction",

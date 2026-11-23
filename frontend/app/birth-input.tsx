@@ -85,6 +85,10 @@ export default function BirthInput() {
   const [mbtiDraft, setMbtiDraft] = useState<MbtiDraft>({ EI: null, NS: null, TF: null, JP: null });
   const [mbtiTouched, setMbtiTouched] = useState(false);
   const [mbtiSkip, setMbtiSkip] = useState(false);
+  // 저장된 MBTI 가 있으면 펼친 상태로 시작, 없으면 접힌 한 줄로 시작.
+  const [mbtiExpanded, setMbtiExpanded] = useState(
+    () => typeof profile?.mbti === "string" && /^[EI][NS][TF][JP]$/.test(profile.mbti)
+  );
   const mbtiDraftValue = toMbtiType(mbtiDraft);
 
 
@@ -143,6 +147,7 @@ export default function BirthInput() {
           EI: profile.mbti[0], NS: profile.mbti[1], TF: profile.mbti[2], JP: profile.mbti[3],
         });
         setMbtiSkip(false);
+        setMbtiExpanded(true);   // 이미 고른 값이 있으면 접어두지 않는다
       }
       
       if (profile.birth_location) {
@@ -343,48 +348,75 @@ export default function BirthInput() {
         </TouchableOpacity>
       </View>
 
-      {/* ---- MBTI (선택 입력 · 건너뛰기 가능) ---- */}
-      <Text style={styles.label}>{t("birthInput.mbtiLabel")}</Text>
-      <Text style={styles.hint}>{t("birthInput.mbtiHint")}</Text>
-      {MBTI_AXES.map((axis) => (
-        <View key={axis.key} style={{ marginTop: 10 }}>
-          <Text style={{ fontSize: 13, color: colors.textMuted, marginBottom: 6 }}>
-            {t(`birthInput.mbtiAxis_${axis.key}`)}
-          </Text>
-          <View style={{ flexDirection: "row", gap: 10 }}>
-            {axis.options.map((opt) => {
-              const selected = mbtiDraft[axis.key] === opt;
-              return (
-                <TouchableOpacity
-                  key={opt}
-                  style={[styles.genderBtn, selected && styles.genderBtnActive]}
-                  onPress={() => {
-                    setMbtiTouched(true);
-                    setMbtiDraft((prev) => ({ ...prev, [axis.key]: prev[axis.key] === opt ? null : opt }));
-                  }}
-                >
-                  <Text style={[styles.genderText, selected && styles.genderTextActive]}>{opt}</Text>
-                </TouchableOpacity>
-              );
-            })}
+      {/* ---- MBTI (선택 입력 · 컴팩트) ----
+          기본은 접힌 한 줄. 이미 값이 있으면 펼친 상태로 시작한다.
+          서버는 MBTI 를 추정하지 않고, 사용자가 고른 값만 저장한다. */}
+      {!mbtiExpanded ? (
+        <TouchableOpacity
+          style={styles.mbtiCollapsedRow}
+          onPress={() => setMbtiExpanded(true)}
+          accessibilityRole="button"
+          accessibilityLabel={t("birthInput.mbtiAdd")}
+        >
+          <Text style={styles.mbtiCollapsedText}>{t("birthInput.mbtiAdd")}</Text>
+          <Text style={styles.mbtiChevron}>▾</Text>
+        </TouchableOpacity>
+      ) : (
+        <View style={styles.mbtiBox}>
+          <View style={styles.mbtiHeaderRow}>
+            <Text style={styles.mbtiLabelInline}>{t("birthInput.mbtiLabel")}</Text>
+            <TouchableOpacity onPress={() => setMbtiExpanded(false)} accessibilityRole="button">
+              <Text style={styles.mbtiCollapseText}>▴ {t("common.close")}</Text>
+            </TouchableOpacity>
+          </View>
+
+          <Text style={styles.mbtiHintInline}>{t("birthInput.mbtiHintShort")}</Text>
+
+          {/* 한 줄에 4축(E|I, N|S, T|F, J|P). 축 이름 라벨은 표시하지 않는다. */}
+          <View style={styles.mbtiAxisRow}>
+            {MBTI_AXES.map((axis, idx) => (
+              <View key={axis.key} style={[styles.mbtiAxisGroup, idx > 0 && styles.mbtiAxisGroupGap]}>
+                {axis.options.map((opt) => {
+                  const selected = mbtiDraft[axis.key] === opt;
+                  return (
+                    <TouchableOpacity
+                      key={opt}
+                      style={[styles.mbtiAxisBtn, selected && styles.mbtiAxisBtnActive]}
+                      onPress={() => {
+                        setMbtiTouched(true);
+                        setMbtiDraft((prev) => ({ ...prev, [axis.key]: prev[axis.key] === opt ? null : opt }));
+                      }}
+                      accessibilityRole="button"
+                      accessibilityState={{ selected }}
+                    >
+                      <Text style={[styles.mbtiAxisText, selected && styles.mbtiAxisTextActive]}>{opt}</Text>
+                    </TouchableOpacity>
+                  );
+                })}
+              </View>
+            ))}
+          </View>
+
+          {/* 건너뛰기는 작은 텍스트 링크 */}
+          <View style={styles.mbtiFooterRow}>
+            <TouchableOpacity
+              onPress={() => {
+                setMbtiTouched(true);
+                setMbtiDraft({ EI: null, NS: null, TF: null, JP: null });
+                setMbtiSkip(true);
+              }}
+              accessibilityRole="button"
+            >
+              <Text style={styles.mbtiSkipLink}>
+                {mbtiSkip ? "✓ " : ""}{t("birthInput.mbtiSkip")}
+              </Text>
+            </TouchableOpacity>
+            <Text style={styles.mbtiSummary}>
+              {mbtiDraftValue ? `${t("birthInput.mbtiSelected")}: ${mbtiDraftValue}` : ""}
+            </Text>
           </View>
         </View>
-      ))}
-      <TouchableOpacity
-        style={{ marginTop: 12, paddingVertical: 10 }}
-        onPress={() => {
-          setMbtiTouched(true);
-          setMbtiDraft({ EI: null, NS: null, TF: null, JP: null });
-          setMbtiSkip(true);
-        }}
-      >
-        <Text style={{ fontSize: 14, color: colors.primary, fontWeight: "600" }}>
-          {mbtiSkip ? "✓ " : ""}{t("birthInput.mbtiSkip")}
-        </Text>
-      </TouchableOpacity>
-      <Text style={styles.hint}>
-        {mbtiDraftValue ? `${t("birthInput.mbtiSelected")}: ${mbtiDraftValue}` : t("birthInput.mbtiNone")}
-      </Text>
+      )}
 
       <TouchableOpacity style={styles.nextBtn} onPress={handleNext}>
         <Text style={styles.nextBtnText}>{t("birthInput.submit")}</Text>
@@ -426,6 +458,41 @@ const styles = StyleSheet.create({
   genderBtnActive: { backgroundColor: colors.primary, borderColor: colors.primary },
   genderText: { fontSize: 15, color: colors.textMuted },
   genderTextActive: { color: colors.onPrimary, fontWeight: "600" },
+  // ---- MBTI 컴팩트 UI ----
+  mbtiCollapsedRow: {
+    flexDirection: "row", alignItems: "center", justifyContent: "space-between",
+    paddingVertical: 12, paddingHorizontal: 14, borderRadius: radius.md,
+    backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border,
+    borderStyle: "dashed", marginBottom: spacing.md,
+  },
+  mbtiCollapsedText: { fontSize: 14, fontWeight: "600", color: colors.primary },
+  mbtiChevron: { fontSize: 12, color: colors.primary },
+  mbtiBox: {
+    backgroundColor: colors.surface, padding: 12, borderRadius: radius.md,
+    borderWidth: 1, borderColor: colors.border, marginBottom: spacing.md,
+  },
+  mbtiHeaderRow: {
+    flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 2,
+  },
+  mbtiLabelInline: { fontSize: 13, fontWeight: "600", color: colors.textMuted },
+  mbtiCollapseText: { fontSize: 12, color: colors.textMuted },
+  mbtiHintInline: { fontSize: 12, color: colors.textMuted, marginTop: 4, marginBottom: 8 },
+  mbtiAxisRow: { flexDirection: "row", alignItems: "center" },
+  mbtiAxisGroup: { flex: 1, flexDirection: "row", gap: 4 },
+  mbtiAxisGroupGap: { marginLeft: 6 },
+  mbtiAxisBtn: {
+    flex: 1, height: 36, justifyContent: "center", alignItems: "center",
+    borderRadius: radius.sm, backgroundColor: colors.bg,
+    borderWidth: 1, borderColor: colors.border,
+  },
+  mbtiAxisBtnActive: { backgroundColor: colors.primary, borderColor: colors.primary },
+  mbtiAxisText: { fontSize: 14, color: colors.textMuted },
+  mbtiAxisTextActive: { color: colors.onPrimary, fontWeight: "700" },
+  mbtiFooterRow: {
+    flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 8,
+  },
+  mbtiSkipLink: { fontSize: 12, color: colors.primary, textDecorationLine: "underline" },
+  mbtiSummary: { fontSize: 12, color: colors.textMuted },
   nextBtn: { backgroundColor: colors.primary, padding: 16, borderRadius: radius.md, alignItems: "center", marginTop: spacing.sm },
   nextBtnText: { fontSize: 17, fontWeight: "700", color: colors.onPrimary },
 });

@@ -186,6 +186,8 @@
     "birthTimezone": "Zona horaria de nacimiento",
     "timezoneHint": "* La longitud exacta se calcula automáticamente a partir de la zona horaria.",
     "gender": "Género",
+    "mbtiAdd": "Add MBTI (optional)",
+    "mbtiHintShort": "Pick if you know it. Otherwise just skip.",
     "mbtiLabel": "MBTI (opcional)",
     "mbtiHint": "Pick the four letters if you know them, or skip. We never guess your MBTI from the chart.",
     "mbtiAxis_EI": "Energy direction",

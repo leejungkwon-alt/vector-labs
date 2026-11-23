@@ -187,6 +187,8 @@
     "birthTimezone": "출생지 타임존",
     "timezoneHint": "* 정확한 경도는 시스템이 타임존을 기준으로 자동 계산합니다.",
     "gender": "성별",
+  "mbtiAdd": "MBTI 추가하기 (선택)",
+  "mbtiHintShort": "알면 골라주세요. 모르면 건너뛰어도 돼요.",
   "mbtiLabel": "MBTI (선택)",
   "mbtiHint": "알고 있다면 4가지를 골라주세요. 모르면 건너뛰어도 됩니다. 사주로 MBTI를 추정하지는 않아요.",
   "mbtiAxis_EI": "에너지 방향",

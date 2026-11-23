@@ -183,6 +183,8 @@
     "birthTimezone": "出生地时区",
     "timezoneHint": "* 系统将根据时区自动计算准确的经度。",
     "gender": "性别",
+  "mbtiAdd": "Add MBTI (optional)",
+  "mbtiHintShort": "Pick if you know it. Otherwise just skip.",
   "mbtiLabel": "MBTI (可选)",
   "mbtiHint": "Pick the four letters if you know them, or skip. We never guess your MBTI from the chart.",
   "mbtiAxis_EI": "Energy direction",
